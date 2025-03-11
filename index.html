@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <title> pcannon09's documentation list </title>
-    <link rel="icon" type="image/x-icon" href="./rsrc/imgs/favicon.png">
+    <title>pcannon09's documentation list</title>
+    <link rel="icon" type="image/x-icon" href="/rsrc/imgs/favicon.png">
+    <script>
+        function includeHTML() {
+            const elements = document.querySelectorAll("[data-include-html]");
+            elements.forEach(el => {
+                const file = el.getAttribute("data-include-html");
+                fetch(file)
+                    .then(response => response.text())
+                    .then(data => el.innerHTML = data)
+                    .catch(error => console.error(`Error loading ${file}:`, error));
+            });
+        }
+        document.addEventListener("DOMContentLoaded", includeHTML);
+    </script>
 </head>
-
 <body>
     <div>
         pcannon09's documentation list
@@ -12,7 +24,9 @@
 
     <div> <a href="https://www.github.com/pcannon09"> Go to `pcannon09's` repo </a> </div> <br>
     <div> Documentations: </div>
-    <div> <a href="cpp-time-utils/docs/html/index.html"> Go to `Cpp Time Utils` documentation </a> </div> <br>
-    <div> <a href="."> Website tree </a> </div> 
-</body>
+    <div> <a href="/pages/libs/libs.html"> Go to `pcannon09's` libs documentations </a> </div> <br>
+    <div> --------------- </div>
 
+    <div data-include-html="/pages/libs/libs.html"></div>
+</body>
+</html>
