@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working on - pcannon09's documentation list</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+    <div id="markdownContent"></div>
+
+    <script>
+            const md = `
+# What am I working on?
+
+## Aquin
+I am working on a project with my buddy [Friction](https://github.com/Fresh4774) that is called Aquin, this project is a new way to interact with AI
+
+Check out [Aquin](https://www.aquin.app)!
+
+## Terminex
+Terminex is a terminal project with various utilities, there will be a TUI and nice features.
+
+Contact me if you want to try it out, starting at 20 Apr, 2025.
+            `
+
+            console.log(md);
+            document.getElementById("markdownContent").innerHTML = marked.parse(md);
+    </script>
+</body>
+</html>
