@@ -1,0 +1,288 @@
+\doxysection{File.\+File Class Reference}
+\hypertarget{classFile_1_1File}{}\label{classFile_1_1File}\index{File.File@{File.File}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFile_1_1File_a9a8965115967943c8200d7180a70069d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str id, str path)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_a8a8def32b122579222020a3a48f77abf}{print}} (self, str line, matching)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_acba71aaa6f6c6398012c479dc0786f22}{statement\+\_\+set\+Module\+Path}} (self, str line, matching)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_a0e977c2a3b19d57d07ef054424c625aa}{statement\+\_\+requirements\+Flag}} (self, str line, matching)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_a2ddcb49367dd53aac4b0a98ba4c10695}{remove\+\_\+conf\+Dir}} (self, str line, matching)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_a605edac8892f23dd169dbfb13836201f}{statement\+\_\+pip\+Flags}} (self, str line, matching)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_aced7922542fd2da9072fea0309eff0ec}{statement\+\_\+set\+Conf\+Dir}} (self, str line, matching)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_a85140d468a6edc816e8f026f084b8be1}{statement\+\_\+set\+Required\+OS}} (self, str line, matching)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_a4506d206044359c5ccb311f289e3127c}{install}} (self, str line, matching)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_a602ca3880e9b31a2918c377fc1ff0149}{remove}} (self, str line, matching)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_ab93b8c02b2d45351456f3c95fc52fe1c}{remove\+Dir}} (self, str line, matching)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_a394e92ecf07edbd3bddf872a784a5f60}{run\+System\+Command}} (self, str line, matching)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_abdef46ce0e440d91acc0a129de9bec42}{remove\+\_\+install\+Dir}} (self, str line, matching)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_ad9ef3aa3f6d49ab52c0828e04d4291ef}{statement\+\_\+install\+Dir}} (self, str line="{}"{}, Any matching=Any)
+\item 
+list \mbox{\hyperlink{classFile_1_1File_a60b9aa4b6d2dcf533e59079da2b9de75}{parse}} (self, str string="{}"{})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFile_1_1File_ac7221356915688ad57ee8bd666a3d672}{spacing}}
+\item 
+\mbox{\hyperlink{classFile_1_1File_acab3c15893a31dff75394173af605dc5}{quote}}
+\item 
+\mbox{\hyperlink{classFile_1_1File_aa036b71a26f4f35ed939262b0e14c193}{file}}
+\item 
+\mbox{\hyperlink{classFile_1_1File_a1bf9d02a39788f86647428e1d7c96975}{module\+Dir\+Path}}
+\item 
+\mbox{\hyperlink{classFile_1_1File_a4e059fefa5d2e756bb0c8d42f36c607d}{flags}}
+\item 
+\mbox{\hyperlink{classFile_1_1File_acc953b5caf82a1a1432426f74207bfca}{conf\+Path}}
+\item 
+\mbox{\hyperlink{classFile_1_1File_ab0f913fa99ae361b9ecbf096cb93ef82}{pip\+Flags}}
+\item 
+\mbox{\hyperlink{classFile_1_1File_a0fa83d7953c887741e0b621aa833db67}{os\+Name\+Req}}
+\item 
+\mbox{\hyperlink{classFile_1_1File_a3cb3b334033b46c3a47098c5d49c6f99}{install\+Dir}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFile_1_1File_a9a8965115967943c8200d7180a70069d}\label{classFile_1_1File_a9a8965115967943c8200d7180a70069d} 
+\index{File.File@{File.File}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily File.\+File.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{id,  }\item[{str}]{path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Initalize everything for the parser
+* NOTES:
+** AVAILABLE FLAGS:
+--ignore-errors # Ignores all the errors
+--no-system-commands # Disable the execution of system commands
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFile_1_1File_a4506d206044359c5ccb311f289e3127c}\label{classFile_1_1File_a4506d206044359c5ccb311f289e3127c} 
+\index{File.File@{File.File}!install@{install}}
+\index{install@{install}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{install()}{install()}}
+{\footnotesize\ttfamily  list File.\+File.\+install (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{line,  }\item[{}]{matching }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Install a module from pip
+
+* USAGE:
+install "{module}"
+\end{DoxyVerb}
+ \Hypertarget{classFile_1_1File_a60b9aa4b6d2dcf533e59079da2b9de75}\label{classFile_1_1File_a60b9aa4b6d2dcf533e59079da2b9de75} 
+\index{File.File@{File.File}!parse@{parse}}
+\index{parse@{parse}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily  list File.\+File.\+parse (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str }]{string = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Parse a string or file to execute the requirements
+\end{DoxyVerb}
+ \Hypertarget{classFile_1_1File_a8a8def32b122579222020a3a48f77abf}\label{classFile_1_1File_a8a8def32b122579222020a3a48f77abf} 
+\index{File.File@{File.File}!print@{print}}
+\index{print@{print}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily  list File.\+File.\+print (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{line,  }\item[{}]{matching }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief print something to the output in requirements
+* USAGE:
+print {text}
+\end{DoxyVerb}
+ \Hypertarget{classFile_1_1File_a602ca3880e9b31a2918c377fc1ff0149}\label{classFile_1_1File_a602ca3880e9b31a2918c377fc1ff0149} 
+\index{File.File@{File.File}!remove@{remove}}
+\index{remove@{remove}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily  list File.\+File.\+remove (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{line,  }\item[{}]{matching }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Remove a package installed from the modules dir
+
+* USAGE:
+remove "{module}"
+\end{DoxyVerb}
+ \Hypertarget{classFile_1_1File_a2ddcb49367dd53aac4b0a98ba4c10695}\label{classFile_1_1File_a2ddcb49367dd53aac4b0a98ba4c10695} 
+\index{File.File@{File.File}!remove\_confDir@{remove\_confDir}}
+\index{remove\_confDir@{remove\_confDir}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{remove\_confDir()}{remove\_confDir()}}
+{\footnotesize\ttfamily  list File.\+File.\+remove\+\_\+conf\+Dir (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{line,  }\item[{}]{matching }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Remove the set configuration file
+
+* USAGE:
+remove.conf_dir
+\end{DoxyVerb}
+ \Hypertarget{classFile_1_1File_abdef46ce0e440d91acc0a129de9bec42}\label{classFile_1_1File_abdef46ce0e440d91acc0a129de9bec42} 
+\index{File.File@{File.File}!remove\_installDir@{remove\_installDir}}
+\index{remove\_installDir@{remove\_installDir}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{remove\_installDir()}{remove\_installDir()}}
+{\footnotesize\ttfamily  list File.\+File.\+remove\+\_\+install\+Dir (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{line,  }\item[{}]{matching }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Remove previously set installation dir
+
+* USAGE:
+remove.install_dir
+\end{DoxyVerb}
+ \Hypertarget{classFile_1_1File_ab93b8c02b2d45351456f3c95fc52fe1c}\label{classFile_1_1File_ab93b8c02b2d45351456f3c95fc52fe1c} 
+\index{File.File@{File.File}!removeDir@{removeDir}}
+\index{removeDir@{removeDir}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{removeDir()}{removeDir()}}
+{\footnotesize\ttfamily  list File.\+File.\+remove\+Dir (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{line,  }\item[{}]{matching }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Remove a directory from the matching regex
+\end{DoxyVerb}
+ \Hypertarget{classFile_1_1File_a394e92ecf07edbd3bddf872a784a5f60}\label{classFile_1_1File_a394e92ecf07edbd3bddf872a784a5f60} 
+\index{File.File@{File.File}!runSystemCommand@{runSystemCommand}}
+\index{runSystemCommand@{runSystemCommand}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{runSystemCommand()}{runSystemCommand()}}
+{\footnotesize\ttfamily  list File.\+File.\+run\+System\+Command (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{line,  }\item[{}]{matching }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Run any system command
+
+* USAGE:
+${ {command} }
+\end{DoxyVerb}
+ \Hypertarget{classFile_1_1File_ad9ef3aa3f6d49ab52c0828e04d4291ef}\label{classFile_1_1File_ad9ef3aa3f6d49ab52c0828e04d4291ef} 
+\index{File.File@{File.File}!statement\_installDir@{statement\_installDir}}
+\index{statement\_installDir@{statement\_installDir}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{statement\_installDir()}{statement\_installDir()}}
+{\footnotesize\ttfamily  list File.\+File.\+statement\+\_\+install\+Dir (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str }]{line = {\ttfamily "{}"{}},  }\item[{Any }]{matching = {\ttfamily Any} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Set the installation dir
+
+* USAGE:
+[ install_dir = "./path/to/pip_modules" ]
+\end{DoxyVerb}
+ \Hypertarget{classFile_1_1File_a605edac8892f23dd169dbfb13836201f}\label{classFile_1_1File_a605edac8892f23dd169dbfb13836201f} 
+\index{File.File@{File.File}!statement\_pipFlags@{statement\_pipFlags}}
+\index{statement\_pipFlags@{statement\_pipFlags}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{statement\_pipFlags()}{statement\_pipFlags()}}
+{\footnotesize\ttfamily  list File.\+File.\+statement\+\_\+pip\+Flags (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{line,  }\item[{}]{matching }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Set the flags when pip command is executed, the flags are the same as when you pass them to a pip command
+
+* USAGE:
+[ flags = "{flags}" ]
+\end{DoxyVerb}
+ \Hypertarget{classFile_1_1File_a0e977c2a3b19d57d07ef054424c625aa}\label{classFile_1_1File_a0e977c2a3b19d57d07ef054424c625aa} 
+\index{File.File@{File.File}!statement\_requirementsFlag@{statement\_requirementsFlag}}
+\index{statement\_requirementsFlag@{statement\_requirementsFlag}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{statement\_requirementsFlag()}{statement\_requirementsFlag()}}
+{\footnotesize\ttfamily  list File.\+File.\+statement\+\_\+requirements\+Flag (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{line,  }\item[{}]{matching }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Set the flags for the requirements file
+
+* USAGE:
+[ requirements_flags = "{flag1} {flag2} {...}" ]
+\end{DoxyVerb}
+ \Hypertarget{classFile_1_1File_aced7922542fd2da9072fea0309eff0ec}\label{classFile_1_1File_aced7922542fd2da9072fea0309eff0ec} 
+\index{File.File@{File.File}!statement\_setConfDir@{statement\_setConfDir}}
+\index{statement\_setConfDir@{statement\_setConfDir}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{statement\_setConfDir()}{statement\_setConfDir()}}
+{\footnotesize\ttfamily  list File.\+File.\+statement\+\_\+set\+Conf\+Dir (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{line,  }\item[{}]{matching }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Set the configuration dir
+
+* USAGE:
+[ conf_dir = "./path/to/conf.py" ]
+\end{DoxyVerb}
+ \Hypertarget{classFile_1_1File_acba71aaa6f6c6398012c479dc0786f22}\label{classFile_1_1File_acba71aaa6f6c6398012c479dc0786f22} 
+\index{File.File@{File.File}!statement\_setModulePath@{statement\_setModulePath}}
+\index{statement\_setModulePath@{statement\_setModulePath}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{statement\_setModulePath()}{statement\_setModulePath()}}
+{\footnotesize\ttfamily  list File.\+File.\+statement\+\_\+set\+Module\+Path (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{line,  }\item[{}]{matching }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Set the path of the pip_modules in the configuration file
+
+* USAGE:
+[ modules_path = "./path/to/pip_modules" ]
+\end{DoxyVerb}
+ \Hypertarget{classFile_1_1File_a85140d468a6edc816e8f026f084b8be1}\label{classFile_1_1File_a85140d468a6edc816e8f026f084b8be1} 
+\index{File.File@{File.File}!statement\_setRequiredOS@{statement\_setRequiredOS}}
+\index{statement\_setRequiredOS@{statement\_setRequiredOS}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{statement\_setRequiredOS()}{statement\_setRequiredOS()}}
+{\footnotesize\ttfamily  list File.\+File.\+statement\+\_\+set\+Required\+OS (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{line,  }\item[{}]{matching }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Set the required OS for installation
+Examples:
+linux,
+darwin,
+windows,
+any
+
+* USAGE:
+[ required_os = "{OS}" ]
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classFile_1_1File_acc953b5caf82a1a1432426f74207bfca}\label{classFile_1_1File_acc953b5caf82a1a1432426f74207bfca} 
+\index{File.File@{File.File}!confPath@{confPath}}
+\index{confPath@{confPath}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{confPath}{confPath}}
+{\footnotesize\ttfamily File.\+File.\+conf\+Path}
+
+\Hypertarget{classFile_1_1File_aa036b71a26f4f35ed939262b0e14c193}\label{classFile_1_1File_aa036b71a26f4f35ed939262b0e14c193} 
+\index{File.File@{File.File}!file@{file}}
+\index{file@{file}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily File.\+File.\+file}
+
+\Hypertarget{classFile_1_1File_a4e059fefa5d2e756bb0c8d42f36c607d}\label{classFile_1_1File_a4e059fefa5d2e756bb0c8d42f36c607d} 
+\index{File.File@{File.File}!flags@{flags}}
+\index{flags@{flags}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily File.\+File.\+flags}
+
+\Hypertarget{classFile_1_1File_a3cb3b334033b46c3a47098c5d49c6f99}\label{classFile_1_1File_a3cb3b334033b46c3a47098c5d49c6f99} 
+\index{File.File@{File.File}!installDir@{installDir}}
+\index{installDir@{installDir}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{installDir}{installDir}}
+{\footnotesize\ttfamily File.\+File.\+install\+Dir}
+
+\Hypertarget{classFile_1_1File_a1bf9d02a39788f86647428e1d7c96975}\label{classFile_1_1File_a1bf9d02a39788f86647428e1d7c96975} 
+\index{File.File@{File.File}!moduleDirPath@{moduleDirPath}}
+\index{moduleDirPath@{moduleDirPath}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{moduleDirPath}{moduleDirPath}}
+{\footnotesize\ttfamily File.\+File.\+module\+Dir\+Path}
+
+\Hypertarget{classFile_1_1File_a0fa83d7953c887741e0b621aa833db67}\label{classFile_1_1File_a0fa83d7953c887741e0b621aa833db67} 
+\index{File.File@{File.File}!osNameReq@{osNameReq}}
+\index{osNameReq@{osNameReq}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{osNameReq}{osNameReq}}
+{\footnotesize\ttfamily File.\+File.\+os\+Name\+Req}
+
+\Hypertarget{classFile_1_1File_ab0f913fa99ae361b9ecbf096cb93ef82}\label{classFile_1_1File_ab0f913fa99ae361b9ecbf096cb93ef82} 
+\index{File.File@{File.File}!pipFlags@{pipFlags}}
+\index{pipFlags@{pipFlags}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{pipFlags}{pipFlags}}
+{\footnotesize\ttfamily File.\+File.\+pip\+Flags}
+
+\Hypertarget{classFile_1_1File_acab3c15893a31dff75394173af605dc5}\label{classFile_1_1File_acab3c15893a31dff75394173af605dc5} 
+\index{File.File@{File.File}!quote@{quote}}
+\index{quote@{quote}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{quote}{quote}}
+{\footnotesize\ttfamily File.\+File.\+quote}
+
+\Hypertarget{classFile_1_1File_ac7221356915688ad57ee8bd666a3d672}\label{classFile_1_1File_ac7221356915688ad57ee8bd666a3d672} 
+\index{File.File@{File.File}!spacing@{spacing}}
+\index{spacing@{spacing}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{spacing}{spacing}}
+{\footnotesize\ttfamily File.\+File.\+spacing}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+python/\mbox{\hyperlink{File_8py}{File.\+py}}\end{DoxyCompactItemize}
