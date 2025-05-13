@@ -1,0 +1,171 @@
+\doxysection{bot\+::Msg Class Reference}
+\hypertarget{classbot_1_1Msg}{}\label{classbot_1_1Msg}\index{bot::Msg@{bot::Msg}}
+
+
+{\ttfamily \#include $<$Msg.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbot_1_1Msg_a201b30cb0083d0d833ec9c805b560088}{Msg}} (const dpp\+::slashcommand\+\_\+t \&\mbox{\hyperlink{classbot_1_1Msg_a9e3c19fe0024e5c51226d9595fb2c404}{event}}, std\+::string \mbox{\hyperlink{classbot_1_1Msg_a8f23eff8674622a21073d4b3dcc67b72}{msg}}, uint16\+\_\+t \mbox{\hyperlink{classbot_1_1Msg_a4fbd2d960120a5de1723390e2799ec0f}{flags}}=0)
+\item 
+\mbox{\hyperlink{classbot_1_1Msg_adc3f3d75fe07706b058626917545feb0}{Msg}} (const dpp\+::slashcommand\+\_\+t \&\mbox{\hyperlink{classbot_1_1Msg_a9e3c19fe0024e5c51226d9595fb2c404}{event}})
+\item 
+void \mbox{\hyperlink{classbot_1_1Msg_ad76f9207747fb7ce4ac3ab609dab3dfb}{send}} (\mbox{\hyperlink{classbot_1_1Msg}{Msg}} \mbox{\hyperlink{classbot_1_1Msg_a8f23eff8674622a21073d4b3dcc67b72}{msg}})
+\item 
+void \mbox{\hyperlink{classbot_1_1Msg_a8de37a52db47c86a353f6cbb94625884}{send}} ()
+\item 
+void \mbox{\hyperlink{classbot_1_1Msg_a39bd749b252c4b3abc5ccc799d4dc846}{thinking}} (\mbox{\hyperlink{classbot_1_1Msg}{Msg}} \mbox{\hyperlink{classbot_1_1Msg_a8f23eff8674622a21073d4b3dcc67b72}{msg}})
+\item 
+void \mbox{\hyperlink{classbot_1_1Msg_a49aa0ed5f883b081e7fb9db3a7c8f770}{thinking}} ()
+\item 
+void \mbox{\hyperlink{classbot_1_1Msg_a260cca8e07d6915d53a7b510de808a02}{edit}} (\mbox{\hyperlink{classbot_1_1Msg}{Msg}} \mbox{\hyperlink{classbot_1_1Msg_a8f23eff8674622a21073d4b3dcc67b72}{msg}})
+\item 
+void \mbox{\hyperlink{classbot_1_1Msg_acc23b349109d58dd19a9f5517ab19f5f}{edit}} ()
+\item 
+dpp\+::message \mbox{\hyperlink{classbot_1_1Msg_ad9f6515f22cc3a9e985b9263f3485b83}{get\+Msg}} (std\+::string \mbox{\hyperlink{classbot_1_1Msg_a8f23eff8674622a21073d4b3dcc67b72}{msg}}, uint16\+\_\+t \mbox{\hyperlink{classbot_1_1Msg_a4fbd2d960120a5de1723390e2799ec0f}{flags}})
+\item 
+dpp\+::message \mbox{\hyperlink{classbot_1_1Msg_a0dd9d08a95f3286ec38076bcb63c218d}{get\+Msg}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classbot_1_1Msg_a8f23eff8674622a21073d4b3dcc67b72}{msg}}
+\item 
+static uint16\+\_\+t \mbox{\hyperlink{classbot_1_1Msg_a4fbd2d960120a5de1723390e2799ec0f}{flags}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static dpp\+::slashcommand\+\_\+t \mbox{\hyperlink{classbot_1_1Msg_a9e3c19fe0024e5c51226d9595fb2c404}{event}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classbot_1_1Msg_a201b30cb0083d0d833ec9c805b560088}\index{bot::Msg@{bot::Msg}!Msg@{Msg}}
+\index{Msg@{Msg}!bot::Msg@{bot::Msg}}
+\doxysubsubsection{\texorpdfstring{Msg()}{Msg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classbot_1_1Msg_a201b30cb0083d0d833ec9c805b560088} 
+bot\+::\+Msg\+::\+Msg (\begin{DoxyParamCaption}\item[{const dpp\+::slashcommand\+\_\+t \&}]{event}{, }\item[{std\+::string}]{msg}{, }\item[{uint16\+\_\+t}]{flags}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\doxylink{classbot_1_1Msg}{Msg} -\/ Constructor Create a {\ttfamily \doxylink{classbot_1_1Msg}{Msg}} with the specified {\ttfamily event}, {\ttfamily msg} and {\ttfamily flags} 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+{\em msg} & \\
+\hline
+{\em flags} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbot_1_1Msg_adc3f3d75fe07706b058626917545feb0}\index{bot::Msg@{bot::Msg}!Msg@{Msg}}
+\index{Msg@{Msg}!bot::Msg@{bot::Msg}}
+\doxysubsubsection{\texorpdfstring{Msg()}{Msg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classbot_1_1Msg_adc3f3d75fe07706b058626917545feb0} 
+bot\+::\+Msg\+::\+Msg (\begin{DoxyParamCaption}\item[{const dpp\+::slashcommand\+\_\+t \&}]{event}{}\end{DoxyParamCaption})}
+
+\doxylink{classbot_1_1Msg}{Msg} -\/ Constructor -\/ Overload Create an empty {\ttfamily \doxylink{classbot_1_1Msg}{Msg}} 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbot_1_1Msg_acc23b349109d58dd19a9f5517ab19f5f}\index{bot::Msg@{bot::Msg}!edit@{edit}}
+\index{edit@{edit}!bot::Msg@{bot::Msg}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classbot_1_1Msg_acc23b349109d58dd19a9f5517ab19f5f} 
+void bot\+::\+Msg\+::edit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Edit -\/ Function -\/ Overload Edit the previous message that was thought using {\ttfamily \doxylink{classbot_1_1Msg_a49aa0ed5f883b081e7fb9db3a7c8f770}{Msg\+::thinking()}} \Hypertarget{classbot_1_1Msg_a260cca8e07d6915d53a7b510de808a02}\index{bot::Msg@{bot::Msg}!edit@{edit}}
+\index{edit@{edit}!bot::Msg@{bot::Msg}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classbot_1_1Msg_a260cca8e07d6915d53a7b510de808a02} 
+void bot\+::\+Msg\+::edit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbot_1_1Msg}{Msg}}}]{msg}{}\end{DoxyParamCaption})}
+
+Edit -\/ Function Edit the previous message that was thought using {\ttfamily \doxylink{classbot_1_1Msg_a49aa0ed5f883b081e7fb9db3a7c8f770}{Msg\+::thinking()}} 
+\begin{DoxyParams}{Parameters}
+{\em msg} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbot_1_1Msg_a0dd9d08a95f3286ec38076bcb63c218d}\index{bot::Msg@{bot::Msg}!getMsg@{getMsg}}
+\index{getMsg@{getMsg}!bot::Msg@{bot::Msg}}
+\doxysubsubsection{\texorpdfstring{getMsg()}{getMsg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classbot_1_1Msg_a0dd9d08a95f3286ec38076bcb63c218d} 
+dpp\+::message bot\+::\+Msg\+::get\+Msg (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Get Message -\/ Function -\/ Overload Get the current message from this object \begin{DoxyReturn}{Returns}
+dpp\+::message 
+\end{DoxyReturn}
+\Hypertarget{classbot_1_1Msg_ad9f6515f22cc3a9e985b9263f3485b83}\index{bot::Msg@{bot::Msg}!getMsg@{getMsg}}
+\index{getMsg@{getMsg}!bot::Msg@{bot::Msg}}
+\doxysubsubsection{\texorpdfstring{getMsg()}{getMsg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classbot_1_1Msg_ad9f6515f22cc3a9e985b9263f3485b83} 
+dpp\+::message bot\+::\+Msg\+::get\+Msg (\begin{DoxyParamCaption}\item[{std\+::string}]{msg}{, }\item[{uint16\+\_\+t}]{flags}{}\end{DoxyParamCaption})}
+
+Get Message -\/ Function Get the current message with the specified {\ttfamily msg} and {\ttfamily flags} 
+\begin{DoxyParams}{Parameters}
+{\em msg} & \\
+\hline
+{\em flags} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dpp\+::message 
+\end{DoxyReturn}
+\Hypertarget{classbot_1_1Msg_a8de37a52db47c86a353f6cbb94625884}\index{bot::Msg@{bot::Msg}!send@{send}}
+\index{send@{send}!bot::Msg@{bot::Msg}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classbot_1_1Msg_a8de37a52db47c86a353f6cbb94625884} 
+void bot\+::\+Msg\+::send (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Send -\/ Function -\/ Overload Send the current message \Hypertarget{classbot_1_1Msg_ad76f9207747fb7ce4ac3ab609dab3dfb}\index{bot::Msg@{bot::Msg}!send@{send}}
+\index{send@{send}!bot::Msg@{bot::Msg}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classbot_1_1Msg_ad76f9207747fb7ce4ac3ab609dab3dfb} 
+void bot\+::\+Msg\+::send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbot_1_1Msg}{Msg}}}]{msg}{}\end{DoxyParamCaption})}
+
+Send -\/ Function Send the {\ttfamily msg} \Hypertarget{classbot_1_1Msg_a49aa0ed5f883b081e7fb9db3a7c8f770}\index{bot::Msg@{bot::Msg}!thinking@{thinking}}
+\index{thinking@{thinking}!bot::Msg@{bot::Msg}}
+\doxysubsubsection{\texorpdfstring{thinking()}{thinking()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classbot_1_1Msg_a49aa0ed5f883b081e7fb9db3a7c8f770} 
+void bot\+::\+Msg\+::thinking (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Thinking -\/ Function -\/ overload When sending message takes too long, use this function, this will send a "{}\+Thinking"{} message and then edit it to done once the operation is done \Hypertarget{classbot_1_1Msg_a39bd749b252c4b3abc5ccc799d4dc846}\index{bot::Msg@{bot::Msg}!thinking@{thinking}}
+\index{thinking@{thinking}!bot::Msg@{bot::Msg}}
+\doxysubsubsection{\texorpdfstring{thinking()}{thinking()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classbot_1_1Msg_a39bd749b252c4b3abc5ccc799d4dc846} 
+void bot\+::\+Msg\+::thinking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbot_1_1Msg}{Msg}}}]{msg}{}\end{DoxyParamCaption})}
+
+Thinking -\/ Function When sending message takes too long, use this function, this will send a "{}\+Thinking"{} message and then edit it to done once the operation is done 
+\begin{DoxyParams}{Parameters}
+{\em msg} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classbot_1_1Msg_a9e3c19fe0024e5c51226d9595fb2c404}\index{bot::Msg@{bot::Msg}!event@{event}}
+\index{event@{event}!bot::Msg@{bot::Msg}}
+\doxysubsubsection{\texorpdfstring{event}{event}}
+{\footnotesize\ttfamily \label{classbot_1_1Msg_a9e3c19fe0024e5c51226d9595fb2c404} 
+dpp\+::slashcommand\+\_\+t bot\+::\+Msg\+::event\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classbot_1_1Msg_a4fbd2d960120a5de1723390e2799ec0f}\index{bot::Msg@{bot::Msg}!flags@{flags}}
+\index{flags@{flags}!bot::Msg@{bot::Msg}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily \label{classbot_1_1Msg_a4fbd2d960120a5de1723390e2799ec0f} 
+uint16\+\_\+t bot\+::\+Msg\+::flags\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classbot_1_1Msg_a8f23eff8674622a21073d4b3dcc67b72}\index{bot::Msg@{bot::Msg}!msg@{msg}}
+\index{msg@{msg}!bot::Msg@{bot::Msg}}
+\doxysubsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily \label{classbot_1_1Msg_a8f23eff8674622a21073d4b3dcc67b72} 
+std\+::string bot\+::\+Msg\+::msg\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/types/\mbox{\hyperlink{Msg_8hpp}{Msg.\+hpp}}\item 
+src/types/\mbox{\hyperlink{Msg_8cpp}{Msg.\+cpp}}\end{DoxyCompactItemize}

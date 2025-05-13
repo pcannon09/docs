@@ -1,0 +1,93 @@
+\doxysection{bot\+::utils Namespace Reference}
+\hypertarget{namespacebot_1_1utils}{}\label{namespacebot_1_1utils}\index{bot::utils@{bot::utils}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacebot_1_1utils_1_1botUtils}{bot\+Utils}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacebot_1_1utils_a8dc8e684e618d59cfd5a30e8faa26f4b}{get\+Required\+Role}} (const dpp\+::slashcommand\+\_\+t \&event, dpp\+::snowflake id)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \mbox{\hyperlink{namespacebot_1_1utils_a3d33374004468ea2a3fcfe763ded02d8}{send\+DM}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$ aquin, std\+::vector$<$ std\+::future$<$ \mbox{\hyperlink{structError}{Error}} $>$ $>$ \&futures, std\+::vector$<$ std\+::future$<$ \mbox{\hyperlink{structError}{Error}} $>$ $>$ \&futures\+Msg\+Set, std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \&error\+Vec, dpp\+::snowflake member, const dpp\+::slashcommand\+\_\+t \&event, \mbox{\hyperlink{classbot_1_1Debug}{Debug}} \&DMSend\+Confirmations)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespacebot_1_1utils_a2c7ffdded3019ede5d11287974867a96}{split}} (std\+::string str, std\+::string del)
+\begin{DoxyCompactList}\small\item\em Split the string with a custom delimiter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacebot_1_1utils_a89cce990533af69829d16024d4514938}{file\+Empty}} (std\+::ifstream \&file)
+\begin{DoxyCompactList}\small\item\em Check if a file is empty. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacebot_1_1utils_a079e5195c65a6a29e9c4bc61c8bd92f9}{stoi}} (std\+::string str)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacebot_1_1utils_a89cce990533af69829d16024d4514938}\index{bot::utils@{bot::utils}!fileEmpty@{fileEmpty}}
+\index{fileEmpty@{fileEmpty}!bot::utils@{bot::utils}}
+\doxysubsubsection{\texorpdfstring{fileEmpty()}{fileEmpty()}}
+{\footnotesize\ttfamily \label{namespacebot_1_1utils_a89cce990533af69829d16024d4514938} 
+bool bot\+::utils\+::file\+Empty (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file}{}\end{DoxyParamCaption})}
+
+
+
+Check if a file is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File to get the data \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespacebot_1_1utils_a8dc8e684e618d59cfd5a30e8faa26f4b}\index{bot::utils@{bot::utils}!getRequiredRole@{getRequiredRole}}
+\index{getRequiredRole@{getRequiredRole}!bot::utils@{bot::utils}}
+\doxysubsubsection{\texorpdfstring{getRequiredRole()}{getRequiredRole()}}
+{\footnotesize\ttfamily \label{namespacebot_1_1utils_a8dc8e684e618d59cfd5a30e8faa26f4b} 
+bool bot\+::utils\+::get\+Required\+Role (\begin{DoxyParamCaption}\item[{const dpp\+::slashcommand\+\_\+t \&}]{event}{, }\item[{dpp\+::snowflake}]{id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacebot_1_1utils_a3d33374004468ea2a3fcfe763ded02d8}\index{bot::utils@{bot::utils}!sendDM@{sendDM}}
+\index{sendDM@{sendDM}!bot::utils@{bot::utils}}
+\doxysubsubsection{\texorpdfstring{sendDM()}{sendDM()}}
+{\footnotesize\ttfamily \label{namespacebot_1_1utils_a3d33374004468ea2a3fcfe763ded02d8} 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ bot\+::utils\+::send\+DM (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$}]{aquin}{, }\item[{std\+::vector$<$ std\+::future$<$ \mbox{\hyperlink{structError}{Error}} $>$ $>$ \&}]{futures}{, }\item[{std\+::vector$<$ std\+::future$<$ \mbox{\hyperlink{structError}{Error}} $>$ $>$ \&}]{futures\+Msg\+Set}{, }\item[{std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \&}]{error\+Vec}{, }\item[{dpp\+::snowflake}]{member}{, }\item[{const dpp\+::slashcommand\+\_\+t \&}]{event}{, }\item[{\mbox{\hyperlink{classbot_1_1Debug}{Debug}} \&}]{DMSend\+Confirmations}{}\end{DoxyParamCaption})}
+
+@beief Send a DM to the specific member of the server 
+\begin{DoxyParams}{Parameters}
+{\em aquin} & The bot to use \\
+\hline
+{\em futures} & Get future \doxylink{structError}{Error} \\
+\hline
+{\em futures\+Msg\+Set} & Get future set \doxylink{structError}{Error} \\
+\hline
+{\em error\+Vec} & Get a vector of Errors \\
+\hline
+{\em member} & Send DM to member \\
+\hline
+{\em DMSend\+Confirmatino} & Get confirmation if DM is sent \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespacebot_1_1utils_a2c7ffdded3019ede5d11287974867a96}\index{bot::utils@{bot::utils}!split@{split}}
+\index{split@{split}!bot::utils@{bot::utils}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily \label{namespacebot_1_1utils_a2c7ffdded3019ede5d11287974867a96} 
+std\+::vector$<$ std\+::string $>$ bot\+::utils\+::split (\begin{DoxyParamCaption}\item[{std\+::string}]{str}{, }\item[{std\+::string}]{del}{}\end{DoxyParamCaption})}
+
+
+
+Split the string with a custom delimiter. 
+
+Split -\/ Function
+
+Split -\/ Function Split a str into a vector of a strs 
+\begin{DoxyParams}{Parameters}
+{\em str} & \\
+\hline
+{\em del} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::string$>$ 
+\end{DoxyReturn}
+\Hypertarget{namespacebot_1_1utils_a079e5195c65a6a29e9c4bc61c8bd92f9}\index{bot::utils@{bot::utils}!stoi@{stoi}}
+\index{stoi@{stoi}!bot::utils@{bot::utils}}
+\doxysubsubsection{\texorpdfstring{stoi()}{stoi()}}
+{\footnotesize\ttfamily \label{namespacebot_1_1utils_a079e5195c65a6a29e9c4bc61c8bd92f9} 
+int bot\+::utils\+::stoi (\begin{DoxyParamCaption}\item[{std\+::string}]{str}{}\end{DoxyParamCaption})}
+

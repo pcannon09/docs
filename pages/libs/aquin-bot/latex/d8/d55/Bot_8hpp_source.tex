@@ -1,0 +1,50 @@
+\doxysection{Bot.\+hpp}
+\hypertarget{Bot_8hpp_source}{}\label{Bot_8hpp_source}\index{inc/types/Bot.hpp@{inc/types/Bot.hpp}}
+\mbox{\hyperlink{Bot_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Bot_8hpp}{Bot.hpp}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <dpp/dpp.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacebot}{bot}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structbot_1_1BotSettings}{BotSettings}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structbot_1_1BotSettings_a4f9a63ee53508ba110d4bb5a00c7d0a2}{name}};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structbot_1_1BotSettings_ae694790ef4434bc2368357bdcb7da077}{token}};}
+\DoxyCodeLine{00016\ \ \ \ \ \}\ \mbox{\hyperlink{namespacebot_ab4bade8ea3ae226fb674b63607d0ce1e}{BotSettings}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbot_1_1Bot_a4acad054cc9935839a3354945d10b86a}{Bot}}}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{classbot_1_1Bot_a14c51329cadf0ab320ec67568fcc5ad5}{ID}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structbot_1_1BotSettings}{BotSettings}}\ \mbox{\hyperlink{classbot_1_1Bot_ad4d788d5736919d8d5ebccba2b09b7a4}{settings}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ dpp::cluster\ *\mbox{\hyperlink{classbot_1_1Bot_a8a2080ae66b45818ce841a083162d22c}{app}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classbot_1_1Bot_ae845372a5f1df65b80f3167f0a5d29b6}{botIsOn}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classbot_1_1Bot_a4acad054cc9935839a3354945d10b86a}{Bot}}(\textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classbot_1_1Bot_a14c51329cadf0ab320ec67568fcc5ad5}{ID}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structbot_1_1BotSettings}{BotSettings}}\ \&\mbox{\hyperlink{classbot_1_1Bot_ad4d788d5736919d8d5ebccba2b09b7a4}{settings}});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classbot_1_1Bot_aaf107a0a9d79b69d6dc58df610c804a8}{\string~Bot}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structbot_1_1BotSettings}{BotSettings}}\ \mbox{\hyperlink{classbot_1_1Bot_a9cbcc8bcee123b65a9917a59b6a7e79b}{getSettings}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbot_1_1Bot_ac71955b39f2555551dcb04513726690e}{start}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbot_1_1Bot_ade2cefeb8a99a84ddff2d0185199de0b}{shutdown}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classbot_1_1Bot_a5a4b93efcdadae67f746d4db6b75a6db}{getID}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classbot_1_1Bot_a24fc54125b91731dc10de97dd9318b54}{getToken}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classbot_1_1Bot_ac54c08fa9062511c8ab4829964f93ecd}{destroy}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00078\ \ \ \ \ \};}
+\DoxyCodeLine{00079\ \}}
+\DoxyCodeLine{00080\ }
+
+\end{DoxyCode}

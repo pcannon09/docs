@@ -1,0 +1,118 @@
+\doxysection{bot\+::commands Namespace Reference}
+\hypertarget{namespacebot_1_1commands}{}\label{namespacebot_1_1commands}\index{bot::commands@{bot::commands}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \mbox{\hyperlink{namespacebot_1_1commands_aa4cd9569034e179c4e646961e2024a61}{command\+Is\+On\+Work}} (const dpp\+::slashcommand\+\_\+t \&event, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$ aquin)
+\begin{DoxyCompactList}\small\item\em Replies \doxylink{classbot_1_1Msg}{Msg} when the command is on work. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \mbox{\hyperlink{namespacebot_1_1commands_a33b4510c7e140ccfa8bbe734e9f9678b}{ping}} (const dpp\+::slashcommand\+\_\+t \&event, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$ aquin)
+\begin{DoxyCompactList}\small\item\em Returns pong. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \mbox{\hyperlink{namespacebot_1_1commands_ae6cbe4aeb012305709dcdbc881ea9e2d}{announce}} (const dpp\+::slashcommand\+\_\+t \&event, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$ aquin)
+\begin{DoxyCompactList}\small\item\em Announce something to someones DMs. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \mbox{\hyperlink{namespacebot_1_1commands_a31f71dae09c339683396f6d75b4b9fb7}{info}} (const dpp\+::slashcommand\+\_\+t \&event, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$ aquin)
+\begin{DoxyCompactList}\small\item\em Returns the info about Aquin and more. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \mbox{\hyperlink{namespacebot_1_1commands_a1e7efe49ff91c3b3c8af085e52076cec}{set\+Status}} (const dpp\+::slashcommand\+\_\+t \&event, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$ aquin)
+\begin{DoxyCompactList}\small\item\em Set the status of the bot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacebot_1_1commands_ae6cbe4aeb012305709dcdbc881ea9e2d}\index{bot::commands@{bot::commands}!announce@{announce}}
+\index{announce@{announce}!bot::commands@{bot::commands}}
+\doxysubsubsection{\texorpdfstring{announce()}{announce()}}
+{\footnotesize\ttfamily \label{namespacebot_1_1commands_ae6cbe4aeb012305709dcdbc881ea9e2d} 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ bot\+::commands\+::announce (\begin{DoxyParamCaption}\item[{const dpp\+::slashcommand\+\_\+t \&}]{event}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$}]{aquin}{}\end{DoxyParamCaption})}
+
+
+
+Announce something to someones DMs. 
+
+Announce -\/ Function Command named {\ttfamily announce} 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+{\em aquin} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Error$>$ 
+\end{DoxyReturn}
+\Hypertarget{namespacebot_1_1commands_aa4cd9569034e179c4e646961e2024a61}\index{bot::commands@{bot::commands}!commandIsOnWork@{commandIsOnWork}}
+\index{commandIsOnWork@{commandIsOnWork}!bot::commands@{bot::commands}}
+\doxysubsubsection{\texorpdfstring{commandIsOnWork()}{commandIsOnWork()}}
+{\footnotesize\ttfamily \label{namespacebot_1_1commands_aa4cd9569034e179c4e646961e2024a61} 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ bot\+::commands\+::command\+Is\+On\+Work (\begin{DoxyParamCaption}\item[{const dpp\+::slashcommand\+\_\+t \&}]{event}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$}]{aquin}{}\end{DoxyParamCaption})}
+
+
+
+Replies \doxylink{classbot_1_1Msg}{Msg} when the command is on work. 
+
+Command is on work -\/ Function 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+{\em aquin} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Error$>$ 
+\end{DoxyReturn}
+\Hypertarget{namespacebot_1_1commands_a31f71dae09c339683396f6d75b4b9fb7}\index{bot::commands@{bot::commands}!info@{info}}
+\index{info@{info}!bot::commands@{bot::commands}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily \label{namespacebot_1_1commands_a31f71dae09c339683396f6d75b4b9fb7} 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ bot\+::commands\+::info (\begin{DoxyParamCaption}\item[{const dpp\+::slashcommand\+\_\+t \&}]{event}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$}]{aquin}{}\end{DoxyParamCaption})}
+
+
+
+Returns the info about Aquin and more. 
+
+Info -\/ Function Command named {\ttfamily info} 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+{\em aquin} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Error$>$ 
+\end{DoxyReturn}
+\Hypertarget{namespacebot_1_1commands_a33b4510c7e140ccfa8bbe734e9f9678b}\index{bot::commands@{bot::commands}!ping@{ping}}
+\index{ping@{ping}!bot::commands@{bot::commands}}
+\doxysubsubsection{\texorpdfstring{ping()}{ping()}}
+{\footnotesize\ttfamily \label{namespacebot_1_1commands_a33b4510c7e140ccfa8bbe734e9f9678b} 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ bot\+::commands\+::ping (\begin{DoxyParamCaption}\item[{const dpp\+::slashcommand\+\_\+t \&}]{event}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$}]{aquin}{}\end{DoxyParamCaption})}
+
+
+
+Returns pong. 
+
+Ping -\/ Function Command named {\ttfamily ping} 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+{\em aquin} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Error$>$ 
+\end{DoxyReturn}
+\Hypertarget{namespacebot_1_1commands_a1e7efe49ff91c3b3c8af085e52076cec}\index{bot::commands@{bot::commands}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!bot::commands@{bot::commands}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily \label{namespacebot_1_1commands_a1e7efe49ff91c3b3c8af085e52076cec} 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ bot\+::commands\+::set\+Status (\begin{DoxyParamCaption}\item[{const dpp\+::slashcommand\+\_\+t \&}]{event}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$}]{aquin}{}\end{DoxyParamCaption})}
+
+
+
+Set the status of the bot. 
+
+Set status -\/ Function Command named {\ttfamily setstatus} 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+{\em aquin} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Error$>$ 
+\end{DoxyReturn}

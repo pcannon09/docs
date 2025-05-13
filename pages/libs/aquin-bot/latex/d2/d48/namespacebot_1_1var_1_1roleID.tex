@@ -1,0 +1,36 @@
+\doxysection{bot\+::var\+::role\+ID Namespace Reference}
+\hypertarget{namespacebot_1_1var_1_1roleID}{}\label{namespacebot_1_1var_1_1roleID}\index{bot::var::roleID@{bot::var::roleID}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const dpp\+::snowflake \mbox{\hyperlink{namespacebot_1_1var_1_1roleID_aa794ad8bc5e3cacc5b6bf4957088e22e}{admin\+Role\+ID}}
+\item 
+const dpp\+::snowflake \mbox{\hyperlink{namespacebot_1_1var_1_1roleID_a3c1c332d94e66d91fce4dc8332c5ad04}{member\+Role}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacebot_1_1var_1_1roleID_aa794ad8bc5e3cacc5b6bf4957088e22e}\index{bot::var::roleID@{bot::var::roleID}!adminRoleID@{adminRoleID}}
+\index{adminRoleID@{adminRoleID}!bot::var::roleID@{bot::var::roleID}}
+\doxysubsubsection{\texorpdfstring{adminRoleID}{adminRoleID}}
+{\footnotesize\ttfamily \label{namespacebot_1_1var_1_1roleID_aa794ad8bc5e3cacc5b6bf4957088e22e} 
+const dpp\+::snowflake bot\+::var\+::role\+ID\+::admin\+Role\+ID}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ ((\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{bool}\textcolor{keyword}{>}(dotenv::getenv(\textcolor{stringliteral}{"{}DEV"{}})\ ==\ \textcolor{stringliteral}{"{}true"{}})))\ ?\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ 1334581662096293897\ :\ 1163096008872439959}
+
+\end{DoxyCode}
+\Hypertarget{namespacebot_1_1var_1_1roleID_a3c1c332d94e66d91fce4dc8332c5ad04}\index{bot::var::roleID@{bot::var::roleID}!memberRole@{memberRole}}
+\index{memberRole@{memberRole}!bot::var::roleID@{bot::var::roleID}}
+\doxysubsubsection{\texorpdfstring{memberRole}{memberRole}}
+{\footnotesize\ttfamily \label{namespacebot_1_1var_1_1roleID_a3c1c332d94e66d91fce4dc8332c5ad04} 
+const dpp\+::snowflake bot\+::var\+::role\+ID\+::member\+Role}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ ((\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{bool}\textcolor{keyword}{>}(dotenv::getenv(\textcolor{stringliteral}{"{}DEV"{}})\ ==\ \textcolor{stringliteral}{"{}true"{}})))\ ?\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ 1163088263087669328\ :\ 1334581662096293893}
+
+\end{DoxyCode}

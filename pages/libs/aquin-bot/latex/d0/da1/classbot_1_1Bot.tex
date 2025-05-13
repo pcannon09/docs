@@ -1,0 +1,182 @@
+\doxysection{bot\+::Bot Class Reference}
+\hypertarget{classbot_1_1Bot}{}\label{classbot_1_1Bot}\index{bot::Bot@{bot::Bot}}
+
+
+{\ttfamily \#include $<$Bot.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbot_1_1Bot_a4acad054cc9935839a3354945d10b86a}{Bot}} (const std\+::string \mbox{\hyperlink{classbot_1_1Bot_a14c51329cadf0ab320ec67568fcc5ad5}{ID}}, const \mbox{\hyperlink{structbot_1_1BotSettings}{Bot\+Settings}} \&\mbox{\hyperlink{classbot_1_1Bot_ad4d788d5736919d8d5ebccba2b09b7a4}{settings}})
+\begin{DoxyCompactList}\small\item\em Constructor to create the bot. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbot_1_1Bot_aaf107a0a9d79b69d6dc58df610c804a8}{\texorpdfstring{$\sim$}{\string~}\+Bot}} ()
+\begin{DoxyCompactList}\small\item\em Call {\ttfamily Bot\+::destroy(0)} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structbot_1_1BotSettings}{Bot\+Settings}} \mbox{\hyperlink{classbot_1_1Bot_a9cbcc8bcee123b65a9917a59b6a7e79b}{get\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Get the current bot token. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbot_1_1Bot_ac71955b39f2555551dcb04513726690e}{start}} () const
+\begin{DoxyCompactList}\small\item\em Start the bot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbot_1_1Bot_ade2cefeb8a99a84ddff2d0185199de0b}{shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shutdown the bot. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classbot_1_1Bot_a5a4b93efcdadae67f746d4db6b75a6db}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Get the current bot id. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classbot_1_1Bot_a24fc54125b91731dc10de97dd9318b54}{get\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Get the bot token. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbot_1_1Bot_ac54c08fa9062511c8ab4829964f93ecd}{destroy}} (const int code)
+\begin{DoxyCompactList}\small\item\em Destroy the bot and end it with exit code {\ttfamily 0} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static dpp\+::cluster \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classbot_1_1Bot_a8a2080ae66b45818ce841a083162d22c}{app}}
+\item 
+static bool \mbox{\hyperlink{classbot_1_1Bot_ae845372a5f1df65b80f3167f0a5d29b6}{bot\+Is\+On}} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classbot_1_1Bot_a14c51329cadf0ab320ec67568fcc5ad5}{ID}}
+\item 
+static \mbox{\hyperlink{structbot_1_1BotSettings}{Bot\+Settings}} \mbox{\hyperlink{classbot_1_1Bot_ad4d788d5736919d8d5ebccba2b09b7a4}{settings}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classbot_1_1Bot}{Bot} -\/ Class Create a bot with the required functions and all 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classbot_1_1Bot_a4acad054cc9935839a3354945d10b86a}\index{bot::Bot@{bot::Bot}!Bot@{Bot}}
+\index{Bot@{Bot}!bot::Bot@{bot::Bot}}
+\doxysubsubsection{\texorpdfstring{Bot()}{Bot()}}
+{\footnotesize\ttfamily \label{classbot_1_1Bot_a4acad054cc9935839a3354945d10b86a} 
+bot\+::\+Bot\+::\+Bot (\begin{DoxyParamCaption}\item[{const std\+::string}]{ID}{, }\item[{const \mbox{\hyperlink{structbot_1_1BotSettings}{Bot\+Settings}} \&}]{settings}{}\end{DoxyParamCaption})}
+
+
+
+Constructor to create the bot. 
+
+\doxylink{classbot_1_1Bot}{Bot} -\/ Constructor 
+\begin{DoxyParams}{Parameters}
+{\em \`{}id\`{}} & \texorpdfstring{$>$}{>} Set the current ID for the bot \\
+\hline
+{\em \`{}settings\`{}} & \texorpdfstring{$>$}{>} Set the settings for the bot \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbot_1_1Bot_aaf107a0a9d79b69d6dc58df610c804a8}\index{bot::Bot@{bot::Bot}!````~Bot@{\texorpdfstring{$\sim$}{\string~}Bot}}
+\index{````~Bot@{\texorpdfstring{$\sim$}{\string~}Bot}!bot::Bot@{bot::Bot}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Bot()}{\string~Bot()}}
+{\footnotesize\ttfamily \label{classbot_1_1Bot_aaf107a0a9d79b69d6dc58df610c804a8} 
+bot\+::\+Bot\+::\texorpdfstring{$\sim$}{\string~}\+Bot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Call {\ttfamily Bot\+::destroy(0)} 
+
+\doxylink{classbot_1_1Bot}{Bot} -\/ Deconstructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbot_1_1Bot_ac54c08fa9062511c8ab4829964f93ecd}\index{bot::Bot@{bot::Bot}!destroy@{destroy}}
+\index{destroy@{destroy}!bot::Bot@{bot::Bot}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \label{classbot_1_1Bot_ac54c08fa9062511c8ab4829964f93ecd} 
+int bot\+::\+Bot\+::destroy (\begin{DoxyParamCaption}\item[{const int}]{code}{}\end{DoxyParamCaption})}
+
+
+
+Destroy the bot and end it with exit code {\ttfamily 0} 
+
+Destroy -\/ Function 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbot_1_1Bot_a5a4b93efcdadae67f746d4db6b75a6db}\index{bot::Bot@{bot::Bot}!getID@{getID}}
+\index{getID@{getID}!bot::Bot@{bot::Bot}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily \label{classbot_1_1Bot_a5a4b93efcdadae67f746d4db6b75a6db} 
+std\+::string bot\+::\+Bot\+::get\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the current bot id. 
+
+Get ID -\/ Function \begin{DoxyReturn}{Returns}
+{\ttfamily std\+::string} \texorpdfstring{$>$}{>} Return the ID 
+\end{DoxyReturn}
+\Hypertarget{classbot_1_1Bot_a9cbcc8bcee123b65a9917a59b6a7e79b}\index{bot::Bot@{bot::Bot}!getSettings@{getSettings}}
+\index{getSettings@{getSettings}!bot::Bot@{bot::Bot}}
+\doxysubsubsection{\texorpdfstring{getSettings()}{getSettings()}}
+{\footnotesize\ttfamily \label{classbot_1_1Bot_a9cbcc8bcee123b65a9917a59b6a7e79b} 
+\mbox{\hyperlink{structbot_1_1BotSettings}{Bot\+Settings}} bot\+::\+Bot\+::get\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the current bot token. 
+
+Get token -\/ Function \begin{DoxyReturn}{Returns}
+{\ttfamily \doxylink{structbot_1_1BotSettings}{Bot\+Settings}} \texorpdfstring{$>$}{>} Return the current bot settings 
+\end{DoxyReturn}
+\Hypertarget{classbot_1_1Bot_a24fc54125b91731dc10de97dd9318b54}\index{bot::Bot@{bot::Bot}!getToken@{getToken}}
+\index{getToken@{getToken}!bot::Bot@{bot::Bot}}
+\doxysubsubsection{\texorpdfstring{getToken()}{getToken()}}
+{\footnotesize\ttfamily \label{classbot_1_1Bot_a24fc54125b91731dc10de97dd9318b54} 
+std\+::string bot\+::\+Bot\+::get\+Token (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the bot token. 
+
+Get ID -\/ Function \begin{DoxyReturn}{Returns}
+{\ttfamily std\+::string} \texorpdfstring{$>$}{>} Return the token 
+\end{DoxyReturn}
+\Hypertarget{classbot_1_1Bot_ade2cefeb8a99a84ddff2d0185199de0b}\index{bot::Bot@{bot::Bot}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!bot::Bot@{bot::Bot}}
+\doxysubsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily \label{classbot_1_1Bot_ade2cefeb8a99a84ddff2d0185199de0b} 
+void bot\+::\+Bot\+::shutdown (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Shutdown the bot. 
+
+Shutdown -\/ Function \Hypertarget{classbot_1_1Bot_ac71955b39f2555551dcb04513726690e}\index{bot::Bot@{bot::Bot}!start@{start}}
+\index{start@{start}!bot::Bot@{bot::Bot}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{classbot_1_1Bot_ac71955b39f2555551dcb04513726690e} 
+void bot\+::\+Bot\+::start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Start the bot. 
+
+Start -\/ Function 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classbot_1_1Bot_a8a2080ae66b45818ce841a083162d22c}\index{bot::Bot@{bot::Bot}!app@{app}}
+\index{app@{app}!bot::Bot@{bot::Bot}}
+\doxysubsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily \label{classbot_1_1Bot_a8a2080ae66b45818ce841a083162d22c} 
+dpp\+::cluster \texorpdfstring{$\ast$}{*} bot\+::\+Bot\+::app\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classbot_1_1Bot_ae845372a5f1df65b80f3167f0a5d29b6}\index{bot::Bot@{bot::Bot}!botIsOn@{botIsOn}}
+\index{botIsOn@{botIsOn}!bot::Bot@{bot::Bot}}
+\doxysubsubsection{\texorpdfstring{botIsOn}{botIsOn}}
+{\footnotesize\ttfamily \label{classbot_1_1Bot_ae845372a5f1df65b80f3167f0a5d29b6} 
+bool bot\+::\+Bot\+::bot\+Is\+On = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classbot_1_1Bot_a14c51329cadf0ab320ec67568fcc5ad5}\index{bot::Bot@{bot::Bot}!ID@{ID}}
+\index{ID@{ID}!bot::Bot@{bot::Bot}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily \label{classbot_1_1Bot_a14c51329cadf0ab320ec67568fcc5ad5} 
+std\+::string bot\+::\+Bot\+::\+ID\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classbot_1_1Bot_ad4d788d5736919d8d5ebccba2b09b7a4}\index{bot::Bot@{bot::Bot}!settings@{settings}}
+\index{settings@{settings}!bot::Bot@{bot::Bot}}
+\doxysubsubsection{\texorpdfstring{settings}{settings}}
+{\footnotesize\ttfamily \label{classbot_1_1Bot_ad4d788d5736919d8d5ebccba2b09b7a4} 
+\mbox{\hyperlink{structbot_1_1BotSettings}{Bot\+Settings}} bot\+::\+Bot\+::settings\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/types/\mbox{\hyperlink{Bot_8hpp}{Bot.\+hpp}}\item 
+src/types/\mbox{\hyperlink{Bot_8cpp}{Bot.\+cpp}}\end{DoxyCompactItemize}

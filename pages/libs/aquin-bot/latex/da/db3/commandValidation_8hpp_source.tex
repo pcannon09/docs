@@ -1,0 +1,26 @@
+\doxysection{command\+Validation.\+hpp}
+\hypertarget{commandValidation_8hpp_source}{}\label{commandValidation_8hpp_source}\index{inc/commandValidation.hpp@{inc/commandValidation.hpp}}
+\mbox{\hyperlink{commandValidation_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <tuple>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Error_8hpp}{../inc/types/Error.hpp}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{slashCommands_8hpp}{../inc/slashCommands.hpp}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacebot}{bot}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{extern}\ std::vector<std::tuple<}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ std::string,\ \textcolor{comment}{//\ Command\ name}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::string,\ \textcolor{comment}{//\ Command\ explanation}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::vector<Error>(*)(\textcolor{keyword}{const}\ dpp::slashcommand\_t\&,\ std::shared\_ptr<bot::Bot>\ aquin),\ \textcolor{comment}{//\ Function\ call}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::pair<std::string,\ bool>>,\ \textcolor{comment}{//\ \{Option\ name\},\ \{Command\ explanation\},\ \{Is\ required?\}}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::string>\ \textcolor{comment}{//\ \{Option\ popup\},\ \{Popup\ explanation\}}}
+\DoxyCodeLine{00021\ \ \ \ \ >>\ \mbox{\hyperlink{namespacebot_a4dc42dc5142e1da40fe431ecf9c22741}{slashCommandValidations}};}
+\DoxyCodeLine{00022\ \}}
+\DoxyCodeLine{00023\ }
+
+\end{DoxyCode}

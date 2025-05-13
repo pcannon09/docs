@@ -1,0 +1,29 @@
+\doxysection{src/utils.cpp File Reference}
+\hypertarget{utils_8cpp}{}\label{utils_8cpp}\index{src/utils.cpp@{src/utils.cpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$dpp/dpp.\+h$>$}\newline
+{\ttfamily \#include "{}../vendor/io-\/controller-\/mini/include/io\+Controller.\+hpp"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacebot}{bot}}
+\item 
+namespace \mbox{\hyperlink{namespacebot_1_1utils}{bot\+::utils}}
+\item 
+namespace \mbox{\hyperlink{namespacebot_1_1utils_1_1botUtils}{bot\+::utils\+::bot\+Utils}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespacebot_1_1utils_a2c7ffdded3019ede5d11287974867a96}{bot\+::utils\+::split}} (std\+::string str, std\+::string del)
+\begin{DoxyCompactList}\small\item\em Split the string with a custom delimiter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacebot_1_1utils_a89cce990533af69829d16024d4514938}{bot\+::utils\+::file\+Empty}} (std\+::ifstream \&file)
+\begin{DoxyCompactList}\small\item\em Check if a file is empty. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacebot_1_1utils_a079e5195c65a6a29e9c4bc61c8bd92f9}{bot\+::utils\+::stoi}} (std\+::string str)
+\item 
+std\+::vector$<$ dpp\+::snowflake $>$ \mbox{\hyperlink{namespacebot_1_1utils_1_1botUtils_a4b908b4532ee713ce7dd656df9ecb9dc}{bot\+::utils\+::bot\+Utils\+::get\+Role\+Members}} (dpp\+::guild \texorpdfstring{$\ast$}{*}guild, dpp\+::snowflake target)
+\end{DoxyCompactItemize}

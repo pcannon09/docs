@@ -1,0 +1,36 @@
+\doxysection{utils.\+hpp}
+\hypertarget{utils_8hpp_source}{}\label{utils_8hpp_source}\index{inc/utils.hpp@{inc/utils.hpp}}
+\mbox{\hyperlink{utils_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <dpp/dpp.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacebot_1_1utils}{bot::utils}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{namespacebot_1_1utils_a2c7ffdded3019ede5d11287974867a96}{split}}(std::string\ str,\ std::string\ del);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{/*\ Stoi\ (String\ to\ int)\ -\/\ Function}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ *\ Convert\ a\ string\ to\ an\ int}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ \ *\ @param\ str}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ \ *\ @return\ int}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespacebot_1_1utils_a079e5195c65a6a29e9c4bc61c8bd92f9}{stoi}}(std::string\ str);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespacebot_1_1utils_a89cce990533af69829d16024d4514938}{fileEmpty}}(std::ifstream\ \&file);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacebot_1_1utils_1_1botUtils}{botUtils}}}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Get\ role\ members\ -\/\ Functions}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ Get\ role\ members\ depending\ on\ the\ \`{}target`\ snowflake\ and\ guild.\ Return\ a\ vector\ a\ snowflakes}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ guild}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ target}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::vector<dpp::snowflake>}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::vector<dpp::snowflake>\ \mbox{\hyperlink{namespacebot_1_1utils_1_1botUtils_a4b908b4532ee713ce7dd656df9ecb9dc}{getRoleMembers}}(dpp::guild\ *guild,\ dpp::snowflake\ target);}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,45 @@
+\doxysection{src/slash\+Commands.cpp File Reference}
+\hypertarget{slashCommands_8cpp}{}\label{slashCommands_8cpp}\index{src/slashCommands.cpp@{src/slashCommands.cpp}}
+{\ttfamily \#include $<$dpp/colors.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$future$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$dpp/dpp.\+h$>$}\newline
+{\ttfamily \#include "{}../inc/slash\+Commands.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/command\+Validation.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/var.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/utils.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/types/\+Bot.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/types/\+Error.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/types/\+Msg.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/types/\+Debug.\+hpp"{}}\newline
+{\ttfamily \#include "{}../vendor/io-\/controller-\/mini/include/io\+Controller.\+hpp"{}}\newline
+{\ttfamily \#include "{}../vendor/fmt/include/fmt/format.\+h"{}}\newline
+{\ttfamily \#include "{}../vendor/jsoncpp/include/json/json.\+h"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacebot}{bot}}
+\item 
+namespace \mbox{\hyperlink{namespacebot_1_1utils}{bot\+::utils}}
+\item 
+namespace \mbox{\hyperlink{namespacebot_1_1commands}{bot\+::commands}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacebot_1_1utils_a8dc8e684e618d59cfd5a30e8faa26f4b}{bot\+::utils\+::get\+Required\+Role}} (const dpp\+::slashcommand\+\_\+t \&event, dpp\+::snowflake id)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \mbox{\hyperlink{namespacebot_1_1utils_a3d33374004468ea2a3fcfe763ded02d8}{bot\+::utils\+::send\+DM}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$ aquin, std\+::vector$<$ std\+::future$<$ \mbox{\hyperlink{structError}{Error}} $>$ $>$ \&futures, std\+::vector$<$ std\+::future$<$ \mbox{\hyperlink{structError}{Error}} $>$ $>$ \&futures\+Msg\+Set, std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \&error\+Vec, dpp\+::snowflake member, const dpp\+::slashcommand\+\_\+t \&event, \mbox{\hyperlink{classbot_1_1Debug}{Debug}} \&DMSend\+Confirmations)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \mbox{\hyperlink{namespacebot_1_1commands_aa4cd9569034e179c4e646961e2024a61}{bot\+::commands\+::command\+Is\+On\+Work}} (const dpp\+::slashcommand\+\_\+t \&event, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$ aquin)
+\begin{DoxyCompactList}\small\item\em Replies \doxylink{classbot_1_1Msg}{Msg} when the command is on work. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \mbox{\hyperlink{namespacebot_1_1commands_a33b4510c7e140ccfa8bbe734e9f9678b}{bot\+::commands\+::ping}} (const dpp\+::slashcommand\+\_\+t \&event, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$ aquin)
+\begin{DoxyCompactList}\small\item\em Returns pong. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \mbox{\hyperlink{namespacebot_1_1commands_ae6cbe4aeb012305709dcdbc881ea9e2d}{bot\+::commands\+::announce}} (const dpp\+::slashcommand\+\_\+t \&event, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$ aquin)
+\begin{DoxyCompactList}\small\item\em Announce something to someones DMs. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \mbox{\hyperlink{namespacebot_1_1commands_a31f71dae09c339683396f6d75b4b9fb7}{bot\+::commands\+::info}} (const dpp\+::slashcommand\+\_\+t \&event, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$ aquin)
+\begin{DoxyCompactList}\small\item\em Returns the info about Aquin and more. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structError}{Error}} $>$ \mbox{\hyperlink{namespacebot_1_1commands_a1e7efe49ff91c3b3c8af085e52076cec}{bot\+::commands\+::set\+Status}} (const dpp\+::slashcommand\+\_\+t \&event, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbot_1_1Bot}{bot\+::\+Bot}} $>$ aquin)
+\begin{DoxyCompactList}\small\item\em Set the status of the bot. \end{DoxyCompactList}\end{DoxyCompactItemize}

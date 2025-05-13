@@ -1,0 +1,136 @@
+\doxysection{bot\+::Debug Class Reference}
+\hypertarget{classbot_1_1Debug}{}\label{classbot_1_1Debug}\index{bot::Debug@{bot::Debug}}
+
+
+{\ttfamily \#include $<$Debug.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbot_1_1Debug_aebbb1ced2e3d7d1587712bad77ed5945}{Debug}} (std\+::string \mbox{\hyperlink{classbot_1_1Debug_a3967d88e529bd9d8690aa10eb9e5a0cc}{file}})
+\begin{DoxyCompactList}\small\item\em \doxylink{classbot_1_1Debug}{Debug} -\/ Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbot_1_1Debug_af03b9f7d7c82591569e9a9397b78bb65}{\texorpdfstring{$\sim$}{\string~}\+Debug}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classbot_1_1Debug}{Debug} -\/ Deconstructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbot_1_1Debug_af360e6572e757f36bb819184e00eed5a}{debug}} (std\+::string msg, std\+::string type="{}debug"{}, bool show=true)
+\begin{DoxyCompactList}\small\item\em \doxylink{classbot_1_1Debug}{Debug} with an output in the console and appending it to the previously set file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbot_1_1Debug_a23389715dd22b348a686268ef6743c70}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear all the contents of the loaded file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classbot_1_1Debug_a803f6a37e60bf2e8da26eba8b26f85a9}{get\+File\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Get the current file path of the set {\ttfamily \doxylink{classbot_1_1Debug}{Debug}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbot_1_1Debug_a3c7b9f0a015fd27f469d47aa3e48fccd}{is\+File\+Open}} ()
+\begin{DoxyCompactList}\small\item\em Check if the file is open. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::fstream \mbox{\hyperlink{classbot_1_1Debug_a3967d88e529bd9d8690aa10eb9e5a0cc}{file}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classbot_1_1Debug_a2c3f907be8d91066cc049600b02f0cee}{file\+Path}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classbot_1_1Debug_aebbb1ced2e3d7d1587712bad77ed5945}\index{bot::Debug@{bot::Debug}!Debug@{Debug}}
+\index{Debug@{Debug}!bot::Debug@{bot::Debug}}
+\doxysubsubsection{\texorpdfstring{Debug()}{Debug()}}
+{\footnotesize\ttfamily \label{classbot_1_1Debug_aebbb1ced2e3d7d1587712bad77ed5945} 
+bot\+::\+Debug\+::\+Debug (\begin{DoxyParamCaption}\item[{std\+::string}]{file}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{classbot_1_1Debug}{Debug} -\/ Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \`{}file\`{}} & \texorpdfstring{$>$}{>} Sets the current file for debugging \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbot_1_1Debug_af03b9f7d7c82591569e9a9397b78bb65}\index{bot::Debug@{bot::Debug}!````~Debug@{\texorpdfstring{$\sim$}{\string~}Debug}}
+\index{````~Debug@{\texorpdfstring{$\sim$}{\string~}Debug}!bot::Debug@{bot::Debug}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Debug()}{\string~Debug()}}
+{\footnotesize\ttfamily \label{classbot_1_1Debug_af03b9f7d7c82591569e9a9397b78bb65} 
+bot\+::\+Debug\+::\texorpdfstring{$\sim$}{\string~}\+Debug (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{classbot_1_1Debug}{Debug} -\/ Deconstructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbot_1_1Debug_a23389715dd22b348a686268ef6743c70}\index{bot::Debug@{bot::Debug}!clear@{clear}}
+\index{clear@{clear}!bot::Debug@{bot::Debug}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{classbot_1_1Debug_a23389715dd22b348a686268ef6743c70} 
+void bot\+::\+Debug\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clear all the contents of the loaded file. 
+
+Clear -\/ Function \Hypertarget{classbot_1_1Debug_af360e6572e757f36bb819184e00eed5a}\index{bot::Debug@{bot::Debug}!debug@{debug}}
+\index{debug@{debug}!bot::Debug@{bot::Debug}}
+\doxysubsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily \label{classbot_1_1Debug_af360e6572e757f36bb819184e00eed5a} 
+void bot\+::\+Debug\+::debug (\begin{DoxyParamCaption}\item[{std\+::string}]{msg}{, }\item[{std\+::string}]{type}{ = {\ttfamily "{}debug"{}}, }\item[{bool}]{show}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+\doxylink{classbot_1_1Debug}{Debug} with an output in the console and appending it to the previously set file. 
+
+debug -\/ Function 
+\begin{DoxyParams}{Parameters}
+{\em \`{}msg\`{}} & \texorpdfstring{$>$}{>} Set the message and append it to stdout and to the previously set file \\
+\hline
+{\em \`{}type\`{}} & \texorpdfstring{$>$}{>} Set the type of the message, such as\+: debug, info, warn, error \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbot_1_1Debug_a803f6a37e60bf2e8da26eba8b26f85a9}\index{bot::Debug@{bot::Debug}!getFilePath@{getFilePath}}
+\index{getFilePath@{getFilePath}!bot::Debug@{bot::Debug}}
+\doxysubsubsection{\texorpdfstring{getFilePath()}{getFilePath()}}
+{\footnotesize\ttfamily \label{classbot_1_1Debug_a803f6a37e60bf2e8da26eba8b26f85a9} 
+std\+::string bot\+::\+Debug\+::get\+File\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the current file path of the set {\ttfamily \doxylink{classbot_1_1Debug}{Debug}} 
+
+Get file path -\/ Function \begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\Hypertarget{classbot_1_1Debug_a3c7b9f0a015fd27f469d47aa3e48fccd}\index{bot::Debug@{bot::Debug}!isFileOpen@{isFileOpen}}
+\index{isFileOpen@{isFileOpen}!bot::Debug@{bot::Debug}}
+\doxysubsubsection{\texorpdfstring{isFileOpen()}{isFileOpen()}}
+{\footnotesize\ttfamily \label{classbot_1_1Debug_a3c7b9f0a015fd27f469d47aa3e48fccd} 
+bool bot\+::\+Debug\+::is\+File\+Open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check if the file is open. 
+
+Is file open -\/ Function \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classbot_1_1Debug_a3967d88e529bd9d8690aa10eb9e5a0cc}\index{bot::Debug@{bot::Debug}!file@{file}}
+\index{file@{file}!bot::Debug@{bot::Debug}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily \label{classbot_1_1Debug_a3967d88e529bd9d8690aa10eb9e5a0cc} 
+std\+::fstream bot\+::\+Debug\+::file\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classbot_1_1Debug_a2c3f907be8d91066cc049600b02f0cee}\index{bot::Debug@{bot::Debug}!filePath@{filePath}}
+\index{filePath@{filePath}!bot::Debug@{bot::Debug}}
+\doxysubsubsection{\texorpdfstring{filePath}{filePath}}
+{\footnotesize\ttfamily \label{classbot_1_1Debug_a2c3f907be8d91066cc049600b02f0cee} 
+std\+::string bot\+::\+Debug\+::file\+Path\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/types/\mbox{\hyperlink{Debug_8hpp}{Debug.\+hpp}}\item 
+src/types/\mbox{\hyperlink{Debug_8cpp}{Debug.\+cpp}}\end{DoxyCompactItemize}

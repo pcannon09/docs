@@ -1,0 +1,50 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$csignal$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$dpp/dpp.\+h$>$}\newline
+{\ttfamily \#include "{}../inc/macros.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/slash\+Commands.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/command\+Validation.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/utils.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/cli.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/types/\+Debug.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/types/\+Bot.\+hpp"{}}\newline
+{\ttfamily \#include "{}../inc/var.\+hpp"{}}\newline
+{\ttfamily \#include "{}../vendor/io-\/controller-\/mini/include/io\+Controller.\+hpp"{}}\newline
+{\ttfamily \#include "{}../vendor/dotenv-\/cpp/include/laserpants/dotenv/dotenv.\+h"{}}\newline
+{\ttfamily \#include "{}../vendor/fmt/include/fmt/format.\+h"{}}\newline
+{\ttfamily \#include "{}../vendor/jsoncpp/include/json/json.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a78af3dbb7f7edfec1a5ddf1eaefffcd9}{prod\+Exit\+Error}} (int signum)
+\item 
+void \mbox{\hyperlink{main_8cpp_a33e18af332bff0788d137a41d7abb841}{dev\+Exit}} (int signum)
+\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a33e18af332bff0788d137a41d7abb841}\index{main.cpp@{main.cpp}!devExit@{devExit}}
+\index{devExit@{devExit}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{devExit()}{devExit()}}
+{\footnotesize\ttfamily \label{main_8cpp_a33e18af332bff0788d137a41d7abb841} 
+void dev\+Exit (\begin{DoxyParamCaption}\item[{int}]{signum}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a78af3dbb7f7edfec1a5ddf1eaefffcd9}\index{main.cpp@{main.cpp}!prodExitError@{prodExitError}}
+\index{prodExitError@{prodExitError}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{prodExitError()}{prodExitError()}}
+{\footnotesize\ttfamily \label{main_8cpp_a78af3dbb7f7edfec1a5ddf1eaefffcd9} 
+void prod\+Exit\+Error (\begin{DoxyParamCaption}\item[{int}]{signum}{}\end{DoxyParamCaption})}
+

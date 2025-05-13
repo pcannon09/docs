@@ -1,0 +1,30 @@
+\doxysection{macros.\+hpp}
+\hypertarget{macros_8hpp_source}{}\label{macros_8hpp_source}\index{inc/macros.hpp@{inc/macros.hpp}}
+\mbox{\hyperlink{macros_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{macros_8hpp}{macros.hpp}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Versioning}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ AQUINBOT\_VERSION\_MAJOR\ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ AQUINBOT\_VERSION\_MINOR\ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ AQUINBOT\_VERSION\_PATCH\ \ \ \ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ AQUINBOT\_VERSION\_STD\ \ \ \ \ \ \ \ \ \ \ \ 13052025}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ Version\ states:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ dev\ -\/\ develoment\ (Before\ Beta\ version)}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ beta\ -\/\ Beta\ (Testing)}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ snap\ -\/\ Snapshot\ (Future\ update)}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ build\ -\/\ Built\ version}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ AQUINBOT\_VERSION\_STATE\ \ \ \ \ \ \ \ \ \ "{}beta"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ AQUINBOT\_VERSION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((AQUINBOT\_VERSION\_MAJOR<<16)|(AQUINBOT\_VERSION\_MINOR<<8)|(AQUINBOT\_VERSION\_PATCH)|(AQUINBOT\_VERSION\_STATE\ <<\ 24))}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ AQUINBOT\_VERSION\_CHECK(AQUINBOT\_VERSION\_MAJOR,\ AQUINBOT\_VERSION\_MINOR,\ AQUINBOT\_VERSION\_PATCH,\ AQUINBOT\_VERSION\_STATE)\ \(\backslash\)}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ ((AQUINBOT\_VERSION\_MAJOR<<16)|(AQUINBOT\_VERSION\_MINOR<<8)|(AQUINBOT\_VERSION\_PATCH)|(AQUINBOT\_VERSION\_STATE\ <<\ 24))}}
+\DoxyCodeLine{00024\ }
+
+\end{DoxyCode}
