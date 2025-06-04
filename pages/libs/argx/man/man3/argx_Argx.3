@@ -1,4 +1,4 @@
-.TH "argx::Argx" 3 "Version 0.1.0-beta" "Argx" \" -*- nroff -*-
+.TH "argx::Argx" 3 "Version 1.0.0-build" "Argx" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,6 +25,10 @@ argx::Argx
 .RI "void \fBadd\fP (\fBARGXOptions\fP option) const"
 .br
 .RI "Add param options\&. "
+.ti -1c
+.RI "bool \fBcompareArgs\fP (std::vector< \fBARGXOptions\fP > \fBoptions\fP, std::vector< std::string > argv)"
+.br
+.RI "Compare if \fRoptions\fP contains the required \fRid\fP, if the ID does not exist, return false\&. "
 .ti -1c
 .RI "std::string \fBcreateDocs\fP (\fBARGXStyle\fP style, const std::string &title, const std::string &mainInfo)"
 .br
@@ -166,6 +170,54 @@ Definition at line \fB38\fP of file \fBArgx\&.cpp\fP\&.
 
 .PP
 References \fBoptions\fP\&.
+.SS "bool argx::Argx::compareArgs (std::vector< \fBARGXOptions\fP > options, std::vector< std::string > argv)"
+
+.PP
+Compare if \fRoptions\fP contains the required \fRid\fP, if the ID does not exist, return false\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoptions\fP Return \fBARGXOptions\fP vector 
+.br
+\fIid\fP ID to find 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Definition at line \fB293\fP of file \fBArgx\&.cpp\fP\&.
+.nf
+294     {
+295         // Skip program name ( as arg )
+296         for (size_t i = 1 ; i < argv\&.size() ; ++i)
+297         {
+298             const std::string &arg = argv[i];
+299 
+300             bool found = false;
+301             for (const auto &option : options)
+302             {
+303                 if (option\&.sparam == arg || option\&.param == arg)
+304                 {
+305                     found = true;
+306                     break;
+307                 }
+308             }
+309             if (!found)
+310             {
+311                 return false; // Unknown argument
+312             }
+313         }
+314         return true; // All arguments are valid
+315     }
+.PP
+.fi
+
+.PP
+References \fBoptions\fP\&.
 .SS "std::string argx::Argx::createDocs (\fBARGXStyle\fP style, const std::string & title, const std::string & mainInfo)"
 
 .PP
@@ -217,7 +269,7 @@ Definition at line \fB225\fP of file \fBArgx\&.cpp\fP\&.
 251                     contentStr += "] ] ";
 252                 }
 253 
-254                 else contentStr += " ] ] ";
+254                 else contentStr += " ] ";
 255 
 256                 contentStr += x\&.info + "\\n";
 257 
@@ -237,13 +289,29 @@ Definition at line \fB225\fP of file \fBArgx\&.cpp\fP\&.
 271             }
 272         }
 273 
-274         return title + "\\n" + mainInfo + "\\n" + contentStr;
-275     }
+274         else if (style == ARGXStyle::Simple)
+275         {
+276             for (const auto &x : this\->options)
+277             {
+278                 contentStr += x\&.sparam + ", " + x\&.param + " \- " + x\&.info + "\\n";
+279 
+280                 if (x\&.hasSubParams && !x\&.subParams\&.empty())
+281                 {
+282                     for (const auto &sub : x\&.subParams)
+283                     {
+284                         contentStr += "  " + sub\&.sparam + ", " + sub\&.param + " \- " + sub\&.info + "\\n";
+285                     }
+286                 }
+287             }
+288         } // ARGXStyle
+289 
+290         return title + "\\n" + mainInfo + "\\n" + contentStr;
+291     }
 .PP
 .fi
 
 .PP
-References \fBoptions\fP, and \fBargx::Professional\fP\&.
+References \fBoptions\fP, \fBargx::Professional\fP, and \fBargx::Simple\fP\&.
 .SS "int argx::Argx::findParam (const std::string & id)"
 
 .PP
@@ -314,9 +382,9 @@ int Number of params including the executable param
 .PP
 
 .PP
-Definition at line \fB280\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB320\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-281     { return this\->mainArgc; }
+321     { return this\->mainArgc; }
 .PP
 .fi
 
@@ -334,9 +402,9 @@ std::string \fBArgx\fP ID
 .PP
 
 .PP
-Definition at line \fB286\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB326\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-287     { return this\->id; }
+327     { return this\->id; }
 .PP
 .fi
 
@@ -354,9 +422,9 @@ std::vector<std::string> Vector of strings for main arguments from \fRargv\fP
 .PP
 
 .PP
-Definition at line \fB277\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB317\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-278     { return *this\->mainArgs; }
+318     { return *this\->mainArgs; }
 .PP
 .fi
 
@@ -374,9 +442,9 @@ std::vector<ARGXOptions> Options to return
 .PP
 
 .PP
-Definition at line \fB283\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB323\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-284     { return this\->options; }
+324     { return this\->options; }
 .PP
 .fi
 
@@ -606,7 +674,7 @@ Referenced by \fBArgx()\fP, \fB~Argx()\fP, \fBfindParam()\fP, \fBgetMainArgs()\f
 .PP
 Definition at line \fB22\fP of file \fBArgx\&.hpp\fP\&.
 .PP
-Referenced by \fBadd()\fP, \fBcreateDocs()\fP, \fBfindParam()\fP, \fBgetOptions()\fP, and \fBgetParam()\fP\&.
+Referenced by \fBadd()\fP, \fBcompareArgs()\fP, \fBcreateDocs()\fP, \fBfindParam()\fP, \fBgetOptions()\fP, and \fBgetParam()\fP\&.
 
 .SH "Author"
 .PP 

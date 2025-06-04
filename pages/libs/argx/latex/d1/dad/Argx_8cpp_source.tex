@@ -255,7 +255,7 @@
 \DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ \textcolor{stringliteral}{"{}]\ ]\ "{}};}
 \DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00253}00253\ }
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ contentStr\ +=\ \textcolor{stringliteral}{"{}\ ]\ ]\ "{}};}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ contentStr\ +=\ \textcolor{stringliteral}{"{}\ ]\ "{}};}
 \DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00255}00255\ }
 \DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ x.info\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
 \DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00257}00257\ }
@@ -275,21 +275,61 @@
 \DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00272}00272\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00273}00273\ }
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00274}00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ title\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ mainInfo\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ contentStr;}
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00275}00275\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00276}00276\ }
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00277}\mbox{\hyperlink{classargx_1_1Argx_a6146d9644c99b670b15d78cb92057bff}{00277}}\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classargx_1_1Argx_a6146d9644c99b670b15d78cb92057bff}{Argx::getMainArgs}}()\textcolor{keyword}{\ const}}
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00278}00278\ \textcolor{keyword}{\ \ \ \ }\{\ \textcolor{keywordflow}{return}\ *this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}};\ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00274}00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (style\ ==\ \mbox{\hyperlink{namespaceargx_a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780}{ARGXStyle::Simple}})}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00275}00275\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&x\ :\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ x.sparam\ +\ \textcolor{stringliteral}{"{},\ "{}}\ +\ x.param\ +\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ +\ x.info\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
 \DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00279}00279\ }
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00280}\mbox{\hyperlink{classargx_1_1Argx_a812254e076a5ec208ba9d2eab470edb4}{00280}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classargx_1_1Argx_a812254e076a5ec208ba9d2eab470edb4}{Argx::getArgc}}()\textcolor{keyword}{\ const}}
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00281}00281\ \textcolor{keyword}{\ \ \ \ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a2e72f1c581d6ac0ffa02d45c3e6b540f}{mainArgc}};\ \}}
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00282}00282\ }
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00283}\mbox{\hyperlink{classargx_1_1Argx_a3378e7eb2efcb1386b487ece1b5aec35}{00283}}\ \ \ \ \ std::vector<ARGXOptions>\ \mbox{\hyperlink{classargx_1_1Argx_a3378e7eb2efcb1386b487ece1b5aec35}{Argx::getOptions}}()\textcolor{keyword}{\ const}}
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00284}00284\ \textcolor{keyword}{\ \ \ \ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}};\ \}}
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00285}00285\ }
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00286}\mbox{\hyperlink{classargx_1_1Argx_a671ad717805d76e459c74a3e0fee0625}{00286}}\ \ \ \ \ std::string\ \mbox{\hyperlink{classargx_1_1Argx_a671ad717805d76e459c74a3e0fee0625}{Argx::getID}}()\textcolor{keyword}{\ const}}
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00287}00287\ \textcolor{keyword}{\ \ \ \ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_adf94f5a9f22d8ea2cde21df63c2f3d8a}{id}};\ \}}
-\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00288}00288\ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x.hasSubParams\ \&\&\ !x.subParams.empty())}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&sub\ :\ x.subParams)}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ \textcolor{stringliteral}{"{}\ \ "{}}\ +\ sub.sparam\ +\ \textcolor{stringliteral}{"{},\ "{}}\ +\ sub.param\ +\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ +\ sub.info\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00288}00288\ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ ARGXStyle}}
 \DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00289}00289\ }
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00290}00290\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ title\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ mainInfo\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ contentStr;}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00291}00291\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00293}\mbox{\hyperlink{classargx_1_1Argx_adb4e8a622135970b4e12f14d49a76e52}{00293}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classargx_1_1Argx_adb4e8a622135970b4e12f14d49a76e52}{Argx::compareArgs}}(std::vector<ARGXOptions>\ \mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}},\ std::vector<std::string>\ argv)}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00294}00294\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00295}00295\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Skip\ program\ name\ (\ as\ arg\ )}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00296}00296\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 1\ ;\ i\ <\ argv.size()\ ;\ ++i)}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00297}00297\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&arg\ =\ argv[i];}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ found\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&option\ :\ \mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (option.sparam\ ==\ arg\ ||\ option.param\ ==\ arg)}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!found)}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Unknown\ argument}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00313}00313\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00314}00314\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ All\ arguments\ are\ valid}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00315}00315\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00317}\mbox{\hyperlink{classargx_1_1Argx_a6146d9644c99b670b15d78cb92057bff}{00317}}\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classargx_1_1Argx_a6146d9644c99b670b15d78cb92057bff}{Argx::getMainArgs}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00318}00318\ \textcolor{keyword}{\ \ \ \ }\{\ \textcolor{keywordflow}{return}\ *this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}};\ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00319}00319\ }
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00320}\mbox{\hyperlink{classargx_1_1Argx_a812254e076a5ec208ba9d2eab470edb4}{00320}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classargx_1_1Argx_a812254e076a5ec208ba9d2eab470edb4}{Argx::getArgc}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00321}00321\ \textcolor{keyword}{\ \ \ \ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a2e72f1c581d6ac0ffa02d45c3e6b540f}{mainArgc}};\ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00322}00322\ }
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00323}\mbox{\hyperlink{classargx_1_1Argx_a3378e7eb2efcb1386b487ece1b5aec35}{00323}}\ \ \ \ \ std::vector<ARGXOptions>\ \mbox{\hyperlink{classargx_1_1Argx_a3378e7eb2efcb1386b487ece1b5aec35}{Argx::getOptions}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00324}00324\ \textcolor{keyword}{\ \ \ \ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}};\ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00325}00325\ }
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00326}\mbox{\hyperlink{classargx_1_1Argx_a671ad717805d76e459c74a3e0fee0625}{00326}}\ \ \ \ \ std::string\ \mbox{\hyperlink{classargx_1_1Argx_a671ad717805d76e459c74a3e0fee0625}{Argx::getID}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00327}00327\ \textcolor{keyword}{\ \ \ \ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_adf94f5a9f22d8ea2cde21df63c2f3d8a}{id}};\ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00328}00328\ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8cpp_source_l00329}00329\ }
 
 \end{DoxyCode}

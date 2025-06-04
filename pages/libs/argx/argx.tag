@@ -153,6 +153,13 @@
       <arglist>(ARGXOptions option) const</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>compareArgs</name>
+      <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
+      <anchor>adb4e8a622135970b4e12f14d49a76e52</anchor>
+      <arglist>(std::vector&lt; ARGXOptions &gt; options, std::vector&lt; std::string &gt; argv)</arglist>
+    </member>
+    <member kind="function">
       <type>std::string</type>
       <name>createDocs</name>
       <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
@@ -413,8 +420,8 @@
   </compound>
   <compound kind="page">
     <name>index</name>
-    <title>ARGX</title>
+    <title>ARGX - 1.0.0-build</title>
     <filename>index.html</filename>
-    <docanchor file="index.html" title="ARGX">md_README</docanchor>
+    <docanchor file="index.html" title="ARGX - 1.0.0-build">md_README</docanchor>
   </compound>
 </tagfile>

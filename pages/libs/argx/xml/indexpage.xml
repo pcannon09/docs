@@ -2,41 +2,55 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="indexpage" kind="page">
     <compoundname>index</compoundname>
-    <title>ARGX</title>
+    <title>ARGX - 1.0.0-build</title>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para><anchor id="index_1md_README"/></para>
 <sect1 id="index_1autotoc_md1">
-<title>C++ Argument parser</title><para><hruler/>
+<title>C++ Argument parser</title><sect2 id="index_1autotoc_md2">
+<title>Made by: pcannon09</title><para><hruler/>
 </para>
-<para><bold>NOTE: This version is still in beta, if you find a bug, issue or a suggestion please create an issue in github</bold></para>
+</sect2>
 </sect1>
-<sect1 id="index_1autotoc_md3">
-<title>Requirements</title><sect2 id="index_1autotoc_md4">
-<title>Compiler</title><para><table rows="2" cols="5"><row>
-<entry thead="yes" align='center'><para>Argx Version   </para>
-</entry><entry thead="yes" align='center'><para>Minimum C++ Version   </para>
+<sect1 id="index_1autotoc_md4">
+<title>Requirements</title><sect2 id="index_1autotoc_md5">
+<title>Compiler and C++ Standard Support</title><para><table rows="2" cols="5"><row>
+<entry thead="yes" align='center'><para>Current Argx Version   </para>
+</entry><entry thead="yes" align='center'><para>Minimum C++ Standard   </para>
 </entry><entry thead="yes" align='center'><para>GCC   </para>
 </entry><entry thead="yes" align='center'><para>Clang   </para>
 </entry><entry thead="yes" align='center'><para>MSVC    </para>
 </entry></row>
 <row>
-<entry thead="no" align='center'><para>0.1.1   </para>
+<entry thead="no" align='center'><para>1.0.0-build   </para>
 </entry><entry thead="no" align='center'><para>C++11   </para>
 </entry><entry thead="no" align='center'><para>GCC 4.8+   </para>
 </entry><entry thead="no" align='center'><para>Clang 3.3+   </para>
-</entry><entry thead="no" align='center'><para>MSVC 2015+   </para>
+</entry><entry thead="no" align='center'><para>MSVC 2017+ (/std:c++11 or later)   </para>
 </entry></row>
 </table>
 </para>
 </sect2>
-<sect2 id="index_1autotoc_md5">
-<title>Summary</title><para><itemizedlist>
-<listitem><para>The minimum required C++ version is C++11 </para>
+<sect2 id="index_1autotoc_md6">
+<title>Specific information</title><para><bold>NOTE: For version 1.0.0-build</bold><itemizedlist>
+<listitem><para>Minimum standard required to compile ---<mdash/> <bold>C++11</bold> (<bold>GCC 4.8+</bold>, <bold>Clang 3.3+</bold> and <bold>MSVC 2017+</bold>)</para>
 </listitem></itemizedlist>
 </para>
 </sect2>
+<sect2 id="index_1autotoc_md7">
+<title>Summary</title><para><itemizedlist>
+<listitem><para>The minimum required version for Argx is C++ for <bold>GCC 4.8+</bold>, <bold>Clang 3.3+</bold> and <bold>MSVC 2017+</bold></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md8">
+<title>IMPORTANT NOTES</title><para><bold>This library has been tested in Arch Linux, please open an issue if you encounter a problem with other Operating Systems</bold> <bold>Tested with Clang 19</bold> <bold>If you encounter any other issues with other compilers, open an issue in github</bold></para>
+<para><itemizedlist>
+<listitem><para>For more information, please check the documentation at <bold><ulink url="https://pcannon09.github.io/docs/pages/libs/argx/html/index.html">https://pcannon09.github.io/docs/pages/libs/argx/html/index.html</ulink></bold> </para>
+</listitem></itemizedlist>
+</para>
 </sect1>
     </detaileddescription>
     <location file="README.md"/>

@@ -80,35 +80,43 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_Argx_8hpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classargx_1_1Argx_1a82c1649fbd03d4f3ea94bf8a14e1299d">paramExists</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;<emphasis role="keywordtype">id</emphasis>);
 <anchor xml:id="_Argx_8hpp_source_1l00077"/>00077 <emphasis role="comment"></emphasis>
 <anchor xml:id="_Argx_8hpp_source_1l00078"/>00078 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00079"/>00079 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;the&#32;sub-param&#32;from&#32;`id`</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00080"/>00080 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;param&#32;Original&#32;param</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00081"/>00081 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;id&#32;The&#32;ID&#32;to&#32;get</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00079"/>00079 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Compare&#32;if&#32;`options`&#32;contains&#32;the&#32;required&#32;`id`,&#32;if&#32;the&#32;ID&#32;does&#32;not&#32;exist,&#32;return&#32;false</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00080"/>00080 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;options&#32;Return&#32;ARGXOptions&#32;vector</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00081"/>00081 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;id&#32;ID&#32;to&#32;find</emphasis>
 <anchor xml:id="_Argx_8hpp_source_1l00082"/>00082 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;bool</emphasis>
 <anchor xml:id="_Argx_8hpp_source_1l00083"/>00083 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classargx_1_1Argx_1adb8fa05c9916682bf3cabeb2a12895f4">getSubParam</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structargx_1_1ARGXParam">argx::ARGXParam</link>&#32;&amp;param,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;<emphasis role="keywordtype">id</emphasis>);
+<anchor xml:id="_Argx_8hpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classargx_1_1Argx_1adb4e8a622135970b4e12f14d49a76e52">compareArgs</link>(std::vector&lt;ARGXOptions&gt;&#32;<link linkend="_classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5">options</link>,&#32;std::vector&lt;std::string&gt;&#32;argv);
 <anchor xml:id="_Argx_8hpp_source_1l00085"/>00085 <emphasis role="comment"></emphasis>
 <anchor xml:id="_Argx_8hpp_source_1l00086"/>00086 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00087"/>00087 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;main&#32;arguments&#32;from&#32;`main()`&#32;function&#32;`argv`</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00088"/>00088 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;std::vector&lt;std::string&gt;&#32;Vector&#32;of&#32;strings&#32;for&#32;main&#32;arguments&#32;from&#32;`argv`</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00089"/>00089 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;<link linkend="_classargx_1_1Argx_1a6146d9644c99b670b15d78cb92057bff">getMainArgs</link>()&#32;<emphasis role="keyword">const</emphasis>;
-<anchor xml:id="_Argx_8hpp_source_1l00091"/>00091 <emphasis role="comment"></emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00092"/>00092 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00093"/>00093 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;main&#32;set&#32;options&#32;as&#32;ARGXOptions</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00094"/>00094 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;std::vector&lt;ARGXOptions&gt;&#32;Options&#32;to&#32;return</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00095"/>00095 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;ARGXOptions&gt;&#32;<link linkend="_classargx_1_1Argx_1a3378e7eb2efcb1386b487ece1b5aec35">getOptions</link>()&#32;<emphasis role="keyword">const</emphasis>;
-<anchor xml:id="_Argx_8hpp_source_1l00097"/>00097 <emphasis role="comment"></emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00098"/>00098 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00099"/>00099 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;Argx&#32;ID</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00100"/>00100 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;std::string&#32;Argx&#32;ID</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00101"/>00101 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classargx_1_1Argx_1a671ad717805d76e459c74a3e0fee0625">getID</link>()&#32;<emphasis role="keyword">const</emphasis>;
-<anchor xml:id="_Argx_8hpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;};
-<anchor xml:id="_Argx_8hpp_source_1l00104"/>00104 }
-<anchor xml:id="_Argx_8hpp_source_1l00105"/>00105 
-<anchor xml:id="_Argx_8hpp_source_1l00106"/>00106 <emphasis role="preprocessor">#else</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00107"/>00107 <emphasis role="preprocessor">#&#32;&#32;&#32;error&#32;&quot;Must&#32;compile&#32;with&#32;C++11&#32;support&#32;or&#32;newer&quot;</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00108"/>00108 <emphasis role="preprocessor">#&#32;&#32;&#32;pragma&#32;message(&quot;Current&#32;standard&#32;is&#32;&quot;&#32;ARGX_TOSTRING(__cplusplus))</emphasis>
-<anchor xml:id="_Argx_8hpp_source_1l00109"/>00109 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00087"/>00087 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;the&#32;sub-param&#32;from&#32;`id`</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00088"/>00088 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;param&#32;Original&#32;param</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00089"/>00089 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;id&#32;The&#32;ID&#32;to&#32;get</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00090"/>00090 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;bool</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00091"/>00091 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classargx_1_1Argx_1adb8fa05c9916682bf3cabeb2a12895f4">getSubParam</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structargx_1_1ARGXParam">argx::ARGXParam</link>&#32;&amp;param,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;<emphasis role="keywordtype">id</emphasis>);
+<anchor xml:id="_Argx_8hpp_source_1l00093"/>00093 <emphasis role="comment"></emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00094"/>00094 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00095"/>00095 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;main&#32;arguments&#32;from&#32;`main()`&#32;function&#32;`argv`</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00096"/>00096 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;std::vector&lt;std::string&gt;&#32;Vector&#32;of&#32;strings&#32;for&#32;main&#32;arguments&#32;from&#32;`argv`</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00097"/>00097 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;<link linkend="_classargx_1_1Argx_1a6146d9644c99b670b15d78cb92057bff">getMainArgs</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_Argx_8hpp_source_1l00099"/>00099 <emphasis role="comment"></emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00100"/>00100 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00101"/>00101 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;main&#32;set&#32;options&#32;as&#32;ARGXOptions</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00102"/>00102 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;std::vector&lt;ARGXOptions&gt;&#32;Options&#32;to&#32;return</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00103"/>00103 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;ARGXOptions&gt;&#32;<link linkend="_classargx_1_1Argx_1a3378e7eb2efcb1386b487ece1b5aec35">getOptions</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_Argx_8hpp_source_1l00105"/>00105 <emphasis role="comment"></emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00106"/>00106 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00107"/>00107 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;Argx&#32;ID</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00108"/>00108 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;std::string&#32;Argx&#32;ID</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00109"/>00109 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classargx_1_1Argx_1a671ad717805d76e459c74a3e0fee0625">getID</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_Argx_8hpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_Argx_8hpp_source_1l00112"/>00112 }
+<anchor xml:id="_Argx_8hpp_source_1l00113"/>00113 
+<anchor xml:id="_Argx_8hpp_source_1l00114"/>00114 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00115"/>00115 <emphasis role="preprocessor">#&#32;&#32;&#32;error&#32;&quot;Must&#32;compile&#32;with&#32;C++11&#32;support&#32;or&#32;newer&quot;</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00116"/>00116 <emphasis role="preprocessor">#&#32;&#32;&#32;pragma&#32;message(&quot;Current&#32;standard&#32;is&#32;&quot;&#32;ARGX_TOSTRING(__cplusplus))</emphasis>
+<anchor xml:id="_Argx_8hpp_source_1l00117"/>00117 <emphasis role="preprocessor">#endif</emphasis>
 </programlisting></section>

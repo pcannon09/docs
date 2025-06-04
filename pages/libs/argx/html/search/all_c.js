@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['type_0',['type',['../d9/db2/structargx_1_1ARGXError.html#aa3083201a43c82fd69c3f7a04118b184',1,'argx::ARGXError']]],
-  ['types_2ehpp_1',['types.hpp',['../dd/de3/types_8hpp.html',1,'']]]
+  ['options_0',['options',['../d9/da2/classargx_1_1Argx.html#aba86dd3c8b11c495afd4c7eada1c0ac5',1,'argx::Argx']]]
 ];

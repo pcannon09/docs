@@ -9,6 +9,7 @@
     <member refid="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" kind="function"><name>Argx</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a97654cab13febb7fb7870b14c9d31c6e" kind="function"><name>~Argx</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1aab16d8baf18e1db7ce66995a7cad312e" kind="function"><name>add</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1adb4e8a622135970b4e12f14d49a76e52" kind="function"><name>compareArgs</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a99bbe74c7f09f6bb3a343dbdde050a64" kind="function"><name>createDocs</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" kind="function"><name>findParam</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a812254e076a5ec208ba9d2eab470edb4" kind="function"><name>getArgc</name></member>

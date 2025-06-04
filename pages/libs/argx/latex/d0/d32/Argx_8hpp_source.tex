@@ -80,36 +80,44 @@
 \DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classargx_1_1Argx_a82c1649fbd03d4f3ea94bf8a14e1299d}{paramExists}}(\textcolor{keyword}{const}\ std::string\ \&\textcolor{keywordtype}{id});}
 \DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00077}00077\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00078}00078\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00079}00079\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ the\ sub-\/param\ from\ \`{}id`}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00080}00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ param\ Original\ param}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00081}00081\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ id\ The\ ID\ to\ get}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00079}00079\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Compare\ if\ \`{}options`\ contains\ the\ required\ \`{}id`,\ if\ the\ ID\ does\ not\ exist,\ return\ false}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00080}00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ options\ Return\ ARGXOptions\ vector}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00081}00081\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ id\ ID\ to\ find}}
 \DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00082}00082\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ bool}}
 \DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00083}00083\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classargx_1_1Argx_adb8fa05c9916682bf3cabeb2a12895f4}{getSubParam}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structargx_1_1ARGXParam}{argx::ARGXParam}}\ \&param,\ \textcolor{keyword}{const}\ std::string\ \&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classargx_1_1Argx_adb4e8a622135970b4e12f14d49a76e52}{compareArgs}}(std::vector<ARGXOptions>\ \mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}},\ std::vector<std::string>\ argv);}
 \DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00085}00085\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00086}00086\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00087}00087\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ main\ arguments\ from\ \`{}main()`\ function\ \`{}argv`}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00088}00088\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::vector<std::string>\ Vector\ of\ strings\ for\ main\ arguments\ from\ \`{}argv`}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00089}00089\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00090}00090\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classargx_1_1Argx_a6146d9644c99b670b15d78cb92057bff}{getMainArgs}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00091}00091\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00092}00092\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00093}00093\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ main\ set\ options\ as\ ARGXOptions}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00094}00094\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::vector<ARGXOptions>\ Options\ to\ return}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00095}00095\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00096}00096\ \ \ \ \ \ \ \ \ std::vector<ARGXOptions>\ \mbox{\hyperlink{classargx_1_1Argx_a3378e7eb2efcb1386b487ece1b5aec35}{getOptions}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00097}00097\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00098}00098\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00099}00099\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ Argx\ ID}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00100}00100\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::string\ Argx\ ID}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00101}00101\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00102}00102\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classargx_1_1Argx_a671ad717805d76e459c74a3e0fee0625}{getID}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00103}00103\ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00104}00104\ \}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00105}00105\ }
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00106}00106\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00107}00107\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Must\ compile\ with\ C++11\ support\ or\ newer"{}}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00108}00108\ \textcolor{preprocessor}{\#\ \ \ pragma\ message("{}Current\ standard\ is\ "{}\ ARGX\_TOSTRING(\_\_cplusplus))}}
-\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00109}00109\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00087}00087\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ the\ sub-\/param\ from\ \`{}id`}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00088}00088\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ param\ Original\ param}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00089}00089\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ id\ The\ ID\ to\ get}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00090}00090\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ bool}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00091}00091\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classargx_1_1Argx_adb8fa05c9916682bf3cabeb2a12895f4}{getSubParam}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structargx_1_1ARGXParam}{argx::ARGXParam}}\ \&param,\ \textcolor{keyword}{const}\ std::string\ \&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00093}00093\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00094}00094\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00095}00095\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ main\ arguments\ from\ \`{}main()`\ function\ \`{}argv`}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00096}00096\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::vector<std::string>\ Vector\ of\ strings\ for\ main\ arguments\ from\ \`{}argv`}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00097}00097\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00098}00098\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classargx_1_1Argx_a6146d9644c99b670b15d78cb92057bff}{getMainArgs}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00099}00099\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00100}00100\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00101}00101\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ main\ set\ options\ as\ ARGXOptions}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00102}00102\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::vector<ARGXOptions>\ Options\ to\ return}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00103}00103\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00104}00104\ \ \ \ \ \ \ \ \ std::vector<ARGXOptions>\ \mbox{\hyperlink{classargx_1_1Argx_a3378e7eb2efcb1386b487ece1b5aec35}{getOptions}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00105}00105\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00106}00106\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00107}00107\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ Argx\ ID}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00108}00108\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::string\ Argx\ ID}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00109}00109\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00110}00110\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classargx_1_1Argx_a671ad717805d76e459c74a3e0fee0625}{getID}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00111}00111\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00112}00112\ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00114}00114\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00115}00115\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Must\ compile\ with\ C++11\ support\ or\ newer"{}}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00116}00116\ \textcolor{preprocessor}{\#\ \ \ pragma\ message("{}Current\ standard\ is\ "{}\ ARGX\_TOSTRING(\_\_cplusplus))}}
+\DoxyCodeLine{\Hypertarget{Argx_8hpp_source_l00117}00117\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

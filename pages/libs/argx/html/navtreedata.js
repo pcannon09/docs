@@ -25,11 +25,7 @@
 var NAVTREE =
 [
   [ "Argx", "index.html", [
-    [ "C++ Argument parser", "index.html#autotoc_md1", null ],
-    [ "Requirements", "index.html#autotoc_md3", [
-      [ "Compiler", "index.html#autotoc_md4", null ],
-      [ "Summary", "index.html#autotoc_md5", null ]
-    ] ],
+    [ "ARGX - 1.0.0-build", "index.html", "index" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [

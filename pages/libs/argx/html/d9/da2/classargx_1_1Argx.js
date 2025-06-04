@@ -4,6 +4,7 @@ var classargx_1_1Argx =
     [ "Argx", "d9/da2/classargx_1_1Argx.html#ac4ac47d6fe631a673ce0c7594fd67a12", null ],
     [ "~Argx", "d9/da2/classargx_1_1Argx.html#a97654cab13febb7fb7870b14c9d31c6e", null ],
     [ "add", "d9/da2/classargx_1_1Argx.html#aab16d8baf18e1db7ce66995a7cad312e", null ],
+    [ "compareArgs", "d9/da2/classargx_1_1Argx.html#adb4e8a622135970b4e12f14d49a76e52", null ],
     [ "createDocs", "d9/da2/classargx_1_1Argx.html#a99bbe74c7f09f6bb3a343dbdde050a64", null ],
     [ "findParam", "d9/da2/classargx_1_1Argx.html#a9343612a7c209f2323d2cd10fd3fe387", null ],
     [ "getArgc", "d9/da2/classargx_1_1Argx.html#a812254e076a5ec208ba9d2eab470edb4", null ],
