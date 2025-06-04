@@ -1,0 +1,109 @@
+\doxysection{argx\+::ARGXAdd\+Error Class Reference}
+\hypertarget{classargx_1_1ARGXAddError}{}\label{classargx_1_1ARGXAddError}\index{argx::ARGXAddError@{argx::ARGXAddError}}
+
+
+{\ttfamily \#include $<$ARGXAdd\+Error.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classargx_1_1ARGXAddError_ac2b5ced72ae86e5ca250b1f401cc1a5f}{ARGXAdd\+Error}} (const std\+::string \&\mbox{\hyperlink{classargx_1_1ARGXAddError_a09e860d9791a4a6b00cb716cec8a8479}{msg}}, const std\+::string \&\mbox{\hyperlink{classargx_1_1ARGXAddError_a6b122902c596ea869ade7e746cd781de}{help}}="{}"{})
+\item 
+std\+::pair$<$ const char \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classargx_1_1ARGXAddError_ad5d8832d580b8af9cc8b48bb75a1e752}{what}} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classargx_1_1ARGXAddError_a6b122902c596ea869ade7e746cd781de}{help}}
+\item 
+std\+::string \mbox{\hyperlink{classargx_1_1ARGXAddError_a09e860d9791a4a6b00cb716cec8a8479}{msg}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{ARGXAddError_8hpp_source_l00010}{10}} of file \mbox{\hyperlink{ARGXAddError_8hpp_source}{ARGXAdd\+Error.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classargx_1_1ARGXAddError_ac2b5ced72ae86e5ca250b1f401cc1a5f}\index{argx::ARGXAddError@{argx::ARGXAddError}!ARGXAddError@{ARGXAddError}}
+\index{ARGXAddError@{ARGXAddError}!argx::ARGXAddError@{argx::ARGXAddError}}
+\doxysubsubsection{\texorpdfstring{ARGXAddError()}{ARGXAddError()}}
+{\footnotesize\ttfamily \label{classargx_1_1ARGXAddError_ac2b5ced72ae86e5ca250b1f401cc1a5f} 
+argx\+::\+ARGXAdd\+Error\+::\+ARGXAdd\+Error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg}{, }\item[{const std\+::string \&}]{help}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ARGXAddError_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{ARGXAddError_8cpp_source}{ARGXAdd\+Error.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classargx_1_1ARGXAddError_a09e860d9791a4a6b00cb716cec8a8479}{msg}}(\mbox{\hyperlink{classargx_1_1ARGXAddError_a09e860d9791a4a6b00cb716cec8a8479}{msg}}),\ \mbox{\hyperlink{classargx_1_1ARGXAddError_a6b122902c596ea869ade7e746cd781de}{help}}(\mbox{\hyperlink{classargx_1_1ARGXAddError_a6b122902c596ea869ade7e746cd781de}{help}})}
+\DoxyCodeLine{00010\ \ \ \ \ \{\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ARGXAddError_8hpp_source_l00014}{help}}, and \mbox{\hyperlink{ARGXAddError_8hpp_source_l00013}{msg}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classargx_1_1ARGXAddError_ad5d8832d580b8af9cc8b48bb75a1e752}\index{argx::ARGXAddError@{argx::ARGXAddError}!what@{what}}
+\index{what@{what}!argx::ARGXAddError@{argx::ARGXAddError}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily \label{classargx_1_1ARGXAddError_ad5d8832d580b8af9cc8b48bb75a1e752} 
+std\+::pair$<$ const char \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*} $>$ argx\+::\+ARGXAdd\+Error\+::what (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Definition at line \mbox{\hyperlink{ARGXAddError_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{ARGXAddError_8cpp_source}{ARGXAdd\+Error.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \{\ this-\/>\mbox{\hyperlink{classargx_1_1ARGXAddError_a09e860d9791a4a6b00cb716cec8a8479}{msg}}.c\_str(),\ this-\/>\mbox{\hyperlink{classargx_1_1ARGXAddError_a6b122902c596ea869ade7e746cd781de}{help}}.c\_str()\ \};\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ARGXAddError_8hpp_source_l00014}{help}}, and \mbox{\hyperlink{ARGXAddError_8hpp_source_l00013}{msg}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classargx_1_1ARGXAddError_a6b122902c596ea869ade7e746cd781de}\index{argx::ARGXAddError@{argx::ARGXAddError}!help@{help}}
+\index{help@{help}!argx::ARGXAddError@{argx::ARGXAddError}}
+\doxysubsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily \label{classargx_1_1ARGXAddError_a6b122902c596ea869ade7e746cd781de} 
+std\+::string argx\+::\+ARGXAdd\+Error\+::help\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{ARGXAddError_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{ARGXAddError_8hpp_source}{ARGXAdd\+Error.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{ARGXAddError_8cpp_source_l00008}{ARGXAdd\+Error()}}, and \mbox{\hyperlink{ARGXAddError_8cpp_source_l00012}{what()}}.
+
+\Hypertarget{classargx_1_1ARGXAddError_a09e860d9791a4a6b00cb716cec8a8479}\index{argx::ARGXAddError@{argx::ARGXAddError}!msg@{msg}}
+\index{msg@{msg}!argx::ARGXAddError@{argx::ARGXAddError}}
+\doxysubsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily \label{classargx_1_1ARGXAddError_a09e860d9791a4a6b00cb716cec8a8479} 
+std\+::string argx\+::\+ARGXAdd\+Error\+::msg\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{ARGXAddError_8hpp_source_l00013}{13}} of file \mbox{\hyperlink{ARGXAddError_8hpp_source}{ARGXAdd\+Error.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{ARGXAddError_8cpp_source_l00008}{ARGXAdd\+Error()}}, and \mbox{\hyperlink{ARGXAddError_8cpp_source_l00012}{what()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{ARGXAddError_8hpp}{ARGXAdd\+Error.\+hpp}}\item 
+src/\mbox{\hyperlink{ARGXAddError_8cpp}{ARGXAdd\+Error.\+cpp}}\end{DoxyCompactItemize}

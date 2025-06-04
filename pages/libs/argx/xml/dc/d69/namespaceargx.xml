@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dc/d69/namespaceargx" kind="namespace" language="C++">
+    <compoundname>argx</compoundname>
+    <innerclass refid="d9/da2/classargx_1_1Argx" prot="public">argx::Argx</innerclass>
+    <innerclass refid="da/d2b/classargx_1_1ARGXAddError" prot="public">argx::ARGXAddError</innerclass>
+    <innerclass refid="d9/db2/structargx_1_1ARGXError" prot="public">argx::ARGXError</innerclass>
+    <innerclass refid="da/dd5/structargx_1_1ARGXOptions" prot="public">argx::ARGXOptions</innerclass>
+    <innerclass refid="d2/d84/structargx_1_1ARGXParam" prot="public">argx::ARGXParam</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="dc/d69/namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ARGXStyle</name>
+        <qualifiedname>argx::ARGXStyle</qualifiedname>
+        <enumvalue id="dc/d69/namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2" prot="public">
+          <name>Professional</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d69/namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780" prot="public">
+          <name>Simple</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="9" column="1" bodyfile="inc/types.hpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dc/d69/namespaceargx_1a12ba6f5d720d46a611584938a996663e" prot="public" static="no">
+        <type>struct argx::ARGXError</type>
+        <definition>typedef struct argx::ARGXError argx::ARGXError</definition>
+        <argsstring></argsstring>
+        <name>ARGXError</name>
+        <qualifiedname>argx::ARGXError</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="22" column="11"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dc/d69/namespaceargx_1a9933be078f36db7b1424f6dd0372eb72" prot="public" static="no">
+        <type>struct argx::ARGXOptions</type>
+        <definition>typedef struct argx::ARGXOptions argx::ARGXOptions</definition>
+        <argsstring></argsstring>
+        <name>ARGXOptions</name>
+        <qualifiedname>argx::ARGXOptions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="46" column="13"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dc/d69/namespaceargx_1a40874387325f4f81850b2ef717831239" prot="public" static="no">
+        <type>struct argx::ARGXParam</type>
+        <definition>typedef struct argx::ARGXParam argx::ARGXParam</definition>
+        <argsstring></argsstring>
+        <name>ARGXParam</name>
+        <qualifiedname>argx::ARGXParam</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="52" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/Argx.hpp" line="15" column="1"/>
+  </compounddef>
+</doxygen>

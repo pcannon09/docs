@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structargx_1_1ARGXParam" xml:lang="en-US">
+<title>argx::ARGXParam Struct Reference</title>
+<indexterm><primary>argx::ARGXParam</primary></indexterm>
+<para>
+<computeroutput>#include &lt;types.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_structargx_1_1ARGXParam_1a47afcd85c9734d815006ee41647ac4e0">exists</link> = false</para>
+</listitem>
+            <listitem><para>std::vector&lt; bool &gt; <link linkend="_structargx_1_1ARGXParam_1ace0572ca0af0b51da129b562bee6a673">subExists</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_types_8hpp_source_1l00048">48</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structargx_1_1ARGXParam_1a47afcd85c9734d815006ee41647ac4e0"/><section>
+    <title>exists</title>
+<indexterm><primary>exists</primary><secondary>argx::ARGXParam</secondary></indexterm>
+<indexterm><primary>argx::ARGXParam</primary><secondary>exists</secondary></indexterm>
+<para><computeroutput>bool argx::ARGXParam::exists = false</computeroutput></para><para>
+Definition at line <link linkend="_types_8hpp_source_1l00050">50</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8cpp_source_1l00103">argx::Argx::getParam()</link>.</para>
+</section>
+<anchor xml:id="_structargx_1_1ARGXParam_1ace0572ca0af0b51da129b562bee6a673"/><section>
+    <title>subExists</title>
+<indexterm><primary>subExists</primary><secondary>argx::ARGXParam</secondary></indexterm>
+<indexterm><primary>argx::ARGXParam</primary><secondary>subExists</secondary></indexterm>
+<para><computeroutput>std::vector&lt;bool&gt; argx::ARGXParam::subExists</computeroutput></para><para>
+Definition at line <link linkend="_types_8hpp_source_1l00051">51</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8cpp_source_1l00103">argx::Argx::getParam()</link>, and <link linkend="_Argx_8cpp_source_1l00222">argx::Argx::getSubParam()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/<link linkend="_types_8hpp">types.hpp</link></section>
+</section>

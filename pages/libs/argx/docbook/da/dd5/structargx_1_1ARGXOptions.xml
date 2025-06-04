@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structargx_1_1ARGXOptions" xml:lang="en-US">
+<title>argx::ARGXOptions Struct Reference</title>
+<indexterm><primary>argx::ARGXOptions</primary></indexterm>
+<para>
+<computeroutput>#include &lt;types.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a">hasSubParams</link> = false</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structargx_1_1ARGXOptions_1a0bd17b9be2b313a37c353d9d8b8c5b65">id</link></para>
+
+<para>ID (id) </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structargx_1_1ARGXOptions_1a825a889884b7b19a5c1550a328780ab9">info</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structargx_1_1ARGXOptions_1a6324ea753af15d2a184e382e913694f0">param</link></para>
+
+<para>Param (param): </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structargx_1_1ARGXOptions_1aa0cd2dddf236a7bd15c1636aa7ec4a9c">sparam</link></para>
+
+<para>Short Param (sparam): </para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_structargx_1_1ARGXOptions">ARGXOptions</link> &gt; <link linkend="_structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed">subParams</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_types_8hpp_source_1l00024">24</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a"/><section>
+    <title>hasSubParams</title>
+<indexterm><primary>hasSubParams</primary><secondary>argx::ARGXOptions</secondary></indexterm>
+<indexterm><primary>argx::ARGXOptions</primary><secondary>hasSubParams</secondary></indexterm>
+<para><computeroutput>bool argx::ARGXOptions::hasSubParams = false</computeroutput></para><para>
+Definition at line <link linkend="_types_8hpp_source_1l00043">43</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+</section>
+<anchor xml:id="_structargx_1_1ARGXOptions_1a0bd17b9be2b313a37c353d9d8b8c5b65"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>argx::ARGXOptions</secondary></indexterm>
+<indexterm><primary>argx::ARGXOptions</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>std::string argx::ARGXOptions::id</computeroutput></para><para>
+
+<para>ID (id) </para>
+</para>
+
+<para>ID of the option </para>
+<para>
+Definition at line <link linkend="_types_8hpp_source_1l00029">29</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+</section>
+<anchor xml:id="_structargx_1_1ARGXOptions_1a825a889884b7b19a5c1550a328780ab9"/><section>
+    <title>info</title>
+<indexterm><primary>info</primary><secondary>argx::ARGXOptions</secondary></indexterm>
+<indexterm><primary>argx::ARGXOptions</primary><secondary>info</secondary></indexterm>
+<para><computeroutput>std::string argx::ARGXOptions::info</computeroutput></para><para>
+Definition at line <link linkend="_types_8hpp_source_1l00041">41</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+</section>
+<anchor xml:id="_structargx_1_1ARGXOptions_1a6324ea753af15d2a184e382e913694f0"/><section>
+    <title>param</title>
+<indexterm><primary>param</primary><secondary>argx::ARGXOptions</secondary></indexterm>
+<indexterm><primary>argx::ARGXOptions</primary><secondary>param</secondary></indexterm>
+<para><computeroutput>std::string argx::ARGXOptions::param</computeroutput></para><para>
+
+<para>Param (param): </para>
+</para>
+
+<para>EXAMPLE: &#8211;help, &#8211;version </para>
+<para>
+Definition at line <link linkend="_types_8hpp_source_1l00035">35</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+</section>
+<anchor xml:id="_structargx_1_1ARGXOptions_1aa0cd2dddf236a7bd15c1636aa7ec4a9c"/><section>
+    <title>sparam</title>
+<indexterm><primary>sparam</primary><secondary>argx::ARGXOptions</secondary></indexterm>
+<indexterm><primary>argx::ARGXOptions</primary><secondary>sparam</secondary></indexterm>
+<para><computeroutput>std::string argx::ARGXOptions::sparam</computeroutput></para><para>
+
+<para>Short Param (sparam): </para>
+</para>
+<para>
+Definition at line <link linkend="_types_8hpp_source_1l00040">40</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+</section>
+<anchor xml:id="_structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed"/><section>
+    <title>subParams</title>
+<indexterm><primary>subParams</primary><secondary>argx::ARGXOptions</secondary></indexterm>
+<indexterm><primary>argx::ARGXOptions</primary><secondary>subParams</secondary></indexterm>
+<para><computeroutput>std::vector&lt;<link linkend="_structargx_1_1ARGXOptions">ARGXOptions</link>&gt; argx::ARGXOptions::subParams</computeroutput></para><para>
+Definition at line <link linkend="_types_8hpp_source_1l00045">45</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/<link linkend="_types_8hpp">types.hpp</link></section>
+</section>

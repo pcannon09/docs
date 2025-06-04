@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_types_8hpp" xml:lang="en-US">
+<title>inc/types.hpp File Reference</title>
+<indexterm><primary>inc/types.hpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;<?linebreak?>#include &lt;vector&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structargx_1_1ARGXError">argx::ARGXError</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structargx_1_1ARGXOptions">argx::ARGXOptions</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structargx_1_1ARGXParam">argx::ARGXParam</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceargx">argx</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct argx::ARGXError <link linkend="_namespaceargx_1a12ba6f5d720d46a611584938a996663e">argx::ARGXError</link></para>
+</listitem>
+            <listitem><para>typedef struct argx::ARGXOptions <link linkend="_namespaceargx_1a9933be078f36db7b1424f6dd0372eb72">argx::ARGXOptions</link></para>
+</listitem>
+            <listitem><para>typedef struct argx::ARGXParam <link linkend="_namespaceargx_1a40874387325f4f81850b2ef717831239">argx::ARGXParam</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum class <link linkend="_namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9">argx::ARGXStyle</link> { <link linkend="_namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2">argx::Professional</link>
+, <link linkend="_namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780">argx::Simple</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

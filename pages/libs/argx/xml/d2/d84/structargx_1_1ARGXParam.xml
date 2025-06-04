@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="d2/d84/structargx_1_1ARGXParam" kind="struct" language="C++" prot="public">
+    <compoundname>argx::ARGXParam</compoundname>
+    <includes refid="dd/de3/types_8hpp" local="no">types.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d2/d84/structargx_1_1ARGXParam_1a47afcd85c9734d815006ee41647ac4e0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool argx::ARGXParam::exists</definition>
+        <argsstring></argsstring>
+        <name>exists</name>
+        <qualifiedname>argx::ARGXParam::exists</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="50" column="6" bodyfile="inc/types.hpp" bodystart="50" bodyend="-1"/>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" compoundref="d1/dad/Argx_8cpp" startline="103" endline="220">argx::Argx::getParam</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d84/structargx_1_1ARGXParam_1ace0572ca0af0b51da129b562bee6a673" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt;bool&gt; argx::ARGXParam::subExists</definition>
+        <argsstring></argsstring>
+        <name>subExists</name>
+        <qualifiedname>argx::ARGXParam::subExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="51" column="13" bodyfile="inc/types.hpp" bodystart="51" bodyend="-1"/>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" compoundref="d1/dad/Argx_8cpp" startline="103" endline="220">argx::Argx::getParam</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1adb8fa05c9916682bf3cabeb2a12895f4" compoundref="d1/dad/Argx_8cpp" startline="222" endline="223">argx::Argx::getSubParam</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>argx::ARGXParam</label>
+        <link refid="d2/d84/structargx_1_1ARGXParam"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>subExists</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; bool &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="inc/types.hpp" line="48" column="1" bodyfile="inc/types.hpp" bodystart="49" bodyend="52"/>
+    <listofallmembers>
+      <member refid="d2/d84/structargx_1_1ARGXParam_1a47afcd85c9734d815006ee41647ac4e0" prot="public" virt="non-virtual"><scope>argx::ARGXParam</scope><name>exists</name></member>
+      <member refid="d2/d84/structargx_1_1ARGXParam_1ace0572ca0af0b51da129b562bee6a673" prot="public" virt="non-virtual"><scope>argx::ARGXParam</scope><name>subExists</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

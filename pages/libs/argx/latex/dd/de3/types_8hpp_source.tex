@@ -1,0 +1,65 @@
+\doxysection{types.\+hpp}
+\hypertarget{types_8hpp_source}{}\label{types_8hpp_source}\index{inc/types.hpp@{inc/types.hpp}}
+\mbox{\hyperlink{types_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceargx}{argx}}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00009}\mbox{\hyperlink{namespaceargx_a1aaf93330a8dedabb4307940b33f49d9}{00009}}\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespaceargx_a1aaf93330a8dedabb4307940b33f49d9}{ARGXStyle}}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00011}\mbox{\hyperlink{namespaceargx_a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2}{00011}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceargx_a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2}{Professional}},}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00012}\mbox{\hyperlink{namespaceargx_a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780}{00012}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceargx_a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780}{Simple}},}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00013}00013\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00015}\mbox{\hyperlink{structargx_1_1ARGXError}{00015}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structargx_1_1ARGXError}{ARGXError}}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00017}\mbox{\hyperlink{structargx_1_1ARGXError_aa3083201a43c82fd69c3f7a04118b184}{00017}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structargx_1_1ARGXError_aa3083201a43c82fd69c3f7a04118b184}{type}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00018}\mbox{\hyperlink{structargx_1_1ARGXError_adbf9556ec51d02e2dec17bf2aa93845e}{00018}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structargx_1_1ARGXError_adbf9556ec51d02e2dec17bf2aa93845e}{error}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00019}\mbox{\hyperlink{structargx_1_1ARGXError_a6c18e106da3546f417fe13217c518a85}{00019}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structargx_1_1ARGXError_a6c18e106da3546f417fe13217c518a85}{help}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00021}\mbox{\hyperlink{structargx_1_1ARGXError_a595e7a03b9eff514bc4c8873417b63b0}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structargx_1_1ARGXError_a595e7a03b9eff514bc4c8873417b63b0}{code}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00022}\mbox{\hyperlink{namespaceargx_a12ba6f5d720d46a611584938a996663e}{00022}}\ \ \ \ \ \}\ \mbox{\hyperlink{namespaceargx_a12ba6f5d720d46a611584938a996663e}{ARGXError}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00024}\mbox{\hyperlink{structargx_1_1ARGXOptions}{00024}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structargx_1_1ARGXOptions}{ARGXOptions}}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00025}00025\ \ \ \ \ \{\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00026}00026\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**\ ID\ (id)}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00027}00027\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ ID\ of\ the\ option}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00028}00028\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00029}\mbox{\hyperlink{structargx_1_1ARGXOptions_a0bd17b9be2b313a37c353d9d8b8c5b65}{00029}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structargx_1_1ARGXOptions_a0bd17b9be2b313a37c353d9d8b8c5b65}{id}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00030}00030\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00031}00031\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**\ Param\ (param):}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00032}00032\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ EXAMPLE:}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00033}00033\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ -\/-\/help,\ -\/-\/version}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00034}00034\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00035}\mbox{\hyperlink{structargx_1_1ARGXOptions_a6324ea753af15d2a184e382e913694f0}{00035}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structargx_1_1ARGXOptions_a6324ea753af15d2a184e382e913694f0}{param}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00036}00036\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00037}00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**\ Short\ Param\ (sparam):}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00038}00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00039}00039\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00040}\mbox{\hyperlink{structargx_1_1ARGXOptions_aa0cd2dddf236a7bd15c1636aa7ec4a9c}{00040}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structargx_1_1ARGXOptions_aa0cd2dddf236a7bd15c1636aa7ec4a9c}{sparam}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00041}\mbox{\hyperlink{structargx_1_1ARGXOptions_a825a889884b7b19a5c1550a328780ab9}{00041}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structargx_1_1ARGXOptions_a825a889884b7b19a5c1550a328780ab9}{info}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00043}\mbox{\hyperlink{structargx_1_1ARGXOptions_a02e69197bd3efa35da99edcc4018eb1a}{00043}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structargx_1_1ARGXOptions_a02e69197bd3efa35da99edcc4018eb1a}{hasSubParams}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00045}\mbox{\hyperlink{structargx_1_1ARGXOptions_a6345f9a87edfb31007c6e3b53f9eeaed}{00045}}\ \ \ \ \ \ \ \ \ std::vector<ARGXOptions>\ \mbox{\hyperlink{structargx_1_1ARGXOptions_a6345f9a87edfb31007c6e3b53f9eeaed}{subParams}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00046}\mbox{\hyperlink{namespaceargx_a9933be078f36db7b1424f6dd0372eb72}{00046}}\ \ \ \ \ \}\ \mbox{\hyperlink{namespaceargx_a9933be078f36db7b1424f6dd0372eb72}{ARGXOptions}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00048}\mbox{\hyperlink{structargx_1_1ARGXParam}{00048}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structargx_1_1ARGXParam}{ARGXParam}}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00050}\mbox{\hyperlink{structargx_1_1ARGXParam_a47afcd85c9734d815006ee41647ac4e0}{00050}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structargx_1_1ARGXParam_a47afcd85c9734d815006ee41647ac4e0}{exists}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00051}\mbox{\hyperlink{structargx_1_1ARGXParam_ace0572ca0af0b51da129b562bee6a673}{00051}}\ \ \ \ \ \ \ \ \ std::vector<bool>\ \mbox{\hyperlink{structargx_1_1ARGXParam_ace0572ca0af0b51da129b562bee6a673}{subExists}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00052}\mbox{\hyperlink{namespaceargx_a40874387325f4f81850b2ef717831239}{00052}}\ \ \ \ \ \}\ \mbox{\hyperlink{namespaceargx_a40874387325f4f81850b2ef717831239}{ARGXParam}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00055}00055\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00056}00056\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Must\ compile\ with\ C++11\ support\ or\ newer"{}}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00057}00057\ \textcolor{preprocessor}{\#\ \ \ pragma\ message("{}Current\ standard\ is\ "{}\ ARGX\_TOSTRING(\_\_cplusplus))}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00058}00058\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00059}00059\ }
+
+\end{DoxyCode}

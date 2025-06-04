@@ -1,0 +1,34 @@
+\doxysection{macros.\+hpp}
+\hypertarget{macros_8hpp_source}{}\label{macros_8hpp_source}\index{inc/macros.hpp@{inc/macros.hpp}}
+\mbox{\hyperlink{macros_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00003}00003\ \textcolor{comment}{//\ Versioning}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00004}\mbox{\hyperlink{macros_8hpp_a774e5c096afc126e4fd6031c4143df1c}{00004}}\ \textcolor{preprocessor}{\#define\ ARGX\_VERSION\_MAJOR\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00005}\mbox{\hyperlink{macros_8hpp_a6fca140f9d55dd241c689047db70c236}{00005}}\ \textcolor{preprocessor}{\#define\ ARGX\_VERSION\_MINOR\ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00006}\mbox{\hyperlink{macros_8hpp_a8bb35e7bdac8b6af29d07e6fd7468b08}{00006}}\ \textcolor{preprocessor}{\#define\ ARGX\_VERSION\_PATCH\ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00008}\mbox{\hyperlink{macros_8hpp_a2cf696b4344dbd9c545a9165cb10cb76}{00008}}\ \textcolor{preprocessor}{\#define\ ARGX\_VERSION\_STD\ \ \ \ \ \ \ \ \ \ \ \ \ \ 20250604\ }\textcolor{comment}{//\ Once\ released,\ it\ will\ be\ YyyyMmDd\ (eg:\ 20250604)}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00010}00010\ \textcolor{comment}{//\ Version\ states:}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00011}00011\ \textcolor{comment}{//\ *\ dev}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00012}00012\ \textcolor{comment}{//\ *\ beta}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00013}00013\ \textcolor{comment}{//\ *\ snap}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00014}00014\ \textcolor{comment}{//\ *\ build\ (AKA:\ Release)}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00015}\mbox{\hyperlink{macros_8hpp_a2dd1c90360210f9bc40f65de8558b60f}{00015}}\ \textcolor{preprocessor}{\#define\ ARGX\_VERSION\_STATE\ \ \ \ \ \ \ \ \ \ "{}beta"{}}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00017}\mbox{\hyperlink{macros_8hpp_aa639891463acaa985538b2760398bca3}{00017}}\ \textcolor{preprocessor}{\#define\ ARGX\_VERSION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((ARGX\_VERSION\_MAJOR<<16)|(ARGX\_VERSION\_MINOR<<8)|(ARGX\_VERSION\_PATCH)|(ARGX\_VERSION\_STATE\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00019}\mbox{\hyperlink{macros_8hpp_a9a03c00fec9110110cb43d0c67e195f3}{00019}}\ \textcolor{preprocessor}{\#define\ ARGX\_VERSION\_CHECK(ARGX\_VERSION\_MAJOR,\ ARGX\_VERSION\_MINOR,\ ARGX\_VERSION\_PATCH,\ ARGX\_VERSION\_STATE)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00020}00020\ \textcolor{preprocessor}{\ \ \ \ (((ARGX\_VERSION\_MAJOR)<<16)|((ARGX\_VERSION\_MINOR)<<8)|(ARGX\_VERSION\_PATCH)|((ARGX\_VERSION\_STATE)\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00022}00022\ \textcolor{comment}{//\ DEV\ or\ PROD}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00023}\mbox{\hyperlink{macros_8hpp_a2c2541090a31c495b5e800500cdff4ef}{00023}}\ \textcolor{preprocessor}{\#define\ ARGX\_DEV\ true}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00025}00025\ \textcolor{comment}{//\ Macro\ utils}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00026}\mbox{\hyperlink{macros_8hpp_a35b3310e39905bdf63646a9f2a02ef18}{00026}}\ \textcolor{preprocessor}{\#define\ ARGX\_STRINGIFY(x)\ \#x}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00027}\mbox{\hyperlink{macros_8hpp_a4fd1f3a5c43cb1afcd72db492e2cee28}{00027}}\ \textcolor{preprocessor}{\#define\ ARGX\_TOSTRING(x)\ ARGX\_STRINGIFY(x)}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00028}00028\ }
+
+\end{DoxyCode}

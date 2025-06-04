@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="da/d2b/classargx_1_1ARGXAddError" kind="class" language="C++" prot="public">
+    <compoundname>argx::ARGXAddError</compoundname>
+    <includes refid="d2/d1d/ARGXAddError_8hpp" local="no">ARGXAddError.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="da/d2b/classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string argx::ARGXAddError::help</definition>
+        <argsstring></argsstring>
+        <name>help</name>
+        <qualifiedname>argx::ARGXAddError::help</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ARGXAddError.hpp" line="14" column="13" bodyfile="inc/ARGXAddError.hpp" bodystart="14" bodyend="-1"/>
+        <referencedby refid="da/d2b/classargx_1_1ARGXAddError_1ac2b5ced72ae86e5ca250b1f401cc1a5f" compoundref="d2/d48/ARGXAddError_8cpp" startline="8" endline="10">ARGXAddError</referencedby>
+        <referencedby refid="da/d2b/classargx_1_1ARGXAddError_1ad5d8832d580b8af9cc8b48bb75a1e752" compoundref="d2/d48/ARGXAddError_8cpp" startline="12" endline="13">what</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/d2b/classargx_1_1ARGXAddError_1a09e860d9791a4a6b00cb716cec8a8479" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string argx::ARGXAddError::msg</definition>
+        <argsstring></argsstring>
+        <name>msg</name>
+        <qualifiedname>argx::ARGXAddError::msg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ARGXAddError.hpp" line="13" column="13" bodyfile="inc/ARGXAddError.hpp" bodystart="13" bodyend="-1"/>
+        <referencedby refid="da/d2b/classargx_1_1ARGXAddError_1ac2b5ced72ae86e5ca250b1f401cc1a5f" compoundref="d2/d48/ARGXAddError_8cpp" startline="8" endline="10">ARGXAddError</referencedby>
+        <referencedby refid="da/d2b/classargx_1_1ARGXAddError_1ad5d8832d580b8af9cc8b48bb75a1e752" compoundref="d2/d48/ARGXAddError_8cpp" startline="12" endline="13">what</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/d2b/classargx_1_1ARGXAddError_1ac2b5ced72ae86e5ca250b1f401cc1a5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>argx::ARGXAddError::ARGXAddError</definition>
+        <argsstring>(const std::string &amp;msg, const std::string &amp;help=&quot;&quot;)</argsstring>
+        <name>ARGXAddError</name>
+        <qualifiedname>argx::ARGXAddError::ARGXAddError</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>help</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ARGXAddError.hpp" line="17" column="1" bodyfile="src/ARGXAddError.cpp" bodystart="8" bodyend="10"/>
+        <references refid="da/d2b/classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de" compoundref="d2/d1d/ARGXAddError_8hpp" startline="14">help</references>
+        <references refid="da/d2b/classargx_1_1ARGXAddError_1a09e860d9791a4a6b00cb716cec8a8479" compoundref="d2/d1d/ARGXAddError_8hpp" startline="13">msg</references>
+      </memberdef>
+      <memberdef kind="function" id="da/d2b/classargx_1_1ARGXAddError_1ad5d8832d580b8af9cc8b48bb75a1e752" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::pair&lt; const char *, const char * &gt;</type>
+        <definition>std::pair&lt; const char *, const char * &gt; argx::ARGXAddError::what</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>what</name>
+        <qualifiedname>argx::ARGXAddError::what</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ARGXAddError.hpp" line="19" column="11" bodyfile="src/ARGXAddError.cpp" bodystart="12" bodyend="13"/>
+        <references refid="da/d2b/classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de" compoundref="d2/d1d/ARGXAddError_8hpp" startline="14">help</references>
+        <references refid="da/d2b/classargx_1_1ARGXAddError_1a09e860d9791a4a6b00cb716cec8a8479" compoundref="d2/d1d/ARGXAddError_8hpp" startline="13">msg</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>argx::ARGXAddError</label>
+        <link refid="da/d2b/classargx_1_1ARGXAddError"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>help</edgelabel>
+          <edgelabel>msg</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="inc/ARGXAddError.hpp" line="10" column="1" bodyfile="inc/ARGXAddError.hpp" bodystart="11" bodyend="20"/>
+    <listofallmembers>
+      <member refid="da/d2b/classargx_1_1ARGXAddError_1ac2b5ced72ae86e5ca250b1f401cc1a5f" prot="public" virt="non-virtual"><scope>argx::ARGXAddError</scope><name>ARGXAddError</name></member>
+      <member refid="da/d2b/classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de" prot="private" virt="non-virtual"><scope>argx::ARGXAddError</scope><name>help</name></member>
+      <member refid="da/d2b/classargx_1_1ARGXAddError_1a09e860d9791a4a6b00cb716cec8a8479" prot="private" virt="non-virtual"><scope>argx::ARGXAddError</scope><name>msg</name></member>
+      <member refid="da/d2b/classargx_1_1ARGXAddError_1ad5d8832d580b8af9cc8b48bb75a1e752" prot="public" virt="non-virtual"><scope>argx::ARGXAddError</scope><name>what</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

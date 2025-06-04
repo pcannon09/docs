@@ -1,0 +1,2766 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s6\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs12\cgrid \sbasedon0 \snext0 heading 6;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\*\listtable
+{\list\listtemplateid1
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8662 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid1}
+{\list\listtemplateid2
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid2}
+{\list\listtemplateid3
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid3}
+}
+{\listoverridetable
+{\listoverride\listid1\listoverridecount0\ls1}
+{\listoverride\listid2\listoverridecount0\ls2}
+{\listoverride\listid3\listoverridecount0\ls3}
+}
+{\info 
+{\title {\comment Argx  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+0.1.0-beta \par
+}}Argx}
+{\comment Generated by doxygen 1.13.2.}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt Argx}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Version 0.1.0-beta\par\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Table of Contents\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\par \pard\plain 
+\pard\plain \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+ARGX\par \pard\plain 
+{\tc\tcl1 \v ARGX}
+{\xe \v ARGX}
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+\par
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+C++ Argument parser
+\par}
+{\tc\tcl2 \v C++ Argument parser}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+{\b NOTE: This version is still in beta, if you find a bug, issue or a suggestion please create an issue in github} \par}
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Requirements
+\par}
+{\tc\tcl2 \v Requirements}
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Compiler
+\par}
+{\tc\tcl3 \v Compiler}
+\trowd \trgaph108\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\clcbpat16\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx1749
+\clcbpat16\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx3498
+\clcbpat16\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx5247
+\clcbpat16\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx6996
+\clcbpat16\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx8745
+\pard \widctlpar\intbl\adjustright
+{Argx Version   \cell }{Minimum C++ Version   \cell }{GCC   \cell }{Clang   \cell }{MSVC    \cell }
+\pard \widctlpar\intbl\adjustright
+{\row }
+\trowd \trgaph108\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx1749
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx3498
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx5247
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx6996
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx8745
+\pard \widctlpar\intbl\adjustright
+{0.1.1   \cell }{C++11   \cell }{GCC 4.8+   \cell }{Clang 3.3+   \cell }{MSVC 2015+   \cell }
+\pard \widctlpar\intbl\adjustright
+{\row }
+\pard\plain
+\par
+\par}
+{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Summary
+\par}
+{\tc\tcl3 \v Summary}
+{
+\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+The minimum required C++ version is C++11 \par}
+\par
+\par}
+\par}
+}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Namespace Index\par \pard\plain 
+{\tc \v Namespace Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Namespace List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here is a list of all namespaces with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b argx} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAX \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Class Index\par \pard\plain 
+{\tc \v Class Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Class List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the classes, structs, unions and interfaces with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b argx::Argx} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b argx::ARGXAddError} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABW \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b argx::ARGXError} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b argx::ARGXOptions} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACG \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b argx::ARGXParam} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACN \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Index\par \pard\plain 
+{\tc \v File Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+File List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here is a list of all files with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b inc/{\b Argx.hpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAG \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b inc/{\b ARGXAddError.hpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b inc/{\b macros.hpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b inc/{\b types.hpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAT \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b src/{\b Argx.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAV \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b src/{\b ARGXAddError.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAW \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Namespace Documentation\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+argx Namespace Reference\par \pard\plain 
+{\tc\tcl2 \v argx}
+{\xe \v argx}
+{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Argx}\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b ARGXAddError}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b ARGXError}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b ARGXOptions}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b ARGXParam}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Typedefs\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct argx::ARGXError {\b ARGXError}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct argx::ARGXOptions {\b ARGXOptions}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct argx::ARGXParam {\b ARGXParam}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Enumerations\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum class {\b ARGXStyle} \{ {\b Professional}
+, {\b Simple}
+ \}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Typedef Documentation\par
+\pard\plain 
+{\xe \v ARGXError\:argx}
+{\xe \v argx\:ARGXError}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct argx::ARGXError argx::ARGXError}}
+\par
+{\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ARGXOptions\:argx}
+{\xe \v argx\:ARGXOptions}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct argx::ARGXOptions argx::ARGXOptions}}
+\par
+{\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ARGXParam\:argx}
+{\xe \v argx\:ARGXParam}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct argx::ARGXParam argx::ARGXParam}}
+\par
+{\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Enumeration Type Documentation\par
+\pard\plain 
+{\xe \v ARGXStyle\:argx}
+{\xe \v argx\:ARGXStyle}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+enum class {\b argx::ARGXStyle}{\f2 [strong]}}}
+\par
+{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Enumerator:\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{\xe \v Professional\:argx}
+{\xe \v argx\:Professional}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid Professional{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+\cell }{\cell }{\row }
+{\xe \v Simple\:argx}
+{\xe \v argx\:Simple}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid Simple{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
+\cell }{\cell }{\row }
+}
+\par
+{
+Definition at line {\b 9} of file {\b types.hpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00010     \{\par
+00011         Professional,\par
+00012         Simple,\par
+00013     \};\par
+}
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Class Documentation{\tc \v Class Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+argx::Argx Class Reference\par \pard\plain 
+{\tc\tcl2 \v argx::Argx}
+{\xe \v argx::Argx}
+{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+\par
+{
+{\f2 #include <Argx.hpp>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Argx} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Argx} (const std::string &{\b id}, int argc, char *argv[])\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Create {\b Argx} with the specific {\f2 id} , {\f2 argc}  and {\f2 argv}  }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ~Argx} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b add} ({\b ARGXOptions} option) const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Add param options. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b createDocs} ({\b ARGXStyle} style, const std::string &title, const std::string &mainInfo)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Create documentation for the parameters with the specific style, title and main information. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b findParam} (const std::string &{\b id})\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Find parameter index. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getArgc} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get the main options from the {\f2 main()}  function as argc. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b getID} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get {\b Argx} ID. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< std::string > {\b getMainArgs} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get main arguments from {\f2 main()}  function {\f2 argv}  }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< {\b ARGXOptions} > {\b getOptions} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get main set options as {\b ARGXOptions}. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ARGXParam} {\b getParam} (const std::string &{\b id})\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get the param from {\f2 id}  }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b getSubParam} (const {\b argx::ARGXParam} &param, const std::string &{\b id})\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get the sub-param from {\f2 id}  }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b paramExists} (const std::string &{\b id})\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get if param exists in the param options. }{
+}\par
+}\par}
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b id}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Static Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+static unsigned int {\b mainArgc}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+static std::vector< std::string > * {\b mainArgs} = nullptr\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+static std::vector< {\b ARGXOptions} > {\b options}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 17} of file {\b Argx.hpp}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Argx\:argx::Argx}
+{\xe \v argx::Argx\:Argx}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+argx::Argx::Argx (const std::string & id, int argc, char * argv[])}}
+\par
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Create {\b Argx} with the specific {\f2 id} , {\f2 argc}  and {\f2 argv}  }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Parameters\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i id} \cell }{Set the ID of the {\b Argx} \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i argc} \cell }{Set the {\f2 argc}  of the {\f2 main()}  function \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i argv} \cell }{Set the {\f2 argv}  of the {\f2 main()}  function \cell }
+{\row }
+}
+}{
+Definition at line {\b 23} of file {\b Argx.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00024         : id({\cf18 id})\par
+00025     \{\par
+00026         this->mainArgs = {\cf17 new} std::vector<std::string>(argv, argv + argc);\par
+00027         this->mainArgc = argc;\par
+00028     \}\par
+}
+{
+\ql
+References {\b id}, {\b mainArgc}, and {\b mainArgs}.}\par
+}
+{\xe \v Argx\:argx::Argx}
+{\xe \v argx::Argx\:Argx}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+argx::Argx::Argx ()}}
+\par
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 30} of file {\b Argx.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00031     \{ \}\par
+}
+}
+{\xe \v ~Argx\:argx::Argx}
+{\xe \v argx::Argx\:~Argx}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+argx::Argx::~Argx ()}}
+\par
+{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 33} of file {\b Argx.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00034     \{\par
+00035         {\cf17 delete} this->mainArgs; this->mainArgs = {\cf17 nullptr};\par
+00036     \}\par
+}
+{
+\ql
+References {\b mainArgs}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v add\:argx::Argx}
+{\xe \v argx::Argx\:add}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void argx::Argx::add ({\b ARGXOptions} option) const}}
+\par
+{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Add param options. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Parameters\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i option} \cell }{Add the option to the main params \cell }
+{\row }
+}
+}{
+Definition at line {\b 38} of file {\b Argx.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00039     \{\par
+00040         ARGXError error = \{\par
+00041             .type = {\cf22 "success"},\par
+00042             .code = 0\par
+00043         \};\par
+00044 \par
+00045         this->options.emplace_back(option);\par
+00046     \}\par
+}
+{
+\ql
+References {\b options}.}\par
+}
+{\xe \v createDocs\:argx::Argx}
+{\xe \v argx::Argx\:createDocs}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string argx::Argx::createDocs ({\b ARGXStyle} style, const std::string & title, const std::string & mainInfo)}}
+\par
+{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Create documentation for the parameters with the specific style, title and main information. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Parameters\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i style} \cell }{Set the style using {\b ARGXStyle} \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i title} \cell }{Title for docs \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i Main} \cell }{information \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Returns\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+std::string Documentation as a string \par
+}}}{
+Definition at line {\b 225} of file {\b Argx.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00226     \{\par
+00227         std::string contentStr;\par
+00228 \par
+00229         {\cf19 if} (style == ARGXStyle::Professional)\par
+00230         \{\par
+00231             {\cf19 for} ({\cf17 const} {\cf17 auto} &x : this->options)\par
+00232             \{\par
+00233                 {\cf20 // Main option header line}\par
+00234                 contentStr += {\cf22 "ID: "} + x.id + {\cf22 "\\n"};\par
+00235                 contentStr += {\cf22 "[ "} + x.sparam + {\cf22 " | "} + x.param;\par
+00236 \par
+00237                 {\cf19 if} (x.hasSubParams && !x.subParams.empty())\par
+00238                 \{\par
+00239                     contentStr += {\cf22 " [ "};\par
+00240 \par
+00241                     {\cf19 for} ({\cf18 size_t} i = 0; i < x.subParams.size(); ++i)\par
+00242                     \{\par
+00243                         {\cf17 const} {\cf17 auto} &sub = x.subParams[i];\par
+00244 \par
+00245                         contentStr += sub.param;\par
+00246 \par
+00247                         {\cf19 if} (i < x.subParams.size() - 1) contentStr += {\cf22 " | "};\par
+00248                         {\cf19 else} {\cf19 if} (i <= x.subParams.size()) contentStr += {\cf23 ' '};\par
+00249                     \}\par
+00250 \par
+00251                     contentStr += {\cf22 "] ] "};\par
+00252                 \}\par
+00253 \par
+00254                 {\cf19 else} contentStr += {\cf22 " ] ] "};\par
+00255 \par
+00256                 contentStr += x.info + {\cf22 "\\n"};\par
+00257 \par
+00258                 {\cf20 // Print all sub-options with sparam and param, aligned with ideographic spaces if there are}\par
+00259                 {\cf19 if} (x.hasSubParams && !x.subParams.empty())\par
+00260                 \{\par
+00261                     {\cf19 for} ({\cf17 const} {\cf17 auto} &sub : x.subParams)\par
+00262                     \{\par
+00263                         {\cf20 // Create ideographic spaces matching the length of main param for alignment}\par
+00264                         std::wstring wideSpaces(x.param.size(), L{\cf22 '\\u3000'});\par
+00265                         std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;\par
+00266                         std::string spacing = converter.to_bytes(wideSpaces);\par
+00267 \par
+00268                         contentStr += spacing + {\cf22 "  [ "} + sub.sparam + {\cf22 " | "} + sub.param + {\cf22 " ] "} + sub.info + {\cf22 "\\n"};\par
+00269                     \}\par
+00270                 \}\par
+00271             \}\par
+00272         \}\par
+00273 \par
+00274         {\cf19 return} title + {\cf22 "\\n"} + mainInfo + {\cf22 "\\n"} + contentStr;\par
+00275     \}\par
+}
+{
+\ql
+References {\b options}, and {\b argx::Professional}.}\par
+}
+{\xe \v findParam\:argx::Argx}
+{\xe \v argx::Argx\:findParam}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int argx::Argx::findParam (const std::string & id)}}
+\par
+{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Find parameter index. }}\par
+{
+Definition at line {\b 48} of file {\b Argx.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00049     \{\par
+00050         {\cf20 // First check if it's a main parameter}\par
+00051         {\cf19 for} ({\cf18 size_t} i = 0; i < this->options.size(); i++)\par
+00052         \{\par
+00053             {\cf19 if} (this->options[i].{\cf18 id} == {\cf18 id})\par
+00054             \{\par
+00055                 {\cf20 // Check if this main parameter exists in arguments}\par
+00056                 {\cf19 for} ({\cf17 const} std::string &arg : *this->mainArgs)\par
+00057                 \{\par
+00058                     {\cf19 if} (arg == this->options[i].param || arg == this->options[i].sparam)\par
+00059                     \{\par
+00060                         {\cf19 return} {\cf17 static_cast<}{\cf18 int}{\cf17 >}(i);\par
+00061                     \}\par
+00062                 \}\par
+00063             \}\par
+00064         \}\par
+00065 \par
+00066         {\cf20 // Then look for sub-parameters}\par
+00067         {\cf19 for} ({\cf17 const} {\cf17 auto} &opt : this->options)\par
+00068         \{\par
+00069             {\cf20 // Check if the parent option exists in the arguments}\par
+00070             {\cf18 bool} parentExists = {\cf17 false};\par
+00071 \par
+00072             {\cf19 for} ({\cf17 const} std::string &arg : *this->mainArgs)\par
+00073             \{\par
+00074                 {\cf19 if} (arg == opt.param || arg == opt.sparam)\par
+00075                 \{\par
+00076                     parentExists = {\cf17 true};\par
+00077                     {\cf19 break};\par
+00078                 \}\par
+00079             \}\par
+00080 \par
+00081             {\cf19 if} (parentExists)\par
+00082             \{\par
+00083                 {\cf20 // Find the index of the requested sub-parameter}\par
+00084                 {\cf19 for} ({\cf18 size_t} i = 0; i < opt.subParams.size(); i++)\par
+00085                 \{\par
+00086                     {\cf19 if} (opt.subParams[i].id == {\cf18 id}) {\cf19 return} {\cf17 static_cast<}{\cf18 int}{\cf17 >}(i);\par
+00087                 \}\par
+00088             \}\par
+00089         \}\par
+00090 \par
+00091         {\cf19 return} -1; {\cf20 // Not found}\par
+00092     \}\par
+}
+{
+\ql
+References {\b mainArgs}, and {\b options}.}\par
+{
+\ql
+Referenced by {\b getSubParam()}, and {\b paramExists()}.}\par
+}
+{\xe \v getArgc\:argx::Argx}
+{\xe \v argx::Argx\:getArgc}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int argx::Argx::getArgc () const}}
+\par
+{\bkmkstart AAAAAAAABL}
+{\bkmkend AAAAAAAABL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get the main options from the {\f2 main()}  function as argc. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Returns\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+int Number of params including the executable param \par
+}}}{
+Definition at line {\b 280} of file {\b Argx.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00281     \{ {\cf19 return} this->mainArgc; \}\par
+}
+{
+\ql
+References {\b mainArgc}.}\par
+}
+{\xe \v getID\:argx::Argx}
+{\xe \v argx::Argx\:getID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string argx::Argx::getID () const}}
+\par
+{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get {\b Argx} ID. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Returns\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+std::string {\b Argx} ID \par
+}}}{
+Definition at line {\b 286} of file {\b Argx.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00287     \{ {\cf19 return} this->id; \}\par
+}
+{
+\ql
+References {\b id}.}\par
+}
+{\xe \v getMainArgs\:argx::Argx}
+{\xe \v argx::Argx\:getMainArgs}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::vector< std::string > argx::Argx::getMainArgs () const}}
+\par
+{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get main arguments from {\f2 main()}  function {\f2 argv}  }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Returns\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+std::vector<std::string> Vector of strings for main arguments from {\f2 argv}  \par
+}}}{
+Definition at line {\b 277} of file {\b Argx.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00278     \{ {\cf19 return} *this->mainArgs; \}\par
+}
+{
+\ql
+References {\b mainArgs}.}\par
+}
+{\xe \v getOptions\:argx::Argx}
+{\xe \v argx::Argx\:getOptions}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::vector< {\b ARGXOptions} > argx::Argx::getOptions () const}}
+\par
+{\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get main set options as {\b ARGXOptions}. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Returns\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+std::vector<ARGXOptions> Options to return \par
+}}}{
+Definition at line {\b 283} of file {\b Argx.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00284     \{ {\cf19 return} this->options; \}\par
+}
+{
+\ql
+References {\b options}.}\par
+}
+{\xe \v getParam\:argx::Argx}
+{\xe \v argx::Argx\:getParam}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b ARGXParam} argx::Argx::getParam (const std::string & id)}}
+\par
+{\bkmkstart AAAAAAAABP}
+{\bkmkend AAAAAAAABP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get the param from {\f2 id}  }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Parameters\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i id} \cell }{The ID to get \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Returns\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+{\b ARGXParam} Returnted parameter to get \par
+}}}{
+Definition at line {\b 103} of file {\b Argx.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00104     \{\par
+00105         {\cf19 if} (this->mainArgc <= 1) {\cf19 return} \{\};\par
+00106 \par
+00107         ARGXParam result;\par
+00108 \par
+00109         {\cf20 // First, check if this is a top-level option}\par
+00110         {\cf19 for} ({\cf17 const} {\cf17 auto} &opt : this->options)\par
+00111         \{\par
+00112             {\cf19 if} (opt.id == {\cf18 id})\par
+00113             \{\par
+00114                 {\cf20 // Find the position of the main option in arguments}\par
+00115                 {\cf18 int} mainOptionPos = -1;\par
+00116 \par
+00117                 {\cf19 for} ({\cf18 size_t} i = 0; i < this->mainArgs->size(); ++i)\par
+00118                 \{\par
+00119                     {\cf19 if} ((*this->mainArgs)[i] == opt.param || (*this->mainArgs)[i] == opt.sparam)\par
+00120                     \{\par
+00121                         result.exists = {\cf17 true};\par
+00122                         mainOptionPos = i;\par
+00123                         {\cf19 break};\par
+00124                     \}\par
+00125                 \}\par
+00126 \par
+00127                 {\cf19 if} (result.exists)\par
+00128                 \{\par
+00129                     {\cf19 if} (opt.hasSubParams)\par
+00130                     \{\par
+00131                         {\cf20 // Check each sub-parameter}\par
+00132                         {\cf19 for} ({\cf17 const} {\cf17 auto} &sub : opt.subParams)\par
+00133                         \{\par
+00134                             {\cf18 bool} subMatched = {\cf17 false};\par
+00135 \par
+00136                             {\cf20 // Look for sub-parameters after the main option}\par
+00137                             {\cf19 for} ({\cf18 size_t} i = mainOptionPos + 1; i < this->mainArgs->size(); ++i)\par
+00138                             \{\par
+00139                                 {\cf19 if} ((*this->mainArgs)[i] == sub.param || (*this->mainArgs)[i] == sub.sparam)\par
+00140                                 \{\par
+00141                                     subMatched = {\cf17 true};\par
+00142                                     {\cf19 break};\par
+00143                                 \}\par
+00144                             \}\par
+00145 \par
+00146                             result.subExists.push_back(subMatched);\par
+00147                         \}\par
+00148                     \}\par
+00149 \par
+00150                     {\cf19 return} result;\par
+00151                 \}\par
+00152             \}\par
+00153         \}\par
+00154 \par
+00155         {\cf20 // If not found as top-level, check if it's a sub-parameter}\par
+00156         {\cf19 for} ({\cf17 const} {\cf17 auto} &opt : this->options)\par
+00157         \{\par
+00158             {\cf20 // Find if the parent option exists and get its position}\par
+00159             {\cf18 size_t} parentPos = -1;\par
+00160 \par
+00161             {\cf19 for} ({\cf18 size_t} i = 0; i < this->mainArgs->size(); ++i)\par
+00162             \{\par
+00163                 {\cf19 if} ((*this->mainArgs)[i] == opt.param || (*this->mainArgs)[i] == opt.sparam)\par
+00164                 \{\par
+00165                     parentPos = i;\par
+00166                     {\cf19 break};\par
+00167                 \}\par
+00168             \}\par
+00169 \par
+00170             {\cf19 if} (parentPos > -1 && opt.hasSubParams)\par
+00171             \{\par
+00172                 {\cf20 // Check if the requested sub-parameter exists after the parent}\par
+00173                 {\cf19 for} ({\cf17 const} {\cf17 auto} &sub : opt.subParams)\par
+00174                 \{\par
+00175                     {\cf19 if} (sub.id == {\cf18 id})\par
+00176                     \{\par
+00177                         {\cf19 for} ({\cf18 size_t} i = parentPos + 1; i < this->mainArgs->size(); ++i)\par
+00178                         \{\par
+00179                             {\cf19 if} ((*this->mainArgs)[i] == sub.param || (*this->mainArgs)[i] == sub.sparam)\par
+00180                             \{\par
+00181                                 result.exists = {\cf17 true};\par
+00182                                 {\cf19 break};\par
+00183                             \}\par
+00184                         \}\par
+00185 \par
+00186                         {\cf19 if} (!result.exists && parentPos + 1 < this->mainArgs->size())\par
+00187                         \{\par
+00188                             std::string nextArg = (*this->mainArgs)[parentPos + 1];\par
+00189 \par
+00190                             {\cf19 if} (nextArg == sub.param || nextArg == sub.sparam) result.exists = {\cf17 true};\par
+00191                         \}\par
+00192 \par
+00193                         {\cf20 // Handle any sub-sub-parameters if they exist}\par
+00194                         {\cf19 if} (result.exists && sub.hasSubParams)\par
+00195                         \{\par
+00196                             {\cf19 for} ({\cf17 const} {\cf17 auto} &subsub : sub.subParams)\par
+00197                             \{\par
+00198                                 {\cf18 bool} subsubMatched = {\cf17 false};\par
+00199 \par
+00200                                 {\cf19 for} ({\cf18 size_t} i = 0; i < this->mainArgs->size(); ++i)\par
+00201                                 \{\par
+00202                                     {\cf19 if} ((*this->mainArgs)[i] == subsub.param || (*this->mainArgs)[i] == subsub.sparam)\par
+00203                                     \{\par
+00204                                         subsubMatched = {\cf17 true};\par
+00205                                         {\cf19 break};\par
+00206                                     \}\par
+00207                                 \}\par
+00208 \par
+00209                                 result.subExists.push_back(subsubMatched);\par
+00210                             \}\par
+00211                         \}\par
+00212 \par
+00213                         {\cf19 return} result;\par
+00214                     \}\par
+00215                 \}\par
+00216             \}\par
+00217         \}\par
+00218 \par
+00219         {\cf19 return} result;\par
+00220     \}\par
+}
+{
+\ql
+References {\b argx::ARGXParam::exists}, {\b mainArgc}, {\b mainArgs}, {\b options}, and {\b argx::ARGXParam::subExists}.}\par
+}
+{\xe \v getSubParam\:argx::Argx}
+{\xe \v argx::Argx\:getSubParam}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool argx::Argx::getSubParam (const {\b argx::ARGXParam} & param, const std::string & id)}}
+\par
+{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get the sub-param from {\f2 id}  }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Parameters\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i param} \cell }{Original param \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i id} \cell }{The ID to get \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Returns\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+bool \par
+}}}{
+Definition at line {\b 222} of file {\b Argx.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00223     \{ {\cf19 return} this->paramExists({\cf18 id}) && param.subExists[this->findParam({\cf18 id})]; \}\par
+}
+{
+\ql
+References {\b findParam()}, {\b paramExists()}, and {\b argx::ARGXParam::subExists}.}\par
+}
+{\xe \v paramExists\:argx::Argx}
+{\xe \v argx::Argx\:paramExists}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool argx::Argx::paramExists (const std::string & id)}}
+\par
+{\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Get if param exists in the param options. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Parameters\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i id} \cell }{ID to get \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Returns\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+bool \par
+}}}{
+Definition at line {\b 94} of file {\b Argx.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00095     \{\par
+00096         {\cf19 if} (this->findParam({\cf18 id}) >= 0) {\cf19 return} {\cf17 true};;\par
+00097 \par
+00098         {\cf19 return} {\cf17 false};\par
+00099     \}\par
+}
+{
+\ql
+References {\b findParam()}.}\par
+{
+\ql
+Referenced by {\b getSubParam()}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v id\:argx::Argx}
+{\xe \v argx::Argx\:id}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string argx::Argx::id{\f2 [private]}}}
+\par
+{\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 20} of file {\b Argx.hpp}.}\par
+{
+\ql
+Referenced by {\b Argx()}, and {\b getID()}.}\par
+}
+{\xe \v mainArgc\:argx::Argx}
+{\xe \v argx::Argx\:mainArgc}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+unsigned int argx::Argx::mainArgc{\f2 [static]}, {\f2 [private]}}}
+\par
+{\bkmkstart AAAAAAAABT}
+{\bkmkend AAAAAAAABT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 25} of file {\b Argx.hpp}.}\par
+{
+\ql
+Referenced by {\b Argx()}, {\b getArgc()}, and {\b getParam()}.}\par
+}
+{\xe \v mainArgs\:argx::Argx}
+{\xe \v argx::Argx\:mainArgs}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::vector< std::string > * argx::Argx::mainArgs = nullptr{\f2 [static]}, {\f2 [private]}}}
+\par
+{\bkmkstart AAAAAAAABU}
+{\bkmkend AAAAAAAABU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 23} of file {\b Argx.hpp}.}\par
+{
+\ql
+Referenced by {\b Argx()}, {\b ~Argx()}, {\b findParam()}, {\b getMainArgs()}, and {\b getParam()}.}\par
+}
+{\xe \v options\:argx::Argx}
+{\xe \v argx::Argx\:options}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::vector< {\b ARGXOptions} > argx::Argx::options{\f2 [static]}, {\f2 [private]}}}
+\par
+{\bkmkstart AAAAAAAABV}
+{\bkmkend AAAAAAAABV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 22} of file {\b Argx.hpp}.}\par
+{
+\ql
+Referenced by {\b add()}, {\b createDocs()}, {\b findParam()}, {\b getOptions()}, and {\b getParam()}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+inc/{\b Argx.hpp}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+src/{\b Argx.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+argx::ARGXAddError Class Reference\par \pard\plain 
+{\tc\tcl2 \v argx::ARGXAddError}
+{\xe \v argx::ARGXAddError}
+{\bkmkstart AAAAAAAABW}
+{\bkmkend AAAAAAAABW}
+\par
+{
+{\f2 #include <ARGXAddError.hpp>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ARGXAddError} (const std::string &{\b msg}, const std::string &{\b help}="")\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::pair< const char *, const char * > {\b what} () const noexcept\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b help}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b msg}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 10} of file {\b ARGXAddError.hpp}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v ARGXAddError\:argx::ARGXAddError}
+{\xe \v argx::ARGXAddError\:ARGXAddError}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+argx::ARGXAddError::ARGXAddError (const std::string & msg, const std::string & help = {\f2 ""})}}
+\par
+{\bkmkstart AAAAAAAABX}
+{\bkmkend AAAAAAAABX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 8} of file {\b ARGXAddError.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00009         : msg(msg), help(help)\par
+00010     \{ \}\par
+}
+{
+\ql
+References {\b help}, and {\b msg}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v what\:argx::ARGXAddError}
+{\xe \v argx::ARGXAddError\:what}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::pair< const char *, const char * > argx::ARGXAddError::what () const{\f2 [noexcept]}}}
+\par
+{\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 12} of file {\b ARGXAddError.cpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00013     \{ {\cf19 return} \{ this->msg.c_str(), this->help.c_str() \}; \}\par
+}
+{
+\ql
+References {\b help}, and {\b msg}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v help\:argx::ARGXAddError}
+{\xe \v argx::ARGXAddError\:help}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string argx::ARGXAddError::help{\f2 [private]}}}
+\par
+{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 14} of file {\b ARGXAddError.hpp}.}\par
+{
+\ql
+Referenced by {\b ARGXAddError()}, and {\b what()}.}\par
+}
+{\xe \v msg\:argx::ARGXAddError}
+{\xe \v argx::ARGXAddError\:msg}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string argx::ARGXAddError::msg{\f2 [private]}}}
+\par
+{\bkmkstart AAAAAAAACA}
+{\bkmkend AAAAAAAACA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b ARGXAddError.hpp}.}\par
+{
+\ql
+Referenced by {\b ARGXAddError()}, and {\b what()}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+inc/{\b ARGXAddError.hpp}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+src/{\b ARGXAddError.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+argx::ARGXError Struct Reference\par \pard\plain 
+{\tc\tcl2 \v argx::ARGXError}
+{\xe \v argx::ARGXError}
+{\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
+\par
+{
+{\f2 #include <types.hpp>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b code}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b error}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b help}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b type}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 15} of file {\b types.hpp}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v code\:argx::ARGXError}
+{\xe \v argx::ARGXError\:code}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int argx::ARGXError::code}}
+\par
+{\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 21} of file {\b types.hpp}.}\par
+}
+{\xe \v error\:argx::ARGXError}
+{\xe \v argx::ARGXError\:error}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string argx::ARGXError::error}}
+\par
+{\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 18} of file {\b types.hpp}.}\par
+}
+{\xe \v help\:argx::ARGXError}
+{\xe \v argx::ARGXError\:help}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string argx::ARGXError::help}}
+\par
+{\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 19} of file {\b types.hpp}.}\par
+}
+{\xe \v type\:argx::ARGXError}
+{\xe \v argx::ARGXError\:type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string argx::ARGXError::type}}
+\par
+{\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 17} of file {\b types.hpp}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+inc/{\b types.hpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+argx::ARGXOptions Struct Reference\par \pard\plain 
+{\tc\tcl2 \v argx::ARGXOptions}
+{\xe \v argx::ARGXOptions}
+{\bkmkstart AAAAAAAACG}
+{\bkmkend AAAAAAAACG}
+\par
+{
+{\f2 #include <types.hpp>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b hasSubParams} = false\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b id}\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+ID (id) }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b info}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b param}\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Param (param): }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b sparam}\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Short Param (sparam): }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< {\b ARGXOptions} > {\b subParams}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 24} of file {\b types.hpp}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v hasSubParams\:argx::ARGXOptions}
+{\xe \v argx::ARGXOptions\:hasSubParams}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool argx::ARGXOptions::hasSubParams = false}}
+\par
+{\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 43} of file {\b types.hpp}.}\par
+}
+{\xe \v id\:argx::ARGXOptions}
+{\xe \v argx::ARGXOptions\:id}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string argx::ARGXOptions::id}}
+\par
+{\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+ID (id) }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+ID of the option \par
+}{
+Definition at line {\b 29} of file {\b types.hpp}.}\par
+}
+{\xe \v info\:argx::ARGXOptions}
+{\xe \v argx::ARGXOptions\:info}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string argx::ARGXOptions::info}}
+\par
+{\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 41} of file {\b types.hpp}.}\par
+}
+{\xe \v param\:argx::ARGXOptions}
+{\xe \v argx::ARGXOptions\:param}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string argx::ARGXOptions::param}}
+\par
+{\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Param (param): }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+EXAMPLE: \'96help, \'96version \par
+}{
+Definition at line {\b 35} of file {\b types.hpp}.}\par
+}
+{\xe \v sparam\:argx::ARGXOptions}
+{\xe \v argx::ARGXOptions\:sparam}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string argx::ARGXOptions::sparam}}
+\par
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Short Param (sparam): }}\par
+{
+Definition at line {\b 40} of file {\b types.hpp}.}\par
+}
+{\xe \v subParams\:argx::ARGXOptions}
+{\xe \v argx::ARGXOptions\:subParams}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::vector<{\b ARGXOptions}> argx::ARGXOptions::subParams}}
+\par
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 45} of file {\b types.hpp}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+inc/{\b types.hpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+argx::ARGXParam Struct Reference\par \pard\plain 
+{\tc\tcl2 \v argx::ARGXParam}
+{\xe \v argx::ARGXParam}
+{\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+\par
+{
+{\f2 #include <types.hpp>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b exists} = false\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< bool > {\b subExists}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 48} of file {\b types.hpp}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v exists\:argx::ARGXParam}
+{\xe \v argx::ARGXParam\:exists}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool argx::ARGXParam::exists = false}}
+\par
+{\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 50} of file {\b types.hpp}.}\par
+{
+\ql
+Referenced by {\b argx::Argx::getParam()}.}\par
+}
+{\xe \v subExists\:argx::ARGXParam}
+{\xe \v argx::ARGXParam\:subExists}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::vector<bool> argx::ARGXParam::subExists}}
+\par
+{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 51} of file {\b types.hpp}.}\par
+{
+\ql
+Referenced by {\b argx::Argx::getParam()}, and {\b argx::Argx::getSubParam()}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+inc/{\b types.hpp}\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Documentation{\tc \v File Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+inc/Argx.hpp File Reference\par \pard\plain 
+{\tc\tcl2 \v inc/Argx.hpp}
+{\xe \v inc/Argx.hpp}
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "../inc/macros.hpp"}\par
+{\f2 #include <string>}\par
+{\f2 #include <vector>}\par
+{\f2 #include "../inc/types.hpp"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b argx::Argx}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b argx}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Argx.hpp\par \pard\plain 
+{\tc\tcl2 \v inc/Argx.hpp}
+{\xe \v inc/Argx.hpp}
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 /* inc/argx.hpp}\par
+00002 {\cf20  * Owned and created by: pcannon09}\par
+00003 {\cf20  */}\par
+00004 \par
+00005 {\cf21 #pragma once}\par
+00006 \par
+00007 {\cf21 #include "../inc/macros.hpp"}\par
+00008 \par
+00009 {\cf21 #if __cplusplus >= 201103L}\par
+00010 {\cf21 #include <string>}\par
+00011 {\cf21 #include <vector>}\par
+00012 \par
+00013 {\cf21 #include "../inc/types.hpp"}\par
+00014 \par
+00015 {\cf17 namespace }argx\par
+00016 \{\par
+00017     {\cf17 class }Argx\par
+00018     \{\par
+00019     {\cf17 private}:\par
+00020         std::string id;\par
+00021 \par
+00022         {\cf17 static} std::vector<ARGXOptions> options;\par
+00023         {\cf17 static} std::vector<std::string> *mainArgs;\par
+00024 \par
+00025         {\cf17 static} {\cf18 unsigned} {\cf18 int} mainArgc;\par
+00026 \par
+00027     {\cf17 public}:{\cf20 }\par
+00028 {\cf20         /**}\par
+00029 {\cf20          * @brief Create Argx with the specific `id`, `argc` and `argv`}\par
+00030 {\cf20          * @param id Set the ID of the Argx}\par
+00031 {\cf20          * @param argc Set the `argc` of the `main()` function}\par
+00032 {\cf20          * @param argv Set the `argv` of the `main()` function}\par
+00033 {\cf20          */}\par
+00034         Argx({\cf17 const} std::string &{\cf18 id}, {\cf18 int} argc, {\cf18 char} *argv[]);\par
+00035         Argx();\par
+00036         ~Argx();\par
+00037 {\cf20 }\par
+00038 {\cf20         /**}\par
+00039 {\cf20          * @brief Add param options}\par
+00040 {\cf20          * @param option Add the option to the main params}\par
+00041 {\cf20          */}\par
+00042         {\cf18 void} add(ARGXOptions option) {\cf17 const};\par
+00043 {\cf20 }\par
+00044 {\cf20         /**}\par
+00045 {\cf20          * @brief Get the param from `id`}\par
+00046 {\cf20          * @param id The ID to get}\par
+00047 {\cf20          * @return ARGXParam Returnted parameter to get}\par
+00048 {\cf20          */}\par
+00049         ARGXParam getParam({\cf17 const} std::string& {\cf18 id});\par
+00050 {\cf20 }\par
+00051 {\cf20         /**}\par
+00052 {\cf20          * @brief Create documentation for the parameters with the specific style, title and main information}\par
+00053 {\cf20          * @param style Set the style using ARGXStyle}\par
+00054 {\cf20          * @param title Title for docs}\par
+00055 {\cf20          * @param Main information}\par
+00056 {\cf20          * @return std::string Documentation as a string}\par
+00057 {\cf20          */}\par
+00058         std::string createDocs(ARGXStyle style, {\cf17 const} std::string &title, {\cf17 const} std::string &mainInfo);\par
+00059 {\cf20 }\par
+00060 {\cf20         /**}\par
+00061 {\cf20          * @brief Find parameter index}\par
+00062 {\cf20          */}\par
+00063         {\cf18 int} findParam({\cf17 const} std::string& {\cf18 id});\par
+00064 {\cf20 }\par
+00065 {\cf20         /**}\par
+00066 {\cf20          * @brief Get the main options from the `main()` function as argc}\par
+00067 {\cf20          * @return int Number of params including the executable param}\par
+00068 {\cf20          */}\par
+00069         {\cf18 int} getArgc() {\cf17 const};\par
+00070 {\cf20 }\par
+00071 {\cf20         /**}\par
+00072 {\cf20          * @brief Get if param exists in the param options}\par
+00073 {\cf20          * @param id ID to get}\par
+00074 {\cf20          * @return bool}\par
+00075 {\cf20          */}\par
+00076         {\cf18 bool} paramExists({\cf17 const} std::string &{\cf18 id});\par
+00077 {\cf20 }\par
+00078 {\cf20         /**}\par
+00079 {\cf20          * @brief Get the sub-param from `id`}\par
+00080 {\cf20          * @param param Original param}\par
+00081 {\cf20          * @param id The ID to get}\par
+00082 {\cf20          * @return bool}\par
+00083 {\cf20          */}\par
+00084         {\cf18 bool} getSubParam({\cf17 const} argx::ARGXParam &param, {\cf17 const} std::string &{\cf18 id});\par
+00085 {\cf20 }\par
+00086 {\cf20         /**}\par
+00087 {\cf20          * @brief Get main arguments from `main()` function `argv`}\par
+00088 {\cf20          * @return std::vector<std::string> Vector of strings for main arguments from `argv`}\par
+00089 {\cf20          */}\par
+00090         std::vector<std::string> getMainArgs() {\cf17 const};\par
+00091 {\cf20 }\par
+00092 {\cf20         /**}\par
+00093 {\cf20          * @brief Get main set options as ARGXOptions}\par
+00094 {\cf20          * @return std::vector<ARGXOptions> Options to return}\par
+00095 {\cf20          */}\par
+00096         std::vector<ARGXOptions> getOptions() {\cf17 const};\par
+00097 {\cf20 }\par
+00098 {\cf20         /**}\par
+00099 {\cf20          * @brief Get Argx ID}\par
+00100 {\cf20          * @return std::string Argx ID}\par
+00101 {\cf20          */}\par
+00102         std::string getID() {\cf17 const};\par
+00103     \};\par
+00104 \}\par
+00105 \par
+00106 {\cf21 #else}\par
+00107 {\cf21 #   error "Must compile with C++11 support or newer"}\par
+00108 {\cf21 #   pragma message("Current standard is " ARGX_TOSTRING(__cplusplus))}\par
+00109 {\cf21 #endif}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+inc/ARGXAddError.hpp File Reference\par \pard\plain 
+{\tc\tcl2 \v inc/ARGXAddError.hpp}
+{\xe \v inc/ARGXAddError.hpp}
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <string>}\par
+{\f2 #include <utility>}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b argx::ARGXAddError}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b argx}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+ARGXAddError.hpp\par \pard\plain 
+{\tc\tcl2 \v inc/ARGXAddError.hpp}
+{\xe \v inc/ARGXAddError.hpp}
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf21 #pragma once}\par
+00002 \par
+00003 {\cf21 #if __cplusplus >= 201103L}\par
+00004 \par
+00005 {\cf21 #include <string>}\par
+00006 {\cf21 #include <utility>}\par
+00007 \par
+00008 {\cf17 namespace }argx\par
+00009 \{\par
+00010     {\cf17 class }ARGXAddError\par
+00011     \{\par
+00012     {\cf17 private}:\par
+00013         std::string msg;\par
+00014         std::string help;\par
+00015 \par
+00016     {\cf17 public}:\par
+00017         ARGXAddError({\cf17 const} std::string &msg, {\cf17 const} std::string &help = {\cf22 ""});\par
+00018 \par
+00019         std::pair<{\cf17 const} {\cf18 char}* {\cf20 /*Error*/}, {\cf17 const} {\cf18 char}* {\cf20 /*Help*/}> what() const noexcept;\par
+00020     \};\par
+00021 \}\par
+00022 \par
+00023 {\cf21 #else}\par
+00024 {\cf21 #   error "Must compile with C++11 support or newer"}\par
+00025 {\cf21 #   pragma message("Current standard is " ARGX_TOSTRING(__cplusplus))}\par
+00026 {\cf21 #endif}\par
+00027 \par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+inc/macros.hpp File Reference\par \pard\plain 
+{\tc\tcl2 \v inc/macros.hpp}
+{\xe \v inc/macros.hpp}
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ARGX_DEV}\~ true\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ARGX_STRINGIFY}(x)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ARGX_TOSTRING}(x)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ARGX_VERSION}\~ (({\b ARGX_VERSION_MAJOR}<<16)|({\b ARGX_VERSION_MINOR}<<8)|({\b ARGX_VERSION_PATCH})|({\b ARGX_VERSION_STATE} << 24))\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ARGX_VERSION_CHECK}({\b ARGX_VERSION_MAJOR},  {\b ARGX_VERSION_MINOR},  {\b ARGX_VERSION_PATCH},  {\b ARGX_VERSION_STATE})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ARGX_VERSION_MAJOR}\~ 0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ARGX_VERSION_MINOR}\~ 1\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ARGX_VERSION_PATCH}\~ 1\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ARGX_VERSION_STATE}\~ "beta"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ARGX_VERSION_STD}\~ 20250604\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v ARGX_DEV\:macros.hpp}
+{\xe \v macros.hpp\:ARGX_DEV}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ARGX_DEV\~ true}}
+\par
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 23} of file {\b macros.hpp}.}\par
+}
+{\xe \v ARGX_STRINGIFY\:macros.hpp}
+{\xe \v macros.hpp\:ARGX_STRINGIFY}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ARGX_STRINGIFY( x)}}
+\par
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\cf21 #x}\par
+}
+{
+Definition at line {\b 26} of file {\b macros.hpp}.}\par
+}
+{\xe \v ARGX_TOSTRING\:macros.hpp}
+{\xe \v macros.hpp\:ARGX_TOSTRING}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ARGX_TOSTRING( x)}}
+\par
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid ARGX_STRINGIFY(x)\par
+}
+{
+Definition at line {\b 27} of file {\b macros.hpp}.}\par
+}
+{\xe \v ARGX_VERSION\:macros.hpp}
+{\xe \v macros.hpp\:ARGX_VERSION}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ARGX_VERSION\~ (({\b ARGX_VERSION_MAJOR}<<16)|({\b ARGX_VERSION_MINOR}<<8)|({\b ARGX_VERSION_PATCH})|({\b ARGX_VERSION_STATE} << 24))}}
+\par
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 17} of file {\b macros.hpp}.}\par
+}
+{\xe \v ARGX_VERSION_CHECK\:macros.hpp}
+{\xe \v macros.hpp\:ARGX_VERSION_CHECK}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ARGX_VERSION_CHECK( {\b ARGX_VERSION_MAJOR},  {\b ARGX_VERSION_MINOR},  {\b ARGX_VERSION_PATCH},  {\b ARGX_VERSION_STATE})}}
+\par
+{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Value:}{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid     (((ARGX_VERSION_MAJOR)<<16)|((ARGX_VERSION_MINOR)<<8)|(ARGX_VERSION_PATCH)|((ARGX_VERSION_STATE) << 24))\par
+}
+{
+Definition at line {\b 19} of file {\b macros.hpp}.}\par
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00019 {\cf21 #define ARGX_VERSION_CHECK(ARGX_VERSION_MAJOR, ARGX_VERSION_MINOR, ARGX_VERSION_PATCH, ARGX_VERSION_STATE) \\}\par
+00020 {\cf21     (((ARGX_VERSION_MAJOR)<<16)|((ARGX_VERSION_MINOR)<<8)|(ARGX_VERSION_PATCH)|((ARGX_VERSION_STATE) << 24))}\par
+}
+}
+{\xe \v ARGX_VERSION_MAJOR\:macros.hpp}
+{\xe \v macros.hpp\:ARGX_VERSION_MAJOR}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ARGX_VERSION_MAJOR\~ 0}}
+\par
+{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 4} of file {\b macros.hpp}.}\par
+}
+{\xe \v ARGX_VERSION_MINOR\:macros.hpp}
+{\xe \v macros.hpp\:ARGX_VERSION_MINOR}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ARGX_VERSION_MINOR\~ 1}}
+\par
+{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 5} of file {\b macros.hpp}.}\par
+}
+{\xe \v ARGX_VERSION_PATCH\:macros.hpp}
+{\xe \v macros.hpp\:ARGX_VERSION_PATCH}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ARGX_VERSION_PATCH\~ 1}}
+\par
+{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 6} of file {\b macros.hpp}.}\par
+}
+{\xe \v ARGX_VERSION_STATE\:macros.hpp}
+{\xe \v macros.hpp\:ARGX_VERSION_STATE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ARGX_VERSION_STATE\~ "beta"}}
+\par
+{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 15} of file {\b macros.hpp}.}\par
+}
+{\xe \v ARGX_VERSION_STD\:macros.hpp}
+{\xe \v macros.hpp\:ARGX_VERSION_STD}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ARGX_VERSION_STD\~ 20250604}}
+\par
+{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 8} of file {\b macros.hpp}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+macros.hpp\par \pard\plain 
+{\tc\tcl2 \v inc/macros.hpp}
+{\xe \v inc/macros.hpp}
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf21 #pragma once}\par
+00002 \par
+00003 {\cf20 // Versioning}\par
+00004 {\cf21 #define ARGX_VERSION_MAJOR            0}\par
+00005 {\cf21 #define ARGX_VERSION_MINOR            1}\par
+00006 {\cf21 #define ARGX_VERSION_PATCH            1}\par
+00007 \par
+00008 {\cf21 #define ARGX_VERSION_STD              20250604 }{\cf20 // Once released, it will be YyyyMmDd (eg: 20250604)}\par
+00009 \par
+00010 {\cf20 // Version states:}\par
+00011 {\cf20 // * dev}\par
+00012 {\cf20 // * beta}\par
+00013 {\cf20 // * snap}\par
+00014 {\cf20 // * build (AKA: Release)}\par
+00015 {\cf21 #define ARGX_VERSION_STATE          "beta"}\par
+00016 \par
+00017 {\cf21 #define ARGX_VERSION                ((ARGX_VERSION_MAJOR<<16)|(ARGX_VERSION_MINOR<<8)|(ARGX_VERSION_PATCH)|(ARGX_VERSION_STATE << 24))}\par
+00018 \par
+00019 {\cf21 #define ARGX_VERSION_CHECK(ARGX_VERSION_MAJOR, ARGX_VERSION_MINOR, ARGX_VERSION_PATCH, ARGX_VERSION_STATE) \\}\par
+00020 {\cf21     (((ARGX_VERSION_MAJOR)<<16)|((ARGX_VERSION_MINOR)<<8)|(ARGX_VERSION_PATCH)|((ARGX_VERSION_STATE) << 24))}\par
+00021 \par
+00022 {\cf20 // DEV or PROD}\par
+00023 {\cf21 #define ARGX_DEV true}\par
+00024 \par
+00025 {\cf20 // Macro utils}\par
+00026 {\cf21 #define ARGX_STRINGIFY(x) #x}\par
+00027 {\cf21 #define ARGX_TOSTRING(x) ARGX_STRINGIFY(x)}\par
+00028 \par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+inc/types.hpp File Reference\par \pard\plain 
+{\tc\tcl2 \v inc/types.hpp}
+{\xe \v inc/types.hpp}
+{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <string>}\par
+{\f2 #include <vector>}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b argx::ARGXError}\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b argx::ARGXOptions}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b argx::ARGXParam}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b argx}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Typedefs\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct argx::ARGXError {\b argx::ARGXError}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct argx::ARGXOptions {\b argx::ARGXOptions}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct argx::ARGXParam {\b argx::ARGXParam}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Enumerations\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum class {\b argx::ARGXStyle} \{ {\b argx::Professional}
+, {\b argx::Simple}
+ \}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+types.hpp\par \pard\plain 
+{\tc\tcl2 \v inc/types.hpp}
+{\xe \v inc/types.hpp}
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf21 #pragma once}\par
+00002 \par
+00003 {\cf21 #if __cplusplus >= 201103L}\par
+00004 {\cf21 #include <string>}\par
+00005 {\cf21 #include <vector>}\par
+00006 \par
+00007 {\cf17 namespace }argx\par
+00008 \{\par
+00009     {\cf17 enum class} ARGXStyle\par
+00010     \{\par
+00011         Professional,\par
+00012         Simple,\par
+00013     \};\par
+00014 \par
+00015     {\cf17 typedef} {\cf17 struct }ARGXError\par
+00016     \{\par
+00017         std::string type;\par
+00018         std::string error;\par
+00019         std::string help;\par
+00020 \par
+00021         {\cf18 int} code;\par
+00022     \} ARGXError;\par
+00023 \par
+00024     {\cf17 typedef} {\cf17 struct }ARGXOptions\par
+00025     \{{\cf20 }\par
+00026 {\cf20         /** ID (id)}\par
+00027 {\cf20          * @brief ID of the option}\par
+00028 {\cf20          */}\par
+00029         std::string id;\par
+00030 {\cf20 }\par
+00031 {\cf20         /** Param (param):}\par
+00032 {\cf20          * @brief EXAMPLE:}\par
+00033 {\cf20          * --help, --version}\par
+00034 {\cf20          */}\par
+00035         std::string param;\par
+00036 {\cf20 }\par
+00037 {\cf20         /** Short Param (sparam):}\par
+00038 {\cf20          * @brief}\par
+00039 {\cf20          */}\par
+00040         std::string sparam;\par
+00041         std::string info;\par
+00042 \par
+00043         {\cf18 bool} hasSubParams = {\cf17 false};\par
+00044 \par
+00045         std::vector<ARGXOptions> subParams;\par
+00046     \} ARGXOptions;\par
+00047 \par
+00048     {\cf17 typedef} {\cf17 struct }ARGXParam\par
+00049     \{\par
+00050         {\cf18 bool} exists = {\cf17 false};\par
+00051         std::vector<bool> subExists;\par
+00052     \} ARGXParam;\par
+00053 \}\par
+00054 \par
+00055 {\cf21 #else}\par
+00056 {\cf21 #   error "Must compile with C++11 support or newer"}\par
+00057 {\cf21 #   pragma message("Current standard is " ARGX_TOSTRING(__cplusplus))}\par
+00058 {\cf21 #endif}\par
+00059 \par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+README.md File Reference\par \pard\plain 
+{\tc\tcl2 \v README.md}
+{\xe \v README.md}
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+src/Argx.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v src/Argx.cpp}
+{\xe \v src/Argx.cpp}
+{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <string>}\par
+{\f2 #include <iostream>}\par
+{\f2 #include <codecvt>}\par
+{\f2 #include <locale>}\par
+{\f2 #include "../inc/Argx.hpp"}\par
+{\f2 #include "../inc/ARGXAddError.hpp"}\par
+{\f2 #include "../inc/types.hpp"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b argx}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Argx.cpp\par \pard\plain 
+{\tc\tcl2 \v src/Argx.cpp}
+{\xe \v src/Argx.cpp}
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 /* src/argx.cpp}\par
+00002 {\cf20  * Owned and created by: pcannon09}\par
+00003 {\cf20  */}\par
+00004 \par
+00005 {\cf21 #include <string>}\par
+00006 {\cf21 #include <iostream>}\par
+00007 {\cf21 #include <codecvt>}\par
+00008 {\cf21 #include <locale>}\par
+00009 \par
+00010 {\cf21 #include "../inc/Argx.hpp"}\par
+00011 {\cf21 #include "../inc/ARGXAddError.hpp"}\par
+00012 {\cf21 #include "../inc/types.hpp"}\par
+00013 \par
+00014 {\cf17 namespace }argx\par
+00015 \{\par
+00016     {\cf20 // PRIVATE}\par
+00017     std::vector<ARGXOptions> Argx::options;\par
+00018     std::vector<std::string> *Argx::mainArgs = {\cf17 nullptr};\par
+00019 \par
+00020     {\cf18 unsigned} {\cf18 int} Argx::mainArgc;\par
+00021 \par
+00022     {\cf20 // PUBLIC:}\par
+00023     Argx::Argx({\cf17 const} std::string &{\cf18 id}, {\cf18 int} argc, {\cf18 char} *argv[])\par
+00024         : id(id)\par
+00025     \{\par
+00026         this->mainArgs = {\cf17 new} std::vector<std::string>(argv, argv + argc);\par
+00027         this->mainArgc = argc;\par
+00028     \}\par
+00029 \par
+00030     Argx::Argx()\par
+00031     \{ \}\par
+00032 \par
+00033     Argx::~Argx()\par
+00034     \{\par
+00035         {\cf17 delete} this->mainArgs; this->mainArgs = {\cf17 nullptr};\par
+00036     \}\par
+00037 \par
+00038     {\cf18 void} Argx::add(ARGXOptions option){\cf17  const}\par
+00039 {\cf17     }\{\par
+00040         ARGXError error = \{\par
+00041             .type = {\cf22 "success"},\par
+00042             .code = 0\par
+00043         \};\par
+00044 \par
+00045         this->options.emplace_back(option);\par
+00046     \}\par
+00047 \par
+00048     {\cf18 int} Argx::findParam({\cf17 const} std::string &{\cf18 id})\par
+00049     \{\par
+00050         {\cf20 // First check if it's a main parameter}\par
+00051         {\cf19 for} ({\cf18 size_t} i = 0; i < this->options.size(); i++)\par
+00052         \{\par
+00053             {\cf19 if} (this->options[i].{\cf18 id} == {\cf18 id})\par
+00054             \{\par
+00055                 {\cf20 // Check if this main parameter exists in arguments}\par
+00056                 {\cf19 for} ({\cf17 const} std::string &arg : *this->mainArgs)\par
+00057                 \{\par
+00058                     {\cf19 if} (arg == this->options[i].param || arg == this->options[i].sparam)\par
+00059                     \{\par
+00060                         {\cf19 return} {\cf17 static_cast<}{\cf18 int}{\cf17 >}(i);\par
+00061                     \}\par
+00062                 \}\par
+00063             \}\par
+00064         \}\par
+00065 \par
+00066         {\cf20 // Then look for sub-parameters}\par
+00067         {\cf19 for} ({\cf17 const} {\cf17 auto} &opt : this->options)\par
+00068         \{\par
+00069             {\cf20 // Check if the parent option exists in the arguments}\par
+00070             {\cf18 bool} parentExists = {\cf17 false};\par
+00071 \par
+00072             {\cf19 for} ({\cf17 const} std::string &arg : *this->mainArgs)\par
+00073             \{\par
+00074                 {\cf19 if} (arg == opt.param || arg == opt.sparam)\par
+00075                 \{\par
+00076                     parentExists = {\cf17 true};\par
+00077                     {\cf19 break};\par
+00078                 \}\par
+00079             \}\par
+00080 \par
+00081             {\cf19 if} (parentExists)\par
+00082             \{\par
+00083                 {\cf20 // Find the index of the requested sub-parameter}\par
+00084                 {\cf19 for} ({\cf18 size_t} i = 0; i < opt.subParams.size(); i++)\par
+00085                 \{\par
+00086                     {\cf19 if} (opt.subParams[i].id == {\cf18 id}) {\cf19 return} {\cf17 static_cast<}{\cf18 int}{\cf17 >}(i);\par
+00087                 \}\par
+00088             \}\par
+00089         \}\par
+00090 \par
+00091         {\cf19 return} -1; {\cf20 // Not found}\par
+00092     \}\par
+00093 \par
+00094     {\cf18 bool} Argx::paramExists({\cf17 const} std::string &{\cf18 id})\par
+00095     \{\par
+00096         {\cf19 if} (this->findParam({\cf18 id}) >= 0) {\cf19 return} {\cf17 true};;\par
+00097 \par
+00098         {\cf19 return} {\cf17 false};\par
+00099     \}\par
+00100 \par
+00101 \par
+00102     \par
+00103     ARGXParam Argx::getParam({\cf17 const} std::string &{\cf18 id})\par
+00104     \{\par
+00105         {\cf19 if} (this->mainArgc <= 1) {\cf19 return} \{\};\par
+00106 \par
+00107         ARGXParam result;\par
+00108 \par
+00109         {\cf20 // First, check if this is a top-level option}\par
+00110         {\cf19 for} ({\cf17 const} {\cf17 auto} &opt : this->options)\par
+00111         \{\par
+00112             {\cf19 if} (opt.id == {\cf18 id})\par
+00113             \{\par
+00114                 {\cf20 // Find the position of the main option in arguments}\par
+00115                 {\cf18 int} mainOptionPos = -1;\par
+00116 \par
+00117                 {\cf19 for} ({\cf18 size_t} i = 0; i < this->mainArgs->size(); ++i)\par
+00118                 \{\par
+00119                     {\cf19 if} ((*this->mainArgs)[i] == opt.param || (*this->mainArgs)[i] == opt.sparam)\par
+00120                     \{\par
+00121                         result.exists = {\cf17 true};\par
+00122                         mainOptionPos = i;\par
+00123                         {\cf19 break};\par
+00124                     \}\par
+00125                 \}\par
+00126 \par
+00127                 {\cf19 if} (result.exists)\par
+00128                 \{\par
+00129                     {\cf19 if} (opt.hasSubParams)\par
+00130                     \{\par
+00131                         {\cf20 // Check each sub-parameter}\par
+00132                         {\cf19 for} ({\cf17 const} {\cf17 auto} &sub : opt.subParams)\par
+00133                         \{\par
+00134                             {\cf18 bool} subMatched = {\cf17 false};\par
+00135 \par
+00136                             {\cf20 // Look for sub-parameters after the main option}\par
+00137                             {\cf19 for} ({\cf18 size_t} i = mainOptionPos + 1; i < this->mainArgs->size(); ++i)\par
+00138                             \{\par
+00139                                 {\cf19 if} ((*this->mainArgs)[i] == sub.param || (*this->mainArgs)[i] == sub.sparam)\par
+00140                                 \{\par
+00141                                     subMatched = {\cf17 true};\par
+00142                                     {\cf19 break};\par
+00143                                 \}\par
+00144                             \}\par
+00145 \par
+00146                             result.subExists.push_back(subMatched);\par
+00147                         \}\par
+00148                     \}\par
+00149 \par
+00150                     {\cf19 return} result;\par
+00151                 \}\par
+00152             \}\par
+00153         \}\par
+00154 \par
+00155         {\cf20 // If not found as top-level, check if it's a sub-parameter}\par
+00156         {\cf19 for} ({\cf17 const} {\cf17 auto} &opt : this->options)\par
+00157         \{\par
+00158             {\cf20 // Find if the parent option exists and get its position}\par
+00159             {\cf18 size_t} parentPos = -1;\par
+00160 \par
+00161             {\cf19 for} ({\cf18 size_t} i = 0; i < this->mainArgs->size(); ++i)\par
+00162             \{\par
+00163                 {\cf19 if} ((*this->mainArgs)[i] == opt.param || (*this->mainArgs)[i] == opt.sparam)\par
+00164                 \{\par
+00165                     parentPos = i;\par
+00166                     {\cf19 break};\par
+00167                 \}\par
+00168             \}\par
+00169 \par
+00170             {\cf19 if} (parentPos > -1 && opt.hasSubParams)\par
+00171             \{\par
+00172                 {\cf20 // Check if the requested sub-parameter exists after the parent}\par
+00173                 {\cf19 for} ({\cf17 const} {\cf17 auto} &sub : opt.subParams)\par
+00174                 \{\par
+00175                     {\cf19 if} (sub.id == {\cf18 id})\par
+00176                     \{\par
+00177                         {\cf19 for} ({\cf18 size_t} i = parentPos + 1; i < this->mainArgs->size(); ++i)\par
+00178                         \{\par
+00179                             {\cf19 if} ((*this->mainArgs)[i] == sub.param || (*this->mainArgs)[i] == sub.sparam)\par
+00180                             \{\par
+00181                                 result.exists = {\cf17 true};\par
+00182                                 {\cf19 break};\par
+00183                             \}\par
+00184                         \}\par
+00185 \par
+00186                         {\cf19 if} (!result.exists && parentPos + 1 < this->mainArgs->size())\par
+00187                         \{\par
+00188                             std::string nextArg = (*this->mainArgs)[parentPos + 1];\par
+00189 \par
+00190                             {\cf19 if} (nextArg == sub.param || nextArg == sub.sparam) result.exists = {\cf17 true};\par
+00191                         \}\par
+00192 \par
+00193                         {\cf20 // Handle any sub-sub-parameters if they exist}\par
+00194                         {\cf19 if} (result.exists && sub.hasSubParams)\par
+00195                         \{\par
+00196                             {\cf19 for} ({\cf17 const} {\cf17 auto} &subsub : sub.subParams)\par
+00197                             \{\par
+00198                                 {\cf18 bool} subsubMatched = {\cf17 false};\par
+00199 \par
+00200                                 {\cf19 for} ({\cf18 size_t} i = 0; i < this->mainArgs->size(); ++i)\par
+00201                                 \{\par
+00202                                     {\cf19 if} ((*this->mainArgs)[i] == subsub.param || (*this->mainArgs)[i] == subsub.sparam)\par
+00203                                     \{\par
+00204                                         subsubMatched = {\cf17 true};\par
+00205                                         {\cf19 break};\par
+00206                                     \}\par
+00207                                 \}\par
+00208 \par
+00209                                 result.subExists.push_back(subsubMatched);\par
+00210                             \}\par
+00211                         \}\par
+00212 \par
+00213                         {\cf19 return} result;\par
+00214                     \}\par
+00215                 \}\par
+00216             \}\par
+00217         \}\par
+00218 \par
+00219         {\cf19 return} result;\par
+00220     \}\par
+00221 \par
+00222     {\cf18 bool} Argx::getSubParam({\cf17 const} argx::ARGXParam &param, {\cf17 const} std::string &{\cf18 id})\par
+00223     \{ {\cf19 return} this->paramExists({\cf18 id}) && param.subExists[this->findParam({\cf18 id})]; \}\par
+00224 \par
+00225     std::string Argx::createDocs(ARGXStyle style, {\cf17 const} std::string &title, {\cf17 const} std::string &mainInfo)\par
+00226     \{\par
+00227         std::string contentStr;\par
+00228 \par
+00229         {\cf19 if} (style == ARGXStyle::Professional)\par
+00230         \{\par
+00231             {\cf19 for} ({\cf17 const} {\cf17 auto} &x : this->options)\par
+00232             \{\par
+00233                 {\cf20 // Main option header line}\par
+00234                 contentStr += {\cf22 "ID: "} + x.id + {\cf22 "\\n"};\par
+00235                 contentStr += {\cf22 "[ "} + x.sparam + {\cf22 " | "} + x.param;\par
+00236 \par
+00237                 {\cf19 if} (x.hasSubParams && !x.subParams.empty())\par
+00238                 \{\par
+00239                     contentStr += {\cf22 " [ "};\par
+00240 \par
+00241                     {\cf19 for} ({\cf18 size_t} i = 0; i < x.subParams.size(); ++i)\par
+00242                     \{\par
+00243                         {\cf17 const} {\cf17 auto} &sub = x.subParams[i];\par
+00244 \par
+00245                         contentStr += sub.param;\par
+00246 \par
+00247                         {\cf19 if} (i < x.subParams.size() - 1) contentStr += {\cf22 " | "};\par
+00248                         {\cf19 else} {\cf19 if} (i <= x.subParams.size()) contentStr += {\cf23 ' '};\par
+00249                     \}\par
+00250 \par
+00251                     contentStr += {\cf22 "] ] "};\par
+00252                 \}\par
+00253 \par
+00254                 {\cf19 else} contentStr += {\cf22 " ] ] "};\par
+00255 \par
+00256                 contentStr += x.info + {\cf22 "\\n"};\par
+00257 \par
+00258                 {\cf20 // Print all sub-options with sparam and param, aligned with ideographic spaces if there are}\par
+00259                 {\cf19 if} (x.hasSubParams && !x.subParams.empty())\par
+00260                 \{\par
+00261                     {\cf19 for} ({\cf17 const} {\cf17 auto} &sub : x.subParams)\par
+00262                     \{\par
+00263                         {\cf20 // Create ideographic spaces matching the length of main param for alignment}\par
+00264                         std::wstring wideSpaces(x.param.size(), L{\cf22 '\\u3000'});\par
+00265                         std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;\par
+00266                         std::string spacing = converter.to_bytes(wideSpaces);\par
+00267 \par
+00268                         contentStr += spacing + {\cf22 "  [ "} + sub.sparam + {\cf22 " | "} + sub.param + {\cf22 " ] "} + sub.info + {\cf22 "\\n"};\par
+00269                     \}\par
+00270                 \}\par
+00271             \}\par
+00272         \}\par
+00273 \par
+00274         {\cf19 return} title + {\cf22 "\\n"} + mainInfo + {\cf22 "\\n"} + contentStr;\par
+00275     \}\par
+00276 \par
+00277     std::vector<std::string> Argx::getMainArgs(){\cf17  const}\par
+00278 {\cf17     }\{ {\cf19 return} *this->mainArgs; \}\par
+00279 \par
+00280     {\cf18 int} Argx::getArgc(){\cf17  const}\par
+00281 {\cf17     }\{ {\cf19 return} this->mainArgc; \}\par
+00282 \par
+00283     std::vector<ARGXOptions> Argx::getOptions(){\cf17  const}\par
+00284 {\cf17     }\{ {\cf19 return} this->options; \}\par
+00285 \par
+00286     std::string Argx::getID(){\cf17  const}\par
+00287 {\cf17     }\{ {\cf19 return} this->id; \}\par
+00288 \}\par
+00289 \par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+src/ARGXAddError.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v src/ARGXAddError.cpp}
+{\xe \v src/ARGXAddError.cpp}
+{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <utility>}\par
+{\f2 #include <string>}\par
+{\f2 #include "../inc/ARGXAddError.hpp"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b argx}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+ARGXAddError.cpp\par \pard\plain 
+{\tc\tcl2 \v src/ARGXAddError.cpp}
+{\xe \v src/ARGXAddError.cpp}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf21 #include <utility>}\par
+00002 {\cf21 #include <string>}\par
+00003 \par
+00004 {\cf21 #include "../inc/ARGXAddError.hpp"}\par
+00005 \par
+00006 {\cf17 namespace }argx\par
+00007 \{\par
+00008     ARGXAddError::ARGXAddError({\cf17 const} std::string &msg, {\cf17 const} std::string &help)\par
+00009         : msg(msg), help(help)\par
+00010     \{ \}\par
+00011 \par
+00012     std::pair<{\cf17 const} {\cf18 char}* {\cf20 /*Error*/}, {\cf17 const} {\cf18 char}* {\cf20 /*Help*/}> ARGXAddError::what() const noexcept\par
+00013     \{ {\cf19 return} \{ this->msg.c_str(), this->help.c_str() \}; \}\par
+00014 \}\par
+00015 \par
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

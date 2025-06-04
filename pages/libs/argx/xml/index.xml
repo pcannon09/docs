@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="d9/da2/classargx_1_1Argx" kind="class"><name>argx::Argx</name>
+    <member refid="d9/da2/classargx_1_1Argx_1adf94f5a9f22d8ea2cde21df63c2f3d8a" kind="variable"><name>id</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a2e72f1c581d6ac0ffa02d45c3e6b540f" kind="variable"><name>mainArgc</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a4e820cdc862457fd8618229ce47a690f" kind="variable"><name>mainArgs</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5" kind="variable"><name>options</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1ac4ac47d6fe631a673ce0c7594fd67a12" kind="function"><name>Argx</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" kind="function"><name>Argx</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a97654cab13febb7fb7870b14c9d31c6e" kind="function"><name>~Argx</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1aab16d8baf18e1db7ce66995a7cad312e" kind="function"><name>add</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a99bbe74c7f09f6bb3a343dbdde050a64" kind="function"><name>createDocs</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" kind="function"><name>findParam</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a812254e076a5ec208ba9d2eab470edb4" kind="function"><name>getArgc</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a671ad717805d76e459c74a3e0fee0625" kind="function"><name>getID</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a6146d9644c99b670b15d78cb92057bff" kind="function"><name>getMainArgs</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a3378e7eb2efcb1386b487ece1b5aec35" kind="function"><name>getOptions</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" kind="function"><name>getParam</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1adb8fa05c9916682bf3cabeb2a12895f4" kind="function"><name>getSubParam</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a82c1649fbd03d4f3ea94bf8a14e1299d" kind="function"><name>paramExists</name></member>
+  </compound>
+  <compound refid="da/d2b/classargx_1_1ARGXAddError" kind="class"><name>argx::ARGXAddError</name>
+    <member refid="da/d2b/classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de" kind="variable"><name>help</name></member>
+    <member refid="da/d2b/classargx_1_1ARGXAddError_1a09e860d9791a4a6b00cb716cec8a8479" kind="variable"><name>msg</name></member>
+    <member refid="da/d2b/classargx_1_1ARGXAddError_1ac2b5ced72ae86e5ca250b1f401cc1a5f" kind="function"><name>ARGXAddError</name></member>
+    <member refid="da/d2b/classargx_1_1ARGXAddError_1ad5d8832d580b8af9cc8b48bb75a1e752" kind="function"><name>what</name></member>
+  </compound>
+  <compound refid="d9/db2/structargx_1_1ARGXError" kind="struct"><name>argx::ARGXError</name>
+    <member refid="d9/db2/structargx_1_1ARGXError_1a595e7a03b9eff514bc4c8873417b63b0" kind="variable"><name>code</name></member>
+    <member refid="d9/db2/structargx_1_1ARGXError_1adbf9556ec51d02e2dec17bf2aa93845e" kind="variable"><name>error</name></member>
+    <member refid="d9/db2/structargx_1_1ARGXError_1a6c18e106da3546f417fe13217c518a85" kind="variable"><name>help</name></member>
+    <member refid="d9/db2/structargx_1_1ARGXError_1aa3083201a43c82fd69c3f7a04118b184" kind="variable"><name>type</name></member>
+  </compound>
+  <compound refid="da/dd5/structargx_1_1ARGXOptions" kind="struct"><name>argx::ARGXOptions</name>
+    <member refid="da/dd5/structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a" kind="variable"><name>hasSubParams</name></member>
+    <member refid="da/dd5/structargx_1_1ARGXOptions_1a0bd17b9be2b313a37c353d9d8b8c5b65" kind="variable"><name>id</name></member>
+    <member refid="da/dd5/structargx_1_1ARGXOptions_1a825a889884b7b19a5c1550a328780ab9" kind="variable"><name>info</name></member>
+    <member refid="da/dd5/structargx_1_1ARGXOptions_1a6324ea753af15d2a184e382e913694f0" kind="variable"><name>param</name></member>
+    <member refid="da/dd5/structargx_1_1ARGXOptions_1aa0cd2dddf236a7bd15c1636aa7ec4a9c" kind="variable"><name>sparam</name></member>
+    <member refid="da/dd5/structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed" kind="variable"><name>subParams</name></member>
+  </compound>
+  <compound refid="d2/d84/structargx_1_1ARGXParam" kind="struct"><name>argx::ARGXParam</name>
+    <member refid="d2/d84/structargx_1_1ARGXParam_1a47afcd85c9734d815006ee41647ac4e0" kind="variable"><name>exists</name></member>
+    <member refid="d2/d84/structargx_1_1ARGXParam_1ace0572ca0af0b51da129b562bee6a673" kind="variable"><name>subExists</name></member>
+  </compound>
+  <compound refid="dc/d69/namespaceargx" kind="namespace"><name>argx</name>
+    <member refid="dc/d69/namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9" kind="enum"><name>ARGXStyle</name></member>
+    <member refid="dc/d69/namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2" kind="enumvalue"><name>Professional</name></member>
+    <member refid="dc/d69/namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780" kind="enumvalue"><name>Simple</name></member>
+    <member refid="dc/d69/namespaceargx_1a12ba6f5d720d46a611584938a996663e" kind="typedef"><name>ARGXError</name></member>
+    <member refid="dc/d69/namespaceargx_1a9933be078f36db7b1424f6dd0372eb72" kind="typedef"><name>ARGXOptions</name></member>
+    <member refid="dc/d69/namespaceargx_1a40874387325f4f81850b2ef717831239" kind="typedef"><name>ARGXParam</name></member>
+  </compound>
+  <compound refid="d8/dcc/namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="d0/d32/Argx_8hpp" kind="file"><name>Argx.hpp</name>
+  </compound>
+  <compound refid="d2/d1d/ARGXAddError_8hpp" kind="file"><name>ARGXAddError.hpp</name>
+  </compound>
+  <compound refid="db/dbe/macros_8hpp" kind="file"><name>macros.hpp</name>
+    <member refid="db/dbe/macros_8hpp_1a2c2541090a31c495b5e800500cdff4ef" kind="define"><name>ARGX_DEV</name></member>
+    <member refid="db/dbe/macros_8hpp_1a35b3310e39905bdf63646a9f2a02ef18" kind="define"><name>ARGX_STRINGIFY</name></member>
+    <member refid="db/dbe/macros_8hpp_1a4fd1f3a5c43cb1afcd72db492e2cee28" kind="define"><name>ARGX_TOSTRING</name></member>
+    <member refid="db/dbe/macros_8hpp_1aa639891463acaa985538b2760398bca3" kind="define"><name>ARGX_VERSION</name></member>
+    <member refid="db/dbe/macros_8hpp_1a9a03c00fec9110110cb43d0c67e195f3" kind="define"><name>ARGX_VERSION_CHECK</name></member>
+    <member refid="db/dbe/macros_8hpp_1a774e5c096afc126e4fd6031c4143df1c" kind="define"><name>ARGX_VERSION_MAJOR</name></member>
+    <member refid="db/dbe/macros_8hpp_1a6fca140f9d55dd241c689047db70c236" kind="define"><name>ARGX_VERSION_MINOR</name></member>
+    <member refid="db/dbe/macros_8hpp_1a8bb35e7bdac8b6af29d07e6fd7468b08" kind="define"><name>ARGX_VERSION_PATCH</name></member>
+    <member refid="db/dbe/macros_8hpp_1a2dd1c90360210f9bc40f65de8558b60f" kind="define"><name>ARGX_VERSION_STATE</name></member>
+    <member refid="db/dbe/macros_8hpp_1a2cf696b4344dbd9c545a9165cb10cb76" kind="define"><name>ARGX_VERSION_STD</name></member>
+  </compound>
+  <compound refid="dd/de3/types_8hpp" kind="file"><name>types.hpp</name>
+  </compound>
+  <compound refid="da/ddd/README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="d1/dad/Argx_8cpp" kind="file"><name>Argx.cpp</name>
+  </compound>
+  <compound refid="d2/d48/ARGXAddError_8cpp" kind="file"><name>ARGXAddError.cpp</name>
+  </compound>
+  <compound refid="dir_bfccd401955b95cf8c75461437045ac0" kind="dir"><name>inc</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

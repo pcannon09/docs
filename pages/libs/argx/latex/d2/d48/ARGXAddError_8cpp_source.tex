@@ -1,0 +1,21 @@
+\doxysection{ARGXAdd\+Error.\+cpp}
+\hypertarget{ARGXAddError_8cpp_source}{}\label{ARGXAddError_8cpp_source}\index{src/ARGXAddError.cpp@{src/ARGXAddError.cpp}}
+\mbox{\hyperlink{ARGXAddError_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ARGXAddError_8hpp}{../inc/ARGXAddError.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceargx}{argx}}}
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00008}\mbox{\hyperlink{classargx_1_1ARGXAddError_ac2b5ced72ae86e5ca250b1f401cc1a5f}{00008}}\ \ \ \ \ \mbox{\hyperlink{classargx_1_1ARGXAddError_ac2b5ced72ae86e5ca250b1f401cc1a5f}{ARGXAddError::ARGXAddError}}(\textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classargx_1_1ARGXAddError_a09e860d9791a4a6b00cb716cec8a8479}{msg}},\ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classargx_1_1ARGXAddError_a6b122902c596ea869ade7e746cd781de}{help}})}
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00009}00009\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classargx_1_1ARGXAddError_a09e860d9791a4a6b00cb716cec8a8479}{msg}}(\mbox{\hyperlink{classargx_1_1ARGXAddError_a09e860d9791a4a6b00cb716cec8a8479}{msg}}),\ \mbox{\hyperlink{classargx_1_1ARGXAddError_a6b122902c596ea869ade7e746cd781de}{help}}(\mbox{\hyperlink{classargx_1_1ARGXAddError_a6b122902c596ea869ade7e746cd781de}{help}})}
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00010}00010\ \ \ \ \ \{\ \}}
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00012}\mbox{\hyperlink{classargx_1_1ARGXAddError_ad5d8832d580b8af9cc8b48bb75a1e752}{00012}}\ \ \ \ \ std::pair<\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \textcolor{comment}{/*Error*/},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \textcolor{comment}{/*Help*/}>\ \mbox{\hyperlink{classargx_1_1ARGXAddError_ad5d8832d580b8af9cc8b48bb75a1e752}{ARGXAddError::what}}()\ const\ noexcept}
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00013}00013\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \{\ this-\/>\mbox{\hyperlink{classargx_1_1ARGXAddError_a09e860d9791a4a6b00cb716cec8a8479}{msg}}.c\_str(),\ this-\/>\mbox{\hyperlink{classargx_1_1ARGXAddError_a6b122902c596ea869ade7e746cd781de}{help}}.c\_str()\ \};\ \}}
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{ARGXAddError_8cpp_source_l00015}00015\ }
+
+\end{DoxyCode}

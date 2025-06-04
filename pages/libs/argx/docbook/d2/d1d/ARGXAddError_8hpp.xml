@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ARGXAddError_8hpp" xml:lang="en-US">
+<title>inc/ARGXAddError.hpp File Reference</title>
+<indexterm><primary>inc/ARGXAddError.hpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;<?linebreak?>#include &lt;utility&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classargx_1_1ARGXAddError">argx::ARGXAddError</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceargx">argx</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

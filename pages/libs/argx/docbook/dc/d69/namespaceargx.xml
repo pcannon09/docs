@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceargx" xml:lang="en-US">
+<title>argx Namespace Reference</title>
+<indexterm><primary>argx</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classargx_1_1Argx">Argx</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classargx_1_1ARGXAddError">ARGXAddError</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structargx_1_1ARGXError">ARGXError</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structargx_1_1ARGXOptions">ARGXOptions</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structargx_1_1ARGXParam">ARGXParam</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct argx::ARGXError <link linkend="_namespaceargx_1a12ba6f5d720d46a611584938a996663e">ARGXError</link></para>
+</listitem>
+            <listitem><para>typedef struct argx::ARGXOptions <link linkend="_namespaceargx_1a9933be078f36db7b1424f6dd0372eb72">ARGXOptions</link></para>
+</listitem>
+            <listitem><para>typedef struct argx::ARGXParam <link linkend="_namespaceargx_1a40874387325f4f81850b2ef717831239">ARGXParam</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum class <link linkend="_namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9">ARGXStyle</link> { <link linkend="_namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2">Professional</link>
+, <link linkend="_namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780">Simple</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_namespaceargx_1a12ba6f5d720d46a611584938a996663e"/><section>
+    <title>ARGXError</title>
+<indexterm><primary>ARGXError</primary><secondary>argx</secondary></indexterm>
+<indexterm><primary>argx</primary><secondary>ARGXError</secondary></indexterm>
+<para><computeroutput>typedef struct argx::ARGXError argx::ARGXError</computeroutput></para></section>
+<anchor xml:id="_namespaceargx_1a9933be078f36db7b1424f6dd0372eb72"/><section>
+    <title>ARGXOptions</title>
+<indexterm><primary>ARGXOptions</primary><secondary>argx</secondary></indexterm>
+<indexterm><primary>argx</primary><secondary>ARGXOptions</secondary></indexterm>
+<para><computeroutput>typedef struct argx::ARGXOptions argx::ARGXOptions</computeroutput></para></section>
+<anchor xml:id="_namespaceargx_1a40874387325f4f81850b2ef717831239"/><section>
+    <title>ARGXParam</title>
+<indexterm><primary>ARGXParam</primary><secondary>argx</secondary></indexterm>
+<indexterm><primary>argx</primary><secondary>ARGXParam</secondary></indexterm>
+<para><computeroutput>typedef struct argx::ARGXParam argx::ARGXParam</computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9"/><section>
+    <title>ARGXStyle</title>
+<indexterm><primary>ARGXStyle</primary><secondary>argx</secondary></indexterm>
+<indexterm><primary>argx</primary><secondary>ARGXStyle</secondary></indexterm>
+<para><computeroutput>enum class <link linkend="_namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9">argx::ARGXStyle</link><computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Professional</primary><secondary>argx</secondary></indexterm>
+<indexterm><primary>argx</primary><secondary>Professional</secondary></indexterm>
+<anchor xml:id="_namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2"/>Professional</entry><entry></entry></row><row><entry><indexterm><primary>Simple</primary><secondary>argx</secondary></indexterm>
+<indexterm><primary>argx</primary><secondary>Simple</secondary></indexterm>
+<anchor xml:id="_namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780"/>Simple</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_types_8hpp_source_1l00009">9</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+<programlisting linenumbering="unnumbered">00010 &#32;&#32;&#32;&#32;{
+00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2">Professional</link>,
+00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780">Simple</link>,
+00013 &#32;&#32;&#32;&#32;};
+</programlisting></section>
+</section>
+</section>

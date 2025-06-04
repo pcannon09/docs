@@ -1,0 +1,78 @@
+.TH "argx::ARGXAddError" 3 "Version 0.1.0-beta" "Argx" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+argx::ARGXAddError
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <ARGXAddError\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBARGXAddError\fP (const std::string &\fBmsg\fP, const std::string &\fBhelp\fP='')"
+.br
+.ti -1c
+.RI "std::pair< const char *, const char * > \fBwhat\fP () const noexcept"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBhelp\fP"
+.br
+.ti -1c
+.RI "std::string \fBmsg\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB10\fP of file \fBARGXAddError\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "argx::ARGXAddError::ARGXAddError (const std::string & msg, const std::string & help = \fR''\fP)"
+
+.PP
+Definition at line \fB8\fP of file \fBARGXAddError\&.cpp\fP\&.
+.nf
+9         : msg(msg), help(help)
+10     { }
+.PP
+.fi
+
+.PP
+References \fBhelp\fP, and \fBmsg\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "std::pair< const char *, const char * > argx::ARGXAddError::what () const\fR [noexcept]\fP"
+
+.PP
+Definition at line \fB12\fP of file \fBARGXAddError\&.cpp\fP\&.
+.nf
+13     { return { this\->msg\&.c_str(), this\->help\&.c_str() }; }
+.PP
+.fi
+
+.PP
+References \fBhelp\fP, and \fBmsg\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::string argx::ARGXAddError::help\fR [private]\fP"
+
+.PP
+Definition at line \fB14\fP of file \fBARGXAddError\&.hpp\fP\&.
+.PP
+Referenced by \fBARGXAddError()\fP, and \fBwhat()\fP\&.
+.SS "std::string argx::ARGXAddError::msg\fR [private]\fP"
+
+.PP
+Definition at line \fB13\fP of file \fBARGXAddError\&.hpp\fP\&.
+.PP
+Referenced by \fBARGXAddError()\fP, and \fBwhat()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Argx from the source code\&.

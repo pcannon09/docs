@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="da/dd5/structargx_1_1ARGXOptions" kind="struct" language="C++" prot="public">
+    <compoundname>argx::ARGXOptions</compoundname>
+    <includes refid="dd/de3/types_8hpp" local="no">types.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool argx::ARGXOptions::hasSubParams</definition>
+        <argsstring></argsstring>
+        <name>hasSubParams</name>
+        <qualifiedname>argx::ARGXOptions::hasSubParams</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="43" column="6" bodyfile="inc/types.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a0bd17b9be2b313a37c353d9d8b8c5b65" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string argx::ARGXOptions::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>argx::ARGXOptions::id</qualifiedname>
+        <briefdescription>
+<para>ID (id) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>ID of the option </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="29" column="13" bodyfile="inc/types.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a825a889884b7b19a5c1550a328780ab9" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string argx::ARGXOptions::info</definition>
+        <argsstring></argsstring>
+        <name>info</name>
+        <qualifiedname>argx::ARGXOptions::info</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="41" column="13" bodyfile="inc/types.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a6324ea753af15d2a184e382e913694f0" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string argx::ARGXOptions::param</definition>
+        <argsstring></argsstring>
+        <name>param</name>
+        <qualifiedname>argx::ARGXOptions::param</qualifiedname>
+        <briefdescription>
+<para>Param (param): </para>
+        </briefdescription>
+        <detaileddescription>
+<para>EXAMPLE: <ndash/>help, <ndash/>version </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="35" column="13" bodyfile="inc/types.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1aa0cd2dddf236a7bd15c1636aa7ec4a9c" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string argx::ARGXOptions::sparam</definition>
+        <argsstring></argsstring>
+        <name>sparam</name>
+        <qualifiedname>argx::ARGXOptions::sparam</qualifiedname>
+        <briefdescription>
+<para>Short Param (sparam): </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="40" column="13" bodyfile="inc/types.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="da/dd5/structargx_1_1ARGXOptions" kindref="compound">ARGXOptions</ref> &gt;</type>
+        <definition>std::vector&lt;ARGXOptions&gt; argx::ARGXOptions::subParams</definition>
+        <argsstring></argsstring>
+        <name>subParams</name>
+        <qualifiedname>argx::ARGXOptions::subParams</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="45" column="13" bodyfile="inc/types.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>argx::ARGXOptions</label>
+        <link refid="da/dd5/structargx_1_1ARGXOptions"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>id</edgelabel>
+          <edgelabel>info</edgelabel>
+          <edgelabel>param</edgelabel>
+          <edgelabel>sparam</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>subParams</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; argx::ARGXOptions &gt;</label>
+        <childnode refid="1" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="inc/types.hpp" line="24" column="1" bodyfile="inc/types.hpp" bodystart="25" bodyend="46"/>
+    <listofallmembers>
+      <member refid="da/dd5/structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>hasSubParams</name></member>
+      <member refid="da/dd5/structargx_1_1ARGXOptions_1a0bd17b9be2b313a37c353d9d8b8c5b65" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>id</name></member>
+      <member refid="da/dd5/structargx_1_1ARGXOptions_1a825a889884b7b19a5c1550a328780ab9" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>info</name></member>
+      <member refid="da/dd5/structargx_1_1ARGXOptions_1a6324ea753af15d2a184e382e913694f0" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>param</name></member>
+      <member refid="da/dd5/structargx_1_1ARGXOptions_1aa0cd2dddf236a7bd15c1636aa7ec4a9c" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>sparam</name></member>
+      <member refid="da/dd5/structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>subParams</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
