@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ARGXAddError_8c" xml:lang="en-US">
+<title>src/ARGXAddError.c File Reference</title>
+<indexterm><primary>src/ARGXAddError.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdlib.h&gt;<?linebreak?>#include &lt;string.h&gt;<?linebreak?>#include &quot;../inc/ARGXAddError.h&quot;<?linebreak?>#include &quot;../inc/types.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structArgxcError">ArgxcError</link> <link linkend="_ARGXAddError_8c_1a8c4ee33ae3d4a6208322ad503dceca9e">argxcCreateErrorSimple</link> (const char *msg, const char *help)</para>
+</listitem>
+            <listitem><para>int <link linkend="_ARGXAddError_8c_1a038539b9defbaf62f7a175d75388866d">argxcGetErrorCode</link> (const <link linkend="_structArgxcError">ArgxcError</link> *error)</para>
+</listitem>
+            <listitem><para>const char * <link linkend="_ARGXAddError_8c_1a82d77328ff61877b8ab10d054bc5ced4">argxcGetErrorHelp</link> (const <link linkend="_structArgxcError">ArgxcError</link> *error)</para>
+</listitem>
+            <listitem><para>const char * <link linkend="_ARGXAddError_8c_1a9e0ec52023e67e806606050d12a934a8">argxcGetErrorMessage</link> (const <link linkend="_structArgxcError">ArgxcError</link> *error)</para>
+</listitem>
+            <listitem><para><link linkend="_structArgxcErrorPair">ArgxcErrorPair</link> <link linkend="_ARGXAddError_8c_1ae080742df3abdaba51a357b9c68775dd">argxcGetErrorPair</link> (const <link linkend="_structArgxcError">ArgxcError</link> *error)</para>
+</listitem>
+            <listitem><para>static char * <link linkend="_ARGXAddError_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link> (const char *str)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_ARGXAddError_8c_1a8c4ee33ae3d4a6208322ad503dceca9e"/><section>
+    <title>argxcCreateErrorSimple()</title>
+<indexterm><primary>argxcCreateErrorSimple</primary><secondary>ARGXAddError.c</secondary></indexterm>
+<indexterm><primary>ARGXAddError.c</primary><secondary>argxcCreateErrorSimple</secondary></indexterm>
+<para><computeroutput><link linkend="_structArgxcError">ArgxcError</link> argxcCreateErrorSimple (const char * msg, const char * help)</computeroutput></para><para>
+Definition at line <link linkend="_ARGXAddError_8c_source_1l00019">19</link> of file <link linkend="_ARGXAddError_8c_source">ARGXAddError.c</link>.</para>
+<programlisting linenumbering="unnumbered">00020 {
+00021 &#32;&#32;&#32;&#32;<link linkend="_structArgxcError">ArgxcError</link>&#32;error&#32;=&#32;{0};
+00022 
+00023 &#32;&#32;&#32;&#32;error.<link linkend="_structArgxcError_1ab4531054aa9750f66f0cae13f67365ad">type</link>&#32;=&#32;<link linkend="_ARGXAddError_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(<emphasis role="stringliteral">&quot;error&quot;</emphasis>);
+00024 &#32;&#32;&#32;&#32;error.<link linkend="_structArgxcError_1a88d100236636b2eb326025d527ad26f3">error</link>&#32;=&#32;<link linkend="_ARGXAddError_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(msg);
+00025 &#32;&#32;&#32;&#32;error.<link linkend="_structArgxcError_1a9e83392469b228017a3b6492392f68ad">help</link>&#32;=&#32;<link linkend="_ARGXAddError_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(help);
+00026 &#32;&#32;&#32;&#32;error.<link linkend="_structArgxcError_1a617299f808dff4b2656bf04384e64bf9">code</link>&#32;=&#32;1;&#32;<emphasis role="comment">//&#32;Default&#32;error&#32;code</emphasis>
+00027 
+00028 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+00029 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00019">ArgxcError::code</link>, <link linkend="_types_8h_source_1l00017">ArgxcError::error</link>, <link linkend="_types_8h_source_1l00018">ArgxcError::help</link>, <link linkend="_ARGXAddError_8c_source_1l00007">stringDuplicate()</link>, and <link linkend="_types_8h_source_1l00016">ArgxcError::type</link>.</para>
+</section>
+<anchor xml:id="_ARGXAddError_8c_1a038539b9defbaf62f7a175d75388866d"/><section>
+    <title>argxcGetErrorCode()</title>
+<indexterm><primary>argxcGetErrorCode</primary><secondary>ARGXAddError.c</secondary></indexterm>
+<indexterm><primary>ARGXAddError.c</primary><secondary>argxcGetErrorCode</secondary></indexterm>
+<para><computeroutput>int argxcGetErrorCode (const <link linkend="_structArgxcError">ArgxcError</link> * error)</computeroutput></para><para>
+Definition at line <link linkend="_ARGXAddError_8c_source_1l00041">41</link> of file <link linkend="_ARGXAddError_8c_source">ARGXAddError.c</link>.</para>
+<programlisting linenumbering="unnumbered">00042 {
+00043 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error&#32;?&#32;error-&gt;<link linkend="_structArgxcError_1a617299f808dff4b2656bf04384e64bf9">code</link>&#32;:&#32;0;
+00044 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00019">ArgxcError::code</link>.</para>
+</section>
+<anchor xml:id="_ARGXAddError_8c_1a82d77328ff61877b8ab10d054bc5ced4"/><section>
+    <title>argxcGetErrorHelp()</title>
+<indexterm><primary>argxcGetErrorHelp</primary><secondary>ARGXAddError.c</secondary></indexterm>
+<indexterm><primary>ARGXAddError.c</primary><secondary>argxcGetErrorHelp</secondary></indexterm>
+<para><computeroutput>const char * argxcGetErrorHelp (const <link linkend="_structArgxcError">ArgxcError</link> * error)</computeroutput></para><para>
+Definition at line <link linkend="_ARGXAddError_8c_source_1l00036">36</link> of file <link linkend="_ARGXAddError_8c_source">ARGXAddError.c</link>.</para>
+<programlisting linenumbering="unnumbered">00037 {
+00038 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error&#32;?&#32;error-&gt;<link linkend="_structArgxcError_1a9e83392469b228017a3b6492392f68ad">help</link>&#32;:&#32;NULL;
+00039 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00018">ArgxcError::help</link>.</para>
+</section>
+<anchor xml:id="_ARGXAddError_8c_1a9e0ec52023e67e806606050d12a934a8"/><section>
+    <title>argxcGetErrorMessage()</title>
+<indexterm><primary>argxcGetErrorMessage</primary><secondary>ARGXAddError.c</secondary></indexterm>
+<indexterm><primary>ARGXAddError.c</primary><secondary>argxcGetErrorMessage</secondary></indexterm>
+<para><computeroutput>const char * argxcGetErrorMessage (const <link linkend="_structArgxcError">ArgxcError</link> * error)</computeroutput></para><para>
+Definition at line <link linkend="_ARGXAddError_8c_source_1l00031">31</link> of file <link linkend="_ARGXAddError_8c_source">ARGXAddError.c</link>.</para>
+<programlisting linenumbering="unnumbered">00032 {
+00033 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error&#32;?&#32;error-&gt;<link linkend="_structArgxcError_1a88d100236636b2eb326025d527ad26f3">error</link>&#32;:&#32;NULL;
+00034 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00017">ArgxcError::error</link>.</para>
+</section>
+<anchor xml:id="_ARGXAddError_8c_1ae080742df3abdaba51a357b9c68775dd"/><section>
+    <title>argxcGetErrorPair()</title>
+<indexterm><primary>argxcGetErrorPair</primary><secondary>ARGXAddError.c</secondary></indexterm>
+<indexterm><primary>ARGXAddError.c</primary><secondary>argxcGetErrorPair</secondary></indexterm>
+<para><computeroutput><link linkend="_structArgxcErrorPair">ArgxcErrorPair</link> argxcGetErrorPair (const <link linkend="_structArgxcError">ArgxcError</link> * error)</computeroutput></para><para>
+Definition at line <link linkend="_ARGXAddError_8c_source_1l00046">46</link> of file <link linkend="_ARGXAddError_8c_source">ARGXAddError.c</link>.</para>
+<programlisting linenumbering="unnumbered">00047 {
+00048 &#32;&#32;&#32;&#32;<link linkend="_structArgxcErrorPair">ArgxcErrorPair</link>&#32;pair&#32;=&#32;{NULL,&#32;NULL};
+00049 
+00050 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(error)
+00051 &#32;&#32;&#32;&#32;{
+00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pair.<link linkend="_structArgxcErrorPair_1a548e70442f749cb33bf853987bbb2707">error</link>&#32;=&#32;error-&gt;<link linkend="_structArgxcError_1a88d100236636b2eb326025d527ad26f3">error</link>;
+00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pair.<link linkend="_structArgxcErrorPair_1ab7a2046f22e6b8a74ca323b985cee6ce">help</link>&#32;=&#32;error-&gt;<link linkend="_structArgxcError_1a9e83392469b228017a3b6492392f68ad">help</link>;
+00054 &#32;&#32;&#32;&#32;}
+00055 
+00056 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;pair;
+00057 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00017">ArgxcError::error</link>, <link linkend="_ARGXAddError_8h_source_1l00016">ArgxcErrorPair::error</link>, <link linkend="_types_8h_source_1l00018">ArgxcError::help</link>, and <link linkend="_ARGXAddError_8h_source_1l00017">ArgxcErrorPair::help</link>.</para>
+</section>
+<anchor xml:id="_ARGXAddError_8c_1a814b3298d81b070e52a987654d18d8a2"/><section>
+    <title>stringDuplicate()</title>
+<indexterm><primary>stringDuplicate</primary><secondary>ARGXAddError.c</secondary></indexterm>
+<indexterm><primary>ARGXAddError.c</primary><secondary>stringDuplicate</secondary></indexterm>
+<para><computeroutput>static char * stringDuplicate (const char * str)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_ARGXAddError_8c_source_1l00007">7</link> of file <link linkend="_ARGXAddError_8c_source">ARGXAddError.c</link>.</para>
+<programlisting linenumbering="unnumbered">00008 {
+00009 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!str)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00010 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len&#32;=&#32;strlen(str)&#32;+&#32;1;
+00011 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*dup&#32;=&#32;malloc(len);
+00012 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(dup)
+00013 &#32;&#32;&#32;&#32;{
+00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(dup,&#32;str,&#32;len);
+00015 &#32;&#32;&#32;&#32;}
+00016 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;dup;
+00017 }
+</programlisting><para>
+Referenced by <link linkend="_ARGXAddError_8c_source_1l00019">argxcCreateErrorSimple()</link>.</para>
+</section>
+</section>
+</section>

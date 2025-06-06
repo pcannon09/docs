@@ -1,0 +1,206 @@
+\doxysection{Argx.\+h}
+\hypertarget{Argx_8h_source}{}\label{Argx_8h_source}\index{inc/Argx.h@{inc/Argx.h}}
+\mbox{\hyperlink{Argx_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{types_8h}{types.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00007}00007\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00008}00008\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00009}00009\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00010}00010\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00011}00011\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00012}00012\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Create\ a\ new\ Argxc\ instance\ with\ a\ specified\ ID\ and\ command-\/line\ arguments.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00013}00013\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00014}00014\ \textcolor{comment}{\ \ \ \ \ *\ @param\ id\ Identifier\ for\ the\ parser\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00015}00015\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argc\ Number\ of\ command-\/line\ arguments.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00016}00016\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argv\ Array\ of\ command-\/line\ argument\ strings.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00017}00017\ \textcolor{comment}{\ \ \ \ \ *\ @return\ Argxc*\ Pointer\ to\ the\ created\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00018}00018\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{structArgxc}{Argxc}}*\ \mbox{\hyperlink{Argx_8h_a05e89b0c2c00b96db95fa612a3a19809}{argxcCreate}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[]);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00020}00020\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00021}00021\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00022}00022\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Create\ a\ new\ Argxc\ instance\ with\ default\ values\ (empty\ ID\ and\ no\ arguments).}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00023}00023\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00024}00024\ \textcolor{comment}{\ \ \ \ \ *\ @return\ Argxc*\ Pointer\ to\ the\ default\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00025}00025\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{structArgxc}{Argxc}}*\ \mbox{\hyperlink{Argx_8h_a7490f1245ca836e793645d70dcabe7f6}{argxcCreateDefault}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00027}00027\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00028}00028\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00029}00029\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Destroy\ an\ Argxc\ instance\ and\ free\ all\ associated\ memory.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00030}00030\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00031}00031\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argxc\ Pointer\ to\ the\ Argxc\ instance\ to\ destroy.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00032}00032\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Argx_8h_a944b6c8a9498789cd0a51fdfe9a8c486}{argxcDestroy}}(\mbox{\hyperlink{structArgxc}{Argxc}}\ *argxc);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00034}00034\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00035}00035\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00036}00036\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Add\ a\ new\ option\ to\ the\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00037}00037\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00038}00038\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argxc\ Pointer\ to\ the\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00039}00039\ \textcolor{comment}{\ \ \ \ \ *\ @param\ option\ The\ option\ to\ add.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00040}00040\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Argx_8h_a4b2d2f49ede5c7008816f5c2039d4c2c}{argxcAddOption}}(\mbox{\hyperlink{structArgxc}{Argxc}}\ *argxc,\ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ option);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00042}00042\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00043}00043\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00044}00044\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Add\ a\ sub-\/option\ to\ a\ parent\ option.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00045}00045\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00046}00046\ \textcolor{comment}{\ \ \ \ \ *\ @param\ parent\ Pointer\ to\ the\ parent\ option.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00047}00047\ \textcolor{comment}{\ \ \ \ \ *\ @param\ subOption\ Sub-\/option\ to\ add\ under\ the\ parent.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00048}00048\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Argx_8h_a68874cb095408ec91cf02d7ab0df0fa8}{argxcAddSubOption}}(\mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *parent,\ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ subOption);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00050}00050\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00051}00051\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00052}00052\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Find\ the\ index\ of\ a\ parameter\ by\ ID.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00053}00053\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00054}00054\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argxc\ Pointer\ to\ the\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ *\ @param\ id\ The\ identifier\ of\ the\ parameter\ to\ find.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00056}00056\ \textcolor{comment}{\ \ \ \ \ *\ @return\ int\ Index\ of\ the\ parameter,\ or\ -\/1\ if\ not\ found.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00057}00057\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00058}00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Argx_8h_a4a12dce73edcc011355f47d4543e32a6}{argxcFindParam}}(\mbox{\hyperlink{structArgxc}{Argxc}}\ *argxc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00059}00059\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00060}00060\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Retrieve\ a\ parameter\ by\ ID.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00063}00063\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argxc\ Pointer\ to\ the\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00064}00064\ \textcolor{comment}{\ \ \ \ \ *\ @param\ id\ The\ identifier\ of\ the\ parameter\ to\ retrieve.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00065}00065\ \textcolor{comment}{\ \ \ \ \ *\ @return\ ArgxcParam\ The\ parameter\ object.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00067}00067\ \ \ \ \ \mbox{\hyperlink{structArgxcParam}{ArgxcParam}}\ \mbox{\hyperlink{Argx_8h_a6ef72f8e604109911e4315f6840febf9}{argxcGetParam}}(\mbox{\hyperlink{structArgxc}{Argxc}}\ *argxc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00068}00068\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00069}00069\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00070}00070\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Check\ if\ a\ parameter\ with\ the\ given\ ID\ exists.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00071}00071\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00072}00072\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argxc\ Pointer\ to\ the\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ *\ @param\ id\ The\ identifier\ of\ the\ parameter.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \ *\ @return\ true\ if\ the\ parameter\ exists,\ false\ otherwise.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00075}00075\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00076}00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{Argx_8h_a016fceae24303178985a8e047262bd5e}{argxcParamExists}}(\mbox{\hyperlink{structArgxc}{Argxc}}\ *argxc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00077}00077\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00078}00078\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00079}00079\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Retrieve\ a\ sub-\/parameter\ from\ a\ given\ parameter\ by\ ID.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00080}00080\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00081}00081\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argxc\ Pointer\ to\ the\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00082}00082\ \textcolor{comment}{\ \ \ \ \ *\ @param\ param\ Pointer\ to\ the\ parent\ parameter.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00083}00083\ \textcolor{comment}{\ \ \ \ \ *\ @param\ id\ The\ identifier\ of\ the\ sub-\/parameter.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00084}00084\ \textcolor{comment}{\ \ \ \ \ *\ @return\ true\ if\ the\ sub-\/parameter\ exists,\ false\ otherwise.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00085}00085\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{Argx_8h_a0767a3dc8167a77aada7a52c4d0e9d22}{argxcGetSubParam}}(\mbox{\hyperlink{structArgxc}{Argxc}}\ *argxc,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structArgxcParam}{ArgxcParam}}\ *param,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00087}00087\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00088}00088\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00089}00089\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Compare\ if\ the\ given\ argv\ matches\ a\ list\ of\ ArgxcOptions.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00090}00090\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00091}00091\ \textcolor{comment}{\ \ \ \ \ *\ @param\ options\ Array\ of\ ArgxcOptions.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00092}00092\ \textcolor{comment}{\ \ \ \ \ *\ @param\ optionsCount\ Number\ of\ options.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00093}00093\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argv\ Array\ of\ argument\ strings.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00094}00094\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argvCount\ Number\ of\ argument\ strings.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00095}00095\ \textcolor{comment}{\ \ \ \ \ *\ @return\ true\ if\ argv\ matches\ the\ options,\ false\ otherwise.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00096}00096\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00097}00097\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{Argx_8h_a3f5733b4921f06fcfc46444313114b13}{argxcCompareArgs}}(\mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *options,\ \textcolor{keywordtype}{size\_t}\ optionsCount,\ \textcolor{keywordtype}{char}\ **argv,\ \textcolor{keywordtype}{size\_t}\ argvCount);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00098}00098\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00099}00099\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00100}00100\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Generate\ documentation\ for\ the\ defined\ options.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00101}00101\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00102}00102\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argxc\ Pointer\ to\ the\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00103}00103\ \textcolor{comment}{\ \ \ \ \ *\ @param\ style\ Documentation\ output\ style.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00104}00104\ \textcolor{comment}{\ \ \ \ \ *\ @param\ title\ Title\ of\ the\ documentation.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00105}00105\ \textcolor{comment}{\ \ \ \ \ *\ @param\ mainInfo\ Additional\ info\ to\ be\ displayed\ in\ the\ documentation.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00106}00106\ \textcolor{comment}{\ \ \ \ \ *\ @return\ char*\ Documentation\ string\ (must\ be\ freed\ by\ caller).}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00107}00107\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00108}00108\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{Argx_8h_ad18963570800f99309c7ae551d09442b}{argxcCreateDocs}}(\mbox{\hyperlink{structArgxc}{Argxc}}\ *argxc,\ \mbox{\hyperlink{types_8h_a0eb907e7e710ee24d66bd7b881999ebb}{ArgxcStyle}}\ style,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *title,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *mainInfo);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00109}00109\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00110}00110\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00111}00111\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ the\ raw\ command-\/line\ arguments\ passed\ to\ Argxc.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00112}00112\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00113}00113\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argxc\ Pointer\ to\ the\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00114}00114\ \textcolor{comment}{\ \ \ \ \ *\ @param\ count\ Output:\ number\ of\ arguments\ returned.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00115}00115\ \textcolor{comment}{\ \ \ \ \ *\ @return\ char**\ Array\ of\ argument\ strings.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00116}00116\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00117}00117\ \ \ \ \ \textcolor{keywordtype}{char}\ **\mbox{\hyperlink{Argx_8h_a62e90d5a3e26834257bba4c68becfeb1}{argxcGetMainArgs}}(\mbox{\hyperlink{structArgxc}{Argxc}}\ *argxc,\ \textcolor{keywordtype}{size\_t}\ *count);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00118}00118\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00119}00119\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00120}00120\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ the\ number\ of\ command-\/line\ arguments\ passed.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00121}00121\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00122}00122\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argxc\ Pointer\ to\ the\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00123}00123\ \textcolor{comment}{\ \ \ \ \ *\ @return\ int\ Number\ of\ arguments.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00124}00124\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00125}00125\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Argx_8h_a11fea89d38b49b571ce4f4499d0289d0}{argxcGetArgc}}(\mbox{\hyperlink{structArgxc}{Argxc}}\ *argxc);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00126}00126\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00127}00127\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00128}00128\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ all\ top-\/level\ options\ defined\ for\ the\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00129}00129\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00130}00130\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argxc\ Pointer\ to\ the\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00131}00131\ \textcolor{comment}{\ \ \ \ \ *\ @param\ count\ Output:\ number\ of\ options\ returned.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00132}00132\ \textcolor{comment}{\ \ \ \ \ *\ @return\ ArgxcOptions*\ Array\ of\ options.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00133}00133\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00134}00134\ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *\mbox{\hyperlink{Argx_8h_afb1cebd21f607dfbe19ed784ea0fc319}{argxcGetOptions}}(\mbox{\hyperlink{structArgxc}{Argxc}}\ *argxc,\ \textcolor{keywordtype}{size\_t}\ *count);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00135}00135\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00136}00136\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00137}00137\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ the\ identifier\ of\ the\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00138}00138\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00139}00139\ \textcolor{comment}{\ \ \ \ \ *\ @param\ argxc\ Pointer\ to\ the\ Argxc\ instance.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00140}00140\ \textcolor{comment}{\ \ \ \ \ *\ @return\ const\ char*\ The\ ID\ string.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00141}00141\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00142}00142\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{Argx_8h_a219a52257f1e47549f9fc15979b6c563}{argxcGetId}}(\mbox{\hyperlink{structArgxc}{Argxc}}\ *argxc);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00143}00143\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00144}00144\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00145}00145\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Create\ a\ new\ option.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00146}00146\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00147}00147\ \textcolor{comment}{\ \ \ \ \ *\ @param\ id\ Option\ identifier.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00148}00148\ \textcolor{comment}{\ \ \ \ \ *\ @param\ param\ Parameter\ name\ (e.g.,\ -\/-\/param).}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00149}00149\ \textcolor{comment}{\ \ \ \ \ *\ @param\ sparam\ Short\ form\ (e.g.,\ -\/p).}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00150}00150\ \textcolor{comment}{\ \ \ \ \ *\ @param\ info\ Description\ of\ the\ option.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00151}00151\ \textcolor{comment}{\ \ \ \ \ *\ @param\ hasSubParams\ Whether\ the\ option\ has\ sub-\/parameters.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00152}00152\ \textcolor{comment}{\ \ \ \ \ *\ @param\ hasAnySubParams\ Whether\ the\ option\ accepts\ any\ sub-\/parameters.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00153}00153\ \textcolor{comment}{\ \ \ \ \ *\ @return\ ArgxcOptions\ The\ created\ option.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00154}00154\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00155}00155\ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ \mbox{\hyperlink{Argx_8h_a5efc30ffddcc4d6ba7c2db7b8ab680ec}{argxcCreateOption}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *param,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *sparam,\ }
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *info,\ \textcolor{keywordtype}{bool}\ hasSubParams,\ \textcolor{keywordtype}{bool}\ hasAnySubParams);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00157}00157\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00158}00158\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00159}00159\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Free\ resources\ associated\ with\ an\ ArgxcOptions\ struct.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00160}00160\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00161}00161\ \textcolor{comment}{\ \ \ \ \ *\ @param\ option\ Pointer\ to\ the\ option\ to\ free.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00162}00162\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00163}00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Argx_8h_ad1a1c82ca55187361d24a03c5fb977e6}{argxcFreeOption}}(\mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *option);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00164}00164\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00165}00165\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00166}00166\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Free\ resources\ associated\ with\ an\ ArgxcParam\ struct.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00167}00167\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00168}00168\ \textcolor{comment}{\ \ \ \ \ *\ @param\ param\ Pointer\ to\ the\ parameter\ to\ free.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00169}00169\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00170}00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Argx_8h_a6798ce84afc7922cc08260fd52534b99}{argxcFreeParam}}(\mbox{\hyperlink{structArgxcParam}{ArgxcParam}}\ *param);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00171}00171\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00172}00172\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00173}00173\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Free\ a\ string\ array\ returned\ from\ Argxc\ (e.g.,\ argv\ array).}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00174}00174\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00175}00175\ \textcolor{comment}{\ \ \ \ \ *\ @param\ array\ The\ array\ to\ free.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00176}00176\ \textcolor{comment}{\ \ \ \ \ *\ @param\ count\ Number\ of\ elements\ in\ the\ array.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00177}00177\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00178}00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Argx_8h_a433f2018d5638506f50be3219c04ec71}{argxcFreeStringArray}}(\textcolor{keywordtype}{char}\ **array,\ \textcolor{keywordtype}{size\_t}\ count);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00179}00179\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00180}00180\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00181}00181\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Create\ an\ ArgxcError\ object.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00182}00182\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00183}00183\ \textcolor{comment}{\ \ \ \ \ *\ @param\ type\ Type/category\ of\ the\ error.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00184}00184\ \textcolor{comment}{\ \ \ \ \ *\ @param\ error\ Error\ message.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00185}00185\ \textcolor{comment}{\ \ \ \ \ *\ @param\ help\ Help\ message\ for\ resolving\ the\ error.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00186}00186\ \textcolor{comment}{\ \ \ \ \ *\ @param\ code\ Exit\ code\ or\ error\ code.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00187}00187\ \textcolor{comment}{\ \ \ \ \ *\ @return\ ArgxcError\ The\ created\ error\ struct.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00188}00188\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00189}00189\ \ \ \ \ \mbox{\hyperlink{structArgxcError}{ArgxcError}}\ \mbox{\hyperlink{Argx_8h_aff55e2b9a01cc2b4d3bdd44264eef8bd}{argxcCreateError}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *type,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *error,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *help,\ \textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00190}00190\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00191}00191\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00192}00192\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Free\ resources\ associated\ with\ an\ ArgxcError\ struct.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00193}00193\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00194}00194\ \textcolor{comment}{\ \ \ \ \ *\ @param\ error\ Pointer\ to\ the\ error\ to\ free.}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00195}00195\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00196}00196\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Argx_8h_af46bf41910b18e11800500efd7e929fa}{argxcFreeError}}(\mbox{\hyperlink{structArgxcError}{ArgxcError}}\ *error);}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00198}00198\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00199}00199\ \}}
+\DoxyCodeLine{\Hypertarget{Argx_8h_source_l00200}00200\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ARGXAddError_8h_source" xml:lang="en-US">
+<title>ARGXAddError.h</title>
+<indexterm><primary>inc/ARGXAddError.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_ARGXAddError_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="_ARGXAddError_8h_source_1l00002"/>00002 
+<anchor xml:id="_ARGXAddError_8h_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_types_8h">types.h</link>&quot;</emphasis>
+<anchor xml:id="_ARGXAddError_8h_source_1l00004"/>00004 
+<anchor xml:id="_ARGXAddError_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_ARGXAddError_8h_source_1l00006"/>00006 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_ARGXAddError_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_ARGXAddError_8h_source_1l00008"/>00008 
+<anchor xml:id="_ARGXAddError_8h_source_1l00009"/>00009 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Error&#32;creation&#32;and&#32;management</emphasis>
+<anchor xml:id="_ARGXAddError_8h_source_1l00010"/>00010 &#32;&#32;&#32;&#32;<link linkend="_structArgxcError">ArgxcError</link>&#32;<link linkend="_ARGXAddError_8h_1a8c4ee33ae3d4a6208322ad503dceca9e">argxcCreateErrorSimple</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*msg,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*help);
+<anchor xml:id="_ARGXAddError_8h_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;<link linkend="_ARGXAddError_8h_1a9e0ec52023e67e806606050d12a934a8">argxcGetErrorMessage</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structArgxcError">ArgxcError</link>&#32;*error);
+<anchor xml:id="_ARGXAddError_8h_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;<link linkend="_ARGXAddError_8h_1a82d77328ff61877b8ab10d054bc5ced4">argxcGetErrorHelp</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structArgxcError">ArgxcError</link>&#32;*error);
+<anchor xml:id="_ARGXAddError_8h_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_ARGXAddError_8h_1a038539b9defbaf62f7a175d75388866d">argxcGetErrorCode</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structArgxcError">ArgxcError</link>&#32;*error);
+<anchor xml:id="_ARGXAddError_8h_source_1l00014"/>00014 
+<anchor xml:id="_ARGXAddError_8h_source_1l00015"/><link linkend="_structArgxcErrorPair">00015</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>{
+<anchor xml:id="_ARGXAddError_8h_source_1l00016"/><link linkend="_structArgxcErrorPair_1a548e70442f749cb33bf853987bbb2707">00016</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_structArgxcErrorPair_1a548e70442f749cb33bf853987bbb2707">error</link>;
+<anchor xml:id="_ARGXAddError_8h_source_1l00017"/><link linkend="_structArgxcErrorPair_1ab7a2046f22e6b8a74ca323b985cee6ce">00017</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_structArgxcErrorPair_1ab7a2046f22e6b8a74ca323b985cee6ce">help</link>;
+<anchor xml:id="_ARGXAddError_8h_source_1l00018"/>00018 &#32;&#32;&#32;&#32;}&#32;<link linkend="_structArgxcErrorPair">ArgxcErrorPair</link>;
+<anchor xml:id="_ARGXAddError_8h_source_1l00019"/>00019 
+<anchor xml:id="_ARGXAddError_8h_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<link linkend="_structArgxcErrorPair">ArgxcErrorPair</link>&#32;<link linkend="_ARGXAddError_8h_1ae080742df3abdaba51a357b9c68775dd">argxcGetErrorPair</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structArgxcError">ArgxcError</link>&#32;*error);
+<anchor xml:id="_ARGXAddError_8h_source_1l00021"/>00021 
+<anchor xml:id="_ARGXAddError_8h_source_1l00022"/>00022 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_ARGXAddError_8h_source_1l00023"/>00023 }
+<anchor xml:id="_ARGXAddError_8h_source_1l00024"/>00024 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

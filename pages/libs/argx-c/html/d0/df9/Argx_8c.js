@@ -1,0 +1,28 @@
+var Argx_8c =
+[
+    [ "Argxc", "d8/d40/structArgxc.html", "d8/d40/structArgxc" ],
+    [ "argxcAddOption", "d0/df9/Argx_8c.html#a4b2d2f49ede5c7008816f5c2039d4c2c", null ],
+    [ "argxcAddSubOption", "d0/df9/Argx_8c.html#a68874cb095408ec91cf02d7ab0df0fa8", null ],
+    [ "argxcCompareArgs", "d0/df9/Argx_8c.html#a3f5733b4921f06fcfc46444313114b13", null ],
+    [ "argxcCreate", "d0/df9/Argx_8c.html#a05e89b0c2c00b96db95fa612a3a19809", null ],
+    [ "argxcCreateDefault", "d0/df9/Argx_8c.html#a7490f1245ca836e793645d70dcabe7f6", null ],
+    [ "argxcCreateDocs", "d0/df9/Argx_8c.html#ad18963570800f99309c7ae551d09442b", null ],
+    [ "argxcCreateError", "d0/df9/Argx_8c.html#aff55e2b9a01cc2b4d3bdd44264eef8bd", null ],
+    [ "argxcCreateOption", "d0/df9/Argx_8c.html#a5efc30ffddcc4d6ba7c2db7b8ab680ec", null ],
+    [ "argxcDestroy", "d0/df9/Argx_8c.html#a944b6c8a9498789cd0a51fdfe9a8c486", null ],
+    [ "argxcFindParam", "d0/df9/Argx_8c.html#a4a12dce73edcc011355f47d4543e32a6", null ],
+    [ "argxcFreeError", "d0/df9/Argx_8c.html#af46bf41910b18e11800500efd7e929fa", null ],
+    [ "argxcFreeOption", "d0/df9/Argx_8c.html#ad1a1c82ca55187361d24a03c5fb977e6", null ],
+    [ "argxcFreeParam", "d0/df9/Argx_8c.html#a6798ce84afc7922cc08260fd52534b99", null ],
+    [ "argxcFreeStringArray", "d0/df9/Argx_8c.html#a433f2018d5638506f50be3219c04ec71", null ],
+    [ "argxcGetArgc", "d0/df9/Argx_8c.html#a11fea89d38b49b571ce4f4499d0289d0", null ],
+    [ "argxcGetId", "d0/df9/Argx_8c.html#a219a52257f1e47549f9fc15979b6c563", null ],
+    [ "argxcGetMainArgs", "d0/df9/Argx_8c.html#a62e90d5a3e26834257bba4c68becfeb1", null ],
+    [ "argxcGetOptions", "d0/df9/Argx_8c.html#afb1cebd21f607dfbe19ed784ea0fc319", null ],
+    [ "argxcGetParam", "d0/df9/Argx_8c.html#a6ef72f8e604109911e4315f6840febf9", null ],
+    [ "argxcGetSubParam", "d0/df9/Argx_8c.html#a0767a3dc8167a77aada7a52c4d0e9d22", null ],
+    [ "argxcParamExists", "d0/df9/Argx_8c.html#a016fceae24303178985a8e047262bd5e", null ],
+    [ "freeOptionsArray", "d0/df9/Argx_8c.html#acac8053f967174a1b860aad28c2b12d0", null ],
+    [ "freeStringArray", "d0/df9/Argx_8c.html#a420b857128cfa7527dc66424a1ece935", null ],
+    [ "stringDuplicate", "d0/df9/Argx_8c.html#a814b3298d81b070e52a987654d18d8a2", null ]
+];

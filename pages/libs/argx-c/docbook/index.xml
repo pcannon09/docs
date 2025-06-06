@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>Argx</title>
+    </info>
+    <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<chapter>
+    <title>Data Structure Documentation</title>
+    <xi:include href="d8/d40/structArgxc.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d8/d54/structArgxcError.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d5/d08/structArgxcErrorPair.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d2/dcb/structArgxcOptions.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="da/ddb/structArgxcParam.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="d6/d8e/Argx_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d6/d8e/Argx_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d1/d7f/ARGXAddError_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d1/d7f/ARGXAddError_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="de/d3c/macros_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="de/d3c/macros_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d9/d49/types_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d9/d49/types_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="da/ddd/README_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d0/df9/Argx_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d0/df9/Argx_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="de/d77/ARGXAddError_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="de/d77/ARGXAddError_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

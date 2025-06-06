@@ -1,0 +1,1584 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Argx_8h" xml:lang="en-US">
+<title>inc/Argx.h File Reference</title>
+<indexterm><primary>inc/Argx.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdbool.h&gt;<?linebreak?>#include &quot;types.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_Argx_8h_1a4b2d2f49ede5c7008816f5c2039d4c2c">argxcAddOption</link> (<link linkend="_structArgxc">Argxc</link> *argxc, <link linkend="_structArgxcOptions">ArgxcOptions</link> option)</para>
+
+<para>Add a new option to the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</listitem>
+            <listitem><para>void <link linkend="_Argx_8h_1a68874cb095408ec91cf02d7ab0df0fa8">argxcAddSubOption</link> (<link linkend="_structArgxcOptions">ArgxcOptions</link> *parent, <link linkend="_structArgxcOptions">ArgxcOptions</link> subOption)</para>
+
+<para>Add a sub-option to a parent option. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_Argx_8h_1a3f5733b4921f06fcfc46444313114b13">argxcCompareArgs</link> (<link linkend="_structArgxcOptions">ArgxcOptions</link> *options, size_t optionsCount, char **argv, size_t argvCount)</para>
+
+<para>Compare if the given argv matches a list of <link linkend="_structArgxcOptions">ArgxcOptions</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_structArgxc">Argxc</link> * <link linkend="_Argx_8h_1a05e89b0c2c00b96db95fa612a3a19809">argxcCreate</link> (const char *id, int argc, char *argv[])</para>
+
+<para>Create a new <link linkend="_structArgxc">Argxc</link> instance with a specified ID and command-line arguments. </para>
+</listitem>
+            <listitem><para><link linkend="_structArgxc">Argxc</link> * <link linkend="_Argx_8h_1a7490f1245ca836e793645d70dcabe7f6">argxcCreateDefault</link> (void)</para>
+
+<para>Create a new <link linkend="_structArgxc">Argxc</link> instance with default values (empty ID and no arguments). </para>
+</listitem>
+            <listitem><para>char * <link linkend="_Argx_8h_1ad18963570800f99309c7ae551d09442b">argxcCreateDocs</link> (<link linkend="_structArgxc">Argxc</link> *argxc, <link linkend="_types_8h_1a0eb907e7e710ee24d66bd7b881999ebb">ArgxcStyle</link> style, const char *title, const char *mainInfo)</para>
+
+<para>Generate documentation for the defined options. </para>
+</listitem>
+            <listitem><para><link linkend="_structArgxcError">ArgxcError</link> <link linkend="_Argx_8h_1aff55e2b9a01cc2b4d3bdd44264eef8bd">argxcCreateError</link> (const char *type, const char *error, const char *help, int code)</para>
+
+<para>Create an <link linkend="_structArgxcError">ArgxcError</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="_structArgxcOptions">ArgxcOptions</link> <link linkend="_Argx_8h_1a5efc30ffddcc4d6ba7c2db7b8ab680ec">argxcCreateOption</link> (const char *id, const char *param, const char *sparam, const char *info, bool hasSubParams, bool hasAnySubParams)</para>
+
+<para>Create a new option. </para>
+</listitem>
+            <listitem><para>void <link linkend="_Argx_8h_1a944b6c8a9498789cd0a51fdfe9a8c486">argxcDestroy</link> (<link linkend="_structArgxc">Argxc</link> *argxc)</para>
+
+<para>Destroy an <link linkend="_structArgxc">Argxc</link> instance and free all associated memory. </para>
+</listitem>
+            <listitem><para>int <link linkend="_Argx_8h_1a4a12dce73edcc011355f47d4543e32a6">argxcFindParam</link> (<link linkend="_structArgxc">Argxc</link> *argxc, const char *id)</para>
+
+<para>Find the index of a parameter by ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_Argx_8h_1af46bf41910b18e11800500efd7e929fa">argxcFreeError</link> (<link linkend="_structArgxcError">ArgxcError</link> *error)</para>
+
+<para>Free resources associated with an <link linkend="_structArgxcError">ArgxcError</link> struct. </para>
+</listitem>
+            <listitem><para>void <link linkend="_Argx_8h_1ad1a1c82ca55187361d24a03c5fb977e6">argxcFreeOption</link> (<link linkend="_structArgxcOptions">ArgxcOptions</link> *option)</para>
+
+<para>Free resources associated with an <link linkend="_structArgxcOptions">ArgxcOptions</link> struct. </para>
+</listitem>
+            <listitem><para>void <link linkend="_Argx_8h_1a6798ce84afc7922cc08260fd52534b99">argxcFreeParam</link> (<link linkend="_structArgxcParam">ArgxcParam</link> *param)</para>
+
+<para>Free resources associated with an <link linkend="_structArgxcParam">ArgxcParam</link> struct. </para>
+</listitem>
+            <listitem><para>void <link linkend="_Argx_8h_1a433f2018d5638506f50be3219c04ec71">argxcFreeStringArray</link> (char **array, size_t count)</para>
+
+<para>Free a string array returned from <link linkend="_structArgxc">Argxc</link> (e.g., argv array). </para>
+</listitem>
+            <listitem><para>int <link linkend="_Argx_8h_1a11fea89d38b49b571ce4f4499d0289d0">argxcGetArgc</link> (<link linkend="_structArgxc">Argxc</link> *argxc)</para>
+
+<para>Get the number of command-line arguments passed. </para>
+</listitem>
+            <listitem><para>const char * <link linkend="_Argx_8h_1a219a52257f1e47549f9fc15979b6c563">argxcGetId</link> (<link linkend="_structArgxc">Argxc</link> *argxc)</para>
+
+<para>Get the identifier of the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</listitem>
+            <listitem><para>char ** <link linkend="_Argx_8h_1a62e90d5a3e26834257bba4c68becfeb1">argxcGetMainArgs</link> (<link linkend="_structArgxc">Argxc</link> *argxc, size_t *count)</para>
+
+<para>Get the raw command-line arguments passed to <link linkend="_structArgxc">Argxc</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_structArgxcOptions">ArgxcOptions</link> * <link linkend="_Argx_8h_1afb1cebd21f607dfbe19ed784ea0fc319">argxcGetOptions</link> (<link linkend="_structArgxc">Argxc</link> *argxc, size_t *count)</para>
+
+<para>Get all top-level options defined for the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</listitem>
+            <listitem><para><link linkend="_structArgxcParam">ArgxcParam</link> <link linkend="_Argx_8h_1a6ef72f8e604109911e4315f6840febf9">argxcGetParam</link> (<link linkend="_structArgxc">Argxc</link> *argxc, const char *id)</para>
+
+<para>Retrieve a parameter by ID. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_Argx_8h_1a0767a3dc8167a77aada7a52c4d0e9d22">argxcGetSubParam</link> (<link linkend="_structArgxc">Argxc</link> *argxc, const <link linkend="_structArgxcParam">ArgxcParam</link> *param, const char *id)</para>
+
+<para>Retrieve a sub-parameter from a given parameter by ID. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_Argx_8h_1a016fceae24303178985a8e047262bd5e">argxcParamExists</link> (<link linkend="_structArgxc">Argxc</link> *argxc, const char *id)</para>
+
+<para>Check if a parameter with the given ID exists. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_Argx_8h_1a4b2d2f49ede5c7008816f5c2039d4c2c"/><section>
+    <title>argxcAddOption()</title>
+<indexterm><primary>argxcAddOption</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcAddOption</secondary></indexterm>
+<para><computeroutput>void argxcAddOption (<link linkend="_structArgxc">Argxc</link> * argxc, <link linkend="_structArgxcOptions">ArgxcOptions</link> option)</computeroutput></para><para>
+
+<para>Add a new option to the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argxc</entry><entry>
+<para>Pointer to the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>option</entry><entry>
+<para>The option to add. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00124">124</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00125 {
+00126 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argxc)&#32;<emphasis role="keywordflow">return</emphasis>;
+00127 
+00128 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(argxc-&gt;<link linkend="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6">optionsCount</link>&#32;&gt;=&#32;argxc-&gt;<link linkend="_structArgxc_1a73fbef3389172b12448589e62c5aff34">optionsCapacity</link>)
+00129 &#32;&#32;&#32;&#32;{
+00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1a73fbef3389172b12448589e62c5aff34">optionsCapacity</link>&#32;*=&#32;2;
+00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>&#32;=&#32;realloc(argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>,&#32;argxc-&gt;<link linkend="_structArgxc_1a73fbef3389172b12448589e62c5aff34">optionsCapacity</link>&#32;*&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_structArgxcOptions">ArgxcOptions</link>));
+00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>)&#32;<emphasis role="keywordflow">return</emphasis>;
+00133 &#32;&#32;&#32;&#32;}
+00134 
+00135 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>[argxc-&gt;<link linkend="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6">optionsCount</link>++]&#32;=&#32;option;
+00136 }
+</programlisting><para>
+References <link linkend="_Argx_8c_source_1l00020">Argxc::options</link>, <link linkend="_Argx_8c_source_1l00022">Argxc::optionsCapacity</link>, and <link linkend="_Argx_8c_source_1l00021">Argxc::optionsCount</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a68874cb095408ec91cf02d7ab0df0fa8"/><section>
+    <title>argxcAddSubOption()</title>
+<indexterm><primary>argxcAddSubOption</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcAddSubOption</secondary></indexterm>
+<para><computeroutput>void argxcAddSubOption (<link linkend="_structArgxcOptions">ArgxcOptions</link> * parent, <link linkend="_structArgxcOptions">ArgxcOptions</link> subOption)</computeroutput></para><para>
+
+<para>Add a sub-option to a parent option. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>parent</entry><entry>
+<para>Pointer to the parent option. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>subOption</entry><entry>
+<para>Sub-option to add under the parent. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00138">138</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00139 {
+00140 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!parent)&#32;<emphasis role="keywordflow">return</emphasis>;
+00141 
+00142 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(parent-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>&#32;&gt;=&#32;parent-&gt;<link linkend="_structArgxcOptions_1abe87d3c8fcdf1a843ea90652c78b5ed1">subParamsCapacity</link>)
+00143 &#32;&#32;&#32;&#32;{
+00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;newCapacity&#32;=&#32;parent-&gt;<link linkend="_structArgxcOptions_1abe87d3c8fcdf1a843ea90652c78b5ed1">subParamsCapacity</link>&#32;==&#32;0&#32;?&#32;2&#32;:&#32;parent-&gt;<link linkend="_structArgxcOptions_1abe87d3c8fcdf1a843ea90652c78b5ed1">subParamsCapacity</link>&#32;*&#32;2;
+00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structArgxcOptions">ArgxcOptions</link>&#32;*newSubParams&#32;=&#32;realloc(parent-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>,&#32;newCapacity&#32;*&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_structArgxcOptions">ArgxcOptions</link>));
+00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!newSubParams)&#32;<emphasis role="keywordflow">return</emphasis>;
+00147 
+00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;parent-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>&#32;=&#32;newSubParams;
+00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;parent-&gt;<link linkend="_structArgxcOptions_1abe87d3c8fcdf1a843ea90652c78b5ed1">subParamsCapacity</link>&#32;=&#32;newCapacity;
+00150 &#32;&#32;&#32;&#32;}
+00151 
+00152 &#32;&#32;&#32;&#32;parent-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[parent-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>++]&#32;=&#32;subOption;
+00153 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00032">ArgxcOptions::subParams</link>, <link linkend="_types_8h_source_1l00034">ArgxcOptions::subParamsCapacity</link>, and <link linkend="_types_8h_source_1l00033">ArgxcOptions::subParamsCount</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a3f5733b4921f06fcfc46444313114b13"/><section>
+    <title>argxcCompareArgs()</title>
+<indexterm><primary>argxcCompareArgs</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcCompareArgs</secondary></indexterm>
+<para><computeroutput>bool argxcCompareArgs (<link linkend="_structArgxcOptions">ArgxcOptions</link> * options, size_t optionsCount, char ** argv, size_t argvCount)</computeroutput></para><para>
+
+<para>Compare if the given argv matches a list of <link linkend="_structArgxcOptions">ArgxcOptions</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>options</entry><entry>
+<para>Array of <link linkend="_structArgxcOptions">ArgxcOptions</link>. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>optionsCount</entry><entry>
+<para>Number of options. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>argv</entry><entry>
+<para>Array of argument strings. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>argvCount</entry><entry>
+<para>Number of argument strings. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if argv matches the options, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00499">499</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00500 {
+00501 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!options&#32;||&#32;!argv)&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+00502 
+00503 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;1;&#32;i&#32;&lt;&#32;argvCount;&#32;i++)
+00504 &#32;&#32;&#32;&#32;{
+00505 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*arg&#32;=&#32;argv[i];
+00506 
+00507 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;found&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00508 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;hasSubParams&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00509 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;hasAnySubParams&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00510 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structArgxcOptions">ArgxcOptions</link>&#32;*matchedOption&#32;=&#32;NULL;
+00511 
+00512 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Find&#32;the&#32;matching&#32;option</emphasis>
+00513 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;optionsCount;&#32;j++)
+00514 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00515 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((options[j].sparam&#32;&amp;&amp;&#32;strcmp(options[j].sparam,&#32;arg)&#32;==&#32;0)&#32;||
+00516 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(options[j].param&#32;&amp;&amp;&#32;strcmp(options[j].param,&#32;arg)&#32;==&#32;0))
+00517 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00518 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;found&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+00519 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hasSubParams&#32;=&#32;options[j].<link linkend="_structArgxcOptions_1add27505ea653aa67161a226f9daff3ca">hasSubParams</link>;
+00520 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hasAnySubParams&#32;=&#32;options[j].<link linkend="_structArgxcOptions_1ad36df6627ddcae7c469d92794d5a5ddc">hasAnySubParams</link>;
+00521 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matchedOption&#32;=&#32;&amp;options[j];
+00522 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+00523 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00524 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00525 
+00526 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!found)&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+00527 
+00528 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hasSubParams&#32;||&#32;hasAnySubParams)
+00529 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00530 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;there&apos;s&#32;a&#32;next&#32;argument</emphasis>
+00531 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;+&#32;1&#32;&lt;&#32;argvCount)
+00532 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00533 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*nextArg&#32;=&#32;argv[i&#32;+&#32;1];
+00534 
+00535 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;next&#32;argument&#32;is&#32;a&#32;sub-parameter</emphasis>
+00536 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;isSubParam&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00537 
+00538 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(nextArg&#32;&amp;&amp;&#32;strlen(nextArg)&#32;&gt;&#32;0&#32;&amp;&amp;&#32;nextArg[0]&#32;!=&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>)
+00539 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00540 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Validate&#32;if&#32;it&apos;s&#32;a&#32;valid&#32;sub-parameter</emphasis>
+00541 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;k&#32;=&#32;0;&#32;k&#32;&lt;&#32;matchedOption-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>;&#32;k++)
+00542 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00543 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((matchedOption-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[k].<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;&amp;&amp;&#32;strcmp(matchedOption-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[k].<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>,&#32;nextArg)&#32;==&#32;0)&#32;||
+00544 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(matchedOption-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[k].<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;&amp;&amp;&#32;strcmp(matchedOption-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[k].<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>,&#32;nextArg)&#32;==&#32;0))
+00545 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00546 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;isSubParam&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+00547 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+00548 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00549 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00550 
+00551 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(isSubParam)
+00552 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00553 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i++;&#32;<emphasis role="comment">//&#32;Skip&#32;the&#32;sub-parameter</emphasis>
+00554 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hasSubParams&#32;||&#32;hasAnySubParams)
+00555 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00556 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+00557 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00558 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(hasSubParams&#32;||&#32;hasAnySubParams)
+00559 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00560 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+00561 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00562 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00563 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00564 &#32;&#32;&#32;&#32;}
+00565 
+00566 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+00567 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00031">ArgxcOptions::hasAnySubParams</link>, <link linkend="_types_8h_source_1l00030">ArgxcOptions::hasSubParams</link>, <link linkend="_types_8h_source_1l00027">ArgxcOptions::param</link>, <link linkend="_types_8h_source_1l00028">ArgxcOptions::sparam</link>, <link linkend="_types_8h_source_1l00032">ArgxcOptions::subParams</link>, and <link linkend="_types_8h_source_1l00033">ArgxcOptions::subParamsCount</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a05e89b0c2c00b96db95fa612a3a19809"/><section>
+    <title>argxcCreate()</title>
+<indexterm><primary>argxcCreate</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcCreate</secondary></indexterm>
+<para><computeroutput><link linkend="_structArgxc">Argxc</link> * argxcCreate (const char * id, int argc, char * argv[])</computeroutput></para><para>
+
+<para>Create a new <link linkend="_structArgxc">Argxc</link> instance with a specified ID and command-line arguments. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>id</entry><entry>
+<para>Identifier for the parser instance. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>argc</entry><entry>
+<para>Number of command-line arguments. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>argv</entry><entry>
+<para>Array of command-line argument strings. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Argxc* Pointer to the created <link linkend="_structArgxc">Argxc</link> instance. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00064">64</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00065 {
+00066 &#32;&#32;&#32;&#32;<link linkend="_structArgxc">Argxc</link>&#32;*argxc&#32;=&#32;malloc(<emphasis role="keyword">sizeof</emphasis>(<link linkend="_structArgxc">Argxc</link>));
+00067 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argxc)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00068 
+00069 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1aaa5a7528c35f7c26ff0c7283db33fe8b">id</link>&#32;=&#32;<link linkend="_Argx_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(<emphasis role="keywordtype">id</emphasis>);
+00070 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1ae48ba4369d927bced0bc2b3eb76cc4e5">mainArgc</link>&#32;=&#32;argc;
+00071 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>&#32;=&#32;argc;
+00072 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>&#32;=&#32;malloc(argc&#32;*&#32;<emphasis role="keyword">sizeof</emphasis>(<emphasis role="keywordtype">char</emphasis>*));
+00073 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6">optionsCount</link>&#32;=&#32;0;
+00074 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1a73fbef3389172b12448589e62c5aff34">optionsCapacity</link>&#32;=&#32;10;
+00075 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>&#32;=&#32;malloc(argxc-&gt;<link linkend="_structArgxc_1a73fbef3389172b12448589e62c5aff34">optionsCapacity</link>&#32;*&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_structArgxcOptions">ArgxcOptions</link>));
+00076 
+00077 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>&#32;||&#32;!argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>)
+00078 &#32;&#32;&#32;&#32;{
+00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_Argx_8c_1a944b6c8a9498789cd0a51fdfe9a8c486">argxcDestroy</link>(argxc);
+00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00081 &#32;&#32;&#32;&#32;}
+00082 
+00083 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;argc;&#32;i++)
+00084 &#32;&#32;&#32;&#32;{
+00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[i]&#32;=&#32;<link linkend="_Argx_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(argv[i]);
+00086 &#32;&#32;&#32;&#32;}
+00087 
+00088 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;argxc;
+00089 }
+</programlisting><para>
+References <link linkend="_Argx_8c_source_1l00113">argxcDestroy()</link>, <link linkend="_Argx_8c_source_1l00016">Argxc::id</link>, <link linkend="_Argx_8c_source_1l00019">Argxc::mainArgc</link>, <link linkend="_Argx_8c_source_1l00017">Argxc::mainArgs</link>, <link linkend="_Argx_8c_source_1l00018">Argxc::mainArgsCount</link>, <link linkend="_Argx_8c_source_1l00020">Argxc::options</link>, <link linkend="_Argx_8c_source_1l00022">Argxc::optionsCapacity</link>, <link linkend="_Argx_8c_source_1l00021">Argxc::optionsCount</link>, and <link linkend="_Argx_8c_source_1l00026">stringDuplicate()</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a7490f1245ca836e793645d70dcabe7f6"/><section>
+    <title>argxcCreateDefault()</title>
+<indexterm><primary>argxcCreateDefault</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcCreateDefault</secondary></indexterm>
+<para><computeroutput><link linkend="_structArgxc">Argxc</link> * argxcCreateDefault (void )</computeroutput></para><para>
+
+<para>Create a new <link linkend="_structArgxc">Argxc</link> instance with default values (empty ID and no arguments). </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Argxc* Pointer to the default <link linkend="_structArgxc">Argxc</link> instance. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00091">91</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00092 {
+00093 &#32;&#32;&#32;&#32;<link linkend="_structArgxc">Argxc</link>&#32;*argxc&#32;=&#32;malloc(<emphasis role="keyword">sizeof</emphasis>(<link linkend="_structArgxc">Argxc</link>));
+00094 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argxc)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00095 
+00096 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1aaa5a7528c35f7c26ff0c7283db33fe8b">id</link>&#32;=&#32;NULL;
+00097 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>&#32;=&#32;NULL;
+00098 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>&#32;=&#32;0;
+00099 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1ae48ba4369d927bced0bc2b3eb76cc4e5">mainArgc</link>&#32;=&#32;0;
+00100 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6">optionsCount</link>&#32;=&#32;0;
+00101 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1a73fbef3389172b12448589e62c5aff34">optionsCapacity</link>&#32;=&#32;10;
+00102 &#32;&#32;&#32;&#32;argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>&#32;=&#32;malloc(argxc-&gt;<link linkend="_structArgxc_1a73fbef3389172b12448589e62c5aff34">optionsCapacity</link>&#32;*&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_structArgxcOptions">ArgxcOptions</link>));
+00103 
+00104 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>)
+00105 &#32;&#32;&#32;&#32;{
+00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;free(argxc);&#32;argxc&#32;=&#32;NULL;
+00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00108 &#32;&#32;&#32;&#32;}
+00109 
+00110 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;argxc;
+00111 }
+</programlisting><para>
+References <link linkend="_Argx_8c_source_1l00016">Argxc::id</link>, <link linkend="_Argx_8c_source_1l00019">Argxc::mainArgc</link>, <link linkend="_Argx_8c_source_1l00017">Argxc::mainArgs</link>, <link linkend="_Argx_8c_source_1l00018">Argxc::mainArgsCount</link>, <link linkend="_Argx_8c_source_1l00020">Argxc::options</link>, <link linkend="_Argx_8c_source_1l00022">Argxc::optionsCapacity</link>, and <link linkend="_Argx_8c_source_1l00021">Argxc::optionsCount</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1ad18963570800f99309c7ae551d09442b"/><section>
+    <title>argxcCreateDocs()</title>
+<indexterm><primary>argxcCreateDocs</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcCreateDocs</secondary></indexterm>
+<para><computeroutput>char * argxcCreateDocs (<link linkend="_structArgxc">Argxc</link> * argxc, <link linkend="_types_8h_1a0eb907e7e710ee24d66bd7b881999ebb">ArgxcStyle</link> style, const char * title, const char * mainInfo)</computeroutput></para><para>
+
+<para>Generate documentation for the defined options. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argxc</entry><entry>
+<para>Pointer to the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>style</entry><entry>
+<para>Documentation output style. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>title</entry><entry>
+<para>Title of the documentation. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mainInfo</entry><entry>
+<para>Additional info to be displayed in the documentation. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>char* Documentation string (must be freed by caller). </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00375">375</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00376 {
+00377 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argxc)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00378 
+00379 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;bufferSize&#32;=&#32;4096;
+00380 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*contentStr&#32;=&#32;malloc(bufferSize);
+00381 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!contentStr)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00382 
+00383 &#32;&#32;&#32;&#32;contentStr[0]&#32;=&#32;<emphasis role="charliteral">&apos;\0&apos;</emphasis>;
+00384 
+00385 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(style&#32;==&#32;<link linkend="_types_8h_1a0eb907e7e710ee24d66bd7b881999ebba5926a1c4b95fe8294eee1ab316063d47">ARGX_STYLE_PROFESSIONAL</link>)
+00386 &#32;&#32;&#32;&#32;{
+00387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6">optionsCount</link>;&#32;i++)
+00388 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structArgxcOptions">ArgxcOptions</link>&#32;*opt&#32;=&#32;&amp;argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>[i];
+00390 
+00391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Main&#32;option&#32;header&#32;line</emphasis>
+00392 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;temp[512];
+00393 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;snprintf(temp,&#32;<emphasis role="keyword">sizeof</emphasis>(temp),&#32;<emphasis role="stringliteral">&quot;ID:&#32;%s\n&quot;</emphasis>,&#32;opt-&gt;<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>&#32;?&#32;opt-&gt;<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00394 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;temp);
+00395 
+00396 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;snprintf(temp,&#32;<emphasis role="keyword">sizeof</emphasis>(temp),&#32;<emphasis role="stringliteral">&quot;[&#32;%s&#32;|&#32;%s&quot;</emphasis>,&#32;
+00397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;opt-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;?&#32;opt-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,&#32;
+00398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;?&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;temp);
+00400 
+00401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(opt-&gt;<link linkend="_structArgxcOptions_1add27505ea653aa67161a226f9daff3ca">hasSubParams</link>&#32;&amp;&amp;&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>&#32;&gt;&#32;0)
+00402 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00403 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;<emphasis role="stringliteral">&quot;&#32;[&#32;&quot;</emphasis>);
+00404 
+00405 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>;&#32;j++)
+00406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00407 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;opt-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[j].<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;?&#32;opt-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[j].<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00408 
+00409 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(j&#32;&lt;&#32;opt-&gt;subParamsCount&#32;-&#32;1)
+00410 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00411 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;<emphasis role="stringliteral">&quot;&#32;|&#32;&quot;</emphasis>);
+00412 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(j&#32;&lt;=&#32;opt-&gt;subParamsCount)
+00413 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00414 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>);
+00415 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00417 
+00418 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;<emphasis role="stringliteral">&quot;]&#32;]&#32;&quot;</emphasis>);
+00419 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+00420 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;<emphasis role="stringliteral">&quot;&#32;]&#32;&quot;</emphasis>);
+00421 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00422 
+00423 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;opt-&gt;<link linkend="_structArgxcOptions_1aa912383cc480f5009cac8058454e279b">info</link>&#32;?&#32;opt-&gt;<link linkend="_structArgxcOptions_1aa912383cc480f5009cac8058454e279b">info</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00424 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>);
+00425 
+00426 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;all&#32;sub-options</emphasis>
+00427 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(opt-&gt;<link linkend="_structArgxcOptions_1add27505ea653aa67161a226f9daff3ca">hasSubParams</link>&#32;&amp;&amp;&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>&#32;&gt;&#32;0)
+00428 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00429 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>;&#32;j++)
+00430 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structArgxcOptions">ArgxcOptions</link>&#32;*sub&#32;=&#32;&amp;opt-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[j];
+00432 
+00433 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Create&#32;spacing&#32;for&#32;alignment</emphasis>
+00434 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;paramLen&#32;=&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;?&#32;strlen(opt-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>)&#32;:&#32;0;
+00435 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;k&#32;=&#32;0;&#32;k&#32;&lt;&#32;paramLen;&#32;k++)
+00436 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00437 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>);
+00438 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00439 
+00440 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;snprintf(temp,&#32;<emphasis role="keyword">sizeof</emphasis>(temp),&#32;<emphasis role="stringliteral">&quot;&#32;&#32;[&#32;%s&#32;|&#32;%s&#32;]&#32;%s\n&quot;</emphasis>,
+00441 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sub-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;?&#32;sub-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,
+00442 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sub-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;?&#32;sub-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,
+00443 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sub-&gt;<link linkend="_structArgxcOptions_1aa912383cc480f5009cac8058454e279b">info</link>&#32;?&#32;sub-&gt;<link linkend="_structArgxcOptions_1aa912383cc480f5009cac8058454e279b">info</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00444 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;temp);
+00445 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00446 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00447 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00448 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(style&#32;==&#32;<link linkend="_types_8h_1a0eb907e7e710ee24d66bd7b881999ebbad8465ee3943616d15c25e8b2ff2d06e2">ARGX_STYLE_SIMPLE</link>)
+00449 &#32;&#32;&#32;&#32;{
+00450 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6">optionsCount</link>;&#32;i++)
+00451 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00452 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structArgxcOptions">ArgxcOptions</link>&#32;*opt&#32;=&#32;&amp;argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>[i];
+00453 
+00454 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;temp[256];
+00455 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;snprintf(temp,&#32;<emphasis role="keyword">sizeof</emphasis>(temp),&#32;<emphasis role="stringliteral">&quot;%s,&#32;%s&#32;-&#32;%s\n&quot;</emphasis>,
+00456 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;opt-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;?&#32;opt-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,
+00457 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;?&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,
+00458 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;opt-&gt;<link linkend="_structArgxcOptions_1aa912383cc480f5009cac8058454e279b">info</link>&#32;?&#32;opt-&gt;<link linkend="_structArgxcOptions_1aa912383cc480f5009cac8058454e279b">info</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00459 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;temp);
+00460 
+00461 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(opt-&gt;<link linkend="_structArgxcOptions_1add27505ea653aa67161a226f9daff3ca">hasSubParams</link>&#32;&amp;&amp;&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>&#32;&gt;&#32;0)
+00462 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00463 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>;&#32;j++)
+00464 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00465 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structArgxcOptions">ArgxcOptions</link>&#32;*sub&#32;=&#32;&amp;opt-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[j];
+00466 
+00467 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;snprintf(temp,&#32;<emphasis role="keyword">sizeof</emphasis>(temp),&#32;<emphasis role="stringliteral">&quot;&#32;&#32;%s,&#32;%s&#32;-&#32;%s\n&quot;</emphasis>,
+00468 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sub-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;?&#32;sub-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,
+00469 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sub-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;?&#32;sub-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,
+00470 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sub-&gt;<link linkend="_structArgxcOptions_1aa912383cc480f5009cac8058454e279b">info</link>&#32;?&#32;sub-&gt;<link linkend="_structArgxcOptions_1aa912383cc480f5009cac8058454e279b">info</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00471 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcat(contentStr,&#32;temp);
+00472 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00473 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00474 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00475 &#32;&#32;&#32;&#32;}
+00476 
+00477 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Combine&#32;title,&#32;mainInfo,&#32;and&#32;content</emphasis>
+00478 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;titleLen&#32;=&#32;title&#32;?&#32;strlen(title)&#32;:&#32;0;
+00479 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;mainInfoLen&#32;=&#32;mainInfo&#32;?&#32;strlen(mainInfo)&#32;:&#32;0;
+00480 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;contentLen&#32;=&#32;strlen(contentStr);
+00481 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;totalLen&#32;=&#32;titleLen&#32;+&#32;mainInfoLen&#32;+&#32;contentLen&#32;+&#32;10;&#32;<emphasis role="comment">//&#32;Extra&#32;space&#32;for&#32;newlines</emphasis>
+00482 
+00483 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*result&#32;=&#32;malloc(totalLen);
+00484 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!result)
+00485 &#32;&#32;&#32;&#32;{
+00486 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;free(contentStr);&#32;contentStr&#32;=&#32;NULL;
+00487 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00488 &#32;&#32;&#32;&#32;}
+00489 
+00490 &#32;&#32;&#32;&#32;snprintf(result,&#32;totalLen,&#32;<emphasis role="stringliteral">&quot;%s\n%s\n%s&quot;</emphasis>,
+00491 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;title&#32;?&#32;title&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,
+00492 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mainInfo&#32;?&#32;mainInfo&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,
+00493 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;contentStr);
+00494 
+00495 &#32;&#32;&#32;&#32;free(contentStr);&#32;contentStr&#32;=&#32;NULL;
+00496 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
+00497 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00011">ARGX_STYLE_PROFESSIONAL</link>, <link linkend="_types_8h_source_1l00012">ARGX_STYLE_SIMPLE</link>, <link linkend="_types_8h_source_1l00030">ArgxcOptions::hasSubParams</link>, <link linkend="_types_8h_source_1l00026">ArgxcOptions::id</link>, <link linkend="_types_8h_source_1l00029">ArgxcOptions::info</link>, <link linkend="_Argx_8c_source_1l00020">Argxc::options</link>, <link linkend="_Argx_8c_source_1l00021">Argxc::optionsCount</link>, <link linkend="_types_8h_source_1l00027">ArgxcOptions::param</link>, <link linkend="_types_8h_source_1l00028">ArgxcOptions::sparam</link>, <link linkend="_types_8h_source_1l00032">ArgxcOptions::subParams</link>, and <link linkend="_types_8h_source_1l00033">ArgxcOptions::subParamsCount</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1aff55e2b9a01cc2b4d3bdd44264eef8bd"/><section>
+    <title>argxcCreateError()</title>
+<indexterm><primary>argxcCreateError</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcCreateError</secondary></indexterm>
+<para><computeroutput><link linkend="_structArgxcError">ArgxcError</link> argxcCreateError (const char * type, const char * error, const char * help, int code)</computeroutput></para><para>
+
+<para>Create an <link linkend="_structArgxcError">ArgxcError</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>type</entry><entry>
+<para>Type/category of the error. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>error</entry><entry>
+<para>Error message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>help</entry><entry>
+<para>Help message for resolving the error. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>code</entry><entry>
+<para>Exit code or error code. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_structArgxcError">ArgxcError</link> The created error struct. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00667">667</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00668 {
+00669 &#32;&#32;&#32;&#32;<link linkend="_structArgxcError">ArgxcError</link>&#32;err&#32;=&#32;{0};
+00670 
+00671 &#32;&#32;&#32;&#32;err.<link linkend="_structArgxcError_1ab4531054aa9750f66f0cae13f67365ad">type</link>&#32;=&#32;<link linkend="_Argx_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(type);
+00672 &#32;&#32;&#32;&#32;err.<link linkend="_structArgxcError_1a88d100236636b2eb326025d527ad26f3">error</link>&#32;=&#32;<link linkend="_Argx_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(error);
+00673 &#32;&#32;&#32;&#32;err.<link linkend="_structArgxcError_1a9e83392469b228017a3b6492392f68ad">help</link>&#32;=&#32;<link linkend="_Argx_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(help);
+00674 &#32;&#32;&#32;&#32;err.<link linkend="_structArgxcError_1a617299f808dff4b2656bf04384e64bf9">code</link>&#32;=&#32;code;
+00675 
+00676 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;err;
+00677 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00019">ArgxcError::code</link>, <link linkend="_types_8h_source_1l00017">ArgxcError::error</link>, <link linkend="_types_8h_source_1l00018">ArgxcError::help</link>, <link linkend="_Argx_8c_source_1l00026">stringDuplicate()</link>, and <link linkend="_types_8h_source_1l00016">ArgxcError::type</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a5efc30ffddcc4d6ba7c2db7b8ab680ec"/><section>
+    <title>argxcCreateOption()</title>
+<indexterm><primary>argxcCreateOption</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcCreateOption</secondary></indexterm>
+<para><computeroutput><link linkend="_structArgxcOptions">ArgxcOptions</link> argxcCreateOption (const char * id, const char * param, const char * sparam, const char * info, bool hasSubParams, bool hasAnySubParams)</computeroutput></para><para>
+
+<para>Create a new option. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>id</entry><entry>
+<para>Option identifier. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>param</entry><entry>
+<para>Parameter name (e.g., &#8211;param). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sparam</entry><entry>
+<para>Short form (e.g., -p). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>info</entry><entry>
+<para>Description of the option. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hasSubParams</entry><entry>
+<para>Whether the option has sub-parameters. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hasAnySubParams</entry><entry>
+<para>Whether the option accepts any sub-parameters. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_structArgxcOptions">ArgxcOptions</link> The created option. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00607">607</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00609 {
+00610 &#32;&#32;&#32;&#32;<link linkend="_structArgxcOptions">ArgxcOptions</link>&#32;option&#32;=&#32;{0};
+00611 
+00612 &#32;&#32;&#32;&#32;option.<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>&#32;=&#32;<link linkend="_Argx_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(<emphasis role="keywordtype">id</emphasis>);
+00613 &#32;&#32;&#32;&#32;option.<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;=&#32;<link linkend="_Argx_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(param);
+00614 &#32;&#32;&#32;&#32;option.<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;=&#32;<link linkend="_Argx_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(sparam);
+00615 &#32;&#32;&#32;&#32;option.<link linkend="_structArgxcOptions_1aa912383cc480f5009cac8058454e279b">info</link>&#32;=&#32;<link linkend="_Argx_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(info);
+00616 &#32;&#32;&#32;&#32;option.<link linkend="_structArgxcOptions_1add27505ea653aa67161a226f9daff3ca">hasSubParams</link>&#32;=&#32;hasSubParams;
+00617 &#32;&#32;&#32;&#32;option.<link linkend="_structArgxcOptions_1ad36df6627ddcae7c469d92794d5a5ddc">hasAnySubParams</link>&#32;=&#32;hasAnySubParams;
+00618 &#32;&#32;&#32;&#32;option.<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>&#32;=&#32;NULL;
+00619 &#32;&#32;&#32;&#32;option.<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>&#32;=&#32;0;
+00620 
+00621 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;option;
+00622 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00031">ArgxcOptions::hasAnySubParams</link>, <link linkend="_types_8h_source_1l00030">ArgxcOptions::hasSubParams</link>, <link linkend="_types_8h_source_1l00026">ArgxcOptions::id</link>, <link linkend="_types_8h_source_1l00029">ArgxcOptions::info</link>, <link linkend="_types_8h_source_1l00027">ArgxcOptions::param</link>, <link linkend="_types_8h_source_1l00028">ArgxcOptions::sparam</link>, <link linkend="_Argx_8c_source_1l00026">stringDuplicate()</link>, <link linkend="_types_8h_source_1l00032">ArgxcOptions::subParams</link>, and <link linkend="_types_8h_source_1l00033">ArgxcOptions::subParamsCount</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a944b6c8a9498789cd0a51fdfe9a8c486"/><section>
+    <title>argxcDestroy()</title>
+<indexterm><primary>argxcDestroy</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcDestroy</secondary></indexterm>
+<para><computeroutput>void argxcDestroy (<link linkend="_structArgxc">Argxc</link> * argxc)</computeroutput></para><para>
+
+<para>Destroy an <link linkend="_structArgxc">Argxc</link> instance and free all associated memory. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argxc</entry><entry>
+<para>Pointer to the <link linkend="_structArgxc">Argxc</link> instance to destroy. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00113">113</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00114 {
+00115 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argxc)&#32;<emphasis role="keywordflow">return</emphasis>;
+00116 
+00117 &#32;&#32;&#32;&#32;free(argxc-&gt;<link linkend="_structArgxc_1aaa5a7528c35f7c26ff0c7283db33fe8b">id</link>);&#32;argxc-&gt;<link linkend="_structArgxc_1aaa5a7528c35f7c26ff0c7283db33fe8b">id</link>&#32;=&#32;NULL;
+00118 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>)&#32;<link linkend="_Argx_8c_1a420b857128cfa7527dc66424a1ece935">freeStringArray</link>(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>,&#32;argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>);
+00119 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>)&#32;<link linkend="_Argx_8c_1acac8053f967174a1b860aad28c2b12d0">freeOptionsArray</link>(argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>,&#32;argxc-&gt;<link linkend="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6">optionsCount</link>);
+00120 &#32;&#32;&#32;&#32;free(argxc);&#32;argxc&#32;=&#32;NULL;
+00121 }
+</programlisting><para>
+References <link linkend="_Argx_8c_source_1l00050">freeOptionsArray()</link>, <link linkend="_Argx_8c_source_1l00038">freeStringArray()</link>, <link linkend="_Argx_8c_source_1l00016">Argxc::id</link>, <link linkend="_Argx_8c_source_1l00017">Argxc::mainArgs</link>, <link linkend="_Argx_8c_source_1l00018">Argxc::mainArgsCount</link>, <link linkend="_Argx_8c_source_1l00020">Argxc::options</link>, and <link linkend="_Argx_8c_source_1l00021">Argxc::optionsCount</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8c_source_1l00064">argxcCreate()</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a4a12dce73edcc011355f47d4543e32a6"/><section>
+    <title>argxcFindParam()</title>
+<indexterm><primary>argxcFindParam</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcFindParam</secondary></indexterm>
+<para><computeroutput>int argxcFindParam (<link linkend="_structArgxc">Argxc</link> * argxc, const char * id)</computeroutput></para><para>
+
+<para>Find the index of a parameter by ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argxc</entry><entry>
+<para>Pointer to the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>id</entry><entry>
+<para>The identifier of the parameter to find. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>int Index of the parameter, or -1 if not found. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00155">155</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00156 {
+00157 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argxc&#32;||&#32;!<emphasis role="keywordtype">id</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>&#32;-1;
+00158 
+00159 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;First&#32;check&#32;if&#32;it&apos;s&#32;a&#32;main&#32;parameter</emphasis>
+00160 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6">optionsCount</link>;&#32;i++)
+00161 &#32;&#32;&#32;&#32;{
+00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>[i].<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>[i].<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>,&#32;<emphasis role="keywordtype">id</emphasis>)&#32;==&#32;0)
+00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;this&#32;main&#32;parameter&#32;exists&#32;in&#32;arguments</emphasis>
+00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>;&#32;j++)
+00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>[i].<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[j],&#32;argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>[i].<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>)&#32;==&#32;0)&#32;||
+00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>[i].<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[j],&#32;argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>[i].<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>)&#32;==&#32;0))
+00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>)i;
+00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00174 &#32;&#32;&#32;&#32;}
+00175 
+00176 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Then&#32;look&#32;for&#32;sub-parameters</emphasis>
+00177 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6">optionsCount</link>;&#32;i++)
+00178 &#32;&#32;&#32;&#32;{
+00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structArgxcOptions">ArgxcOptions</link>&#32;*opt&#32;=&#32;&amp;argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>[i];
+00180 
+00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;the&#32;parent&#32;option&#32;exists&#32;in&#32;the&#32;arguments</emphasis>
+00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;parentExists&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>;&#32;j++)
+00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((opt-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[j],&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>)&#32;==&#32;0)&#32;||
+00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(opt-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[j],&#32;opt-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>)&#32;==&#32;0))
+00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;parentExists&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00192 
+00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(parentExists)
+00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Find&#32;the&#32;index&#32;of&#32;the&#32;requested&#32;sub-parameter</emphasis>
+00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>;&#32;j++)
+00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(opt-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[j].<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>&#32;&amp;&amp;&#32;strcmp(opt-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[j].<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>,&#32;<emphasis role="keywordtype">id</emphasis>)&#32;==&#32;0)
+00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>)j;
+00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00204 &#32;&#32;&#32;&#32;}
+00205 
+00206 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;-1;&#32;<emphasis role="comment">//&#32;Not&#32;found</emphasis>
+00207 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00026">ArgxcOptions::id</link>, <link linkend="_Argx_8c_source_1l00017">Argxc::mainArgs</link>, <link linkend="_Argx_8c_source_1l00018">Argxc::mainArgsCount</link>, <link linkend="_Argx_8c_source_1l00020">Argxc::options</link>, <link linkend="_Argx_8c_source_1l00021">Argxc::optionsCount</link>, <link linkend="_types_8h_source_1l00027">ArgxcOptions::param</link>, <link linkend="_types_8h_source_1l00028">ArgxcOptions::sparam</link>, <link linkend="_types_8h_source_1l00032">ArgxcOptions::subParams</link>, and <link linkend="_types_8h_source_1l00033">ArgxcOptions::subParamsCount</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8c_source_1l00366">argxcGetSubParam()</link>, and <link linkend="_Argx_8c_source_1l00209">argxcParamExists()</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1af46bf41910b18e11800500efd7e929fa"/><section>
+    <title>argxcFreeError()</title>
+<indexterm><primary>argxcFreeError</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcFreeError</secondary></indexterm>
+<para><computeroutput>void argxcFreeError (<link linkend="_structArgxcError">ArgxcError</link> * error)</computeroutput></para><para>
+
+<para>Free resources associated with an <link linkend="_structArgxcError">ArgxcError</link> struct. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>error</entry><entry>
+<para>Pointer to the error to free. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00679">679</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00680 {
+00681 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!error)&#32;<emphasis role="keywordflow">return</emphasis>;
+00682 
+00683 &#32;&#32;&#32;&#32;free(error-&gt;<link linkend="_structArgxcError_1ab4531054aa9750f66f0cae13f67365ad">type</link>);&#32;error-&gt;<link linkend="_structArgxcError_1ab4531054aa9750f66f0cae13f67365ad">type</link>&#32;=&#32;NULL;
+00684 &#32;&#32;&#32;&#32;free(error-&gt;<link linkend="_structArgxcError_1a88d100236636b2eb326025d527ad26f3">error</link>);&#32;error-&gt;<link linkend="_structArgxcError_1a88d100236636b2eb326025d527ad26f3">error</link>&#32;=&#32;NULL;
+00685 &#32;&#32;&#32;&#32;free(error-&gt;<link linkend="_structArgxcError_1a9e83392469b228017a3b6492392f68ad">help</link>);&#32;error-&gt;<link linkend="_structArgxcError_1a9e83392469b228017a3b6492392f68ad">help</link>&#32;=&#32;NULL;
+00686 &#32;&#32;&#32;&#32;memset(error,&#32;0,&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_structArgxcError">ArgxcError</link>));
+00687 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00017">ArgxcError::error</link>, <link linkend="_types_8h_source_1l00018">ArgxcError::help</link>, and <link linkend="_types_8h_source_1l00016">ArgxcError::type</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1ad1a1c82ca55187361d24a03c5fb977e6"/><section>
+    <title>argxcFreeOption()</title>
+<indexterm><primary>argxcFreeOption</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcFreeOption</secondary></indexterm>
+<para><computeroutput>void argxcFreeOption (<link linkend="_structArgxcOptions">ArgxcOptions</link> * option)</computeroutput></para><para>
+
+<para>Free resources associated with an <link linkend="_structArgxcOptions">ArgxcOptions</link> struct. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>option</entry><entry>
+<para>Pointer to the option to free. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00624">624</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00625 {
+00626 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!option)&#32;<emphasis role="keywordflow">return</emphasis>;
+00627 
+00628 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(option-&gt;<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>)
+00629 &#32;&#32;&#32;&#32;{&#32;free(option-&gt;<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>);&#32;option-&gt;<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>&#32;=&#32;NULL;&#32;}
+00630 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(option-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>)
+00631 &#32;&#32;&#32;&#32;{&#32;free(option-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>);&#32;option-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;=&#32;NULL;&#32;}
+00632 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(option-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>)
+00633 &#32;&#32;&#32;&#32;{&#32;free(option-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>);&#32;option-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;=&#32;NULL;&#32;}
+00634 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(option-&gt;<link linkend="_structArgxcOptions_1aa912383cc480f5009cac8058454e279b">info</link>)
+00635 &#32;&#32;&#32;&#32;{&#32;free(option-&gt;<link linkend="_structArgxcOptions_1aa912383cc480f5009cac8058454e279b">info</link>);&#32;option-&gt;<link linkend="_structArgxcOptions_1aa912383cc480f5009cac8058454e279b">info</link>&#32;=&#32;NULL;&#32;}
+00636 
+00637 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(option-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>)
+00638 &#32;&#32;&#32;&#32;{
+00639 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;option-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>;&#32;i++)
+00640 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00641 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_Argx_8c_1ad1a1c82ca55187361d24a03c5fb977e6">argxcFreeOption</link>(&amp;option-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[i]);
+00642 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00643 
+00644 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;free(option-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>);&#32;
+00645 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;option-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>&#32;=&#32;NULL;
+00646 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;option-&gt;<link linkend="_structArgxcOptions_1abe87d3c8fcdf1a843ea90652c78b5ed1">subParamsCapacity</link>&#32;=&#32;0;
+00647 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;option-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>&#32;=&#32;0;
+00648 &#32;&#32;&#32;&#32;}
+00649 
+00650 &#32;&#32;&#32;&#32;memset(option,&#32;0,&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_structArgxcOptions">ArgxcOptions</link>));
+00651 }
+</programlisting><para>
+References <link linkend="_Argx_8c_source_1l00624">argxcFreeOption()</link>, <link linkend="_types_8h_source_1l00026">ArgxcOptions::id</link>, <link linkend="_types_8h_source_1l00029">ArgxcOptions::info</link>, <link linkend="_types_8h_source_1l00027">ArgxcOptions::param</link>, <link linkend="_types_8h_source_1l00028">ArgxcOptions::sparam</link>, <link linkend="_types_8h_source_1l00032">ArgxcOptions::subParams</link>, <link linkend="_types_8h_source_1l00034">ArgxcOptions::subParamsCapacity</link>, and <link linkend="_types_8h_source_1l00033">ArgxcOptions::subParamsCount</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8c_source_1l00624">argxcFreeOption()</link>, and <link linkend="_Argx_8c_source_1l00050">freeOptionsArray()</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a6798ce84afc7922cc08260fd52534b99"/><section>
+    <title>argxcFreeParam()</title>
+<indexterm><primary>argxcFreeParam</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcFreeParam</secondary></indexterm>
+<para><computeroutput>void argxcFreeParam (<link linkend="_structArgxcParam">ArgxcParam</link> * param)</computeroutput></para><para>
+
+<para>Free resources associated with an <link linkend="_structArgxcParam">ArgxcParam</link> struct. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>param</entry><entry>
+<para>Pointer to the parameter to free. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00653">653</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00654 {
+00655 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!param)&#32;<emphasis role="keywordflow">return</emphasis>;
+00656 
+00657 &#32;&#32;&#32;&#32;free(param-&gt;<link linkend="_structArgxcParam_1af685e909c26495d1ee2b52acf80960d0">subExists</link>);&#32;param-&gt;<link linkend="_structArgxcParam_1af685e909c26495d1ee2b52acf80960d0">subExists</link>&#32;=&#32;NULL;
+00658 &#32;&#32;&#32;&#32;memset(param,&#32;0,&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_structArgxcParam">ArgxcParam</link>));
+00659 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00039">ArgxcParam::subExists</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a433f2018d5638506f50be3219c04ec71"/><section>
+    <title>argxcFreeStringArray()</title>
+<indexterm><primary>argxcFreeStringArray</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcFreeStringArray</secondary></indexterm>
+<para><computeroutput>void argxcFreeStringArray (char ** array, size_t count)</computeroutput></para><para>
+
+<para>Free a string array returned from <link linkend="_structArgxc">Argxc</link> (e.g., argv array). </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>array</entry><entry>
+<para>The array to free. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>count</entry><entry>
+<para>Number of elements in the array. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00661">661</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00662 {
+00663 &#32;&#32;&#32;&#32;<link linkend="_Argx_8c_1a420b857128cfa7527dc66424a1ece935">freeStringArray</link>(array,&#32;count);
+00664 }
+</programlisting><para>
+References <link linkend="_Argx_8c_source_1l00038">freeStringArray()</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a11fea89d38b49b571ce4f4499d0289d0"/><section>
+    <title>argxcGetArgc()</title>
+<indexterm><primary>argxcGetArgc</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcGetArgc</secondary></indexterm>
+<para><computeroutput>int argxcGetArgc (<link linkend="_structArgxc">Argxc</link> * argxc)</computeroutput></para><para>
+
+<para>Get the number of command-line arguments passed. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argxc</entry><entry>
+<para>Pointer to the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>int Number of arguments. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00588">588</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00589 {
+00590 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;argxc&#32;?&#32;argxc-&gt;<link linkend="_structArgxc_1ae48ba4369d927bced0bc2b3eb76cc4e5">mainArgc</link>&#32;:&#32;0;
+00591 }
+</programlisting><para>
+References <link linkend="_Argx_8c_source_1l00019">Argxc::mainArgc</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a219a52257f1e47549f9fc15979b6c563"/><section>
+    <title>argxcGetId()</title>
+<indexterm><primary>argxcGetId</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcGetId</secondary></indexterm>
+<para><computeroutput>const char * argxcGetId (<link linkend="_structArgxc">Argxc</link> * argxc)</computeroutput></para><para>
+
+<para>Get the identifier of the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argxc</entry><entry>
+<para>Pointer to the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>const char* The ID string. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00601">601</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00602 {
+00603 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;argxc&#32;?&#32;argxc-&gt;<link linkend="_structArgxc_1aaa5a7528c35f7c26ff0c7283db33fe8b">id</link>&#32;:&#32;NULL;
+00604 }
+</programlisting><para>
+References <link linkend="_Argx_8c_source_1l00016">Argxc::id</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a62e90d5a3e26834257bba4c68becfeb1"/><section>
+    <title>argxcGetMainArgs()</title>
+<indexterm><primary>argxcGetMainArgs</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcGetMainArgs</secondary></indexterm>
+<para><computeroutput>char ** argxcGetMainArgs (<link linkend="_structArgxc">Argxc</link> * argxc, size_t * count)</computeroutput></para><para>
+
+<para>Get the raw command-line arguments passed to <link linkend="_structArgxc">Argxc</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argxc</entry><entry>
+<para>Pointer to the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>count</entry><entry>
+<para>Output: number of arguments returned. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>char** Array of argument strings. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00570">570</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00571 {
+00572 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argxc&#32;||&#32;!count)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00573 
+00574 &#32;&#32;&#32;&#32;*count&#32;=&#32;argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>;
+00575 
+00576 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Create&#32;a&#32;copy&#32;of&#32;the&#32;array</emphasis>
+00577 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;**copy&#32;=&#32;malloc(argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>&#32;*&#32;<emphasis role="keyword">sizeof</emphasis>(<emphasis role="keywordtype">char</emphasis>*));
+00578 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!copy)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00579 
+00580 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>;&#32;i++)
+00581 &#32;&#32;&#32;&#32;{
+00582 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;copy[i]&#32;=&#32;<link linkend="_Argx_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[i]);
+00583 &#32;&#32;&#32;&#32;}
+00584 
+00585 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;copy;
+00586 }
+</programlisting><para>
+References <link linkend="_Argx_8c_source_1l00017">Argxc::mainArgs</link>, <link linkend="_Argx_8c_source_1l00018">Argxc::mainArgsCount</link>, and <link linkend="_Argx_8c_source_1l00026">stringDuplicate()</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1afb1cebd21f607dfbe19ed784ea0fc319"/><section>
+    <title>argxcGetOptions()</title>
+<indexterm><primary>argxcGetOptions</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcGetOptions</secondary></indexterm>
+<para><computeroutput><link linkend="_structArgxcOptions">ArgxcOptions</link> * argxcGetOptions (<link linkend="_structArgxc">Argxc</link> * argxc, size_t * count)</computeroutput></para><para>
+
+<para>Get all top-level options defined for the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argxc</entry><entry>
+<para>Pointer to the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>count</entry><entry>
+<para>Output: number of options returned. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>ArgxcOptions* Array of options. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00593">593</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00594 {
+00595 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argxc&#32;||&#32;!count)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00596 
+00597 &#32;&#32;&#32;&#32;*count&#32;=&#32;argxc-&gt;<link linkend="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6">optionsCount</link>;
+00598 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>;&#32;<emphasis role="comment">//&#32;Return&#32;direct&#32;reference&#32;(be&#32;careful&#32;with&#32;modification)</emphasis>
+00599 }
+</programlisting><para>
+References <link linkend="_Argx_8c_source_1l00020">Argxc::options</link>, and <link linkend="_Argx_8c_source_1l00021">Argxc::optionsCount</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a6ef72f8e604109911e4315f6840febf9"/><section>
+    <title>argxcGetParam()</title>
+<indexterm><primary>argxcGetParam</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcGetParam</secondary></indexterm>
+<para><computeroutput><link linkend="_structArgxcParam">ArgxcParam</link> argxcGetParam (<link linkend="_structArgxc">Argxc</link> * argxc, const char * id)</computeroutput></para><para>
+
+<para>Retrieve a parameter by ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argxc</entry><entry>
+<para>Pointer to the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>id</entry><entry>
+<para>The identifier of the parameter to retrieve. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_structArgxcParam">ArgxcParam</link> The parameter object. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00214">214</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00215 {
+00216 &#32;&#32;&#32;&#32;<link linkend="_structArgxcParam">ArgxcParam</link>&#32;result&#32;=&#32;{<emphasis role="keyword">false</emphasis>,&#32;NULL,&#32;0};
+00217 
+00218 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argxc&#32;||&#32;!<emphasis role="keywordtype">id</emphasis>&#32;||&#32;argxc-&gt;<link linkend="_structArgxc_1ae48ba4369d927bced0bc2b3eb76cc4e5">mainArgc</link>&#32;&lt;=&#32;1)
+00219 &#32;&#32;&#32;&#32;{
+00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
+00221 &#32;&#32;&#32;&#32;}
+00222 
+00223 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;First,&#32;check&#32;if&#32;this&#32;is&#32;a&#32;top-level&#32;option</emphasis>
+00224 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6">optionsCount</link>;&#32;i++)
+00225 &#32;&#32;&#32;&#32;{
+00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structArgxcOptions">ArgxcOptions</link>&#32;*opt&#32;=&#32;&amp;argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>[i];
+00227 
+00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(opt-&gt;<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>&#32;&amp;&amp;&#32;strcmp(opt-&gt;<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>,&#32;<emphasis role="keywordtype">id</emphasis>)&#32;==&#32;0)
+00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Find&#32;the&#32;position&#32;of&#32;the&#32;main&#32;option&#32;in&#32;arguments</emphasis>
+00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;mainOptionPos&#32;=&#32;-1;
+00232 
+00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>;&#32;j++)
+00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((opt-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[j],&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>)&#32;==&#32;0)&#32;||
+00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(opt-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[j],&#32;opt-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>)&#32;==&#32;0))
+00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="_structArgxcParam_1abc303d4cb26b086e53978a46071b9735">exists</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mainOptionPos&#32;=&#32;j;
+00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00243 
+00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(result.<link linkend="_structArgxcParam_1abc303d4cb26b086e53978a46071b9735">exists</link>)
+00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(opt-&gt;<link linkend="_structArgxcOptions_1add27505ea653aa67161a226f9daff3ca">hasSubParams</link>&#32;||&#32;opt-&gt;<link linkend="_structArgxcOptions_1ad36df6627ddcae7c469d92794d5a5ddc">hasAnySubParams</link>)
+00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Allocate&#32;memory&#32;for&#32;sub-parameter&#32;existence&#32;array</emphasis>
+00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="_structArgxcParam_1a6340456c0025fef27395bc30f3251986">subExistsCount</link>&#32;=&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>;
+00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="_structArgxcParam_1af685e909c26495d1ee2b52acf80960d0">subExists</link>&#32;=&#32;malloc(result.<link linkend="_structArgxcParam_1a6340456c0025fef27395bc30f3251986">subExistsCount</link>&#32;*&#32;<emphasis role="keyword">sizeof</emphasis>(<emphasis role="keywordtype">bool</emphasis>));
+00251 
+00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(result.<link linkend="_structArgxcParam_1af685e909c26495d1ee2b52acf80960d0">subExists</link>)
+00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;each&#32;sub-parameter</emphasis>
+00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>;&#32;j++)
+00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;subMatched&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structArgxcOptions">ArgxcOptions</link>&#32;*sub&#32;=&#32;&amp;opt-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[j];
+00259 
+00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Look&#32;for&#32;sub-parameters&#32;after&#32;the&#32;main&#32;option</emphasis>
+00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;k&#32;=&#32;mainOptionPos&#32;+&#32;1;&#32;k&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>;&#32;k++)
+00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((sub-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[k],&#32;sub-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>)&#32;==&#32;0)&#32;||
+00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(sub-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[k],&#32;sub-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>)&#32;==&#32;0))
+00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;subMatched&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00270 
+00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="_structArgxcParam_1af685e909c26495d1ee2b52acf80960d0">subExists</link>[j]&#32;=&#32;subMatched;
+00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00275 
+00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
+00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00279 &#32;&#32;&#32;&#32;}
+00280 
+00281 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;not&#32;found&#32;as&#32;top-level,&#32;check&#32;if&#32;it&apos;s&#32;a&#32;sub-parameter</emphasis>
+00282 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6">optionsCount</link>;&#32;i++)
+00283 &#32;&#32;&#32;&#32;{
+00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structArgxcOptions">ArgxcOptions</link>&#32;*opt&#32;=&#32;&amp;argxc-&gt;<link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link>[i];
+00285 
+00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Find&#32;if&#32;the&#32;parent&#32;option&#32;exists&#32;and&#32;get&#32;its&#32;position</emphasis>
+00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;parentPos&#32;=&#32;-1;
+00288 
+00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>;&#32;j++)
+00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((opt-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[j],&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>)&#32;==&#32;0)&#32;||
+00292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(opt-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[j],&#32;opt-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>)&#32;==&#32;0))
+00293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;parentPos&#32;=&#32;j;
+00295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+00296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00298 
+00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(parentPos&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;(opt-&gt;<link linkend="_structArgxcOptions_1add27505ea653aa67161a226f9daff3ca">hasSubParams</link>&#32;||&#32;opt-&gt;<link linkend="_structArgxcOptions_1ad36df6627ddcae7c469d92794d5a5ddc">hasAnySubParams</link>))
+00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;the&#32;requested&#32;sub-parameter&#32;exists&#32;after&#32;the&#32;parent</emphasis>
+00302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;opt-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>;&#32;j++)
+00303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structArgxcOptions">ArgxcOptions</link>&#32;*sub&#32;=&#32;&amp;opt-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[j];
+00305 
+00306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sub-&gt;<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>&#32;&amp;&amp;&#32;strcmp(sub-&gt;<link linkend="_structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c">id</link>,&#32;<emphasis role="keywordtype">id</emphasis>)&#32;==&#32;0)
+00307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;k&#32;=&#32;parentPos&#32;+&#32;1;&#32;k&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>;&#32;k++)
+00309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((sub-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[k],&#32;sub-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>)&#32;==&#32;0)&#32;||
+00311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(sub-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[k],&#32;sub-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>)&#32;==&#32;0))
+00312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="_structArgxcParam_1abc303d4cb26b086e53978a46071b9735">exists</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+00314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+00315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00317 
+00318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!result.<link linkend="_structArgxcParam_1abc303d4cb26b086e53978a46071b9735">exists</link>&#32;&amp;&amp;&#32;(<emphasis role="keywordtype">size_t</emphasis>)(parentPos&#32;+&#32;1)&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>)
+00319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*nextArg&#32;=&#32;argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[parentPos&#32;+&#32;1];
+00321 
+00322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((sub-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;&amp;&amp;&#32;strcmp(nextArg,&#32;sub-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>)&#32;==&#32;0)&#32;||
+00323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(sub-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;&amp;&amp;&#32;strcmp(nextArg,&#32;sub-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>)&#32;==&#32;0))
+00324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="_structArgxcParam_1abc303d4cb26b086e53978a46071b9735">exists</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+00326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00328 
+00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Handle&#32;any&#32;sub-sub-parameters&#32;if&#32;they&#32;exist</emphasis>
+00330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(result.<link linkend="_structArgxcParam_1abc303d4cb26b086e53978a46071b9735">exists</link>&#32;&amp;&amp;&#32;(sub-&gt;<link linkend="_structArgxcOptions_1add27505ea653aa67161a226f9daff3ca">hasSubParams</link>&#32;||&#32;sub-&gt;<link linkend="_structArgxcOptions_1ad36df6627ddcae7c469d92794d5a5ddc">hasAnySubParams</link>))
+00331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="_structArgxcParam_1a6340456c0025fef27395bc30f3251986">subExistsCount</link>&#32;=&#32;sub-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>;
+00333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="_structArgxcParam_1af685e909c26495d1ee2b52acf80960d0">subExists</link>&#32;=&#32;malloc(result.<link linkend="_structArgxcParam_1a6340456c0025fef27395bc30f3251986">subExistsCount</link>&#32;*&#32;<emphasis role="keyword">sizeof</emphasis>(<emphasis role="keywordtype">bool</emphasis>));
+00334 
+00335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(result.<link linkend="_structArgxcParam_1af685e909c26495d1ee2b52acf80960d0">subExists</link>)
+00336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;k&#32;=&#32;0;&#32;k&#32;&lt;&#32;sub-&gt;<link linkend="_structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76">subParamsCount</link>;&#32;k++)
+00338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;subsubMatched&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structArgxcOptions">ArgxcOptions</link>&#32;*subsub&#32;=&#32;&amp;sub-&gt;<link linkend="_structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5">subParams</link>[k];
+00341 
+00342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;l&#32;=&#32;0;&#32;l&#32;&lt;&#32;argxc-&gt;<link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link>;&#32;l++)
+00343 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((subsub-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[l],&#32;subsub-&gt;<link linkend="_structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3">param</link>)&#32;==&#32;0)&#32;||
+00345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(subsub-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>&#32;&amp;&amp;&#32;strcmp(argxc-&gt;<link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link>[l],&#32;subsub-&gt;<link linkend="_structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6">sparam</link>)&#32;==&#32;0))
+00346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;subsubMatched&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+00348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+00349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00351 
+00352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.<link linkend="_structArgxcParam_1af685e909c26495d1ee2b52acf80960d0">subExists</link>[k]&#32;=&#32;subsubMatched;
+00353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00356 
+00357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
+00358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00361 &#32;&#32;&#32;&#32;}
+00362 
+00363 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
+00364 }
+</programlisting><para>
+References <link linkend="_types_8h_source_1l00038">ArgxcParam::exists</link>, <link linkend="_types_8h_source_1l00031">ArgxcOptions::hasAnySubParams</link>, <link linkend="_types_8h_source_1l00030">ArgxcOptions::hasSubParams</link>, <link linkend="_types_8h_source_1l00026">ArgxcOptions::id</link>, <link linkend="_Argx_8c_source_1l00019">Argxc::mainArgc</link>, <link linkend="_Argx_8c_source_1l00017">Argxc::mainArgs</link>, <link linkend="_Argx_8c_source_1l00018">Argxc::mainArgsCount</link>, <link linkend="_Argx_8c_source_1l00020">Argxc::options</link>, <link linkend="_Argx_8c_source_1l00021">Argxc::optionsCount</link>, <link linkend="_types_8h_source_1l00027">ArgxcOptions::param</link>, <link linkend="_types_8h_source_1l00028">ArgxcOptions::sparam</link>, <link linkend="_types_8h_source_1l00039">ArgxcParam::subExists</link>, <link linkend="_types_8h_source_1l00040">ArgxcParam::subExistsCount</link>, <link linkend="_types_8h_source_1l00032">ArgxcOptions::subParams</link>, and <link linkend="_types_8h_source_1l00033">ArgxcOptions::subParamsCount</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a0767a3dc8167a77aada7a52c4d0e9d22"/><section>
+    <title>argxcGetSubParam()</title>
+<indexterm><primary>argxcGetSubParam</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcGetSubParam</secondary></indexterm>
+<para><computeroutput>bool argxcGetSubParam (<link linkend="_structArgxc">Argxc</link> * argxc, const <link linkend="_structArgxcParam">ArgxcParam</link> * param, const char * id)</computeroutput></para><para>
+
+<para>Retrieve a sub-parameter from a given parameter by ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argxc</entry><entry>
+<para>Pointer to the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>param</entry><entry>
+<para>Pointer to the parent parameter. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>id</entry><entry>
+<para>The identifier of the sub-parameter. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if the sub-parameter exists, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00366">366</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00367 {
+00368 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argxc&#32;||&#32;!param&#32;||&#32;!<emphasis role="keywordtype">id</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+00369 
+00370 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;index&#32;=&#32;<link linkend="_Argx_8c_1a4a12dce73edcc011355f47d4543e32a6">argxcFindParam</link>(argxc,&#32;<emphasis role="keywordtype">id</emphasis>);
+00371 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_Argx_8c_1a016fceae24303178985a8e047262bd5e">argxcParamExists</link>(argxc,&#32;<emphasis role="keywordtype">id</emphasis>)&#32;&amp;&amp;&#32;param-&gt;<link linkend="_structArgxcParam_1af685e909c26495d1ee2b52acf80960d0">subExists</link>&#32;&amp;&amp;&#32;index&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;
+00372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(size_t)index&#32;&lt;&#32;param-&gt;subExistsCount&#32;&amp;&amp;&#32;param-&gt;<link linkend="_structArgxcParam_1af685e909c26495d1ee2b52acf80960d0">subExists</link>[index];
+00373 }
+</programlisting><para>
+References <link linkend="_Argx_8c_source_1l00155">argxcFindParam()</link>, <link linkend="_Argx_8c_source_1l00209">argxcParamExists()</link>, and <link linkend="_types_8h_source_1l00039">ArgxcParam::subExists</link>.</para>
+</section>
+<anchor xml:id="_Argx_8h_1a016fceae24303178985a8e047262bd5e"/><section>
+    <title>argxcParamExists()</title>
+<indexterm><primary>argxcParamExists</primary><secondary>Argx.h</secondary></indexterm>
+<indexterm><primary>Argx.h</primary><secondary>argxcParamExists</secondary></indexterm>
+<para><computeroutput>bool argxcParamExists (<link linkend="_structArgxc">Argxc</link> * argxc, const char * id)</computeroutput></para><para>
+
+<para>Check if a parameter with the given ID exists. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argxc</entry><entry>
+<para>Pointer to the <link linkend="_structArgxc">Argxc</link> instance. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>id</entry><entry>
+<para>The identifier of the parameter. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if the parameter exists, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00209">209</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<programlisting linenumbering="unnumbered">00210 {
+00211 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_Argx_8c_1a4a12dce73edcc011355f47d4543e32a6">argxcFindParam</link>(argxc,&#32;<emphasis role="keywordtype">id</emphasis>)&#32;&gt;=&#32;0;
+00212 }
+</programlisting><para>
+References <link linkend="_Argx_8c_source_1l00155">argxcFindParam()</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8c_source_1l00366">argxcGetSubParam()</link>.</para>
+</section>
+</section>
+</section>

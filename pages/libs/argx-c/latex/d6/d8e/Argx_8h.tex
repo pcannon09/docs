@@ -1,0 +1,1302 @@
+\doxysection{inc/\+Argx.h File Reference}
+\hypertarget{Argx_8h}{}\label{Argx_8h}\index{inc/Argx.h@{inc/Argx.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include "{}types.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Argx_8h_a4b2d2f49ede5c7008816f5c2039d4c2c}{argxc\+Add\+Option}} (\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}argxc, \mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}} option)
+\begin{DoxyCompactList}\small\item\em Add a new option to the \doxylink{structArgxc}{Argxc} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Argx_8h_a68874cb095408ec91cf02d7ab0df0fa8}{argxc\+Add\+Sub\+Option}} (\mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}} \texorpdfstring{$\ast$}{*}parent, \mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}} sub\+Option)
+\begin{DoxyCompactList}\small\item\em Add a sub-\/option to a parent option. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{Argx_8h_a3f5733b4921f06fcfc46444313114b13}{argxc\+Compare\+Args}} (\mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}} \texorpdfstring{$\ast$}{*}options, size\+\_\+t options\+Count, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv, size\+\_\+t argv\+Count)
+\begin{DoxyCompactList}\small\item\em Compare if the given argv matches a list of \doxylink{structArgxcOptions}{Argxc\+Options}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Argx_8h_a05e89b0c2c00b96db95fa612a3a19809}{argxc\+Create}} (const char \texorpdfstring{$\ast$}{*}id, int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Create a new \doxylink{structArgxc}{Argxc} instance with a specified ID and command-\/line arguments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Argx_8h_a7490f1245ca836e793645d70dcabe7f6}{argxc\+Create\+Default}} (void)
+\begin{DoxyCompactList}\small\item\em Create a new \doxylink{structArgxc}{Argxc} instance with default values (empty ID and no arguments). \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Argx_8h_ad18963570800f99309c7ae551d09442b}{argxc\+Create\+Docs}} (\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}argxc, \mbox{\hyperlink{types_8h_a0eb907e7e710ee24d66bd7b881999ebb}{Argxc\+Style}} style, const char \texorpdfstring{$\ast$}{*}title, const char \texorpdfstring{$\ast$}{*}main\+Info)
+\begin{DoxyCompactList}\small\item\em Generate documentation for the defined options. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structArgxcError}{Argxc\+Error}} \mbox{\hyperlink{Argx_8h_aff55e2b9a01cc2b4d3bdd44264eef8bd}{argxc\+Create\+Error}} (const char \texorpdfstring{$\ast$}{*}type, const char \texorpdfstring{$\ast$}{*}error, const char \texorpdfstring{$\ast$}{*}help, int code)
+\begin{DoxyCompactList}\small\item\em Create an \doxylink{structArgxcError}{Argxc\+Error} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}} \mbox{\hyperlink{Argx_8h_a5efc30ffddcc4d6ba7c2db7b8ab680ec}{argxc\+Create\+Option}} (const char \texorpdfstring{$\ast$}{*}id, const char \texorpdfstring{$\ast$}{*}param, const char \texorpdfstring{$\ast$}{*}sparam, const char \texorpdfstring{$\ast$}{*}info, bool has\+Sub\+Params, bool has\+Any\+Sub\+Params)
+\begin{DoxyCompactList}\small\item\em Create a new option. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Argx_8h_a944b6c8a9498789cd0a51fdfe9a8c486}{argxc\+Destroy}} (\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}argxc)
+\begin{DoxyCompactList}\small\item\em Destroy an \doxylink{structArgxc}{Argxc} instance and free all associated memory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Argx_8h_a4a12dce73edcc011355f47d4543e32a6}{argxc\+Find\+Param}} (\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}argxc, const char \texorpdfstring{$\ast$}{*}id)
+\begin{DoxyCompactList}\small\item\em Find the index of a parameter by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Argx_8h_af46bf41910b18e11800500efd7e929fa}{argxc\+Free\+Error}} (\mbox{\hyperlink{structArgxcError}{Argxc\+Error}} \texorpdfstring{$\ast$}{*}error)
+\begin{DoxyCompactList}\small\item\em Free resources associated with an \doxylink{structArgxcError}{Argxc\+Error} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Argx_8h_ad1a1c82ca55187361d24a03c5fb977e6}{argxc\+Free\+Option}} (\mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}} \texorpdfstring{$\ast$}{*}option)
+\begin{DoxyCompactList}\small\item\em Free resources associated with an \doxylink{structArgxcOptions}{Argxc\+Options} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Argx_8h_a6798ce84afc7922cc08260fd52534b99}{argxc\+Free\+Param}} (\mbox{\hyperlink{structArgxcParam}{Argxc\+Param}} \texorpdfstring{$\ast$}{*}param)
+\begin{DoxyCompactList}\small\item\em Free resources associated with an \doxylink{structArgxcParam}{Argxc\+Param} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Argx_8h_a433f2018d5638506f50be3219c04ec71}{argxc\+Free\+String\+Array}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}array, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Free a string array returned from \doxylink{structArgxc}{Argxc} (e.\+g., argv array). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Argx_8h_a11fea89d38b49b571ce4f4499d0289d0}{argxc\+Get\+Argc}} (\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}argxc)
+\begin{DoxyCompactList}\small\item\em Get the number of command-\/line arguments passed. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Argx_8h_a219a52257f1e47549f9fc15979b6c563}{argxc\+Get\+Id}} (\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}argxc)
+\begin{DoxyCompactList}\small\item\em Get the identifier of the \doxylink{structArgxc}{Argxc} instance. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Argx_8h_a62e90d5a3e26834257bba4c68becfeb1}{argxc\+Get\+Main\+Args}} (\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}argxc, size\+\_\+t \texorpdfstring{$\ast$}{*}count)
+\begin{DoxyCompactList}\small\item\em Get the raw command-\/line arguments passed to \doxylink{structArgxc}{Argxc}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Argx_8h_afb1cebd21f607dfbe19ed784ea0fc319}{argxc\+Get\+Options}} (\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}argxc, size\+\_\+t \texorpdfstring{$\ast$}{*}count)
+\begin{DoxyCompactList}\small\item\em Get all top-\/level options defined for the \doxylink{structArgxc}{Argxc} instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structArgxcParam}{Argxc\+Param}} \mbox{\hyperlink{Argx_8h_a6ef72f8e604109911e4315f6840febf9}{argxc\+Get\+Param}} (\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}argxc, const char \texorpdfstring{$\ast$}{*}id)
+\begin{DoxyCompactList}\small\item\em Retrieve a parameter by ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{Argx_8h_a0767a3dc8167a77aada7a52c4d0e9d22}{argxc\+Get\+Sub\+Param}} (\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}argxc, const \mbox{\hyperlink{structArgxcParam}{Argxc\+Param}} \texorpdfstring{$\ast$}{*}param, const char \texorpdfstring{$\ast$}{*}id)
+\begin{DoxyCompactList}\small\item\em Retrieve a sub-\/parameter from a given parameter by ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{Argx_8h_a016fceae24303178985a8e047262bd5e}{argxc\+Param\+Exists}} (\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}argxc, const char \texorpdfstring{$\ast$}{*}id)
+\begin{DoxyCompactList}\small\item\em Check if a parameter with the given ID exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Argx_8h_a4b2d2f49ede5c7008816f5c2039d4c2c}\index{Argx.h@{Argx.h}!argxcAddOption@{argxcAddOption}}
+\index{argxcAddOption@{argxcAddOption}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcAddOption()}{argxcAddOption()}}
+{\footnotesize\ttfamily \label{Argx_8h_a4b2d2f49ede5c7008816f5c2039d4c2c} 
+void argxc\+Add\+Option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}}]{argxc}{, }\item[{\mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}}}]{option}{}\end{DoxyParamCaption})}
+
+
+
+Add a new option to the \doxylink{structArgxc}{Argxc} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argxc} & Pointer to the \doxylink{structArgxc}{Argxc} instance. \\
+\hline
+{\em option} & The option to add. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00124}{124}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00125\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{if}\ (!argxc)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{if}\ (argxc-\/>\mbox{\hyperlink{structArgxc_ad25d74e066fa21cb7db95f901f0eabe6}{optionsCount}}\ >=\ argxc-\/>\mbox{\hyperlink{structArgxc_a73fbef3389172b12448589e62c5aff34}{optionsCapacity}})}
+\DoxyCodeLine{00129\ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_a73fbef3389172b12448589e62c5aff34}{optionsCapacity}}\ *=\ 2;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}\ =\ realloc(argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}},\ argxc-\/>\mbox{\hyperlink{structArgxc_a73fbef3389172b12448589e62c5aff34}{optionsCapacity}}\ *\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}));}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}[argxc-\/>\mbox{\hyperlink{structArgxc_ad25d74e066fa21cb7db95f901f0eabe6}{optionsCount}}++]\ =\ option;}
+\DoxyCodeLine{00136\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Argx_8c_source_l00020}{Argxc\+::options}}, \mbox{\hyperlink{Argx_8c_source_l00022}{Argxc\+::options\+Capacity}}, and \mbox{\hyperlink{Argx_8c_source_l00021}{Argxc\+::options\+Count}}.
+
+\Hypertarget{Argx_8h_a68874cb095408ec91cf02d7ab0df0fa8}\index{Argx.h@{Argx.h}!argxcAddSubOption@{argxcAddSubOption}}
+\index{argxcAddSubOption@{argxcAddSubOption}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcAddSubOption()}{argxcAddSubOption()}}
+{\footnotesize\ttfamily \label{Argx_8h_a68874cb095408ec91cf02d7ab0df0fa8} 
+void argxc\+Add\+Sub\+Option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}} \texorpdfstring{$\ast$}{*}}]{parent}{, }\item[{\mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}}}]{sub\+Option}{}\end{DoxyParamCaption})}
+
+
+
+Add a sub-\/option to a parent option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Pointer to the parent option. \\
+\hline
+{\em sub\+Option} & Sub-\/option to add under the parent. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00138}{138}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00139\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{if}\ (!parent)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{if}\ (parent-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}}\ >=\ parent-\/>\mbox{\hyperlink{structArgxcOptions_abe87d3c8fcdf1a843ea90652c78b5ed1}{subParamsCapacity}})}
+\DoxyCodeLine{00143\ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ newCapacity\ =\ parent-\/>\mbox{\hyperlink{structArgxcOptions_abe87d3c8fcdf1a843ea90652c78b5ed1}{subParamsCapacity}}\ ==\ 0\ ?\ 2\ :\ parent-\/>\mbox{\hyperlink{structArgxcOptions_abe87d3c8fcdf1a843ea90652c78b5ed1}{subParamsCapacity}}\ *\ 2;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *newSubParams\ =\ realloc(parent-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}},\ newCapacity\ *\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}));}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!newSubParams)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ parent-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}\ =\ newSubParams;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ parent-\/>\mbox{\hyperlink{structArgxcOptions_abe87d3c8fcdf1a843ea90652c78b5ed1}{subParamsCapacity}}\ =\ newCapacity;}
+\DoxyCodeLine{00150\ \ \ \ \ \}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ parent-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[parent-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}}++]\ =\ subOption;}
+\DoxyCodeLine{00153\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00032}{Argxc\+Options\+::sub\+Params}}, \mbox{\hyperlink{types_8h_source_l00034}{Argxc\+Options\+::sub\+Params\+Capacity}}, and \mbox{\hyperlink{types_8h_source_l00033}{Argxc\+Options\+::sub\+Params\+Count}}.
+
+\Hypertarget{Argx_8h_a3f5733b4921f06fcfc46444313114b13}\index{Argx.h@{Argx.h}!argxcCompareArgs@{argxcCompareArgs}}
+\index{argxcCompareArgs@{argxcCompareArgs}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcCompareArgs()}{argxcCompareArgs()}}
+{\footnotesize\ttfamily \label{Argx_8h_a3f5733b4921f06fcfc46444313114b13} 
+bool argxc\+Compare\+Args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}} \texorpdfstring{$\ast$}{*}}]{options}{, }\item[{size\+\_\+t}]{options\+Count}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{, }\item[{size\+\_\+t}]{argv\+Count}{}\end{DoxyParamCaption})}
+
+
+
+Compare if the given argv matches a list of \doxylink{structArgxcOptions}{Argxc\+Options}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & Array of \doxylink{structArgxcOptions}{Argxc\+Options}. \\
+\hline
+{\em options\+Count} & Number of options. \\
+\hline
+{\em argv} & Array of argument strings. \\
+\hline
+{\em argv\+Count} & Number of argument strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if argv matches the options, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00499}{499}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00500\ \{}
+\DoxyCodeLine{00501\ \ \ \ \ \textcolor{keywordflow}{if}\ (!options\ ||\ !argv)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00502\ }
+\DoxyCodeLine{00503\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 1;\ i\ <\ argvCount;\ i++)}
+\DoxyCodeLine{00504\ \ \ \ \ \{}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *arg\ =\ argv[i];}
+\DoxyCodeLine{00506\ }
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ found\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasSubParams\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasAnySubParams\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *matchedOption\ =\ NULL;}
+\DoxyCodeLine{00511\ }
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ the\ matching\ option}}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ optionsCount;\ j++)}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((options[j].sparam\ \&\&\ strcmp(options[j].sparam,\ arg)\ ==\ 0)\ ||}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (options[j].param\ \&\&\ strcmp(options[j].param,\ arg)\ ==\ 0))}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasSubParams\ =\ options[j].\mbox{\hyperlink{structArgxcOptions_add27505ea653aa67161a226f9daff3ca}{hasSubParams}};}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasAnySubParams\ =\ options[j].\mbox{\hyperlink{structArgxcOptions_ad36df6627ddcae7c469d92794d5a5ddc}{hasAnySubParams}};}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matchedOption\ =\ \&options[j];}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00525\ }
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!found)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00527\ }
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hasSubParams\ ||\ hasAnySubParams)}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ there's\ a\ next\ argument}}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ +\ 1\ <\ argvCount)}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *nextArg\ =\ argv[i\ +\ 1];}
+\DoxyCodeLine{00534\ }
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ next\ argument\ is\ a\ sub-\/parameter}}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isSubParam\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00537\ }
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nextArg\ \&\&\ strlen(nextArg)\ >\ 0\ \&\&\ nextArg[0]\ !=\ \textcolor{charliteral}{'-\/'})}
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validate\ if\ it's\ a\ valid\ sub-\/parameter}}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ k\ =\ 0;\ k\ <\ matchedOption-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}};\ k++)}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((matchedOption-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[k].\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ \&\&\ strcmp(matchedOption-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[k].\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}},\ nextArg)\ ==\ 0)\ ||}
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (matchedOption-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[k].\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ \&\&\ strcmp(matchedOption-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[k].\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}},\ nextArg)\ ==\ 0))}
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isSubParam\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00550\ }
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isSubParam)}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00553\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i++;\ \textcolor{comment}{//\ Skip\ the\ sub-\/parameter}}
+\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (hasSubParams\ ||\ hasAnySubParams)}
+\DoxyCodeLine{00555\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00557\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00558\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (hasSubParams\ ||\ hasAnySubParams)}
+\DoxyCodeLine{00559\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00562\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00563\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00564\ \ \ \ \ \}}
+\DoxyCodeLine{00565\ }
+\DoxyCodeLine{00566\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00567\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00031}{Argxc\+Options\+::has\+Any\+Sub\+Params}}, \mbox{\hyperlink{types_8h_source_l00030}{Argxc\+Options\+::has\+Sub\+Params}}, \mbox{\hyperlink{types_8h_source_l00027}{Argxc\+Options\+::param}}, \mbox{\hyperlink{types_8h_source_l00028}{Argxc\+Options\+::sparam}}, \mbox{\hyperlink{types_8h_source_l00032}{Argxc\+Options\+::sub\+Params}}, and \mbox{\hyperlink{types_8h_source_l00033}{Argxc\+Options\+::sub\+Params\+Count}}.
+
+\Hypertarget{Argx_8h_a05e89b0c2c00b96db95fa612a3a19809}\index{Argx.h@{Argx.h}!argxcCreate@{argxcCreate}}
+\index{argxcCreate@{argxcCreate}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcCreate()}{argxcCreate()}}
+{\footnotesize\ttfamily \label{Argx_8h_a05e89b0c2c00b96db95fa612a3a19809} 
+\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*} argxc\+Create (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{id}{, }\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Create a new \doxylink{structArgxc}{Argxc} instance with a specified ID and command-\/line arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identifier for the parser instance. \\
+\hline
+{\em argc} & Number of command-\/line arguments. \\
+\hline
+{\em argv} & Array of command-\/line argument strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Argxc\texorpdfstring{$\ast$}{*} Pointer to the created \doxylink{structArgxc}{Argxc} instance. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00064}{64}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{structArgxc}{Argxc}}\ *argxc\ =\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structArgxc}{Argxc}}));}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{if}\ (!argxc)\ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_aaa5a7528c35f7c26ff0c7283db33fe8b}{id}}\ =\ \mbox{\hyperlink{Argx_8c_a814b3298d81b070e52a987654d18d8a2}{stringDuplicate}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00070\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_ae48ba4369d927bced0bc2b3eb76cc4e5}{mainArgc}}\ =\ argc;}
+\DoxyCodeLine{00071\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}}\ =\ argc;}
+\DoxyCodeLine{00072\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}\ =\ malloc(argc\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
+\DoxyCodeLine{00073\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_ad25d74e066fa21cb7db95f901f0eabe6}{optionsCount}}\ =\ 0;}
+\DoxyCodeLine{00074\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_a73fbef3389172b12448589e62c5aff34}{optionsCapacity}}\ =\ 10;}
+\DoxyCodeLine{00075\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}\ =\ malloc(argxc-\/>\mbox{\hyperlink{structArgxc_a73fbef3389172b12448589e62c5aff34}{optionsCapacity}}\ *\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}));}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{if}\ (!argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}\ ||\ !argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}})}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Argx_8c_a944b6c8a9498789cd0a51fdfe9a8c486}{argxcDestroy}}(argxc);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ argc;\ i++)}
+\DoxyCodeLine{00084\ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[i]\ =\ \mbox{\hyperlink{Argx_8c_a814b3298d81b070e52a987654d18d8a2}{stringDuplicate}}(argv[i]);}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{return}\ argxc;}
+\DoxyCodeLine{00089\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Argx_8c_source_l00113}{argxc\+Destroy()}}, \mbox{\hyperlink{Argx_8c_source_l00016}{Argxc\+::id}}, \mbox{\hyperlink{Argx_8c_source_l00019}{Argxc\+::main\+Argc}}, \mbox{\hyperlink{Argx_8c_source_l00017}{Argxc\+::main\+Args}}, \mbox{\hyperlink{Argx_8c_source_l00018}{Argxc\+::main\+Args\+Count}}, \mbox{\hyperlink{Argx_8c_source_l00020}{Argxc\+::options}}, \mbox{\hyperlink{Argx_8c_source_l00022}{Argxc\+::options\+Capacity}}, \mbox{\hyperlink{Argx_8c_source_l00021}{Argxc\+::options\+Count}}, and \mbox{\hyperlink{Argx_8c_source_l00026}{string\+Duplicate()}}.
+
+\Hypertarget{Argx_8h_a7490f1245ca836e793645d70dcabe7f6}\index{Argx.h@{Argx.h}!argxcCreateDefault@{argxcCreateDefault}}
+\index{argxcCreateDefault@{argxcCreateDefault}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcCreateDefault()}{argxcCreateDefault()}}
+{\footnotesize\ttfamily \label{Argx_8h_a7490f1245ca836e793645d70dcabe7f6} 
+\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*} argxc\+Create\+Default (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Create a new \doxylink{structArgxc}{Argxc} instance with default values (empty ID and no arguments). 
+
+\begin{DoxyReturn}{Returns}
+Argxc\texorpdfstring{$\ast$}{*} Pointer to the default \doxylink{structArgxc}{Argxc} instance. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00091}{91}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{structArgxc}{Argxc}}\ *argxc\ =\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structArgxc}{Argxc}}));}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{if}\ (!argxc)\ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_aaa5a7528c35f7c26ff0c7283db33fe8b}{id}}\ =\ NULL;}
+\DoxyCodeLine{00097\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}\ =\ NULL;}
+\DoxyCodeLine{00098\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}}\ =\ 0;}
+\DoxyCodeLine{00099\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_ae48ba4369d927bced0bc2b3eb76cc4e5}{mainArgc}}\ =\ 0;}
+\DoxyCodeLine{00100\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_ad25d74e066fa21cb7db95f901f0eabe6}{optionsCount}}\ =\ 0;}
+\DoxyCodeLine{00101\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_a73fbef3389172b12448589e62c5aff34}{optionsCapacity}}\ =\ 10;}
+\DoxyCodeLine{00102\ \ \ \ \ argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}\ =\ malloc(argxc-\/>\mbox{\hyperlink{structArgxc_a73fbef3389172b12448589e62c5aff34}{optionsCapacity}}\ *\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}));}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{if}\ (!argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}})}
+\DoxyCodeLine{00105\ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ free(argxc);\ argxc\ =\ NULL;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00108\ \ \ \ \ \}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordflow}{return}\ argxc;}
+\DoxyCodeLine{00111\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Argx_8c_source_l00016}{Argxc\+::id}}, \mbox{\hyperlink{Argx_8c_source_l00019}{Argxc\+::main\+Argc}}, \mbox{\hyperlink{Argx_8c_source_l00017}{Argxc\+::main\+Args}}, \mbox{\hyperlink{Argx_8c_source_l00018}{Argxc\+::main\+Args\+Count}}, \mbox{\hyperlink{Argx_8c_source_l00020}{Argxc\+::options}}, \mbox{\hyperlink{Argx_8c_source_l00022}{Argxc\+::options\+Capacity}}, and \mbox{\hyperlink{Argx_8c_source_l00021}{Argxc\+::options\+Count}}.
+
+\Hypertarget{Argx_8h_ad18963570800f99309c7ae551d09442b}\index{Argx.h@{Argx.h}!argxcCreateDocs@{argxcCreateDocs}}
+\index{argxcCreateDocs@{argxcCreateDocs}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcCreateDocs()}{argxcCreateDocs()}}
+{\footnotesize\ttfamily \label{Argx_8h_ad18963570800f99309c7ae551d09442b} 
+char \texorpdfstring{$\ast$}{*} argxc\+Create\+Docs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}}]{argxc}{, }\item[{\mbox{\hyperlink{types_8h_a0eb907e7e710ee24d66bd7b881999ebb}{Argxc\+Style}}}]{style}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{main\+Info}{}\end{DoxyParamCaption})}
+
+
+
+Generate documentation for the defined options. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argxc} & Pointer to the \doxylink{structArgxc}{Argxc} instance. \\
+\hline
+{\em style} & Documentation output style. \\
+\hline
+{\em title} & Title of the documentation. \\
+\hline
+{\em main\+Info} & Additional info to be displayed in the documentation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char\texorpdfstring{$\ast$}{*} Documentation string (must be freed by caller). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00375}{375}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00376\ \{}
+\DoxyCodeLine{00377\ \ \ \ \ \textcolor{keywordflow}{if}\ (!argxc)\ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00378\ }
+\DoxyCodeLine{00379\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ bufferSize\ =\ 4096;}
+\DoxyCodeLine{00380\ \ \ \ \ \textcolor{keywordtype}{char}\ *contentStr\ =\ malloc(bufferSize);}
+\DoxyCodeLine{00381\ \ \ \ \ \textcolor{keywordflow}{if}\ (!contentStr)\ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00382\ }
+\DoxyCodeLine{00383\ \ \ \ \ contentStr[0]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00384\ }
+\DoxyCodeLine{00385\ \ \ \ \ \textcolor{keywordflow}{if}\ (style\ ==\ \mbox{\hyperlink{types_8h_a0eb907e7e710ee24d66bd7b881999ebba5926a1c4b95fe8294eee1ab316063d47}{ARGX\_STYLE\_PROFESSIONAL}})}
+\DoxyCodeLine{00386\ \ \ \ \ \{}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_ad25d74e066fa21cb7db95f901f0eabe6}{optionsCount}};\ i++)}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *opt\ =\ \&argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}[i];}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Main\ option\ header\ line}}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ temp[512];}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ snprintf(temp,\ \textcolor{keyword}{sizeof}(temp),\ \textcolor{stringliteral}{"{}ID:\ \%s\(\backslash\)n"{}},\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}}\ ?\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}}\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ temp);}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ snprintf(temp,\ \textcolor{keyword}{sizeof}(temp),\ \textcolor{stringliteral}{"{}[\ \%s\ |\ \%s"{}},\ }
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ opt-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ ?\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ :\ \textcolor{stringliteral}{"{}"{}},\ }
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ ?\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ temp);}
+\DoxyCodeLine{00400\ }
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opt-\/>\mbox{\hyperlink{structArgxcOptions_add27505ea653aa67161a226f9daff3ca}{hasSubParams}}\ \&\&\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}}\ >\ 0)}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ \textcolor{stringliteral}{"{}\ [\ "{}});}
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}};\ j++)}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[j].\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ ?\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[j].\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ <\ opt-\/>subParamsCount\ -\/\ 1)}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ \textcolor{stringliteral}{"{}\ |\ "{}});}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (j\ <=\ opt-\/>subParamsCount)}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ \textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ \textcolor{stringliteral}{"{}]\ ]\ "{}});}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ \textcolor{stringliteral}{"{}\ ]\ "{}});}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00422\ }
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ opt-\/>\mbox{\hyperlink{structArgxcOptions_aa912383cc480f5009cac8058454e279b}{info}}\ ?\ opt-\/>\mbox{\hyperlink{structArgxcOptions_aa912383cc480f5009cac8058454e279b}{info}}\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00425\ }
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Print\ all\ sub-\/options}}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opt-\/>\mbox{\hyperlink{structArgxcOptions_add27505ea653aa67161a226f9daff3ca}{hasSubParams}}\ \&\&\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}}\ >\ 0)}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}};\ j++)}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *sub\ =\ \&opt-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[j];}
+\DoxyCodeLine{00432\ }
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ spacing\ for\ alignment}}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ paramLen\ =\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ ?\ strlen(opt-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}})\ :\ 0;}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ k\ =\ 0;\ k\ <\ paramLen;\ k++)}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ \textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ snprintf(temp,\ \textcolor{keyword}{sizeof}(temp),\ \textcolor{stringliteral}{"{}\ \ [\ \%s\ |\ \%s\ ]\ \%s\(\backslash\)n"{}},}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sub-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ ?\ sub-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ :\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sub-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ ?\ sub-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ :\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sub-\/>\mbox{\hyperlink{structArgxcOptions_aa912383cc480f5009cac8058454e279b}{info}}\ ?\ sub-\/>\mbox{\hyperlink{structArgxcOptions_aa912383cc480f5009cac8058454e279b}{info}}\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ temp);}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00448\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (style\ ==\ \mbox{\hyperlink{types_8h_a0eb907e7e710ee24d66bd7b881999ebbad8465ee3943616d15c25e8b2ff2d06e2}{ARGX\_STYLE\_SIMPLE}})}
+\DoxyCodeLine{00449\ \ \ \ \ \{}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_ad25d74e066fa21cb7db95f901f0eabe6}{optionsCount}};\ i++)}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *opt\ =\ \&argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}[i];}
+\DoxyCodeLine{00453\ }
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ temp[256];}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ snprintf(temp,\ \textcolor{keyword}{sizeof}(temp),\ \textcolor{stringliteral}{"{}\%s,\ \%s\ -\/\ \%s\(\backslash\)n"{}},}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ opt-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ ?\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ :\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ ?\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ :\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ opt-\/>\mbox{\hyperlink{structArgxcOptions_aa912383cc480f5009cac8058454e279b}{info}}\ ?\ opt-\/>\mbox{\hyperlink{structArgxcOptions_aa912383cc480f5009cac8058454e279b}{info}}\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ temp);}
+\DoxyCodeLine{00460\ }
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opt-\/>\mbox{\hyperlink{structArgxcOptions_add27505ea653aa67161a226f9daff3ca}{hasSubParams}}\ \&\&\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}}\ >\ 0)}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}};\ j++)}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *sub\ =\ \&opt-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[j];}
+\DoxyCodeLine{00466\ }
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ snprintf(temp,\ \textcolor{keyword}{sizeof}(temp),\ \textcolor{stringliteral}{"{}\ \ \%s,\ \%s\ -\/\ \%s\(\backslash\)n"{}},}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sub-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ ?\ sub-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ :\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sub-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ ?\ sub-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ :\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sub-\/>\mbox{\hyperlink{structArgxcOptions_aa912383cc480f5009cac8058454e279b}{info}}\ ?\ sub-\/>\mbox{\hyperlink{structArgxcOptions_aa912383cc480f5009cac8058454e279b}{info}}\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strcat(contentStr,\ temp);}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00475\ \ \ \ \ \}}
+\DoxyCodeLine{00476\ }
+\DoxyCodeLine{00477\ \ \ \ \ \textcolor{comment}{//\ Combine\ title,\ mainInfo,\ and\ content}}
+\DoxyCodeLine{00478\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ titleLen\ =\ title\ ?\ strlen(title)\ :\ 0;}
+\DoxyCodeLine{00479\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ mainInfoLen\ =\ mainInfo\ ?\ strlen(mainInfo)\ :\ 0;}
+\DoxyCodeLine{00480\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ contentLen\ =\ strlen(contentStr);}
+\DoxyCodeLine{00481\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ totalLen\ =\ titleLen\ +\ mainInfoLen\ +\ contentLen\ +\ 10;\ \textcolor{comment}{//\ Extra\ space\ for\ newlines}}
+\DoxyCodeLine{00482\ }
+\DoxyCodeLine{00483\ \ \ \ \ \textcolor{keywordtype}{char}\ *result\ =\ malloc(totalLen);}
+\DoxyCodeLine{00484\ \ \ \ \ \textcolor{keywordflow}{if}\ (!result)}
+\DoxyCodeLine{00485\ \ \ \ \ \{}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ free(contentStr);\ contentStr\ =\ NULL;}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00488\ \ \ \ \ \}}
+\DoxyCodeLine{00489\ }
+\DoxyCodeLine{00490\ \ \ \ \ snprintf(result,\ totalLen,\ \textcolor{stringliteral}{"{}\%s\(\backslash\)n\%s\(\backslash\)n\%s"{}},}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ title\ ?\ title\ :\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ mainInfo\ ?\ mainInfo\ :\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \ \ \ \ contentStr);}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00495\ \ \ \ \ free(contentStr);\ contentStr\ =\ NULL;}
+\DoxyCodeLine{00496\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00497\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00011}{ARGX\+\_\+\+STYLE\+\_\+\+PROFESSIONAL}}, \mbox{\hyperlink{types_8h_source_l00012}{ARGX\+\_\+\+STYLE\+\_\+\+SIMPLE}}, \mbox{\hyperlink{types_8h_source_l00030}{Argxc\+Options\+::has\+Sub\+Params}}, \mbox{\hyperlink{types_8h_source_l00026}{Argxc\+Options\+::id}}, \mbox{\hyperlink{types_8h_source_l00029}{Argxc\+Options\+::info}}, \mbox{\hyperlink{Argx_8c_source_l00020}{Argxc\+::options}}, \mbox{\hyperlink{Argx_8c_source_l00021}{Argxc\+::options\+Count}}, \mbox{\hyperlink{types_8h_source_l00027}{Argxc\+Options\+::param}}, \mbox{\hyperlink{types_8h_source_l00028}{Argxc\+Options\+::sparam}}, \mbox{\hyperlink{types_8h_source_l00032}{Argxc\+Options\+::sub\+Params}}, and \mbox{\hyperlink{types_8h_source_l00033}{Argxc\+Options\+::sub\+Params\+Count}}.
+
+\Hypertarget{Argx_8h_aff55e2b9a01cc2b4d3bdd44264eef8bd}\index{Argx.h@{Argx.h}!argxcCreateError@{argxcCreateError}}
+\index{argxcCreateError@{argxcCreateError}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcCreateError()}{argxcCreateError()}}
+{\footnotesize\ttfamily \label{Argx_8h_aff55e2b9a01cc2b4d3bdd44264eef8bd} 
+\mbox{\hyperlink{structArgxcError}{Argxc\+Error}} argxc\+Create\+Error (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{type}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{error}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{help}{, }\item[{int}]{code}{}\end{DoxyParamCaption})}
+
+
+
+Create an \doxylink{structArgxcError}{Argxc\+Error} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type/category of the error. \\
+\hline
+{\em error} & Error message. \\
+\hline
+{\em help} & Help message for resolving the error. \\
+\hline
+{\em code} & Exit code or error code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structArgxcError}{Argxc\+Error} The created error struct. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00667}{667}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00668\ \{}
+\DoxyCodeLine{00669\ \ \ \ \ \mbox{\hyperlink{structArgxcError}{ArgxcError}}\ err\ =\ \{0\};}
+\DoxyCodeLine{00670\ }
+\DoxyCodeLine{00671\ \ \ \ \ err.\mbox{\hyperlink{structArgxcError_ab4531054aa9750f66f0cae13f67365ad}{type}}\ =\ \mbox{\hyperlink{Argx_8c_a814b3298d81b070e52a987654d18d8a2}{stringDuplicate}}(type);}
+\DoxyCodeLine{00672\ \ \ \ \ err.\mbox{\hyperlink{structArgxcError_a88d100236636b2eb326025d527ad26f3}{error}}\ =\ \mbox{\hyperlink{Argx_8c_a814b3298d81b070e52a987654d18d8a2}{stringDuplicate}}(error);}
+\DoxyCodeLine{00673\ \ \ \ \ err.\mbox{\hyperlink{structArgxcError_a9e83392469b228017a3b6492392f68ad}{help}}\ =\ \mbox{\hyperlink{Argx_8c_a814b3298d81b070e52a987654d18d8a2}{stringDuplicate}}(help);}
+\DoxyCodeLine{00674\ \ \ \ \ err.\mbox{\hyperlink{structArgxcError_a617299f808dff4b2656bf04384e64bf9}{code}}\ =\ code;}
+\DoxyCodeLine{00675\ }
+\DoxyCodeLine{00676\ \ \ \ \ \textcolor{keywordflow}{return}\ err;}
+\DoxyCodeLine{00677\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00019}{Argxc\+Error\+::code}}, \mbox{\hyperlink{types_8h_source_l00017}{Argxc\+Error\+::error}}, \mbox{\hyperlink{types_8h_source_l00018}{Argxc\+Error\+::help}}, \mbox{\hyperlink{Argx_8c_source_l00026}{string\+Duplicate()}}, and \mbox{\hyperlink{types_8h_source_l00016}{Argxc\+Error\+::type}}.
+
+\Hypertarget{Argx_8h_a5efc30ffddcc4d6ba7c2db7b8ab680ec}\index{Argx.h@{Argx.h}!argxcCreateOption@{argxcCreateOption}}
+\index{argxcCreateOption@{argxcCreateOption}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcCreateOption()}{argxcCreateOption()}}
+{\footnotesize\ttfamily \label{Argx_8h_a5efc30ffddcc4d6ba7c2db7b8ab680ec} 
+\mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}} argxc\+Create\+Option (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{id}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{param}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{sparam}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{info}{, }\item[{bool}]{has\+Sub\+Params}{, }\item[{bool}]{has\+Any\+Sub\+Params}{}\end{DoxyParamCaption})}
+
+
+
+Create a new option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Option identifier. \\
+\hline
+{\em param} & Parameter name (e.\+g., --param). \\
+\hline
+{\em sparam} & Short form (e.\+g., -\/p). \\
+\hline
+{\em info} & Description of the option. \\
+\hline
+{\em has\+Sub\+Params} & Whether the option has sub-\/parameters. \\
+\hline
+{\em has\+Any\+Sub\+Params} & Whether the option accepts any sub-\/parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structArgxcOptions}{Argxc\+Options} The created option. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00607}{607}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00609\ \{}
+\DoxyCodeLine{00610\ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ option\ =\ \{0\};}
+\DoxyCodeLine{00611\ }
+\DoxyCodeLine{00612\ \ \ \ \ option.\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}}\ =\ \mbox{\hyperlink{Argx_8c_a814b3298d81b070e52a987654d18d8a2}{stringDuplicate}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00613\ \ \ \ \ option.\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ =\ \mbox{\hyperlink{Argx_8c_a814b3298d81b070e52a987654d18d8a2}{stringDuplicate}}(param);}
+\DoxyCodeLine{00614\ \ \ \ \ option.\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ =\ \mbox{\hyperlink{Argx_8c_a814b3298d81b070e52a987654d18d8a2}{stringDuplicate}}(sparam);}
+\DoxyCodeLine{00615\ \ \ \ \ option.\mbox{\hyperlink{structArgxcOptions_aa912383cc480f5009cac8058454e279b}{info}}\ =\ \mbox{\hyperlink{Argx_8c_a814b3298d81b070e52a987654d18d8a2}{stringDuplicate}}(info);}
+\DoxyCodeLine{00616\ \ \ \ \ option.\mbox{\hyperlink{structArgxcOptions_add27505ea653aa67161a226f9daff3ca}{hasSubParams}}\ =\ hasSubParams;}
+\DoxyCodeLine{00617\ \ \ \ \ option.\mbox{\hyperlink{structArgxcOptions_ad36df6627ddcae7c469d92794d5a5ddc}{hasAnySubParams}}\ =\ hasAnySubParams;}
+\DoxyCodeLine{00618\ \ \ \ \ option.\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}\ =\ NULL;}
+\DoxyCodeLine{00619\ \ \ \ \ option.\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}}\ =\ 0;}
+\DoxyCodeLine{00620\ }
+\DoxyCodeLine{00621\ \ \ \ \ \textcolor{keywordflow}{return}\ option;}
+\DoxyCodeLine{00622\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00031}{Argxc\+Options\+::has\+Any\+Sub\+Params}}, \mbox{\hyperlink{types_8h_source_l00030}{Argxc\+Options\+::has\+Sub\+Params}}, \mbox{\hyperlink{types_8h_source_l00026}{Argxc\+Options\+::id}}, \mbox{\hyperlink{types_8h_source_l00029}{Argxc\+Options\+::info}}, \mbox{\hyperlink{types_8h_source_l00027}{Argxc\+Options\+::param}}, \mbox{\hyperlink{types_8h_source_l00028}{Argxc\+Options\+::sparam}}, \mbox{\hyperlink{Argx_8c_source_l00026}{string\+Duplicate()}}, \mbox{\hyperlink{types_8h_source_l00032}{Argxc\+Options\+::sub\+Params}}, and \mbox{\hyperlink{types_8h_source_l00033}{Argxc\+Options\+::sub\+Params\+Count}}.
+
+\Hypertarget{Argx_8h_a944b6c8a9498789cd0a51fdfe9a8c486}\index{Argx.h@{Argx.h}!argxcDestroy@{argxcDestroy}}
+\index{argxcDestroy@{argxcDestroy}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcDestroy()}{argxcDestroy()}}
+{\footnotesize\ttfamily \label{Argx_8h_a944b6c8a9498789cd0a51fdfe9a8c486} 
+void argxc\+Destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}}]{argxc}{}\end{DoxyParamCaption})}
+
+
+
+Destroy an \doxylink{structArgxc}{Argxc} instance and free all associated memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argxc} & Pointer to the \doxylink{structArgxc}{Argxc} instance to destroy. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00113}{113}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordflow}{if}\ (!argxc)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ free(argxc-\/>\mbox{\hyperlink{structArgxc_aaa5a7528c35f7c26ff0c7283db33fe8b}{id}});\ argxc-\/>\mbox{\hyperlink{structArgxc_aaa5a7528c35f7c26ff0c7283db33fe8b}{id}}\ =\ NULL;}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordflow}{if}\ (argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}})\ \mbox{\hyperlink{Argx_8c_a420b857128cfa7527dc66424a1ece935}{freeStringArray}}(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}},\ argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}});}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{if}\ (argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}})\ \mbox{\hyperlink{Argx_8c_acac8053f967174a1b860aad28c2b12d0}{freeOptionsArray}}(argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}},\ argxc-\/>\mbox{\hyperlink{structArgxc_ad25d74e066fa21cb7db95f901f0eabe6}{optionsCount}});}
+\DoxyCodeLine{00120\ \ \ \ \ free(argxc);\ argxc\ =\ NULL;}
+\DoxyCodeLine{00121\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Argx_8c_source_l00050}{free\+Options\+Array()}}, \mbox{\hyperlink{Argx_8c_source_l00038}{free\+String\+Array()}}, \mbox{\hyperlink{Argx_8c_source_l00016}{Argxc\+::id}}, \mbox{\hyperlink{Argx_8c_source_l00017}{Argxc\+::main\+Args}}, \mbox{\hyperlink{Argx_8c_source_l00018}{Argxc\+::main\+Args\+Count}}, \mbox{\hyperlink{Argx_8c_source_l00020}{Argxc\+::options}}, and \mbox{\hyperlink{Argx_8c_source_l00021}{Argxc\+::options\+Count}}.
+
+
+
+Referenced by \mbox{\hyperlink{Argx_8c_source_l00064}{argxc\+Create()}}.
+
+\Hypertarget{Argx_8h_a4a12dce73edcc011355f47d4543e32a6}\index{Argx.h@{Argx.h}!argxcFindParam@{argxcFindParam}}
+\index{argxcFindParam@{argxcFindParam}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcFindParam()}{argxcFindParam()}}
+{\footnotesize\ttfamily \label{Argx_8h_a4a12dce73edcc011355f47d4543e32a6} 
+int argxc\+Find\+Param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}}]{argxc}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Find the index of a parameter by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argxc} & Pointer to the \doxylink{structArgxc}{Argxc} instance. \\
+\hline
+{\em id} & The identifier of the parameter to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Index of the parameter, or -\/1 if not found. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00155}{155}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00156\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordflow}{if}\ (!argxc\ ||\ !\textcolor{keywordtype}{id})\ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//\ First\ check\ if\ it's\ a\ main\ parameter}}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_ad25d74e066fa21cb7db95f901f0eabe6}{optionsCount}};\ i++)}
+\DoxyCodeLine{00161\ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}[i].\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}[i].\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}},\ \textcolor{keywordtype}{id})\ ==\ 0)}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ this\ main\ parameter\ exists\ in\ arguments}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}};\ j++)}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}[i].\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[j],\ argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}[i].\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}})\ ==\ 0)\ ||}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}[i].\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[j],\ argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}[i].\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}})\ ==\ 0))}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{int})i;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00174\ \ \ \ \ \}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//\ Then\ look\ for\ sub-\/parameters}}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_ad25d74e066fa21cb7db95f901f0eabe6}{optionsCount}};\ i++)}
+\DoxyCodeLine{00178\ \ \ \ \ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *opt\ =\ \&argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}[i];}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ parent\ option\ exists\ in\ the\ arguments}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ parentExists\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}};\ j++)}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((opt-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[j],\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}})\ ==\ 0)\ ||}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (opt-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[j],\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}})\ ==\ 0))}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parentExists\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parentExists)}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ the\ index\ of\ the\ requested\ sub-\/parameter}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}};\ j++)}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opt-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[j].\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}}\ \&\&\ strcmp(opt-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[j].\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}},\ \textcolor{keywordtype}{id})\ ==\ 0)}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{int})j;}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00204\ \ \ \ \ \}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;\ \textcolor{comment}{//\ Not\ found}}
+\DoxyCodeLine{00207\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00026}{Argxc\+Options\+::id}}, \mbox{\hyperlink{Argx_8c_source_l00017}{Argxc\+::main\+Args}}, \mbox{\hyperlink{Argx_8c_source_l00018}{Argxc\+::main\+Args\+Count}}, \mbox{\hyperlink{Argx_8c_source_l00020}{Argxc\+::options}}, \mbox{\hyperlink{Argx_8c_source_l00021}{Argxc\+::options\+Count}}, \mbox{\hyperlink{types_8h_source_l00027}{Argxc\+Options\+::param}}, \mbox{\hyperlink{types_8h_source_l00028}{Argxc\+Options\+::sparam}}, \mbox{\hyperlink{types_8h_source_l00032}{Argxc\+Options\+::sub\+Params}}, and \mbox{\hyperlink{types_8h_source_l00033}{Argxc\+Options\+::sub\+Params\+Count}}.
+
+
+
+Referenced by \mbox{\hyperlink{Argx_8c_source_l00366}{argxc\+Get\+Sub\+Param()}}, and \mbox{\hyperlink{Argx_8c_source_l00209}{argxc\+Param\+Exists()}}.
+
+\Hypertarget{Argx_8h_af46bf41910b18e11800500efd7e929fa}\index{Argx.h@{Argx.h}!argxcFreeError@{argxcFreeError}}
+\index{argxcFreeError@{argxcFreeError}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcFreeError()}{argxcFreeError()}}
+{\footnotesize\ttfamily \label{Argx_8h_af46bf41910b18e11800500efd7e929fa} 
+void argxc\+Free\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxcError}{Argxc\+Error}} \texorpdfstring{$\ast$}{*}}]{error}{}\end{DoxyParamCaption})}
+
+
+
+Free resources associated with an \doxylink{structArgxcError}{Argxc\+Error} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & Pointer to the error to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00679}{679}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00680\ \{}
+\DoxyCodeLine{00681\ \ \ \ \ \textcolor{keywordflow}{if}\ (!error)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00682\ }
+\DoxyCodeLine{00683\ \ \ \ \ free(error-\/>\mbox{\hyperlink{structArgxcError_ab4531054aa9750f66f0cae13f67365ad}{type}});\ error-\/>\mbox{\hyperlink{structArgxcError_ab4531054aa9750f66f0cae13f67365ad}{type}}\ =\ NULL;}
+\DoxyCodeLine{00684\ \ \ \ \ free(error-\/>\mbox{\hyperlink{structArgxcError_a88d100236636b2eb326025d527ad26f3}{error}});\ error-\/>\mbox{\hyperlink{structArgxcError_a88d100236636b2eb326025d527ad26f3}{error}}\ =\ NULL;}
+\DoxyCodeLine{00685\ \ \ \ \ free(error-\/>\mbox{\hyperlink{structArgxcError_a9e83392469b228017a3b6492392f68ad}{help}});\ error-\/>\mbox{\hyperlink{structArgxcError_a9e83392469b228017a3b6492392f68ad}{help}}\ =\ NULL;}
+\DoxyCodeLine{00686\ \ \ \ \ memset(error,\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structArgxcError}{ArgxcError}}));}
+\DoxyCodeLine{00687\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00017}{Argxc\+Error\+::error}}, \mbox{\hyperlink{types_8h_source_l00018}{Argxc\+Error\+::help}}, and \mbox{\hyperlink{types_8h_source_l00016}{Argxc\+Error\+::type}}.
+
+\Hypertarget{Argx_8h_ad1a1c82ca55187361d24a03c5fb977e6}\index{Argx.h@{Argx.h}!argxcFreeOption@{argxcFreeOption}}
+\index{argxcFreeOption@{argxcFreeOption}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcFreeOption()}{argxcFreeOption()}}
+{\footnotesize\ttfamily \label{Argx_8h_ad1a1c82ca55187361d24a03c5fb977e6} 
+void argxc\+Free\+Option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}} \texorpdfstring{$\ast$}{*}}]{option}{}\end{DoxyParamCaption})}
+
+
+
+Free resources associated with an \doxylink{structArgxcOptions}{Argxc\+Options} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & Pointer to the option to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00624}{624}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00625\ \{}
+\DoxyCodeLine{00626\ \ \ \ \ \textcolor{keywordflow}{if}\ (!option)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00627\ }
+\DoxyCodeLine{00628\ \ \ \ \ \textcolor{keywordflow}{if}\ (option-\/>\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}})}
+\DoxyCodeLine{00629\ \ \ \ \ \{\ free(option-\/>\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}});\ option-\/>\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00630\ \ \ \ \ \textcolor{keywordflow}{if}\ (option-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}})}
+\DoxyCodeLine{00631\ \ \ \ \ \{\ free(option-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}});\ option-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00632\ \ \ \ \ \textcolor{keywordflow}{if}\ (option-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}})}
+\DoxyCodeLine{00633\ \ \ \ \ \{\ free(option-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}});\ option-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00634\ \ \ \ \ \textcolor{keywordflow}{if}\ (option-\/>\mbox{\hyperlink{structArgxcOptions_aa912383cc480f5009cac8058454e279b}{info}})}
+\DoxyCodeLine{00635\ \ \ \ \ \{\ free(option-\/>\mbox{\hyperlink{structArgxcOptions_aa912383cc480f5009cac8058454e279b}{info}});\ option-\/>\mbox{\hyperlink{structArgxcOptions_aa912383cc480f5009cac8058454e279b}{info}}\ =\ NULL;\ \}}
+\DoxyCodeLine{00636\ }
+\DoxyCodeLine{00637\ \ \ \ \ \textcolor{keywordflow}{if}\ (option-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}})}
+\DoxyCodeLine{00638\ \ \ \ \ \{}
+\DoxyCodeLine{00639\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ option-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}};\ i++)}
+\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00641\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Argx_8c_ad1a1c82ca55187361d24a03c5fb977e6}{argxcFreeOption}}(\&option-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[i]);}
+\DoxyCodeLine{00642\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00643\ }
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \ \ free(option-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}});\ }
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \ \ option-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}\ =\ NULL;}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ option-\/>\mbox{\hyperlink{structArgxcOptions_abe87d3c8fcdf1a843ea90652c78b5ed1}{subParamsCapacity}}\ =\ 0;}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ option-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}}\ =\ 0;}
+\DoxyCodeLine{00648\ \ \ \ \ \}}
+\DoxyCodeLine{00649\ }
+\DoxyCodeLine{00650\ \ \ \ \ memset(option,\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}));}
+\DoxyCodeLine{00651\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Argx_8c_source_l00624}{argxc\+Free\+Option()}}, \mbox{\hyperlink{types_8h_source_l00026}{Argxc\+Options\+::id}}, \mbox{\hyperlink{types_8h_source_l00029}{Argxc\+Options\+::info}}, \mbox{\hyperlink{types_8h_source_l00027}{Argxc\+Options\+::param}}, \mbox{\hyperlink{types_8h_source_l00028}{Argxc\+Options\+::sparam}}, \mbox{\hyperlink{types_8h_source_l00032}{Argxc\+Options\+::sub\+Params}}, \mbox{\hyperlink{types_8h_source_l00034}{Argxc\+Options\+::sub\+Params\+Capacity}}, and \mbox{\hyperlink{types_8h_source_l00033}{Argxc\+Options\+::sub\+Params\+Count}}.
+
+
+
+Referenced by \mbox{\hyperlink{Argx_8c_source_l00624}{argxc\+Free\+Option()}}, and \mbox{\hyperlink{Argx_8c_source_l00050}{free\+Options\+Array()}}.
+
+\Hypertarget{Argx_8h_a6798ce84afc7922cc08260fd52534b99}\index{Argx.h@{Argx.h}!argxcFreeParam@{argxcFreeParam}}
+\index{argxcFreeParam@{argxcFreeParam}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcFreeParam()}{argxcFreeParam()}}
+{\footnotesize\ttfamily \label{Argx_8h_a6798ce84afc7922cc08260fd52534b99} 
+void argxc\+Free\+Param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxcParam}{Argxc\+Param}} \texorpdfstring{$\ast$}{*}}]{param}{}\end{DoxyParamCaption})}
+
+
+
+Free resources associated with an \doxylink{structArgxcParam}{Argxc\+Param} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Pointer to the parameter to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00653}{653}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00654\ \{}
+\DoxyCodeLine{00655\ \ \ \ \ \textcolor{keywordflow}{if}\ (!param)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00656\ }
+\DoxyCodeLine{00657\ \ \ \ \ free(param-\/>\mbox{\hyperlink{structArgxcParam_af685e909c26495d1ee2b52acf80960d0}{subExists}});\ param-\/>\mbox{\hyperlink{structArgxcParam_af685e909c26495d1ee2b52acf80960d0}{subExists}}\ =\ NULL;}
+\DoxyCodeLine{00658\ \ \ \ \ memset(param,\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structArgxcParam}{ArgxcParam}}));}
+\DoxyCodeLine{00659\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00039}{Argxc\+Param\+::sub\+Exists}}.
+
+\Hypertarget{Argx_8h_a433f2018d5638506f50be3219c04ec71}\index{Argx.h@{Argx.h}!argxcFreeStringArray@{argxcFreeStringArray}}
+\index{argxcFreeStringArray@{argxcFreeStringArray}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcFreeStringArray()}{argxcFreeStringArray()}}
+{\footnotesize\ttfamily \label{Argx_8h_a433f2018d5638506f50be3219c04ec71} 
+void argxc\+Free\+String\+Array (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array}{, }\item[{size\+\_\+t}]{count}{}\end{DoxyParamCaption})}
+
+
+
+Free a string array returned from \doxylink{structArgxc}{Argxc} (e.\+g., argv array). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & The array to free. \\
+\hline
+{\em count} & Number of elements in the array. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00661}{661}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00662\ \{}
+\DoxyCodeLine{00663\ \ \ \ \ \mbox{\hyperlink{Argx_8c_a420b857128cfa7527dc66424a1ece935}{freeStringArray}}(array,\ count);}
+\DoxyCodeLine{00664\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Argx_8c_source_l00038}{free\+String\+Array()}}.
+
+\Hypertarget{Argx_8h_a11fea89d38b49b571ce4f4499d0289d0}\index{Argx.h@{Argx.h}!argxcGetArgc@{argxcGetArgc}}
+\index{argxcGetArgc@{argxcGetArgc}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcGetArgc()}{argxcGetArgc()}}
+{\footnotesize\ttfamily \label{Argx_8h_a11fea89d38b49b571ce4f4499d0289d0} 
+int argxc\+Get\+Argc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}}]{argxc}{}\end{DoxyParamCaption})}
+
+
+
+Get the number of command-\/line arguments passed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argxc} & Pointer to the \doxylink{structArgxc}{Argxc} instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Number of arguments. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00588}{588}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00589\ \{}
+\DoxyCodeLine{00590\ \ \ \ \ \textcolor{keywordflow}{return}\ argxc\ ?\ argxc-\/>\mbox{\hyperlink{structArgxc_ae48ba4369d927bced0bc2b3eb76cc4e5}{mainArgc}}\ :\ 0;}
+\DoxyCodeLine{00591\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Argx_8c_source_l00019}{Argxc\+::main\+Argc}}.
+
+\Hypertarget{Argx_8h_a219a52257f1e47549f9fc15979b6c563}\index{Argx.h@{Argx.h}!argxcGetId@{argxcGetId}}
+\index{argxcGetId@{argxcGetId}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcGetId()}{argxcGetId()}}
+{\footnotesize\ttfamily \label{Argx_8h_a219a52257f1e47549f9fc15979b6c563} 
+const char \texorpdfstring{$\ast$}{*} argxc\+Get\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}}]{argxc}{}\end{DoxyParamCaption})}
+
+
+
+Get the identifier of the \doxylink{structArgxc}{Argxc} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argxc} & Pointer to the \doxylink{structArgxc}{Argxc} instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const char\texorpdfstring{$\ast$}{*} The ID string. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00601}{601}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00602\ \{}
+\DoxyCodeLine{00603\ \ \ \ \ \textcolor{keywordflow}{return}\ argxc\ ?\ argxc-\/>\mbox{\hyperlink{structArgxc_aaa5a7528c35f7c26ff0c7283db33fe8b}{id}}\ :\ NULL;}
+\DoxyCodeLine{00604\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Argx_8c_source_l00016}{Argxc\+::id}}.
+
+\Hypertarget{Argx_8h_a62e90d5a3e26834257bba4c68becfeb1}\index{Argx.h@{Argx.h}!argxcGetMainArgs@{argxcGetMainArgs}}
+\index{argxcGetMainArgs@{argxcGetMainArgs}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcGetMainArgs()}{argxcGetMainArgs()}}
+{\footnotesize\ttfamily \label{Argx_8h_a62e90d5a3e26834257bba4c68becfeb1} 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} argxc\+Get\+Main\+Args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}}]{argxc}{, }\item[{size\+\_\+t \texorpdfstring{$\ast$}{*}}]{count}{}\end{DoxyParamCaption})}
+
+
+
+Get the raw command-\/line arguments passed to \doxylink{structArgxc}{Argxc}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argxc} & Pointer to the \doxylink{structArgxc}{Argxc} instance. \\
+\hline
+{\em count} & Output\+: number of arguments returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Array of argument strings. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00570}{570}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00571\ \{}
+\DoxyCodeLine{00572\ \ \ \ \ \textcolor{keywordflow}{if}\ (!argxc\ ||\ !count)\ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00573\ }
+\DoxyCodeLine{00574\ \ \ \ \ *count\ =\ argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}};}
+\DoxyCodeLine{00575\ }
+\DoxyCodeLine{00576\ \ \ \ \ \textcolor{comment}{//\ Create\ a\ copy\ of\ the\ array}}
+\DoxyCodeLine{00577\ \ \ \ \ \textcolor{keywordtype}{char}\ **copy\ =\ malloc(argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
+\DoxyCodeLine{00578\ \ \ \ \ \textcolor{keywordflow}{if}\ (!copy)\ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00579\ }
+\DoxyCodeLine{00580\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}};\ i++)}
+\DoxyCodeLine{00581\ \ \ \ \ \{}
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ copy[i]\ =\ \mbox{\hyperlink{Argx_8c_a814b3298d81b070e52a987654d18d8a2}{stringDuplicate}}(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[i]);}
+\DoxyCodeLine{00583\ \ \ \ \ \}}
+\DoxyCodeLine{00584\ }
+\DoxyCodeLine{00585\ \ \ \ \ \textcolor{keywordflow}{return}\ copy;}
+\DoxyCodeLine{00586\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Argx_8c_source_l00017}{Argxc\+::main\+Args}}, \mbox{\hyperlink{Argx_8c_source_l00018}{Argxc\+::main\+Args\+Count}}, and \mbox{\hyperlink{Argx_8c_source_l00026}{string\+Duplicate()}}.
+
+\Hypertarget{Argx_8h_afb1cebd21f607dfbe19ed784ea0fc319}\index{Argx.h@{Argx.h}!argxcGetOptions@{argxcGetOptions}}
+\index{argxcGetOptions@{argxcGetOptions}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcGetOptions()}{argxcGetOptions()}}
+{\footnotesize\ttfamily \label{Argx_8h_afb1cebd21f607dfbe19ed784ea0fc319} 
+\mbox{\hyperlink{structArgxcOptions}{Argxc\+Options}} \texorpdfstring{$\ast$}{*} argxc\+Get\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}}]{argxc}{, }\item[{size\+\_\+t \texorpdfstring{$\ast$}{*}}]{count}{}\end{DoxyParamCaption})}
+
+
+
+Get all top-\/level options defined for the \doxylink{structArgxc}{Argxc} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argxc} & Pointer to the \doxylink{structArgxc}{Argxc} instance. \\
+\hline
+{\em count} & Output\+: number of options returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Argxc\+Options\texorpdfstring{$\ast$}{*} Array of options. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00593}{593}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00594\ \{}
+\DoxyCodeLine{00595\ \ \ \ \ \textcolor{keywordflow}{if}\ (!argxc\ ||\ !count)\ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00596\ }
+\DoxyCodeLine{00597\ \ \ \ \ *count\ =\ argxc-\/>\mbox{\hyperlink{structArgxc_ad25d74e066fa21cb7db95f901f0eabe6}{optionsCount}};}
+\DoxyCodeLine{00598\ \ \ \ \ \textcolor{keywordflow}{return}\ argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}};\ \textcolor{comment}{//\ Return\ direct\ reference\ (be\ careful\ with\ modification)}}
+\DoxyCodeLine{00599\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Argx_8c_source_l00020}{Argxc\+::options}}, and \mbox{\hyperlink{Argx_8c_source_l00021}{Argxc\+::options\+Count}}.
+
+\Hypertarget{Argx_8h_a6ef72f8e604109911e4315f6840febf9}\index{Argx.h@{Argx.h}!argxcGetParam@{argxcGetParam}}
+\index{argxcGetParam@{argxcGetParam}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcGetParam()}{argxcGetParam()}}
+{\footnotesize\ttfamily \label{Argx_8h_a6ef72f8e604109911e4315f6840febf9} 
+\mbox{\hyperlink{structArgxcParam}{Argxc\+Param}} argxc\+Get\+Param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}}]{argxc}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieve a parameter by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argxc} & Pointer to the \doxylink{structArgxc}{Argxc} instance. \\
+\hline
+{\em id} & The identifier of the parameter to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structArgxcParam}{Argxc\+Param} The parameter object. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00214}{214}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00215\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \mbox{\hyperlink{structArgxcParam}{ArgxcParam}}\ result\ =\ \{\textcolor{keyword}{false},\ NULL,\ 0\};}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordflow}{if}\ (!argxc\ ||\ !\textcolor{keywordtype}{id}\ ||\ argxc-\/>\mbox{\hyperlink{structArgxc_ae48ba4369d927bced0bc2b3eb76cc4e5}{mainArgc}}\ <=\ 1)}
+\DoxyCodeLine{00219\ \ \ \ \ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00221\ \ \ \ \ \}}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{comment}{//\ First,\ check\ if\ this\ is\ a\ top-\/level\ option}}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_ad25d74e066fa21cb7db95f901f0eabe6}{optionsCount}};\ i++)}
+\DoxyCodeLine{00225\ \ \ \ \ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *opt\ =\ \&argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}[i];}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opt-\/>\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}}\ \&\&\ strcmp(opt-\/>\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}},\ \textcolor{keywordtype}{id})\ ==\ 0)}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ the\ position\ of\ the\ main\ option\ in\ arguments}}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mainOptionPos\ =\ -\/1;}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}};\ j++)}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((opt-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[j],\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}})\ ==\ 0)\ ||}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (opt-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[j],\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}})\ ==\ 0))}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structArgxcParam_abc303d4cb26b086e53978a46071b9735}{exists}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mainOptionPos\ =\ j;}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result.\mbox{\hyperlink{structArgxcParam_abc303d4cb26b086e53978a46071b9735}{exists}})}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opt-\/>\mbox{\hyperlink{structArgxcOptions_add27505ea653aa67161a226f9daff3ca}{hasSubParams}}\ ||\ opt-\/>\mbox{\hyperlink{structArgxcOptions_ad36df6627ddcae7c469d92794d5a5ddc}{hasAnySubParams}})}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Allocate\ memory\ for\ sub-\/parameter\ existence\ array}}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structArgxcParam_a6340456c0025fef27395bc30f3251986}{subExistsCount}}\ =\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}};}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structArgxcParam_af685e909c26495d1ee2b52acf80960d0}{subExists}}\ =\ malloc(result.\mbox{\hyperlink{structArgxcParam_a6340456c0025fef27395bc30f3251986}{subExistsCount}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result.\mbox{\hyperlink{structArgxcParam_af685e909c26495d1ee2b52acf80960d0}{subExists}})}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ each\ sub-\/parameter}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}};\ j++)}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ subMatched\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *sub\ =\ \&opt-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[j];}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Look\ for\ sub-\/parameters\ after\ the\ main\ option}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ k\ =\ mainOptionPos\ +\ 1;\ k\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}};\ k++)}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((sub-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[k],\ sub-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}})\ ==\ 0)\ ||}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (sub-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[k],\ sub-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}})\ ==\ 0))}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subMatched\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structArgxcParam_af685e909c26495d1ee2b52acf80960d0}{subExists}}[j]\ =\ subMatched;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00279\ \ \ \ \ \}}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{comment}{//\ If\ not\ found\ as\ top-\/level,\ check\ if\ it's\ a\ sub-\/parameter}}
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_ad25d74e066fa21cb7db95f901f0eabe6}{optionsCount}};\ i++)}
+\DoxyCodeLine{00283\ \ \ \ \ \{}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *opt\ =\ \&argxc-\/>\mbox{\hyperlink{structArgxc_af24c08ed9dab8ad9800393568097a848}{options}}[i];}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ if\ the\ parent\ option\ exists\ and\ get\ its\ position}}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ parentPos\ =\ -\/1;}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}};\ j++)}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((opt-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[j],\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}})\ ==\ 0)\ ||}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (opt-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[j],\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}})\ ==\ 0))}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parentPos\ =\ j;}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parentPos\ >=\ 0\ \&\&\ (opt-\/>\mbox{\hyperlink{structArgxcOptions_add27505ea653aa67161a226f9daff3ca}{hasSubParams}}\ ||\ opt-\/>\mbox{\hyperlink{structArgxcOptions_ad36df6627ddcae7c469d92794d5a5ddc}{hasAnySubParams}}))}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ requested\ sub-\/parameter\ exists\ after\ the\ parent}}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ opt-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}};\ j++)}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *sub\ =\ \&opt-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[j];}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sub-\/>\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}}\ \&\&\ strcmp(sub-\/>\mbox{\hyperlink{structArgxcOptions_a595bdcea1b5696ffa5023c3319bf604c}{id}},\ \textcolor{keywordtype}{id})\ ==\ 0)}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ k\ =\ parentPos\ +\ 1;\ k\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}};\ k++)}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((sub-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[k],\ sub-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}})\ ==\ 0)\ ||}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (sub-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[k],\ sub-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}})\ ==\ 0))}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structArgxcParam_abc303d4cb26b086e53978a46071b9735}{exists}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00317\ }
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result.\mbox{\hyperlink{structArgxcParam_abc303d4cb26b086e53978a46071b9735}{exists}}\ \&\&\ (\textcolor{keywordtype}{size\_t})(parentPos\ +\ 1)\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}})}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *nextArg\ =\ argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[parentPos\ +\ 1];}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((sub-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ \&\&\ strcmp(nextArg,\ sub-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}})\ ==\ 0)\ ||}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (sub-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ \&\&\ strcmp(nextArg,\ sub-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}})\ ==\ 0))}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structArgxcParam_abc303d4cb26b086e53978a46071b9735}{exists}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ any\ sub-\/sub-\/parameters\ if\ they\ exist}}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result.\mbox{\hyperlink{structArgxcParam_abc303d4cb26b086e53978a46071b9735}{exists}}\ \&\&\ (sub-\/>\mbox{\hyperlink{structArgxcOptions_add27505ea653aa67161a226f9daff3ca}{hasSubParams}}\ ||\ sub-\/>\mbox{\hyperlink{structArgxcOptions_ad36df6627ddcae7c469d92794d5a5ddc}{hasAnySubParams}}))}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structArgxcParam_a6340456c0025fef27395bc30f3251986}{subExistsCount}}\ =\ sub-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}};}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structArgxcParam_af685e909c26495d1ee2b52acf80960d0}{subExists}}\ =\ malloc(result.\mbox{\hyperlink{structArgxcParam_a6340456c0025fef27395bc30f3251986}{subExistsCount}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result.\mbox{\hyperlink{structArgxcParam_af685e909c26495d1ee2b52acf80960d0}{subExists}})}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ k\ =\ 0;\ k\ <\ sub-\/>\mbox{\hyperlink{structArgxcOptions_a1383f66c1ca2c8fe428e7005c624fc76}{subParamsCount}};\ k++)}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ subsubMatched\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structArgxcOptions}{ArgxcOptions}}\ *subsub\ =\ \&sub-\/>\mbox{\hyperlink{structArgxcOptions_a988e8b4509c28e594fb570bc6b2430c5}{subParams}}[k];}
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ l\ =\ 0;\ l\ <\ argxc-\/>\mbox{\hyperlink{structArgxc_a06a20f9bbf66ce13fb9ac6745a84de9e}{mainArgsCount}};\ l++)}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((subsub-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[l],\ subsub-\/>\mbox{\hyperlink{structArgxcOptions_a1b2766df178647d8d72f9c4450e488b3}{param}})\ ==\ 0)\ ||}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (subsub-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}}\ \&\&\ strcmp(argxc-\/>\mbox{\hyperlink{structArgxc_a666f9d971aaf4b9adfb18908a1205fda}{mainArgs}}[l],\ subsub-\/>\mbox{\hyperlink{structArgxcOptions_a4a0102388f796032fc500271d1f66dd6}{sparam}})\ ==\ 0))}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subsubMatched\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structArgxcParam_af685e909c26495d1ee2b52acf80960d0}{subExists}}[k]\ =\ subsubMatched;}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00361\ \ \ \ \ \}}
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00363\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00364\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00038}{Argxc\+Param\+::exists}}, \mbox{\hyperlink{types_8h_source_l00031}{Argxc\+Options\+::has\+Any\+Sub\+Params}}, \mbox{\hyperlink{types_8h_source_l00030}{Argxc\+Options\+::has\+Sub\+Params}}, \mbox{\hyperlink{types_8h_source_l00026}{Argxc\+Options\+::id}}, \mbox{\hyperlink{Argx_8c_source_l00019}{Argxc\+::main\+Argc}}, \mbox{\hyperlink{Argx_8c_source_l00017}{Argxc\+::main\+Args}}, \mbox{\hyperlink{Argx_8c_source_l00018}{Argxc\+::main\+Args\+Count}}, \mbox{\hyperlink{Argx_8c_source_l00020}{Argxc\+::options}}, \mbox{\hyperlink{Argx_8c_source_l00021}{Argxc\+::options\+Count}}, \mbox{\hyperlink{types_8h_source_l00027}{Argxc\+Options\+::param}}, \mbox{\hyperlink{types_8h_source_l00028}{Argxc\+Options\+::sparam}}, \mbox{\hyperlink{types_8h_source_l00039}{Argxc\+Param\+::sub\+Exists}}, \mbox{\hyperlink{types_8h_source_l00040}{Argxc\+Param\+::sub\+Exists\+Count}}, \mbox{\hyperlink{types_8h_source_l00032}{Argxc\+Options\+::sub\+Params}}, and \mbox{\hyperlink{types_8h_source_l00033}{Argxc\+Options\+::sub\+Params\+Count}}.
+
+\Hypertarget{Argx_8h_a0767a3dc8167a77aada7a52c4d0e9d22}\index{Argx.h@{Argx.h}!argxcGetSubParam@{argxcGetSubParam}}
+\index{argxcGetSubParam@{argxcGetSubParam}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcGetSubParam()}{argxcGetSubParam()}}
+{\footnotesize\ttfamily \label{Argx_8h_a0767a3dc8167a77aada7a52c4d0e9d22} 
+bool argxc\+Get\+Sub\+Param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}}]{argxc}{, }\item[{const \mbox{\hyperlink{structArgxcParam}{Argxc\+Param}} \texorpdfstring{$\ast$}{*}}]{param}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieve a sub-\/parameter from a given parameter by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argxc} & Pointer to the \doxylink{structArgxc}{Argxc} instance. \\
+\hline
+{\em param} & Pointer to the parent parameter. \\
+\hline
+{\em id} & The identifier of the sub-\/parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the sub-\/parameter exists, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00366}{366}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00367\ \{}
+\DoxyCodeLine{00368\ \ \ \ \ \textcolor{keywordflow}{if}\ (!argxc\ ||\ !param\ ||\ !\textcolor{keywordtype}{id})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00369\ }
+\DoxyCodeLine{00370\ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ \mbox{\hyperlink{Argx_8c_a4a12dce73edcc011355f47d4543e32a6}{argxcFindParam}}(argxc,\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00371\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Argx_8c_a016fceae24303178985a8e047262bd5e}{argxcParamExists}}(argxc,\ \textcolor{keywordtype}{id})\ \&\&\ param-\/>\mbox{\hyperlink{structArgxcParam_af685e909c26495d1ee2b52acf80960d0}{subExists}}\ \&\&\ index\ >=\ 0\ \&\&\ }
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ (size\_t)index\ <\ param-\/>subExistsCount\ \&\&\ param-\/>\mbox{\hyperlink{structArgxcParam_af685e909c26495d1ee2b52acf80960d0}{subExists}}[index];}
+\DoxyCodeLine{00373\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Argx_8c_source_l00155}{argxc\+Find\+Param()}}, \mbox{\hyperlink{Argx_8c_source_l00209}{argxc\+Param\+Exists()}}, and \mbox{\hyperlink{types_8h_source_l00039}{Argxc\+Param\+::sub\+Exists}}.
+
+\Hypertarget{Argx_8h_a016fceae24303178985a8e047262bd5e}\index{Argx.h@{Argx.h}!argxcParamExists@{argxcParamExists}}
+\index{argxcParamExists@{argxcParamExists}!Argx.h@{Argx.h}}
+\doxysubsubsection{\texorpdfstring{argxcParamExists()}{argxcParamExists()}}
+{\footnotesize\ttfamily \label{Argx_8h_a016fceae24303178985a8e047262bd5e} 
+bool argxc\+Param\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArgxc}{Argxc}} \texorpdfstring{$\ast$}{*}}]{argxc}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Check if a parameter with the given ID exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argxc} & Pointer to the \doxylink{structArgxc}{Argxc} instance. \\
+\hline
+{\em id} & The identifier of the parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the parameter exists, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8c_source_l00209}{209}} of file \mbox{\hyperlink{Argx_8c_source}{Argx.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00210\ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Argx_8c_a4a12dce73edcc011355f47d4543e32a6}{argxcFindParam}}(argxc,\ \textcolor{keywordtype}{id})\ >=\ 0;}
+\DoxyCodeLine{00212\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Argx_8c_source_l00155}{argxc\+Find\+Param()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Argx_8c_source_l00366}{argxc\+Get\+Sub\+Param()}}.
+

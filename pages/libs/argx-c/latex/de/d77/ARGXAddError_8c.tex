@@ -1,0 +1,172 @@
+\doxysection{src/\+ARGXAdd\+Error.c File Reference}
+\hypertarget{ARGXAddError_8c}{}\label{ARGXAddError_8c}\index{src/ARGXAddError.c@{src/ARGXAddError.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}../inc/\+ARGXAdd\+Error.\+h"{}}\newline
+{\ttfamily \#include "{}../inc/types.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structArgxcError}{Argxc\+Error}} \mbox{\hyperlink{ARGXAddError_8c_a8c4ee33ae3d4a6208322ad503dceca9e}{argxc\+Create\+Error\+Simple}} (const char \texorpdfstring{$\ast$}{*}msg, const char \texorpdfstring{$\ast$}{*}help)
+\item 
+int \mbox{\hyperlink{ARGXAddError_8c_a038539b9defbaf62f7a175d75388866d}{argxc\+Get\+Error\+Code}} (const \mbox{\hyperlink{structArgxcError}{Argxc\+Error}} \texorpdfstring{$\ast$}{*}error)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ARGXAddError_8c_a82d77328ff61877b8ab10d054bc5ced4}{argxc\+Get\+Error\+Help}} (const \mbox{\hyperlink{structArgxcError}{Argxc\+Error}} \texorpdfstring{$\ast$}{*}error)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ARGXAddError_8c_a9e0ec52023e67e806606050d12a934a8}{argxc\+Get\+Error\+Message}} (const \mbox{\hyperlink{structArgxcError}{Argxc\+Error}} \texorpdfstring{$\ast$}{*}error)
+\item 
+\mbox{\hyperlink{structArgxcErrorPair}{Argxc\+Error\+Pair}} \mbox{\hyperlink{ARGXAddError_8c_ae080742df3abdaba51a357b9c68775dd}{argxc\+Get\+Error\+Pair}} (const \mbox{\hyperlink{structArgxcError}{Argxc\+Error}} \texorpdfstring{$\ast$}{*}error)
+\item 
+static char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ARGXAddError_8c_a814b3298d81b070e52a987654d18d8a2}{string\+Duplicate}} (const char \texorpdfstring{$\ast$}{*}str)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ARGXAddError_8c_a8c4ee33ae3d4a6208322ad503dceca9e}\index{ARGXAddError.c@{ARGXAddError.c}!argxcCreateErrorSimple@{argxcCreateErrorSimple}}
+\index{argxcCreateErrorSimple@{argxcCreateErrorSimple}!ARGXAddError.c@{ARGXAddError.c}}
+\doxysubsubsection{\texorpdfstring{argxcCreateErrorSimple()}{argxcCreateErrorSimple()}}
+{\footnotesize\ttfamily \label{ARGXAddError_8c_a8c4ee33ae3d4a6208322ad503dceca9e} 
+\mbox{\hyperlink{structArgxcError}{Argxc\+Error}} argxc\+Create\+Error\+Simple (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{msg}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{help}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ARGXAddError_8c_source_l00019}{19}} of file \mbox{\hyperlink{ARGXAddError_8c_source}{ARGXAdd\+Error.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{structArgxcError}{ArgxcError}}\ error\ =\ \{0\};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ error.\mbox{\hyperlink{structArgxcError_ab4531054aa9750f66f0cae13f67365ad}{type}}\ =\ \mbox{\hyperlink{ARGXAddError_8c_a814b3298d81b070e52a987654d18d8a2}{stringDuplicate}}(\textcolor{stringliteral}{"{}error"{}});}
+\DoxyCodeLine{00024\ \ \ \ \ error.\mbox{\hyperlink{structArgxcError_a88d100236636b2eb326025d527ad26f3}{error}}\ =\ \mbox{\hyperlink{ARGXAddError_8c_a814b3298d81b070e52a987654d18d8a2}{stringDuplicate}}(msg);}
+\DoxyCodeLine{00025\ \ \ \ \ error.\mbox{\hyperlink{structArgxcError_a9e83392469b228017a3b6492392f68ad}{help}}\ =\ \mbox{\hyperlink{ARGXAddError_8c_a814b3298d81b070e52a987654d18d8a2}{stringDuplicate}}(help);}
+\DoxyCodeLine{00026\ \ \ \ \ error.\mbox{\hyperlink{structArgxcError_a617299f808dff4b2656bf04384e64bf9}{code}}\ =\ 1;\ \textcolor{comment}{//\ Default\ error\ code}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{return}\ error;}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00019}{Argxc\+Error\+::code}}, \mbox{\hyperlink{types_8h_source_l00017}{Argxc\+Error\+::error}}, \mbox{\hyperlink{types_8h_source_l00018}{Argxc\+Error\+::help}}, \mbox{\hyperlink{ARGXAddError_8c_source_l00007}{string\+Duplicate()}}, and \mbox{\hyperlink{types_8h_source_l00016}{Argxc\+Error\+::type}}.
+
+\Hypertarget{ARGXAddError_8c_a038539b9defbaf62f7a175d75388866d}\index{ARGXAddError.c@{ARGXAddError.c}!argxcGetErrorCode@{argxcGetErrorCode}}
+\index{argxcGetErrorCode@{argxcGetErrorCode}!ARGXAddError.c@{ARGXAddError.c}}
+\doxysubsubsection{\texorpdfstring{argxcGetErrorCode()}{argxcGetErrorCode()}}
+{\footnotesize\ttfamily \label{ARGXAddError_8c_a038539b9defbaf62f7a175d75388866d} 
+int argxc\+Get\+Error\+Code (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structArgxcError}{Argxc\+Error}} \texorpdfstring{$\ast$}{*}}]{error}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ARGXAddError_8c_source_l00041}{41}} of file \mbox{\hyperlink{ARGXAddError_8c_source}{ARGXAdd\+Error.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{return}\ error\ ?\ error-\/>\mbox{\hyperlink{structArgxcError_a617299f808dff4b2656bf04384e64bf9}{code}}\ :\ 0;}
+\DoxyCodeLine{00044\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00019}{Argxc\+Error\+::code}}.
+
+\Hypertarget{ARGXAddError_8c_a82d77328ff61877b8ab10d054bc5ced4}\index{ARGXAddError.c@{ARGXAddError.c}!argxcGetErrorHelp@{argxcGetErrorHelp}}
+\index{argxcGetErrorHelp@{argxcGetErrorHelp}!ARGXAddError.c@{ARGXAddError.c}}
+\doxysubsubsection{\texorpdfstring{argxcGetErrorHelp()}{argxcGetErrorHelp()}}
+{\footnotesize\ttfamily \label{ARGXAddError_8c_a82d77328ff61877b8ab10d054bc5ced4} 
+const char \texorpdfstring{$\ast$}{*} argxc\+Get\+Error\+Help (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structArgxcError}{Argxc\+Error}} \texorpdfstring{$\ast$}{*}}]{error}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ARGXAddError_8c_source_l00036}{36}} of file \mbox{\hyperlink{ARGXAddError_8c_source}{ARGXAdd\+Error.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{return}\ error\ ?\ error-\/>\mbox{\hyperlink{structArgxcError_a9e83392469b228017a3b6492392f68ad}{help}}\ :\ NULL;}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00018}{Argxc\+Error\+::help}}.
+
+\Hypertarget{ARGXAddError_8c_a9e0ec52023e67e806606050d12a934a8}\index{ARGXAddError.c@{ARGXAddError.c}!argxcGetErrorMessage@{argxcGetErrorMessage}}
+\index{argxcGetErrorMessage@{argxcGetErrorMessage}!ARGXAddError.c@{ARGXAddError.c}}
+\doxysubsubsection{\texorpdfstring{argxcGetErrorMessage()}{argxcGetErrorMessage()}}
+{\footnotesize\ttfamily \label{ARGXAddError_8c_a9e0ec52023e67e806606050d12a934a8} 
+const char \texorpdfstring{$\ast$}{*} argxc\+Get\+Error\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structArgxcError}{Argxc\+Error}} \texorpdfstring{$\ast$}{*}}]{error}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ARGXAddError_8c_source_l00031}{31}} of file \mbox{\hyperlink{ARGXAddError_8c_source}{ARGXAdd\+Error.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ error\ ?\ error-\/>\mbox{\hyperlink{structArgxcError_a88d100236636b2eb326025d527ad26f3}{error}}\ :\ NULL;}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00017}{Argxc\+Error\+::error}}.
+
+\Hypertarget{ARGXAddError_8c_ae080742df3abdaba51a357b9c68775dd}\index{ARGXAddError.c@{ARGXAddError.c}!argxcGetErrorPair@{argxcGetErrorPair}}
+\index{argxcGetErrorPair@{argxcGetErrorPair}!ARGXAddError.c@{ARGXAddError.c}}
+\doxysubsubsection{\texorpdfstring{argxcGetErrorPair()}{argxcGetErrorPair()}}
+{\footnotesize\ttfamily \label{ARGXAddError_8c_ae080742df3abdaba51a357b9c68775dd} 
+\mbox{\hyperlink{structArgxcErrorPair}{Argxc\+Error\+Pair}} argxc\+Get\+Error\+Pair (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structArgxcError}{Argxc\+Error}} \texorpdfstring{$\ast$}{*}}]{error}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ARGXAddError_8c_source_l00046}{46}} of file \mbox{\hyperlink{ARGXAddError_8c_source}{ARGXAdd\+Error.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{structArgxcErrorPair}{ArgxcErrorPair}}\ pair\ =\ \{NULL,\ NULL\};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{if}\ (error)}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ pair.\mbox{\hyperlink{structArgxcErrorPair_a548e70442f749cb33bf853987bbb2707}{error}}\ =\ error-\/>\mbox{\hyperlink{structArgxcError_a88d100236636b2eb326025d527ad26f3}{error}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ pair.\mbox{\hyperlink{structArgxcErrorPair_ab7a2046f22e6b8a74ca323b985cee6ce}{help}}\ =\ error-\/>\mbox{\hyperlink{structArgxcError_a9e83392469b228017a3b6492392f68ad}{help}};}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{return}\ pair;}
+\DoxyCodeLine{00057\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{types_8h_source_l00017}{Argxc\+Error\+::error}}, \mbox{\hyperlink{ARGXAddError_8h_source_l00016}{Argxc\+Error\+Pair\+::error}}, \mbox{\hyperlink{types_8h_source_l00018}{Argxc\+Error\+::help}}, and \mbox{\hyperlink{ARGXAddError_8h_source_l00017}{Argxc\+Error\+Pair\+::help}}.
+
+\Hypertarget{ARGXAddError_8c_a814b3298d81b070e52a987654d18d8a2}\index{ARGXAddError.c@{ARGXAddError.c}!stringDuplicate@{stringDuplicate}}
+\index{stringDuplicate@{stringDuplicate}!ARGXAddError.c@{ARGXAddError.c}}
+\doxysubsubsection{\texorpdfstring{stringDuplicate()}{stringDuplicate()}}
+{\footnotesize\ttfamily \label{ARGXAddError_8c_a814b3298d81b070e52a987654d18d8a2} 
+static char \texorpdfstring{$\ast$}{*} string\+Duplicate (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{ARGXAddError_8c_source_l00007}{7}} of file \mbox{\hyperlink{ARGXAddError_8c_source}{ARGXAdd\+Error.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{if}\ (!str)\ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ len\ =\ strlen(str)\ +\ 1;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{char}\ *dup\ =\ malloc(len);}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{if}\ (dup)}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ memcpy(dup,\ str,\ len);}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{return}\ dup;}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{ARGXAddError_8c_source_l00019}{argxc\+Create\+Error\+Simple()}}.
+

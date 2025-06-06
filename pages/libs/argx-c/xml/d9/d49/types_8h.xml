@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="d9/d49/types_8h" kind="file" language="C++">
+    <compoundname>types.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includedby refid="d1/d7f/ARGXAddError_8h" local="yes">inc/ARGXAddError.h</includedby>
+    <includedby refid="d6/d8e/Argx_8h" local="yes">inc/Argx.h</includedby>
+    <includedby refid="de/d77/ARGXAddError_8c" local="yes">src/ARGXAddError.c</includedby>
+    <includedby refid="d0/df9/Argx_8c" local="yes">src/Argx.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>inc/types.h</label>
+        <link refid="d9/d49/types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>inc/ARGXAddError.h</label>
+        <link refid="d1/d7f/ARGXAddError_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>inc/Argx.h</label>
+        <link refid="d6/d8e/Argx_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>inc/types.h</label>
+        <link refid="d9/d49/types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/ARGXAddError.c</label>
+        <link refid="de/d77/ARGXAddError_8c"/>
+      </node>
+      <node id="5">
+        <label>src/Argx.c</label>
+        <link refid="d0/df9/Argx_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d8/d54/structArgxcError" prot="public">ArgxcError</innerclass>
+    <innerclass refid="d2/dcb/structArgxcOptions" prot="public">ArgxcOptions</innerclass>
+    <innerclass refid="da/ddb/structArgxcParam" prot="public">ArgxcParam</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebb" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ArgxcStyle</name>
+        <enumvalue id="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebba5926a1c4b95fe8294eee1ab316063d47" prot="public">
+          <name>ARGX_STYLE_PROFESSIONAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebbad8465ee3943616d15c25e8b2ff2d06e2" prot="public">
+          <name>ARGX_STYLE_SIMPLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.h" line="10" column="1" bodyfile="inc/types.h" bodystart="10" bodyend="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d9/d49/types_8h_1a84bd6c0769bc891e2ffce793678b0ce9" prot="public" static="no">
+        <type>struct Argxc</type>
+        <definition>typedef struct Argxc Argxc</definition>
+        <argsstring></argsstring>
+        <name>Argxc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.h" line="44" column="20" bodyfile="inc/types.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d9/d49/types_8h_1a1ece51b47f5fba211265ff281bc01192" prot="public" static="no">
+        <type>struct ArgxcOptions</type>
+        <definition>typedef struct ArgxcOptions ArgxcOptions</definition>
+        <argsstring></argsstring>
+        <name>ArgxcOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.h" line="35" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebba5926a1c4b95fe8294eee1ab316063d47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebba5926a1c4b95fe8294eee1ab316063d47" kindref="member">ARGX_STYLE_PROFESSIONAL</ref>,</highlight></codeline>
+<codeline lineno="12" refid="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebbad8465ee3943616d15c25e8b2ff2d06e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebbad8465ee3943616d15c25e8b2ff2d06e2" kindref="member">ARGX_STYLE_SIMPLE</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebb" kindref="member">ArgxcStyle</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="d8/d54/structArgxcError" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16" refid="d8/d54/structArgxcError_1ab4531054aa9750f66f0cae13f67365ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d8/d54/structArgxcError_1ab4531054aa9750f66f0cae13f67365ad" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="17" refid="d8/d54/structArgxcError_1a88d100236636b2eb326025d527ad26f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d8/d54/structArgxcError_1a88d100236636b2eb326025d527ad26f3" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="18" refid="d8/d54/structArgxcError_1a9e83392469b228017a3b6492392f68ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d8/d54/structArgxcError_1a9e83392469b228017a3b6492392f68ad" kindref="member">help</ref>;</highlight></codeline>
+<codeline lineno="19" refid="d8/d54/structArgxcError_1a617299f808dff4b2656bf04384e64bf9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d8/d54/structArgxcError_1a617299f808dff4b2656bf04384e64bf9" kindref="member">code</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="d8/d54/structArgxcError" kindref="compound">ArgxcError</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Forward<sp/>declaration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="d2/dcb/structArgxcOptions" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref><sp/>{</highlight></codeline>
+<codeline lineno="26" refid="d2/dcb/structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d2/dcb/structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c" kindref="member">id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ID<sp/>of<sp/>the<sp/>option</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="d2/dcb/structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d2/dcb/structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3" kindref="member">param</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Long<sp/>parameter<sp/>(e.g.,<sp/>--help)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="d2/dcb/structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d2/dcb/structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6" kindref="member">sparam</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Short<sp/>parameter<sp/>(e.g.,<sp/>-h)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="d2/dcb/structArgxcOptions_1aa912383cc480f5009cac8058454e279b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d2/dcb/structArgxcOptions_1aa912383cc480f5009cac8058454e279b" kindref="member">info</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Description</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="d2/dcb/structArgxcOptions_1add27505ea653aa67161a226f9daff3ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d2/dcb/structArgxcOptions_1add27505ea653aa67161a226f9daff3ca" kindref="member">hasSubParams</ref>;</highlight></codeline>
+<codeline lineno="31" refid="d2/dcb/structArgxcOptions_1ad36df6627ddcae7c469d92794d5a5ddc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d2/dcb/structArgxcOptions_1ad36df6627ddcae7c469d92794d5a5ddc" kindref="member">hasAnySubParams</ref>;</highlight></codeline>
+<codeline lineno="32" refid="d2/dcb/structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref><sp/>*<ref refid="d2/dcb/structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5" kindref="member">subParams</ref>;</highlight></codeline>
+<codeline lineno="33" refid="d2/dcb/structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d2/dcb/structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76" kindref="member">subParamsCount</ref>;</highlight></codeline>
+<codeline lineno="34" refid="d2/dcb/structArgxcOptions_1abe87d3c8fcdf1a843ea90652c78b5ed1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d2/dcb/structArgxcOptions_1abe87d3c8fcdf1a843ea90652c78b5ed1" kindref="member">subParamsCapacity</ref>;</highlight></codeline>
+<codeline lineno="35" refid="d9/d49/types_8h_1a1ece51b47f5fba211265ff281bc01192" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="da/ddb/structArgxcParam" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38" refid="da/ddb/structArgxcParam_1abc303d4cb26b086e53978a46071b9735" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="da/ddb/structArgxcParam_1abc303d4cb26b086e53978a46071b9735" kindref="member">exists</ref>;</highlight></codeline>
+<codeline lineno="39" refid="da/ddb/structArgxcParam_1af685e909c26495d1ee2b52acf80960d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*<ref refid="da/ddb/structArgxcParam_1af685e909c26495d1ee2b52acf80960d0" kindref="member">subExists</ref>;</highlight></codeline>
+<codeline lineno="40" refid="da/ddb/structArgxcParam_1a6340456c0025fef27395bc30f3251986" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="da/ddb/structArgxcParam_1a6340456c0025fef27395bc30f3251986" kindref="member">subExistsCount</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="da/ddb/structArgxcParam" kindref="compound">ArgxcParam</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Opaque<sp/>handle<sp/>for<sp/>Argxc<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="d9/d49/types_8h_1a84bd6c0769bc891e2ffce793678b0ce9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref><sp/><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="inc/types.h"/>
+  </compounddef>
+</doxygen>

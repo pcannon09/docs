@@ -1,0 +1,144 @@
+.TH "src/ARGXAddError.c" 3 "Version 1.0.2-build" "Argx" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/ARGXAddError.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <stdlib\&.h>\fP
+.br
+\fR#include <string\&.h>\fP
+.br
+\fR#include '\&.\&./inc/ARGXAddError\&.h'\fP
+.br
+\fR#include '\&.\&./inc/types\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBArgxcError\fP \fBargxcCreateErrorSimple\fP (const char *msg, const char *help)"
+.br
+.ti -1c
+.RI "int \fBargxcGetErrorCode\fP (const \fBArgxcError\fP *error)"
+.br
+.ti -1c
+.RI "const char * \fBargxcGetErrorHelp\fP (const \fBArgxcError\fP *error)"
+.br
+.ti -1c
+.RI "const char * \fBargxcGetErrorMessage\fP (const \fBArgxcError\fP *error)"
+.br
+.ti -1c
+.RI "\fBArgxcErrorPair\fP \fBargxcGetErrorPair\fP (const \fBArgxcError\fP *error)"
+.br
+.ti -1c
+.RI "static char * \fBstringDuplicate\fP (const char *str)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBArgxcError\fP argxcCreateErrorSimple (const char * msg, const char * help)"
+
+.PP
+Definition at line \fB19\fP of file \fBARGXAddError\&.c\fP\&.
+.nf
+20 {
+21     ArgxcError error = {0};
+22 
+23     error\&.type = stringDuplicate("error");
+24     error\&.error = stringDuplicate(msg);
+25     error\&.help = stringDuplicate(help);
+26     error\&.code = 1; // Default error code
+27 
+28     return error;
+29 }
+.PP
+.fi
+
+.PP
+References \fBArgxcError::code\fP, \fBArgxcError::error\fP, \fBArgxcError::help\fP, \fBstringDuplicate()\fP, and \fBArgxcError::type\fP\&.
+.SS "int argxcGetErrorCode (const \fBArgxcError\fP * error)"
+
+.PP
+Definition at line \fB41\fP of file \fBARGXAddError\&.c\fP\&.
+.nf
+42 {
+43     return error ? error\->code : 0;
+44 }
+.PP
+.fi
+
+.PP
+References \fBArgxcError::code\fP\&.
+.SS "const char * argxcGetErrorHelp (const \fBArgxcError\fP * error)"
+
+.PP
+Definition at line \fB36\fP of file \fBARGXAddError\&.c\fP\&.
+.nf
+37 {
+38     return error ? error\->help : NULL;
+39 }
+.PP
+.fi
+
+.PP
+References \fBArgxcError::help\fP\&.
+.SS "const char * argxcGetErrorMessage (const \fBArgxcError\fP * error)"
+
+.PP
+Definition at line \fB31\fP of file \fBARGXAddError\&.c\fP\&.
+.nf
+32 {
+33     return error ? error\->error : NULL;
+34 }
+.PP
+.fi
+
+.PP
+References \fBArgxcError::error\fP\&.
+.SS "\fBArgxcErrorPair\fP argxcGetErrorPair (const \fBArgxcError\fP * error)"
+
+.PP
+Definition at line \fB46\fP of file \fBARGXAddError\&.c\fP\&.
+.nf
+47 {
+48     ArgxcErrorPair pair = {NULL, NULL};
+49 
+50     if (error)
+51     {
+52         pair\&.error = error\->error;
+53         pair\&.help = error\->help;
+54     }
+55 
+56     return pair;
+57 }
+.PP
+.fi
+
+.PP
+References \fBArgxcError::error\fP, \fBArgxcErrorPair::error\fP, \fBArgxcError::help\fP, and \fBArgxcErrorPair::help\fP\&.
+.SS "static char * stringDuplicate (const char * str)\fR [static]\fP"
+
+.PP
+Definition at line \fB7\fP of file \fBARGXAddError\&.c\fP\&.
+.nf
+8 {
+9     if (!str) return NULL;
+10     size_t len = strlen(str) + 1;
+11     char *dup = malloc(len);
+12     if (dup)
+13     {
+14         memcpy(dup, str, len);
+15     }
+16     return dup;
+17 }
+.PP
+.fi
+
+.PP
+Referenced by \fBargxcCreateErrorSimple()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Argx from the source code\&.

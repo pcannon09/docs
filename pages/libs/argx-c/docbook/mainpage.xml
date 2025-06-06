@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+<title>ARGX-C - 1.0.2-build</title>
+<indexterm><primary>ARGX-C - 1.0.2-build</primary></indexterm>
+
+<para><anchor xml:id="_index_1md_README"/></para>
+<section xml:id="_index_1autotoc_md1">
+<title>C Argument parser</title><section xml:id="_index_1autotoc_md2">
+<title>Made by: pcannon09</title>
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md4">
+<title>Requirements</title><section xml:id="_index_1autotoc_md5">
+<title>Compiler and C Standard Support</title>
+<para><informaltable frame="all">
+    <tgroup cols="5" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+      <colspec colname='c5'/>
+<thead>
+      <row  class='markdownTableHead'>
+<entry>
+<para>Argx Version   </para>
+</entry><entry>
+<para>Minimum C Standard   </para>
+</entry><entry>
+<para>GCC   </para>
+</entry><entry>
+<para>Clang   </para>
+</entry><entry>
+<para>MSVC    </para>
+</entry></row>
+</thead><tbody>
+      <row  class='markdownTableRowOdd'>
+<entry>
+<para>1.0.2-build   </para>
+</entry><entry>
+<para>C99   </para>
+</entry><entry>
+<para>GCC 3.0+   </para>
+</entry><entry>
+<para>Clang 2.6+   </para>
+</entry><entry>
+<para>MSVC 2013+ (VC12)   </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md6">
+<title>Specific information</title>
+<para><emphasis role="bold">NOTE: For version 1.0.2-build</emphasis><itemizedlist>
+<listitem>
+<para>GCC has supported C99 since version 3.0 (with nearly full support from 4.5+).</para>
+</listitem><listitem>
+<para>Clang has full C99 support from 2.6 onward.</para>
+</listitem><listitem>
+<para>MSVC has full support with MSVC 2013 (VC12)</para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md7">
+<title>IMPORTANT NOTES</title>
+<para><emphasis role="bold">This library has been tested in Arch Linux, please open an issue if you encounter a problem with other Operating Systems</emphasis> <emphasis role="bold">Tested with Clang 19</emphasis> <emphasis role="bold">If you encounter any other issues with other compilers, open an issue in github</emphasis></para>
+
+<para><itemizedlist>
+<listitem>
+<para>For more information, please check the documentation at <emphasis role="bold"><link xlink:href="https://pcannon09.github.io/docs/pages/libs/argx/html/index.html">https://pcannon09.github.io/docs/pages/libs/argx/html/index.html</link></emphasis></para>
+</listitem></itemizedlist>
+</para>
+
+<para><emphasis role="bold">NOTE: Based on the original Argx at <link xlink:href="https://www.github.com/pcannon09/argx">https://www.github.com/pcannon09/argx</link></emphasis> </para>
+</section>
+</chapter>

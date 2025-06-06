@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_bfccd401955b95cf8c75461437045ac0" xml:lang="en-US">
+<title>inc Directory Reference</title>
+<indexterm><primary>inc Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_Argx_8h">Argx.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_ARGXAddError_8h">ARGXAddError.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_macros_8h">macros.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_types_8h">types.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

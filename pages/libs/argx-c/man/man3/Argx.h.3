@@ -1,0 +1,1208 @@
+.TH "inc/Argx.h" 3 "Version 1.0.2-build" "Argx" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/Argx.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <stdbool\&.h>\fP
+.br
+\fR#include 'types\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBargxcAddOption\fP (\fBArgxc\fP *argxc, \fBArgxcOptions\fP option)"
+.br
+.RI "Add a new option to the \fBArgxc\fP instance\&. "
+.ti -1c
+.RI "void \fBargxcAddSubOption\fP (\fBArgxcOptions\fP *parent, \fBArgxcOptions\fP subOption)"
+.br
+.RI "Add a sub-option to a parent option\&. "
+.ti -1c
+.RI "bool \fBargxcCompareArgs\fP (\fBArgxcOptions\fP *options, size_t optionsCount, char **argv, size_t argvCount)"
+.br
+.RI "Compare if the given argv matches a list of \fBArgxcOptions\fP\&. "
+.ti -1c
+.RI "\fBArgxc\fP * \fBargxcCreate\fP (const char *id, int argc, char *argv[])"
+.br
+.RI "Create a new \fBArgxc\fP instance with a specified ID and command-line arguments\&. "
+.ti -1c
+.RI "\fBArgxc\fP * \fBargxcCreateDefault\fP (void)"
+.br
+.RI "Create a new \fBArgxc\fP instance with default values (empty ID and no arguments)\&. "
+.ti -1c
+.RI "char * \fBargxcCreateDocs\fP (\fBArgxc\fP *argxc, \fBArgxcStyle\fP style, const char *title, const char *mainInfo)"
+.br
+.RI "Generate documentation for the defined options\&. "
+.ti -1c
+.RI "\fBArgxcError\fP \fBargxcCreateError\fP (const char *type, const char *error, const char *help, int code)"
+.br
+.RI "Create an \fBArgxcError\fP object\&. "
+.ti -1c
+.RI "\fBArgxcOptions\fP \fBargxcCreateOption\fP (const char *id, const char *param, const char *sparam, const char *info, bool hasSubParams, bool hasAnySubParams)"
+.br
+.RI "Create a new option\&. "
+.ti -1c
+.RI "void \fBargxcDestroy\fP (\fBArgxc\fP *argxc)"
+.br
+.RI "Destroy an \fBArgxc\fP instance and free all associated memory\&. "
+.ti -1c
+.RI "int \fBargxcFindParam\fP (\fBArgxc\fP *argxc, const char *id)"
+.br
+.RI "Find the index of a parameter by ID\&. "
+.ti -1c
+.RI "void \fBargxcFreeError\fP (\fBArgxcError\fP *error)"
+.br
+.RI "Free resources associated with an \fBArgxcError\fP struct\&. "
+.ti -1c
+.RI "void \fBargxcFreeOption\fP (\fBArgxcOptions\fP *option)"
+.br
+.RI "Free resources associated with an \fBArgxcOptions\fP struct\&. "
+.ti -1c
+.RI "void \fBargxcFreeParam\fP (\fBArgxcParam\fP *param)"
+.br
+.RI "Free resources associated with an \fBArgxcParam\fP struct\&. "
+.ti -1c
+.RI "void \fBargxcFreeStringArray\fP (char **array, size_t count)"
+.br
+.RI "Free a string array returned from \fBArgxc\fP (e\&.g\&., argv array)\&. "
+.ti -1c
+.RI "int \fBargxcGetArgc\fP (\fBArgxc\fP *argxc)"
+.br
+.RI "Get the number of command-line arguments passed\&. "
+.ti -1c
+.RI "const char * \fBargxcGetId\fP (\fBArgxc\fP *argxc)"
+.br
+.RI "Get the identifier of the \fBArgxc\fP instance\&. "
+.ti -1c
+.RI "char ** \fBargxcGetMainArgs\fP (\fBArgxc\fP *argxc, size_t *count)"
+.br
+.RI "Get the raw command-line arguments passed to \fBArgxc\fP\&. "
+.ti -1c
+.RI "\fBArgxcOptions\fP * \fBargxcGetOptions\fP (\fBArgxc\fP *argxc, size_t *count)"
+.br
+.RI "Get all top-level options defined for the \fBArgxc\fP instance\&. "
+.ti -1c
+.RI "\fBArgxcParam\fP \fBargxcGetParam\fP (\fBArgxc\fP *argxc, const char *id)"
+.br
+.RI "Retrieve a parameter by ID\&. "
+.ti -1c
+.RI "bool \fBargxcGetSubParam\fP (\fBArgxc\fP *argxc, const \fBArgxcParam\fP *param, const char *id)"
+.br
+.RI "Retrieve a sub-parameter from a given parameter by ID\&. "
+.ti -1c
+.RI "bool \fBargxcParamExists\fP (\fBArgxc\fP *argxc, const char *id)"
+.br
+.RI "Check if a parameter with the given ID exists\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void argxcAddOption (\fBArgxc\fP * argxc, \fBArgxcOptions\fP option)"
+
+.PP
+Add a new option to the \fBArgxc\fP instance\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargxc\fP Pointer to the \fBArgxc\fP instance\&. 
+.br
+\fIoption\fP The option to add\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB124\fP of file \fBArgx\&.c\fP\&.
+.nf
+125 {
+126     if (!argxc) return;
+127 
+128     if (argxc\->optionsCount >= argxc\->optionsCapacity)
+129     {
+130         argxc\->optionsCapacity *= 2;
+131         argxc\->options = realloc(argxc\->options, argxc\->optionsCapacity * sizeof(ArgxcOptions));
+132         if (!argxc\->options) return;
+133     }
+134 
+135     argxc\->options[argxc\->optionsCount++] = option;
+136 }
+.PP
+.fi
+
+.PP
+References \fBArgxc::options\fP, \fBArgxc::optionsCapacity\fP, and \fBArgxc::optionsCount\fP\&.
+.SS "void argxcAddSubOption (\fBArgxcOptions\fP * parent, \fBArgxcOptions\fP subOption)"
+
+.PP
+Add a sub-option to a parent option\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Pointer to the parent option\&. 
+.br
+\fIsubOption\fP Sub-option to add under the parent\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB138\fP of file \fBArgx\&.c\fP\&.
+.nf
+139 {
+140     if (!parent) return;
+141 
+142     if (parent\->subParamsCount >= parent\->subParamsCapacity)
+143     {
+144         size_t newCapacity = parent\->subParamsCapacity == 0 ? 2 : parent\->subParamsCapacity * 2;
+145         ArgxcOptions *newSubParams = realloc(parent\->subParams, newCapacity * sizeof(ArgxcOptions));
+146         if (!newSubParams) return;
+147 
+148         parent\->subParams = newSubParams;
+149         parent\->subParamsCapacity = newCapacity;
+150     }
+151 
+152     parent\->subParams[parent\->subParamsCount++] = subOption;
+153 }
+.PP
+.fi
+
+.PP
+References \fBArgxcOptions::subParams\fP, \fBArgxcOptions::subParamsCapacity\fP, and \fBArgxcOptions::subParamsCount\fP\&.
+.SS "bool argxcCompareArgs (\fBArgxcOptions\fP * options, size_t optionsCount, char ** argv, size_t argvCount)"
+
+.PP
+Compare if the given argv matches a list of \fBArgxcOptions\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoptions\fP Array of \fBArgxcOptions\fP\&. 
+.br
+\fIoptionsCount\fP Number of options\&. 
+.br
+\fIargv\fP Array of argument strings\&. 
+.br
+\fIargvCount\fP Number of argument strings\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if argv matches the options, false otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB499\fP of file \fBArgx\&.c\fP\&.
+.nf
+500 {
+501     if (!options || !argv) return false;
+502 
+503     for (size_t i = 1; i < argvCount; i++)
+504     {
+505         const char *arg = argv[i];
+506 
+507         bool found = false;
+508         bool hasSubParams = false;
+509         bool hasAnySubParams = false;
+510         ArgxcOptions *matchedOption = NULL;
+511 
+512         // Find the matching option
+513         for (size_t j = 0; j < optionsCount; j++)
+514         {
+515             if ((options[j]\&.sparam && strcmp(options[j]\&.sparam, arg) == 0) ||
+516                     (options[j]\&.param && strcmp(options[j]\&.param, arg) == 0))
+517             {
+518                 found = true;
+519                 hasSubParams = options[j]\&.hasSubParams;
+520                 hasAnySubParams = options[j]\&.hasAnySubParams;
+521                 matchedOption = &options[j];
+522                 break;
+523             }
+524         }
+525 
+526         if (!found) return false;
+527 
+528         if (hasSubParams || hasAnySubParams)
+529         {
+530             // Check if there's a next argument
+531             if (i + 1 < argvCount)
+532             {
+533                 const char *nextArg = argv[i + 1];
+534 
+535                 // Check if next argument is a sub\-parameter
+536                 bool isSubParam = false;
+537 
+538                 if (nextArg && strlen(nextArg) > 0 && nextArg[0] != '\-')
+539                 {
+540                     // Validate if it's a valid sub\-parameter
+541                     for (size_t k = 0; k < matchedOption\->subParamsCount; k++)
+542                     {
+543                         if ((matchedOption\->subParams[k]\&.param && strcmp(matchedOption\->subParams[k]\&.param, nextArg) == 0) ||
+544                                 (matchedOption\->subParams[k]\&.sparam && strcmp(matchedOption\->subParams[k]\&.sparam, nextArg) == 0))
+545                         {
+546                             isSubParam = true;
+547                             break;
+548                         }
+549                     }
+550 
+551                     if (isSubParam)
+552                     {
+553                         i++; // Skip the sub\-parameter
+554                     } else if (hasSubParams || hasAnySubParams)
+555                     {
+556                         return false;
+557                     }
+558                 } else if (hasSubParams || hasAnySubParams)
+559                 {
+560                     return false;
+561                 }
+562             }
+563         }
+564     }
+565 
+566     return true;
+567 }
+.PP
+.fi
+
+.PP
+References \fBArgxcOptions::hasAnySubParams\fP, \fBArgxcOptions::hasSubParams\fP, \fBArgxcOptions::param\fP, \fBArgxcOptions::sparam\fP, \fBArgxcOptions::subParams\fP, and \fBArgxcOptions::subParamsCount\fP\&.
+.SS "\fBArgxc\fP * argxcCreate (const char * id, int argc, char * argv[])"
+
+.PP
+Create a new \fBArgxc\fP instance with a specified ID and command-line arguments\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Identifier for the parser instance\&. 
+.br
+\fIargc\fP Number of command-line arguments\&. 
+.br
+\fIargv\fP Array of command-line argument strings\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Argxc* Pointer to the created \fBArgxc\fP instance\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB64\fP of file \fBArgx\&.c\fP\&.
+.nf
+65 {
+66     Argxc *argxc = malloc(sizeof(Argxc));
+67     if (!argxc) return NULL;
+68 
+69     argxc\->id = stringDuplicate(id);
+70     argxc\->mainArgc = argc;
+71     argxc\->mainArgsCount = argc;
+72     argxc\->mainArgs = malloc(argc * sizeof(char*));
+73     argxc\->optionsCount = 0;
+74     argxc\->optionsCapacity = 10;
+75     argxc\->options = malloc(argxc\->optionsCapacity * sizeof(ArgxcOptions));
+76 
+77     if (!argxc\->mainArgs || !argxc\->options)
+78     {
+79         argxcDestroy(argxc);
+80         return NULL;
+81     }
+82 
+83     for (int i = 0; i < argc; i++)
+84     {
+85         argxc\->mainArgs[i] = stringDuplicate(argv[i]);
+86     }
+87 
+88     return argxc;
+89 }
+.PP
+.fi
+
+.PP
+References \fBargxcDestroy()\fP, \fBArgxc::id\fP, \fBArgxc::mainArgc\fP, \fBArgxc::mainArgs\fP, \fBArgxc::mainArgsCount\fP, \fBArgxc::options\fP, \fBArgxc::optionsCapacity\fP, \fBArgxc::optionsCount\fP, and \fBstringDuplicate()\fP\&.
+.SS "\fBArgxc\fP * argxcCreateDefault (void )"
+
+.PP
+Create a new \fBArgxc\fP instance with default values (empty ID and no arguments)\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Argxc* Pointer to the default \fBArgxc\fP instance\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB91\fP of file \fBArgx\&.c\fP\&.
+.nf
+92 {
+93     Argxc *argxc = malloc(sizeof(Argxc));
+94     if (!argxc) return NULL;
+95 
+96     argxc\->id = NULL;
+97     argxc\->mainArgs = NULL;
+98     argxc\->mainArgsCount = 0;
+99     argxc\->mainArgc = 0;
+100     argxc\->optionsCount = 0;
+101     argxc\->optionsCapacity = 10;
+102     argxc\->options = malloc(argxc\->optionsCapacity * sizeof(ArgxcOptions));
+103 
+104     if (!argxc\->options)
+105     {
+106         free(argxc); argxc = NULL;
+107         return NULL;
+108     }
+109 
+110     return argxc;
+111 }
+.PP
+.fi
+
+.PP
+References \fBArgxc::id\fP, \fBArgxc::mainArgc\fP, \fBArgxc::mainArgs\fP, \fBArgxc::mainArgsCount\fP, \fBArgxc::options\fP, \fBArgxc::optionsCapacity\fP, and \fBArgxc::optionsCount\fP\&.
+.SS "char * argxcCreateDocs (\fBArgxc\fP * argxc, \fBArgxcStyle\fP style, const char * title, const char * mainInfo)"
+
+.PP
+Generate documentation for the defined options\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargxc\fP Pointer to the \fBArgxc\fP instance\&. 
+.br
+\fIstyle\fP Documentation output style\&. 
+.br
+\fItitle\fP Title of the documentation\&. 
+.br
+\fImainInfo\fP Additional info to be displayed in the documentation\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char* Documentation string (must be freed by caller)\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB375\fP of file \fBArgx\&.c\fP\&.
+.nf
+376 {
+377     if (!argxc) return NULL;
+378 
+379     size_t bufferSize = 4096;
+380     char *contentStr = malloc(bufferSize);
+381     if (!contentStr) return NULL;
+382 
+383     contentStr[0] = '\\0';
+384 
+385     if (style == ARGX_STYLE_PROFESSIONAL)
+386     {
+387         for (size_t i = 0; i < argxc\->optionsCount; i++)
+388         {
+389             ArgxcOptions *opt = &argxc\->options[i];
+390 
+391             // Main option header line
+392             char temp[512];
+393             snprintf(temp, sizeof(temp), "ID: %s\\n", opt\->id ? opt\->id : "");
+394             strcat(contentStr, temp);
+395 
+396             snprintf(temp, sizeof(temp), "[ %s | %s", 
+397                     opt\->sparam ? opt\->sparam : "", 
+398                     opt\->param ? opt\->param : "");
+399             strcat(contentStr, temp);
+400 
+401             if (opt\->hasSubParams && opt\->subParamsCount > 0)
+402             {
+403                 strcat(contentStr, " [ ");
+404 
+405                 for (size_t j = 0; j < opt\->subParamsCount; j++)
+406                 {
+407                     strcat(contentStr, opt\->subParams[j]\&.param ? opt\->subParams[j]\&.param : "");
+408 
+409                     if (j < opt\->subParamsCount \- 1)
+410                     {
+411                         strcat(contentStr, " | ");
+412                     } else if (j <= opt\->subParamsCount)
+413                     {
+414                         strcat(contentStr, " ");
+415                     }
+416                 }
+417 
+418                 strcat(contentStr, "] ] ");
+419             } else {
+420                 strcat(contentStr, " ] ");
+421             }
+422 
+423             strcat(contentStr, opt\->info ? opt\->info : "");
+424             strcat(contentStr, "\\n");
+425 
+426             // Print all sub\-options
+427             if (opt\->hasSubParams && opt\->subParamsCount > 0)
+428             {
+429                 for (size_t j = 0; j < opt\->subParamsCount; j++)
+430                 {
+431                     ArgxcOptions *sub = &opt\->subParams[j];
+432 
+433                     // Create spacing for alignment
+434                     size_t paramLen = opt\->param ? strlen(opt\->param) : 0;
+435                     for (size_t k = 0; k < paramLen; k++)
+436                     {
+437                         strcat(contentStr, " ");
+438                     }
+439 
+440                     snprintf(temp, sizeof(temp), "  [ %s | %s ] %s\\n",
+441                             sub\->sparam ? sub\->sparam : "",
+442                             sub\->param ? sub\->param : "",
+443                             sub\->info ? sub\->info : "");
+444                     strcat(contentStr, temp);
+445                 }
+446             }
+447         }
+448     } else if (style == ARGX_STYLE_SIMPLE)
+449     {
+450         for (size_t i = 0; i < argxc\->optionsCount; i++)
+451         {
+452             ArgxcOptions *opt = &argxc\->options[i];
+453 
+454             char temp[256];
+455             snprintf(temp, sizeof(temp), "%s, %s \- %s\\n",
+456                     opt\->sparam ? opt\->sparam : "",
+457                     opt\->param ? opt\->param : "",
+458                     opt\->info ? opt\->info : "");
+459             strcat(contentStr, temp);
+460 
+461             if (opt\->hasSubParams && opt\->subParamsCount > 0)
+462             {
+463                 for (size_t j = 0; j < opt\->subParamsCount; j++)
+464                 {
+465                     ArgxcOptions *sub = &opt\->subParams[j];
+466 
+467                     snprintf(temp, sizeof(temp), "  %s, %s \- %s\\n",
+468                             sub\->sparam ? sub\->sparam : "",
+469                             sub\->param ? sub\->param : "",
+470                             sub\->info ? sub\->info : "");
+471                     strcat(contentStr, temp);
+472                 }
+473             }
+474         }
+475     }
+476 
+477     // Combine title, mainInfo, and content
+478     size_t titleLen = title ? strlen(title) : 0;
+479     size_t mainInfoLen = mainInfo ? strlen(mainInfo) : 0;
+480     size_t contentLen = strlen(contentStr);
+481     size_t totalLen = titleLen + mainInfoLen + contentLen + 10; // Extra space for newlines
+482 
+483     char *result = malloc(totalLen);
+484     if (!result)
+485     {
+486         free(contentStr); contentStr = NULL;
+487         return NULL;
+488     }
+489 
+490     snprintf(result, totalLen, "%s\\n%s\\n%s",
+491             title ? title : "",
+492             mainInfo ? mainInfo : "",
+493             contentStr);
+494 
+495     free(contentStr); contentStr = NULL;
+496     return result;
+497 }
+.PP
+.fi
+
+.PP
+References \fBARGX_STYLE_PROFESSIONAL\fP, \fBARGX_STYLE_SIMPLE\fP, \fBArgxcOptions::hasSubParams\fP, \fBArgxcOptions::id\fP, \fBArgxcOptions::info\fP, \fBArgxc::options\fP, \fBArgxc::optionsCount\fP, \fBArgxcOptions::param\fP, \fBArgxcOptions::sparam\fP, \fBArgxcOptions::subParams\fP, and \fBArgxcOptions::subParamsCount\fP\&.
+.SS "\fBArgxcError\fP argxcCreateError (const char * type, const char * error, const char * help, int code)"
+
+.PP
+Create an \fBArgxcError\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP Type/category of the error\&. 
+.br
+\fIerror\fP Error message\&. 
+.br
+\fIhelp\fP Help message for resolving the error\&. 
+.br
+\fIcode\fP Exit code or error code\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBArgxcError\fP The created error struct\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB667\fP of file \fBArgx\&.c\fP\&.
+.nf
+668 {
+669     ArgxcError err = {0};
+670 
+671     err\&.type = stringDuplicate(type);
+672     err\&.error = stringDuplicate(error);
+673     err\&.help = stringDuplicate(help);
+674     err\&.code = code;
+675 
+676     return err;
+677 }
+.PP
+.fi
+
+.PP
+References \fBArgxcError::code\fP, \fBArgxcError::error\fP, \fBArgxcError::help\fP, \fBstringDuplicate()\fP, and \fBArgxcError::type\fP\&.
+.SS "\fBArgxcOptions\fP argxcCreateOption (const char * id, const char * param, const char * sparam, const char * info, bool hasSubParams, bool hasAnySubParams)"
+
+.PP
+Create a new option\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Option identifier\&. 
+.br
+\fIparam\fP Parameter name (e\&.g\&., --param)\&. 
+.br
+\fIsparam\fP Short form (e\&.g\&., -p)\&. 
+.br
+\fIinfo\fP Description of the option\&. 
+.br
+\fIhasSubParams\fP Whether the option has sub-parameters\&. 
+.br
+\fIhasAnySubParams\fP Whether the option accepts any sub-parameters\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBArgxcOptions\fP The created option\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB607\fP of file \fBArgx\&.c\fP\&.
+.nf
+609 {
+610     ArgxcOptions option = {0};
+611 
+612     option\&.id = stringDuplicate(id);
+613     option\&.param = stringDuplicate(param);
+614     option\&.sparam = stringDuplicate(sparam);
+615     option\&.info = stringDuplicate(info);
+616     option\&.hasSubParams = hasSubParams;
+617     option\&.hasAnySubParams = hasAnySubParams;
+618     option\&.subParams = NULL;
+619     option\&.subParamsCount = 0;
+620 
+621     return option;
+622 }
+.PP
+.fi
+
+.PP
+References \fBArgxcOptions::hasAnySubParams\fP, \fBArgxcOptions::hasSubParams\fP, \fBArgxcOptions::id\fP, \fBArgxcOptions::info\fP, \fBArgxcOptions::param\fP, \fBArgxcOptions::sparam\fP, \fBstringDuplicate()\fP, \fBArgxcOptions::subParams\fP, and \fBArgxcOptions::subParamsCount\fP\&.
+.SS "void argxcDestroy (\fBArgxc\fP * argxc)"
+
+.PP
+Destroy an \fBArgxc\fP instance and free all associated memory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargxc\fP Pointer to the \fBArgxc\fP instance to destroy\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB113\fP of file \fBArgx\&.c\fP\&.
+.nf
+114 {
+115     if (!argxc) return;
+116 
+117     free(argxc\->id); argxc\->id = NULL;
+118     if (argxc\->mainArgs) freeStringArray(argxc\->mainArgs, argxc\->mainArgsCount);
+119     if (argxc\->options) freeOptionsArray(argxc\->options, argxc\->optionsCount);
+120     free(argxc); argxc = NULL;
+121 }
+.PP
+.fi
+
+.PP
+References \fBfreeOptionsArray()\fP, \fBfreeStringArray()\fP, \fBArgxc::id\fP, \fBArgxc::mainArgs\fP, \fBArgxc::mainArgsCount\fP, \fBArgxc::options\fP, and \fBArgxc::optionsCount\fP\&.
+.PP
+Referenced by \fBargxcCreate()\fP\&.
+.SS "int argxcFindParam (\fBArgxc\fP * argxc, const char * id)"
+
+.PP
+Find the index of a parameter by ID\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargxc\fP Pointer to the \fBArgxc\fP instance\&. 
+.br
+\fIid\fP The identifier of the parameter to find\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int Index of the parameter, or -1 if not found\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB155\fP of file \fBArgx\&.c\fP\&.
+.nf
+156 {
+157     if (!argxc || !id) return \-1;
+158 
+159     // First check if it's a main parameter
+160     for (size_t i = 0; i < argxc\->optionsCount; i++)
+161     {
+162         if (argxc\->options[i]\&.id && strcmp(argxc\->options[i]\&.id, id) == 0)
+163         {
+164             // Check if this main parameter exists in arguments
+165             for (size_t j = 0; j < argxc\->mainArgsCount; j++)
+166             {
+167                 if ((argxc\->options[i]\&.param && strcmp(argxc\->mainArgs[j], argxc\->options[i]\&.param) == 0) ||
+168                         (argxc\->options[i]\&.sparam && strcmp(argxc\->mainArgs[j], argxc\->options[i]\&.sparam) == 0))
+169                 {
+170                     return (int)i;
+171                 }
+172             }
+173         }
+174     }
+175 
+176     // Then look for sub\-parameters
+177     for (size_t i = 0; i < argxc\->optionsCount; i++)
+178     {
+179         ArgxcOptions *opt = &argxc\->options[i];
+180 
+181         // Check if the parent option exists in the arguments
+182         bool parentExists = false;
+183         for (size_t j = 0; j < argxc\->mainArgsCount; j++)
+184         {
+185             if ((opt\->param && strcmp(argxc\->mainArgs[j], opt\->param) == 0) ||
+186                     (opt\->sparam && strcmp(argxc\->mainArgs[j], opt\->sparam) == 0))
+187             {
+188                 parentExists = true;
+189                 break;
+190             }
+191         }
+192 
+193         if (parentExists)
+194         {
+195             // Find the index of the requested sub\-parameter
+196             for (size_t j = 0; j < opt\->subParamsCount; j++)
+197             {
+198                 if (opt\->subParams[j]\&.id && strcmp(opt\->subParams[j]\&.id, id) == 0)
+199                 {
+200                     return (int)j;
+201                 }
+202             }
+203         }
+204     }
+205 
+206     return \-1; // Not found
+207 }
+.PP
+.fi
+
+.PP
+References \fBArgxcOptions::id\fP, \fBArgxc::mainArgs\fP, \fBArgxc::mainArgsCount\fP, \fBArgxc::options\fP, \fBArgxc::optionsCount\fP, \fBArgxcOptions::param\fP, \fBArgxcOptions::sparam\fP, \fBArgxcOptions::subParams\fP, and \fBArgxcOptions::subParamsCount\fP\&.
+.PP
+Referenced by \fBargxcGetSubParam()\fP, and \fBargxcParamExists()\fP\&.
+.SS "void argxcFreeError (\fBArgxcError\fP * error)"
+
+.PP
+Free resources associated with an \fBArgxcError\fP struct\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIerror\fP Pointer to the error to free\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB679\fP of file \fBArgx\&.c\fP\&.
+.nf
+680 {
+681     if (!error) return;
+682 
+683     free(error\->type); error\->type = NULL;
+684     free(error\->error); error\->error = NULL;
+685     free(error\->help); error\->help = NULL;
+686     memset(error, 0, sizeof(ArgxcError));
+687 }
+.PP
+.fi
+
+.PP
+References \fBArgxcError::error\fP, \fBArgxcError::help\fP, and \fBArgxcError::type\fP\&.
+.SS "void argxcFreeOption (\fBArgxcOptions\fP * option)"
+
+.PP
+Free resources associated with an \fBArgxcOptions\fP struct\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoption\fP Pointer to the option to free\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB624\fP of file \fBArgx\&.c\fP\&.
+.nf
+625 {
+626     if (!option) return;
+627 
+628     if (option\->id)
+629     { free(option\->id); option\->id = NULL; }
+630     if (option\->param)
+631     { free(option\->param); option\->param = NULL; }
+632     if (option\->sparam)
+633     { free(option\->sparam); option\->sparam = NULL; }
+634     if (option\->info)
+635     { free(option\->info); option\->info = NULL; }
+636 
+637     if (option\->subParams)
+638     {
+639         for (size_t i = 0; i < option\->subParamsCount; i++)
+640         {
+641             argxcFreeOption(&option\->subParams[i]);
+642         }
+643 
+644         free(option\->subParams); 
+645         option\->subParams = NULL;
+646         option\->subParamsCapacity = 0;
+647         option\->subParamsCount = 0;
+648     }
+649 
+650     memset(option, 0, sizeof(ArgxcOptions));
+651 }
+.PP
+.fi
+
+.PP
+References \fBargxcFreeOption()\fP, \fBArgxcOptions::id\fP, \fBArgxcOptions::info\fP, \fBArgxcOptions::param\fP, \fBArgxcOptions::sparam\fP, \fBArgxcOptions::subParams\fP, \fBArgxcOptions::subParamsCapacity\fP, and \fBArgxcOptions::subParamsCount\fP\&.
+.PP
+Referenced by \fBargxcFreeOption()\fP, and \fBfreeOptionsArray()\fP\&.
+.SS "void argxcFreeParam (\fBArgxcParam\fP * param)"
+
+.PP
+Free resources associated with an \fBArgxcParam\fP struct\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparam\fP Pointer to the parameter to free\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB653\fP of file \fBArgx\&.c\fP\&.
+.nf
+654 {
+655     if (!param) return;
+656 
+657     free(param\->subExists); param\->subExists = NULL;
+658     memset(param, 0, sizeof(ArgxcParam));
+659 }
+.PP
+.fi
+
+.PP
+References \fBArgxcParam::subExists\fP\&.
+.SS "void argxcFreeStringArray (char ** array, size_t count)"
+
+.PP
+Free a string array returned from \fBArgxc\fP (e\&.g\&., argv array)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarray\fP The array to free\&. 
+.br
+\fIcount\fP Number of elements in the array\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB661\fP of file \fBArgx\&.c\fP\&.
+.nf
+662 {
+663     freeStringArray(array, count);
+664 }
+.PP
+.fi
+
+.PP
+References \fBfreeStringArray()\fP\&.
+.SS "int argxcGetArgc (\fBArgxc\fP * argxc)"
+
+.PP
+Get the number of command-line arguments passed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargxc\fP Pointer to the \fBArgxc\fP instance\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int Number of arguments\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB588\fP of file \fBArgx\&.c\fP\&.
+.nf
+589 {
+590     return argxc ? argxc\->mainArgc : 0;
+591 }
+.PP
+.fi
+
+.PP
+References \fBArgxc::mainArgc\fP\&.
+.SS "const char * argxcGetId (\fBArgxc\fP * argxc)"
+
+.PP
+Get the identifier of the \fBArgxc\fP instance\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargxc\fP Pointer to the \fBArgxc\fP instance\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+const char* The ID string\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB601\fP of file \fBArgx\&.c\fP\&.
+.nf
+602 {
+603     return argxc ? argxc\->id : NULL;
+604 }
+.PP
+.fi
+
+.PP
+References \fBArgxc::id\fP\&.
+.SS "char ** argxcGetMainArgs (\fBArgxc\fP * argxc, size_t * count)"
+
+.PP
+Get the raw command-line arguments passed to \fBArgxc\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargxc\fP Pointer to the \fBArgxc\fP instance\&. 
+.br
+\fIcount\fP Output: number of arguments returned\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char** Array of argument strings\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB570\fP of file \fBArgx\&.c\fP\&.
+.nf
+571 {
+572     if (!argxc || !count) return NULL;
+573 
+574     *count = argxc\->mainArgsCount;
+575 
+576     // Create a copy of the array
+577     char **copy = malloc(argxc\->mainArgsCount * sizeof(char*));
+578     if (!copy) return NULL;
+579 
+580     for (size_t i = 0; i < argxc\->mainArgsCount; i++)
+581     {
+582         copy[i] = stringDuplicate(argxc\->mainArgs[i]);
+583     }
+584 
+585     return copy;
+586 }
+.PP
+.fi
+
+.PP
+References \fBArgxc::mainArgs\fP, \fBArgxc::mainArgsCount\fP, and \fBstringDuplicate()\fP\&.
+.SS "\fBArgxcOptions\fP * argxcGetOptions (\fBArgxc\fP * argxc, size_t * count)"
+
+.PP
+Get all top-level options defined for the \fBArgxc\fP instance\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargxc\fP Pointer to the \fBArgxc\fP instance\&. 
+.br
+\fIcount\fP Output: number of options returned\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ArgxcOptions* Array of options\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB593\fP of file \fBArgx\&.c\fP\&.
+.nf
+594 {
+595     if (!argxc || !count) return NULL;
+596 
+597     *count = argxc\->optionsCount;
+598     return argxc\->options; // Return direct reference (be careful with modification)
+599 }
+.PP
+.fi
+
+.PP
+References \fBArgxc::options\fP, and \fBArgxc::optionsCount\fP\&.
+.SS "\fBArgxcParam\fP argxcGetParam (\fBArgxc\fP * argxc, const char * id)"
+
+.PP
+Retrieve a parameter by ID\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargxc\fP Pointer to the \fBArgxc\fP instance\&. 
+.br
+\fIid\fP The identifier of the parameter to retrieve\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBArgxcParam\fP The parameter object\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB214\fP of file \fBArgx\&.c\fP\&.
+.nf
+215 {
+216     ArgxcParam result = {false, NULL, 0};
+217 
+218     if (!argxc || !id || argxc\->mainArgc <= 1)
+219     {
+220         return result;
+221     }
+222 
+223     // First, check if this is a top\-level option
+224     for (size_t i = 0; i < argxc\->optionsCount; i++)
+225     {
+226         ArgxcOptions *opt = &argxc\->options[i];
+227 
+228         if (opt\->id && strcmp(opt\->id, id) == 0)
+229         {
+230             // Find the position of the main option in arguments
+231             int mainOptionPos = \-1;
+232 
+233             for (size_t j = 0; j < argxc\->mainArgsCount; j++)
+234             {
+235                 if ((opt\->param && strcmp(argxc\->mainArgs[j], opt\->param) == 0) ||
+236                         (opt\->sparam && strcmp(argxc\->mainArgs[j], opt\->sparam) == 0))
+237                 {
+238                     result\&.exists = true;
+239                     mainOptionPos = j;
+240                     break;
+241                 }
+242             }
+243 
+244             if (result\&.exists)
+245             {
+246                 if (opt\->hasSubParams || opt\->hasAnySubParams)
+247                 {
+248                     // Allocate memory for sub\-parameter existence array
+249                     result\&.subExistsCount = opt\->subParamsCount;
+250                     result\&.subExists = malloc(result\&.subExistsCount * sizeof(bool));
+251 
+252                     if (result\&.subExists)
+253                     {
+254                         // Check each sub\-parameter
+255                         for (size_t j = 0; j < opt\->subParamsCount; j++)
+256                         {
+257                             bool subMatched = false;
+258                             ArgxcOptions *sub = &opt\->subParams[j];
+259 
+260                             // Look for sub\-parameters after the main option
+261                             for (size_t k = mainOptionPos + 1; k < argxc\->mainArgsCount; k++)
+262                             {
+263                                 if ((sub\->param && strcmp(argxc\->mainArgs[k], sub\->param) == 0) ||
+264                                         (sub\->sparam && strcmp(argxc\->mainArgs[k], sub\->sparam) == 0))
+265                                 {
+266                                     subMatched = true;
+267                                     break;
+268                                 }
+269                             }
+270 
+271                             result\&.subExists[j] = subMatched;
+272                         }
+273                     }
+274                 }
+275 
+276                 return result;
+277             }
+278         }
+279     }
+280 
+281     // If not found as top\-level, check if it's a sub\-parameter
+282     for (size_t i = 0; i < argxc\->optionsCount; i++)
+283     {
+284         ArgxcOptions *opt = &argxc\->options[i];
+285 
+286         // Find if the parent option exists and get its position
+287         int parentPos = \-1;
+288 
+289         for (size_t j = 0; j < argxc\->mainArgsCount; j++)
+290         {
+291             if ((opt\->param && strcmp(argxc\->mainArgs[j], opt\->param) == 0) ||
+292                     (opt\->sparam && strcmp(argxc\->mainArgs[j], opt\->sparam) == 0))
+293             {
+294                 parentPos = j;
+295                 break;
+296             }
+297         }
+298 
+299         if (parentPos >= 0 && (opt\->hasSubParams || opt\->hasAnySubParams))
+300         {
+301             // Check if the requested sub\-parameter exists after the parent
+302             for (size_t j = 0; j < opt\->subParamsCount; j++)
+303             {
+304                 ArgxcOptions *sub = &opt\->subParams[j];
+305 
+306                 if (sub\->id && strcmp(sub\->id, id) == 0)
+307                 {
+308                     for (size_t k = parentPos + 1; k < argxc\->mainArgsCount; k++)
+309                     {
+310                         if ((sub\->param && strcmp(argxc\->mainArgs[k], sub\->param) == 0) ||
+311                                 (sub\->sparam && strcmp(argxc\->mainArgs[k], sub\->sparam) == 0))
+312                         {
+313                             result\&.exists = true;
+314                             break;
+315                         }
+316                     }
+317 
+318                     if (!result\&.exists && (size_t)(parentPos + 1) < argxc\->mainArgsCount)
+319                     {
+320                         char *nextArg = argxc\->mainArgs[parentPos + 1];
+321 
+322                         if ((sub\->param && strcmp(nextArg, sub\->param) == 0) ||
+323                                 (sub\->sparam && strcmp(nextArg, sub\->sparam) == 0))
+324                         {
+325                             result\&.exists = true;
+326                         }
+327                     }
+328 
+329                     // Handle any sub\-sub\-parameters if they exist
+330                     if (result\&.exists && (sub\->hasSubParams || sub\->hasAnySubParams))
+331                     {
+332                         result\&.subExistsCount = sub\->subParamsCount;
+333                         result\&.subExists = malloc(result\&.subExistsCount * sizeof(bool));
+334 
+335                         if (result\&.subExists)
+336                         {
+337                             for (size_t k = 0; k < sub\->subParamsCount; k++)
+338                             {
+339                                 bool subsubMatched = false;
+340                                 ArgxcOptions *subsub = &sub\->subParams[k];
+341 
+342                                 for (size_t l = 0; l < argxc\->mainArgsCount; l++)
+343                                 {
+344                                     if ((subsub\->param && strcmp(argxc\->mainArgs[l], subsub\->param) == 0) ||
+345                                             (subsub\->sparam && strcmp(argxc\->mainArgs[l], subsub\->sparam) == 0))
+346                                     {
+347                                         subsubMatched = true;
+348                                         break;
+349                                     }
+350                                 }
+351 
+352                                 result\&.subExists[k] = subsubMatched;
+353                             }
+354                         }
+355                     }
+356 
+357                     return result;
+358                 }
+359             }
+360         }
+361     }
+362 
+363     return result;
+364 }
+.PP
+.fi
+
+.PP
+References \fBArgxcParam::exists\fP, \fBArgxcOptions::hasAnySubParams\fP, \fBArgxcOptions::hasSubParams\fP, \fBArgxcOptions::id\fP, \fBArgxc::mainArgc\fP, \fBArgxc::mainArgs\fP, \fBArgxc::mainArgsCount\fP, \fBArgxc::options\fP, \fBArgxc::optionsCount\fP, \fBArgxcOptions::param\fP, \fBArgxcOptions::sparam\fP, \fBArgxcParam::subExists\fP, \fBArgxcParam::subExistsCount\fP, \fBArgxcOptions::subParams\fP, and \fBArgxcOptions::subParamsCount\fP\&.
+.SS "bool argxcGetSubParam (\fBArgxc\fP * argxc, const \fBArgxcParam\fP * param, const char * id)"
+
+.PP
+Retrieve a sub-parameter from a given parameter by ID\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargxc\fP Pointer to the \fBArgxc\fP instance\&. 
+.br
+\fIparam\fP Pointer to the parent parameter\&. 
+.br
+\fIid\fP The identifier of the sub-parameter\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the sub-parameter exists, false otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB366\fP of file \fBArgx\&.c\fP\&.
+.nf
+367 {
+368     if (!argxc || !param || !id) return false;
+369 
+370     int index = argxcFindParam(argxc, id);
+371     return argxcParamExists(argxc, id) && param\->subExists && index >= 0 && 
+372         (size_t)index < param\->subExistsCount && param\->subExists[index];
+373 }
+.PP
+.fi
+
+.PP
+References \fBargxcFindParam()\fP, \fBargxcParamExists()\fP, and \fBArgxcParam::subExists\fP\&.
+.SS "bool argxcParamExists (\fBArgxc\fP * argxc, const char * id)"
+
+.PP
+Check if a parameter with the given ID exists\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargxc\fP Pointer to the \fBArgxc\fP instance\&. 
+.br
+\fIid\fP The identifier of the parameter\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the parameter exists, false otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB209\fP of file \fBArgx\&.c\fP\&.
+.nf
+210 {
+211     return argxcFindParam(argxc, id) >= 0;
+212 }
+.PP
+.fi
+
+.PP
+References \fBargxcFindParam()\fP\&.
+.PP
+Referenced by \fBargxcGetSubParam()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Argx from the source code\&.

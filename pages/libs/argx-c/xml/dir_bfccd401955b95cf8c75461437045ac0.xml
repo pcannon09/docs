@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_bfccd401955b95cf8c75461437045ac0" kind="dir">
+    <compoundname>inc</compoundname>
+    <innerfile refid="d6/d8e/Argx_8h">Argx.h</innerfile>
+    <innerfile refid="d1/d7f/ARGXAddError_8h">ARGXAddError.h</innerfile>
+    <innerfile refid="de/d3c/macros_8h">macros.h</innerfile>
+    <innerfile refid="d9/d49/types_8h">types.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/"/>
+  </compounddef>
+</doxygen>

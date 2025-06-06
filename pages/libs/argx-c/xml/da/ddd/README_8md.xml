@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="da/ddd/README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>ARGX-C<sp/>-<sp/>1.0.2-build</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>C<sp/>Argument<sp/>parser</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Made<sp/>by:<sp/>pcannon09</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Requirements</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Compiler<sp/>and<sp/>C<sp/>Standard<sp/>Support</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Argx<sp/>Version<sp/>|<sp/>Minimum<sp/>C<sp/>Standard<sp/>|<sp/>GCC<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Clang<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>MSVC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>------------<sp/>|<sp/>------------------<sp/>|<sp/>--------<sp/>|<sp/>----------<sp/>|<sp/>-----------------<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>1.0.2-build<sp/><sp/>|<sp/>C99<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>GCC<sp/>3.0+<sp/>|<sp/>Clang<sp/>2.6+<sp/>|<sp/>MSVC<sp/>2013+<sp/>(VC12)<sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Specific<sp/>information</highlight></codeline>
+<codeline><highlight class="normal">**NOTE:<sp/>For<sp/>version<sp/>1.0.2-build**</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>GCC<sp/>has<sp/>supported<sp/>C99<sp/>since<sp/>version<sp/>3.0<sp/>(with<sp/>nearly<sp/>full<sp/>support<sp/>from<sp/>4.5+).</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Clang<sp/>has<sp/>full<sp/>C99<sp/>support<sp/>from<sp/>2.6<sp/>onward.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>MSVC<sp/>has<sp/>full<sp/>support<sp/>with<sp/>MSVC<sp/>2013<sp/>(VC12)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>IMPORTANT<sp/>NOTES</highlight></codeline>
+<codeline><highlight class="normal">**This<sp/>library<sp/>has<sp/>been<sp/>tested<sp/>in<sp/>Arch<sp/>Linux,<sp/>please<sp/>open<sp/>an<sp/>issue<sp/>if<sp/>you<sp/>encounter<sp/>a<sp/>problem<sp/>with<sp/>other<sp/>Operating<sp/>Systems**</highlight></codeline>
+<codeline><highlight class="normal">**Tested<sp/>with<sp/>Clang<sp/>19**</highlight></codeline>
+<codeline><highlight class="normal">**If<sp/>you<sp/>encounter<sp/>any<sp/>other<sp/>issues<sp/>with<sp/>other<sp/>compilers,<sp/>open<sp/>an<sp/>issue<sp/>in<sp/>github**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>For<sp/>more<sp/>information,<sp/>please<sp/>check<sp/>the<sp/>documentation<sp/>at<sp/>**https://pcannon09.github.io/docs/pages/libs/argx/html/index.html**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**NOTE:<sp/>Based<sp/>on<sp/>the<sp/>original<sp/>Argx<sp/>at<sp/>https://www.github.com/pcannon09/argx**</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

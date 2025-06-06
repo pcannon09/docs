@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="d5/d08/structArgxcErrorPair" kind="struct" language="C++" prot="public">
+    <compoundname>ArgxcErrorPair</compoundname>
+    <includes refid="d1/d7f/ARGXAddError_8h" local="no">ARGXAddError.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d5/d08/structArgxcErrorPair_1a548e70442f749cb33bf853987bbb2707" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* ArgxcErrorPair::error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <qualifiedname>ArgxcErrorPair::error</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ARGXAddError.h" line="16" column="16" bodyfile="inc/ARGXAddError.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="d1/d7f/ARGXAddError_8h_1ae080742df3abdaba51a357b9c68775dd" compoundref="de/d77/ARGXAddError_8c" startline="46" endline="57">argxcGetErrorPair</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d08/structArgxcErrorPair_1ab7a2046f22e6b8a74ca323b985cee6ce" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* ArgxcErrorPair::help</definition>
+        <argsstring></argsstring>
+        <name>help</name>
+        <qualifiedname>ArgxcErrorPair::help</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ARGXAddError.h" line="17" column="16" bodyfile="inc/ARGXAddError.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="d1/d7f/ARGXAddError_8h_1ae080742df3abdaba51a357b9c68775dd" compoundref="de/d77/ARGXAddError_8c" startline="46" endline="57">argxcGetErrorPair</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/ARGXAddError.h" line="15" column="1" bodyfile="inc/ARGXAddError.h" bodystart="15" bodyend="18"/>
+    <listofallmembers>
+      <member refid="d5/d08/structArgxcErrorPair_1a548e70442f749cb33bf853987bbb2707" prot="public" virt="non-virtual"><scope>ArgxcErrorPair</scope><name>error</name></member>
+      <member refid="d5/d08/structArgxcErrorPair_1ab7a2046f22e6b8a74ca323b985cee6ce" prot="public" virt="non-virtual"><scope>ArgxcErrorPair</scope><name>help</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

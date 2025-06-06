@@ -1,0 +1,108 @@
+.TH "inc/macros.h" 3 "Version 1.0.2-build" "Argx" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/macros.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBARGX_DEV\fP   false"
+.br
+.ti -1c
+.RI "#define \fBARGX_STRINGIFY\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBARGX_TOSTRING\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBARGX_VERSION\fP   ((\fBARGX_VERSION_MAJOR\fP<<16)|(\fBARGX_VERSION_MINOR\fP<<8)|(\fBARGX_VERSION_PATCH\fP)|(\fBARGX_VERSION_STATE\fP << 24))"
+.br
+.ti -1c
+.RI "#define \fBARGX_VERSION_CHECK\fP(\fBARGX_VERSION_MAJOR\fP,  \fBARGX_VERSION_MINOR\fP,  \fBARGX_VERSION_PATCH\fP,  \fBARGX_VERSION_STATE\fP)"
+.br
+.ti -1c
+.RI "#define \fBARGX_VERSION_MAJOR\fP   1"
+.br
+.ti -1c
+.RI "#define \fBARGX_VERSION_MINOR\fP   0"
+.br
+.ti -1c
+.RI "#define \fBARGX_VERSION_PATCH\fP   2"
+.br
+.ti -1c
+.RI "#define \fBARGX_VERSION_STATE\fP   'build'"
+.br
+.ti -1c
+.RI "#define \fBARGX_VERSION_STD\fP   20250606"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ARGX_DEV   false"
+
+.PP
+Definition at line \fB21\fP of file \fBmacros\&.h\fP\&.
+.SS "#define ARGX_STRINGIFY( x)"
+\fBValue:\fP
+.nf
+#x
+.PP
+.fi
+
+.PP
+Definition at line \fB24\fP of file \fBmacros\&.h\fP\&.
+.SS "#define ARGX_TOSTRING( x)"
+\fBValue:\fP
+.nf
+ARGX_STRINGIFY(x)
+.PP
+.fi
+
+.PP
+Definition at line \fB25\fP of file \fBmacros\&.h\fP\&.
+.SS "#define ARGX_VERSION   ((\fBARGX_VERSION_MAJOR\fP<<16)|(\fBARGX_VERSION_MINOR\fP<<8)|(\fBARGX_VERSION_PATCH\fP)|(\fBARGX_VERSION_STATE\fP << 24))"
+
+.PP
+Definition at line \fB16\fP of file \fBmacros\&.h\fP\&.
+.SS "#define ARGX_VERSION_CHECK( \fBARGX_VERSION_MAJOR\fP,  \fBARGX_VERSION_MINOR\fP,  \fBARGX_VERSION_PATCH\fP,  \fBARGX_VERSION_STATE\fP)"
+\fBValue:\fP
+.nf
+    (((ARGX_VERSION_MAJOR)<<16)|((ARGX_VERSION_MINOR)<<8)|(ARGX_VERSION_PATCH)|((ARGX_VERSION_STATE) << 24))
+.PP
+.fi
+
+.PP
+Definition at line \fB17\fP of file \fBmacros\&.h\fP\&.
+.nf
+17 #define ARGX_VERSION_CHECK(ARGX_VERSION_MAJOR, ARGX_VERSION_MINOR, ARGX_VERSION_PATCH, ARGX_VERSION_STATE) \\
+18     (((ARGX_VERSION_MAJOR)<<16)|((ARGX_VERSION_MINOR)<<8)|(ARGX_VERSION_PATCH)|((ARGX_VERSION_STATE) << 24))
+.PP
+.fi
+
+.SS "#define ARGX_VERSION_MAJOR   1"
+
+.PP
+Definition at line \fB4\fP of file \fBmacros\&.h\fP\&.
+.SS "#define ARGX_VERSION_MINOR   0"
+
+.PP
+Definition at line \fB5\fP of file \fBmacros\&.h\fP\&.
+.SS "#define ARGX_VERSION_PATCH   2"
+
+.PP
+Definition at line \fB6\fP of file \fBmacros\&.h\fP\&.
+.SS "#define ARGX_VERSION_STATE   'build'"
+
+.PP
+Definition at line \fB14\fP of file \fBmacros\&.h\fP\&.
+.SS "#define ARGX_VERSION_STD   20250606"
+
+.PP
+Definition at line \fB7\fP of file \fBmacros\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Argx from the source code\&.

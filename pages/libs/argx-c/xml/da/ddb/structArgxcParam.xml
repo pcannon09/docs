@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="da/ddb/structArgxcParam" kind="struct" language="C++" prot="public">
+    <compoundname>ArgxcParam</compoundname>
+    <includes refid="d9/d49/types_8h" local="no">types.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="da/ddb/structArgxcParam_1abc303d4cb26b086e53978a46071b9735" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ArgxcParam::exists</definition>
+        <argsstring></argsstring>
+        <name>exists</name>
+        <qualifiedname>ArgxcParam::exists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.h" line="38" column="10" bodyfile="inc/types.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="d6/d8e/Argx_8h_1a6ef72f8e604109911e4315f6840febf9" compoundref="d0/df9/Argx_8c" startline="214" endline="364">argxcGetParam</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/ddb/structArgxcParam_1af685e909c26495d1ee2b52acf80960d0" prot="public" static="no" mutable="no">
+        <type>bool *</type>
+        <definition>bool* ArgxcParam::subExists</definition>
+        <argsstring></argsstring>
+        <name>subExists</name>
+        <qualifiedname>ArgxcParam::subExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.h" line="39" column="10" bodyfile="inc/types.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="d6/d8e/Argx_8h_1a6798ce84afc7922cc08260fd52534b99" compoundref="d0/df9/Argx_8c" startline="653" endline="659">argxcFreeParam</referencedby>
+        <referencedby refid="d6/d8e/Argx_8h_1a6ef72f8e604109911e4315f6840febf9" compoundref="d0/df9/Argx_8c" startline="214" endline="364">argxcGetParam</referencedby>
+        <referencedby refid="d6/d8e/Argx_8h_1a0767a3dc8167a77aada7a52c4d0e9d22" compoundref="d0/df9/Argx_8c" startline="366" endline="373">argxcGetSubParam</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/ddb/structArgxcParam_1a6340456c0025fef27395bc30f3251986" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ArgxcParam::subExistsCount</definition>
+        <argsstring></argsstring>
+        <name>subExistsCount</name>
+        <qualifiedname>ArgxcParam::subExistsCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.h" line="40" column="12" bodyfile="inc/types.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="d6/d8e/Argx_8h_1a6ef72f8e604109911e4315f6840febf9" compoundref="d0/df9/Argx_8c" startline="214" endline="364">argxcGetParam</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/types.h" line="37" column="1" bodyfile="inc/types.h" bodystart="37" bodyend="41"/>
+    <listofallmembers>
+      <member refid="da/ddb/structArgxcParam_1abc303d4cb26b086e53978a46071b9735" prot="public" virt="non-virtual"><scope>ArgxcParam</scope><name>exists</name></member>
+      <member refid="da/ddb/structArgxcParam_1af685e909c26495d1ee2b52acf80960d0" prot="public" virt="non-virtual"><scope>ArgxcParam</scope><name>subExists</name></member>
+      <member refid="da/ddb/structArgxcParam_1a6340456c0025fef27395bc30f3251986" prot="public" virt="non-virtual"><scope>ArgxcParam</scope><name>subExistsCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

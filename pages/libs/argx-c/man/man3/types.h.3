@@ -1,0 +1,75 @@
+.TH "inc/types.h" 3 "Version 1.0.2-build" "Argx" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/types.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <stdbool\&.h>\fP
+.br
+\fR#include <stddef\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBArgxcError\fP"
+.br
+.ti -1c
+.RI "struct \fBArgxcOptions\fP"
+.br
+.ti -1c
+.RI "struct \fBArgxcParam\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct Argxc \fBArgxc\fP"
+.br
+.ti -1c
+.RI "typedef struct ArgxcOptions \fBArgxcOptions\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBArgxcStyle\fP { \fBARGX_STYLE_PROFESSIONAL\fP, \fBARGX_STYLE_SIMPLE\fP }"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct Argxc Argxc"
+
+.PP
+Definition at line \fB44\fP of file \fBtypes\&.h\fP\&.
+.SS "typedef struct ArgxcOptions ArgxcOptions"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBArgxcStyle\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIARGX_STYLE_PROFESSIONAL \fP
+.TP
+\f(BIARGX_STYLE_SIMPLE \fP
+.PP
+Definition at line \fB10\fP of file \fBtypes\&.h\fP\&.
+.nf
+10                  {
+11         ARGX_STYLE_PROFESSIONAL,
+12         ARGX_STYLE_SIMPLE
+13     } ArgxcStyle;
+.PP
+.fi
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Argx from the source code\&.

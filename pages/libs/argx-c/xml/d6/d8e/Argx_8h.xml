@@ -1,0 +1,1287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="d6/d8e/Argx_8h" kind="file" language="C++">
+    <compoundname>Argx.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="d9/d49/types_8h" local="yes">types.h</includes>
+    <includedby refid="d0/df9/Argx_8c" local="yes">src/Argx.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>inc/Argx.h</label>
+        <link refid="d6/d8e/Argx_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>types.h</label>
+        <link refid="d9/d49/types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>inc/Argx.h</label>
+        <link refid="d6/d8e/Argx_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/Argx.c</label>
+        <link refid="d0/df9/Argx_8c"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a4b2d2f49ede5c7008816f5c2039d4c2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void argxcAddOption</definition>
+        <argsstring>(Argxc *argxc, ArgxcOptions option)</argsstring>
+        <name>argxcAddOption</name>
+        <param>
+          <type><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> *</type>
+          <declname>argxc</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref></type>
+          <declname>option</declname>
+        </param>
+        <briefdescription>
+<para>Add a new option to the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argxc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>option</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The option to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="41" column="6" bodyfile="src/Argx.c" bodystart="124" bodyend="136" declfile="inc/Argx.h" declline="41" declcolumn="6"/>
+        <references refid="d8/d40/structArgxc_1af24c08ed9dab8ad9800393568097a848" compoundref="d0/df9/Argx_8c" startline="20">Argxc::options</references>
+        <references refid="d8/d40/structArgxc_1a73fbef3389172b12448589e62c5aff34" compoundref="d0/df9/Argx_8c" startline="22">Argxc::optionsCapacity</references>
+        <references refid="d8/d40/structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6" compoundref="d0/df9/Argx_8c" startline="21">Argxc::optionsCount</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a68874cb095408ec91cf02d7ab0df0fa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void argxcAddSubOption</definition>
+        <argsstring>(ArgxcOptions *parent, ArgxcOptions subOption)</argsstring>
+        <name>argxcAddSubOption</name>
+        <param>
+          <type><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref></type>
+          <declname>subOption</declname>
+        </param>
+        <briefdescription>
+<para>Add a sub-option to a parent option. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the parent option. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subOption</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sub-option to add under the parent. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="49" column="6" bodyfile="src/Argx.c" bodystart="138" bodyend="153" declfile="inc/Argx.h" declline="49" declcolumn="6"/>
+        <references refid="d2/dcb/structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5" compoundref="d9/d49/types_8h" startline="32">ArgxcOptions::subParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1abe87d3c8fcdf1a843ea90652c78b5ed1" compoundref="d9/d49/types_8h" startline="34">ArgxcOptions::subParamsCapacity</references>
+        <references refid="d2/dcb/structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76" compoundref="d9/d49/types_8h" startline="33">ArgxcOptions::subParamsCount</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a3f5733b4921f06fcfc46444313114b13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool argxcCompareArgs</definition>
+        <argsstring>(ArgxcOptions *options, size_t optionsCount, char **argv, size_t argvCount)</argsstring>
+        <name>argxcCompareArgs</name>
+        <param>
+          <type><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref> *</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>optionsCount</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argvCount</declname>
+        </param>
+        <briefdescription>
+<para>Compare if the given argv matches a list of <ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of <ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>optionsCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of options. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of argument strings. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argvCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of argument strings. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if argv matches the options, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="97" column="6" bodyfile="src/Argx.c" bodystart="499" bodyend="567" declfile="inc/Argx.h" declline="97" declcolumn="6"/>
+        <references refid="d2/dcb/structArgxcOptions_1ad36df6627ddcae7c469d92794d5a5ddc" compoundref="d9/d49/types_8h" startline="31">ArgxcOptions::hasAnySubParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1add27505ea653aa67161a226f9daff3ca" compoundref="d9/d49/types_8h" startline="30">ArgxcOptions::hasSubParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3" compoundref="d9/d49/types_8h" startline="27">ArgxcOptions::param</references>
+        <references refid="d2/dcb/structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6" compoundref="d9/d49/types_8h" startline="28">ArgxcOptions::sparam</references>
+        <references refid="d2/dcb/structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5" compoundref="d9/d49/types_8h" startline="32">ArgxcOptions::subParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76" compoundref="d9/d49/types_8h" startline="33">ArgxcOptions::subParamsCount</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a05e89b0c2c00b96db95fa612a3a19809" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> *</type>
+        <definition>Argxc * argxcCreate</definition>
+        <argsstring>(const char *id, int argc, char *argv[])</argsstring>
+        <name>argxcCreate</name>
+        <param>
+          <type>const char *</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance with a specified ID and command-line arguments. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier for the parser instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of command-line arguments. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of command-line argument strings. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Argxc* Pointer to the created <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="19" column="7" bodyfile="src/Argx.c" bodystart="64" bodyend="89" declfile="inc/Argx.h" declline="19" declcolumn="7"/>
+        <references refid="d0/df9/Argx_8c_1a944b6c8a9498789cd0a51fdfe9a8c486" compoundref="d0/df9/Argx_8c" startline="113" endline="121">argxcDestroy</references>
+        <references refid="d8/d40/structArgxc_1aaa5a7528c35f7c26ff0c7283db33fe8b" compoundref="d0/df9/Argx_8c" startline="16">Argxc::id</references>
+        <references refid="d8/d40/structArgxc_1ae48ba4369d927bced0bc2b3eb76cc4e5" compoundref="d0/df9/Argx_8c" startline="19">Argxc::mainArgc</references>
+        <references refid="d8/d40/structArgxc_1a666f9d971aaf4b9adfb18908a1205fda" compoundref="d0/df9/Argx_8c" startline="17">Argxc::mainArgs</references>
+        <references refid="d8/d40/structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e" compoundref="d0/df9/Argx_8c" startline="18">Argxc::mainArgsCount</references>
+        <references refid="d8/d40/structArgxc_1af24c08ed9dab8ad9800393568097a848" compoundref="d0/df9/Argx_8c" startline="20">Argxc::options</references>
+        <references refid="d8/d40/structArgxc_1a73fbef3389172b12448589e62c5aff34" compoundref="d0/df9/Argx_8c" startline="22">Argxc::optionsCapacity</references>
+        <references refid="d8/d40/structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6" compoundref="d0/df9/Argx_8c" startline="21">Argxc::optionsCount</references>
+        <references refid="d0/df9/Argx_8c_1a814b3298d81b070e52a987654d18d8a2" compoundref="d0/df9/Argx_8c" startline="26" endline="36">stringDuplicate</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a7490f1245ca836e793645d70dcabe7f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> *</type>
+        <definition>Argxc * argxcCreateDefault</definition>
+        <argsstring>(void)</argsstring>
+        <name>argxcCreateDefault</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance with default values (empty ID and no arguments). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Argxc* Pointer to the default <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="26" column="7" bodyfile="src/Argx.c" bodystart="91" bodyend="111" declfile="inc/Argx.h" declline="26" declcolumn="7"/>
+        <references refid="d8/d40/structArgxc_1aaa5a7528c35f7c26ff0c7283db33fe8b" compoundref="d0/df9/Argx_8c" startline="16">Argxc::id</references>
+        <references refid="d8/d40/structArgxc_1ae48ba4369d927bced0bc2b3eb76cc4e5" compoundref="d0/df9/Argx_8c" startline="19">Argxc::mainArgc</references>
+        <references refid="d8/d40/structArgxc_1a666f9d971aaf4b9adfb18908a1205fda" compoundref="d0/df9/Argx_8c" startline="17">Argxc::mainArgs</references>
+        <references refid="d8/d40/structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e" compoundref="d0/df9/Argx_8c" startline="18">Argxc::mainArgsCount</references>
+        <references refid="d8/d40/structArgxc_1af24c08ed9dab8ad9800393568097a848" compoundref="d0/df9/Argx_8c" startline="20">Argxc::options</references>
+        <references refid="d8/d40/structArgxc_1a73fbef3389172b12448589e62c5aff34" compoundref="d0/df9/Argx_8c" startline="22">Argxc::optionsCapacity</references>
+        <references refid="d8/d40/structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6" compoundref="d0/df9/Argx_8c" startline="21">Argxc::optionsCount</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1ad18963570800f99309c7ae551d09442b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * argxcCreateDocs</definition>
+        <argsstring>(Argxc *argxc, ArgxcStyle style, const char *title, const char *mainInfo)</argsstring>
+        <name>argxcCreateDocs</name>
+        <param>
+          <type><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> *</type>
+          <declname>argxc</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebb" kindref="member">ArgxcStyle</ref></type>
+          <declname>style</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>mainInfo</declname>
+        </param>
+        <briefdescription>
+<para>Generate documentation for the defined options. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argxc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Documentation output style. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of the documentation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mainInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional info to be displayed in the documentation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>char* Documentation string (must be freed by caller). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="108" column="6" bodyfile="src/Argx.c" bodystart="375" bodyend="497" declfile="inc/Argx.h" declline="108" declcolumn="6"/>
+        <references refid="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebba5926a1c4b95fe8294eee1ab316063d47" compoundref="d9/d49/types_8h" startline="11">ARGX_STYLE_PROFESSIONAL</references>
+        <references refid="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebbad8465ee3943616d15c25e8b2ff2d06e2" compoundref="d9/d49/types_8h" startline="12">ARGX_STYLE_SIMPLE</references>
+        <references refid="d2/dcb/structArgxcOptions_1add27505ea653aa67161a226f9daff3ca" compoundref="d9/d49/types_8h" startline="30">ArgxcOptions::hasSubParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c" compoundref="d9/d49/types_8h" startline="26">ArgxcOptions::id</references>
+        <references refid="d2/dcb/structArgxcOptions_1aa912383cc480f5009cac8058454e279b" compoundref="d9/d49/types_8h" startline="29">ArgxcOptions::info</references>
+        <references refid="d8/d40/structArgxc_1af24c08ed9dab8ad9800393568097a848" compoundref="d0/df9/Argx_8c" startline="20">Argxc::options</references>
+        <references refid="d8/d40/structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6" compoundref="d0/df9/Argx_8c" startline="21">Argxc::optionsCount</references>
+        <references refid="d2/dcb/structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3" compoundref="d9/d49/types_8h" startline="27">ArgxcOptions::param</references>
+        <references refid="d2/dcb/structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6" compoundref="d9/d49/types_8h" startline="28">ArgxcOptions::sparam</references>
+        <references refid="d2/dcb/structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5" compoundref="d9/d49/types_8h" startline="32">ArgxcOptions::subParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76" compoundref="d9/d49/types_8h" startline="33">ArgxcOptions::subParamsCount</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1aff55e2b9a01cc2b4d3bdd44264eef8bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/d54/structArgxcError" kindref="compound">ArgxcError</ref></type>
+        <definition>ArgxcError argxcCreateError</definition>
+        <argsstring>(const char *type, const char *error, const char *help, int code)</argsstring>
+        <name>argxcCreateError</name>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>help</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+<para>Create an <ref refid="d8/d54/structArgxcError" kindref="compound">ArgxcError</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type/category of the error. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>help</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Help message for resolving the error. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exit code or error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d8/d54/structArgxcError" kindref="compound">ArgxcError</ref> The created error struct. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="189" column="12" bodyfile="src/Argx.c" bodystart="667" bodyend="677" declfile="inc/Argx.h" declline="189" declcolumn="12"/>
+        <references refid="d8/d54/structArgxcError_1a617299f808dff4b2656bf04384e64bf9" compoundref="d9/d49/types_8h" startline="19">ArgxcError::code</references>
+        <references refid="d8/d54/structArgxcError_1a88d100236636b2eb326025d527ad26f3" compoundref="d9/d49/types_8h" startline="17">ArgxcError::error</references>
+        <references refid="d8/d54/structArgxcError_1a9e83392469b228017a3b6492392f68ad" compoundref="d9/d49/types_8h" startline="18">ArgxcError::help</references>
+        <references refid="d0/df9/Argx_8c_1a814b3298d81b070e52a987654d18d8a2" compoundref="d0/df9/Argx_8c" startline="26" endline="36">stringDuplicate</references>
+        <references refid="d8/d54/structArgxcError_1ab4531054aa9750f66f0cae13f67365ad" compoundref="d9/d49/types_8h" startline="16">ArgxcError::type</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a5efc30ffddcc4d6ba7c2db7b8ab680ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref></type>
+        <definition>ArgxcOptions argxcCreateOption</definition>
+        <argsstring>(const char *id, const char *param, const char *sparam, const char *info, bool hasSubParams, bool hasAnySubParams)</argsstring>
+        <name>argxcCreateOption</name>
+        <param>
+          <type>const char *</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sparam</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hasSubParams</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hasAnySubParams</declname>
+        </param>
+        <briefdescription>
+<para>Create a new option. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Option identifier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name (e.g., <ndash/>param). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sparam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Short form (e.g., -p). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Description of the option. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hasSubParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the option has sub-parameters. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hasAnySubParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the option accepts any sub-parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref> The created option. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="155" column="14" bodyfile="src/Argx.c" bodystart="607" bodyend="622" declfile="inc/Argx.h" declline="155" declcolumn="14"/>
+        <references refid="d2/dcb/structArgxcOptions_1ad36df6627ddcae7c469d92794d5a5ddc" compoundref="d9/d49/types_8h" startline="31">ArgxcOptions::hasAnySubParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1add27505ea653aa67161a226f9daff3ca" compoundref="d9/d49/types_8h" startline="30">ArgxcOptions::hasSubParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c" compoundref="d9/d49/types_8h" startline="26">ArgxcOptions::id</references>
+        <references refid="d2/dcb/structArgxcOptions_1aa912383cc480f5009cac8058454e279b" compoundref="d9/d49/types_8h" startline="29">ArgxcOptions::info</references>
+        <references refid="d2/dcb/structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3" compoundref="d9/d49/types_8h" startline="27">ArgxcOptions::param</references>
+        <references refid="d2/dcb/structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6" compoundref="d9/d49/types_8h" startline="28">ArgxcOptions::sparam</references>
+        <references refid="d0/df9/Argx_8c_1a814b3298d81b070e52a987654d18d8a2" compoundref="d0/df9/Argx_8c" startline="26" endline="36">stringDuplicate</references>
+        <references refid="d2/dcb/structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5" compoundref="d9/d49/types_8h" startline="32">ArgxcOptions::subParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76" compoundref="d9/d49/types_8h" startline="33">ArgxcOptions::subParamsCount</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a944b6c8a9498789cd0a51fdfe9a8c486" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void argxcDestroy</definition>
+        <argsstring>(Argxc *argxc)</argsstring>
+        <name>argxcDestroy</name>
+        <param>
+          <type><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> *</type>
+          <declname>argxc</declname>
+        </param>
+        <briefdescription>
+<para>Destroy an <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance and free all associated memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argxc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance to destroy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="33" column="6" bodyfile="src/Argx.c" bodystart="113" bodyend="121" declfile="inc/Argx.h" declline="33" declcolumn="6"/>
+        <references refid="d0/df9/Argx_8c_1acac8053f967174a1b860aad28c2b12d0" compoundref="d0/df9/Argx_8c" startline="50" endline="61">freeOptionsArray</references>
+        <references refid="d0/df9/Argx_8c_1a420b857128cfa7527dc66424a1ece935" compoundref="d0/df9/Argx_8c" startline="38" endline="48">freeStringArray</references>
+        <references refid="d8/d40/structArgxc_1aaa5a7528c35f7c26ff0c7283db33fe8b" compoundref="d0/df9/Argx_8c" startline="16">Argxc::id</references>
+        <references refid="d8/d40/structArgxc_1a666f9d971aaf4b9adfb18908a1205fda" compoundref="d0/df9/Argx_8c" startline="17">Argxc::mainArgs</references>
+        <references refid="d8/d40/structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e" compoundref="d0/df9/Argx_8c" startline="18">Argxc::mainArgsCount</references>
+        <references refid="d8/d40/structArgxc_1af24c08ed9dab8ad9800393568097a848" compoundref="d0/df9/Argx_8c" startline="20">Argxc::options</references>
+        <references refid="d8/d40/structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6" compoundref="d0/df9/Argx_8c" startline="21">Argxc::optionsCount</references>
+        <referencedby refid="d6/d8e/Argx_8h_1a05e89b0c2c00b96db95fa612a3a19809" compoundref="d0/df9/Argx_8c" startline="64" endline="89">argxcCreate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a4a12dce73edcc011355f47d4543e32a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int argxcFindParam</definition>
+        <argsstring>(Argxc *argxc, const char *id)</argsstring>
+        <name>argxcFindParam</name>
+        <param>
+          <type><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> *</type>
+          <declname>argxc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Find the index of a parameter by ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argxc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the parameter to find. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int Index of the parameter, or -1 if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="58" column="5" bodyfile="src/Argx.c" bodystart="155" bodyend="207" declfile="inc/Argx.h" declline="58" declcolumn="5"/>
+        <references refid="d2/dcb/structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c" compoundref="d9/d49/types_8h" startline="26">ArgxcOptions::id</references>
+        <references refid="d8/d40/structArgxc_1a666f9d971aaf4b9adfb18908a1205fda" compoundref="d0/df9/Argx_8c" startline="17">Argxc::mainArgs</references>
+        <references refid="d8/d40/structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e" compoundref="d0/df9/Argx_8c" startline="18">Argxc::mainArgsCount</references>
+        <references refid="d8/d40/structArgxc_1af24c08ed9dab8ad9800393568097a848" compoundref="d0/df9/Argx_8c" startline="20">Argxc::options</references>
+        <references refid="d8/d40/structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6" compoundref="d0/df9/Argx_8c" startline="21">Argxc::optionsCount</references>
+        <references refid="d2/dcb/structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3" compoundref="d9/d49/types_8h" startline="27">ArgxcOptions::param</references>
+        <references refid="d2/dcb/structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6" compoundref="d9/d49/types_8h" startline="28">ArgxcOptions::sparam</references>
+        <references refid="d2/dcb/structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5" compoundref="d9/d49/types_8h" startline="32">ArgxcOptions::subParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76" compoundref="d9/d49/types_8h" startline="33">ArgxcOptions::subParamsCount</references>
+        <referencedby refid="d6/d8e/Argx_8h_1a0767a3dc8167a77aada7a52c4d0e9d22" compoundref="d0/df9/Argx_8c" startline="366" endline="373">argxcGetSubParam</referencedby>
+        <referencedby refid="d6/d8e/Argx_8h_1a016fceae24303178985a8e047262bd5e" compoundref="d0/df9/Argx_8c" startline="209" endline="212">argxcParamExists</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1af46bf41910b18e11800500efd7e929fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void argxcFreeError</definition>
+        <argsstring>(ArgxcError *error)</argsstring>
+        <name>argxcFreeError</name>
+        <param>
+          <type><ref refid="d8/d54/structArgxcError" kindref="compound">ArgxcError</ref> *</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Free resources associated with an <ref refid="d8/d54/structArgxcError" kindref="compound">ArgxcError</ref> struct. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the error to free. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="196" column="6" bodyfile="src/Argx.c" bodystart="679" bodyend="687" declfile="inc/Argx.h" declline="196" declcolumn="6"/>
+        <references refid="d8/d54/structArgxcError_1a88d100236636b2eb326025d527ad26f3" compoundref="d9/d49/types_8h" startline="17">ArgxcError::error</references>
+        <references refid="d8/d54/structArgxcError_1a9e83392469b228017a3b6492392f68ad" compoundref="d9/d49/types_8h" startline="18">ArgxcError::help</references>
+        <references refid="d8/d54/structArgxcError_1ab4531054aa9750f66f0cae13f67365ad" compoundref="d9/d49/types_8h" startline="16">ArgxcError::type</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1ad1a1c82ca55187361d24a03c5fb977e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void argxcFreeOption</definition>
+        <argsstring>(ArgxcOptions *option)</argsstring>
+        <name>argxcFreeOption</name>
+        <param>
+          <type><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref> *</type>
+          <declname>option</declname>
+        </param>
+        <briefdescription>
+<para>Free resources associated with an <ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref> struct. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>option</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the option to free. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="163" column="6" bodyfile="src/Argx.c" bodystart="624" bodyend="651" declfile="inc/Argx.h" declline="163" declcolumn="6"/>
+        <references refid="d0/df9/Argx_8c_1ad1a1c82ca55187361d24a03c5fb977e6" compoundref="d0/df9/Argx_8c" startline="624" endline="651">argxcFreeOption</references>
+        <references refid="d2/dcb/structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c" compoundref="d9/d49/types_8h" startline="26">ArgxcOptions::id</references>
+        <references refid="d2/dcb/structArgxcOptions_1aa912383cc480f5009cac8058454e279b" compoundref="d9/d49/types_8h" startline="29">ArgxcOptions::info</references>
+        <references refid="d2/dcb/structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3" compoundref="d9/d49/types_8h" startline="27">ArgxcOptions::param</references>
+        <references refid="d2/dcb/structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6" compoundref="d9/d49/types_8h" startline="28">ArgxcOptions::sparam</references>
+        <references refid="d2/dcb/structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5" compoundref="d9/d49/types_8h" startline="32">ArgxcOptions::subParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1abe87d3c8fcdf1a843ea90652c78b5ed1" compoundref="d9/d49/types_8h" startline="34">ArgxcOptions::subParamsCapacity</references>
+        <references refid="d2/dcb/structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76" compoundref="d9/d49/types_8h" startline="33">ArgxcOptions::subParamsCount</references>
+        <referencedby refid="d6/d8e/Argx_8h_1ad1a1c82ca55187361d24a03c5fb977e6" compoundref="d0/df9/Argx_8c" startline="624" endline="651">argxcFreeOption</referencedby>
+        <referencedby refid="d0/df9/Argx_8c_1acac8053f967174a1b860aad28c2b12d0" compoundref="d0/df9/Argx_8c" startline="50" endline="61">freeOptionsArray</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a6798ce84afc7922cc08260fd52534b99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void argxcFreeParam</definition>
+        <argsstring>(ArgxcParam *param)</argsstring>
+        <name>argxcFreeParam</name>
+        <param>
+          <type><ref refid="da/ddb/structArgxcParam" kindref="compound">ArgxcParam</ref> *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>Free resources associated with an <ref refid="da/ddb/structArgxcParam" kindref="compound">ArgxcParam</ref> struct. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the parameter to free. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="170" column="6" bodyfile="src/Argx.c" bodystart="653" bodyend="659" declfile="inc/Argx.h" declline="170" declcolumn="6"/>
+        <references refid="da/ddb/structArgxcParam_1af685e909c26495d1ee2b52acf80960d0" compoundref="d9/d49/types_8h" startline="39">ArgxcParam::subExists</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a433f2018d5638506f50be3219c04ec71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void argxcFreeStringArray</definition>
+        <argsstring>(char **array, size_t count)</argsstring>
+        <name>argxcFreeStringArray</name>
+        <param>
+          <type>char **</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Free a string array returned from <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> (e.g., argv array). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array to free. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements in the array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="178" column="6" bodyfile="src/Argx.c" bodystart="661" bodyend="664" declfile="inc/Argx.h" declline="178" declcolumn="6"/>
+        <references refid="d0/df9/Argx_8c_1a420b857128cfa7527dc66424a1ece935" compoundref="d0/df9/Argx_8c" startline="38" endline="48">freeStringArray</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a11fea89d38b49b571ce4f4499d0289d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int argxcGetArgc</definition>
+        <argsstring>(Argxc *argxc)</argsstring>
+        <name>argxcGetArgc</name>
+        <param>
+          <type><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> *</type>
+          <declname>argxc</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of command-line arguments passed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argxc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int Number of arguments. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="125" column="5" bodyfile="src/Argx.c" bodystart="588" bodyend="591" declfile="inc/Argx.h" declline="125" declcolumn="5"/>
+        <references refid="d8/d40/structArgxc_1ae48ba4369d927bced0bc2b3eb76cc4e5" compoundref="d0/df9/Argx_8c" startline="19">Argxc::mainArgc</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a219a52257f1e47549f9fc15979b6c563" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * argxcGetId</definition>
+        <argsstring>(Argxc *argxc)</argsstring>
+        <name>argxcGetId</name>
+        <param>
+          <type><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> *</type>
+          <declname>argxc</declname>
+        </param>
+        <briefdescription>
+<para>Get the identifier of the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argxc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const char* The ID string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="142" column="12" bodyfile="src/Argx.c" bodystart="601" bodyend="604" declfile="inc/Argx.h" declline="142" declcolumn="12"/>
+        <references refid="d8/d40/structArgxc_1aaa5a7528c35f7c26ff0c7283db33fe8b" compoundref="d0/df9/Argx_8c" startline="16">Argxc::id</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a62e90d5a3e26834257bba4c68becfeb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char **</type>
+        <definition>char ** argxcGetMainArgs</definition>
+        <argsstring>(Argxc *argxc, size_t *count)</argsstring>
+        <name>argxcGetMainArgs</name>
+        <param>
+          <type><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> *</type>
+          <declname>argxc</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Get the raw command-line arguments passed to <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argxc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output: number of arguments returned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>char** Array of argument strings. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="117" column="6" bodyfile="src/Argx.c" bodystart="570" bodyend="586" declfile="inc/Argx.h" declline="117" declcolumn="6"/>
+        <references refid="d8/d40/structArgxc_1a666f9d971aaf4b9adfb18908a1205fda" compoundref="d0/df9/Argx_8c" startline="17">Argxc::mainArgs</references>
+        <references refid="d8/d40/structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e" compoundref="d0/df9/Argx_8c" startline="18">Argxc::mainArgsCount</references>
+        <references refid="d0/df9/Argx_8c_1a814b3298d81b070e52a987654d18d8a2" compoundref="d0/df9/Argx_8c" startline="26" endline="36">stringDuplicate</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1afb1cebd21f607dfbe19ed784ea0fc319" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref> *</type>
+        <definition>ArgxcOptions * argxcGetOptions</definition>
+        <argsstring>(Argxc *argxc, size_t *count)</argsstring>
+        <name>argxcGetOptions</name>
+        <param>
+          <type><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> *</type>
+          <declname>argxc</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Get all top-level options defined for the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argxc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output: number of options returned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ArgxcOptions* Array of options. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="134" column="14" bodyfile="src/Argx.c" bodystart="593" bodyend="599" declfile="inc/Argx.h" declline="134" declcolumn="14"/>
+        <references refid="d8/d40/structArgxc_1af24c08ed9dab8ad9800393568097a848" compoundref="d0/df9/Argx_8c" startline="20">Argxc::options</references>
+        <references refid="d8/d40/structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6" compoundref="d0/df9/Argx_8c" startline="21">Argxc::optionsCount</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a6ef72f8e604109911e4315f6840febf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="da/ddb/structArgxcParam" kindref="compound">ArgxcParam</ref></type>
+        <definition>ArgxcParam argxcGetParam</definition>
+        <argsstring>(Argxc *argxc, const char *id)</argsstring>
+        <name>argxcGetParam</name>
+        <param>
+          <type><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> *</type>
+          <declname>argxc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a parameter by ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argxc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the parameter to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="da/ddb/structArgxcParam" kindref="compound">ArgxcParam</ref> The parameter object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="67" column="12" bodyfile="src/Argx.c" bodystart="214" bodyend="364" declfile="inc/Argx.h" declline="67" declcolumn="12"/>
+        <references refid="da/ddb/structArgxcParam_1abc303d4cb26b086e53978a46071b9735" compoundref="d9/d49/types_8h" startline="38">ArgxcParam::exists</references>
+        <references refid="d2/dcb/structArgxcOptions_1ad36df6627ddcae7c469d92794d5a5ddc" compoundref="d9/d49/types_8h" startline="31">ArgxcOptions::hasAnySubParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1add27505ea653aa67161a226f9daff3ca" compoundref="d9/d49/types_8h" startline="30">ArgxcOptions::hasSubParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c" compoundref="d9/d49/types_8h" startline="26">ArgxcOptions::id</references>
+        <references refid="d8/d40/structArgxc_1ae48ba4369d927bced0bc2b3eb76cc4e5" compoundref="d0/df9/Argx_8c" startline="19">Argxc::mainArgc</references>
+        <references refid="d8/d40/structArgxc_1a666f9d971aaf4b9adfb18908a1205fda" compoundref="d0/df9/Argx_8c" startline="17">Argxc::mainArgs</references>
+        <references refid="d8/d40/structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e" compoundref="d0/df9/Argx_8c" startline="18">Argxc::mainArgsCount</references>
+        <references refid="d8/d40/structArgxc_1af24c08ed9dab8ad9800393568097a848" compoundref="d0/df9/Argx_8c" startline="20">Argxc::options</references>
+        <references refid="d8/d40/structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6" compoundref="d0/df9/Argx_8c" startline="21">Argxc::optionsCount</references>
+        <references refid="d2/dcb/structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3" compoundref="d9/d49/types_8h" startline="27">ArgxcOptions::param</references>
+        <references refid="d2/dcb/structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6" compoundref="d9/d49/types_8h" startline="28">ArgxcOptions::sparam</references>
+        <references refid="da/ddb/structArgxcParam_1af685e909c26495d1ee2b52acf80960d0" compoundref="d9/d49/types_8h" startline="39">ArgxcParam::subExists</references>
+        <references refid="da/ddb/structArgxcParam_1a6340456c0025fef27395bc30f3251986" compoundref="d9/d49/types_8h" startline="40">ArgxcParam::subExistsCount</references>
+        <references refid="d2/dcb/structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5" compoundref="d9/d49/types_8h" startline="32">ArgxcOptions::subParams</references>
+        <references refid="d2/dcb/structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76" compoundref="d9/d49/types_8h" startline="33">ArgxcOptions::subParamsCount</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a0767a3dc8167a77aada7a52c4d0e9d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool argxcGetSubParam</definition>
+        <argsstring>(Argxc *argxc, const ArgxcParam *param, const char *id)</argsstring>
+        <name>argxcGetSubParam</name>
+        <param>
+          <type><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> *</type>
+          <declname>argxc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/ddb/structArgxcParam" kindref="compound">ArgxcParam</ref> *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a sub-parameter from a given parameter by ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argxc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the parent parameter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the sub-parameter. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the sub-parameter exists, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="86" column="6" bodyfile="src/Argx.c" bodystart="366" bodyend="373" declfile="inc/Argx.h" declline="86" declcolumn="6"/>
+        <references refid="d0/df9/Argx_8c_1a4a12dce73edcc011355f47d4543e32a6" compoundref="d0/df9/Argx_8c" startline="155" endline="207">argxcFindParam</references>
+        <references refid="d0/df9/Argx_8c_1a016fceae24303178985a8e047262bd5e" compoundref="d0/df9/Argx_8c" startline="209" endline="212">argxcParamExists</references>
+        <references refid="da/ddb/structArgxcParam_1af685e909c26495d1ee2b52acf80960d0" compoundref="d9/d49/types_8h" startline="39">ArgxcParam::subExists</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d8e/Argx_8h_1a016fceae24303178985a8e047262bd5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool argxcParamExists</definition>
+        <argsstring>(Argxc *argxc, const char *id)</argsstring>
+        <name>argxcParamExists</name>
+        <param>
+          <type><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> *</type>
+          <declname>argxc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Check if a parameter with the given ID exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argxc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref> instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the parameter. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the parameter exists, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.h" line="76" column="6" bodyfile="src/Argx.c" bodystart="209" bodyend="212" declfile="inc/Argx.h" declline="76" declcolumn="6"/>
+        <references refid="d0/df9/Argx_8c_1a4a12dce73edcc011355f47d4543e32a6" compoundref="d0/df9/Argx_8c" startline="155" endline="207">argxcFindParam</references>
+        <referencedby refid="d6/d8e/Argx_8h_1a0767a3dc8167a77aada7a52c4d0e9d22" compoundref="d0/df9/Argx_8c" startline="366" endline="373">argxcGetSubParam</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d9/d49/types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Create<sp/>a<sp/>new<sp/>Argxc<sp/>instance<sp/>with<sp/>a<sp/>specified<sp/>ID<sp/>and<sp/>command-line<sp/>arguments.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>id<sp/>Identifier<sp/>for<sp/>the<sp/>parser<sp/>instance.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argc<sp/>Number<sp/>of<sp/>command-line<sp/>arguments.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argv<sp/>Array<sp/>of<sp/>command-line<sp/>argument<sp/>strings.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>Argxc*<sp/>Pointer<sp/>to<sp/>the<sp/>created<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref>*<sp/><ref refid="d6/d8e/Argx_8h_1a05e89b0c2c00b96db95fa612a3a19809" kindref="member">argxcCreate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[]);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Create<sp/>a<sp/>new<sp/>Argxc<sp/>instance<sp/>with<sp/>default<sp/>values<sp/>(empty<sp/>ID<sp/>and<sp/>no<sp/>arguments).</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>Argxc*<sp/>Pointer<sp/>to<sp/>the<sp/>default<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref>*<sp/><ref refid="d6/d8e/Argx_8h_1a7490f1245ca836e793645d70dcabe7f6" kindref="member">argxcCreateDefault</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Destroy<sp/>an<sp/>Argxc<sp/>instance<sp/>and<sp/>free<sp/>all<sp/>associated<sp/>memory.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argxc<sp/>Pointer<sp/>to<sp/>the<sp/>Argxc<sp/>instance<sp/>to<sp/>destroy.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d6/d8e/Argx_8h_1a944b6c8a9498789cd0a51fdfe9a8c486" kindref="member">argxcDestroy</ref>(<ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref><sp/>*argxc);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Add<sp/>a<sp/>new<sp/>option<sp/>to<sp/>the<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argxc<sp/>Pointer<sp/>to<sp/>the<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>option<sp/>The<sp/>option<sp/>to<sp/>add.</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d6/d8e/Argx_8h_1a4b2d2f49ede5c7008816f5c2039d4c2c" kindref="member">argxcAddOption</ref>(<ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref><sp/>*argxc,<sp/><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref><sp/>option);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Add<sp/>a<sp/>sub-option<sp/>to<sp/>a<sp/>parent<sp/>option.</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>parent<sp/>Pointer<sp/>to<sp/>the<sp/>parent<sp/>option.</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>subOption<sp/>Sub-option<sp/>to<sp/>add<sp/>under<sp/>the<sp/>parent.</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d6/d8e/Argx_8h_1a68874cb095408ec91cf02d7ab0df0fa8" kindref="member">argxcAddSubOption</ref>(<ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref><sp/>*parent,<sp/><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref><sp/>subOption);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Find<sp/>the<sp/>index<sp/>of<sp/>a<sp/>parameter<sp/>by<sp/>ID.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argxc<sp/>Pointer<sp/>to<sp/>the<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>id<sp/>The<sp/>identifier<sp/>of<sp/>the<sp/>parameter<sp/>to<sp/>find.</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>int<sp/>Index<sp/>of<sp/>the<sp/>parameter,<sp/>or<sp/>-1<sp/>if<sp/>not<sp/>found.</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d6/d8e/Argx_8h_1a4a12dce73edcc011355f47d4543e32a6" kindref="member">argxcFindParam</ref>(<ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref><sp/>*argxc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Retrieve<sp/>a<sp/>parameter<sp/>by<sp/>ID.</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argxc<sp/>Pointer<sp/>to<sp/>the<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>id<sp/>The<sp/>identifier<sp/>of<sp/>the<sp/>parameter<sp/>to<sp/>retrieve.</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>ArgxcParam<sp/>The<sp/>parameter<sp/>object.</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/ddb/structArgxcParam" kindref="compound">ArgxcParam</ref><sp/><ref refid="d6/d8e/Argx_8h_1a6ef72f8e604109911e4315f6840febf9" kindref="member">argxcGetParam</ref>(<ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref><sp/>*argxc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Check<sp/>if<sp/>a<sp/>parameter<sp/>with<sp/>the<sp/>given<sp/>ID<sp/>exists.</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argxc<sp/>Pointer<sp/>to<sp/>the<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>id<sp/>The<sp/>identifier<sp/>of<sp/>the<sp/>parameter.</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>true<sp/>if<sp/>the<sp/>parameter<sp/>exists,<sp/>false<sp/>otherwise.</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d6/d8e/Argx_8h_1a016fceae24303178985a8e047262bd5e" kindref="member">argxcParamExists</ref>(<ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref><sp/>*argxc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Retrieve<sp/>a<sp/>sub-parameter<sp/>from<sp/>a<sp/>given<sp/>parameter<sp/>by<sp/>ID.</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argxc<sp/>Pointer<sp/>to<sp/>the<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>param<sp/>Pointer<sp/>to<sp/>the<sp/>parent<sp/>parameter.</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>id<sp/>The<sp/>identifier<sp/>of<sp/>the<sp/>sub-parameter.</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>true<sp/>if<sp/>the<sp/>sub-parameter<sp/>exists,<sp/>false<sp/>otherwise.</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d6/d8e/Argx_8h_1a0767a3dc8167a77aada7a52c4d0e9d22" kindref="member">argxcGetSubParam</ref>(<ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref><sp/>*argxc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="da/ddb/structArgxcParam" kindref="compound">ArgxcParam</ref><sp/>*param,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Compare<sp/>if<sp/>the<sp/>given<sp/>argv<sp/>matches<sp/>a<sp/>list<sp/>of<sp/>ArgxcOptions.</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>options<sp/>Array<sp/>of<sp/>ArgxcOptions.</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>optionsCount<sp/>Number<sp/>of<sp/>options.</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argv<sp/>Array<sp/>of<sp/>argument<sp/>strings.</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argvCount<sp/>Number<sp/>of<sp/>argument<sp/>strings.</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>true<sp/>if<sp/>argv<sp/>matches<sp/>the<sp/>options,<sp/>false<sp/>otherwise.</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d6/d8e/Argx_8h_1a3f5733b4921f06fcfc46444313114b13" kindref="member">argxcCompareArgs</ref>(<ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref><sp/>*options,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>optionsCount,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argvCount);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Generate<sp/>documentation<sp/>for<sp/>the<sp/>defined<sp/>options.</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argxc<sp/>Pointer<sp/>to<sp/>the<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>style<sp/>Documentation<sp/>output<sp/>style.</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>title<sp/>Title<sp/>of<sp/>the<sp/>documentation.</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>mainInfo<sp/>Additional<sp/>info<sp/>to<sp/>be<sp/>displayed<sp/>in<sp/>the<sp/>documentation.</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>char*<sp/>Documentation<sp/>string<sp/>(must<sp/>be<sp/>freed<sp/>by<sp/>caller).</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d6/d8e/Argx_8h_1ad18963570800f99309c7ae551d09442b" kindref="member">argxcCreateDocs</ref>(<ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref><sp/>*argxc,<sp/><ref refid="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebb" kindref="member">ArgxcStyle</ref><sp/>style,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*mainInfo);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Get<sp/>the<sp/>raw<sp/>command-line<sp/>arguments<sp/>passed<sp/>to<sp/>Argxc.</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argxc<sp/>Pointer<sp/>to<sp/>the<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>count<sp/>Output:<sp/>number<sp/>of<sp/>arguments<sp/>returned.</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>char**<sp/>Array<sp/>of<sp/>argument<sp/>strings.</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="d6/d8e/Argx_8h_1a62e90d5a3e26834257bba4c68becfeb1" kindref="member">argxcGetMainArgs</ref>(<ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref><sp/>*argxc,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*count);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Get<sp/>the<sp/>number<sp/>of<sp/>command-line<sp/>arguments<sp/>passed.</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argxc<sp/>Pointer<sp/>to<sp/>the<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>int<sp/>Number<sp/>of<sp/>arguments.</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d6/d8e/Argx_8h_1a11fea89d38b49b571ce4f4499d0289d0" kindref="member">argxcGetArgc</ref>(<ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref><sp/>*argxc);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Get<sp/>all<sp/>top-level<sp/>options<sp/>defined<sp/>for<sp/>the<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argxc<sp/>Pointer<sp/>to<sp/>the<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>count<sp/>Output:<sp/>number<sp/>of<sp/>options<sp/>returned.</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>ArgxcOptions*<sp/>Array<sp/>of<sp/>options.</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref><sp/>*<ref refid="d6/d8e/Argx_8h_1afb1cebd21f607dfbe19ed784ea0fc319" kindref="member">argxcGetOptions</ref>(<ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref><sp/>*argxc,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*count);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Get<sp/>the<sp/>identifier<sp/>of<sp/>the<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>argxc<sp/>Pointer<sp/>to<sp/>the<sp/>Argxc<sp/>instance.</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>const<sp/>char*<sp/>The<sp/>ID<sp/>string.</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d6/d8e/Argx_8h_1a219a52257f1e47549f9fc15979b6c563" kindref="member">argxcGetId</ref>(<ref refid="d8/d40/structArgxc" kindref="compound">Argxc</ref><sp/>*argxc);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Create<sp/>a<sp/>new<sp/>option.</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>id<sp/>Option<sp/>identifier.</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>param<sp/>Parameter<sp/>name<sp/>(e.g.,<sp/>--param).</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>sparam<sp/>Short<sp/>form<sp/>(e.g.,<sp/>-p).</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>info<sp/>Description<sp/>of<sp/>the<sp/>option.</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>hasSubParams<sp/>Whether<sp/>the<sp/>option<sp/>has<sp/>sub-parameters.</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>hasAnySubParams<sp/>Whether<sp/>the<sp/>option<sp/>accepts<sp/>any<sp/>sub-parameters.</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>ArgxcOptions<sp/>The<sp/>created<sp/>option.</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref><sp/><ref refid="d6/d8e/Argx_8h_1a5efc30ffddcc4d6ba7c2db7b8ab680ec" kindref="member">argxcCreateOption</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sparam,<sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*info,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hasSubParams,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hasAnySubParams);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Free<sp/>resources<sp/>associated<sp/>with<sp/>an<sp/>ArgxcOptions<sp/>struct.</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>option<sp/>Pointer<sp/>to<sp/>the<sp/>option<sp/>to<sp/>free.</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d6/d8e/Argx_8h_1ad1a1c82ca55187361d24a03c5fb977e6" kindref="member">argxcFreeOption</ref>(<ref refid="d2/dcb/structArgxcOptions" kindref="compound">ArgxcOptions</ref><sp/>*option);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Free<sp/>resources<sp/>associated<sp/>with<sp/>an<sp/>ArgxcParam<sp/>struct.</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>param<sp/>Pointer<sp/>to<sp/>the<sp/>parameter<sp/>to<sp/>free.</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d6/d8e/Argx_8h_1a6798ce84afc7922cc08260fd52534b99" kindref="member">argxcFreeParam</ref>(<ref refid="da/ddb/structArgxcParam" kindref="compound">ArgxcParam</ref><sp/>*param);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Free<sp/>a<sp/>string<sp/>array<sp/>returned<sp/>from<sp/>Argxc<sp/>(e.g.,<sp/>argv<sp/>array).</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>array<sp/>The<sp/>array<sp/>to<sp/>free.</highlight></codeline>
+<codeline lineno="176"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>count<sp/>Number<sp/>of<sp/>elements<sp/>in<sp/>the<sp/>array.</highlight></codeline>
+<codeline lineno="177"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d6/d8e/Argx_8h_1a433f2018d5638506f50be3219c04ec71" kindref="member">argxcFreeStringArray</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**array,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Create<sp/>an<sp/>ArgxcError<sp/>object.</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>type<sp/>Type/category<sp/>of<sp/>the<sp/>error.</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>error<sp/>Error<sp/>message.</highlight></codeline>
+<codeline lineno="185"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>help<sp/>Help<sp/>message<sp/>for<sp/>resolving<sp/>the<sp/>error.</highlight></codeline>
+<codeline lineno="186"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>code<sp/>Exit<sp/>code<sp/>or<sp/>error<sp/>code.</highlight></codeline>
+<codeline lineno="187"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>ArgxcError<sp/>The<sp/>created<sp/>error<sp/>struct.</highlight></codeline>
+<codeline lineno="188"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/d54/structArgxcError" kindref="compound">ArgxcError</ref><sp/><ref refid="d6/d8e/Argx_8h_1aff55e2b9a01cc2b4d3bdd44264eef8bd" kindref="member">argxcCreateError</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*error,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*help,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Free<sp/>resources<sp/>associated<sp/>with<sp/>an<sp/>ArgxcError<sp/>struct.</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>error<sp/>Pointer<sp/>to<sp/>the<sp/>error<sp/>to<sp/>free.</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d6/d8e/Argx_8h_1af46bf41910b18e11800500efd7e929fa" kindref="member">argxcFreeError</ref>(<ref refid="d8/d54/structArgxcError" kindref="compound">ArgxcError</ref><sp/>*error);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="inc/Argx.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structArgxc" xml:lang="en-US">
+<title>Argxc Struct Reference</title>
+<indexterm><primary>Argxc</primary></indexterm>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_structArgxc_1aaa5a7528c35f7c26ff0c7283db33fe8b">id</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_structArgxc_1ae48ba4369d927bced0bc2b3eb76cc4e5">mainArgc</link></para>
+</listitem>
+            <listitem><para>char ** <link linkend="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda">mainArgs</link></para>
+</listitem>
+            <listitem><para>size_t <link linkend="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e">mainArgsCount</link></para>
+</listitem>
+            <listitem><para><link linkend="_structArgxcOptions">ArgxcOptions</link> * <link linkend="_structArgxc_1af24c08ed9dab8ad9800393568097a848">options</link></para>
+</listitem>
+            <listitem><para>size_t <link linkend="_structArgxc_1a73fbef3389172b12448589e62c5aff34">optionsCapacity</link></para>
+</listitem>
+            <listitem><para>size_t <link linkend="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6">optionsCount</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_Argx_8c_source_1l00015">15</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structArgxc_1aaa5a7528c35f7c26ff0c7283db33fe8b"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>Argxc</secondary></indexterm>
+<indexterm><primary>Argxc</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>char* Argxc::id</computeroutput></para><para>
+Definition at line <link linkend="_Argx_8c_source_1l00016">16</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8c_source_1l00064">argxcCreate()</link>, <link linkend="_Argx_8c_source_1l00091">argxcCreateDefault()</link>, <link linkend="_Argx_8c_source_1l00113">argxcDestroy()</link>, and <link linkend="_Argx_8c_source_1l00601">argxcGetId()</link>.</para>
+</section>
+<anchor xml:id="_structArgxc_1ae48ba4369d927bced0bc2b3eb76cc4e5"/><section>
+    <title>mainArgc</title>
+<indexterm><primary>mainArgc</primary><secondary>Argxc</secondary></indexterm>
+<indexterm><primary>Argxc</primary><secondary>mainArgc</secondary></indexterm>
+<para><computeroutput>unsigned int Argxc::mainArgc</computeroutput></para><para>
+Definition at line <link linkend="_Argx_8c_source_1l00019">19</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8c_source_1l00064">argxcCreate()</link>, <link linkend="_Argx_8c_source_1l00091">argxcCreateDefault()</link>, <link linkend="_Argx_8c_source_1l00588">argxcGetArgc()</link>, and <link linkend="_Argx_8c_source_1l00214">argxcGetParam()</link>.</para>
+</section>
+<anchor xml:id="_structArgxc_1a666f9d971aaf4b9adfb18908a1205fda"/><section>
+    <title>mainArgs</title>
+<indexterm><primary>mainArgs</primary><secondary>Argxc</secondary></indexterm>
+<indexterm><primary>Argxc</primary><secondary>mainArgs</secondary></indexterm>
+<para><computeroutput>char** Argxc::mainArgs</computeroutput></para><para>
+Definition at line <link linkend="_Argx_8c_source_1l00017">17</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8c_source_1l00064">argxcCreate()</link>, <link linkend="_Argx_8c_source_1l00091">argxcCreateDefault()</link>, <link linkend="_Argx_8c_source_1l00113">argxcDestroy()</link>, <link linkend="_Argx_8c_source_1l00155">argxcFindParam()</link>, <link linkend="_Argx_8c_source_1l00570">argxcGetMainArgs()</link>, and <link linkend="_Argx_8c_source_1l00214">argxcGetParam()</link>.</para>
+</section>
+<anchor xml:id="_structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e"/><section>
+    <title>mainArgsCount</title>
+<indexterm><primary>mainArgsCount</primary><secondary>Argxc</secondary></indexterm>
+<indexterm><primary>Argxc</primary><secondary>mainArgsCount</secondary></indexterm>
+<para><computeroutput>size_t Argxc::mainArgsCount</computeroutput></para><para>
+Definition at line <link linkend="_Argx_8c_source_1l00018">18</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8c_source_1l00064">argxcCreate()</link>, <link linkend="_Argx_8c_source_1l00091">argxcCreateDefault()</link>, <link linkend="_Argx_8c_source_1l00113">argxcDestroy()</link>, <link linkend="_Argx_8c_source_1l00155">argxcFindParam()</link>, <link linkend="_Argx_8c_source_1l00570">argxcGetMainArgs()</link>, and <link linkend="_Argx_8c_source_1l00214">argxcGetParam()</link>.</para>
+</section>
+<anchor xml:id="_structArgxc_1af24c08ed9dab8ad9800393568097a848"/><section>
+    <title>options</title>
+<indexterm><primary>options</primary><secondary>Argxc</secondary></indexterm>
+<indexterm><primary>Argxc</primary><secondary>options</secondary></indexterm>
+<para><computeroutput><link linkend="_structArgxcOptions">ArgxcOptions</link>* Argxc::options</computeroutput></para><para>
+Definition at line <link linkend="_Argx_8c_source_1l00020">20</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8c_source_1l00124">argxcAddOption()</link>, <link linkend="_Argx_8c_source_1l00064">argxcCreate()</link>, <link linkend="_Argx_8c_source_1l00091">argxcCreateDefault()</link>, <link linkend="_Argx_8c_source_1l00375">argxcCreateDocs()</link>, <link linkend="_Argx_8c_source_1l00113">argxcDestroy()</link>, <link linkend="_Argx_8c_source_1l00155">argxcFindParam()</link>, <link linkend="_Argx_8c_source_1l00593">argxcGetOptions()</link>, and <link linkend="_Argx_8c_source_1l00214">argxcGetParam()</link>.</para>
+</section>
+<anchor xml:id="_structArgxc_1a73fbef3389172b12448589e62c5aff34"/><section>
+    <title>optionsCapacity</title>
+<indexterm><primary>optionsCapacity</primary><secondary>Argxc</secondary></indexterm>
+<indexterm><primary>Argxc</primary><secondary>optionsCapacity</secondary></indexterm>
+<para><computeroutput>size_t Argxc::optionsCapacity</computeroutput></para><para>
+Definition at line <link linkend="_Argx_8c_source_1l00022">22</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8c_source_1l00124">argxcAddOption()</link>, <link linkend="_Argx_8c_source_1l00064">argxcCreate()</link>, and <link linkend="_Argx_8c_source_1l00091">argxcCreateDefault()</link>.</para>
+</section>
+<anchor xml:id="_structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6"/><section>
+    <title>optionsCount</title>
+<indexterm><primary>optionsCount</primary><secondary>Argxc</secondary></indexterm>
+<indexterm><primary>Argxc</primary><secondary>optionsCount</secondary></indexterm>
+<para><computeroutput>size_t Argxc::optionsCount</computeroutput></para><para>
+Definition at line <link linkend="_Argx_8c_source_1l00021">21</link> of file <link linkend="_Argx_8c_source">Argx.c</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8c_source_1l00124">argxcAddOption()</link>, <link linkend="_Argx_8c_source_1l00064">argxcCreate()</link>, <link linkend="_Argx_8c_source_1l00091">argxcCreateDefault()</link>, <link linkend="_Argx_8c_source_1l00375">argxcCreateDocs()</link>, <link linkend="_Argx_8c_source_1l00113">argxcDestroy()</link>, <link linkend="_Argx_8c_source_1l00155">argxcFindParam()</link>, <link linkend="_Argx_8c_source_1l00593">argxcGetOptions()</link>, and <link linkend="_Argx_8c_source_1l00214">argxcGetParam()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+src/<link linkend="_Argx_8c">Argx.c</link></section>
+</section>

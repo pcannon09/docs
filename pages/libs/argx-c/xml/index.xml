@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="d8/d40/structArgxc" kind="struct"><name>Argxc</name>
+    <member refid="d8/d40/structArgxc_1aaa5a7528c35f7c26ff0c7283db33fe8b" kind="variable"><name>id</name></member>
+    <member refid="d8/d40/structArgxc_1ae48ba4369d927bced0bc2b3eb76cc4e5" kind="variable"><name>mainArgc</name></member>
+    <member refid="d8/d40/structArgxc_1a666f9d971aaf4b9adfb18908a1205fda" kind="variable"><name>mainArgs</name></member>
+    <member refid="d8/d40/structArgxc_1a06a20f9bbf66ce13fb9ac6745a84de9e" kind="variable"><name>mainArgsCount</name></member>
+    <member refid="d8/d40/structArgxc_1af24c08ed9dab8ad9800393568097a848" kind="variable"><name>options</name></member>
+    <member refid="d8/d40/structArgxc_1a73fbef3389172b12448589e62c5aff34" kind="variable"><name>optionsCapacity</name></member>
+    <member refid="d8/d40/structArgxc_1ad25d74e066fa21cb7db95f901f0eabe6" kind="variable"><name>optionsCount</name></member>
+  </compound>
+  <compound refid="d8/d54/structArgxcError" kind="struct"><name>ArgxcError</name>
+    <member refid="d8/d54/structArgxcError_1a617299f808dff4b2656bf04384e64bf9" kind="variable"><name>code</name></member>
+    <member refid="d8/d54/structArgxcError_1a88d100236636b2eb326025d527ad26f3" kind="variable"><name>error</name></member>
+    <member refid="d8/d54/structArgxcError_1a9e83392469b228017a3b6492392f68ad" kind="variable"><name>help</name></member>
+    <member refid="d8/d54/structArgxcError_1ab4531054aa9750f66f0cae13f67365ad" kind="variable"><name>type</name></member>
+  </compound>
+  <compound refid="d5/d08/structArgxcErrorPair" kind="struct"><name>ArgxcErrorPair</name>
+    <member refid="d5/d08/structArgxcErrorPair_1a548e70442f749cb33bf853987bbb2707" kind="variable"><name>error</name></member>
+    <member refid="d5/d08/structArgxcErrorPair_1ab7a2046f22e6b8a74ca323b985cee6ce" kind="variable"><name>help</name></member>
+  </compound>
+  <compound refid="d2/dcb/structArgxcOptions" kind="struct"><name>ArgxcOptions</name>
+    <member refid="d2/dcb/structArgxcOptions_1ad36df6627ddcae7c469d92794d5a5ddc" kind="variable"><name>hasAnySubParams</name></member>
+    <member refid="d2/dcb/structArgxcOptions_1add27505ea653aa67161a226f9daff3ca" kind="variable"><name>hasSubParams</name></member>
+    <member refid="d2/dcb/structArgxcOptions_1a595bdcea1b5696ffa5023c3319bf604c" kind="variable"><name>id</name></member>
+    <member refid="d2/dcb/structArgxcOptions_1aa912383cc480f5009cac8058454e279b" kind="variable"><name>info</name></member>
+    <member refid="d2/dcb/structArgxcOptions_1a1b2766df178647d8d72f9c4450e488b3" kind="variable"><name>param</name></member>
+    <member refid="d2/dcb/structArgxcOptions_1a4a0102388f796032fc500271d1f66dd6" kind="variable"><name>sparam</name></member>
+    <member refid="d2/dcb/structArgxcOptions_1a988e8b4509c28e594fb570bc6b2430c5" kind="variable"><name>subParams</name></member>
+    <member refid="d2/dcb/structArgxcOptions_1abe87d3c8fcdf1a843ea90652c78b5ed1" kind="variable"><name>subParamsCapacity</name></member>
+    <member refid="d2/dcb/structArgxcOptions_1a1383f66c1ca2c8fe428e7005c624fc76" kind="variable"><name>subParamsCount</name></member>
+  </compound>
+  <compound refid="da/ddb/structArgxcParam" kind="struct"><name>ArgxcParam</name>
+    <member refid="da/ddb/structArgxcParam_1abc303d4cb26b086e53978a46071b9735" kind="variable"><name>exists</name></member>
+    <member refid="da/ddb/structArgxcParam_1af685e909c26495d1ee2b52acf80960d0" kind="variable"><name>subExists</name></member>
+    <member refid="da/ddb/structArgxcParam_1a6340456c0025fef27395bc30f3251986" kind="variable"><name>subExistsCount</name></member>
+  </compound>
+  <compound refid="d8/dcc/namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="d6/d8e/Argx_8h" kind="file"><name>Argx.h</name>
+    <member refid="d6/d8e/Argx_8h_1a4b2d2f49ede5c7008816f5c2039d4c2c" kind="function"><name>argxcAddOption</name></member>
+    <member refid="d6/d8e/Argx_8h_1a68874cb095408ec91cf02d7ab0df0fa8" kind="function"><name>argxcAddSubOption</name></member>
+    <member refid="d6/d8e/Argx_8h_1a3f5733b4921f06fcfc46444313114b13" kind="function"><name>argxcCompareArgs</name></member>
+    <member refid="d6/d8e/Argx_8h_1a05e89b0c2c00b96db95fa612a3a19809" kind="function"><name>argxcCreate</name></member>
+    <member refid="d6/d8e/Argx_8h_1a7490f1245ca836e793645d70dcabe7f6" kind="function"><name>argxcCreateDefault</name></member>
+    <member refid="d6/d8e/Argx_8h_1ad18963570800f99309c7ae551d09442b" kind="function"><name>argxcCreateDocs</name></member>
+    <member refid="d6/d8e/Argx_8h_1aff55e2b9a01cc2b4d3bdd44264eef8bd" kind="function"><name>argxcCreateError</name></member>
+    <member refid="d6/d8e/Argx_8h_1a5efc30ffddcc4d6ba7c2db7b8ab680ec" kind="function"><name>argxcCreateOption</name></member>
+    <member refid="d6/d8e/Argx_8h_1a944b6c8a9498789cd0a51fdfe9a8c486" kind="function"><name>argxcDestroy</name></member>
+    <member refid="d6/d8e/Argx_8h_1a4a12dce73edcc011355f47d4543e32a6" kind="function"><name>argxcFindParam</name></member>
+    <member refid="d6/d8e/Argx_8h_1af46bf41910b18e11800500efd7e929fa" kind="function"><name>argxcFreeError</name></member>
+    <member refid="d6/d8e/Argx_8h_1ad1a1c82ca55187361d24a03c5fb977e6" kind="function"><name>argxcFreeOption</name></member>
+    <member refid="d6/d8e/Argx_8h_1a6798ce84afc7922cc08260fd52534b99" kind="function"><name>argxcFreeParam</name></member>
+    <member refid="d6/d8e/Argx_8h_1a433f2018d5638506f50be3219c04ec71" kind="function"><name>argxcFreeStringArray</name></member>
+    <member refid="d6/d8e/Argx_8h_1a11fea89d38b49b571ce4f4499d0289d0" kind="function"><name>argxcGetArgc</name></member>
+    <member refid="d6/d8e/Argx_8h_1a219a52257f1e47549f9fc15979b6c563" kind="function"><name>argxcGetId</name></member>
+    <member refid="d6/d8e/Argx_8h_1a62e90d5a3e26834257bba4c68becfeb1" kind="function"><name>argxcGetMainArgs</name></member>
+    <member refid="d6/d8e/Argx_8h_1afb1cebd21f607dfbe19ed784ea0fc319" kind="function"><name>argxcGetOptions</name></member>
+    <member refid="d6/d8e/Argx_8h_1a6ef72f8e604109911e4315f6840febf9" kind="function"><name>argxcGetParam</name></member>
+    <member refid="d6/d8e/Argx_8h_1a0767a3dc8167a77aada7a52c4d0e9d22" kind="function"><name>argxcGetSubParam</name></member>
+    <member refid="d6/d8e/Argx_8h_1a016fceae24303178985a8e047262bd5e" kind="function"><name>argxcParamExists</name></member>
+  </compound>
+  <compound refid="d1/d7f/ARGXAddError_8h" kind="file"><name>ARGXAddError.h</name>
+    <member refid="d1/d7f/ARGXAddError_8h_1a8c4ee33ae3d4a6208322ad503dceca9e" kind="function"><name>argxcCreateErrorSimple</name></member>
+    <member refid="d1/d7f/ARGXAddError_8h_1a038539b9defbaf62f7a175d75388866d" kind="function"><name>argxcGetErrorCode</name></member>
+    <member refid="d1/d7f/ARGXAddError_8h_1a82d77328ff61877b8ab10d054bc5ced4" kind="function"><name>argxcGetErrorHelp</name></member>
+    <member refid="d1/d7f/ARGXAddError_8h_1a9e0ec52023e67e806606050d12a934a8" kind="function"><name>argxcGetErrorMessage</name></member>
+    <member refid="d1/d7f/ARGXAddError_8h_1ae080742df3abdaba51a357b9c68775dd" kind="function"><name>argxcGetErrorPair</name></member>
+  </compound>
+  <compound refid="de/d3c/macros_8h" kind="file"><name>macros.h</name>
+    <member refid="de/d3c/macros_8h_1a2c2541090a31c495b5e800500cdff4ef" kind="define"><name>ARGX_DEV</name></member>
+    <member refid="de/d3c/macros_8h_1a35b3310e39905bdf63646a9f2a02ef18" kind="define"><name>ARGX_STRINGIFY</name></member>
+    <member refid="de/d3c/macros_8h_1a4fd1f3a5c43cb1afcd72db492e2cee28" kind="define"><name>ARGX_TOSTRING</name></member>
+    <member refid="de/d3c/macros_8h_1aa639891463acaa985538b2760398bca3" kind="define"><name>ARGX_VERSION</name></member>
+    <member refid="de/d3c/macros_8h_1a9a03c00fec9110110cb43d0c67e195f3" kind="define"><name>ARGX_VERSION_CHECK</name></member>
+    <member refid="de/d3c/macros_8h_1a774e5c096afc126e4fd6031c4143df1c" kind="define"><name>ARGX_VERSION_MAJOR</name></member>
+    <member refid="de/d3c/macros_8h_1a6fca140f9d55dd241c689047db70c236" kind="define"><name>ARGX_VERSION_MINOR</name></member>
+    <member refid="de/d3c/macros_8h_1a8bb35e7bdac8b6af29d07e6fd7468b08" kind="define"><name>ARGX_VERSION_PATCH</name></member>
+    <member refid="de/d3c/macros_8h_1a2dd1c90360210f9bc40f65de8558b60f" kind="define"><name>ARGX_VERSION_STATE</name></member>
+    <member refid="de/d3c/macros_8h_1a2cf696b4344dbd9c545a9165cb10cb76" kind="define"><name>ARGX_VERSION_STD</name></member>
+  </compound>
+  <compound refid="d9/d49/types_8h" kind="file"><name>types.h</name>
+    <member refid="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebb" kind="enum"><name>ArgxcStyle</name></member>
+    <member refid="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebba5926a1c4b95fe8294eee1ab316063d47" kind="enumvalue"><name>ARGX_STYLE_PROFESSIONAL</name></member>
+    <member refid="d9/d49/types_8h_1a0eb907e7e710ee24d66bd7b881999ebbad8465ee3943616d15c25e8b2ff2d06e2" kind="enumvalue"><name>ARGX_STYLE_SIMPLE</name></member>
+    <member refid="d9/d49/types_8h_1a84bd6c0769bc891e2ffce793678b0ce9" kind="typedef"><name>Argxc</name></member>
+    <member refid="d9/d49/types_8h_1a1ece51b47f5fba211265ff281bc01192" kind="typedef"><name>ArgxcOptions</name></member>
+  </compound>
+  <compound refid="da/ddd/README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="d0/df9/Argx_8c" kind="file"><name>Argx.c</name>
+    <member refid="d0/df9/Argx_8c_1a4b2d2f49ede5c7008816f5c2039d4c2c" kind="function"><name>argxcAddOption</name></member>
+    <member refid="d0/df9/Argx_8c_1a68874cb095408ec91cf02d7ab0df0fa8" kind="function"><name>argxcAddSubOption</name></member>
+    <member refid="d0/df9/Argx_8c_1a3f5733b4921f06fcfc46444313114b13" kind="function"><name>argxcCompareArgs</name></member>
+    <member refid="d0/df9/Argx_8c_1a05e89b0c2c00b96db95fa612a3a19809" kind="function"><name>argxcCreate</name></member>
+    <member refid="d0/df9/Argx_8c_1a7490f1245ca836e793645d70dcabe7f6" kind="function"><name>argxcCreateDefault</name></member>
+    <member refid="d0/df9/Argx_8c_1ad18963570800f99309c7ae551d09442b" kind="function"><name>argxcCreateDocs</name></member>
+    <member refid="d0/df9/Argx_8c_1aff55e2b9a01cc2b4d3bdd44264eef8bd" kind="function"><name>argxcCreateError</name></member>
+    <member refid="d0/df9/Argx_8c_1a5efc30ffddcc4d6ba7c2db7b8ab680ec" kind="function"><name>argxcCreateOption</name></member>
+    <member refid="d0/df9/Argx_8c_1a944b6c8a9498789cd0a51fdfe9a8c486" kind="function"><name>argxcDestroy</name></member>
+    <member refid="d0/df9/Argx_8c_1a4a12dce73edcc011355f47d4543e32a6" kind="function"><name>argxcFindParam</name></member>
+    <member refid="d0/df9/Argx_8c_1af46bf41910b18e11800500efd7e929fa" kind="function"><name>argxcFreeError</name></member>
+    <member refid="d0/df9/Argx_8c_1ad1a1c82ca55187361d24a03c5fb977e6" kind="function"><name>argxcFreeOption</name></member>
+    <member refid="d0/df9/Argx_8c_1a6798ce84afc7922cc08260fd52534b99" kind="function"><name>argxcFreeParam</name></member>
+    <member refid="d0/df9/Argx_8c_1a433f2018d5638506f50be3219c04ec71" kind="function"><name>argxcFreeStringArray</name></member>
+    <member refid="d0/df9/Argx_8c_1a11fea89d38b49b571ce4f4499d0289d0" kind="function"><name>argxcGetArgc</name></member>
+    <member refid="d0/df9/Argx_8c_1a219a52257f1e47549f9fc15979b6c563" kind="function"><name>argxcGetId</name></member>
+    <member refid="d0/df9/Argx_8c_1a62e90d5a3e26834257bba4c68becfeb1" kind="function"><name>argxcGetMainArgs</name></member>
+    <member refid="d0/df9/Argx_8c_1afb1cebd21f607dfbe19ed784ea0fc319" kind="function"><name>argxcGetOptions</name></member>
+    <member refid="d0/df9/Argx_8c_1a6ef72f8e604109911e4315f6840febf9" kind="function"><name>argxcGetParam</name></member>
+    <member refid="d0/df9/Argx_8c_1a0767a3dc8167a77aada7a52c4d0e9d22" kind="function"><name>argxcGetSubParam</name></member>
+    <member refid="d0/df9/Argx_8c_1a016fceae24303178985a8e047262bd5e" kind="function"><name>argxcParamExists</name></member>
+    <member refid="d0/df9/Argx_8c_1acac8053f967174a1b860aad28c2b12d0" kind="function"><name>freeOptionsArray</name></member>
+    <member refid="d0/df9/Argx_8c_1a420b857128cfa7527dc66424a1ece935" kind="function"><name>freeStringArray</name></member>
+    <member refid="d0/df9/Argx_8c_1a814b3298d81b070e52a987654d18d8a2" kind="function"><name>stringDuplicate</name></member>
+  </compound>
+  <compound refid="de/d77/ARGXAddError_8c" kind="file"><name>ARGXAddError.c</name>
+    <member refid="de/d77/ARGXAddError_8c_1a8c4ee33ae3d4a6208322ad503dceca9e" kind="function"><name>argxcCreateErrorSimple</name></member>
+    <member refid="de/d77/ARGXAddError_8c_1a038539b9defbaf62f7a175d75388866d" kind="function"><name>argxcGetErrorCode</name></member>
+    <member refid="de/d77/ARGXAddError_8c_1a82d77328ff61877b8ab10d054bc5ced4" kind="function"><name>argxcGetErrorHelp</name></member>
+    <member refid="de/d77/ARGXAddError_8c_1a9e0ec52023e67e806606050d12a934a8" kind="function"><name>argxcGetErrorMessage</name></member>
+    <member refid="de/d77/ARGXAddError_8c_1ae080742df3abdaba51a357b9c68775dd" kind="function"><name>argxcGetErrorPair</name></member>
+    <member refid="de/d77/ARGXAddError_8c_1a814b3298d81b070e52a987654d18d8a2" kind="function"><name>stringDuplicate</name></member>
+  </compound>
+  <compound refid="dir_bfccd401955b95cf8c75461437045ac0" kind="dir"><name>inc</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

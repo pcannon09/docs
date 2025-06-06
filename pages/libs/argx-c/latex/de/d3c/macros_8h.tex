@@ -1,0 +1,149 @@
+\doxysection{inc/macros.h File Reference}
+\hypertarget{macros_8h}{}\label{macros_8h}\index{inc/macros.h@{inc/macros.h}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{macros_8h_a2c2541090a31c495b5e800500cdff4ef}{ARGX\+\_\+\+DEV}}~false
+\item 
+\#define \mbox{\hyperlink{macros_8h_a35b3310e39905bdf63646a9f2a02ef18}{ARGX\+\_\+\+STRINGIFY}}(x)
+\item 
+\#define \mbox{\hyperlink{macros_8h_a4fd1f3a5c43cb1afcd72db492e2cee28}{ARGX\+\_\+\+TOSTRING}}(x)
+\item 
+\#define \mbox{\hyperlink{macros_8h_aa639891463acaa985538b2760398bca3}{ARGX\+\_\+\+VERSION}}~((\mbox{\hyperlink{macros_8h_a774e5c096afc126e4fd6031c4143df1c}{ARGX\+\_\+\+VERSION\+\_\+\+MAJOR}}$<$$<$16)\texorpdfstring{$\vert$}{|}(\mbox{\hyperlink{macros_8h_a6fca140f9d55dd241c689047db70c236}{ARGX\+\_\+\+VERSION\+\_\+\+MINOR}}$<$$<$8)\texorpdfstring{$\vert$}{|}(\mbox{\hyperlink{macros_8h_a8bb35e7bdac8b6af29d07e6fd7468b08}{ARGX\+\_\+\+VERSION\+\_\+\+PATCH}})\texorpdfstring{$\vert$}{|}(\mbox{\hyperlink{macros_8h_a2dd1c90360210f9bc40f65de8558b60f}{ARGX\+\_\+\+VERSION\+\_\+\+STATE}} $<$$<$ 24))
+\item 
+\#define \mbox{\hyperlink{macros_8h_a9a03c00fec9110110cb43d0c67e195f3}{ARGX\+\_\+\+VERSION\+\_\+\+CHECK}}(\mbox{\hyperlink{macros_8h_a774e5c096afc126e4fd6031c4143df1c}{ARGX\+\_\+\+VERSION\+\_\+\+MAJOR}},  \mbox{\hyperlink{macros_8h_a6fca140f9d55dd241c689047db70c236}{ARGX\+\_\+\+VERSION\+\_\+\+MINOR}},  \mbox{\hyperlink{macros_8h_a8bb35e7bdac8b6af29d07e6fd7468b08}{ARGX\+\_\+\+VERSION\+\_\+\+PATCH}},  \mbox{\hyperlink{macros_8h_a2dd1c90360210f9bc40f65de8558b60f}{ARGX\+\_\+\+VERSION\+\_\+\+STATE}})
+\item 
+\#define \mbox{\hyperlink{macros_8h_a774e5c096afc126e4fd6031c4143df1c}{ARGX\+\_\+\+VERSION\+\_\+\+MAJOR}}~1
+\item 
+\#define \mbox{\hyperlink{macros_8h_a6fca140f9d55dd241c689047db70c236}{ARGX\+\_\+\+VERSION\+\_\+\+MINOR}}~0
+\item 
+\#define \mbox{\hyperlink{macros_8h_a8bb35e7bdac8b6af29d07e6fd7468b08}{ARGX\+\_\+\+VERSION\+\_\+\+PATCH}}~2
+\item 
+\#define \mbox{\hyperlink{macros_8h_a2dd1c90360210f9bc40f65de8558b60f}{ARGX\+\_\+\+VERSION\+\_\+\+STATE}}~"{}build"{}
+\item 
+\#define \mbox{\hyperlink{macros_8h_a2cf696b4344dbd9c545a9165cb10cb76}{ARGX\+\_\+\+VERSION\+\_\+\+STD}}~20250606
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{macros_8h_a2c2541090a31c495b5e800500cdff4ef}\index{macros.h@{macros.h}!ARGX\_DEV@{ARGX\_DEV}}
+\index{ARGX\_DEV@{ARGX\_DEV}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ARGX\_DEV}{ARGX\_DEV}}
+{\footnotesize\ttfamily \label{macros_8h_a2c2541090a31c495b5e800500cdff4ef} 
+\#define ARGX\+\_\+\+DEV~false}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00021}{21}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\Hypertarget{macros_8h_a35b3310e39905bdf63646a9f2a02ef18}\index{macros.h@{macros.h}!ARGX\_STRINGIFY@{ARGX\_STRINGIFY}}
+\index{ARGX\_STRINGIFY@{ARGX\_STRINGIFY}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ARGX\_STRINGIFY}{ARGX\_STRINGIFY}}
+{\footnotesize\ttfamily \label{macros_8h_a35b3310e39905bdf63646a9f2a02ef18} 
+\#define ARGX\+\_\+\+STRINGIFY(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#x}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00024}{24}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\Hypertarget{macros_8h_a4fd1f3a5c43cb1afcd72db492e2cee28}\index{macros.h@{macros.h}!ARGX\_TOSTRING@{ARGX\_TOSTRING}}
+\index{ARGX\_TOSTRING@{ARGX\_TOSTRING}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ARGX\_TOSTRING}{ARGX\_TOSTRING}}
+{\footnotesize\ttfamily \label{macros_8h_a4fd1f3a5c43cb1afcd72db492e2cee28} 
+\#define ARGX\+\_\+\+TOSTRING(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{macros_8h_a35b3310e39905bdf63646a9f2a02ef18}{ARGX\_STRINGIFY}}(x)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00025}{25}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\Hypertarget{macros_8h_aa639891463acaa985538b2760398bca3}\index{macros.h@{macros.h}!ARGX\_VERSION@{ARGX\_VERSION}}
+\index{ARGX\_VERSION@{ARGX\_VERSION}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ARGX\_VERSION}{ARGX\_VERSION}}
+{\footnotesize\ttfamily \label{macros_8h_aa639891463acaa985538b2760398bca3} 
+\#define ARGX\+\_\+\+VERSION~((\mbox{\hyperlink{macros_8h_a774e5c096afc126e4fd6031c4143df1c}{ARGX\+\_\+\+VERSION\+\_\+\+MAJOR}}$<$$<$16)\texorpdfstring{$\vert$}{|}(\mbox{\hyperlink{macros_8h_a6fca140f9d55dd241c689047db70c236}{ARGX\+\_\+\+VERSION\+\_\+\+MINOR}}$<$$<$8)\texorpdfstring{$\vert$}{|}(\mbox{\hyperlink{macros_8h_a8bb35e7bdac8b6af29d07e6fd7468b08}{ARGX\+\_\+\+VERSION\+\_\+\+PATCH}})\texorpdfstring{$\vert$}{|}(\mbox{\hyperlink{macros_8h_a2dd1c90360210f9bc40f65de8558b60f}{ARGX\+\_\+\+VERSION\+\_\+\+STATE}} $<$$<$ 24))}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00016}{16}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\Hypertarget{macros_8h_a9a03c00fec9110110cb43d0c67e195f3}\index{macros.h@{macros.h}!ARGX\_VERSION\_CHECK@{ARGX\_VERSION\_CHECK}}
+\index{ARGX\_VERSION\_CHECK@{ARGX\_VERSION\_CHECK}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ARGX\_VERSION\_CHECK}{ARGX\_VERSION\_CHECK}}
+{\footnotesize\ttfamily \label{macros_8h_a9a03c00fec9110110cb43d0c67e195f3} 
+\#define ARGX\+\_\+\+VERSION\+\_\+\+CHECK(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{macros_8h_a774e5c096afc126e4fd6031c4143df1c}{ARGX\+\_\+\+VERSION\+\_\+\+MAJOR}}}{, }\item[{}]{\mbox{\hyperlink{macros_8h_a6fca140f9d55dd241c689047db70c236}{ARGX\+\_\+\+VERSION\+\_\+\+MINOR}}}{, }\item[{}]{\mbox{\hyperlink{macros_8h_a8bb35e7bdac8b6af29d07e6fd7468b08}{ARGX\+\_\+\+VERSION\+\_\+\+PATCH}}}{, }\item[{}]{\mbox{\hyperlink{macros_8h_a2dd1c90360210f9bc40f65de8558b60f}{ARGX\+\_\+\+VERSION\+\_\+\+STATE}}}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ (((\mbox{\hyperlink{macros_8h_a774e5c096afc126e4fd6031c4143df1c}{ARGX\_VERSION\_MAJOR}})<<16)|((\mbox{\hyperlink{macros_8h_a6fca140f9d55dd241c689047db70c236}{ARGX\_VERSION\_MINOR}})<<8)|(\mbox{\hyperlink{macros_8h_a8bb35e7bdac8b6af29d07e6fd7468b08}{ARGX\_VERSION\_PATCH}})|((\mbox{\hyperlink{macros_8h_a2dd1c90360210f9bc40f65de8558b60f}{ARGX\_VERSION\_STATE}})\ <<\ 24))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00017}{17}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ ARGX\_VERSION\_CHECK(ARGX\_VERSION\_MAJOR,\ ARGX\_VERSION\_MINOR,\ ARGX\_VERSION\_PATCH,\ ARGX\_VERSION\_STATE)\ \(\backslash\)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ \ \ (((ARGX\_VERSION\_MAJOR)<<16)|((ARGX\_VERSION\_MINOR)<<8)|(ARGX\_VERSION\_PATCH)|((ARGX\_VERSION\_STATE)\ <<\ 24))}}
+
+\end{DoxyCode}
+\Hypertarget{macros_8h_a774e5c096afc126e4fd6031c4143df1c}\index{macros.h@{macros.h}!ARGX\_VERSION\_MAJOR@{ARGX\_VERSION\_MAJOR}}
+\index{ARGX\_VERSION\_MAJOR@{ARGX\_VERSION\_MAJOR}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ARGX\_VERSION\_MAJOR}{ARGX\_VERSION\_MAJOR}}
+{\footnotesize\ttfamily \label{macros_8h_a774e5c096afc126e4fd6031c4143df1c} 
+\#define ARGX\+\_\+\+VERSION\+\_\+\+MAJOR~1}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00004}{4}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\Hypertarget{macros_8h_a6fca140f9d55dd241c689047db70c236}\index{macros.h@{macros.h}!ARGX\_VERSION\_MINOR@{ARGX\_VERSION\_MINOR}}
+\index{ARGX\_VERSION\_MINOR@{ARGX\_VERSION\_MINOR}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ARGX\_VERSION\_MINOR}{ARGX\_VERSION\_MINOR}}
+{\footnotesize\ttfamily \label{macros_8h_a6fca140f9d55dd241c689047db70c236} 
+\#define ARGX\+\_\+\+VERSION\+\_\+\+MINOR~0}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00005}{5}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\Hypertarget{macros_8h_a8bb35e7bdac8b6af29d07e6fd7468b08}\index{macros.h@{macros.h}!ARGX\_VERSION\_PATCH@{ARGX\_VERSION\_PATCH}}
+\index{ARGX\_VERSION\_PATCH@{ARGX\_VERSION\_PATCH}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ARGX\_VERSION\_PATCH}{ARGX\_VERSION\_PATCH}}
+{\footnotesize\ttfamily \label{macros_8h_a8bb35e7bdac8b6af29d07e6fd7468b08} 
+\#define ARGX\+\_\+\+VERSION\+\_\+\+PATCH~2}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00006}{6}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\Hypertarget{macros_8h_a2dd1c90360210f9bc40f65de8558b60f}\index{macros.h@{macros.h}!ARGX\_VERSION\_STATE@{ARGX\_VERSION\_STATE}}
+\index{ARGX\_VERSION\_STATE@{ARGX\_VERSION\_STATE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ARGX\_VERSION\_STATE}{ARGX\_VERSION\_STATE}}
+{\footnotesize\ttfamily \label{macros_8h_a2dd1c90360210f9bc40f65de8558b60f} 
+\#define ARGX\+\_\+\+VERSION\+\_\+\+STATE~"{}build"{}}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00014}{14}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\Hypertarget{macros_8h_a2cf696b4344dbd9c545a9165cb10cb76}\index{macros.h@{macros.h}!ARGX\_VERSION\_STD@{ARGX\_VERSION\_STD}}
+\index{ARGX\_VERSION\_STD@{ARGX\_VERSION\_STD}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{ARGX\_VERSION\_STD}{ARGX\_VERSION\_STD}}
+{\footnotesize\ttfamily \label{macros_8h_a2cf696b4344dbd9c545a9165cb10cb76} 
+\#define ARGX\+\_\+\+VERSION\+\_\+\+STD~20250606}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00007}{7}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+

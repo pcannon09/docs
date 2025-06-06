@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ARGXAddError_8c_source" xml:lang="en-US">
+<title>ARGXAddError.c</title>
+<indexterm><primary>src/ARGXAddError.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_ARGXAddError_8c_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+<anchor xml:id="_ARGXAddError_8c_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
+<anchor xml:id="_ARGXAddError_8c_source_1l00003"/>00003 
+<anchor xml:id="_ARGXAddError_8c_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_ARGXAddError_8h">../inc/ARGXAddError.h</link>&quot;</emphasis>
+<anchor xml:id="_ARGXAddError_8c_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_types_8h">../inc/types.h</link>&quot;</emphasis>
+<anchor xml:id="_ARGXAddError_8c_source_1l00006"/>00006 
+<anchor xml:id="_ARGXAddError_8c_source_1l00007"/><link linkend="_ARGXAddError_8c_1a814b3298d81b070e52a987654d18d8a2">00007</link> <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_ARGXAddError_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*str)
+<anchor xml:id="_ARGXAddError_8c_source_1l00008"/>00008 {
+<anchor xml:id="_ARGXAddError_8c_source_1l00009"/>00009 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!str)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+<anchor xml:id="_ARGXAddError_8c_source_1l00010"/>00010 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len&#32;=&#32;strlen(str)&#32;+&#32;1;
+<anchor xml:id="_ARGXAddError_8c_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*dup&#32;=&#32;malloc(len);
+<anchor xml:id="_ARGXAddError_8c_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(dup)
+<anchor xml:id="_ARGXAddError_8c_source_1l00013"/>00013 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_ARGXAddError_8c_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(dup,&#32;str,&#32;len);
+<anchor xml:id="_ARGXAddError_8c_source_1l00015"/>00015 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_ARGXAddError_8c_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;dup;
+<anchor xml:id="_ARGXAddError_8c_source_1l00017"/>00017 }
+<anchor xml:id="_ARGXAddError_8c_source_1l00018"/>00018 
+<anchor xml:id="_ARGXAddError_8c_source_1l00019"/><link linkend="_ARGXAddError_8h_1a8c4ee33ae3d4a6208322ad503dceca9e">00019</link> <link linkend="_structArgxcError">ArgxcError</link>&#32;<link linkend="_ARGXAddError_8c_1a8c4ee33ae3d4a6208322ad503dceca9e">argxcCreateErrorSimple</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*msg,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*help)
+<anchor xml:id="_ARGXAddError_8c_source_1l00020"/>00020 {
+<anchor xml:id="_ARGXAddError_8c_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<link linkend="_structArgxcError">ArgxcError</link>&#32;error&#32;=&#32;{0};
+<anchor xml:id="_ARGXAddError_8c_source_1l00022"/>00022 
+<anchor xml:id="_ARGXAddError_8c_source_1l00023"/>00023 &#32;&#32;&#32;&#32;error.<link linkend="_structArgxcError_1ab4531054aa9750f66f0cae13f67365ad">type</link>&#32;=&#32;<link linkend="_ARGXAddError_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(<emphasis role="stringliteral">&quot;error&quot;</emphasis>);
+<anchor xml:id="_ARGXAddError_8c_source_1l00024"/>00024 &#32;&#32;&#32;&#32;error.<link linkend="_structArgxcError_1a88d100236636b2eb326025d527ad26f3">error</link>&#32;=&#32;<link linkend="_ARGXAddError_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(msg);
+<anchor xml:id="_ARGXAddError_8c_source_1l00025"/>00025 &#32;&#32;&#32;&#32;error.<link linkend="_structArgxcError_1a9e83392469b228017a3b6492392f68ad">help</link>&#32;=&#32;<link linkend="_ARGXAddError_8c_1a814b3298d81b070e52a987654d18d8a2">stringDuplicate</link>(help);
+<anchor xml:id="_ARGXAddError_8c_source_1l00026"/>00026 &#32;&#32;&#32;&#32;error.<link linkend="_structArgxcError_1a617299f808dff4b2656bf04384e64bf9">code</link>&#32;=&#32;1;&#32;<emphasis role="comment">//&#32;Default&#32;error&#32;code</emphasis>
+<anchor xml:id="_ARGXAddError_8c_source_1l00027"/>00027 
+<anchor xml:id="_ARGXAddError_8c_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+<anchor xml:id="_ARGXAddError_8c_source_1l00029"/>00029 }
+<anchor xml:id="_ARGXAddError_8c_source_1l00030"/>00030 
+<anchor xml:id="_ARGXAddError_8c_source_1l00031"/><link linkend="_ARGXAddError_8h_1a9e0ec52023e67e806606050d12a934a8">00031</link> <emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_ARGXAddError_8c_1a9e0ec52023e67e806606050d12a934a8">argxcGetErrorMessage</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structArgxcError">ArgxcError</link>&#32;*error)
+<anchor xml:id="_ARGXAddError_8c_source_1l00032"/>00032 {
+<anchor xml:id="_ARGXAddError_8c_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error&#32;?&#32;error-&gt;<link linkend="_structArgxcError_1a88d100236636b2eb326025d527ad26f3">error</link>&#32;:&#32;NULL;
+<anchor xml:id="_ARGXAddError_8c_source_1l00034"/>00034 }
+<anchor xml:id="_ARGXAddError_8c_source_1l00035"/>00035 
+<anchor xml:id="_ARGXAddError_8c_source_1l00036"/><link linkend="_ARGXAddError_8h_1a82d77328ff61877b8ab10d054bc5ced4">00036</link> <emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_ARGXAddError_8c_1a82d77328ff61877b8ab10d054bc5ced4">argxcGetErrorHelp</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structArgxcError">ArgxcError</link>&#32;*error)
+<anchor xml:id="_ARGXAddError_8c_source_1l00037"/>00037 {
+<anchor xml:id="_ARGXAddError_8c_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error&#32;?&#32;error-&gt;<link linkend="_structArgxcError_1a9e83392469b228017a3b6492392f68ad">help</link>&#32;:&#32;NULL;
+<anchor xml:id="_ARGXAddError_8c_source_1l00039"/>00039 }
+<anchor xml:id="_ARGXAddError_8c_source_1l00040"/>00040 
+<anchor xml:id="_ARGXAddError_8c_source_1l00041"/><link linkend="_ARGXAddError_8h_1a038539b9defbaf62f7a175d75388866d">00041</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_ARGXAddError_8c_1a038539b9defbaf62f7a175d75388866d">argxcGetErrorCode</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structArgxcError">ArgxcError</link>&#32;*error)
+<anchor xml:id="_ARGXAddError_8c_source_1l00042"/>00042 {
+<anchor xml:id="_ARGXAddError_8c_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error&#32;?&#32;error-&gt;<link linkend="_structArgxcError_1a617299f808dff4b2656bf04384e64bf9">code</link>&#32;:&#32;0;
+<anchor xml:id="_ARGXAddError_8c_source_1l00044"/>00044 }
+<anchor xml:id="_ARGXAddError_8c_source_1l00045"/>00045 
+<anchor xml:id="_ARGXAddError_8c_source_1l00046"/><link linkend="_ARGXAddError_8h_1ae080742df3abdaba51a357b9c68775dd">00046</link> <link linkend="_structArgxcErrorPair">ArgxcErrorPair</link>&#32;<link linkend="_ARGXAddError_8c_1ae080742df3abdaba51a357b9c68775dd">argxcGetErrorPair</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structArgxcError">ArgxcError</link>&#32;*error)
+<anchor xml:id="_ARGXAddError_8c_source_1l00047"/>00047 {
+<anchor xml:id="_ARGXAddError_8c_source_1l00048"/>00048 &#32;&#32;&#32;&#32;<link linkend="_structArgxcErrorPair">ArgxcErrorPair</link>&#32;pair&#32;=&#32;{NULL,&#32;NULL};
+<anchor xml:id="_ARGXAddError_8c_source_1l00049"/>00049 
+<anchor xml:id="_ARGXAddError_8c_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(error)
+<anchor xml:id="_ARGXAddError_8c_source_1l00051"/>00051 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_ARGXAddError_8c_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pair.<link linkend="_structArgxcErrorPair_1a548e70442f749cb33bf853987bbb2707">error</link>&#32;=&#32;error-&gt;<link linkend="_structArgxcError_1a88d100236636b2eb326025d527ad26f3">error</link>;
+<anchor xml:id="_ARGXAddError_8c_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pair.<link linkend="_structArgxcErrorPair_1ab7a2046f22e6b8a74ca323b985cee6ce">help</link>&#32;=&#32;error-&gt;<link linkend="_structArgxcError_1a9e83392469b228017a3b6492392f68ad">help</link>;
+<anchor xml:id="_ARGXAddError_8c_source_1l00054"/>00054 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_ARGXAddError_8c_source_1l00055"/>00055 
+<anchor xml:id="_ARGXAddError_8c_source_1l00056"/>00056 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;pair;
+<anchor xml:id="_ARGXAddError_8c_source_1l00057"/>00057 }
+<anchor xml:id="_ARGXAddError_8c_source_1l00058"/>00058 
+</programlisting></section>
