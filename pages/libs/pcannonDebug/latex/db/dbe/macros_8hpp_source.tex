@@ -5,19 +5,19 @@
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00003}00003\ \textcolor{comment}{//\ Versioning}}
-\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00004}\mbox{\hyperlink{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}{00004}}\ \textcolor{preprocessor}{\#define\ PD\_VERSION\_MAJOR\ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00004}\mbox{\hyperlink{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}{00004}}\ \textcolor{preprocessor}{\#define\ PD\_VERSION\_MAJOR\ \ \ \ \ \ \ \ \ \ 1}}
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00005}\mbox{\hyperlink{macros_8hpp_a3992091abfbb37fe5f384aea4dd97dea}{00005}}\ \textcolor{preprocessor}{\#define\ PD\_VERSION\_MINOR\ \ \ \ \ \ \ \ \ \ 0}}
-\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00006}\mbox{\hyperlink{macros_8hpp_ab26433cc36f516c4be52b6efc9b6b91a}{00006}}\ \textcolor{preprocessor}{\#define\ PD\_VERSION\_PATCH\ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00006}\mbox{\hyperlink{macros_8hpp_ab26433cc36f516c4be52b6efc9b6b91a}{00006}}\ \textcolor{preprocessor}{\#define\ PD\_VERSION\_PATCH\ \ \ \ \ \ \ \ \ \ 0}}
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00007}00007\ }
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00008}00008\ \textcolor{comment}{//\ Version\ states:}}
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00009}00009\ \textcolor{comment}{//\ dev\ -\/\ Develoment}}
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00010}00010\ \textcolor{comment}{//\ build\ -\/\ Built\ Version}}
-\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00011}\mbox{\hyperlink{macros_8hpp_a7eecb5a8be1c9f6f4b409ccda0838d71}{00011}}\ \textcolor{preprocessor}{\#define\ PD\_VERSION\_STATE\ \ \ \ \ \ \ \ \ \ "{}dev"{}}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00011}\mbox{\hyperlink{macros_8hpp_a7eecb5a8be1c9f6f4b409ccda0838d71}{00011}}\ \textcolor{preprocessor}{\#define\ PD\_VERSION\_STATE\ \ \ \ \ \ \ \ \ \ "{}build"{}}}
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00013}\mbox{\hyperlink{macros_8hpp_ae9c30977974c137f90be933bb7ed15ad}{00013}}\ \textcolor{preprocessor}{\#define\ PD\_VERSION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((STT\_VERSION\_MAJOR<<16)|(STT\_VERSION\_MINOR<<8)|(STT\_VERSION\_PATCH)|(STT\_VERSION\_STATE\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00013}\mbox{\hyperlink{macros_8hpp_ae9c30977974c137f90be933bb7ed15ad}{00013}}\ \textcolor{preprocessor}{\#define\ PD\_VERSION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((PD\_VERSION\_MAJOR<<16)|(STT\_VERSION\_MINOR<<8)|(STT\_VERSION\_PATCH)|(STT\_VERSION\_STATE\ <<\ 24))}}
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00015}\mbox{\hyperlink{macros_8hpp_afda24ebbcf9fc1f72ed656c757e2aae3}{00015}}\ \textcolor{preprocessor}{\#define\ PD\_VERSION\_CHECK(STT\_VERSION\_MAJOR,\ STT\_VERSION\_MINOR,\ STT\_VERSION\_PATCH,\ STT\_VERSION\_STATE)\ \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\ \ \ \ ((PD\_VERSION\_MAJOR<<16)|(STT\_VERSION\_MINOR<<8)|(STT\_VERSION\_PATCH)|(STT\_VERSION\_STATE\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00015}\mbox{\hyperlink{macros_8hpp_ade8af82e52ecf96ad437158969e295dc}{00015}}\ \textcolor{preprocessor}{\#define\ PD\_VERSION\_CHECK(PD\_VERSION\_MAJOR,\ PD\_VERSION\_MINOR,\ PD\_VERSION\_PATCH,\ PD\_VERSION\_STATE)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\ \ \ \ ((PD\_VERSION\_MAJOR<<16)|(PD\_VERSION\_MINOR<<8)|(PD\_VERSION\_PATCH)|(STT\_VERSION\_STATE\ <<\ 24))}}
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00017}00017\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00018}00018\ \textcolor{comment}{/**}}
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00019}00019\ \textcolor{comment}{\ *\ @brief\ Debug\ log\ with\ file\ and\ line\ output\ capabilities\ using\ pd::Debug\ for\ debugging}}
@@ -40,7 +40,7 @@
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00036}00036\ }
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00037}00037\ \textcolor{comment}{//\ Macro\ utils}}
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00038}\mbox{\hyperlink{macros_8hpp_af6e71c74189066ca8fc24d44500ab7a0}{00038}}\ \textcolor{preprocessor}{\#define\ PD\_STRINGIFY(x)\ \#x}}
-\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00039}\mbox{\hyperlink{macros_8hpp_a90671304256f54002660963c47301253}{00039}}\ \textcolor{preprocessor}{\#define\ PD\_TOSTRING(x)\ STT\_STRINGIFY(x)}}
+\DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00039}\mbox{\hyperlink{macros_8hpp_a90671304256f54002660963c47301253}{00039}}\ \textcolor{preprocessor}{\#define\ PD\_TOSTRING(x)\ PD\_STRINGIFY(x)}}
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00040}00040\ }
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00041}00041\ \textcolor{preprocessor}{\#ifndef\ PD\_DEV}}
 \DoxyCodeLine{\Hypertarget{macros_8hpp_source_l00042}\mbox{\hyperlink{macros_8hpp_a4e23b136a511d5454595b8e1364edf8a}{00042}}\ \textcolor{preprocessor}{\#\ \ \ define\ PD\_DEV\ true}}

@@ -1,4 +1,4 @@
-.TH "inc/macros.hpp" 3 "Version 0.0.1-dev" "Pcannon Debug" \" -*- nroff -*-
+.TH "inc/macros.hpp" 3 "Version 1.0.0-build" "Pcannon Debug" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -27,22 +27,22 @@ inc/macros.hpp
 .RI "#define \fBPD_TOSTRING\fP(x)"
 .br
 .ti -1c
-.RI "#define \fBPD_VERSION\fP   ((STT_VERSION_MAJOR<<16)|(STT_VERSION_MINOR<<8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE << 24))"
+.RI "#define \fBPD_VERSION\fP   ((\fBPD_VERSION_MAJOR\fP<<16)|(STT_VERSION_MINOR<<8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE << 24))"
 .br
 .ti -1c
-.RI "#define \fBPD_VERSION_CHECK\fP(STT_VERSION_MAJOR,  STT_VERSION_MINOR,  STT_VERSION_PATCH,  STT_VERSION_STATE)"
+.RI "#define \fBPD_VERSION_CHECK\fP(\fBPD_VERSION_MAJOR\fP,  \fBPD_VERSION_MINOR\fP,  \fBPD_VERSION_PATCH\fP,  \fBPD_VERSION_STATE\fP)"
 .br
 .ti -1c
-.RI "#define \fBPD_VERSION_MAJOR\fP   0"
+.RI "#define \fBPD_VERSION_MAJOR\fP   1"
 .br
 .ti -1c
 .RI "#define \fBPD_VERSION_MINOR\fP   0"
 .br
 .ti -1c
-.RI "#define \fBPD_VERSION_PATCH\fP   1"
+.RI "#define \fBPD_VERSION_PATCH\fP   0"
 .br
 .ti -1c
-.RI "#define \fBPD_VERSION_STATE\fP   'dev'"
+.RI "#define \fBPD_VERSION_STATE\fP   'build'"
 .br
 .in -1c
 .SH "Macro Definition Documentation"
@@ -117,32 +117,32 @@ Definition at line \fB38\fP of file \fBmacros\&.hpp\fP\&.
 .SS "#define PD_TOSTRING( x)"
 \fBValue:\fP
 .nf
-STT_STRINGIFY(x)
+PD_STRINGIFY(x)
 .PP
 .fi
 
 .PP
 Definition at line \fB39\fP of file \fBmacros\&.hpp\fP\&.
-.SS "#define PD_VERSION   ((STT_VERSION_MAJOR<<16)|(STT_VERSION_MINOR<<8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE << 24))"
+.SS "#define PD_VERSION   ((\fBPD_VERSION_MAJOR\fP<<16)|(STT_VERSION_MINOR<<8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE << 24))"
 
 .PP
 Definition at line \fB13\fP of file \fBmacros\&.hpp\fP\&.
-.SS "#define PD_VERSION_CHECK( STT_VERSION_MAJOR,  STT_VERSION_MINOR,  STT_VERSION_PATCH,  STT_VERSION_STATE)"
+.SS "#define PD_VERSION_CHECK( \fBPD_VERSION_MAJOR\fP,  \fBPD_VERSION_MINOR\fP,  \fBPD_VERSION_PATCH\fP,  \fBPD_VERSION_STATE\fP)"
 \fBValue:\fP
 .nf
-    ((PD_VERSION_MAJOR<<16)|(STT_VERSION_MINOR<<8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE << 24))
+    ((PD_VERSION_MAJOR<<16)|(PD_VERSION_MINOR<<8)|(PD_VERSION_PATCH)|(STT_VERSION_STATE << 24))
 .PP
 .fi
 
 .PP
 Definition at line \fB15\fP of file \fBmacros\&.hpp\fP\&.
 .nf
-15 #define PD_VERSION_CHECK(STT_VERSION_MAJOR, STT_VERSION_MINOR, STT_VERSION_PATCH, STT_VERSION_STATE) \\
-16     ((PD_VERSION_MAJOR<<16)|(STT_VERSION_MINOR<<8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE << 24))
+15 #define PD_VERSION_CHECK(PD_VERSION_MAJOR, PD_VERSION_MINOR, PD_VERSION_PATCH, PD_VERSION_STATE) \\
+16     ((PD_VERSION_MAJOR<<16)|(PD_VERSION_MINOR<<8)|(PD_VERSION_PATCH)|(STT_VERSION_STATE << 24))
 .PP
 .fi
 
-.SS "#define PD_VERSION_MAJOR   0"
+.SS "#define PD_VERSION_MAJOR   1"
 
 .PP
 Definition at line \fB4\fP of file \fBmacros\&.hpp\fP\&.
@@ -150,11 +150,11 @@ Definition at line \fB4\fP of file \fBmacros\&.hpp\fP\&.
 
 .PP
 Definition at line \fB5\fP of file \fBmacros\&.hpp\fP\&.
-.SS "#define PD_VERSION_PATCH   1"
+.SS "#define PD_VERSION_PATCH   0"
 
 .PP
 Definition at line \fB6\fP of file \fBmacros\&.hpp\fP\&.
-.SS "#define PD_VERSION_STATE   'dev'"
+.SS "#define PD_VERSION_STATE   'build'"
 
 .PP
 Definition at line \fB11\fP of file \fBmacros\&.hpp\fP\&.

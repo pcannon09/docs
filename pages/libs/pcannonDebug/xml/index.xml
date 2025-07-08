@@ -49,7 +49,7 @@
     <member refid="db/dbe/macros_8hpp_1af6e71c74189066ca8fc24d44500ab7a0" kind="define"><name>PD_STRINGIFY</name></member>
     <member refid="db/dbe/macros_8hpp_1a90671304256f54002660963c47301253" kind="define"><name>PD_TOSTRING</name></member>
     <member refid="db/dbe/macros_8hpp_1ae9c30977974c137f90be933bb7ed15ad" kind="define"><name>PD_VERSION</name></member>
-    <member refid="db/dbe/macros_8hpp_1afda24ebbcf9fc1f72ed656c757e2aae3" kind="define"><name>PD_VERSION_CHECK</name></member>
+    <member refid="db/dbe/macros_8hpp_1ade8af82e52ecf96ad437158969e295dc" kind="define"><name>PD_VERSION_CHECK</name></member>
     <member refid="db/dbe/macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4" kind="define"><name>PD_VERSION_MAJOR</name></member>
     <member refid="db/dbe/macros_8hpp_1a3992091abfbb37fe5f384aea4dd97dea" kind="define"><name>PD_VERSION_MINOR</name></member>
     <member refid="db/dbe/macros_8hpp_1ab26433cc36f516c4be52b6efc9b6b91a" kind="define"><name>PD_VERSION_PATCH</name></member>

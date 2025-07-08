@@ -58,8 +58,8 @@
       <type>#define</type>
       <name>PD_VERSION_CHECK</name>
       <anchorfile>db/dbe/macros_8hpp.html</anchorfile>
-      <anchor>afda24ebbcf9fc1f72ed656c757e2aae3</anchor>
-      <arglist>(STT_VERSION_MAJOR, STT_VERSION_MINOR, STT_VERSION_PATCH, STT_VERSION_STATE)</arglist>
+      <anchor>ade8af82e52ecf96ad437158969e295dc</anchor>
+      <arglist>(PD_VERSION_MAJOR, PD_VERSION_MINOR, PD_VERSION_PATCH, PD_VERSION_STATE)</arglist>
     </member>
     <member kind="define">
       <type>#define</type>

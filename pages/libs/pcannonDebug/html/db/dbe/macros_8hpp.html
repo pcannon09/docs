@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Pcannon Debug<span id="projectnumber">&#160;0.0.1-dev</span>
+   <div id="projectname">Pcannon Debug<span id="projectnumber">&#160;1.0.0-build</span>
    </div>
    <div id="projectbrief">Simple yet powerful debug manager for C++</div>
   </td>
@@ -104,12 +104,12 @@ Macros</h2></td></tr>
 <tr class="memdesc:aeadcd91d3ad65cd57a29b99c64bb9b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple debug log with file and line output capabilities with fully custom message without any setting needed Output it to the standard output.  <br /></td></tr>
 <tr class="memitem:af6e71c74189066ca8fc24d44500ab7a0" id="r_af6e71c74189066ca8fc24d44500ab7a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6e71c74189066ca8fc24d44500ab7a0">PD_STRINGIFY</a>(x)</td></tr>
 <tr class="memitem:a90671304256f54002660963c47301253" id="r_a90671304256f54002660963c47301253"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90671304256f54002660963c47301253">PD_TOSTRING</a>(x)</td></tr>
-<tr class="memitem:ae9c30977974c137f90be933bb7ed15ad" id="r_ae9c30977974c137f90be933bb7ed15ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9c30977974c137f90be933bb7ed15ad">PD_VERSION</a>&#160;&#160;&#160;((STT_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</td></tr>
-<tr class="memitem:afda24ebbcf9fc1f72ed656c757e2aae3" id="r_afda24ebbcf9fc1f72ed656c757e2aae3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afda24ebbcf9fc1f72ed656c757e2aae3">PD_VERSION_CHECK</a>(STT_VERSION_MAJOR,  STT_VERSION_MINOR,  STT_VERSION_PATCH,  STT_VERSION_STATE)</td></tr>
-<tr class="memitem:a225088c327cc6c7fcca809dc62e48fd4" id="r_a225088c327cc6c7fcca809dc62e48fd4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:ae9c30977974c137f90be933bb7ed15ad" id="r_ae9c30977974c137f90be933bb7ed15ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9c30977974c137f90be933bb7ed15ad">PD_VERSION</a>&#160;&#160;&#160;((<a class="el" href="#a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</a>&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</td></tr>
+<tr class="memitem:ade8af82e52ecf96ad437158969e295dc" id="r_ade8af82e52ecf96ad437158969e295dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade8af82e52ecf96ad437158969e295dc">PD_VERSION_CHECK</a>(<a class="el" href="#a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</a>,  <a class="el" href="#a3992091abfbb37fe5f384aea4dd97dea">PD_VERSION_MINOR</a>,  <a class="el" href="#ab26433cc36f516c4be52b6efc9b6b91a">PD_VERSION_PATCH</a>,  <a class="el" href="#a7eecb5a8be1c9f6f4b409ccda0838d71">PD_VERSION_STATE</a>)</td></tr>
+<tr class="memitem:a225088c327cc6c7fcca809dc62e48fd4" id="r_a225088c327cc6c7fcca809dc62e48fd4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memitem:a3992091abfbb37fe5f384aea4dd97dea" id="r_a3992091abfbb37fe5f384aea4dd97dea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3992091abfbb37fe5f384aea4dd97dea">PD_VERSION_MINOR</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memitem:ab26433cc36f516c4be52b6efc9b6b91a" id="r_ab26433cc36f516c4be52b6efc9b6b91a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab26433cc36f516c4be52b6efc9b6b91a">PD_VERSION_PATCH</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memitem:a7eecb5a8be1c9f6f4b409ccda0838d71" id="r_a7eecb5a8be1c9f6f4b409ccda0838d71"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eecb5a8be1c9f6f4b409ccda0838d71">PD_VERSION_STATE</a>&#160;&#160;&#160;&quot;dev&quot;</td></tr>
+<tr class="memitem:ab26433cc36f516c4be52b6efc9b6b91a" id="r_ab26433cc36f516c4be52b6efc9b6b91a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab26433cc36f516c4be52b6efc9b6b91a">PD_VERSION_PATCH</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:a7eecb5a8be1c9f6f4b409ccda0838d71" id="r_a7eecb5a8be1c9f6f4b409ccda0838d71"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eecb5a8be1c9f6f4b409ccda0838d71">PD_VERSION_STATE</a>&#160;&#160;&#160;&quot;build&quot;</td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a670943c08adbadcff3b706d74e3b14be" name="a670943c08adbadcff3b706d74e3b14be"></a>
@@ -238,7 +238,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">STT_STRINGIFY(x)</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#af6e71c74189066ca8fc24d44500ab7a0">PD_STRINGIFY</a>(x)</div>
+<div class="ttc" id="amacros_8hpp_html_af6e71c74189066ca8fc24d44500ab7a0"><div class="ttname"><a href="#af6e71c74189066ca8fc24d44500ab7a0">PD_STRINGIFY</a></div><div class="ttdeci">#define PD_STRINGIFY(x)</div><div class="ttdef"><b>Definition</b> <a href="../../db/dbe/macros_8hpp_source.html#l00038">macros.hpp:38</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="../../db/dbe/macros_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../db/dbe/macros_8hpp_source.html">macros.hpp</a>.</p>
 
@@ -251,7 +252,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PD_VERSION&#160;&#160;&#160;((STT_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</td>
+          <td class="memname">#define PD_VERSION&#160;&#160;&#160;((<a class="el" href="#a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</a>&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -260,8 +261,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="afda24ebbcf9fc1f72ed656c757e2aae3" name="afda24ebbcf9fc1f72ed656c757e2aae3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afda24ebbcf9fc1f72ed656c757e2aae3">&#9670;&#160;</a></span>PD_VERSION_CHECK</h2>
+<a id="ade8af82e52ecf96ad437158969e295dc" name="ade8af82e52ecf96ad437158969e295dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8af82e52ecf96ad437158969e295dc">&#9670;&#160;</a></span>PD_VERSION_CHECK</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -269,31 +270,33 @@ Macros</h2></td></tr>
         <tr>
           <td class="memname">#define PD_VERSION_CHECK</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>STT_VERSION_MAJOR</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="#a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>STT_VERSION_MINOR</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="#a3992091abfbb37fe5f384aea4dd97dea">PD_VERSION_MINOR</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>STT_VERSION_PATCH</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="#ab26433cc36f516c4be52b6efc9b6b91a">PD_VERSION_PATCH</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>STT_VERSION_STATE</em></span>&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="#a7eecb5a8be1c9f6f4b409ccda0838d71">PD_VERSION_STATE</a></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    ((<a class="code hl_define" href="#a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</a>&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</div>
+<b>Value:</b><div class="fragment"><div class="line">    ((<a class="code hl_define" href="#a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</a>&lt;&lt;16)|(<a class="code hl_define" href="#a3992091abfbb37fe5f384aea4dd97dea">PD_VERSION_MINOR</a>&lt;&lt;8)|(<a class="code hl_define" href="#ab26433cc36f516c4be52b6efc9b6b91a">PD_VERSION_PATCH</a>)|(STT_VERSION_STATE &lt;&lt; 24))</div>
 <div class="ttc" id="amacros_8hpp_html_a225088c327cc6c7fcca809dc62e48fd4"><div class="ttname"><a href="#a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</a></div><div class="ttdeci">#define PD_VERSION_MAJOR</div><div class="ttdef"><b>Definition</b> <a href="../../db/dbe/macros_8hpp_source.html#l00004">macros.hpp:4</a></div></div>
+<div class="ttc" id="amacros_8hpp_html_a3992091abfbb37fe5f384aea4dd97dea"><div class="ttname"><a href="#a3992091abfbb37fe5f384aea4dd97dea">PD_VERSION_MINOR</a></div><div class="ttdeci">#define PD_VERSION_MINOR</div><div class="ttdef"><b>Definition</b> <a href="../../db/dbe/macros_8hpp_source.html#l00005">macros.hpp:5</a></div></div>
+<div class="ttc" id="amacros_8hpp_html_ab26433cc36f516c4be52b6efc9b6b91a"><div class="ttname"><a href="#ab26433cc36f516c4be52b6efc9b6b91a">PD_VERSION_PATCH</a></div><div class="ttdeci">#define PD_VERSION_PATCH</div><div class="ttdef"><b>Definition</b> <a href="../../db/dbe/macros_8hpp_source.html#l00006">macros.hpp:6</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="../../db/dbe/macros_8hpp_source.html#l00015">15</a> of file <a class="el" href="../../db/dbe/macros_8hpp_source.html">macros.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span><span class="preprocessor">#define PD_VERSION_CHECK(STT_VERSION_MAJOR, STT_VERSION_MINOR, STT_VERSION_PATCH, STT_VERSION_STATE) \</span></div>
-<div class="line"><span class="lineno">   16</span><span class="preprocessor">    ((PD_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</span></div>
+<div class="fragment"><div class="line"><span class="lineno">   15</span><span class="preprocessor">#define PD_VERSION_CHECK(PD_VERSION_MAJOR, PD_VERSION_MINOR, PD_VERSION_PATCH, PD_VERSION_STATE) \</span></div>
+<div class="line"><span class="lineno">   16</span><span class="preprocessor">    ((PD_VERSION_MAJOR&lt;&lt;16)|(PD_VERSION_MINOR&lt;&lt;8)|(PD_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -304,7 +307,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PD_VERSION_MAJOR&#160;&#160;&#160;0</td>
+          <td class="memname">#define PD_VERSION_MAJOR&#160;&#160;&#160;1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -336,7 +339,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PD_VERSION_PATCH&#160;&#160;&#160;1</td>
+          <td class="memname">#define PD_VERSION_PATCH&#160;&#160;&#160;0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -352,7 +355,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PD_VERSION_STATE&#160;&#160;&#160;&quot;dev&quot;</td>
+          <td class="memname">#define PD_VERSION_STATE&#160;&#160;&#160;&quot;build&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">

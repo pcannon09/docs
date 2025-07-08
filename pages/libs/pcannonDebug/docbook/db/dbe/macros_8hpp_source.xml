@@ -5,19 +5,19 @@
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_macros_8hpp_source_1l00001"/>00001 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00002"/>00002 
 <anchor xml:id="_macros_8hpp_source_1l00003"/>00003 <emphasis role="comment">//&#32;Versioning</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00004"/><link linkend="_macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4">00004</link> <emphasis role="preprocessor">#define&#32;PD_VERSION_MAJOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00004"/><link linkend="_macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4">00004</link> <emphasis role="preprocessor">#define&#32;PD_VERSION_MAJOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00005"/><link linkend="_macros_8hpp_1a3992091abfbb37fe5f384aea4dd97dea">00005</link> <emphasis role="preprocessor">#define&#32;PD_VERSION_MINOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00006"/><link linkend="_macros_8hpp_1ab26433cc36f516c4be52b6efc9b6b91a">00006</link> <emphasis role="preprocessor">#define&#32;PD_VERSION_PATCH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00006"/><link linkend="_macros_8hpp_1ab26433cc36f516c4be52b6efc9b6b91a">00006</link> <emphasis role="preprocessor">#define&#32;PD_VERSION_PATCH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00007"/>00007 
 <anchor xml:id="_macros_8hpp_source_1l00008"/>00008 <emphasis role="comment">//&#32;Version&#32;states:</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00009"/>00009 <emphasis role="comment">//&#32;dev&#32;-&#32;Develoment</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00010"/>00010 <emphasis role="comment">//&#32;build&#32;-&#32;Built&#32;Version</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00011"/><link linkend="_macros_8hpp_1a7eecb5a8be1c9f6f4b409ccda0838d71">00011</link> <emphasis role="preprocessor">#define&#32;PD_VERSION_STATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;dev&quot;</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00011"/><link linkend="_macros_8hpp_1a7eecb5a8be1c9f6f4b409ccda0838d71">00011</link> <emphasis role="preprocessor">#define&#32;PD_VERSION_STATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;build&quot;</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00012"/>00012 
-<anchor xml:id="_macros_8hpp_source_1l00013"/><link linkend="_macros_8hpp_1ae9c30977974c137f90be933bb7ed15ad">00013</link> <emphasis role="preprocessor">#define&#32;PD_VERSION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((STT_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE&#32;&lt;&lt;&#32;24))</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00013"/><link linkend="_macros_8hpp_1ae9c30977974c137f90be933bb7ed15ad">00013</link> <emphasis role="preprocessor">#define&#32;PD_VERSION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((PD_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE&#32;&lt;&lt;&#32;24))</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00014"/>00014 
-<anchor xml:id="_macros_8hpp_source_1l00015"/><link linkend="_macros_8hpp_1afda24ebbcf9fc1f72ed656c757e2aae3">00015</link> <emphasis role="preprocessor">#define&#32;PD_VERSION_CHECK(STT_VERSION_MAJOR,&#32;STT_VERSION_MINOR,&#32;STT_VERSION_PATCH,&#32;STT_VERSION_STATE)&#32;\</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00016"/>00016 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;((PD_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE&#32;&lt;&lt;&#32;24))</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00015"/><link linkend="_macros_8hpp_1ade8af82e52ecf96ad437158969e295dc">00015</link> <emphasis role="preprocessor">#define&#32;PD_VERSION_CHECK(PD_VERSION_MAJOR,&#32;PD_VERSION_MINOR,&#32;PD_VERSION_PATCH,&#32;PD_VERSION_STATE)&#32;\</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00016"/>00016 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;((PD_VERSION_MAJOR&lt;&lt;16)|(PD_VERSION_MINOR&lt;&lt;8)|(PD_VERSION_PATCH)|(STT_VERSION_STATE&#32;&lt;&lt;&#32;24))</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00017"/>00017 <emphasis role="comment"></emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00018"/>00018 <emphasis role="comment">/**</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00019"/>00019 <emphasis role="comment">&#32;*&#32;@brief&#32;Debug&#32;log&#32;with&#32;file&#32;and&#32;line&#32;output&#32;capabilities&#32;using&#32;pd::Debug&#32;for&#32;debugging</emphasis>
@@ -40,7 +40,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_macros_8hpp_source_1l00036"/>00036 
 <anchor xml:id="_macros_8hpp_source_1l00037"/>00037 <emphasis role="comment">//&#32;Macro&#32;utils</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00038"/><link linkend="_macros_8hpp_1af6e71c74189066ca8fc24d44500ab7a0">00038</link> <emphasis role="preprocessor">#define&#32;PD_STRINGIFY(x)&#32;#x</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00039"/><link linkend="_macros_8hpp_1a90671304256f54002660963c47301253">00039</link> <emphasis role="preprocessor">#define&#32;PD_TOSTRING(x)&#32;STT_STRINGIFY(x)</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00039"/><link linkend="_macros_8hpp_1a90671304256f54002660963c47301253">00039</link> <emphasis role="preprocessor">#define&#32;PD_TOSTRING(x)&#32;PD_STRINGIFY(x)</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00040"/>00040 
 <anchor xml:id="_macros_8hpp_source_1l00041"/>00041 <emphasis role="preprocessor">#ifndef&#32;PD_DEV</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00042"/><link linkend="_macros_8hpp_1a4e23b136a511d5454595b8e1364edf8a">00042</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;PD_DEV&#32;true</emphasis>

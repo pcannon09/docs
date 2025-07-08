@@ -19,17 +19,17 @@
 </listitem>
             <listitem><para>#define <link linkend="_macros_8hpp_1a90671304256f54002660963c47301253">PD_TOSTRING</link>(x)</para>
 </listitem>
-            <listitem><para>#define <link linkend="_macros_8hpp_1ae9c30977974c137f90be933bb7ed15ad">PD_VERSION</link>&#160;&#160;&#160;((STT_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</para>
+            <listitem><para>#define <link linkend="_macros_8hpp_1ae9c30977974c137f90be933bb7ed15ad">PD_VERSION</link>&#160;&#160;&#160;((<link linkend="_macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</link>&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</para>
 </listitem>
-            <listitem><para>#define <link linkend="_macros_8hpp_1afda24ebbcf9fc1f72ed656c757e2aae3">PD_VERSION_CHECK</link>(STT_VERSION_MAJOR,  STT_VERSION_MINOR,  STT_VERSION_PATCH,  STT_VERSION_STATE)</para>
+            <listitem><para>#define <link linkend="_macros_8hpp_1ade8af82e52ecf96ad437158969e295dc">PD_VERSION_CHECK</link>(<link linkend="_macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</link>,  <link linkend="_macros_8hpp_1a3992091abfbb37fe5f384aea4dd97dea">PD_VERSION_MINOR</link>,  <link linkend="_macros_8hpp_1ab26433cc36f516c4be52b6efc9b6b91a">PD_VERSION_PATCH</link>,  <link linkend="_macros_8hpp_1a7eecb5a8be1c9f6f4b409ccda0838d71">PD_VERSION_STATE</link>)</para>
 </listitem>
-            <listitem><para>#define <link linkend="_macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</link>&#160;&#160;&#160;0</para>
+            <listitem><para>#define <link linkend="_macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</link>&#160;&#160;&#160;1</para>
 </listitem>
             <listitem><para>#define <link linkend="_macros_8hpp_1a3992091abfbb37fe5f384aea4dd97dea">PD_VERSION_MINOR</link>&#160;&#160;&#160;0</para>
 </listitem>
-            <listitem><para>#define <link linkend="_macros_8hpp_1ab26433cc36f516c4be52b6efc9b6b91a">PD_VERSION_PATCH</link>&#160;&#160;&#160;1</para>
+            <listitem><para>#define <link linkend="_macros_8hpp_1ab26433cc36f516c4be52b6efc9b6b91a">PD_VERSION_PATCH</link>&#160;&#160;&#160;0</para>
 </listitem>
-            <listitem><para>#define <link linkend="_macros_8hpp_1a7eecb5a8be1c9f6f4b409ccda0838d71">PD_VERSION_STATE</link>&#160;&#160;&#160;&quot;dev&quot;</para>
+            <listitem><para>#define <link linkend="_macros_8hpp_1a7eecb5a8be1c9f6f4b409ccda0838d71">PD_VERSION_STATE</link>&#160;&#160;&#160;&quot;build&quot;</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -141,7 +141,7 @@ Definition at line <link linkend="_macros_8hpp_source_1l00038">38</link> of file
     <title>PD_TOSTRING</title>
 <indexterm><primary>PD_TOSTRING</primary><secondary>macros.hpp</secondary></indexterm>
 <indexterm><primary>macros.hpp</primary><secondary>PD_TOSTRING</secondary></indexterm>
-<para><computeroutput>#define PD_TOSTRING( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">STT_STRINGIFY(x)
+<para><computeroutput>#define PD_TOSTRING( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><link linkend="_macros_8hpp_1af6e71c74189066ca8fc24d44500ab7a0">PD_STRINGIFY</link>(x)
 </programlisting><para>
 Definition at line <link linkend="_macros_8hpp_source_1l00039">39</link> of file <link linkend="_macros_8hpp_source">macros.hpp</link>.</para>
 </section>
@@ -149,24 +149,24 @@ Definition at line <link linkend="_macros_8hpp_source_1l00039">39</link> of file
     <title>PD_VERSION</title>
 <indexterm><primary>PD_VERSION</primary><secondary>macros.hpp</secondary></indexterm>
 <indexterm><primary>macros.hpp</primary><secondary>PD_VERSION</secondary></indexterm>
-<para><computeroutput>#define PD_VERSION&#160;&#160;&#160;((STT_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</computeroutput></para><para>
+<para><computeroutput>#define PD_VERSION&#160;&#160;&#160;((<link linkend="_macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</link>&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</computeroutput></para><para>
 Definition at line <link linkend="_macros_8hpp_source_1l00013">13</link> of file <link linkend="_macros_8hpp_source">macros.hpp</link>.</para>
 </section>
-<anchor xml:id="_macros_8hpp_1afda24ebbcf9fc1f72ed656c757e2aae3"/><section>
+<anchor xml:id="_macros_8hpp_1ade8af82e52ecf96ad437158969e295dc"/><section>
     <title>PD_VERSION_CHECK</title>
 <indexterm><primary>PD_VERSION_CHECK</primary><secondary>macros.hpp</secondary></indexterm>
 <indexterm><primary>macros.hpp</primary><secondary>PD_VERSION_CHECK</secondary></indexterm>
-<para><computeroutput>#define PD_VERSION_CHECK( STT_VERSION_MAJOR,  STT_VERSION_MINOR,  STT_VERSION_PATCH,  STT_VERSION_STATE)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;((<link linkend="_macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</link>&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE&#32;&lt;&lt;&#32;24))
+<para><computeroutput>#define PD_VERSION_CHECK( <link linkend="_macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</link>,  <link linkend="_macros_8hpp_1a3992091abfbb37fe5f384aea4dd97dea">PD_VERSION_MINOR</link>,  <link linkend="_macros_8hpp_1ab26433cc36f516c4be52b6efc9b6b91a">PD_VERSION_PATCH</link>,  <link linkend="_macros_8hpp_1a7eecb5a8be1c9f6f4b409ccda0838d71">PD_VERSION_STATE</link>)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;((<link linkend="_macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4">PD_VERSION_MAJOR</link>&lt;&lt;16)|(<link linkend="_macros_8hpp_1a3992091abfbb37fe5f384aea4dd97dea">PD_VERSION_MINOR</link>&lt;&lt;8)|(<link linkend="_macros_8hpp_1ab26433cc36f516c4be52b6efc9b6b91a">PD_VERSION_PATCH</link>)|(STT_VERSION_STATE&#32;&lt;&lt;&#32;24))
 </programlisting><para>
 Definition at line <link linkend="_macros_8hpp_source_1l00015">15</link> of file <link linkend="_macros_8hpp_source">macros.hpp</link>.</para>
-<programlisting linenumbering="unnumbered">00015 <emphasis role="preprocessor">#define&#32;PD_VERSION_CHECK(STT_VERSION_MAJOR,&#32;STT_VERSION_MINOR,&#32;STT_VERSION_PATCH,&#32;STT_VERSION_STATE)&#32;\</emphasis>
-00016 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;((PD_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE&#32;&lt;&lt;&#32;24))</emphasis>
+<programlisting linenumbering="unnumbered">00015 <emphasis role="preprocessor">#define&#32;PD_VERSION_CHECK(PD_VERSION_MAJOR,&#32;PD_VERSION_MINOR,&#32;PD_VERSION_PATCH,&#32;PD_VERSION_STATE)&#32;\</emphasis>
+00016 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;((PD_VERSION_MAJOR&lt;&lt;16)|(PD_VERSION_MINOR&lt;&lt;8)|(PD_VERSION_PATCH)|(STT_VERSION_STATE&#32;&lt;&lt;&#32;24))</emphasis>
 </programlisting></section>
 <anchor xml:id="_macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4"/><section>
     <title>PD_VERSION_MAJOR</title>
 <indexterm><primary>PD_VERSION_MAJOR</primary><secondary>macros.hpp</secondary></indexterm>
 <indexterm><primary>macros.hpp</primary><secondary>PD_VERSION_MAJOR</secondary></indexterm>
-<para><computeroutput>#define PD_VERSION_MAJOR&#160;&#160;&#160;0</computeroutput></para><para>
+<para><computeroutput>#define PD_VERSION_MAJOR&#160;&#160;&#160;1</computeroutput></para><para>
 Definition at line <link linkend="_macros_8hpp_source_1l00004">4</link> of file <link linkend="_macros_8hpp_source">macros.hpp</link>.</para>
 </section>
 <anchor xml:id="_macros_8hpp_1a3992091abfbb37fe5f384aea4dd97dea"/><section>
@@ -180,14 +180,14 @@ Definition at line <link linkend="_macros_8hpp_source_1l00005">5</link> of file 
     <title>PD_VERSION_PATCH</title>
 <indexterm><primary>PD_VERSION_PATCH</primary><secondary>macros.hpp</secondary></indexterm>
 <indexterm><primary>macros.hpp</primary><secondary>PD_VERSION_PATCH</secondary></indexterm>
-<para><computeroutput>#define PD_VERSION_PATCH&#160;&#160;&#160;1</computeroutput></para><para>
+<para><computeroutput>#define PD_VERSION_PATCH&#160;&#160;&#160;0</computeroutput></para><para>
 Definition at line <link linkend="_macros_8hpp_source_1l00006">6</link> of file <link linkend="_macros_8hpp_source">macros.hpp</link>.</para>
 </section>
 <anchor xml:id="_macros_8hpp_1a7eecb5a8be1c9f6f4b409ccda0838d71"/><section>
     <title>PD_VERSION_STATE</title>
 <indexterm><primary>PD_VERSION_STATE</primary><secondary>macros.hpp</secondary></indexterm>
 <indexterm><primary>macros.hpp</primary><secondary>PD_VERSION_STATE</secondary></indexterm>
-<para><computeroutput>#define PD_VERSION_STATE&#160;&#160;&#160;&quot;dev&quot;</computeroutput></para><para>
+<para><computeroutput>#define PD_VERSION_STATE&#160;&#160;&#160;&quot;build&quot;</computeroutput></para><para>
 Definition at line <link linkend="_macros_8hpp_source_1l00011">11</link> of file <link linkend="_macros_8hpp_source">macros.hpp</link>.</para>
 </section>
 </section>

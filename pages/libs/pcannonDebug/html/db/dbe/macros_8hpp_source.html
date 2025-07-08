@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Pcannon Debug<span id="projectnumber">&#160;0.0.1-dev</span>
+   <div id="projectname">Pcannon Debug<span id="projectnumber">&#160;1.0.0-build</span>
    </div>
    <div id="projectbrief">Simple yet powerful debug manager for C++</div>
   </td>
@@ -95,20 +95,20 @@ $(function(){initNavTree('db/dbe/macros_8hpp_source.html','../../',''); });
 <a href="../../db/dbe/macros_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Versioning</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#a225088c327cc6c7fcca809dc62e48fd4">    4</a></span><span class="preprocessor">#define PD_VERSION_MAJOR          0</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#a225088c327cc6c7fcca809dc62e48fd4">    4</a></span><span class="preprocessor">#define PD_VERSION_MAJOR          1</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#a3992091abfbb37fe5f384aea4dd97dea">    5</a></span><span class="preprocessor">#define PD_VERSION_MINOR          0</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#ab26433cc36f516c4be52b6efc9b6b91a">    6</a></span><span class="preprocessor">#define PD_VERSION_PATCH          1</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#ab26433cc36f516c4be52b6efc9b6b91a">    6</a></span><span class="preprocessor">#define PD_VERSION_PATCH          0</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// Version states:</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// dev - Develoment</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// build - Built Version</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#a7eecb5a8be1c9f6f4b409ccda0838d71">   11</a></span><span class="preprocessor">#define PD_VERSION_STATE          &quot;dev&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#a7eecb5a8be1c9f6f4b409ccda0838d71">   11</a></span><span class="preprocessor">#define PD_VERSION_STATE          &quot;build&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#ae9c30977974c137f90be933bb7ed15ad">   13</a></span><span class="preprocessor">#define PD_VERSION                ((STT_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#ae9c30977974c137f90be933bb7ed15ad">   13</a></span><span class="preprocessor">#define PD_VERSION                ((PD_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="foldopen" id="foldopen00015" data-start="" data-end="">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#afda24ebbcf9fc1f72ed656c757e2aae3">   15</a></span><span class="preprocessor">#define PD_VERSION_CHECK(STT_VERSION_MAJOR, STT_VERSION_MINOR, STT_VERSION_PATCH, STT_VERSION_STATE) \</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">    ((PD_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#ade8af82e52ecf96ad437158969e295dc">   15</a></span><span class="preprocessor">#define PD_VERSION_CHECK(PD_VERSION_MAJOR, PD_VERSION_MINOR, PD_VERSION_PATCH, PD_VERSION_STATE) \</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">    ((PD_VERSION_MAJOR&lt;&lt;16)|(PD_VERSION_MINOR&lt;&lt;8)|(PD_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</span></div>
 </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"></span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/**</span></div>
@@ -136,7 +136,7 @@ $(function(){initNavTree('db/dbe/macros_8hpp_source.html','../../',''); });
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">// Macro utils</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#af6e71c74189066ca8fc24d44500ab7a0">   38</a></span><span class="preprocessor">#define PD_STRINGIFY(x) #x</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#a90671304256f54002660963c47301253">   39</a></span><span class="preprocessor">#define PD_TOSTRING(x) STT_STRINGIFY(x)</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#a90671304256f54002660963c47301253">   39</a></span><span class="preprocessor">#define PD_TOSTRING(x) PD_STRINGIFY(x)</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#ifndef PD_DEV</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../db/dbe/macros_8hpp.html#a4e23b136a511d5454595b8e1364edf8a">   42</a></span><span class="preprocessor">#   define PD_DEV true</span></div>

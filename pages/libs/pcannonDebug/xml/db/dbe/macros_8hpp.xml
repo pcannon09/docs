@@ -102,7 +102,7 @@
       <memberdef kind="define" id="db/dbe/macros_8hpp_1a90671304256f54002660963c47301253" prot="public" static="no">
         <name>PD_TOSTRING</name>
         <param><defname>x</defname></param>
-        <initializer>STT_STRINGIFY(x)</initializer>
+        <initializer><ref refid="db/dbe/macros_8hpp_1af6e71c74189066ca8fc24d44500ab7a0" kindref="member">PD_STRINGIFY</ref>(x)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -113,7 +113,7 @@
       </memberdef>
       <memberdef kind="define" id="db/dbe/macros_8hpp_1ae9c30977974c137f90be933bb7ed15ad" prot="public" static="no">
         <name>PD_VERSION</name>
-        <initializer>((STT_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</initializer>
+        <initializer>((<ref refid="db/dbe/macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4" kindref="member">PD_VERSION_MAJOR</ref>&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -122,13 +122,13 @@
         </inbodydescription>
         <location file="inc/macros.hpp" line="13" column="9" bodyfile="inc/macros.hpp" bodystart="13" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="db/dbe/macros_8hpp_1afda24ebbcf9fc1f72ed656c757e2aae3" prot="public" static="no">
+      <memberdef kind="define" id="db/dbe/macros_8hpp_1ade8af82e52ecf96ad437158969e295dc" prot="public" static="no">
         <name>PD_VERSION_CHECK</name>
-        <param><defname>STT_VERSION_MAJOR</defname></param>
-        <param><defname>STT_VERSION_MINOR</defname></param>
-        <param><defname>STT_VERSION_PATCH</defname></param>
-        <param><defname>STT_VERSION_STATE</defname></param>
-        <initializer>    ((<ref refid="db/dbe/macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4" kindref="member">PD_VERSION_MAJOR</ref>&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE &lt;&lt; 24))</initializer>
+        <param><defname>PD_VERSION_MAJOR</defname></param>
+        <param><defname>PD_VERSION_MINOR</defname></param>
+        <param><defname>PD_VERSION_PATCH</defname></param>
+        <param><defname>PD_VERSION_STATE</defname></param>
+        <initializer>    ((<ref refid="db/dbe/macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4" kindref="member">PD_VERSION_MAJOR</ref>&lt;&lt;16)|(<ref refid="db/dbe/macros_8hpp_1a3992091abfbb37fe5f384aea4dd97dea" kindref="member">PD_VERSION_MINOR</ref>&lt;&lt;8)|(<ref refid="db/dbe/macros_8hpp_1ab26433cc36f516c4be52b6efc9b6b91a" kindref="member">PD_VERSION_PATCH</ref>)|(STT_VERSION_STATE &lt;&lt; 24))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -139,7 +139,7 @@
       </memberdef>
       <memberdef kind="define" id="db/dbe/macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4" prot="public" static="no">
         <name>PD_VERSION_MAJOR</name>
-        <initializer>0</initializer>
+        <initializer>1</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -161,7 +161,7 @@
       </memberdef>
       <memberdef kind="define" id="db/dbe/macros_8hpp_1ab26433cc36f516c4be52b6efc9b6b91a" prot="public" static="no">
         <name>PD_VERSION_PATCH</name>
-        <initializer>1</initializer>
+        <initializer>0</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -172,7 +172,7 @@
       </memberdef>
       <memberdef kind="define" id="db/dbe/macros_8hpp_1a7eecb5a8be1c9f6f4b409ccda0838d71" prot="public" static="no">
         <name>PD_VERSION_STATE</name>
-        <initializer>&quot;dev&quot;</initializer>
+        <initializer>&quot;build&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -190,19 +190,19 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Versioning</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4" refid="db/dbe/macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_VERSION_MAJOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="db/dbe/macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_VERSION_MAJOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5" refid="db/dbe/macros_8hpp_1a3992091abfbb37fe5f384aea4dd97dea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_VERSION_MINOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6" refid="db/dbe/macros_8hpp_1ab26433cc36f516c4be52b6efc9b6b91a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_VERSION_PATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="db/dbe/macros_8hpp_1ab26433cc36f516c4be52b6efc9b6b91a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_VERSION_PATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>states:</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>dev<sp/>-<sp/>Develoment</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>build<sp/>-<sp/>Built<sp/>Version</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="db/dbe/macros_8hpp_1a7eecb5a8be1c9f6f4b409ccda0838d71" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_VERSION_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;dev&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="db/dbe/macros_8hpp_1a7eecb5a8be1c9f6f4b409ccda0838d71" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_VERSION_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;build&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="db/dbe/macros_8hpp_1ae9c30977974c137f90be933bb7ed15ad" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((STT_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="db/dbe/macros_8hpp_1ae9c30977974c137f90be933bb7ed15ad" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((PD_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15" refid="db/dbe/macros_8hpp_1afda24ebbcf9fc1f72ed656c757e2aae3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_VERSION_CHECK(STT_VERSION_MAJOR,<sp/>STT_VERSION_MINOR,<sp/>STT_VERSION_PATCH,<sp/>STT_VERSION_STATE)<sp/>\</highlight></codeline>
-<codeline lineno="16"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((PD_VERSION_MAJOR&lt;&lt;16)|(STT_VERSION_MINOR&lt;&lt;8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="db/dbe/macros_8hpp_1ade8af82e52ecf96ad437158969e295dc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_VERSION_CHECK(PD_VERSION_MAJOR,<sp/>PD_VERSION_MINOR,<sp/>PD_VERSION_PATCH,<sp/>PD_VERSION_STATE)<sp/>\</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((PD_VERSION_MAJOR&lt;&lt;16)|(PD_VERSION_MINOR&lt;&lt;8)|(PD_VERSION_PATCH)|(STT_VERSION_STATE<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="18"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="19"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Debug<sp/>log<sp/>with<sp/>file<sp/>and<sp/>line<sp/>output<sp/>capabilities<sp/>using<sp/>pd::Debug<sp/>for<sp/>debugging</highlight></codeline>
@@ -225,7 +225,7 @@
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Macro<sp/>utils</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38" refid="db/dbe/macros_8hpp_1af6e71c74189066ca8fc24d44500ab7a0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_STRINGIFY(x)<sp/>#x</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="db/dbe/macros_8hpp_1a90671304256f54002660963c47301253" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_TOSTRING(x)<sp/>STT_STRINGIFY(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="db/dbe/macros_8hpp_1a90671304256f54002660963c47301253" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PD_TOSTRING(x)<sp/>PD_STRINGIFY(x)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PD_DEV</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="42" refid="db/dbe/macros_8hpp_1a4e23b136a511d5454595b8e1364edf8a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>PD_DEV<sp/>true</highlight><highlight class="normal"></highlight></codeline>

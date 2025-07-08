@@ -13,17 +13,17 @@
 \item 
 \#define \mbox{\hyperlink{macros_8hpp_a90671304256f54002660963c47301253}{PD\+\_\+\+TOSTRING}}(x)
 \item 
-\#define \mbox{\hyperlink{macros_8hpp_ae9c30977974c137f90be933bb7ed15ad}{PD\+\_\+\+VERSION}}~((STT\+\_\+\+VERSION\+\_\+\+MAJOR$<$$<$16)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+MINOR$<$$<$8)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+PATCH)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+STATE $<$$<$ 24))
+\#define \mbox{\hyperlink{macros_8hpp_ae9c30977974c137f90be933bb7ed15ad}{PD\+\_\+\+VERSION}}~((\mbox{\hyperlink{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}{PD\+\_\+\+VERSION\+\_\+\+MAJOR}}$<$$<$16)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+MINOR$<$$<$8)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+PATCH)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+STATE $<$$<$ 24))
 \item 
-\#define \mbox{\hyperlink{macros_8hpp_afda24ebbcf9fc1f72ed656c757e2aae3}{PD\+\_\+\+VERSION\+\_\+\+CHECK}}(STT\+\_\+\+VERSION\+\_\+\+MAJOR,  STT\+\_\+\+VERSION\+\_\+\+MINOR,  STT\+\_\+\+VERSION\+\_\+\+PATCH,  STT\+\_\+\+VERSION\+\_\+\+STATE)
+\#define \mbox{\hyperlink{macros_8hpp_ade8af82e52ecf96ad437158969e295dc}{PD\+\_\+\+VERSION\+\_\+\+CHECK}}(\mbox{\hyperlink{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}{PD\+\_\+\+VERSION\+\_\+\+MAJOR}},  \mbox{\hyperlink{macros_8hpp_a3992091abfbb37fe5f384aea4dd97dea}{PD\+\_\+\+VERSION\+\_\+\+MINOR}},  \mbox{\hyperlink{macros_8hpp_ab26433cc36f516c4be52b6efc9b6b91a}{PD\+\_\+\+VERSION\+\_\+\+PATCH}},  \mbox{\hyperlink{macros_8hpp_a7eecb5a8be1c9f6f4b409ccda0838d71}{PD\+\_\+\+VERSION\+\_\+\+STATE}})
 \item 
-\#define \mbox{\hyperlink{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}{PD\+\_\+\+VERSION\+\_\+\+MAJOR}}~0
+\#define \mbox{\hyperlink{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}{PD\+\_\+\+VERSION\+\_\+\+MAJOR}}~1
 \item 
 \#define \mbox{\hyperlink{macros_8hpp_a3992091abfbb37fe5f384aea4dd97dea}{PD\+\_\+\+VERSION\+\_\+\+MINOR}}~0
 \item 
-\#define \mbox{\hyperlink{macros_8hpp_ab26433cc36f516c4be52b6efc9b6b91a}{PD\+\_\+\+VERSION\+\_\+\+PATCH}}~1
+\#define \mbox{\hyperlink{macros_8hpp_ab26433cc36f516c4be52b6efc9b6b91a}{PD\+\_\+\+VERSION\+\_\+\+PATCH}}~0
 \item 
-\#define \mbox{\hyperlink{macros_8hpp_a7eecb5a8be1c9f6f4b409ccda0838d71}{PD\+\_\+\+VERSION\+\_\+\+STATE}}~"{}dev"{}
+\#define \mbox{\hyperlink{macros_8hpp_a7eecb5a8be1c9f6f4b409ccda0838d71}{PD\+\_\+\+VERSION\+\_\+\+STATE}}~"{}build"{}
 \end{DoxyCompactItemize}
 
 
@@ -129,7 +129,7 @@ Definition at line \mbox{\hyperlink{macros_8hpp_source_l00038}{38}} of file \mbo
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{STT\_STRINGIFY(x)}
+\DoxyCodeLine{\mbox{\hyperlink{macros_8hpp_af6e71c74189066ca8fc24d44500ab7a0}{PD\_STRINGIFY}}(x)}
 
 \end{DoxyCode}
 
@@ -140,21 +140,21 @@ Definition at line \mbox{\hyperlink{macros_8hpp_source_l00039}{39}} of file \mbo
 \index{PD\_VERSION@{PD\_VERSION}!macros.hpp@{macros.hpp}}
 \doxysubsubsection{\texorpdfstring{PD\_VERSION}{PD\_VERSION}}
 {\footnotesize\ttfamily \label{macros_8hpp_ae9c30977974c137f90be933bb7ed15ad} 
-\#define PD\+\_\+\+VERSION~((STT\+\_\+\+VERSION\+\_\+\+MAJOR$<$$<$16)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+MINOR$<$$<$8)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+PATCH)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+STATE $<$$<$ 24))}
+\#define PD\+\_\+\+VERSION~((\mbox{\hyperlink{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}{PD\+\_\+\+VERSION\+\_\+\+MAJOR}}$<$$<$16)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+MINOR$<$$<$8)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+PATCH)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+STATE $<$$<$ 24))}
 
 
 
 Definition at line \mbox{\hyperlink{macros_8hpp_source_l00013}{13}} of file \mbox{\hyperlink{macros_8hpp_source}{macros.\+hpp}}.
 
-\Hypertarget{macros_8hpp_afda24ebbcf9fc1f72ed656c757e2aae3}\index{macros.hpp@{macros.hpp}!PD\_VERSION\_CHECK@{PD\_VERSION\_CHECK}}
+\Hypertarget{macros_8hpp_ade8af82e52ecf96ad437158969e295dc}\index{macros.hpp@{macros.hpp}!PD\_VERSION\_CHECK@{PD\_VERSION\_CHECK}}
 \index{PD\_VERSION\_CHECK@{PD\_VERSION\_CHECK}!macros.hpp@{macros.hpp}}
 \doxysubsubsection{\texorpdfstring{PD\_VERSION\_CHECK}{PD\_VERSION\_CHECK}}
-{\footnotesize\ttfamily \label{macros_8hpp_afda24ebbcf9fc1f72ed656c757e2aae3} 
-\#define PD\+\_\+\+VERSION\+\_\+\+CHECK(\begin{DoxyParamCaption}\item[{}]{STT\+\_\+\+VERSION\+\_\+\+MAJOR}{, }\item[{}]{STT\+\_\+\+VERSION\+\_\+\+MINOR}{, }\item[{}]{STT\+\_\+\+VERSION\+\_\+\+PATCH}{, }\item[{}]{STT\+\_\+\+VERSION\+\_\+\+STATE}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{macros_8hpp_ade8af82e52ecf96ad437158969e295dc} 
+\#define PD\+\_\+\+VERSION\+\_\+\+CHECK(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}{PD\+\_\+\+VERSION\+\_\+\+MAJOR}}}{, }\item[{}]{\mbox{\hyperlink{macros_8hpp_a3992091abfbb37fe5f384aea4dd97dea}{PD\+\_\+\+VERSION\+\_\+\+MINOR}}}{, }\item[{}]{\mbox{\hyperlink{macros_8hpp_ab26433cc36f516c4be52b6efc9b6b91a}{PD\+\_\+\+VERSION\+\_\+\+PATCH}}}{, }\item[{}]{\mbox{\hyperlink{macros_8hpp_a7eecb5a8be1c9f6f4b409ccda0838d71}{PD\+\_\+\+VERSION\+\_\+\+STATE}}}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\ \ \ \ ((\mbox{\hyperlink{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}{PD\_VERSION\_MAJOR}}<<16)|(STT\_VERSION\_MINOR<<8)|(STT\_VERSION\_PATCH)|(STT\_VERSION\_STATE\ <<\ 24))}
+\DoxyCodeLine{\ \ \ \ ((\mbox{\hyperlink{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}{PD\_VERSION\_MAJOR}}<<16)|(\mbox{\hyperlink{macros_8hpp_a3992091abfbb37fe5f384aea4dd97dea}{PD\_VERSION\_MINOR}}<<8)|(\mbox{\hyperlink{macros_8hpp_ab26433cc36f516c4be52b6efc9b6b91a}{PD\_VERSION\_PATCH}})|(STT\_VERSION\_STATE\ <<\ 24))}
 
 \end{DoxyCode}
 
@@ -163,15 +163,15 @@ Definition at line \mbox{\hyperlink{macros_8hpp_source_l00015}{15}} of file \mbo
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ PD\_VERSION\_CHECK(STT\_VERSION\_MAJOR,\ STT\_VERSION\_MINOR,\ STT\_VERSION\_PATCH,\ STT\_VERSION\_STATE)\ \(\backslash\)}}
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\ \ \ \ ((PD\_VERSION\_MAJOR<<16)|(STT\_VERSION\_MINOR<<8)|(STT\_VERSION\_PATCH)|(STT\_VERSION\_STATE\ <<\ 24))}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ PD\_VERSION\_CHECK(PD\_VERSION\_MAJOR,\ PD\_VERSION\_MINOR,\ PD\_VERSION\_PATCH,\ PD\_VERSION\_STATE)\ \(\backslash\)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\ \ \ \ ((PD\_VERSION\_MAJOR<<16)|(PD\_VERSION\_MINOR<<8)|(PD\_VERSION\_PATCH)|(STT\_VERSION\_STATE\ <<\ 24))}}
 
 \end{DoxyCode}
 \Hypertarget{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}\index{macros.hpp@{macros.hpp}!PD\_VERSION\_MAJOR@{PD\_VERSION\_MAJOR}}
 \index{PD\_VERSION\_MAJOR@{PD\_VERSION\_MAJOR}!macros.hpp@{macros.hpp}}
 \doxysubsubsection{\texorpdfstring{PD\_VERSION\_MAJOR}{PD\_VERSION\_MAJOR}}
 {\footnotesize\ttfamily \label{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4} 
-\#define PD\+\_\+\+VERSION\+\_\+\+MAJOR~0}
+\#define PD\+\_\+\+VERSION\+\_\+\+MAJOR~1}
 
 
 
@@ -191,7 +191,7 @@ Definition at line \mbox{\hyperlink{macros_8hpp_source_l00005}{5}} of file \mbox
 \index{PD\_VERSION\_PATCH@{PD\_VERSION\_PATCH}!macros.hpp@{macros.hpp}}
 \doxysubsubsection{\texorpdfstring{PD\_VERSION\_PATCH}{PD\_VERSION\_PATCH}}
 {\footnotesize\ttfamily \label{macros_8hpp_ab26433cc36f516c4be52b6efc9b6b91a} 
-\#define PD\+\_\+\+VERSION\+\_\+\+PATCH~1}
+\#define PD\+\_\+\+VERSION\+\_\+\+PATCH~0}
 
 
 
@@ -201,7 +201,7 @@ Definition at line \mbox{\hyperlink{macros_8hpp_source_l00006}{6}} of file \mbox
 \index{PD\_VERSION\_STATE@{PD\_VERSION\_STATE}!macros.hpp@{macros.hpp}}
 \doxysubsubsection{\texorpdfstring{PD\_VERSION\_STATE}{PD\_VERSION\_STATE}}
 {\footnotesize\ttfamily \label{macros_8hpp_a7eecb5a8be1c9f6f4b409ccda0838d71} 
-\#define PD\+\_\+\+VERSION\+\_\+\+STATE~"{}dev"{}}
+\#define PD\+\_\+\+VERSION\+\_\+\+STATE~"{}build"{}}
 
 
 
