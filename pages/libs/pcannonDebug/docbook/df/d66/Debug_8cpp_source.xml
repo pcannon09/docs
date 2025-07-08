@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Debug_8cpp_source" xml:lang="en-US">
+<title>Debug.cpp</title>
+<indexterm><primary>src/Debug.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_Debug_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&lt;algorithm&gt;</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00004"/>00004 
+<anchor xml:id="_Debug_8cpp_source_1l00005"/>00005 <emphasis role="preprocessor">#ifndef&#32;__PD_NO_FULL_SUPPORT</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#&#32;&#32;&#32;include&#32;&lt;filesystem&gt;</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00007"/>00007 
+<anchor xml:id="_Debug_8cpp_source_1l00008"/>00008 <emphasis role="keyword">namespace&#32;</emphasis>fs&#32;=&#32;std::filesystem;
+<anchor xml:id="_Debug_8cpp_source_1l00009"/>00009 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00010"/>00010 
+<anchor xml:id="_Debug_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Debug_8hpp">../inc/Debug.hpp</link>&quot;</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&quot;../vendor/cpp-time-utils/inc/Time.hpp&quot;</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00013"/>00013 
+<anchor xml:id="_Debug_8cpp_source_1l00014"/>00014 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacepd">pd</link>
+<anchor xml:id="_Debug_8cpp_source_1l00015"/>00015 {
+<anchor xml:id="_Debug_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PRIVATE&#32;//</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00017"/><link linkend="_classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5">00017</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5">Debug::__init</link>()
+<anchor xml:id="_Debug_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.filePath.empty())
+<anchor xml:id="_Debug_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;std::fstream(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.filePath,&#32;this-&gt;settings.openMode);
+<anchor xml:id="_Debug_8cpp_source_1l00022"/>00022 
+<anchor xml:id="_Debug_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>-&gt;is_open())
+<anchor xml:id="_Debug_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e">constructError</link>&#32;=&#32;<emphasis role="stringliteral">&quot;File&#32;could&#32;not&#32;open&#32;:&#32;&quot;</emphasis>&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8">id</link>;
+<anchor xml:id="_Debug_8cpp_source_1l00026"/>00026 
+<anchor xml:id="_Debug_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_Debug_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00029"/>00029 
+<anchor xml:id="_Debug_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>-&gt;good())
+<anchor xml:id="_Debug_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e">constructError</link>&#32;=&#32;<emphasis role="stringliteral">&quot;File&#32;is&#32;not&#32;good&#32;for&#32;opening&#32;:&#32;&quot;</emphasis>&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8">id</link>;
+<anchor xml:id="_Debug_8cpp_source_1l00033"/>00033 
+<anchor xml:id="_Debug_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_Debug_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00037"/>00037 
+<anchor xml:id="_Debug_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_Debug_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;
+<anchor xml:id="_Debug_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PUBLIC&#32;//</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00042"/><link linkend="_classpd_1_1Debug_1ad8a640f5b1bb6242016a3bf04d290d3c">00042</link> &#32;&#32;&#32;&#32;<link linkend="_classpd_1_1Debug_1ad8a640f5b1bb6242016a3bf04d290d3c">Debug::Debug</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;_id,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structpd_1_1DebugSettings">pd::DebugSettings</link>&#32;&amp;_settings)
+<anchor xml:id="_Debug_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<link linkend="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8">id</link>(_id),&#32;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>(_settings)
+<anchor xml:id="_Debug_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce">constructed</link>&#32;=&#32;this-&gt;<link linkend="_classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5">__init</link>();
+<anchor xml:id="_Debug_8cpp_source_1l00046"/>00046 
+<anchor xml:id="_Debug_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!this-&gt;<link linkend="_classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce">constructed</link>)
+<anchor xml:id="_Debug_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_Debug_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00050"/>00050 
+<anchor xml:id="_Debug_8cpp_source_1l00051"/><link linkend="_classpd_1_1Debug_1a4e506dd26f26d938bf745bf12ac7e1f4">00051</link> &#32;&#32;&#32;&#32;<link linkend="_classpd_1_1Debug_1a4e506dd26f26d938bf745bf12ac7e1f4">Debug::~Debug</link>()
+<anchor xml:id="_Debug_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf">close</link>();
+<anchor xml:id="_Debug_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00055"/>00055 
+<anchor xml:id="_Debug_8cpp_source_1l00056"/><link linkend="_classpd_1_1Debug_1a55e0965bbf467542ee27f67d2ba095e6">00056</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classpd_1_1Debug_1a55e0965bbf467542ee27f67d2ba095e6">Debug::log</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;_type,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;_msg,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;_level)
+<anchor xml:id="_Debug_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;msg;
+<anchor xml:id="_Debug_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;type&#32;=&#32;_type;
+<anchor xml:id="_Debug_8cpp_source_1l00060"/>00060 
+<anchor xml:id="_Debug_8cpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::transform(type.begin(),&#32;type.end(),&#32;type.begin(),&#32;::toupper);
+<anchor xml:id="_Debug_8cpp_source_1l00062"/>00062 
+<anchor xml:id="_Debug_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;msg&#32;+=&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.preStartMsg;
+<anchor xml:id="_Debug_8cpp_source_1l00064"/>00064 
+<anchor xml:id="_Debug_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.custom)
+<anchor xml:id="_Debug_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;msg&#32;+=&#32;<emphasis role="stringliteral">&quot;[&#32;&quot;</emphasis>&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.startMsg&#32;+&#32;type&#32;+&#32;(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.debugID&#32;?&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;|&#32;&quot;</emphasis>&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8">id</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="_Debug_8cpp_source_1l00068"/>00068 
+<anchor xml:id="_Debug_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;DATE&#32;AND&#32;TIME&#32;INFORMATION</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.timeStamp)
+<anchor xml:id="_Debug_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timeUtils::TimeInfo&#32;timeInfo;
+<anchor xml:id="_Debug_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timeUtils::DateInfo&#32;dateInfo;
+<anchor xml:id="_Debug_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timeUtils::Time&#32;time(<emphasis role="stringliteral">&quot;debug-time&quot;</emphasis>);
+<anchor xml:id="_Debug_8cpp_source_1l00075"/>00075 
+<anchor xml:id="_Debug_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time.update(timeInfo);
+<anchor xml:id="_Debug_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time.update(dateInfo);
+<anchor xml:id="_Debug_8cpp_source_1l00078"/>00078 
+<anchor xml:id="_Debug_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;msg&#32;+=&#32;<emphasis role="stringliteral">&quot;&#32;|&#32;&quot;</emphasis>&#32;+&#32;std::to_string(dateInfo.year)&#32;+&#32;<emphasis role="stringliteral">&quot;-&quot;</emphasis>&#32;+&#32;std::to_string(dateInfo.month)&#32;+&#32;<emphasis role="stringliteral">&quot;-&quot;</emphasis>&#32;+&#32;std::to_string(dateInfo.day)&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;|&#32;&quot;</emphasis>;
+<anchor xml:id="_Debug_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;msg&#32;+=&#32;std::to_string(timeInfo.hour)&#32;+&#32;<emphasis role="stringliteral">&quot;:&quot;</emphasis>&#32;+&#32;std::to_string(timeInfo.min)&#32;+&#32;<emphasis role="stringliteral">&quot;:&quot;</emphasis>&#32;+&#32;std::to_string(timeInfo.sec)&#32;+&#32;<emphasis role="stringliteral">&quot;.&quot;</emphasis>&#32;+&#32;std::to_string(timeInfo.ms)
+<anchor xml:id="_Debug_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.timeZone&#32;?&#32;<emphasis role="stringliteral">&quot;&#32;+&quot;</emphasis>&#32;+&#32;std::to_string(time.getUTCOffset().hour)&#32;+&#32;<emphasis role="stringliteral">&quot;:&quot;</emphasis>&#32;+&#32;std::to_string(time.getUTCOffset().min)&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="_Debug_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00083"/>00083 
+<anchor xml:id="_Debug_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;msg&#32;+=&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>;
+<anchor xml:id="_Debug_8cpp_source_1l00085"/>00085 
+<anchor xml:id="_Debug_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;FINISG&#32;MSG</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00088"/>00088 
+<anchor xml:id="_Debug_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;msg&#32;=&#32;<emphasis role="stringliteral">&quot;[&#32;&quot;</emphasis>&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.startMsg&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.totalCustom;
+<anchor xml:id="_Debug_8cpp_source_1l00090"/>00090 
+<anchor xml:id="_Debug_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;msg&#32;+=&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.endMsg&#32;+&#32;<emphasis role="stringliteral">&quot;]&#32;&quot;</emphasis>&#32;+&#32;(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.postEndMsg)&#32;+&#32;_msg&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.totalEndMsg&#32;+&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+<anchor xml:id="_Debug_8cpp_source_1l00092"/>00092 
+<anchor xml:id="_Debug_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.output)
+<anchor xml:id="_Debug_8cpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((!this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.logLevelIgnoreOutput&#32;&amp;&amp;&#32;this-&gt;settings.logLevel&#32;==&#32;0)&#32;||&#32;
+<anchor xml:id="_Debug_8cpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(this-&gt;settings.logLevel&#32;&gt;&#32;0&#32;&amp;&amp;&#32;_level&#32;&lt;=&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.logLevel))
+<anchor xml:id="_Debug_8cpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;msg;
+<anchor xml:id="_Debug_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00101"/>00101 
+<anchor xml:id="_Debug_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.blockedSave)
+<anchor xml:id="_Debug_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((!this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.logLevelIgnoreSave&#32;&amp;&amp;&#32;this-&gt;settings.logLevel&#32;==&#32;0)&#32;||&#32;
+<anchor xml:id="_Debug_8cpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(this-&gt;settings.logLevel&#32;&gt;&#32;0&#32;&amp;&amp;&#32;_level&#32;&lt;=&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.logLevel))
+<anchor xml:id="_Debug_8cpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00107"/>00107 <emphasis role="preprocessor">#&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifndef&#32;__PD_NO_FULL_SUPPORT</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!fs::exists(fs::path(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.filePath).parent_path()))
+<anchor xml:id="_Debug_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fs::create_directories(fs::path(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.filePath).parent_path());
+<anchor xml:id="_Debug_8cpp_source_1l00111"/>00111 
+<anchor xml:id="_Debug_8cpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>-&gt;close();&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>-&gt;open(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.filePath,&#32;this-&gt;settings.openMode);
+<anchor xml:id="_Debug_8cpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00114"/>00114 <emphasis role="preprocessor">#&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;endif</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00115"/>00115 
+<anchor xml:id="_Debug_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>&#32;&lt;&lt;&#32;msg;
+<anchor xml:id="_Debug_8cpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00119"/>00119 
+<anchor xml:id="_Debug_8cpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;msg;
+<anchor xml:id="_Debug_8cpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00122"/>00122 
+<anchor xml:id="_Debug_8cpp_source_1l00123"/><link linkend="_classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf">00123</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf">Debug::close</link>()
+<anchor xml:id="_Debug_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>)
+<anchor xml:id="_Debug_8cpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>-&gt;close();
+<anchor xml:id="_Debug_8cpp_source_1l00128"/>00128 
+<anchor xml:id="_Debug_8cpp_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+<anchor xml:id="_Debug_8cpp_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00131"/>00131 
+<anchor xml:id="_Debug_8cpp_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_Debug_8cpp_source_1l00133"/>00133 
+<anchor xml:id="_Debug_8cpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_Debug_8cpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00136"/>00136 
+<anchor xml:id="_Debug_8cpp_source_1l00137"/><link linkend="_classpd_1_1Debug_1afa07c50eb146c275fb99dcd88d0d1152">00137</link> &#32;&#32;&#32;&#32;std::pair&lt;bool,&#32;std::string&gt;&#32;<link linkend="_classpd_1_1Debug_1afa07c50eb146c275fb99dcd88d0d1152">Debug::constructInfo</link>()
+<anchor xml:id="_Debug_8cpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;{&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce">constructed</link>,&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e">constructError</link>&#32;};&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00139"/>00139 
+<anchor xml:id="_Debug_8cpp_source_1l00140"/><link linkend="_classpd_1_1Debug_1a50af1feba88c371367768f889eb59ea1">00140</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classpd_1_1Debug_1a50af1feba88c371367768f889eb59ea1">Debug::getID</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00141"/>00141 <emphasis role="keyword">&#32;&#32;&#32;&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8">id</link>;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00142"/>00142 
+<anchor xml:id="_Debug_8cpp_source_1l00143"/><link linkend="_classpd_1_1Debug_1a25b5382d4942f7d014daa9ec09542e36">00143</link> &#32;&#32;&#32;&#32;std::fstream&#32;*<link linkend="_classpd_1_1Debug_1a25b5382d4942f7d014daa9ec09542e36">Debug::getFile</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00144"/>00144 <emphasis role="keyword">&#32;&#32;&#32;&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00145"/>00145 
+<anchor xml:id="_Debug_8cpp_source_1l00146"/><link linkend="_classpd_1_1Debug_1a2a93ad45e778e3e6e244012cdd386632">00146</link> &#32;&#32;&#32;&#32;<link linkend="_structpd_1_1DebugSettings">DebugSettings</link>&#32;<link linkend="_classpd_1_1Debug_1a2a93ad45e778e3e6e244012cdd386632">Debug::getSettings</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_Debug_8cpp_source_1l00147"/>00147 <emphasis role="keyword">&#32;&#32;&#32;&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>;&#32;}
+<anchor xml:id="_Debug_8cpp_source_1l00148"/>00148 }
+<anchor xml:id="_Debug_8cpp_source_1l00149"/>00149 
+</programlisting></section>

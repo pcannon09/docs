@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepd" xml:lang="en-US">
+<title>pd Namespace Reference</title>
+<indexterm><primary>pd</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classpd_1_1Debug">Debug</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structpd_1_1DebugSettings">DebugSettings</link></para>
+
+<para>Set debug settings struct with set values, default are already set for the best output. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct pd::DebugSettings <link linkend="_namespacepd_1ab7e116cbfd35c800f801115b90e7ebf4">DebugSettings</link></para>
+
+<para>Set debug settings struct with set values, default are already set for the best output. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_namespacepd_1ab7e116cbfd35c800f801115b90e7ebf4"/><section>
+    <title>DebugSettings</title>
+<indexterm><primary>DebugSettings</primary><secondary>pd</secondary></indexterm>
+<indexterm><primary>pd</primary><secondary>DebugSettings</secondary></indexterm>
+<para><computeroutput>typedef struct pd::DebugSettings pd::DebugSettings</computeroutput></para><para>
+
+<para>Set debug settings struct with set values, default are already set for the best output. </para>
+</para>
+</section>
+</section>
+</section>

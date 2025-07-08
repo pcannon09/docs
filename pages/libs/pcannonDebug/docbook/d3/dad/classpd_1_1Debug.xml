@@ -1,0 +1,464 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classpd_1_1Debug" xml:lang="en-US">
+<title>pd::Debug Class Reference</title>
+<indexterm><primary>pd::Debug</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Debug.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classpd_1_1Debug_1ad8a640f5b1bb6242016a3bf04d290d3c">Debug</link> (const std::string &amp;_id, const <link linkend="_structpd_1_1DebugSettings">pd::DebugSettings</link> &amp;_settings)</para>
+
+<para>Construct the debugger with specified ID and settings Call the inner <computeroutput><link linkend="_classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5">__init()</link></computeroutput> function to Initialize. </para>
+</listitem>
+            <listitem><para><link linkend="_classpd_1_1Debug_1a4e506dd26f26d938bf745bf12ac7e1f4">~Debug</link> ()</para>
+
+<para>Call the <computeroutput><link linkend="_classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf">pd::Debug::close()</link></computeroutput> function to free all allocated memory. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf">close</link> ()</para>
+
+<para>Free all the allocated memory and resources, return true if it succeeded, return false if it did not. </para>
+</listitem>
+            <listitem><para>std::pair&lt; bool, std::string &gt; <link linkend="_classpd_1_1Debug_1afa07c50eb146c275fb99dcd88d0d1152">constructInfo</link> ()</para>
+
+<para>Construct debug information You can use it if it failed to construct properly to get the error message. </para>
+</listitem>
+            <listitem><para>std::fstream * <link linkend="_classpd_1_1Debug_1a25b5382d4942f7d014daa9ec09542e36">getFile</link> () const</para>
+
+<para>Get file for more control over the processing and for more actions. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classpd_1_1Debug_1a50af1feba88c371367768f889eb59ea1">getID</link> () const</para>
+
+<para>Return the ID of the created <link linkend="_classpd_1_1Debug">Debug</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="_structpd_1_1DebugSettings">DebugSettings</link> <link linkend="_classpd_1_1Debug_1a2a93ad45e778e3e6e244012cdd386632">getSettings</link> () const</para>
+
+<para>Get the settings set for the created <link linkend="_classpd_1_1Debug">Debug</link> object. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classpd_1_1Debug_1a55e0965bbf467542ee27f67d2ba095e6">log</link> (const std::string &amp;_type, const std::string &amp;_msg, unsigned int _level=0)</para>
+
+<para>Log the message with specific custom type, message and log level. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5">__init</link> ()</para>
+
+<para>Initialize the <link linkend="_classpd_1_1Debug">Debug</link> object that is going (or was) to be constructed. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce">constructed</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e">constructError</link></para>
+</listitem>
+            <listitem><para>std::fstream * <link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8">id</link></para>
+</listitem>
+            <listitem><para>const <link linkend="_structpd_1_1DebugSettings">DebugSettings</link> <link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_Debug_8hpp_source_1l00045">45</link> of file <link linkend="_Debug_8hpp_source">Debug.hpp</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classpd_1_1Debug_1ad8a640f5b1bb6242016a3bf04d290d3c"/><section>
+    <title>Debug()</title>
+<indexterm><primary>Debug</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>Debug</secondary></indexterm>
+<para><computeroutput>pd::Debug::Debug (const std::string &amp; _id, const <link linkend="_structpd_1_1DebugSettings">pd::DebugSettings</link> &amp; _settings)</computeroutput></para><para>
+
+<para>Construct the debugger with specified ID and settings Call the inner <computeroutput><link linkend="_classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5">__init()</link></computeroutput> function to Initialize. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_id</entry><entry>
+<para>Set the ID of this object </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_settings</entry><entry>
+<para>Set the settings of this object </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_Debug_8cpp_source_1l00042">42</link> of file <link linkend="_Debug_8cpp_source">Debug.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<link linkend="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8">id</link>(_id),&#32;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>(_settings)
+00044 &#32;&#32;&#32;&#32;{
+00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce">constructed</link>&#32;=&#32;this-&gt;<link linkend="_classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5">__init</link>();
+00046 
+00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!this-&gt;<link linkend="_classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce">constructed</link>)
+00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+00049 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_Debug_8cpp_source_1l00017">__init()</link>, <link linkend="_Debug_8hpp_source_1l00054">constructed</link>, <link linkend="_Debug_8hpp_source_1l00048">id</link>, and <link linkend="_Debug_8hpp_source_1l00052">settings</link>.</para>
+</section>
+<anchor xml:id="_classpd_1_1Debug_1a4e506dd26f26d938bf745bf12ac7e1f4"/><section>
+    <title>~Debug()</title>
+<indexterm><primary>~Debug</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>~Debug</secondary></indexterm>
+<para><computeroutput>pd::Debug::~Debug ( )</computeroutput></para><para>
+
+<para>Call the <computeroutput><link linkend="_classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf">pd::Debug::close()</link></computeroutput> function to free all allocated memory. </para>
+</para>
+<para>
+Definition at line <link linkend="_Debug_8cpp_source_1l00051">51</link> of file <link linkend="_Debug_8cpp_source">Debug.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00052 &#32;&#32;&#32;&#32;{
+00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf">close</link>();
+00054 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_Debug_8cpp_source_1l00123">close()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5"/><section>
+    <title>__init()</title>
+<indexterm><primary>__init</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>__init</secondary></indexterm>
+<para><computeroutput>bool pd::Debug::__init ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Initialize the <link linkend="_classpd_1_1Debug">Debug</link> object that is going (or was) to be constructed. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>bool Did it fail? True = Success, False = Failiture </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Debug_8cpp_source_1l00017">17</link> of file <link linkend="_Debug_8cpp_source">Debug.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00018 &#32;&#32;&#32;&#32;{
+00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.filePath.empty())
+00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;std::fstream(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.filePath,&#32;this-&gt;settings.openMode);
+00022 
+00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>-&gt;is_open())
+00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e">constructError</link>&#32;=&#32;<emphasis role="stringliteral">&quot;File&#32;could&#32;not&#32;open&#32;:&#32;&quot;</emphasis>&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8">id</link>;
+00026 
+00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00029 
+00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>-&gt;good())
+00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e">constructError</link>&#32;=&#32;<emphasis role="stringliteral">&quot;File&#32;is&#32;not&#32;good&#32;for&#32;opening&#32;:&#32;&quot;</emphasis>&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8">id</link>;
+00033 
+00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00037 
+00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+00039 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_Debug_8hpp_source_1l00055">constructError</link>, <link linkend="_Debug_8hpp_source_1l00050">file</link>, <link linkend="_Debug_8hpp_source_1l00048">id</link>, and <link linkend="_Debug_8hpp_source_1l00052">settings</link>.</para>
+<para>
+Referenced by <link linkend="_Debug_8cpp_source_1l00042">Debug()</link>.</para>
+</section>
+<anchor xml:id="_classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf"/><section>
+    <title>close()</title>
+<indexterm><primary>close</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>close</secondary></indexterm>
+<para><computeroutput>bool pd::Debug::close ( )</computeroutput></para><para>
+
+<para>Free all the allocated memory and resources, return true if it succeeded, return false if it did not. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>bool True if success, false if failiture </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Debug_8cpp_source_1l00123">123</link> of file <link linkend="_Debug_8cpp_source">Debug.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00124 &#32;&#32;&#32;&#32;{
+00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>)
+00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>-&gt;close();
+00128 
+00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00131 
+00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+00133 
+00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+00135 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_Debug_8hpp_source_1l00050">file</link>.</para>
+<para>
+Referenced by <link linkend="_Debug_8cpp_source_1l00051">~Debug()</link>.</para>
+</section>
+<anchor xml:id="_classpd_1_1Debug_1afa07c50eb146c275fb99dcd88d0d1152"/><section>
+    <title>constructInfo()</title>
+<indexterm><primary>constructInfo</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>constructInfo</secondary></indexterm>
+<para><computeroutput>std::pair&lt; bool, std::string &gt; pd::Debug::constructInfo ( )</computeroutput></para><para>
+
+<para>Construct debug information You can use it if it failed to construct properly to get the error message. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>std::pair&lt;bool, std::string&gt; .first: Did it succeed? .second: Error reason </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Debug_8cpp_source_1l00137">137</link> of file <link linkend="_Debug_8cpp_source">Debug.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00138 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;{&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce">constructed</link>,&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e">constructError</link>&#32;};&#32;}
+</programlisting><para>
+References <link linkend="_Debug_8hpp_source_1l00054">constructed</link>, and <link linkend="_Debug_8hpp_source_1l00055">constructError</link>.</para>
+</section>
+<anchor xml:id="_classpd_1_1Debug_1a25b5382d4942f7d014daa9ec09542e36"/><section>
+    <title>getFile()</title>
+<indexterm><primary>getFile</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>getFile</secondary></indexterm>
+<para><computeroutput>std::fstream * pd::Debug::getFile ( ) const</computeroutput></para><para>
+
+<para>Get file for more control over the processing and for more actions. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>std::fstream Allocated file to <link linkend="_classpd_1_1Debug">Debug</link> object </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Debug_8cpp_source_1l00143">143</link> of file <link linkend="_Debug_8cpp_source">Debug.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00144 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>;&#32;}
+</programlisting><para>
+References <link linkend="_Debug_8hpp_source_1l00050">file</link>.</para>
+</section>
+<anchor xml:id="_classpd_1_1Debug_1a50af1feba88c371367768f889eb59ea1"/><section>
+    <title>getID()</title>
+<indexterm><primary>getID</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>getID</secondary></indexterm>
+<para><computeroutput>std::string pd::Debug::getID ( ) const</computeroutput></para><para>
+
+<para>Return the ID of the created <link linkend="_classpd_1_1Debug">Debug</link> object. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>std::string The ID of this object </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Debug_8cpp_source_1l00140">140</link> of file <link linkend="_Debug_8cpp_source">Debug.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00141 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8">id</link>;&#32;}
+</programlisting><para>
+References <link linkend="_Debug_8hpp_source_1l00048">id</link>.</para>
+</section>
+<anchor xml:id="_classpd_1_1Debug_1a2a93ad45e778e3e6e244012cdd386632"/><section>
+    <title>getSettings()</title>
+<indexterm><primary>getSettings</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>getSettings</secondary></indexterm>
+<para><computeroutput><link linkend="_structpd_1_1DebugSettings">DebugSettings</link> pd::Debug::getSettings ( ) const</computeroutput></para><para>
+
+<para>Get the settings set for the created <link linkend="_classpd_1_1Debug">Debug</link> object. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_structpd_1_1DebugSettings">pd::DebugSettings</link> <link linkend="_classpd_1_1Debug">Debug</link> settings to return </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Debug_8cpp_source_1l00146">146</link> of file <link linkend="_Debug_8cpp_source">Debug.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00147 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>;&#32;}
+</programlisting><para>
+References <link linkend="_Debug_8hpp_source_1l00052">settings</link>.</para>
+</section>
+<anchor xml:id="_classpd_1_1Debug_1a55e0965bbf467542ee27f67d2ba095e6"/><section>
+    <title>log()</title>
+<indexterm><primary>log</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>log</secondary></indexterm>
+<para><computeroutput>std::string pd::Debug::log (const std::string &amp; _type, const std::string &amp; _msg, unsigned int _level = <computeroutput>0</computeroutput>
+)</computeroutput></para><para>
+
+<para>Log the message with specific custom type, message and log level. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_type</entry><entry>
+<para>Set the type of the debug message (Ex: Information, Success, Warning, Error, ...) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_msg</entry><entry>
+<para>Set the message for debugging </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_level</entry><entry>
+<para>Set the debug level level of the log (default as 0, non-debug-level specific) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The total string of the total debug message </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_Debug_8cpp_source_1l00056">56</link> of file <link linkend="_Debug_8cpp_source">Debug.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00057 &#32;&#32;&#32;&#32;{
+00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;msg;
+00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;type&#32;=&#32;_type;
+00060 
+00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::transform(type.begin(),&#32;type.end(),&#32;type.begin(),&#32;::toupper);
+00062 
+00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;msg&#32;+=&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.preStartMsg;
+00064 
+00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.custom)
+00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;msg&#32;+=&#32;<emphasis role="stringliteral">&quot;[&#32;&quot;</emphasis>&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.startMsg&#32;+&#32;type&#32;+&#32;(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.debugID&#32;?&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;|&#32;&quot;</emphasis>&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8">id</link>&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00068 
+00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;DATE&#32;AND&#32;TIME&#32;INFORMATION</emphasis>
+00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.timeStamp)
+00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timeUtils::TimeInfo&#32;timeInfo;
+00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timeUtils::DateInfo&#32;dateInfo;
+00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timeUtils::Time&#32;time(<emphasis role="stringliteral">&quot;debug-time&quot;</emphasis>);
+00075 
+00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time.update(timeInfo);
+00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time.update(dateInfo);
+00078 
+00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;msg&#32;+=&#32;<emphasis role="stringliteral">&quot;&#32;|&#32;&quot;</emphasis>&#32;+&#32;std::to_string(dateInfo.year)&#32;+&#32;<emphasis role="stringliteral">&quot;-&quot;</emphasis>&#32;+&#32;std::to_string(dateInfo.month)&#32;+&#32;<emphasis role="stringliteral">&quot;-&quot;</emphasis>&#32;+&#32;std::to_string(dateInfo.day)&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;|&#32;&quot;</emphasis>;
+00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;msg&#32;+=&#32;std::to_string(timeInfo.hour)&#32;+&#32;<emphasis role="stringliteral">&quot;:&quot;</emphasis>&#32;+&#32;std::to_string(timeInfo.min)&#32;+&#32;<emphasis role="stringliteral">&quot;:&quot;</emphasis>&#32;+&#32;std::to_string(timeInfo.sec)&#32;+&#32;<emphasis role="stringliteral">&quot;.&quot;</emphasis>&#32;+&#32;std::to_string(timeInfo.ms)
+00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.timeZone&#32;?&#32;<emphasis role="stringliteral">&quot;&#32;+&quot;</emphasis>&#32;+&#32;std::to_string(time.getUTCOffset().hour)&#32;+&#32;<emphasis role="stringliteral">&quot;:&quot;</emphasis>&#32;+&#32;std::to_string(time.getUTCOffset().min)&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00083 
+00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;msg&#32;+=&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>;
+00085 
+00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;FINISG&#32;MSG</emphasis>
+00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00088 
+00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;msg&#32;=&#32;<emphasis role="stringliteral">&quot;[&#32;&quot;</emphasis>&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.startMsg&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.totalCustom;
+00090 
+00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;msg&#32;+=&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.endMsg&#32;+&#32;<emphasis role="stringliteral">&quot;]&#32;&quot;</emphasis>&#32;+&#32;(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.postEndMsg)&#32;+&#32;_msg&#32;+&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.totalEndMsg&#32;+&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+00092 
+00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.output)
+00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((!this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.logLevelIgnoreOutput&#32;&amp;&amp;&#32;this-&gt;settings.logLevel&#32;==&#32;0)&#32;||&#32;
+00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(this-&gt;settings.logLevel&#32;&gt;&#32;0&#32;&amp;&amp;&#32;_level&#32;&lt;=&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.logLevel))
+00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;msg;
+00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00101 
+00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.blockedSave)
+00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((!this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.logLevelIgnoreSave&#32;&amp;&amp;&#32;this-&gt;settings.logLevel&#32;==&#32;0)&#32;||&#32;
+00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(this-&gt;settings.logLevel&#32;&gt;&#32;0&#32;&amp;&amp;&#32;_level&#32;&lt;=&#32;this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.logLevel))
+00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00107 <emphasis role="preprocessor">#&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifndef&#32;__PD_NO_FULL_SUPPORT</emphasis>
+00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!fs::exists(fs::path(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.filePath).parent_path()))
+00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fs::create_directories(fs::path(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.filePath).parent_path());
+00111 
+00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>-&gt;close();&#32;this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>-&gt;open(this-&gt;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>.filePath,&#32;this-&gt;settings.openMode);
+00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00114 <emphasis role="preprocessor">#&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;endif</emphasis>
+00115 
+00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*this-&gt;<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>&#32;&lt;&lt;&#32;msg;
+00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00119 
+00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;msg;
+00121 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_Debug_8hpp_source_1l00050">file</link>, <link linkend="_Debug_8hpp_source_1l00048">id</link>, and <link linkend="_Debug_8hpp_source_1l00052">settings</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce"/><section>
+    <title>constructed</title>
+<indexterm><primary>constructed</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>constructed</secondary></indexterm>
+<para><computeroutput>bool pd::Debug::constructed<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_Debug_8hpp_source_1l00054">54</link> of file <link linkend="_Debug_8hpp_source">Debug.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_Debug_8cpp_source_1l00042">Debug()</link>, and <link linkend="_Debug_8cpp_source_1l00137">constructInfo()</link>.</para>
+</section>
+<anchor xml:id="_classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e"/><section>
+    <title>constructError</title>
+<indexterm><primary>constructError</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>constructError</secondary></indexterm>
+<para><computeroutput>std::string pd::Debug::constructError<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_Debug_8hpp_source_1l00055">55</link> of file <link linkend="_Debug_8hpp_source">Debug.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_Debug_8cpp_source_1l00017">__init()</link>, and <link linkend="_Debug_8cpp_source_1l00137">constructInfo()</link>.</para>
+</section>
+<anchor xml:id="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33"/><section>
+    <title>file</title>
+<indexterm><primary>file</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>file</secondary></indexterm>
+<para><computeroutput>std::fstream* pd::Debug::file<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_Debug_8hpp_source_1l00050">50</link> of file <link linkend="_Debug_8hpp_source">Debug.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_Debug_8cpp_source_1l00017">__init()</link>, <link linkend="_Debug_8cpp_source_1l00123">close()</link>, <link linkend="_Debug_8cpp_source_1l00143">getFile()</link>, and <link linkend="_Debug_8cpp_source_1l00056">log()</link>.</para>
+</section>
+<anchor xml:id="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>std::string pd::Debug::id<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_Debug_8hpp_source_1l00048">48</link> of file <link linkend="_Debug_8hpp_source">Debug.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_Debug_8cpp_source_1l00042">Debug()</link>, <link linkend="_Debug_8cpp_source_1l00017">__init()</link>, <link linkend="_Debug_8cpp_source_1l00140">getID()</link>, and <link linkend="_Debug_8cpp_source_1l00056">log()</link>.</para>
+</section>
+<anchor xml:id="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea"/><section>
+    <title>settings</title>
+<indexterm><primary>settings</primary><secondary>pd::Debug</secondary></indexterm>
+<indexterm><primary>pd::Debug</primary><secondary>settings</secondary></indexterm>
+<para><computeroutput>const <link linkend="_structpd_1_1DebugSettings">DebugSettings</link> pd::Debug::settings<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_Debug_8hpp_source_1l00052">52</link> of file <link linkend="_Debug_8hpp_source">Debug.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_Debug_8cpp_source_1l00042">Debug()</link>, <link linkend="_Debug_8cpp_source_1l00017">__init()</link>, <link linkend="_Debug_8cpp_source_1l00146">getSettings()</link>, and <link linkend="_Debug_8cpp_source_1l00056">log()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+inc/<link linkend="_Debug_8hpp">Debug.hpp</link>src/<link linkend="_Debug_8cpp">Debug.cpp</link></section>
+</section>

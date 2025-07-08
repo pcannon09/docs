@@ -1,0 +1,497 @@
+\doxysection{pd\+::Debug Class Reference}
+\hypertarget{classpd_1_1Debug}{}\label{classpd_1_1Debug}\index{pd::Debug@{pd::Debug}}
+
+
+{\ttfamily \#include $<$Debug.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpd_1_1Debug_ad8a640f5b1bb6242016a3bf04d290d3c}{Debug}} (const std\+::string \&\+\_\+id, const \mbox{\hyperlink{structpd_1_1DebugSettings}{pd\+::\+Debug\+Settings}} \&\+\_\+settings)
+\begin{DoxyCompactList}\small\item\em Construct the debugger with specified ID and settings Call the inner {\ttfamily \doxylink{classpd_1_1Debug_ab342540a78636f09ac021238901c8ae5}{\+\_\+\+\_\+init()}} function to Initialize. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpd_1_1Debug_a4e506dd26f26d938bf745bf12ac7e1f4}{\texorpdfstring{$\sim$}{\string~}\+Debug}} ()
+\begin{DoxyCompactList}\small\item\em Call the {\ttfamily \doxylink{classpd_1_1Debug_afdb04da272c5b290aacbc75fdbaf16cf}{pd\+::\+Debug\+::close()}} function to free all allocated memory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpd_1_1Debug_afdb04da272c5b290aacbc75fdbaf16cf}{close}} ()
+\begin{DoxyCompactList}\small\item\em Free all the allocated memory and resources, return true if it succeeded, return false if it did not. \end{DoxyCompactList}\item 
+std\+::pair$<$ bool, std\+::string $>$ \mbox{\hyperlink{classpd_1_1Debug_afa07c50eb146c275fb99dcd88d0d1152}{construct\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Construct debug information You can use it if it failed to construct properly to get the error message. \end{DoxyCompactList}\item 
+std\+::fstream \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classpd_1_1Debug_a25b5382d4942f7d014daa9ec09542e36}{get\+File}} () const
+\begin{DoxyCompactList}\small\item\em Get file for more control over the processing and for more actions. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classpd_1_1Debug_a50af1feba88c371367768f889eb59ea1}{get\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Return the ID of the created \doxylink{classpd_1_1Debug}{Debug} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpd_1_1DebugSettings}{Debug\+Settings}} \mbox{\hyperlink{classpd_1_1Debug_a2a93ad45e778e3e6e244012cdd386632}{get\+Settings}} () const
+\begin{DoxyCompactList}\small\item\em Get the settings set for the created \doxylink{classpd_1_1Debug}{Debug} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classpd_1_1Debug_a55e0965bbf467542ee27f67d2ba095e6}{log}} (const std\+::string \&\+\_\+type, const std\+::string \&\+\_\+msg, unsigned int \+\_\+level=0)
+\begin{DoxyCompactList}\small\item\em Log the message with specific custom type, message and log level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpd_1_1Debug_ab342540a78636f09ac021238901c8ae5}{\+\_\+\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the \doxylink{classpd_1_1Debug}{Debug} object that is going (or was) to be constructed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpd_1_1Debug_aef8aa7f4f56caf8d4747f103beaa39ce}{constructed}}
+\item 
+std\+::string \mbox{\hyperlink{classpd_1_1Debug_a29592eb48cd0d950f57fc3e82be8574e}{construct\+Error}}
+\item 
+std\+::fstream \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{file}}
+\item 
+std\+::string \mbox{\hyperlink{classpd_1_1Debug_ab3ada74cd59d0593a15a5e6f7053e2b8}{id}}
+\item 
+const \mbox{\hyperlink{structpd_1_1DebugSettings}{Debug\+Settings}} \mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Debug_8hpp_source_l00045}{45}} of file \mbox{\hyperlink{Debug_8hpp_source}{Debug.\+hpp}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classpd_1_1Debug_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classpd_1_1Debug_ad8a640f5b1bb6242016a3bf04d290d3c}\index{pd::Debug@{pd::Debug}!Debug@{Debug}}
+\index{Debug@{Debug}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{Debug()}{Debug()}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_ad8a640f5b1bb6242016a3bf04d290d3c} 
+pd\+::\+Debug\+::\+Debug (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+id}{, }\item[{const \mbox{\hyperlink{structpd_1_1DebugSettings}{pd\+::\+Debug\+Settings}} \&}]{\+\_\+settings}{}\end{DoxyParamCaption})}
+
+
+
+Construct the debugger with specified ID and settings Call the inner {\ttfamily \doxylink{classpd_1_1Debug_ab342540a78636f09ac021238901c8ae5}{\+\_\+\+\_\+init()}} function to Initialize. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & Set the ID of this object \\
+\hline
+{\em \+\_\+settings} & Set the settings of this object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Debug_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{Debug_8cpp_source}{Debug.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classpd_1_1Debug_ab3ada74cd59d0593a15a5e6f7053e2b8}{id}}(\_id),\ \mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}(\_settings)}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classpd_1_1Debug_aef8aa7f4f56caf8d4747f103beaa39ce}{constructed}}\ =\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_ab342540a78636f09ac021238901c8ae5}{\_\_init}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>\mbox{\hyperlink{classpd_1_1Debug_aef8aa7f4f56caf8d4747f103beaa39ce}{constructed}})}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Debug_8cpp_source_l00017}{\+\_\+\+\_\+init()}}, \mbox{\hyperlink{Debug_8hpp_source_l00054}{constructed}}, \mbox{\hyperlink{Debug_8hpp_source_l00048}{id}}, and \mbox{\hyperlink{Debug_8hpp_source_l00052}{settings}}.
+
+\Hypertarget{classpd_1_1Debug_a4e506dd26f26d938bf745bf12ac7e1f4}\index{pd::Debug@{pd::Debug}!````~Debug@{\texorpdfstring{$\sim$}{\string~}Debug}}
+\index{````~Debug@{\texorpdfstring{$\sim$}{\string~}Debug}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Debug()}{\string~Debug()}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_a4e506dd26f26d938bf745bf12ac7e1f4} 
+pd\+::\+Debug\+::\texorpdfstring{$\sim$}{\string~}\+Debug (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Call the {\ttfamily \doxylink{classpd_1_1Debug_afdb04da272c5b290aacbc75fdbaf16cf}{pd\+::\+Debug\+::close()}} function to free all allocated memory. 
+
+
+
+Definition at line \mbox{\hyperlink{Debug_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{Debug_8cpp_source}{Debug.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classpd_1_1Debug_afdb04da272c5b290aacbc75fdbaf16cf}{close}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Debug_8cpp_source_l00123}{close()}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classpd_1_1Debug_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpd_1_1Debug_ab342540a78636f09ac021238901c8ae5}\index{pd::Debug@{pd::Debug}!\_\_init@{\_\_init}}
+\index{\_\_init@{\_\_init}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{\_\_init()}{\_\_init()}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_ab342540a78636f09ac021238901c8ae5} 
+bool pd\+::\+Debug\+::\+\_\+\+\_\+init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize the \doxylink{classpd_1_1Debug}{Debug} object that is going (or was) to be constructed. 
+
+\begin{DoxyReturn}{Returns}
+bool Did it fail? True = Success, False = Failiture 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Debug_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{Debug_8cpp_source}{Debug.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.filePath.empty())}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{file}}\ =\ \textcolor{keyword}{new}\ std::fstream(this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.filePath,\ this-\/>settings.openMode);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>\mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{file}}-\/>is\_open())}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classpd_1_1Debug_a29592eb48cd0d950f57fc3e82be8574e}{constructError}}\ =\ \textcolor{stringliteral}{"{}File\ could\ not\ open\ :\ "{}}\ +\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_ab3ada74cd59d0593a15a5e6f7053e2b8}{id}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>\mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{file}}-\/>good())}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classpd_1_1Debug_a29592eb48cd0d950f57fc3e82be8574e}{constructError}}\ =\ \textcolor{stringliteral}{"{}File\ is\ not\ good\ for\ opening\ :\ "{}}\ +\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_ab3ada74cd59d0593a15a5e6f7053e2b8}{id}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Debug_8hpp_source_l00055}{construct\+Error}}, \mbox{\hyperlink{Debug_8hpp_source_l00050}{file}}, \mbox{\hyperlink{Debug_8hpp_source_l00048}{id}}, and \mbox{\hyperlink{Debug_8hpp_source_l00052}{settings}}.
+
+
+
+Referenced by \mbox{\hyperlink{Debug_8cpp_source_l00042}{Debug()}}.
+
+\Hypertarget{classpd_1_1Debug_afdb04da272c5b290aacbc75fdbaf16cf}\index{pd::Debug@{pd::Debug}!close@{close}}
+\index{close@{close}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_afdb04da272c5b290aacbc75fdbaf16cf} 
+bool pd\+::\+Debug\+::close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Free all the allocated memory and resources, return true if it succeeded, return false if it did not. 
+
+\begin{DoxyReturn}{Returns}
+bool True if success, false if failiture 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Debug_8cpp_source_l00123}{123}} of file \mbox{\hyperlink{Debug_8cpp_source}{Debug.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{file}})}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{file}}-\/>close();}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{file}};\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{file}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Debug_8hpp_source_l00050}{file}}.
+
+
+
+Referenced by \mbox{\hyperlink{Debug_8cpp_source_l00051}{\texorpdfstring{$\sim$}{\string~}\+Debug()}}.
+
+\Hypertarget{classpd_1_1Debug_afa07c50eb146c275fb99dcd88d0d1152}\index{pd::Debug@{pd::Debug}!constructInfo@{constructInfo}}
+\index{constructInfo@{constructInfo}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{constructInfo()}{constructInfo()}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_afa07c50eb146c275fb99dcd88d0d1152} 
+std\+::pair$<$ bool, std\+::string $>$ pd\+::\+Debug\+::construct\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Construct debug information You can use it if it failed to construct properly to get the error message. 
+
+\begin{DoxyReturn}{Returns}
+std\+::pair$<$bool, std\+::string$>$ .first\+: Did it succeed? .second\+: Error reason 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Debug_8cpp_source_l00137}{137}} of file \mbox{\hyperlink{Debug_8cpp_source}{Debug.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \{\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_aef8aa7f4f56caf8d4747f103beaa39ce}{constructed}},\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_a29592eb48cd0d950f57fc3e82be8574e}{constructError}}\ \};\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Debug_8hpp_source_l00054}{constructed}}, and \mbox{\hyperlink{Debug_8hpp_source_l00055}{construct\+Error}}.
+
+\Hypertarget{classpd_1_1Debug_a25b5382d4942f7d014daa9ec09542e36}\index{pd::Debug@{pd::Debug}!getFile@{getFile}}
+\index{getFile@{getFile}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{getFile()}{getFile()}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_a25b5382d4942f7d014daa9ec09542e36} 
+std\+::fstream \texorpdfstring{$\ast$}{*} pd\+::\+Debug\+::get\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get file for more control over the processing and for more actions. 
+
+\begin{DoxyReturn}{Returns}
+std\+::fstream Allocated file to \doxylink{classpd_1_1Debug}{Debug} object 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Debug_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{Debug_8cpp_source}{Debug.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00144\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{file}};\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Debug_8hpp_source_l00050}{file}}.
+
+\Hypertarget{classpd_1_1Debug_a50af1feba88c371367768f889eb59ea1}\index{pd::Debug@{pd::Debug}!getID@{getID}}
+\index{getID@{getID}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_a50af1feba88c371367768f889eb59ea1} 
+std\+::string pd\+::\+Debug\+::get\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Return the ID of the created \doxylink{classpd_1_1Debug}{Debug} object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The ID of this object 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Debug_8cpp_source_l00140}{140}} of file \mbox{\hyperlink{Debug_8cpp_source}{Debug.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_ab3ada74cd59d0593a15a5e6f7053e2b8}{id}};\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Debug_8hpp_source_l00048}{id}}.
+
+\Hypertarget{classpd_1_1Debug_a2a93ad45e778e3e6e244012cdd386632}\index{pd::Debug@{pd::Debug}!getSettings@{getSettings}}
+\index{getSettings@{getSettings}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{getSettings()}{getSettings()}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_a2a93ad45e778e3e6e244012cdd386632} 
+\mbox{\hyperlink{structpd_1_1DebugSettings}{Debug\+Settings}} pd\+::\+Debug\+::get\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the settings set for the created \doxylink{classpd_1_1Debug}{Debug} object. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structpd_1_1DebugSettings}{pd\+::\+Debug\+Settings} \doxylink{classpd_1_1Debug}{Debug} settings to return 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Debug_8cpp_source_l00146}{146}} of file \mbox{\hyperlink{Debug_8cpp_source}{Debug.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00147\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}};\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Debug_8hpp_source_l00052}{settings}}.
+
+\Hypertarget{classpd_1_1Debug_a55e0965bbf467542ee27f67d2ba095e6}\index{pd::Debug@{pd::Debug}!log@{log}}
+\index{log@{log}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_a55e0965bbf467542ee27f67d2ba095e6} 
+std\+::string pd\+::\+Debug\+::log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+type}{, }\item[{const std\+::string \&}]{\+\_\+msg}{, }\item[{unsigned int}]{\+\_\+level}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Log the message with specific custom type, message and log level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+type} & Set the type of the debug message (Ex\+: Information, Success, Warning, Error, ...) \\
+\hline
+{\em \+\_\+msg} & Set the message for debugging \\
+\hline
+{\em \+\_\+level} & Set the debug level level of the log (default as 0, non-\/debug-\/level specific) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total string of the total debug message 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Debug_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{Debug_8cpp_source}{Debug.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ std::string\ msg;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::string\ type\ =\ \_type;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ std::transform(type.begin(),\ type.end(),\ type.begin(),\ ::toupper);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ msg\ +=\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.preStartMsg;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.custom)}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ msg\ +=\ \textcolor{stringliteral}{"{}[\ "{}}\ +\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.startMsg\ +\ type\ +\ (this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.debugID\ ?\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_ab3ada74cd59d0593a15a5e6f7053e2b8}{id}}\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ DATE\ AND\ TIME\ INFORMATION}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.timeStamp)}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timeUtils::TimeInfo\ timeInfo;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timeUtils::DateInfo\ dateInfo;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timeUtils::Time\ time(\textcolor{stringliteral}{"{}debug-\/time"{}});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ time.update(timeInfo);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ time.update(dateInfo);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ msg\ +=\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ std::to\_string(dateInfo.year)\ +\ \textcolor{stringliteral}{"{}-\/"{}}\ +\ std::to\_string(dateInfo.month)\ +\ \textcolor{stringliteral}{"{}-\/"{}}\ +\ std::to\_string(dateInfo.day)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ msg\ +=\ std::to\_string(timeInfo.hour)\ +\ \textcolor{stringliteral}{"{}:"{}}\ +\ std::to\_string(timeInfo.min)\ +\ \textcolor{stringliteral}{"{}:"{}}\ +\ std::to\_string(timeInfo.sec)\ +\ \textcolor{stringliteral}{"{}."{}}\ +\ std::to\_string(timeInfo.ms)}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ (this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.timeZone\ ?\ \textcolor{stringliteral}{"{}\ +"{}}\ +\ std::to\_string(time.getUTCOffset().hour)\ +\ \textcolor{stringliteral}{"{}:"{}}\ +\ std::to\_string(time.getUTCOffset().min)\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ msg\ +=\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FINISG\ MSG}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ msg\ =\ \textcolor{stringliteral}{"{}[\ "{}}\ +\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.startMsg\ +\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.totalCustom;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ msg\ +=\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.endMsg\ +\ \textcolor{stringliteral}{"{}]\ "{}}\ +\ (this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.postEndMsg)\ +\ \_msg\ +\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.totalEndMsg\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.output)}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((!this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.logLevelIgnoreOutput\ \&\&\ this-\/>settings.logLevel\ ==\ 0)\ ||\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (this-\/>settings.logLevel\ >\ 0\ \&\&\ \_level\ <=\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.logLevel))}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ msg;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.blockedSave)}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((!this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.logLevelIgnoreSave\ \&\&\ this-\/>settings.logLevel\ ==\ 0)\ ||\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (this-\/>settings.logLevel\ >\ 0\ \&\&\ \_level\ <=\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.logLevel))}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ifndef\ \_\_PD\_NO\_FULL\_SUPPORT}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fs::exists(fs::path(this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.filePath).parent\_path()))}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fs::create\_directories(fs::path(this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.filePath).parent\_path());}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{file}}-\/>close();\ this-\/>\mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{file}}-\/>open(this-\/>\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}}.filePath,\ this-\/>settings.openMode);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ endif}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *this-\/>\mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{file}}\ <<\ msg;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ msg;}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Debug_8hpp_source_l00050}{file}}, \mbox{\hyperlink{Debug_8hpp_source_l00048}{id}}, and \mbox{\hyperlink{Debug_8hpp_source_l00052}{settings}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classpd_1_1Debug_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classpd_1_1Debug_aef8aa7f4f56caf8d4747f103beaa39ce}\index{pd::Debug@{pd::Debug}!constructed@{constructed}}
+\index{constructed@{constructed}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{constructed}{constructed}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_aef8aa7f4f56caf8d4747f103beaa39ce} 
+bool pd\+::\+Debug\+::constructed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Debug_8hpp_source_l00054}{54}} of file \mbox{\hyperlink{Debug_8hpp_source}{Debug.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Debug_8cpp_source_l00042}{Debug()}}, and \mbox{\hyperlink{Debug_8cpp_source_l00137}{construct\+Info()}}.
+
+\Hypertarget{classpd_1_1Debug_a29592eb48cd0d950f57fc3e82be8574e}\index{pd::Debug@{pd::Debug}!constructError@{constructError}}
+\index{constructError@{constructError}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{constructError}{constructError}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_a29592eb48cd0d950f57fc3e82be8574e} 
+std\+::string pd\+::\+Debug\+::construct\+Error\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Debug_8hpp_source_l00055}{55}} of file \mbox{\hyperlink{Debug_8hpp_source}{Debug.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Debug_8cpp_source_l00017}{\+\_\+\+\_\+init()}}, and \mbox{\hyperlink{Debug_8cpp_source_l00137}{construct\+Info()}}.
+
+\Hypertarget{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}\index{pd::Debug@{pd::Debug}!file@{file}}
+\index{file@{file}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33} 
+std\+::fstream\texorpdfstring{$\ast$}{*} pd\+::\+Debug\+::file\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Debug_8hpp_source_l00050}{50}} of file \mbox{\hyperlink{Debug_8hpp_source}{Debug.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Debug_8cpp_source_l00017}{\+\_\+\+\_\+init()}}, \mbox{\hyperlink{Debug_8cpp_source_l00123}{close()}}, \mbox{\hyperlink{Debug_8cpp_source_l00143}{get\+File()}}, and \mbox{\hyperlink{Debug_8cpp_source_l00056}{log()}}.
+
+\Hypertarget{classpd_1_1Debug_ab3ada74cd59d0593a15a5e6f7053e2b8}\index{pd::Debug@{pd::Debug}!id@{id}}
+\index{id@{id}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_ab3ada74cd59d0593a15a5e6f7053e2b8} 
+std\+::string pd\+::\+Debug\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Debug_8hpp_source_l00048}{48}} of file \mbox{\hyperlink{Debug_8hpp_source}{Debug.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Debug_8cpp_source_l00042}{Debug()}}, \mbox{\hyperlink{Debug_8cpp_source_l00017}{\+\_\+\+\_\+init()}}, \mbox{\hyperlink{Debug_8cpp_source_l00140}{get\+ID()}}, and \mbox{\hyperlink{Debug_8cpp_source_l00056}{log()}}.
+
+\Hypertarget{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}\index{pd::Debug@{pd::Debug}!settings@{settings}}
+\index{settings@{settings}!pd::Debug@{pd::Debug}}
+\doxysubsubsection{\texorpdfstring{settings}{settings}}
+{\footnotesize\ttfamily \label{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea} 
+const \mbox{\hyperlink{structpd_1_1DebugSettings}{Debug\+Settings}} pd\+::\+Debug\+::settings\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Debug_8hpp_source_l00052}{52}} of file \mbox{\hyperlink{Debug_8hpp_source}{Debug.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Debug_8cpp_source_l00042}{Debug()}}, \mbox{\hyperlink{Debug_8cpp_source_l00017}{\+\_\+\+\_\+init()}}, \mbox{\hyperlink{Debug_8cpp_source_l00146}{get\+Settings()}}, and \mbox{\hyperlink{Debug_8cpp_source_l00056}{log()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{Debug_8hpp}{Debug.\+hpp}}\item 
+src/\mbox{\hyperlink{Debug_8cpp}{Debug.\+cpp}}\end{DoxyCompactItemize}

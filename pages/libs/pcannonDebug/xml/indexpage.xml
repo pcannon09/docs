@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Pcannon Debug</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/></para>
+<sect1 id="index_1autotoc_md1">
+<title>1.0.0-build</title><sect2 id="index_1autotoc_md2">
+<title>Simple yet powerful debug manager for C++</title><para><hruler/>
+</para>
+<para><bold>Pcannon Debug is a simple yet powerful way to debug your program</bold></para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md4">
+<title>General pcannonDebug version support (1.0.0-build)</title><para><table rows="4" cols="2"><row>
+<entry thead="yes"><para>Full C++11 support  </para>
+</entry><entry thead="yes"><para>Full C++17 support  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>GCC 4.8  </para>
+</entry><entry thead="no"><para>GCC 8.0  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Clang 3.3  </para>
+</entry><entry thead="no"><para>Clang 7.0  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>MSVC 14.0 (Visual Studio 2015)  </para>
+</entry><entry thead="no"><para>MSVC 19.14 (Visual Studio 2017 version 15.7)  </para>
+</entry></row>
+</table>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md5">
+<title>Requirements</title><para><orderedlist>
+<listitem><para>Minimum C++ standard support: C++11<orderedlist>
+<listitem><para>No full support for C++17</para>
+</listitem></orderedlist>
+</para>
+</listitem><listitem><para>Full pcannonDebug C++ standard debug: C++17<orderedlist>
+<listitem><para>Create directories automatically for specifed log file if directory is non-existent</para>
+</listitem></orderedlist>
+</para>
+</listitem></orderedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md6">
+<title>Features</title><para><orderedlist>
+<listitem><para>Debug Settings: Customize the debug output or how is it debugged with debug settings type</para>
+</listitem><listitem><para>Log the output to a file, stdout with specific log level</para>
+</listitem><listitem><para>Time, date and timezone output</para>
+</listitem><listitem><para>Fully custom debug output</para>
+</listitem><listitem><para>Simple debug without needing to create a new object that shows your what line and file it was called</para>
+</listitem><listitem><para>Complex debug that shows you the line and file that was called</para>
+</listitem><listitem><para>Get the debug output to an std::string</para>
+</listitem><listitem><para>Optional C++17 support, can be used with C++11 as the minimum standard</para>
+</listitem><listitem><para>Get if constructing operation constructed incorrectly to a variable</para>
+</listitem><listitem><para>Custom file manipulation for more debugging</para>
+</listitem><listitem><para>Get settings</para>
+</listitem><listitem><para>Custom file open mode</para>
+</listitem></orderedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md7">
+<title>For more information</title><para><bold>For more information, check this website:</bold> <emphasis><ulink url="https://pcannon09.github.io/docs/pages/libs/pcannonDebug/html/index.html">https://pcannon09.github.io/docs/pages/libs/pcannonDebug/html/index.html</ulink></emphasis></para>
+<para><bold>For checking the source code, go to the github repo:</bold> <emphasis><ulink url="https://github.com/pcannon09/pcannonDebug/">https://github.com/pcannon09/pcannonDebug/</ulink></emphasis> </para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

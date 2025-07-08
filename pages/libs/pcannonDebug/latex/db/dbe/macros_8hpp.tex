@@ -1,0 +1,209 @@
+\doxysection{inc/macros.hpp File Reference}
+\hypertarget{macros_8hpp}{}\label{macros_8hpp}\index{inc/macros.hpp@{inc/macros.hpp}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{macros_8hpp_a670943c08adbadcff3b706d74e3b14be}{PD\+\_\+\+DEBUGLOG}}(\+\_\+logger,  \+\_\+type,  \+\_\+msg)
+\begin{DoxyCompactList}\small\item\em Debug log with file and line output capabilities using \doxylink{classpd_1_1Debug}{pd\+::\+Debug} for debugging Output it to the standard output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{macros_8hpp_a4e23b136a511d5454595b8e1364edf8a}{PD\+\_\+\+DEV}}~true
+\item 
+\#define \mbox{\hyperlink{macros_8hpp_aeadcd91d3ad65cd57a29b99c64bb9b77}{PD\+\_\+\+SIMPLE\+\_\+\+DEBUGLOG}}(\+\_\+type,  \+\_\+msg)
+\begin{DoxyCompactList}\small\item\em Simple debug log with file and line output capabilities with fully custom message without any setting needed Output it to the standard output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{macros_8hpp_af6e71c74189066ca8fc24d44500ab7a0}{PD\+\_\+\+STRINGIFY}}(x)
+\item 
+\#define \mbox{\hyperlink{macros_8hpp_a90671304256f54002660963c47301253}{PD\+\_\+\+TOSTRING}}(x)
+\item 
+\#define \mbox{\hyperlink{macros_8hpp_ae9c30977974c137f90be933bb7ed15ad}{PD\+\_\+\+VERSION}}~((STT\+\_\+\+VERSION\+\_\+\+MAJOR$<$$<$16)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+MINOR$<$$<$8)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+PATCH)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+STATE $<$$<$ 24))
+\item 
+\#define \mbox{\hyperlink{macros_8hpp_afda24ebbcf9fc1f72ed656c757e2aae3}{PD\+\_\+\+VERSION\+\_\+\+CHECK}}(STT\+\_\+\+VERSION\+\_\+\+MAJOR,  STT\+\_\+\+VERSION\+\_\+\+MINOR,  STT\+\_\+\+VERSION\+\_\+\+PATCH,  STT\+\_\+\+VERSION\+\_\+\+STATE)
+\item 
+\#define \mbox{\hyperlink{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}{PD\+\_\+\+VERSION\+\_\+\+MAJOR}}~0
+\item 
+\#define \mbox{\hyperlink{macros_8hpp_a3992091abfbb37fe5f384aea4dd97dea}{PD\+\_\+\+VERSION\+\_\+\+MINOR}}~0
+\item 
+\#define \mbox{\hyperlink{macros_8hpp_ab26433cc36f516c4be52b6efc9b6b91a}{PD\+\_\+\+VERSION\+\_\+\+PATCH}}~1
+\item 
+\#define \mbox{\hyperlink{macros_8hpp_a7eecb5a8be1c9f6f4b409ccda0838d71}{PD\+\_\+\+VERSION\+\_\+\+STATE}}~"{}dev"{}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{macros_8hpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{macros_8hpp_a670943c08adbadcff3b706d74e3b14be}\index{macros.hpp@{macros.hpp}!PD\_DEBUGLOG@{PD\_DEBUGLOG}}
+\index{PD\_DEBUGLOG@{PD\_DEBUGLOG}!macros.hpp@{macros.hpp}}
+\doxysubsubsection{\texorpdfstring{PD\_DEBUGLOG}{PD\_DEBUGLOG}}
+{\footnotesize\ttfamily \label{macros_8hpp_a670943c08adbadcff3b706d74e3b14be} 
+\#define PD\+\_\+\+DEBUGLOG(\begin{DoxyParamCaption}\item[{}]{\+\_\+logger}{, }\item[{}]{\+\_\+type}{, }\item[{}]{\+\_\+msg}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \_logger.log(\_type,\ std::string(std::string(\_\_FILE\_\_)\ +\ \textcolor{stringliteral}{"{}:"{}}\ +\ std::to\_string(\_\_LINE\_\_)\ +\ \textcolor{stringliteral}{"{}\ "{}}\ +\ \_msg),\ 0)}
+
+\end{DoxyCode}
+
+
+Debug log with file and line output capabilities using \doxylink{classpd_1_1Debug}{pd\+::\+Debug} for debugging Output it to the standard output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+logger} & Set the logger for \doxylink{classpd_1_1Debug}{pd\+::\+Debug} capabilities \\
+\hline
+{\em \+\_\+type} & Set the type of the log (Ex\+: Information, Warning, Successs, Error, ...) \\
+\hline
+{\em \+\_\+msg} & Set the message to log \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{macros_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{macros_8hpp_source}{macros.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ PD\_DEBUGLOG(\_logger,\ \_type,\ \_msg)\ \(\backslash\)}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\ \ \ \ \_logger.log(\_type,\ std::string(std::string(\_\_FILE\_\_)\ +\ "{}:"{}\ +\ std::to\_string(\_\_LINE\_\_)\ +\ "{}\ "{}\ +\ \_msg),\ 0)}}
+
+\end{DoxyCode}
+\Hypertarget{macros_8hpp_a4e23b136a511d5454595b8e1364edf8a}\index{macros.hpp@{macros.hpp}!PD\_DEV@{PD\_DEV}}
+\index{PD\_DEV@{PD\_DEV}!macros.hpp@{macros.hpp}}
+\doxysubsubsection{\texorpdfstring{PD\_DEV}{PD\_DEV}}
+{\footnotesize\ttfamily \label{macros_8hpp_a4e23b136a511d5454595b8e1364edf8a} 
+\#define PD\+\_\+\+DEV~true}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{macros_8hpp_source}{macros.\+hpp}}.
+
+\Hypertarget{macros_8hpp_aeadcd91d3ad65cd57a29b99c64bb9b77}\index{macros.hpp@{macros.hpp}!PD\_SIMPLE\_DEBUGLOG@{PD\_SIMPLE\_DEBUGLOG}}
+\index{PD\_SIMPLE\_DEBUGLOG@{PD\_SIMPLE\_DEBUGLOG}!macros.hpp@{macros.hpp}}
+\doxysubsubsection{\texorpdfstring{PD\_SIMPLE\_DEBUGLOG}{PD\_SIMPLE\_DEBUGLOG}}
+{\footnotesize\ttfamily \label{macros_8hpp_aeadcd91d3ad65cd57a29b99c64bb9b77} 
+\#define PD\+\_\+\+SIMPLE\+\_\+\+DEBUGLOG(\begin{DoxyParamCaption}\item[{}]{\+\_\+type}{, }\item[{}]{\+\_\+msg}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ std::cout\ <<\ \_type\ <<\ \textcolor{stringliteral}{"{}\ ["{}}\ <<\ std::string(std::string(\_\_FILE\_\_)\ +\ \textcolor{stringliteral}{"{}:"{}}\ +\ std::to\_string(\_\_LINE\_\_))\ <<\ \textcolor{stringliteral}{"{}]\ "{}}\ <<\ \_msg\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+
+\end{DoxyCode}
+
+
+Simple debug log with file and line output capabilities with fully custom message without any setting needed Output it to the standard output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+type} & Set the type of the log (Ex\+: Information, Warning, Successs, Error, ...) \\
+\hline
+{\em \+\_\+msg} & Set the message to log \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{macros_8hpp_source_l00034}{34}} of file \mbox{\hyperlink{macros_8hpp_source}{macros.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ PD\_SIMPLE\_DEBUGLOG(\_type,\ \_msg)\ \(\backslash\)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\ \ \ \ std::cout\ <<\ \_type\ <<\ "{}\ ["{}\ <<\ std::string(std::string(\_\_FILE\_\_)\ +\ "{}:"{}\ +\ std::to\_string(\_\_LINE\_\_))\ <<\ "{}]\ "{}\ <<\ \_msg\ <<\ "{}\(\backslash\)n"{};}}
+
+\end{DoxyCode}
+\Hypertarget{macros_8hpp_af6e71c74189066ca8fc24d44500ab7a0}\index{macros.hpp@{macros.hpp}!PD\_STRINGIFY@{PD\_STRINGIFY}}
+\index{PD\_STRINGIFY@{PD\_STRINGIFY}!macros.hpp@{macros.hpp}}
+\doxysubsubsection{\texorpdfstring{PD\_STRINGIFY}{PD\_STRINGIFY}}
+{\footnotesize\ttfamily \label{macros_8hpp_af6e71c74189066ca8fc24d44500ab7a0} 
+\#define PD\+\_\+\+STRINGIFY(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#x}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{macros_8hpp_source_l00038}{38}} of file \mbox{\hyperlink{macros_8hpp_source}{macros.\+hpp}}.
+
+\Hypertarget{macros_8hpp_a90671304256f54002660963c47301253}\index{macros.hpp@{macros.hpp}!PD\_TOSTRING@{PD\_TOSTRING}}
+\index{PD\_TOSTRING@{PD\_TOSTRING}!macros.hpp@{macros.hpp}}
+\doxysubsubsection{\texorpdfstring{PD\_TOSTRING}{PD\_TOSTRING}}
+{\footnotesize\ttfamily \label{macros_8hpp_a90671304256f54002660963c47301253} 
+\#define PD\+\_\+\+TOSTRING(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{STT\_STRINGIFY(x)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{macros_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{macros_8hpp_source}{macros.\+hpp}}.
+
+\Hypertarget{macros_8hpp_ae9c30977974c137f90be933bb7ed15ad}\index{macros.hpp@{macros.hpp}!PD\_VERSION@{PD\_VERSION}}
+\index{PD\_VERSION@{PD\_VERSION}!macros.hpp@{macros.hpp}}
+\doxysubsubsection{\texorpdfstring{PD\_VERSION}{PD\_VERSION}}
+{\footnotesize\ttfamily \label{macros_8hpp_ae9c30977974c137f90be933bb7ed15ad} 
+\#define PD\+\_\+\+VERSION~((STT\+\_\+\+VERSION\+\_\+\+MAJOR$<$$<$16)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+MINOR$<$$<$8)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+PATCH)\texorpdfstring{$\vert$}{|}(STT\+\_\+\+VERSION\+\_\+\+STATE $<$$<$ 24))}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8hpp_source_l00013}{13}} of file \mbox{\hyperlink{macros_8hpp_source}{macros.\+hpp}}.
+
+\Hypertarget{macros_8hpp_afda24ebbcf9fc1f72ed656c757e2aae3}\index{macros.hpp@{macros.hpp}!PD\_VERSION\_CHECK@{PD\_VERSION\_CHECK}}
+\index{PD\_VERSION\_CHECK@{PD\_VERSION\_CHECK}!macros.hpp@{macros.hpp}}
+\doxysubsubsection{\texorpdfstring{PD\_VERSION\_CHECK}{PD\_VERSION\_CHECK}}
+{\footnotesize\ttfamily \label{macros_8hpp_afda24ebbcf9fc1f72ed656c757e2aae3} 
+\#define PD\+\_\+\+VERSION\+\_\+\+CHECK(\begin{DoxyParamCaption}\item[{}]{STT\+\_\+\+VERSION\+\_\+\+MAJOR}{, }\item[{}]{STT\+\_\+\+VERSION\+\_\+\+MINOR}{, }\item[{}]{STT\+\_\+\+VERSION\+\_\+\+PATCH}{, }\item[{}]{STT\+\_\+\+VERSION\+\_\+\+STATE}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ ((\mbox{\hyperlink{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}{PD\_VERSION\_MAJOR}}<<16)|(STT\_VERSION\_MINOR<<8)|(STT\_VERSION\_PATCH)|(STT\_VERSION\_STATE\ <<\ 24))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{macros_8hpp_source_l00015}{15}} of file \mbox{\hyperlink{macros_8hpp_source}{macros.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ PD\_VERSION\_CHECK(STT\_VERSION\_MAJOR,\ STT\_VERSION\_MINOR,\ STT\_VERSION\_PATCH,\ STT\_VERSION\_STATE)\ \(\backslash\)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\ \ \ \ ((PD\_VERSION\_MAJOR<<16)|(STT\_VERSION\_MINOR<<8)|(STT\_VERSION\_PATCH)|(STT\_VERSION\_STATE\ <<\ 24))}}
+
+\end{DoxyCode}
+\Hypertarget{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4}\index{macros.hpp@{macros.hpp}!PD\_VERSION\_MAJOR@{PD\_VERSION\_MAJOR}}
+\index{PD\_VERSION\_MAJOR@{PD\_VERSION\_MAJOR}!macros.hpp@{macros.hpp}}
+\doxysubsubsection{\texorpdfstring{PD\_VERSION\_MAJOR}{PD\_VERSION\_MAJOR}}
+{\footnotesize\ttfamily \label{macros_8hpp_a225088c327cc6c7fcca809dc62e48fd4} 
+\#define PD\+\_\+\+VERSION\+\_\+\+MAJOR~0}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8hpp_source_l00004}{4}} of file \mbox{\hyperlink{macros_8hpp_source}{macros.\+hpp}}.
+
+\Hypertarget{macros_8hpp_a3992091abfbb37fe5f384aea4dd97dea}\index{macros.hpp@{macros.hpp}!PD\_VERSION\_MINOR@{PD\_VERSION\_MINOR}}
+\index{PD\_VERSION\_MINOR@{PD\_VERSION\_MINOR}!macros.hpp@{macros.hpp}}
+\doxysubsubsection{\texorpdfstring{PD\_VERSION\_MINOR}{PD\_VERSION\_MINOR}}
+{\footnotesize\ttfamily \label{macros_8hpp_a3992091abfbb37fe5f384aea4dd97dea} 
+\#define PD\+\_\+\+VERSION\+\_\+\+MINOR~0}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8hpp_source_l00005}{5}} of file \mbox{\hyperlink{macros_8hpp_source}{macros.\+hpp}}.
+
+\Hypertarget{macros_8hpp_ab26433cc36f516c4be52b6efc9b6b91a}\index{macros.hpp@{macros.hpp}!PD\_VERSION\_PATCH@{PD\_VERSION\_PATCH}}
+\index{PD\_VERSION\_PATCH@{PD\_VERSION\_PATCH}!macros.hpp@{macros.hpp}}
+\doxysubsubsection{\texorpdfstring{PD\_VERSION\_PATCH}{PD\_VERSION\_PATCH}}
+{\footnotesize\ttfamily \label{macros_8hpp_ab26433cc36f516c4be52b6efc9b6b91a} 
+\#define PD\+\_\+\+VERSION\+\_\+\+PATCH~1}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8hpp_source_l00006}{6}} of file \mbox{\hyperlink{macros_8hpp_source}{macros.\+hpp}}.
+
+\Hypertarget{macros_8hpp_a7eecb5a8be1c9f6f4b409ccda0838d71}\index{macros.hpp@{macros.hpp}!PD\_VERSION\_STATE@{PD\_VERSION\_STATE}}
+\index{PD\_VERSION\_STATE@{PD\_VERSION\_STATE}!macros.hpp@{macros.hpp}}
+\doxysubsubsection{\texorpdfstring{PD\_VERSION\_STATE}{PD\_VERSION\_STATE}}
+{\footnotesize\ttfamily \label{macros_8hpp_a7eecb5a8be1c9f6f4b409ccda0838d71} 
+\#define PD\+\_\+\+VERSION\+\_\+\+STATE~"{}dev"{}}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{macros_8hpp_source}{macros.\+hpp}}.
+

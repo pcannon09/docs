@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Debug_8hpp_source" xml:lang="en-US">
+<title>Debug.hpp</title>
+<indexterm><primary>inc/Debug.hpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_Debug_8hpp_source_1l00001"/>00001 <emphasis role="preprocessor">#pragma&#32;&#32;once</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00002"/>00002 
+<anchor xml:id="_Debug_8hpp_source_1l00003"/>00003 <emphasis role="preprocessor">#if&#32;__cplusplus&#32;&gt;=&#32;201103L</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00004"/>00004 <emphasis role="preprocessor">#if&#32;__cplusplus&#32;&lt;&#32;201703L</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00005"/>00005 <emphasis role="preprocessor">#&#32;&#32;&#32;ifdef&#32;__PD_NO_FULL_SUPPORT</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00006"/>00006 <emphasis role="preprocessor">#&#32;&#32;&#32;&#32;&#32;&#32;&#32;undef&#32;__PD_NO_FULL_SUPPORT</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00007"/>00007 <emphasis role="preprocessor">#&#32;&#32;&#32;endif</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00008"/>00008 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__PD_NO_FULL_SUPPORT</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00009"/>00009 <emphasis role="preprocessor">#&#32;&#32;&#32;warning&#32;&quot;No&#32;full&#32;support&#32;for&#32;the&#32;current&#32;C++&#32;standard&#32;(Full&#32;Support&#32;is&#32;in&#32;C++17)&quot;</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00010"/>00010 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00011"/>00011 
+<anchor xml:id="_Debug_8hpp_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&lt;fstream&gt;</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;utility&gt;</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00015"/>00015 
+<anchor xml:id="_Debug_8hpp_source_1l00016"/><link linkend="_namespacepd">00016</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacepd">pd</link>
+<anchor xml:id="_Debug_8hpp_source_1l00017"/>00017 {<emphasis role="comment"></emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00018"/>00018 <emphasis role="comment">&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00019"/>00019 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Set&#32;debug&#32;settings&#32;struct&#32;with&#32;set&#32;values,&#32;default&#32;are&#32;already&#32;set&#32;for&#32;the&#32;best&#32;output</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00020"/>00020 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00021"/><link linkend="_structpd_1_1DebugSettings">00021</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structpd_1_1DebugSettings">DebugSettings</link>
+<anchor xml:id="_Debug_8hpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8hpp_source_1l00023"/><link linkend="_structpd_1_1DebugSettings_1afd0a7820b354bccb34a96385563884fe">00023</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structpd_1_1DebugSettings_1afd0a7820b354bccb34a96385563884fe">timeStamp</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_Debug_8hpp_source_1l00024"/><link linkend="_structpd_1_1DebugSettings_1a4d930f7573c0fafa804d401105b7f73a">00024</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structpd_1_1DebugSettings_1a4d930f7573c0fafa804d401105b7f73a">debugID</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_Debug_8hpp_source_1l00025"/><link linkend="_structpd_1_1DebugSettings_1a2865d89c00431662bc22b77f95d17d42">00025</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structpd_1_1DebugSettings_1a2865d89c00431662bc22b77f95d17d42">timeZone</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_Debug_8hpp_source_1l00026"/><link linkend="_structpd_1_1DebugSettings_1a2afcb5aa2dfbc0be5ad66c7cd710b270">00026</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structpd_1_1DebugSettings_1a2afcb5aa2dfbc0be5ad66c7cd710b270">output</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_Debug_8hpp_source_1l00027"/><link linkend="_structpd_1_1DebugSettings_1ad45e8eefae455b292a6aa0e92c31aed7">00027</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structpd_1_1DebugSettings_1ad45e8eefae455b292a6aa0e92c31aed7">blockedSave</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_Debug_8hpp_source_1l00028"/><link linkend="_structpd_1_1DebugSettings_1afa4ea451717ff2c906181ea577ed88af">00028</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structpd_1_1DebugSettings_1afa4ea451717ff2c906181ea577ed88af">custom</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_Debug_8hpp_source_1l00029"/><link linkend="_structpd_1_1DebugSettings_1ac3c028f76fc16d772479732293342b1a">00029</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structpd_1_1DebugSettings_1ac3c028f76fc16d772479732293342b1a">logLevelIgnoreOutput</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_Debug_8hpp_source_1l00030"/><link linkend="_structpd_1_1DebugSettings_1aa2bcb84d72d4bc75e7b9bd3cddf86119">00030</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structpd_1_1DebugSettings_1aa2bcb84d72d4bc75e7b9bd3cddf86119">logLevelIgnoreSave</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_Debug_8hpp_source_1l00031"/>00031 
+<anchor xml:id="_Debug_8hpp_source_1l00032"/><link linkend="_structpd_1_1DebugSettings_1ae9d2dd8ea16e114f52cc36ebbf0392b4">00032</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_structpd_1_1DebugSettings_1ae9d2dd8ea16e114f52cc36ebbf0392b4">logLevel</link>&#32;=&#32;0;
+<anchor xml:id="_Debug_8hpp_source_1l00033"/>00033 
+<anchor xml:id="_Debug_8hpp_source_1l00034"/><link linkend="_structpd_1_1DebugSettings_1a940ee9c89e3576bfb75a56d715f7a950">00034</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_structpd_1_1DebugSettings_1a940ee9c89e3576bfb75a56d715f7a950">filePath</link>;
+<anchor xml:id="_Debug_8hpp_source_1l00035"/><link linkend="_structpd_1_1DebugSettings_1ae6b189ac6f99b31b4121a5647f431ab7">00035</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_structpd_1_1DebugSettings_1ae6b189ac6f99b31b4121a5647f431ab7">startMsg</link>;
+<anchor xml:id="_Debug_8hpp_source_1l00036"/><link linkend="_structpd_1_1DebugSettings_1a146c663a29d4f50176ed3bed82945053">00036</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_structpd_1_1DebugSettings_1a146c663a29d4f50176ed3bed82945053">preStartMsg</link>;
+<anchor xml:id="_Debug_8hpp_source_1l00037"/><link linkend="_structpd_1_1DebugSettings_1a599c2665a0410b82f7b1b6cc1a49b7e5">00037</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_structpd_1_1DebugSettings_1a599c2665a0410b82f7b1b6cc1a49b7e5">endMsg</link>;
+<anchor xml:id="_Debug_8hpp_source_1l00038"/><link linkend="_structpd_1_1DebugSettings_1a25e2330fdf4bc82c98b449b0b35d93f8">00038</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_structpd_1_1DebugSettings_1a25e2330fdf4bc82c98b449b0b35d93f8">postEndMsg</link>;
+<anchor xml:id="_Debug_8hpp_source_1l00039"/><link linkend="_structpd_1_1DebugSettings_1a6c27eb85f3c06b4e3798f74690a381b9">00039</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_structpd_1_1DebugSettings_1a6c27eb85f3c06b4e3798f74690a381b9">totalEndMsg</link>;
+<anchor xml:id="_Debug_8hpp_source_1l00040"/><link linkend="_structpd_1_1DebugSettings_1a3c7bf8808fd25562118d533d03eddca0">00040</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_structpd_1_1DebugSettings_1a3c7bf8808fd25562118d533d03eddca0">totalCustom</link>;
+<anchor xml:id="_Debug_8hpp_source_1l00041"/>00041 
+<anchor xml:id="_Debug_8hpp_source_1l00042"/><link linkend="_structpd_1_1DebugSettings_1ae00bf7fdd748e21d895907f764fc23e7">00042</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::ios::openmode&#32;<link linkend="_structpd_1_1DebugSettings_1ae00bf7fdd748e21d895907f764fc23e7">openMode</link>&#32;=&#32;std::fstream::app&#32;|&#32;std::fstream::in&#32;|&#32;std::fstream::out;
+<anchor xml:id="_Debug_8hpp_source_1l00043"/><link linkend="_namespacepd_1ab7e116cbfd35c800f801115b90e7ebf4">00043</link> &#32;&#32;&#32;&#32;}&#32;<link linkend="_namespacepd_1ab7e116cbfd35c800f801115b90e7ebf4">DebugSettings</link>;
+<anchor xml:id="_Debug_8hpp_source_1l00044"/>00044 
+<anchor xml:id="_Debug_8hpp_source_1l00045"/><link linkend="_classpd_1_1Debug">00045</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_classpd_1_1Debug_1ad8a640f5b1bb6242016a3bf04d290d3c">Debug</link>
+<anchor xml:id="_Debug_8hpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_Debug_8hpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_Debug_8hpp_source_1l00048"/><link linkend="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8">00048</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8">id</link>;
+<anchor xml:id="_Debug_8hpp_source_1l00049"/>00049 
+<anchor xml:id="_Debug_8hpp_source_1l00050"/><link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">00050</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::fstream&#32;*<link linkend="_classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33">file</link>;
+<anchor xml:id="_Debug_8hpp_source_1l00051"/>00051 
+<anchor xml:id="_Debug_8hpp_source_1l00052"/><link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">00052</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structpd_1_1DebugSettings">DebugSettings</link>&#32;<link linkend="_classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea">settings</link>;
+<anchor xml:id="_Debug_8hpp_source_1l00053"/>00053 
+<anchor xml:id="_Debug_8hpp_source_1l00054"/><link linkend="_classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce">00054</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce">constructed</link>;
+<anchor xml:id="_Debug_8hpp_source_1l00055"/><link linkend="_classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e">00055</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e">constructError</link>;
+<anchor xml:id="_Debug_8hpp_source_1l00056"/>00056 <emphasis role="comment"></emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00057"/>00057 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00058"/>00058 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Initialize&#32;the&#32;Debug&#32;object&#32;that&#32;is&#32;going&#32;(or&#32;was)&#32;to&#32;be&#32;constructed</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00059"/>00059 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;bool&#32;Did&#32;it&#32;fail?&#32;True&#32;=&#32;Success,&#32;False&#32;=&#32;Failiture</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00060"/>00060 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5">__init</link>();
+<anchor xml:id="_Debug_8hpp_source_1l00062"/>00062 
+<anchor xml:id="_Debug_8hpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:<emphasis role="comment"></emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00064"/>00064 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00065"/>00065 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Construct&#32;the&#32;debugger&#32;with&#32;specified&#32;ID&#32;and&#32;settings</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00066"/>00066 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;Call&#32;the&#32;inner&#32;`__init()`&#32;function&#32;to&#32;Initialize</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00067"/>00067 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;_id&#32;Set&#32;the&#32;ID&#32;of&#32;this&#32;object</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00068"/>00068 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;_settings&#32;Set&#32;the&#32;settings&#32;of&#32;this&#32;object</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00069"/>00069 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classpd_1_1Debug_1ad8a640f5b1bb6242016a3bf04d290d3c">Debug</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;_id,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structpd_1_1DebugSettings">pd::DebugSettings</link>&#32;&amp;_settings);
+<anchor xml:id="_Debug_8hpp_source_1l00071"/>00071 <emphasis role="comment"></emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00072"/>00072 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00073"/>00073 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Call&#32;the&#32;`pd::Debug::close()`&#32;function&#32;to&#32;free&#32;all&#32;allocated&#32;memory</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00074"/>00074 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classpd_1_1Debug_1a4e506dd26f26d938bf745bf12ac7e1f4">~Debug</link>();
+<anchor xml:id="_Debug_8hpp_source_1l00076"/>00076 <emphasis role="comment"></emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00077"/>00077 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00078"/>00078 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Free&#32;all&#32;the&#32;allocated&#32;memory&#32;and&#32;resources,&#32;return&#32;true&#32;if&#32;it&#32;succeeded,&#32;return&#32;false&#32;if&#32;it&#32;did&#32;not</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00079"/>00079 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;bool&#32;True&#32;if&#32;success,&#32;false&#32;if&#32;failiture</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00080"/>00080 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf">close</link>();
+<anchor xml:id="_Debug_8hpp_source_1l00082"/>00082 <emphasis role="comment"></emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00083"/>00083 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00084"/>00084 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Construct&#32;debug&#32;information</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00085"/>00085 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;You&#32;can&#32;use&#32;it&#32;if&#32;it&#32;failed&#32;to&#32;construct&#32;properly&#32;to&#32;get&#32;the&#32;error&#32;message</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00086"/>00086 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;std::pair&lt;bool,&#32;std::string&gt;&#32;.first:&#32;Did&#32;it&#32;succeed?&#32;.second:&#32;Error&#32;reason</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00087"/>00087 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::pair&lt;bool,&#32;std::string&gt;&#32;<link linkend="_classpd_1_1Debug_1afa07c50eb146c275fb99dcd88d0d1152">constructInfo</link>();
+<anchor xml:id="_Debug_8hpp_source_1l00089"/>00089 <emphasis role="comment"></emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00090"/>00090 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00091"/>00091 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Log&#32;the&#32;message&#32;with&#32;specific&#32;custom&#32;type,&#32;message&#32;and&#32;log&#32;level</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00092"/>00092 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;_type&#32;Set&#32;the&#32;type&#32;of&#32;the&#32;debug&#32;message&#32;(Ex:&#32;Information,&#32;Success,&#32;Warning,&#32;Error,&#32;...)</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00093"/>00093 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;_msg&#32;Set&#32;the&#32;message&#32;for&#32;debugging</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00094"/>00094 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;_level&#32;Set&#32;the&#32;debug&#32;level&#32;level&#32;of&#32;the&#32;log&#32;(default&#32;as&#32;0,&#32;non-debug-level&#32;specific)</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00095"/>00095 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;The&#32;total&#32;string&#32;of&#32;the&#32;total&#32;debug&#32;message</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00096"/>00096 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classpd_1_1Debug_1a55e0965bbf467542ee27f67d2ba095e6">log</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;_type,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;_msg,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;_level&#32;=&#32;0);
+<anchor xml:id="_Debug_8hpp_source_1l00098"/>00098 <emphasis role="comment"></emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00099"/>00099 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00100"/>00100 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Return&#32;the&#32;ID&#32;of&#32;the&#32;created&#32;Debug&#32;object</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00101"/>00101 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;std::string&#32;The&#32;ID&#32;of&#32;this&#32;object</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00102"/>00102 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classpd_1_1Debug_1a50af1feba88c371367768f889eb59ea1">getID</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_Debug_8hpp_source_1l00104"/>00104 <emphasis role="comment"></emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00105"/>00105 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00106"/>00106 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;file&#32;for&#32;more&#32;control&#32;over&#32;the&#32;processing&#32;and&#32;for&#32;more&#32;actions</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00107"/>00107 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;std::fstream&#32;Allocated&#32;file&#32;to&#32;Debug&#32;object</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00108"/>00108 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::fstream&#32;*<link linkend="_classpd_1_1Debug_1a25b5382d4942f7d014daa9ec09542e36">getFile</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_Debug_8hpp_source_1l00110"/>00110 <emphasis role="comment"></emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00111"/>00111 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00112"/>00112 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;the&#32;settings&#32;set&#32;for&#32;the&#32;created&#32;Debug&#32;object</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00113"/>00113 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;pd::DebugSettings&#32;Debug&#32;settings&#32;to&#32;return</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00114"/>00114 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structpd_1_1DebugSettings">DebugSettings</link>&#32;<link linkend="_classpd_1_1Debug_1a2a93ad45e778e3e6e244012cdd386632">getSettings</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_Debug_8hpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_Debug_8hpp_source_1l00117"/>00117 }
+<anchor xml:id="_Debug_8hpp_source_1l00118"/>00118 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00119"/>00119 <emphasis role="preprocessor">#&#32;&#32;&#32;include&#32;&quot;<link linkend="_macros_8hpp">../inc/macros.hpp</link>&quot;</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00120"/>00120 <emphasis role="preprocessor">#&#32;&#32;&#32;warn&#32;&quot;Must&#32;use&#32;C++11&#32;or&#32;later&quot;</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00121"/>00121 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;__cplusplus</emphasis>
+<anchor xml:id="_Debug_8hpp_source_1l00122"/>00122 
+</programlisting></section>

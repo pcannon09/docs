@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="d4/d77/structpd_1_1DebugSettings" kind="struct" language="C++" prot="public">
+    <compoundname>pd::DebugSettings</compoundname>
+    <includes refid="df/dee/Debug_8hpp" local="no">Debug.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1ad45e8eefae455b292a6aa0e92c31aed7" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pd::DebugSettings::blockedSave</definition>
+        <argsstring></argsstring>
+        <name>blockedSave</name>
+        <qualifiedname>pd::DebugSettings::blockedSave</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="27" column="6" bodyfile="inc/Debug.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1afa4ea451717ff2c906181ea577ed88af" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pd::DebugSettings::custom</definition>
+        <argsstring></argsstring>
+        <name>custom</name>
+        <qualifiedname>pd::DebugSettings::custom</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="28" column="6" bodyfile="inc/Debug.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1a4d930f7573c0fafa804d401105b7f73a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pd::DebugSettings::debugID</definition>
+        <argsstring></argsstring>
+        <name>debugID</name>
+        <qualifiedname>pd::DebugSettings::debugID</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="24" column="6" bodyfile="inc/Debug.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1a599c2665a0410b82f7b1b6cc1a49b7e5" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string pd::DebugSettings::endMsg</definition>
+        <argsstring></argsstring>
+        <name>endMsg</name>
+        <qualifiedname>pd::DebugSettings::endMsg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="37" column="13" bodyfile="inc/Debug.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1a940ee9c89e3576bfb75a56d715f7a950" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string pd::DebugSettings::filePath</definition>
+        <argsstring></argsstring>
+        <name>filePath</name>
+        <qualifiedname>pd::DebugSettings::filePath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="34" column="13" bodyfile="inc/Debug.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1ae9d2dd8ea16e114f52cc36ebbf0392b4" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int pd::DebugSettings::logLevel</definition>
+        <argsstring></argsstring>
+        <name>logLevel</name>
+        <qualifiedname>pd::DebugSettings::logLevel</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="32" column="14" bodyfile="inc/Debug.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1ac3c028f76fc16d772479732293342b1a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pd::DebugSettings::logLevelIgnoreOutput</definition>
+        <argsstring></argsstring>
+        <name>logLevelIgnoreOutput</name>
+        <qualifiedname>pd::DebugSettings::logLevelIgnoreOutput</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="29" column="6" bodyfile="inc/Debug.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1aa2bcb84d72d4bc75e7b9bd3cddf86119" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pd::DebugSettings::logLevelIgnoreSave</definition>
+        <argsstring></argsstring>
+        <name>logLevelIgnoreSave</name>
+        <qualifiedname>pd::DebugSettings::logLevelIgnoreSave</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="30" column="6" bodyfile="inc/Debug.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1ae00bf7fdd748e21d895907f764fc23e7" prot="public" static="no" mutable="no">
+        <type>std::ios::openmode</type>
+        <definition>std::ios::openmode pd::DebugSettings::openMode</definition>
+        <argsstring></argsstring>
+        <name>openMode</name>
+        <qualifiedname>pd::DebugSettings::openMode</qualifiedname>
+        <initializer>= std::fstream::app | std::fstream::in | std::fstream::out</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="42" column="20" bodyfile="inc/Debug.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1a2afcb5aa2dfbc0be5ad66c7cd710b270" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pd::DebugSettings::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <qualifiedname>pd::DebugSettings::output</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="26" column="6" bodyfile="inc/Debug.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1a25e2330fdf4bc82c98b449b0b35d93f8" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string pd::DebugSettings::postEndMsg</definition>
+        <argsstring></argsstring>
+        <name>postEndMsg</name>
+        <qualifiedname>pd::DebugSettings::postEndMsg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="38" column="13" bodyfile="inc/Debug.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1a146c663a29d4f50176ed3bed82945053" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string pd::DebugSettings::preStartMsg</definition>
+        <argsstring></argsstring>
+        <name>preStartMsg</name>
+        <qualifiedname>pd::DebugSettings::preStartMsg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="36" column="13" bodyfile="inc/Debug.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1ae6b189ac6f99b31b4121a5647f431ab7" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string pd::DebugSettings::startMsg</definition>
+        <argsstring></argsstring>
+        <name>startMsg</name>
+        <qualifiedname>pd::DebugSettings::startMsg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="35" column="13" bodyfile="inc/Debug.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1afd0a7820b354bccb34a96385563884fe" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pd::DebugSettings::timeStamp</definition>
+        <argsstring></argsstring>
+        <name>timeStamp</name>
+        <qualifiedname>pd::DebugSettings::timeStamp</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="23" column="6" bodyfile="inc/Debug.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1a2865d89c00431662bc22b77f95d17d42" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pd::DebugSettings::timeZone</definition>
+        <argsstring></argsstring>
+        <name>timeZone</name>
+        <qualifiedname>pd::DebugSettings::timeZone</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="25" column="6" bodyfile="inc/Debug.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1a3c7bf8808fd25562118d533d03eddca0" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string pd::DebugSettings::totalCustom</definition>
+        <argsstring></argsstring>
+        <name>totalCustom</name>
+        <qualifiedname>pd::DebugSettings::totalCustom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="40" column="13" bodyfile="inc/Debug.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d77/structpd_1_1DebugSettings_1a6c27eb85f3c06b4e3798f74690a381b9" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string pd::DebugSettings::totalEndMsg</definition>
+        <argsstring></argsstring>
+        <name>totalEndMsg</name>
+        <qualifiedname>pd::DebugSettings::totalEndMsg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="39" column="13" bodyfile="inc/Debug.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Set debug settings struct with set values, default are already set for the best output. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>pd::DebugSettings</label>
+        <link refid="d4/d77/structpd_1_1DebugSettings"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>endMsg</edgelabel>
+          <edgelabel>filePath</edgelabel>
+          <edgelabel>postEndMsg</edgelabel>
+          <edgelabel>preStartMsg</edgelabel>
+          <edgelabel>startMsg</edgelabel>
+          <edgelabel>totalCustom</edgelabel>
+          <edgelabel>totalEndMsg</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="inc/Debug.hpp" line="21" column="1" bodyfile="inc/Debug.hpp" bodystart="22" bodyend="43"/>
+    <listofallmembers>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1ad45e8eefae455b292a6aa0e92c31aed7" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>blockedSave</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1afa4ea451717ff2c906181ea577ed88af" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>custom</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1a4d930f7573c0fafa804d401105b7f73a" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>debugID</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1a599c2665a0410b82f7b1b6cc1a49b7e5" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>endMsg</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1a940ee9c89e3576bfb75a56d715f7a950" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>filePath</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1ae9d2dd8ea16e114f52cc36ebbf0392b4" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>logLevel</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1ac3c028f76fc16d772479732293342b1a" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>logLevelIgnoreOutput</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1aa2bcb84d72d4bc75e7b9bd3cddf86119" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>logLevelIgnoreSave</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1ae00bf7fdd748e21d895907f764fc23e7" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>openMode</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1a2afcb5aa2dfbc0be5ad66c7cd710b270" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>output</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1a25e2330fdf4bc82c98b449b0b35d93f8" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>postEndMsg</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1a146c663a29d4f50176ed3bed82945053" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>preStartMsg</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1ae6b189ac6f99b31b4121a5647f431ab7" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>startMsg</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1afd0a7820b354bccb34a96385563884fe" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>timeStamp</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1a2865d89c00431662bc22b77f95d17d42" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>timeZone</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1a3c7bf8808fd25562118d533d03eddca0" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>totalCustom</name></member>
+      <member refid="d4/d77/structpd_1_1DebugSettings_1a6c27eb85f3c06b4e3798f74690a381b9" prot="public" virt="non-virtual"><scope>pd::DebugSettings</scope><name>totalEndMsg</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

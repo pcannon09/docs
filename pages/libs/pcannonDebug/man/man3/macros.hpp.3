@@ -1,0 +1,163 @@
+.TH "inc/macros.hpp" 3 "Version 0.0.1-dev" "Pcannon Debug" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/macros.hpp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPD_DEBUGLOG\fP(_logger,  _type,  _msg)"
+.br
+.RI "Debug log with file and line output capabilities using \fBpd::Debug\fP for debugging Output it to the standard output\&. "
+.ti -1c
+.RI "#define \fBPD_DEV\fP   true"
+.br
+.ti -1c
+.RI "#define \fBPD_SIMPLE_DEBUGLOG\fP(_type,  _msg)"
+.br
+.RI "Simple debug log with file and line output capabilities with fully custom message without any setting needed Output it to the standard output\&. "
+.ti -1c
+.RI "#define \fBPD_STRINGIFY\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBPD_TOSTRING\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBPD_VERSION\fP   ((STT_VERSION_MAJOR<<16)|(STT_VERSION_MINOR<<8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE << 24))"
+.br
+.ti -1c
+.RI "#define \fBPD_VERSION_CHECK\fP(STT_VERSION_MAJOR,  STT_VERSION_MINOR,  STT_VERSION_PATCH,  STT_VERSION_STATE)"
+.br
+.ti -1c
+.RI "#define \fBPD_VERSION_MAJOR\fP   0"
+.br
+.ti -1c
+.RI "#define \fBPD_VERSION_MINOR\fP   0"
+.br
+.ti -1c
+.RI "#define \fBPD_VERSION_PATCH\fP   1"
+.br
+.ti -1c
+.RI "#define \fBPD_VERSION_STATE\fP   'dev'"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define PD_DEBUGLOG( _logger,  _type,  _msg)"
+\fBValue:\fP
+.nf
+    _logger\&.log(_type, std::string(std::string(__FILE__) + ":" + std::to_string(__LINE__) + " " + _msg), 0)
+.PP
+.fi
+
+.PP
+Debug log with file and line output capabilities using \fBpd::Debug\fP for debugging Output it to the standard output\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_logger\fP Set the logger for \fBpd::Debug\fP capabilities 
+.br
+\fI_type\fP Set the type of the log (Ex: Information, Warning, Successs, Error, \&.\&.\&.) 
+.br
+\fI_msg\fP Set the message to log 
+.RE
+.PP
+
+.PP
+Definition at line \fB25\fP of file \fBmacros\&.hpp\fP\&.
+.nf
+25 #define PD_DEBUGLOG(_logger, _type, _msg) \\
+26     _logger\&.log(_type, std::string(std::string(__FILE__) + ":" + std::to_string(__LINE__) + " " + _msg), 0)
+.PP
+.fi
+
+.SS "#define PD_DEV   true"
+
+.PP
+Definition at line \fB42\fP of file \fBmacros\&.hpp\fP\&.
+.SS "#define PD_SIMPLE_DEBUGLOG( _type,  _msg)"
+\fBValue:\fP
+.nf
+    std::cout << _type << " [" << std::string(std::string(__FILE__) + ":" + std::to_string(__LINE__)) << "] " << _msg << "\\n";
+.PP
+.fi
+
+.PP
+Simple debug log with file and line output capabilities with fully custom message without any setting needed Output it to the standard output\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_type\fP Set the type of the log (Ex: Information, Warning, Successs, Error, \&.\&.\&.) 
+.br
+\fI_msg\fP Set the message to log 
+.RE
+.PP
+
+.PP
+Definition at line \fB34\fP of file \fBmacros\&.hpp\fP\&.
+.nf
+34 #define PD_SIMPLE_DEBUGLOG(_type, _msg) \\
+35     std::cout << _type << " [" << std::string(std::string(__FILE__) + ":" + std::to_string(__LINE__)) << "] " << _msg << "\\n";
+.PP
+.fi
+
+.SS "#define PD_STRINGIFY( x)"
+\fBValue:\fP
+.nf
+#x
+.PP
+.fi
+
+.PP
+Definition at line \fB38\fP of file \fBmacros\&.hpp\fP\&.
+.SS "#define PD_TOSTRING( x)"
+\fBValue:\fP
+.nf
+STT_STRINGIFY(x)
+.PP
+.fi
+
+.PP
+Definition at line \fB39\fP of file \fBmacros\&.hpp\fP\&.
+.SS "#define PD_VERSION   ((STT_VERSION_MAJOR<<16)|(STT_VERSION_MINOR<<8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE << 24))"
+
+.PP
+Definition at line \fB13\fP of file \fBmacros\&.hpp\fP\&.
+.SS "#define PD_VERSION_CHECK( STT_VERSION_MAJOR,  STT_VERSION_MINOR,  STT_VERSION_PATCH,  STT_VERSION_STATE)"
+\fBValue:\fP
+.nf
+    ((PD_VERSION_MAJOR<<16)|(STT_VERSION_MINOR<<8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE << 24))
+.PP
+.fi
+
+.PP
+Definition at line \fB15\fP of file \fBmacros\&.hpp\fP\&.
+.nf
+15 #define PD_VERSION_CHECK(STT_VERSION_MAJOR, STT_VERSION_MINOR, STT_VERSION_PATCH, STT_VERSION_STATE) \\
+16     ((PD_VERSION_MAJOR<<16)|(STT_VERSION_MINOR<<8)|(STT_VERSION_PATCH)|(STT_VERSION_STATE << 24))
+.PP
+.fi
+
+.SS "#define PD_VERSION_MAJOR   0"
+
+.PP
+Definition at line \fB4\fP of file \fBmacros\&.hpp\fP\&.
+.SS "#define PD_VERSION_MINOR   0"
+
+.PP
+Definition at line \fB5\fP of file \fBmacros\&.hpp\fP\&.
+.SS "#define PD_VERSION_PATCH   1"
+
+.PP
+Definition at line \fB6\fP of file \fBmacros\&.hpp\fP\&.
+.SS "#define PD_VERSION_STATE   'dev'"
+
+.PP
+Definition at line \fB11\fP of file \fBmacros\&.hpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Pcannon Debug from the source code\&.

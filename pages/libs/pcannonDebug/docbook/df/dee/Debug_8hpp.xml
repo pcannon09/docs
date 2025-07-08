@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Debug_8hpp" xml:lang="en-US">
+<title>inc/Debug.hpp File Reference</title>
+<indexterm><primary>inc/Debug.hpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;<?linebreak?>#include &lt;fstream&gt;<?linebreak?>#include &lt;utility&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classpd_1_1Debug">pd::Debug</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structpd_1_1DebugSettings">pd::DebugSettings</link></para>
+
+<para>Set debug settings struct with set values, default are already set for the best output. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacepd">pd</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct pd::DebugSettings <link linkend="_namespacepd_1ab7e116cbfd35c800f801115b90e7ebf4">pd::DebugSettings</link></para>
+
+<para>Set debug settings struct with set values, default are already set for the best output. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="d3/dad/classpd_1_1Debug" kind="class" language="C++" prot="public">
+    <compoundname>pd::Debug</compoundname>
+    <includes refid="df/dee/Debug_8hpp" local="no">Debug.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d3/dad/classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pd::Debug::constructed</definition>
+        <argsstring></argsstring>
+        <name>constructed</name>
+        <qualifiedname>pd::Debug::constructed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="54" column="6" bodyfile="inc/Debug.hpp" bodystart="54" bodyend="-1"/>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1ad8a640f5b1bb6242016a3bf04d290d3c" compoundref="df/d66/Debug_8cpp" startline="42" endline="49">Debug</referencedby>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1afa07c50eb146c275fb99dcd88d0d1152" compoundref="df/d66/Debug_8cpp" startline="137" endline="138">constructInfo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dad/classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string pd::Debug::constructError</definition>
+        <argsstring></argsstring>
+        <name>constructError</name>
+        <qualifiedname>pd::Debug::constructError</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="55" column="13" bodyfile="inc/Debug.hpp" bodystart="55" bodyend="-1"/>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5" compoundref="df/d66/Debug_8cpp" startline="17" endline="39">__init</referencedby>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1afa07c50eb146c275fb99dcd88d0d1152" compoundref="df/d66/Debug_8cpp" startline="137" endline="138">constructInfo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dad/classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33" prot="private" static="no" mutable="no">
+        <type>std::fstream *</type>
+        <definition>std::fstream* pd::Debug::file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <qualifiedname>pd::Debug::file</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="50" column="14" bodyfile="inc/Debug.hpp" bodystart="50" bodyend="-1"/>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5" compoundref="df/d66/Debug_8cpp" startline="17" endline="39">__init</referencedby>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf" compoundref="df/d66/Debug_8cpp" startline="123" endline="135">close</referencedby>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1a25b5382d4942f7d014daa9ec09542e36" compoundref="df/d66/Debug_8cpp" startline="143" endline="144">getFile</referencedby>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1a55e0965bbf467542ee27f67d2ba095e6" compoundref="df/d66/Debug_8cpp" startline="56" endline="121">log</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dad/classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string pd::Debug::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>pd::Debug::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="48" column="13" bodyfile="inc/Debug.hpp" bodystart="48" bodyend="-1"/>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1ad8a640f5b1bb6242016a3bf04d290d3c" compoundref="df/d66/Debug_8cpp" startline="42" endline="49">Debug</referencedby>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5" compoundref="df/d66/Debug_8cpp" startline="17" endline="39">__init</referencedby>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1a50af1feba88c371367768f889eb59ea1" compoundref="df/d66/Debug_8cpp" startline="140" endline="141">getID</referencedby>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1a55e0965bbf467542ee27f67d2ba095e6" compoundref="df/d66/Debug_8cpp" startline="56" endline="121">log</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dad/classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea" prot="private" static="no" mutable="no">
+        <type>const <ref refid="d4/d77/structpd_1_1DebugSettings" kindref="compound">DebugSettings</ref></type>
+        <definition>const DebugSettings pd::Debug::settings</definition>
+        <argsstring></argsstring>
+        <name>settings</name>
+        <qualifiedname>pd::Debug::settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="52" column="21" bodyfile="inc/Debug.hpp" bodystart="52" bodyend="-1"/>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1ad8a640f5b1bb6242016a3bf04d290d3c" compoundref="df/d66/Debug_8cpp" startline="42" endline="49">Debug</referencedby>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5" compoundref="df/d66/Debug_8cpp" startline="17" endline="39">__init</referencedby>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1a2a93ad45e778e3e6e244012cdd386632" compoundref="df/d66/Debug_8cpp" startline="146" endline="147">getSettings</referencedby>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1a55e0965bbf467542ee27f67d2ba095e6" compoundref="df/d66/Debug_8cpp" startline="56" endline="121">log</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="d3/dad/classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pd::Debug::__init</definition>
+        <argsstring>()</argsstring>
+        <name>__init</name>
+        <qualifiedname>pd::Debug::__init</qualifiedname>
+        <briefdescription>
+<para>Initialize the <ref refid="d3/dad/classpd_1_1Debug" kindref="compound">Debug</ref> object that is going (or was) to be constructed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool Did it fail? True = Success, False = Failiture </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="61" column="6" bodyfile="src/Debug.cpp" bodystart="17" bodyend="39"/>
+        <references refid="d3/dad/classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e" compoundref="df/dee/Debug_8hpp" startline="55">constructError</references>
+        <references refid="d3/dad/classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33" compoundref="df/dee/Debug_8hpp" startline="50">file</references>
+        <references refid="d3/dad/classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8" compoundref="df/dee/Debug_8hpp" startline="48">id</references>
+        <references refid="d3/dad/classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea" compoundref="df/dee/Debug_8hpp" startline="52">settings</references>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1ad8a640f5b1bb6242016a3bf04d290d3c" compoundref="df/d66/Debug_8cpp" startline="42" endline="49">Debug</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/dad/classpd_1_1Debug_1ad8a640f5b1bb6242016a3bf04d290d3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>pd::Debug::Debug</definition>
+        <argsstring>(const std::string &amp;_id, const pd::DebugSettings &amp;_settings)</argsstring>
+        <name>Debug</name>
+        <qualifiedname>pd::Debug::Debug</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/d77/structpd_1_1DebugSettings" kindref="compound">pd::DebugSettings</ref> &amp;</type>
+          <declname>_settings</declname>
+        </param>
+        <briefdescription>
+<para>Construct the debugger with specified ID and settings Call the inner <computeroutput><ref refid="d3/dad/classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5" kindref="member">__init()</ref></computeroutput> function to Initialize. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set the ID of this object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_settings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set the settings of this object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="70" column="1" bodyfile="src/Debug.cpp" bodystart="42" bodyend="49"/>
+        <references refid="d3/dad/classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5" compoundref="df/d66/Debug_8cpp" startline="17" endline="39">__init</references>
+        <references refid="d3/dad/classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce" compoundref="df/dee/Debug_8hpp" startline="54">constructed</references>
+        <references refid="d3/dad/classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8" compoundref="df/dee/Debug_8hpp" startline="48">id</references>
+        <references refid="d3/dad/classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea" compoundref="df/dee/Debug_8hpp" startline="52">settings</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dad/classpd_1_1Debug_1a4e506dd26f26d938bf745bf12ac7e1f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>pd::Debug::~Debug</definition>
+        <argsstring>()</argsstring>
+        <name>~Debug</name>
+        <qualifiedname>pd::Debug::~Debug</qualifiedname>
+        <briefdescription>
+<para>Call the <computeroutput><ref refid="d3/dad/classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf" kindref="member">pd::Debug::close()</ref></computeroutput> function to free all allocated memory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="75" column="1" bodyfile="src/Debug.cpp" bodystart="51" bodyend="54"/>
+        <references refid="d3/dad/classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf" compoundref="df/d66/Debug_8cpp" startline="123" endline="135">close</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dad/classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pd::Debug::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <qualifiedname>pd::Debug::close</qualifiedname>
+        <briefdescription>
+<para>Free all the allocated memory and resources, return true if it succeeded, return false if it did not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool True if success, false if failiture </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="81" column="6" bodyfile="src/Debug.cpp" bodystart="123" bodyend="135"/>
+        <references refid="d3/dad/classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33" compoundref="df/dee/Debug_8hpp" startline="50">file</references>
+        <referencedby refid="d3/dad/classpd_1_1Debug_1a4e506dd26f26d938bf745bf12ac7e1f4" compoundref="df/d66/Debug_8cpp" startline="51" endline="54">~Debug</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dad/classpd_1_1Debug_1afa07c50eb146c275fb99dcd88d0d1152" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; bool, std::string &gt;</type>
+        <definition>std::pair&lt; bool, std::string &gt; pd::Debug::constructInfo</definition>
+        <argsstring>()</argsstring>
+        <name>constructInfo</name>
+        <qualifiedname>pd::Debug::constructInfo</qualifiedname>
+        <briefdescription>
+<para>Construct debug information You can use it if it failed to construct properly to get the error message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::pair&lt;bool, std::string&gt; .first: Did it succeed? .second: Error reason </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="88" column="11" bodyfile="src/Debug.cpp" bodystart="137" bodyend="138"/>
+        <references refid="d3/dad/classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce" compoundref="df/dee/Debug_8hpp" startline="54">constructed</references>
+        <references refid="d3/dad/classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e" compoundref="df/dee/Debug_8hpp" startline="55">constructError</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dad/classpd_1_1Debug_1a25b5382d4942f7d014daa9ec09542e36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::fstream *</type>
+        <definition>std::fstream * pd::Debug::getFile</definition>
+        <argsstring>() const</argsstring>
+        <name>getFile</name>
+        <qualifiedname>pd::Debug::getFile</qualifiedname>
+        <briefdescription>
+<para>Get file for more control over the processing and for more actions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::fstream Allocated file to <ref refid="d3/dad/classpd_1_1Debug" kindref="compound">Debug</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="109" column="14" bodyfile="src/Debug.cpp" bodystart="143" bodyend="144"/>
+        <references refid="d3/dad/classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33" compoundref="df/dee/Debug_8hpp" startline="50">file</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dad/classpd_1_1Debug_1a50af1feba88c371367768f889eb59ea1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string pd::Debug::getID</definition>
+        <argsstring>() const</argsstring>
+        <name>getID</name>
+        <qualifiedname>pd::Debug::getID</qualifiedname>
+        <briefdescription>
+<para>Return the ID of the created <ref refid="d3/dad/classpd_1_1Debug" kindref="compound">Debug</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string The ID of this object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="103" column="13" bodyfile="src/Debug.cpp" bodystart="140" bodyend="141"/>
+        <references refid="d3/dad/classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8" compoundref="df/dee/Debug_8hpp" startline="48">id</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dad/classpd_1_1Debug_1a2a93ad45e778e3e6e244012cdd386632" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d77/structpd_1_1DebugSettings" kindref="compound">DebugSettings</ref></type>
+        <definition>DebugSettings pd::Debug::getSettings</definition>
+        <argsstring>() const</argsstring>
+        <name>getSettings</name>
+        <qualifiedname>pd::Debug::getSettings</qualifiedname>
+        <briefdescription>
+<para>Get the settings set for the created <ref refid="d3/dad/classpd_1_1Debug" kindref="compound">Debug</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="d4/d77/structpd_1_1DebugSettings" kindref="compound">pd::DebugSettings</ref> <ref refid="d3/dad/classpd_1_1Debug" kindref="compound">Debug</ref> settings to return </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="115" column="15" bodyfile="src/Debug.cpp" bodystart="146" bodyend="147"/>
+        <references refid="d3/dad/classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea" compoundref="df/dee/Debug_8hpp" startline="52">settings</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dad/classpd_1_1Debug_1a55e0965bbf467542ee27f67d2ba095e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string pd::Debug::log</definition>
+        <argsstring>(const std::string &amp;_type, const std::string &amp;_msg, unsigned int _level=0)</argsstring>
+        <name>log</name>
+        <qualifiedname>pd::Debug::log</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_type</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_msg</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>_level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Log the message with specific custom type, message and log level. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set the type of the debug message (Ex: Information, Success, Warning, Error, ...) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set the message for debugging </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set the debug level level of the log (default as 0, non-debug-level specific) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The total string of the total debug message </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="97" column="13" bodyfile="src/Debug.cpp" bodystart="56" bodyend="121"/>
+        <references refid="d3/dad/classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33" compoundref="df/dee/Debug_8hpp" startline="50">file</references>
+        <references refid="d3/dad/classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8" compoundref="df/dee/Debug_8hpp" startline="48">id</references>
+        <references refid="d3/dad/classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea" compoundref="df/dee/Debug_8hpp" startline="52">settings</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>pd::Debug</label>
+        <link refid="d3/dad/classpd_1_1Debug"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>constructError</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>file</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>settings</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>pd::DebugSettings</label>
+        <link refid="d4/d77/structpd_1_1DebugSettings"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>endMsg</edgelabel>
+          <edgelabel>filePath</edgelabel>
+          <edgelabel>postEndMsg</edgelabel>
+          <edgelabel>preStartMsg</edgelabel>
+          <edgelabel>startMsg</edgelabel>
+          <edgelabel>totalCustom</edgelabel>
+          <edgelabel>totalEndMsg</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::basic_fstream&lt; Char &gt;</label>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::basic_ios&lt; Char &gt;</label>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::basic_iostream&lt; Char &gt;</label>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>std::basic_istream&lt; Char &gt;</label>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>std::basic_ostream&lt; Char &gt;</label>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="4">
+        <label>std::fstream</label>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::ios_base</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="inc/Debug.hpp" line="45" column="1" bodyfile="inc/Debug.hpp" bodystart="46" bodyend="116"/>
+    <listofallmembers>
+      <member refid="d3/dad/classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5" prot="private" virt="non-virtual"><scope>pd::Debug</scope><name>__init</name></member>
+      <member refid="d3/dad/classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf" prot="public" virt="non-virtual"><scope>pd::Debug</scope><name>close</name></member>
+      <member refid="d3/dad/classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce" prot="private" virt="non-virtual"><scope>pd::Debug</scope><name>constructed</name></member>
+      <member refid="d3/dad/classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e" prot="private" virt="non-virtual"><scope>pd::Debug</scope><name>constructError</name></member>
+      <member refid="d3/dad/classpd_1_1Debug_1afa07c50eb146c275fb99dcd88d0d1152" prot="public" virt="non-virtual"><scope>pd::Debug</scope><name>constructInfo</name></member>
+      <member refid="d3/dad/classpd_1_1Debug_1ad8a640f5b1bb6242016a3bf04d290d3c" prot="public" virt="non-virtual"><scope>pd::Debug</scope><name>Debug</name></member>
+      <member refid="d3/dad/classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33" prot="private" virt="non-virtual"><scope>pd::Debug</scope><name>file</name></member>
+      <member refid="d3/dad/classpd_1_1Debug_1a25b5382d4942f7d014daa9ec09542e36" prot="public" virt="non-virtual"><scope>pd::Debug</scope><name>getFile</name></member>
+      <member refid="d3/dad/classpd_1_1Debug_1a50af1feba88c371367768f889eb59ea1" prot="public" virt="non-virtual"><scope>pd::Debug</scope><name>getID</name></member>
+      <member refid="d3/dad/classpd_1_1Debug_1a2a93ad45e778e3e6e244012cdd386632" prot="public" virt="non-virtual"><scope>pd::Debug</scope><name>getSettings</name></member>
+      <member refid="d3/dad/classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8" prot="private" virt="non-virtual"><scope>pd::Debug</scope><name>id</name></member>
+      <member refid="d3/dad/classpd_1_1Debug_1a55e0965bbf467542ee27f67d2ba095e6" prot="public" virt="non-virtual"><scope>pd::Debug</scope><name>log</name></member>
+      <member refid="d3/dad/classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea" prot="private" virt="non-virtual"><scope>pd::Debug</scope><name>settings</name></member>
+      <member refid="d3/dad/classpd_1_1Debug_1a4e506dd26f26d938bf745bf12ac7e1f4" prot="public" virt="non-virtual"><scope>pd::Debug</scope><name>~Debug</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,128 @@
+\doxysection{Debug.\+hpp}
+\hypertarget{Debug_8hpp_source}{}\label{Debug_8hpp_source}\index{inc/Debug.hpp@{inc/Debug.hpp}}
+\mbox{\hyperlink{Debug_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ \ once}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ <\ 201703L}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#\ \ \ ifdef\ \_\_PD\_NO\_FULL\_SUPPORT}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ undef\ \_\_PD\_NO\_FULL\_SUPPORT}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#\ \ \ endif}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#\ \ \ define\ \_\_PD\_NO\_FULL\_SUPPORT}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#\ \ \ warning\ "{}No\ full\ support\ for\ the\ current\ C++\ standard\ (Full\ Support\ is\ in\ C++17)"{}}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00016}\mbox{\hyperlink{namespacepd}{00016}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacepd}{pd}}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00017}00017\ \{\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00018}00018\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00019}00019\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ debug\ settings\ struct\ with\ set\ values,\ default\ are\ already\ set\ for\ the\ best\ output}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00020}00020\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00021}\mbox{\hyperlink{structpd_1_1DebugSettings}{00021}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structpd_1_1DebugSettings}{DebugSettings}}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00022}00022\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00023}\mbox{\hyperlink{structpd_1_1DebugSettings_afd0a7820b354bccb34a96385563884fe}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structpd_1_1DebugSettings_afd0a7820b354bccb34a96385563884fe}{timeStamp}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00024}\mbox{\hyperlink{structpd_1_1DebugSettings_a4d930f7573c0fafa804d401105b7f73a}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structpd_1_1DebugSettings_a4d930f7573c0fafa804d401105b7f73a}{debugID}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00025}\mbox{\hyperlink{structpd_1_1DebugSettings_a2865d89c00431662bc22b77f95d17d42}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structpd_1_1DebugSettings_a2865d89c00431662bc22b77f95d17d42}{timeZone}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00026}\mbox{\hyperlink{structpd_1_1DebugSettings_a2afcb5aa2dfbc0be5ad66c7cd710b270}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structpd_1_1DebugSettings_a2afcb5aa2dfbc0be5ad66c7cd710b270}{output}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00027}\mbox{\hyperlink{structpd_1_1DebugSettings_ad45e8eefae455b292a6aa0e92c31aed7}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structpd_1_1DebugSettings_ad45e8eefae455b292a6aa0e92c31aed7}{blockedSave}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00028}\mbox{\hyperlink{structpd_1_1DebugSettings_afa4ea451717ff2c906181ea577ed88af}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structpd_1_1DebugSettings_afa4ea451717ff2c906181ea577ed88af}{custom}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00029}\mbox{\hyperlink{structpd_1_1DebugSettings_ac3c028f76fc16d772479732293342b1a}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structpd_1_1DebugSettings_ac3c028f76fc16d772479732293342b1a}{logLevelIgnoreOutput}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00030}\mbox{\hyperlink{structpd_1_1DebugSettings_aa2bcb84d72d4bc75e7b9bd3cddf86119}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structpd_1_1DebugSettings_aa2bcb84d72d4bc75e7b9bd3cddf86119}{logLevelIgnoreSave}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00032}\mbox{\hyperlink{structpd_1_1DebugSettings_ae9d2dd8ea16e114f52cc36ebbf0392b4}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structpd_1_1DebugSettings_ae9d2dd8ea16e114f52cc36ebbf0392b4}{logLevel}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00034}\mbox{\hyperlink{structpd_1_1DebugSettings_a940ee9c89e3576bfb75a56d715f7a950}{00034}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structpd_1_1DebugSettings_a940ee9c89e3576bfb75a56d715f7a950}{filePath}};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00035}\mbox{\hyperlink{structpd_1_1DebugSettings_ae6b189ac6f99b31b4121a5647f431ab7}{00035}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structpd_1_1DebugSettings_ae6b189ac6f99b31b4121a5647f431ab7}{startMsg}};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00036}\mbox{\hyperlink{structpd_1_1DebugSettings_a146c663a29d4f50176ed3bed82945053}{00036}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structpd_1_1DebugSettings_a146c663a29d4f50176ed3bed82945053}{preStartMsg}};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00037}\mbox{\hyperlink{structpd_1_1DebugSettings_a599c2665a0410b82f7b1b6cc1a49b7e5}{00037}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structpd_1_1DebugSettings_a599c2665a0410b82f7b1b6cc1a49b7e5}{endMsg}};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00038}\mbox{\hyperlink{structpd_1_1DebugSettings_a25e2330fdf4bc82c98b449b0b35d93f8}{00038}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structpd_1_1DebugSettings_a25e2330fdf4bc82c98b449b0b35d93f8}{postEndMsg}};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00039}\mbox{\hyperlink{structpd_1_1DebugSettings_a6c27eb85f3c06b4e3798f74690a381b9}{00039}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structpd_1_1DebugSettings_a6c27eb85f3c06b4e3798f74690a381b9}{totalEndMsg}};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00040}\mbox{\hyperlink{structpd_1_1DebugSettings_a3c7bf8808fd25562118d533d03eddca0}{00040}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structpd_1_1DebugSettings_a3c7bf8808fd25562118d533d03eddca0}{totalCustom}};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00042}\mbox{\hyperlink{structpd_1_1DebugSettings_ae00bf7fdd748e21d895907f764fc23e7}{00042}}\ \ \ \ \ \ \ \ \ std::ios::openmode\ \mbox{\hyperlink{structpd_1_1DebugSettings_ae00bf7fdd748e21d895907f764fc23e7}{openMode}}\ =\ std::fstream::app\ |\ std::fstream::in\ |\ std::fstream::out;}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00043}\mbox{\hyperlink{namespacepd_ab7e116cbfd35c800f801115b90e7ebf4}{00043}}\ \ \ \ \ \}\ \mbox{\hyperlink{namespacepd_ab7e116cbfd35c800f801115b90e7ebf4}{DebugSettings}};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00045}\mbox{\hyperlink{classpd_1_1Debug}{00045}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classpd_1_1Debug_ad8a640f5b1bb6242016a3bf04d290d3c}{Debug}}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00047}00047\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00048}\mbox{\hyperlink{classpd_1_1Debug_ab3ada74cd59d0593a15a5e6f7053e2b8}{00048}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classpd_1_1Debug_ab3ada74cd59d0593a15a5e6f7053e2b8}{id}};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00050}\mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{00050}}\ \ \ \ \ \ \ \ \ std::fstream\ *\mbox{\hyperlink{classpd_1_1Debug_aa04c02aea0ff86ea7995a0d52ccb9a33}{file}};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00052}\mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{00052}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structpd_1_1DebugSettings}{DebugSettings}}\ \mbox{\hyperlink{classpd_1_1Debug_a67710c7f5a3f2e16f6ca1525b93689ea}{settings}};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00054}\mbox{\hyperlink{classpd_1_1Debug_aef8aa7f4f56caf8d4747f103beaa39ce}{00054}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classpd_1_1Debug_aef8aa7f4f56caf8d4747f103beaa39ce}{constructed}};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00055}\mbox{\hyperlink{classpd_1_1Debug_a29592eb48cd0d950f57fc3e82be8574e}{00055}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classpd_1_1Debug_a29592eb48cd0d950f57fc3e82be8574e}{constructError}};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00056}00056\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00057}00057\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00058}00058\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Initialize\ the\ Debug\ object\ that\ is\ going\ (or\ was)\ to\ be\ constructed}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00059}00059\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ bool\ Did\ it\ fail?\ True\ =\ Success,\ False\ =\ Failiture}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00060}00060\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classpd_1_1Debug_ab342540a78636f09ac021238901c8ae5}{\_\_init}}();}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00063}00063\ \ \ \ \ \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00064}00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00065}00065\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Construct\ the\ debugger\ with\ specified\ ID\ and\ settings}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ Call\ the\ inner\ \`{}\_\_init()`\ function\ to\ Initialize}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_id\ Set\ the\ ID\ of\ this\ object}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00068}00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_settings\ Set\ the\ settings\ of\ this\ object}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00069}00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpd_1_1Debug_ad8a640f5b1bb6242016a3bf04d290d3c}{Debug}}(\textcolor{keyword}{const}\ std::string\ \&\_id,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structpd_1_1DebugSettings}{pd::DebugSettings}}\ \&\_settings);}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00071}00071\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00072}00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Call\ the\ \`{}pd::Debug::close()`\ function\ to\ free\ all\ allocated\ memory}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpd_1_1Debug_a4e506dd26f26d938bf745bf12ac7e1f4}{\string~Debug}}();}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00076}00076\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00077}00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00078}00078\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Free\ all\ the\ allocated\ memory\ and\ resources,\ return\ true\ if\ it\ succeeded,\ return\ false\ if\ it\ did\ not}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00079}00079\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ bool\ True\ if\ success,\ false\ if\ failiture}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00080}00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classpd_1_1Debug_afdb04da272c5b290aacbc75fdbaf16cf}{close}}();}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00082}00082\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00083}00083\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00084}00084\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Construct\ debug\ information}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00085}00085\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ You\ can\ use\ it\ if\ it\ failed\ to\ construct\ properly\ to\ get\ the\ error\ message}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00086}00086\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::pair<bool,\ std::string>\ .first:\ Did\ it\ succeed?\ .second:\ Error\ reason}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00087}00087\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00088}00088\ \ \ \ \ \ \ \ \ std::pair<bool,\ std::string>\ \mbox{\hyperlink{classpd_1_1Debug_afa07c50eb146c275fb99dcd88d0d1152}{constructInfo}}();}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00089}00089\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00090}00090\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00091}00091\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Log\ the\ message\ with\ specific\ custom\ type,\ message\ and\ log\ level}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00092}00092\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_type\ Set\ the\ type\ of\ the\ debug\ message\ (Ex:\ Information,\ Success,\ Warning,\ Error,\ ...)}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00093}00093\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_msg\ Set\ the\ message\ for\ debugging}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00094}00094\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_level\ Set\ the\ debug\ level\ level\ of\ the\ log\ (default\ as\ 0,\ non-\/debug-\/level\ specific)}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00095}00095\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ The\ total\ string\ of\ the\ total\ debug\ message}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00096}00096\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00097}00097\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classpd_1_1Debug_a55e0965bbf467542ee27f67d2ba095e6}{log}}(\textcolor{keyword}{const}\ std::string\ \&\_type,\ \textcolor{keyword}{const}\ std::string\ \&\_msg,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_level\ =\ 0);}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00098}00098\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00099}00099\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00100}00100\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Return\ the\ ID\ of\ the\ created\ Debug\ object}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00101}00101\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::string\ The\ ID\ of\ this\ object}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00102}00102\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00103}00103\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classpd_1_1Debug_a50af1feba88c371367768f889eb59ea1}{getID}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00104}00104\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00105}00105\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00106}00106\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ file\ for\ more\ control\ over\ the\ processing\ and\ for\ more\ actions}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00107}00107\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::fstream\ Allocated\ file\ to\ Debug\ object}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00108}00108\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00109}00109\ \ \ \ \ \ \ \ \ std::fstream\ *\mbox{\hyperlink{classpd_1_1Debug_a25b5382d4942f7d014daa9ec09542e36}{getFile}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00110}00110\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00111}00111\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00112}00112\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ the\ settings\ set\ for\ the\ created\ Debug\ object}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00113}00113\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ pd::DebugSettings\ Debug\ settings\ to\ return}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00114}00114\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structpd_1_1DebugSettings}{DebugSettings}}\ \mbox{\hyperlink{classpd_1_1Debug_a2a93ad45e778e3e6e244012cdd386632}{getSettings}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00116}00116\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00117}00117\ \}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00118}00118\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00119}00119\ \textcolor{preprocessor}{\#\ \ \ include\ "{}\mbox{\hyperlink{macros_8hpp}{../inc/macros.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00120}00120\ \textcolor{preprocessor}{\#\ \ \ warn\ "{}Must\ use\ C++11\ or\ later"{}}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00121}00121\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{Debug_8hpp_source_l00122}00122\ }
+
+\end{DoxyCode}

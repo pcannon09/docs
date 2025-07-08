@@ -1,0 +1,408 @@
+.TH "pd::Debug" 3 "Version 0.0.1-dev" "Pcannon Debug" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+pd::Debug
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Debug\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDebug\fP (const std::string &_id, const \fBpd::DebugSettings\fP &_settings)"
+.br
+.RI "Construct the debugger with specified ID and settings Call the inner \fR\fB__init()\fP\fP function to Initialize\&. "
+.ti -1c
+.RI "\fB~Debug\fP ()"
+.br
+.RI "Call the \fR\fBpd::Debug::close()\fP\fP function to free all allocated memory\&. "
+.ti -1c
+.RI "bool \fBclose\fP ()"
+.br
+.RI "Free all the allocated memory and resources, return true if it succeeded, return false if it did not\&. "
+.ti -1c
+.RI "std::pair< bool, std::string > \fBconstructInfo\fP ()"
+.br
+.RI "Construct debug information You can use it if it failed to construct properly to get the error message\&. "
+.ti -1c
+.RI "std::fstream * \fBgetFile\fP () const"
+.br
+.RI "Get file for more control over the processing and for more actions\&. "
+.ti -1c
+.RI "std::string \fBgetID\fP () const"
+.br
+.RI "Return the ID of the created \fBDebug\fP object\&. "
+.ti -1c
+.RI "\fBDebugSettings\fP \fBgetSettings\fP () const"
+.br
+.RI "Get the settings set for the created \fBDebug\fP object\&. "
+.ti -1c
+.RI "std::string \fBlog\fP (const std::string &_type, const std::string &_msg, unsigned int _level=0)"
+.br
+.RI "Log the message with specific custom type, message and log level\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fB__init\fP ()"
+.br
+.RI "Initialize the \fBDebug\fP object that is going (or was) to be constructed\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBconstructed\fP"
+.br
+.ti -1c
+.RI "std::string \fBconstructError\fP"
+.br
+.ti -1c
+.RI "std::fstream * \fBfile\fP"
+.br
+.ti -1c
+.RI "std::string \fBid\fP"
+.br
+.ti -1c
+.RI "const \fBDebugSettings\fP \fBsettings\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB45\fP of file \fBDebug\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "pd::Debug::Debug (const std::string & _id, const \fBpd::DebugSettings\fP & _settings)"
+
+.PP
+Construct the debugger with specified ID and settings Call the inner \fR\fB__init()\fP\fP function to Initialize\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_id\fP Set the ID of this object 
+.br
+\fI_settings\fP Set the settings of this object 
+.RE
+.PP
+
+.PP
+Definition at line \fB42\fP of file \fBDebug\&.cpp\fP\&.
+.nf
+43         : id(_id), settings(_settings)
+44     {
+45         this\->constructed = this\->__init();
+46 
+47         if (!this\->constructed)
+48             return;
+49     }
+.PP
+.fi
+
+.PP
+References \fB__init()\fP, \fBconstructed\fP, \fBid\fP, and \fBsettings\fP\&.
+.SS "pd::Debug::~Debug ()"
+
+.PP
+Call the \fR\fBpd::Debug::close()\fP\fP function to free all allocated memory\&. 
+.PP
+Definition at line \fB51\fP of file \fBDebug\&.cpp\fP\&.
+.nf
+52     {
+53         this\->close();
+54     }
+.PP
+.fi
+
+.PP
+References \fBclose()\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool pd::Debug::__init ()\fR [private]\fP"
+
+.PP
+Initialize the \fBDebug\fP object that is going (or was) to be constructed\&. 
+.PP
+\fBReturns\fP
+.RS 4
+bool Did it fail? True = Success, False = Failiture 
+.RE
+.PP
+
+.PP
+Definition at line \fB17\fP of file \fBDebug\&.cpp\fP\&.
+.nf
+18     {
+19         if (!this\->settings\&.filePath\&.empty())
+20         {
+21             this\->file = new std::fstream(this\->settings\&.filePath, this\->settings\&.openMode);
+22 
+23             if (!this\->file\->is_open())
+24             {
+25                 this\->constructError = "File could not open : " + this\->id;
+26 
+27                 return false;
+28             }
+29 
+30             if (!this\->file\->good())
+31             {
+32                 this\->constructError = "File is not good for opening : " + this\->id;
+33 
+34                 return false;
+35             }
+36         }
+37 
+38         return true;
+39     }
+.PP
+.fi
+
+.PP
+References \fBconstructError\fP, \fBfile\fP, \fBid\fP, and \fBsettings\fP\&.
+.PP
+Referenced by \fBDebug()\fP\&.
+.SS "bool pd::Debug::close ()"
+
+.PP
+Free all the allocated memory and resources, return true if it succeeded, return false if it did not\&. 
+.PP
+\fBReturns\fP
+.RS 4
+bool True if success, false if failiture 
+.RE
+.PP
+
+.PP
+Definition at line \fB123\fP of file \fBDebug\&.cpp\fP\&.
+.nf
+124     {
+125         if (this\->file)
+126         {
+127             this\->file\->close();
+128 
+129             delete this\->file; this\->file = nullptr;
+130         }
+131 
+132         else return false;
+133 
+134         return true;
+135     }
+.PP
+.fi
+
+.PP
+References \fBfile\fP\&.
+.PP
+Referenced by \fB~Debug()\fP\&.
+.SS "std::pair< bool, std::string > pd::Debug::constructInfo ()"
+
+.PP
+Construct debug information You can use it if it failed to construct properly to get the error message\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::pair<bool, std::string> \&.first: Did it succeed? \&.second: Error reason 
+.RE
+.PP
+
+.PP
+Definition at line \fB137\fP of file \fBDebug\&.cpp\fP\&.
+.nf
+138     { return { this\->constructed, this\->constructError }; }
+.PP
+.fi
+
+.PP
+References \fBconstructed\fP, and \fBconstructError\fP\&.
+.SS "std::fstream * pd::Debug::getFile () const"
+
+.PP
+Get file for more control over the processing and for more actions\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::fstream Allocated file to \fBDebug\fP object 
+.RE
+.PP
+
+.PP
+Definition at line \fB143\fP of file \fBDebug\&.cpp\fP\&.
+.nf
+144     { return this\->file; }
+.PP
+.fi
+
+.PP
+References \fBfile\fP\&.
+.SS "std::string pd::Debug::getID () const"
+
+.PP
+Return the ID of the created \fBDebug\fP object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::string The ID of this object 
+.RE
+.PP
+
+.PP
+Definition at line \fB140\fP of file \fBDebug\&.cpp\fP\&.
+.nf
+141     { return this\->id; }
+.PP
+.fi
+
+.PP
+References \fBid\fP\&.
+.SS "\fBDebugSettings\fP pd::Debug::getSettings () const"
+
+.PP
+Get the settings set for the created \fBDebug\fP object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBpd::DebugSettings\fP \fBDebug\fP settings to return 
+.RE
+.PP
+
+.PP
+Definition at line \fB146\fP of file \fBDebug\&.cpp\fP\&.
+.nf
+147     { return this\->settings; }
+.PP
+.fi
+
+.PP
+References \fBsettings\fP\&.
+.SS "std::string pd::Debug::log (const std::string & _type, const std::string & _msg, unsigned int _level = \fR0\fP)"
+
+.PP
+Log the message with specific custom type, message and log level\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_type\fP Set the type of the debug message (Ex: Information, Success, Warning, Error, \&.\&.\&.) 
+.br
+\fI_msg\fP Set the message for debugging 
+.br
+\fI_level\fP Set the debug level level of the log (default as 0, non-debug-level specific) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The total string of the total debug message 
+.RE
+.PP
+
+.PP
+Definition at line \fB56\fP of file \fBDebug\&.cpp\fP\&.
+.nf
+57     {
+58         std::string msg;
+59         std::string type = _type;
+60 
+61         std::transform(type\&.begin(), type\&.end(), type\&.begin(), ::toupper);
+62 
+63         msg += this\->settings\&.preStartMsg;
+64 
+65         if (!this\->settings\&.custom)
+66         {
+67             msg += "[ " + this\->settings\&.startMsg + type + (this\->settings\&.debugID ? + " | " + this\->id : "");
+68 
+69             // DATE AND TIME INFORMATION
+70             if (this\->settings\&.timeStamp)
+71             {
+72                 timeUtils::TimeInfo timeInfo;
+73                 timeUtils::DateInfo dateInfo;
+74                 timeUtils::Time time("debug\-time");
+75 
+76                 time\&.update(timeInfo);
+77                 time\&.update(dateInfo);
+78 
+79                 msg += " | " + std::to_string(dateInfo\&.year) + "\-" + std::to_string(dateInfo\&.month) + "\-" + std::to_string(dateInfo\&.day) + " | ";
+80                 msg += std::to_string(timeInfo\&.hour) + ":" + std::to_string(timeInfo\&.min) + ":" + std::to_string(timeInfo\&.sec) + "\&." + std::to_string(timeInfo\&.ms)
+81                     + (this\->settings\&.timeZone ? " +" + std::to_string(time\&.getUTCOffset()\&.hour) + ":" + std::to_string(time\&.getUTCOffset()\&.min) : "");
+82             }
+83 
+84             else msg += " ";
+85 
+86             // FINISG MSG
+87         }
+88 
+89         else msg = "[ " + this\->settings\&.startMsg + this\->settings\&.totalCustom;
+90 
+91         msg += this\->settings\&.endMsg + "] " + (this\->settings\&.postEndMsg) + _msg + this\->settings\&.totalEndMsg + "\\n";
+92 
+93         if (this\->settings\&.output)
+94         {
+95             if ((!this\->settings\&.logLevelIgnoreOutput && this\->settings\&.logLevel == 0) || 
+96                     (this\->settings\&.logLevel > 0 && _level <= this\->settings\&.logLevel))
+97             {
+98                 std::cout << msg;
+99             }
+100         }
+101 
+102         if (!this\->settings\&.blockedSave)
+103         {
+104             if ((!this\->settings\&.logLevelIgnoreSave && this\->settings\&.logLevel == 0) || 
+105                     (this\->settings\&.logLevel > 0 && _level <= this\->settings\&.logLevel))
+106             {
+107 #               ifndef __PD_NO_FULL_SUPPORT
+108                 if (!fs::exists(fs::path(this\->settings\&.filePath)\&.parent_path()))
+109                 {
+110                     fs::create_directories(fs::path(this\->settings\&.filePath)\&.parent_path());
+111 
+112                     this\->file\->close(); this\->file\->open(this\->settings\&.filePath, this\->settings\&.openMode);
+113                 }
+114 #               endif
+115 
+116                 *this\->file << msg;
+117             }
+118         }
+119 
+120         return msg;
+121     }
+.PP
+.fi
+
+.PP
+References \fBfile\fP, \fBid\fP, and \fBsettings\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool pd::Debug::constructed\fR [private]\fP"
+
+.PP
+Definition at line \fB54\fP of file \fBDebug\&.hpp\fP\&.
+.PP
+Referenced by \fBDebug()\fP, and \fBconstructInfo()\fP\&.
+.SS "std::string pd::Debug::constructError\fR [private]\fP"
+
+.PP
+Definition at line \fB55\fP of file \fBDebug\&.hpp\fP\&.
+.PP
+Referenced by \fB__init()\fP, and \fBconstructInfo()\fP\&.
+.SS "std::fstream* pd::Debug::file\fR [private]\fP"
+
+.PP
+Definition at line \fB50\fP of file \fBDebug\&.hpp\fP\&.
+.PP
+Referenced by \fB__init()\fP, \fBclose()\fP, \fBgetFile()\fP, and \fBlog()\fP\&.
+.SS "std::string pd::Debug::id\fR [private]\fP"
+
+.PP
+Definition at line \fB48\fP of file \fBDebug\&.hpp\fP\&.
+.PP
+Referenced by \fBDebug()\fP, \fB__init()\fP, \fBgetID()\fP, and \fBlog()\fP\&.
+.SS "const \fBDebugSettings\fP pd::Debug::settings\fR [private]\fP"
+
+.PP
+Definition at line \fB52\fP of file \fBDebug\&.hpp\fP\&.
+.PP
+Referenced by \fBDebug()\fP, \fB__init()\fP, \fBgetSettings()\fP, and \fBlog()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Pcannon Debug from the source code\&.

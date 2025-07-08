@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="da/ddd/README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Pcannon<sp/>Debug</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>1.0.0-build</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Simple<sp/>yet<sp/>powerful<sp/>debug<sp/>manager<sp/>for<sp/>C++</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Pcannon<sp/>Debug<sp/>is<sp/>a<sp/>simple<sp/>yet<sp/>powerful<sp/>way<sp/>to<sp/>debug<sp/>your<sp/>program**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>General<sp/>pcannonDebug<sp/>version<sp/>support<sp/>(1.0.0-build)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Full<sp/>C++11<sp/>support<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Full<sp/>C++17<sp/>support<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">|--------------------------------------------|-----------------------------------------------------------------------------|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>GCC<sp/>4.8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>GCC<sp/>8.0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Clang<sp/>3.3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Clang<sp/>7.0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>MSVC<sp/>14.0<sp/>(Visual<sp/>Studio<sp/>2015)<sp/>|<sp/>MSVC<sp/>19.14<sp/>(Visual<sp/>Studio<sp/>2017<sp/>version<sp/>15.7)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Requirements</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>Minimum<sp/>C++<sp/>standard<sp/>support:<sp/>C++11</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>1.<sp/>No<sp/>full<sp/>support<sp/>for<sp/>C++17</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Full<sp/>pcannonDebug<sp/>C++<sp/>standard<sp/>debug:<sp/>C++17</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>1.<sp/>Create<sp/>directories<sp/>automatically<sp/>for<sp/>specifed<sp/>log<sp/>file<sp/>if<sp/>directory<sp/>is<sp/>non-existent</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Features</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>Debug<sp/>Settings:<sp/>Customize<sp/>the<sp/>debug<sp/>output<sp/>or<sp/>how<sp/>is<sp/>it<sp/>debugged<sp/>with<sp/>debug<sp/>settings<sp/>type</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Log<sp/>the<sp/>output<sp/>to<sp/>a<sp/>file,<sp/>stdout<sp/>with<sp/>specific<sp/>log<sp/>level</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Time,<sp/>date<sp/>and<sp/>timezone<sp/>output</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Fully<sp/>custom<sp/>debug<sp/>output</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Simple<sp/>debug<sp/>without<sp/>needing<sp/>to<sp/>create<sp/>a<sp/>new<sp/>object<sp/>that<sp/>shows<sp/>your<sp/>what<sp/>line<sp/>and<sp/>file<sp/>it<sp/>was<sp/>called</highlight></codeline>
+<codeline><highlight class="normal">6.<sp/>Complex<sp/>debug<sp/>that<sp/>shows<sp/>you<sp/>the<sp/>line<sp/>and<sp/>file<sp/>that<sp/>was<sp/>called</highlight></codeline>
+<codeline><highlight class="normal">7.<sp/>Get<sp/>the<sp/>debug<sp/>output<sp/>to<sp/>an<sp/>std::string</highlight></codeline>
+<codeline><highlight class="normal">8.<sp/>Optional<sp/>C++17<sp/>support,<sp/>can<sp/>be<sp/>used<sp/>with<sp/>C++11<sp/>as<sp/>the<sp/>minimum<sp/>standard</highlight></codeline>
+<codeline><highlight class="normal">9.<sp/>Get<sp/>if<sp/>constructing<sp/>operation<sp/>constructed<sp/>incorrectly<sp/>to<sp/>a<sp/>variable</highlight></codeline>
+<codeline><highlight class="normal">10.<sp/>Custom<sp/>file<sp/>manipulation<sp/>for<sp/>more<sp/>debugging</highlight></codeline>
+<codeline><highlight class="normal">11.<sp/>Get<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">12.<sp/>Custom<sp/>file<sp/>open<sp/>mode</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>For<sp/>more<sp/>information</highlight></codeline>
+<codeline><highlight class="normal">**For<sp/>more<sp/>information,<sp/>check<sp/>this<sp/>website:**<sp/>*https://pcannon09.github.io/docs/pages/libs/pcannonDebug/html/index.html*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**For<sp/>checking<sp/>the<sp/>source<sp/>code,<sp/>go<sp/>to<sp/>the<sp/>github<sp/>repo:**<sp/>*https://github.com/pcannon09/pcannonDebug/*</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

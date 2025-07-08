@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="d2/d3c/namespacepd" kind="namespace" language="C++">
+    <compoundname>pd</compoundname>
+    <innerclass refid="d3/dad/classpd_1_1Debug" prot="public">pd::Debug</innerclass>
+    <innerclass refid="d4/d77/structpd_1_1DebugSettings" prot="public">pd::DebugSettings</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d2/d3c/namespacepd_1ab7e116cbfd35c800f801115b90e7ebf4" prot="public" static="no">
+        <type>struct pd::DebugSettings</type>
+        <definition>typedef struct pd::DebugSettings pd::DebugSettings</definition>
+        <argsstring></argsstring>
+        <name>DebugSettings</name>
+        <qualifiedname>pd::DebugSettings</qualifiedname>
+        <briefdescription>
+<para>Set debug settings struct with set values, default are already set for the best output. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Debug.hpp" line="43" column="15"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/Debug.hpp" line="16" column="1"/>
+  </compounddef>
+</doxygen>

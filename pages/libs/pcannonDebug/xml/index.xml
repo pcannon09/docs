@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="en-US">
+  <compound refid="d3/dad/classpd_1_1Debug" kind="class"><name>pd::Debug</name>
+    <member refid="d3/dad/classpd_1_1Debug_1aef8aa7f4f56caf8d4747f103beaa39ce" kind="variable"><name>constructed</name></member>
+    <member refid="d3/dad/classpd_1_1Debug_1a29592eb48cd0d950f57fc3e82be8574e" kind="variable"><name>constructError</name></member>
+    <member refid="d3/dad/classpd_1_1Debug_1aa04c02aea0ff86ea7995a0d52ccb9a33" kind="variable"><name>file</name></member>
+    <member refid="d3/dad/classpd_1_1Debug_1ab3ada74cd59d0593a15a5e6f7053e2b8" kind="variable"><name>id</name></member>
+    <member refid="d3/dad/classpd_1_1Debug_1a67710c7f5a3f2e16f6ca1525b93689ea" kind="variable"><name>settings</name></member>
+    <member refid="d3/dad/classpd_1_1Debug_1ab342540a78636f09ac021238901c8ae5" kind="function"><name>__init</name></member>
+    <member refid="d3/dad/classpd_1_1Debug_1ad8a640f5b1bb6242016a3bf04d290d3c" kind="function"><name>Debug</name></member>
+    <member refid="d3/dad/classpd_1_1Debug_1a4e506dd26f26d938bf745bf12ac7e1f4" kind="function"><name>~Debug</name></member>
+    <member refid="d3/dad/classpd_1_1Debug_1afdb04da272c5b290aacbc75fdbaf16cf" kind="function"><name>close</name></member>
+    <member refid="d3/dad/classpd_1_1Debug_1afa07c50eb146c275fb99dcd88d0d1152" kind="function"><name>constructInfo</name></member>
+    <member refid="d3/dad/classpd_1_1Debug_1a25b5382d4942f7d014daa9ec09542e36" kind="function"><name>getFile</name></member>
+    <member refid="d3/dad/classpd_1_1Debug_1a50af1feba88c371367768f889eb59ea1" kind="function"><name>getID</name></member>
+    <member refid="d3/dad/classpd_1_1Debug_1a2a93ad45e778e3e6e244012cdd386632" kind="function"><name>getSettings</name></member>
+    <member refid="d3/dad/classpd_1_1Debug_1a55e0965bbf467542ee27f67d2ba095e6" kind="function"><name>log</name></member>
+  </compound>
+  <compound refid="d4/d77/structpd_1_1DebugSettings" kind="struct"><name>pd::DebugSettings</name>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1ad45e8eefae455b292a6aa0e92c31aed7" kind="variable"><name>blockedSave</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1afa4ea451717ff2c906181ea577ed88af" kind="variable"><name>custom</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1a4d930f7573c0fafa804d401105b7f73a" kind="variable"><name>debugID</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1a599c2665a0410b82f7b1b6cc1a49b7e5" kind="variable"><name>endMsg</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1a940ee9c89e3576bfb75a56d715f7a950" kind="variable"><name>filePath</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1ae9d2dd8ea16e114f52cc36ebbf0392b4" kind="variable"><name>logLevel</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1ac3c028f76fc16d772479732293342b1a" kind="variable"><name>logLevelIgnoreOutput</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1aa2bcb84d72d4bc75e7b9bd3cddf86119" kind="variable"><name>logLevelIgnoreSave</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1ae00bf7fdd748e21d895907f764fc23e7" kind="variable"><name>openMode</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1a2afcb5aa2dfbc0be5ad66c7cd710b270" kind="variable"><name>output</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1a25e2330fdf4bc82c98b449b0b35d93f8" kind="variable"><name>postEndMsg</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1a146c663a29d4f50176ed3bed82945053" kind="variable"><name>preStartMsg</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1ae6b189ac6f99b31b4121a5647f431ab7" kind="variable"><name>startMsg</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1afd0a7820b354bccb34a96385563884fe" kind="variable"><name>timeStamp</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1a2865d89c00431662bc22b77f95d17d42" kind="variable"><name>timeZone</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1a3c7bf8808fd25562118d533d03eddca0" kind="variable"><name>totalCustom</name></member>
+    <member refid="d4/d77/structpd_1_1DebugSettings_1a6c27eb85f3c06b4e3798f74690a381b9" kind="variable"><name>totalEndMsg</name></member>
+  </compound>
+  <compound refid="d2/d3c/namespacepd" kind="namespace"><name>pd</name>
+    <member refid="d2/d3c/namespacepd_1ab7e116cbfd35c800f801115b90e7ebf4" kind="typedef"><name>DebugSettings</name></member>
+  </compound>
+  <compound refid="d8/dcc/namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="df/dee/Debug_8hpp" kind="file"><name>Debug.hpp</name>
+  </compound>
+  <compound refid="db/dbe/macros_8hpp" kind="file"><name>macros.hpp</name>
+    <member refid="db/dbe/macros_8hpp_1a670943c08adbadcff3b706d74e3b14be" kind="define"><name>PD_DEBUGLOG</name></member>
+    <member refid="db/dbe/macros_8hpp_1a4e23b136a511d5454595b8e1364edf8a" kind="define"><name>PD_DEV</name></member>
+    <member refid="db/dbe/macros_8hpp_1aeadcd91d3ad65cd57a29b99c64bb9b77" kind="define"><name>PD_SIMPLE_DEBUGLOG</name></member>
+    <member refid="db/dbe/macros_8hpp_1af6e71c74189066ca8fc24d44500ab7a0" kind="define"><name>PD_STRINGIFY</name></member>
+    <member refid="db/dbe/macros_8hpp_1a90671304256f54002660963c47301253" kind="define"><name>PD_TOSTRING</name></member>
+    <member refid="db/dbe/macros_8hpp_1ae9c30977974c137f90be933bb7ed15ad" kind="define"><name>PD_VERSION</name></member>
+    <member refid="db/dbe/macros_8hpp_1afda24ebbcf9fc1f72ed656c757e2aae3" kind="define"><name>PD_VERSION_CHECK</name></member>
+    <member refid="db/dbe/macros_8hpp_1a225088c327cc6c7fcca809dc62e48fd4" kind="define"><name>PD_VERSION_MAJOR</name></member>
+    <member refid="db/dbe/macros_8hpp_1a3992091abfbb37fe5f384aea4dd97dea" kind="define"><name>PD_VERSION_MINOR</name></member>
+    <member refid="db/dbe/macros_8hpp_1ab26433cc36f516c4be52b6efc9b6b91a" kind="define"><name>PD_VERSION_PATCH</name></member>
+    <member refid="db/dbe/macros_8hpp_1a7eecb5a8be1c9f6f4b409ccda0838d71" kind="define"><name>PD_VERSION_STATE</name></member>
+  </compound>
+  <compound refid="da/ddd/README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="df/d66/Debug_8cpp" kind="file"><name>Debug.cpp</name>
+  </compound>
+  <compound refid="dir_bfccd401955b95cf8c75461437045ac0" kind="dir"><name>inc</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>
