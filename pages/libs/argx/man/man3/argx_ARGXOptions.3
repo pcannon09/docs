@@ -1,4 +1,4 @@
-.TH "argx::ARGXOptions" 3 "Version 1.0.0-build" "Argx" \" -*- nroff -*-
+.TH "argx::ARGXOptions" 3 "Version 1.1.0-build" "Argx" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,6 +11,9 @@ argx::ARGXOptions
 .SS "Public Attributes"
 
 .in +1c
+.ti -1c
+.RI "bool \fBhasAnySubParams\fP = false"
+.br
 .ti -1c
 .RI "bool \fBhasSubParams\fP = false"
 .br
@@ -38,6 +41,10 @@ argx::ARGXOptions
 Definition at line \fB24\fP of file \fBtypes\&.hpp\fP\&.
 .SH "Member Data Documentation"
 .PP 
+.SS "bool argx::ARGXOptions::hasAnySubParams = false"
+
+.PP
+Definition at line \fB44\fP of file \fBtypes\&.hpp\fP\&.
 .SS "bool argx::ARGXOptions::hasSubParams = false"
 
 .PP
@@ -67,7 +74,9 @@ Definition at line \fB40\fP of file \fBtypes\&.hpp\fP\&.
 .SS "std::vector<\fBARGXOptions\fP> argx::ARGXOptions::subParams"
 
 .PP
-Definition at line \fB45\fP of file \fBtypes\&.hpp\fP\&.
+Definition at line \fB46\fP of file \fBtypes\&.hpp\fP\&.
+.PP
+Referenced by \fBargx::Argx::compareArgs()\fP\&.
 
 .SH "Author"
 .PP 

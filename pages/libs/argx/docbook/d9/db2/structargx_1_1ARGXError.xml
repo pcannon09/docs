@@ -31,6 +31,8 @@ Definition at line <link linkend="_types_8hpp_source_1l00015">15</link> of file 
 <indexterm><primary>argx::ARGXError</primary><secondary>code</secondary></indexterm>
 <para><computeroutput>int argx::ARGXError::code</computeroutput></para><para>
 Definition at line <link linkend="_types_8hpp_source_1l00021">21</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8cpp_source_1l00064">argx::Argx::add()</link>.</para>
 </section>
 <anchor xml:id="_structargx_1_1ARGXError_1adbf9556ec51d02e2dec17bf2aa93845e"/><section>
     <title>error</title>
@@ -52,6 +54,8 @@ Definition at line <link linkend="_types_8hpp_source_1l00019">19</link> of file 
 <indexterm><primary>argx::ARGXError</primary><secondary>type</secondary></indexterm>
 <para><computeroutput>std::string argx::ARGXError::type</computeroutput></para><para>
 Definition at line <link linkend="_types_8hpp_source_1l00017">17</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8cpp_source_1l00064">argx::Argx::add()</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

@@ -1,9 +1,24 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="da/dd5/structargx_1_1ARGXOptions" kind="struct" language="C++" prot="public">
     <compoundname>argx::ARGXOptions</compoundname>
     <includes refid="dd/de3/types_8hpp" local="no">types.hpp</includes>
     <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1ad2eec2de8559ea5cc4e446c0d47c6279" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool argx::ARGXOptions::hasAnySubParams</definition>
+        <argsstring></argsstring>
+        <name>hasAnySubParams</name>
+        <qualifiedname>argx::ARGXOptions::hasAnySubParams</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="44" column="6" bodyfile="inc/types.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a" prot="public" static="no" mutable="no">
         <type>bool</type>
         <definition>bool argx::ARGXOptions::hasSubParams</definition>
@@ -92,7 +107,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/types.hpp" line="45" column="13" bodyfile="inc/types.hpp" bodystart="45" bodyend="-1"/>
+        <location file="inc/types.hpp" line="46" column="13" bodyfile="inc/types.hpp" bodystart="46" bodyend="-1"/>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1adb4e8a622135970b4e12f14d49a76e52" compoundref="d1/dad/Argx_8cpp" startline="319" endline="380">argx::Argx::compareArgs</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -128,8 +144,9 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="inc/types.hpp" line="24" column="1" bodyfile="inc/types.hpp" bodystart="25" bodyend="46"/>
+    <location file="inc/types.hpp" line="24" column="1" bodyfile="inc/types.hpp" bodystart="25" bodyend="47"/>
     <listofallmembers>
+      <member refid="da/dd5/structargx_1_1ARGXOptions_1ad2eec2de8559ea5cc4e446c0d47c6279" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>hasAnySubParams</name></member>
       <member refid="da/dd5/structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>hasSubParams</name></member>
       <member refid="da/dd5/structargx_1_1ARGXOptions_1a0bd17b9be2b313a37c353d9d8b8c5b65" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>id</name></member>
       <member refid="da/dd5/structargx_1_1ARGXOptions_1a825a889884b7b19a5c1550a328780ab9" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>info</name></member>

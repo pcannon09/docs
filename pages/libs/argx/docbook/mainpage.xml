@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
-<title>ARGX - 1.0.0-build</title>
-<indexterm><primary>ARGX - 1.0.0-build</primary></indexterm>
+<title>
+<para>ARGX - 1.1.0-build </para>
+</title>
+<indexterm><primary>ARGX - 1.1.0-build</primary></indexterm>
 
 <para><anchor xml:id="_index_1md_README"/></para>
 <section xml:id="_index_1autotoc_md1">
@@ -25,28 +27,40 @@
 <thead>
       <row  class='markdownTableHead'>
 <entry align='center'>
-<para>Current Argx Version   </para>
+<para>Argx Version  </para>
 </entry><entry align='center'>
-<para>Minimum C++ Standard   </para>
+<para>Minimum C++ Standard  </para>
 </entry><entry align='center'>
-<para>GCC   </para>
+<para>GCC  </para>
 </entry><entry align='center'>
-<para>Clang   </para>
+<para>Clang  </para>
 </entry><entry align='center'>
-<para>MSVC    </para>
+<para>MSVC  </para>
 </entry></row>
 </thead><tbody>
       <row  class='markdownTableRowOdd'>
 <entry align='center'>
-<para>1.0.0-build   </para>
+<para>1.1.0-build  </para>
 </entry><entry align='center'>
-<para>C++11   </para>
+<para>C++11  </para>
 </entry><entry align='center'>
-<para>GCC 4.8+   </para>
+<para>GCC 4.8+  </para>
 </entry><entry align='center'>
-<para>Clang 3.3+   </para>
+<para>Clang 3.3+  </para>
 </entry><entry align='center'>
-<para>MSVC 2017+ (/std:c++11 or later)   </para>
+<para>MSVC 2017+ (/std:c++11 or later)  </para>
+</entry></row>
+      <row  class='markdownTableRowEven'>
+<entry align='center'>
+<para>1.0.0-build  </para>
+</entry><entry align='center'>
+<para>C++11  </para>
+</entry><entry align='center'>
+<para>GCC 4.8+  </para>
+</entry><entry align='center'>
+<para>Clang 3.3+  </para>
+</entry><entry align='center'>
+<para>MSVC 2017+ (/std:c++11 or later)  </para>
 </entry></row>
     </tbody>
     </tgroup>
@@ -76,8 +90,14 @@
 
 <para><itemizedlist>
 <listitem>
-<para>For more information, please check the documentation at <emphasis role="bold"><link xlink:href="https://pcannon09.github.io/docs/pages/libs/argx/html/index.html">https://pcannon09.github.io/docs/pages/libs/argx/html/index.html</link></emphasis> </para>
+<para>For more information, please check the documentation at <emphasis role="bold"><link xlink:href="https://pcannon09.github.io/docs/pages/libs/argx/html/index.html">https://pcannon09.github.io/docs/pages/libs/argx/html/index.html</link></emphasis></para>
 </listitem></itemizedlist>
 </para>
+</section>
+<section xml:id="_index_1autotoc_md9">
+<title>APIs</title><section xml:id="_index_1autotoc_md10">
+<title>Python3 API: <emphasis role="bold"><link xlink:href="https://github.com/pcannon09/argx-py">https://github.com/pcannon09/argx-py</link></emphasis></title></section>
+<section xml:id="_index_1autotoc_md11">
+<title>C API / Clone: <emphasis role="bold"><link xlink:href="https://github.com/pcannon09/argx-c">https://github.com/pcannon09/argx-c</link></emphasis></title></section>
 </section>
 </chapter>

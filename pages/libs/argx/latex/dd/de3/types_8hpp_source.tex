@@ -4,7 +4,7 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{types_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{\Hypertarget{types_8hpp_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L\ ||\ defined(ARGX\_AS\_PYTHON\_PACKAGE)}}
 \DoxyCodeLine{\Hypertarget{types_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{\Hypertarget{types_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{\Hypertarget{types_8hpp_source_l00006}00006\ }
@@ -45,21 +45,22 @@
 \DoxyCodeLine{\Hypertarget{types_8hpp_source_l00041}\mbox{\hyperlink{structargx_1_1ARGXOptions_a825a889884b7b19a5c1550a328780ab9}{00041}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structargx_1_1ARGXOptions_a825a889884b7b19a5c1550a328780ab9}{info}};}
 \DoxyCodeLine{\Hypertarget{types_8hpp_source_l00042}00042\ }
 \DoxyCodeLine{\Hypertarget{types_8hpp_source_l00043}\mbox{\hyperlink{structargx_1_1ARGXOptions_a02e69197bd3efa35da99edcc4018eb1a}{00043}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structargx_1_1ARGXOptions_a02e69197bd3efa35da99edcc4018eb1a}{hasSubParams}}\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00044}00044\ }
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00045}\mbox{\hyperlink{structargx_1_1ARGXOptions_a6345f9a87edfb31007c6e3b53f9eeaed}{00045}}\ \ \ \ \ \ \ \ \ std::vector<ARGXOptions>\ \mbox{\hyperlink{structargx_1_1ARGXOptions_a6345f9a87edfb31007c6e3b53f9eeaed}{subParams}};}
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00046}\mbox{\hyperlink{namespaceargx_a9933be078f36db7b1424f6dd0372eb72}{00046}}\ \ \ \ \ \}\ \mbox{\hyperlink{namespaceargx_a9933be078f36db7b1424f6dd0372eb72}{ARGXOptions}};}
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00047}00047\ }
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00048}\mbox{\hyperlink{structargx_1_1ARGXParam}{00048}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structargx_1_1ARGXParam}{ARGXParam}}}
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00049}00049\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00050}\mbox{\hyperlink{structargx_1_1ARGXParam_a47afcd85c9734d815006ee41647ac4e0}{00050}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structargx_1_1ARGXParam_a47afcd85c9734d815006ee41647ac4e0}{exists}}\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00051}\mbox{\hyperlink{structargx_1_1ARGXParam_ace0572ca0af0b51da129b562bee6a673}{00051}}\ \ \ \ \ \ \ \ \ std::vector<bool>\ \mbox{\hyperlink{structargx_1_1ARGXParam_ace0572ca0af0b51da129b562bee6a673}{subExists}};}
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00052}\mbox{\hyperlink{namespaceargx_a40874387325f4f81850b2ef717831239}{00052}}\ \ \ \ \ \}\ \mbox{\hyperlink{namespaceargx_a40874387325f4f81850b2ef717831239}{ARGXParam}};}
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00053}00053\ \}}
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00054}00054\ }
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00055}00055\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00056}00056\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Must\ compile\ with\ C++11\ support\ or\ newer"{}}}
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00057}00057\ \textcolor{preprocessor}{\#\ \ \ pragma\ message("{}Current\ standard\ is\ "{}\ ARGX\_TOSTRING(\_\_cplusplus))}}
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00058}00058\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00044}\mbox{\hyperlink{structargx_1_1ARGXOptions_ad2eec2de8559ea5cc4e446c0d47c6279}{00044}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structargx_1_1ARGXOptions_ad2eec2de8559ea5cc4e446c0d47c6279}{hasAnySubParams}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00046}\mbox{\hyperlink{structargx_1_1ARGXOptions_a6345f9a87edfb31007c6e3b53f9eeaed}{00046}}\ \ \ \ \ \ \ \ \ std::vector<ARGXOptions>\ \mbox{\hyperlink{structargx_1_1ARGXOptions_a6345f9a87edfb31007c6e3b53f9eeaed}{subParams}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00047}\mbox{\hyperlink{namespaceargx_a9933be078f36db7b1424f6dd0372eb72}{00047}}\ \ \ \ \ \}\ \mbox{\hyperlink{namespaceargx_a9933be078f36db7b1424f6dd0372eb72}{ARGXOptions}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00049}\mbox{\hyperlink{structargx_1_1ARGXParam}{00049}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structargx_1_1ARGXParam}{ARGXParam}}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00050}00050\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00051}\mbox{\hyperlink{structargx_1_1ARGXParam_a47afcd85c9734d815006ee41647ac4e0}{00051}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structargx_1_1ARGXParam_a47afcd85c9734d815006ee41647ac4e0}{exists}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00052}\mbox{\hyperlink{structargx_1_1ARGXParam_ace0572ca0af0b51da129b562bee6a673}{00052}}\ \ \ \ \ \ \ \ \ std::vector<bool>\ \mbox{\hyperlink{structargx_1_1ARGXParam_ace0572ca0af0b51da129b562bee6a673}{subExists}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00053}\mbox{\hyperlink{namespaceargx_a40874387325f4f81850b2ef717831239}{00053}}\ \ \ \ \ \}\ \mbox{\hyperlink{namespaceargx_a40874387325f4f81850b2ef717831239}{ARGXParam}};}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00054}00054\ \}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00056}00056\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00057}00057\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Must\ compile\ with\ C++11\ support\ or\ newer"{}}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00058}00058\ \textcolor{preprocessor}{\#\ \ \ pragma\ message("{}Current\ standard\ is\ "{}\ ARGX\_TOSTRING(\_\_cplusplus))}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00059}00059\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{types_8hpp_source_l00060}00060\ }
 
 \end{DoxyCode}

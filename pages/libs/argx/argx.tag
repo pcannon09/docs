@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.13.2">
+<tagfile doxygen_version="1.14.0">
   <compound kind="file">
     <name>Argx.hpp</name>
     <path>inc/</path>
@@ -110,7 +110,6 @@
     <path>src/</path>
     <filename>d1/dad/Argx_8cpp.html</filename>
     <includes id="d0/d32/Argx_8hpp" name="Argx.hpp" local="yes" import="no" module="no" objc="no">../inc/Argx.hpp</includes>
-    <includes id="d2/d1d/ARGXAddError_8hpp" name="ARGXAddError.hpp" local="yes" import="no" module="no" objc="no">../inc/ARGXAddError.hpp</includes>
     <includes id="dd/de3/types_8hpp" name="types.hpp" local="yes" import="no" module="no" objc="no">../inc/types.hpp</includes>
     <namespace>argx</namespace>
   </compound>
@@ -179,6 +178,13 @@
       <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
       <anchor>a812254e076a5ec208ba9d2eab470edb4</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getArgPos</name>
+      <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
+      <anchor>a73dccd80c13749ea006b46653cc2a8a0</anchor>
+      <arglist>(const std::string &amp;arg)</arglist>
     </member>
     <member kind="function">
       <type>std::string</type>
@@ -320,6 +326,13 @@
     <filename>da/dd5/structargx_1_1ARGXOptions.html</filename>
     <member kind="variable">
       <type>bool</type>
+      <name>hasAnySubParams</name>
+      <anchorfile>da/dd5/structargx_1_1ARGXOptions.html</anchorfile>
+      <anchor>ad2eec2de8559ea5cc4e446c0d47c6279</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
       <name>hasSubParams</name>
       <anchorfile>da/dd5/structargx_1_1ARGXOptions.html</anchorfile>
       <anchor>a02e69197bd3efa35da99edcc4018eb1a</anchor>
@@ -420,8 +433,8 @@
   </compound>
   <compound kind="page">
     <name>index</name>
-    <title>ARGX - 1.0.0-build</title>
+    <title>ARGX - 1.1.0-build</title>
     <filename>index.html</filename>
-    <docanchor file="index.html" title="ARGX - 1.0.0-build">md_README</docanchor>
+    <docanchor file="index.html" title="ARGX - 1.1.0-build">md_README</docanchor>
   </compound>
 </tagfile>

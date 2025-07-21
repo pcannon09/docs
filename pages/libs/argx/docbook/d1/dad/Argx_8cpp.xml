@@ -2,7 +2,7 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Argx_8cpp" xml:lang="en-US">
 <title>src/Argx.cpp File Reference</title>
 <indexterm><primary>src/Argx.cpp</primary></indexterm>
-<programlisting linenumbering="unnumbered">#include &lt;string&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;codecvt&gt;<?linebreak?>#include &lt;locale&gt;<?linebreak?>#include &quot;../inc/Argx.hpp&quot;<?linebreak?>#include &quot;../inc/ARGXAddError.hpp&quot;<?linebreak?>#include &quot;../inc/types.hpp&quot;<?linebreak?></programlisting><simplesect>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;<?linebreak?>#include &lt;codecvt&gt;<?linebreak?>#include &lt;locale&gt;<?linebreak?>#include &lt;algorithm&gt;<?linebreak?>#include &quot;../inc/Argx.hpp&quot;<?linebreak?>#include &quot;../inc/types.hpp&quot;<?linebreak?></programlisting><simplesect>
     <title>Namespaces    </title>
         <itemizedlist>
             <listitem><para>namespace <link linkend="_namespaceargx">argx</link></para>

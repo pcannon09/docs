@@ -4,7 +4,7 @@
 <indexterm><primary>inc/types.hpp</primary></indexterm>
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_types_8hpp_source_1l00001"/>00001 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
 <anchor xml:id="_types_8hpp_source_1l00002"/>00002 
-<anchor xml:id="_types_8hpp_source_1l00003"/>00003 <emphasis role="preprocessor">#if&#32;__cplusplus&#32;&gt;=&#32;201103L</emphasis>
+<anchor xml:id="_types_8hpp_source_1l00003"/>00003 <emphasis role="preprocessor">#if&#32;__cplusplus&#32;&gt;=&#32;201103L&#32;||&#32;defined(ARGX_AS_PYTHON_PACKAGE)</emphasis>
 <anchor xml:id="_types_8hpp_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
 <anchor xml:id="_types_8hpp_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
 <anchor xml:id="_types_8hpp_source_1l00006"/>00006 
@@ -45,20 +45,21 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_types_8hpp_source_1l00041"/><link linkend="_structargx_1_1ARGXOptions_1a825a889884b7b19a5c1550a328780ab9">00041</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_structargx_1_1ARGXOptions_1a825a889884b7b19a5c1550a328780ab9">info</link>;
 <anchor xml:id="_types_8hpp_source_1l00042"/>00042 
 <anchor xml:id="_types_8hpp_source_1l00043"/><link linkend="_structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a">00043</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a">hasSubParams</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
-<anchor xml:id="_types_8hpp_source_1l00044"/>00044 
-<anchor xml:id="_types_8hpp_source_1l00045"/><link linkend="_structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed">00045</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;ARGXOptions&gt;&#32;<link linkend="_structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed">subParams</link>;
-<anchor xml:id="_types_8hpp_source_1l00046"/><link linkend="_namespaceargx_1a9933be078f36db7b1424f6dd0372eb72">00046</link> &#32;&#32;&#32;&#32;}&#32;<link linkend="_namespaceargx_1a9933be078f36db7b1424f6dd0372eb72">ARGXOptions</link>;
-<anchor xml:id="_types_8hpp_source_1l00047"/>00047 
-<anchor xml:id="_types_8hpp_source_1l00048"/><link linkend="_structargx_1_1ARGXParam">00048</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structargx_1_1ARGXParam">ARGXParam</link>
-<anchor xml:id="_types_8hpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;{
-<anchor xml:id="_types_8hpp_source_1l00050"/><link linkend="_structargx_1_1ARGXParam_1a47afcd85c9734d815006ee41647ac4e0">00050</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structargx_1_1ARGXParam_1a47afcd85c9734d815006ee41647ac4e0">exists</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
-<anchor xml:id="_types_8hpp_source_1l00051"/><link linkend="_structargx_1_1ARGXParam_1ace0572ca0af0b51da129b562bee6a673">00051</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;bool&gt;&#32;<link linkend="_structargx_1_1ARGXParam_1ace0572ca0af0b51da129b562bee6a673">subExists</link>;
-<anchor xml:id="_types_8hpp_source_1l00052"/><link linkend="_namespaceargx_1a40874387325f4f81850b2ef717831239">00052</link> &#32;&#32;&#32;&#32;}&#32;<link linkend="_namespaceargx_1a40874387325f4f81850b2ef717831239">ARGXParam</link>;
-<anchor xml:id="_types_8hpp_source_1l00053"/>00053 }
-<anchor xml:id="_types_8hpp_source_1l00054"/>00054 
-<anchor xml:id="_types_8hpp_source_1l00055"/>00055 <emphasis role="preprocessor">#else</emphasis>
-<anchor xml:id="_types_8hpp_source_1l00056"/>00056 <emphasis role="preprocessor">#&#32;&#32;&#32;error&#32;&quot;Must&#32;compile&#32;with&#32;C++11&#32;support&#32;or&#32;newer&quot;</emphasis>
-<anchor xml:id="_types_8hpp_source_1l00057"/>00057 <emphasis role="preprocessor">#&#32;&#32;&#32;pragma&#32;message(&quot;Current&#32;standard&#32;is&#32;&quot;&#32;ARGX_TOSTRING(__cplusplus))</emphasis>
-<anchor xml:id="_types_8hpp_source_1l00058"/>00058 <emphasis role="preprocessor">#endif</emphasis>
-<anchor xml:id="_types_8hpp_source_1l00059"/>00059 
+<anchor xml:id="_types_8hpp_source_1l00044"/><link linkend="_structargx_1_1ARGXOptions_1ad2eec2de8559ea5cc4e446c0d47c6279">00044</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structargx_1_1ARGXOptions_1ad2eec2de8559ea5cc4e446c0d47c6279">hasAnySubParams</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_types_8hpp_source_1l00045"/>00045 
+<anchor xml:id="_types_8hpp_source_1l00046"/><link linkend="_structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed">00046</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;ARGXOptions&gt;&#32;<link linkend="_structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed">subParams</link>;
+<anchor xml:id="_types_8hpp_source_1l00047"/><link linkend="_namespaceargx_1a9933be078f36db7b1424f6dd0372eb72">00047</link> &#32;&#32;&#32;&#32;}&#32;<link linkend="_namespaceargx_1a9933be078f36db7b1424f6dd0372eb72">ARGXOptions</link>;
+<anchor xml:id="_types_8hpp_source_1l00048"/>00048 
+<anchor xml:id="_types_8hpp_source_1l00049"/><link linkend="_structargx_1_1ARGXParam">00049</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structargx_1_1ARGXParam">ARGXParam</link>
+<anchor xml:id="_types_8hpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_types_8hpp_source_1l00051"/><link linkend="_structargx_1_1ARGXParam_1a47afcd85c9734d815006ee41647ac4e0">00051</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structargx_1_1ARGXParam_1a47afcd85c9734d815006ee41647ac4e0">exists</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_types_8hpp_source_1l00052"/><link linkend="_structargx_1_1ARGXParam_1ace0572ca0af0b51da129b562bee6a673">00052</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;bool&gt;&#32;<link linkend="_structargx_1_1ARGXParam_1ace0572ca0af0b51da129b562bee6a673">subExists</link>;
+<anchor xml:id="_types_8hpp_source_1l00053"/><link linkend="_namespaceargx_1a40874387325f4f81850b2ef717831239">00053</link> &#32;&#32;&#32;&#32;}&#32;<link linkend="_namespaceargx_1a40874387325f4f81850b2ef717831239">ARGXParam</link>;
+<anchor xml:id="_types_8hpp_source_1l00054"/>00054 }
+<anchor xml:id="_types_8hpp_source_1l00055"/>00055 
+<anchor xml:id="_types_8hpp_source_1l00056"/>00056 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_types_8hpp_source_1l00057"/>00057 <emphasis role="preprocessor">#&#32;&#32;&#32;error&#32;&quot;Must&#32;compile&#32;with&#32;C++11&#32;support&#32;or&#32;newer&quot;</emphasis>
+<anchor xml:id="_types_8hpp_source_1l00058"/>00058 <emphasis role="preprocessor">#&#32;&#32;&#32;pragma&#32;message(&quot;Current&#32;standard&#32;is&#32;&quot;&#32;ARGX_TOSTRING(__cplusplus))</emphasis>
+<anchor xml:id="_types_8hpp_source_1l00059"/>00059 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_types_8hpp_source_1l00060"/>00060 
 </programlisting></section>

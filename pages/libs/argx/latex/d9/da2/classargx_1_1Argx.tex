@@ -23,6 +23,8 @@ int \mbox{\hyperlink{classargx_1_1Argx_a9343612a7c209f2323d2cd10fd3fe387}{find\+
 \begin{DoxyCompactList}\small\item\em Find parameter index. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classargx_1_1Argx_a812254e076a5ec208ba9d2eab470edb4}{get\+Argc}} () const
 \begin{DoxyCompactList}\small\item\em Get the main options from the {\ttfamily main()} function as argc. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classargx_1_1Argx_a73dccd80c13749ea006b46653cc2a8a0}{get\+Arg\+Pos}} (const std\+::string \&arg)
+\begin{DoxyCompactList}\small\item\em Get argument position with specified {\ttfamily arg} \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classargx_1_1Argx_a671ad717805d76e459c74a3e0fee0625}{get\+ID}} () const
 \begin{DoxyCompactList}\small\item\em Get \doxylink{classargx_1_1Argx}{Argx} ID. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classargx_1_1Argx_a6146d9644c99b670b15d78cb92057bff}{get\+Main\+Args}} () const
@@ -58,6 +60,8 @@ Definition at line \mbox{\hyperlink{Argx_8hpp_source_l00017}{17}} of file \mbox{
 
 
 
+\label{doc-constructors}
+\Hypertarget{classargx_1_1Argx_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classargx_1_1Argx_a031a29c3cbb346b0379e1bfb99c35076}\index{argx::Argx@{argx::Argx}!Argx@{Argx}}
 \index{Argx@{Argx}!argx::Argx@{argx::Argx}}
@@ -80,20 +84,24 @@ Create \doxylink{classargx_1_1Argx}{Argx} with the specific {\ttfamily id}, {\tt
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classargx_1_1Argx_adf94f5a9f22d8ea2cde21df63c2f3d8a}{id}}(\textcolor{keywordtype}{id})}
-\DoxyCodeLine{00025\ \ \ \ \ \{}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}\ =\ \textcolor{keyword}{new}\ std::vector<std::string>(argv,\ argv\ +\ argc);}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a2e72f1c581d6ac0ffa02d45c3e6b540f}{mainArgc}}\ =\ argc;}
-\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classargx_1_1Argx_adf94f5a9f22d8ea2cde21df63c2f3d8a}{id}}(\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}\ =\ \textcolor{keyword}{new}\ std::vector<std::string>(argv,\ argv\ +\ argc);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a2e72f1c581d6ac0ffa02d45c3e6b540f}{mainArgc}}\ =\ argc;}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{Argx_8hpp_source_l00020}{id}}, \mbox{\hyperlink{Argx_8hpp_source_l00025}{main\+Argc}}, and \mbox{\hyperlink{Argx_8hpp_source_l00023}{main\+Args}}.
+References \mbox{\hyperlink{Argx_8cpp_source_l00034}{Argx()}}, \mbox{\hyperlink{Argx_8hpp_source_l00020}{id}}, \mbox{\hyperlink{Argx_8hpp_source_l00025}{main\+Argc}}, and \mbox{\hyperlink{Argx_8hpp_source_l00023}{main\+Args}}.
+
+
+
+Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00034}{Argx()}}.
 
 \Hypertarget{classargx_1_1Argx_ac4ac47d6fe631a673ce0c7594fd67a12}\index{argx::Argx@{argx::Argx}!Argx@{Argx}}
 \index{Argx@{Argx}!argx::Argx@{argx::Argx}}
@@ -103,11 +111,11 @@ argx\+::\+Argx\+::\+Argx (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00031\ \ \ \ \ \{\ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \{\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classargx_1_1Argx_a97654cab13febb7fb7870b14c9d31c6e}\index{argx::Argx@{argx::Argx}!````~Argx@{\texorpdfstring{$\sim$}{\string~}Argx}}
@@ -118,13 +126,13 @@ argx\+::\+Argx\+::\texorpdfstring{$\sim$}{\string~}\+Argx (\begin{DoxyParamCapti
 
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00034\ \ \ \ \ \{}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}};\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}};\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -133,6 +141,8 @@ References \mbox{\hyperlink{Argx_8hpp_source_l00023}{main\+Args}}.
 
 
 
+\label{doc-func-members}
+\Hypertarget{classargx_1_1Argx_doc-func-members}
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classargx_1_1Argx_aab16d8baf18e1db7ce66995a7cad312e}\index{argx::Argx@{argx::Argx}!add@{add}}
 \index{add@{add}!argx::Argx@{argx::Argx}}
@@ -151,23 +161,22 @@ Add param options.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00039\ \ \ \ \ \{}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceargx_a12ba6f5d720d46a611584938a996663e}{ARGXError}}\ error\ =\ \{}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ .type\ =\ \textcolor{stringliteral}{"{}success"{}},}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ .code\ =\ 0}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}}.emplace\_back(option);}
-\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceargx_a12ba6f5d720d46a611584938a996663e}{ARGXError}}\ error;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ error.\mbox{\hyperlink{structargx_1_1ARGXError_aa3083201a43c82fd69c3f7a04118b184}{type}}\ =\ \textcolor{stringliteral}{"{}success"{}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ error.code\ =\ 0;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}}.emplace\_back(option);}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{Argx_8hpp_source_l00022}{options}}.
+References \mbox{\hyperlink{types_8hpp_source_l00021}{argx\+::\+ARGXError\+::code}}, \mbox{\hyperlink{Argx_8hpp_source_l00022}{options}}, and \mbox{\hyperlink{types_8hpp_source_l00017}{argx\+::\+ARGXError\+::type}}.
 
 \Hypertarget{classargx_1_1Argx_adb4e8a622135970b4e12f14d49a76e52}\index{argx::Argx@{argx::Argx}!compareArgs@{compareArgs}}
 \index{compareArgs@{compareArgs}!argx::Argx@{argx::Argx}}
@@ -191,37 +200,76 @@ bool
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00293}{293}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00319}{319}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00294\ \ \ \ \ \{}
-\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Skip\ program\ name\ (\ as\ arg\ )}}
-\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 1\ ;\ i\ <\ argv.size()\ ;\ ++i)}
-\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&arg\ =\ argv[i];}
-\DoxyCodeLine{00299\ }
-\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ found\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&option\ :\ \mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
-\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (option.sparam\ ==\ arg\ ||\ option.param\ ==\ arg)}
-\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!found)}
-\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Unknown\ argument}}
-\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ All\ arguments\ are\ valid}}
-\DoxyCodeLine{00315\ \ \ \ \ \}}
+\DoxyCodeLine{00320\ \ \ \ \ \{}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 1;\ i\ <\ argv.size();\ ++i)}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&arg\ =\ argv[i];}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ found\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasSubParams\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasAnySubParams\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceargx_a9933be078f36db7b1424f6dd0372eb72}{ARGXOptions}}\ matchedOption;}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ the\ matching\ option}}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&option\ :\ \mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (option.sparam\ ==\ arg\ ||\ option.param\ ==\ arg)}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasSubParams\ =\ option.hasSubParams;}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasAnySubParams\ =\ option.hasAnySubParams;}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matchedOption\ =\ option;}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!found)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hasSubParams\ ||\ hasAnySubParams)}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ there's\ a\ next\ argument}}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ +\ 1\ <\ argv.size())}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&nextArg\ =\ argv[i\ +\ 1];}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ next\ argument\ is\ a\ sub-\/parameter}}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isSubParam\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!nextArg.empty()\ \&\&\ nextArg[0]\ !=\ \textcolor{charliteral}{'-\/'})}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validate\ if\ it's\ a\ valid\ sub-\/parameter}}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&subOption\ :\ matchedOption.subParams)}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (subOption.param\ ==\ nextArg\ ||\ subOption.sparam\ ==\ nextArg)}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isSubParam\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00369\ }
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isSubParam)\ ++i;\ \textcolor{comment}{//\ Get\ the\ sub-\/parameter}}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (hasSubParams\ ||\ hasAnySubParams)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (hasSubParams\ ||\ hasAnySubParams)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00378\ }
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00380\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{Argx_8hpp_source_l00022}{options}}.
+References \mbox{\hyperlink{Argx_8hpp_source_l00022}{options}}, and \mbox{\hyperlink{types_8hpp_source_l00046}{argx\+::\+ARGXOptions\+::sub\+Params}}.
 
 \Hypertarget{classargx_1_1Argx_a99bbe74c7f09f6bb3a343dbdde050a64}\index{argx::Argx@{argx::Argx}!createDocs@{createDocs}}
 \index{createDocs@{createDocs}!argx::Argx@{argx::Argx}}
@@ -247,76 +295,76 @@ std\+::string Documentation as a string
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00225}{225}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00250}{250}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00226\ \ \ \ \ \{}
-\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ std::string\ contentStr;}
-\DoxyCodeLine{00228\ }
-\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (style\ ==\ \mbox{\hyperlink{namespaceargx_a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2}{ARGXStyle::Professional}})}
-\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&x\ :\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
-\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Main\ option\ header\ line}}
-\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ \textcolor{stringliteral}{"{}ID:\ "{}}\ +\ x.id\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ \textcolor{stringliteral}{"{}[\ "{}}\ +\ x.sparam\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ x.param;}
-\DoxyCodeLine{00236\ }
-\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x.hasSubParams\ \&\&\ !x.subParams.empty())}
-\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ \textcolor{stringliteral}{"{}\ [\ "{}};}
-\DoxyCodeLine{00240\ }
-\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ x.subParams.size();\ ++i)}
-\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&sub\ =\ x.subParams[i];}
-\DoxyCodeLine{00244\ }
-\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ sub.param;}
-\DoxyCodeLine{00246\ }
-\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ x.subParams.size()\ -\/\ 1)\ contentStr\ +=\ \textcolor{stringliteral}{"{}\ |\ "{}};}
-\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (i\ <=\ x.subParams.size())\ contentStr\ +=\ \textcolor{charliteral}{'\ '};}
-\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00250\ }
-\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ \textcolor{stringliteral}{"{}]\ ]\ "{}};}
-\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \ \ \ \ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ std::string\ contentStr;}
 \DoxyCodeLine{00253\ }
-\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ contentStr\ +=\ \textcolor{stringliteral}{"{}\ ]\ "{}};}
-\DoxyCodeLine{00255\ }
-\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ x.info\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{00257\ }
-\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Print\ all\ sub-\/options\ with\ sparam\ and\ param,\ aligned\ with\ ideographic\ spaces\ if\ there\ are}}
-\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x.hasSubParams\ \&\&\ !x.subParams.empty())}
-\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&sub\ :\ x.subParams)}
-\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ ideographic\ spaces\ matching\ the\ length\ of\ main\ param\ for\ alignment}}
-\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::wstring\ wideSpaces(x.param.size(),\ L\textcolor{stringliteral}{'\(\backslash\)u3000'});}
-\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::wstring\_convert<std::codecvt\_utf8<wchar\_t>>\ converter;}
-\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ spacing\ =\ converter.to\_bytes(wideSpaces);}
-\DoxyCodeLine{00267\ }
-\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ spacing\ +\ \textcolor{stringliteral}{"{}\ \ [\ "{}}\ +\ sub.sparam\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ sub.param\ +\ \textcolor{stringliteral}{"{}\ ]\ "{}}\ +\ sub.info\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00273\ }
-\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (style\ ==\ \mbox{\hyperlink{namespaceargx_a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780}{ARGXStyle::Simple}})}
-\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&x\ :\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
-\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ x.sparam\ +\ \textcolor{stringliteral}{"{},\ "{}}\ +\ x.param\ +\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ +\ x.info\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{00279\ }
-\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x.hasSubParams\ \&\&\ !x.subParams.empty())}
-\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&sub\ :\ x.subParams)}
-\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ \textcolor{stringliteral}{"{}\ \ "{}}\ +\ sub.sparam\ +\ \textcolor{stringliteral}{"{},\ "{}}\ +\ sub.param\ +\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ +\ sub.info\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ ARGXStyle}}
-\DoxyCodeLine{00289\ }
-\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ title\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ mainInfo\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ contentStr;}
-\DoxyCodeLine{00291\ \ \ \ \ \}}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (style\ ==\ \mbox{\hyperlink{namespaceargx_a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2}{ARGXStyle::Professional}})}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&x\ :\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Main\ option\ header\ line}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ \textcolor{stringliteral}{"{}ID:\ "{}}\ +\ x.id\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ \textcolor{stringliteral}{"{}[\ "{}}\ +\ x.sparam\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ x.param;}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x.hasSubParams\ \&\&\ !x.subParams.empty())}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ \textcolor{stringliteral}{"{}\ [\ "{}};}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ x.subParams.size();\ ++i)}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&sub\ =\ x.subParams[i];}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ sub.param;}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ x.subParams.size()\ -\/\ 1)\ contentStr\ +=\ \textcolor{stringliteral}{"{}\ |\ "{}};}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (i\ <=\ x.subParams.size())\ contentStr\ +=\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ \textcolor{stringliteral}{"{}]\ ]\ "{}};}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ contentStr\ +=\ \textcolor{stringliteral}{"{}\ ]\ "{}};}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ x.info\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Print\ all\ sub-\/options\ with\ sparam\ and\ param,\ aligned\ with\ ideographic\ spaces\ if\ there\ are}}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x.hasSubParams\ \&\&\ !x.subParams.empty())}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&sub\ :\ x.subParams)}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ ideographic\ spaces\ matching\ the\ length\ of\ main\ param\ for\ alignment}}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::wstring\ wideSpaces(x.param.size(),\ L\textcolor{stringliteral}{'\(\backslash\)u3000'});}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::wstring\_convert<std::codecvt\_utf8<wchar\_t>>\ converter;}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ spacing\ =\ converter.to\_bytes(wideSpaces);}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ spacing\ +\ \textcolor{stringliteral}{"{}\ \ [\ "{}}\ +\ sub.sparam\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ sub.param\ +\ \textcolor{stringliteral}{"{}\ ]\ "{}}\ +\ sub.info\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (style\ ==\ \mbox{\hyperlink{namespaceargx_a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780}{ARGXStyle::Simple}})}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&x\ :\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ x.sparam\ +\ \textcolor{stringliteral}{"{},\ "{}}\ +\ x.param\ +\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ +\ x.info\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x.hasSubParams\ \&\&\ !x.subParams.empty())}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&sub\ :\ x.subParams)}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contentStr\ +=\ \textcolor{stringliteral}{"{}\ \ "{}}\ +\ sub.sparam\ +\ \textcolor{stringliteral}{"{},\ "{}}\ +\ sub.param\ +\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ +\ sub.info\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ ARGXStyle}}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ title\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ mainInfo\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ contentStr;}
+\DoxyCodeLine{00316\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -335,54 +383,54 @@ Find parameter index.
 
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00073}{73}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00049\ \ \ \ \ \{}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ First\ check\ if\ it's\ a\ main\ parameter}}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}}.size();\ i++)}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}}[i].\textcolor{keywordtype}{id}\ ==\ \textcolor{keywordtype}{id})}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ this\ main\ parameter\ exists\ in\ arguments}}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&arg\ :\ *this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arg\ ==\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}}[i].param\ ||\ arg\ ==\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}}[i].sparam)}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(i);}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then\ look\ for\ sub-\/parameters}}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&opt\ :\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ parent\ option\ exists\ in\ the\ arguments}}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ parentExists\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&arg\ :\ *this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arg\ ==\ opt.param\ ||\ arg\ ==\ opt.sparam)}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parentExists\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parentExists)}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ the\ index\ of\ the\ requested\ sub-\/parameter}}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ opt.subParams.size();\ i++)}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opt.subParams[i].id\ ==\ \textcolor{keywordtype}{id})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(i);}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ First\ check\ if\ it's\ a\ main\ parameter}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}}.size();\ i++)}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}}[i].\textcolor{keywordtype}{id}\ ==\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ this\ main\ parameter\ exists\ in\ arguments}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&arg\ :\ *this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arg\ ==\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}}[i].param\ ||\ arg\ ==\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}}[i].sparam)}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(i);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00090\ }
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;\ \textcolor{comment}{//\ Not\ found}}
-\DoxyCodeLine{00092\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then\ look\ for\ sub-\/parameters}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&opt\ :\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ parent\ option\ exists\ in\ the\ arguments}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ parentExists\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&arg\ :\ *this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arg\ ==\ opt.param\ ||\ arg\ ==\ opt.sparam)}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parentExists\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parentExists)}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ the\ index\ of\ the\ requested\ sub-\/parameter}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ opt.subParams.size();\ i++)}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opt.subParams[i].id\ ==\ \textcolor{keywordtype}{id})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(i);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;\ \textcolor{comment}{//\ Not\ found}}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -391,7 +439,7 @@ References \mbox{\hyperlink{Argx_8hpp_source_l00023}{main\+Args}}, and \mbox{\hy
 
 
 
-Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00222}{get\+Sub\+Param()}}, and \mbox{\hyperlink{Argx_8cpp_source_l00094}{param\+Exists()}}.
+Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00247}{get\+Sub\+Param()}}, and \mbox{\hyperlink{Argx_8cpp_source_l00119}{param\+Exists()}}.
 
 \Hypertarget{classargx_1_1Argx_a812254e076a5ec208ba9d2eab470edb4}\index{argx::Argx@{argx::Argx}!getArgc@{getArgc}}
 \index{getArgc@{getArgc}!argx::Argx@{argx::Argx}}
@@ -408,16 +456,58 @@ int Number of params including the executable param
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00320}{320}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00385}{385}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00321\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a2e72f1c581d6ac0ffa02d45c3e6b540f}{mainArgc}};\ \}}
+\DoxyCodeLine{00386\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a2e72f1c581d6ac0ffa02d45c3e6b540f}{mainArgc}};\ \}}
 
 \end{DoxyCode}
 
 
 References \mbox{\hyperlink{Argx_8hpp_source_l00025}{main\+Argc}}.
+
+\Hypertarget{classargx_1_1Argx_a73dccd80c13749ea006b46653cc2a8a0}\index{argx::Argx@{argx::Argx}!getArgPos@{getArgPos}}
+\index{getArgPos@{getArgPos}!argx::Argx@{argx::Argx}}
+\doxysubsubsection{\texorpdfstring{getArgPos()}{getArgPos()}}
+{\footnotesize\ttfamily \label{classargx_1_1Argx_a73dccd80c13749ea006b46653cc2a8a0} 
+int argx\+::\+Argx\+::get\+Arg\+Pos (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{arg}{}\end{DoxyParamCaption})}
+
+
+
+Get argument position with specified {\ttfamily arg} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Find argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Return position of found {\ttfamily arg} from the options 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}-\/>size();\ ++i)}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}-\/>at(i)\ ==\ arg)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(i);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Argx_8hpp_source_l00023}{main\+Args}}.
 
 \Hypertarget{classargx_1_1Argx_a671ad717805d76e459c74a3e0fee0625}\index{argx::Argx@{argx::Argx}!getID@{getID}}
 \index{getID@{getID}!argx::Argx@{argx::Argx}}
@@ -434,17 +524,13 @@ std\+::string \doxylink{classargx_1_1Argx}{Argx} ID
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00326}{326}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00391}{391}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00327\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_adf94f5a9f22d8ea2cde21df63c2f3d8a}{id}};\ \}}
+\DoxyCodeLine{00392\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_adf94f5a9f22d8ea2cde21df63c2f3d8a}{id}};\ \}}
 
 \end{DoxyCode}
-
-
-References \mbox{\hyperlink{Argx_8hpp_source_l00020}{id}}.
-
 \Hypertarget{classargx_1_1Argx_a6146d9644c99b670b15d78cb92057bff}\index{argx::Argx@{argx::Argx}!getMainArgs@{getMainArgs}}
 \index{getMainArgs@{getMainArgs}!argx::Argx@{argx::Argx}}
 \doxysubsubsection{\texorpdfstring{getMainArgs()}{getMainArgs()}}
@@ -460,11 +546,11 @@ std\+::vector$<$std\+::string$>$ Vector of strings for main arguments from {\ttf
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00317}{317}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00382}{382}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00318\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ *this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}};\ \}}
+\DoxyCodeLine{00383\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ *this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}};\ \}}
 
 \end{DoxyCode}
 
@@ -486,11 +572,11 @@ std\+::vector$<$\+ARGXOptions$>$ Options to return
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00323}{323}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00388}{388}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00324\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}};\ \}}
+\DoxyCodeLine{00389\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}};\ \}}
 
 \end{DoxyCode}
 
@@ -517,132 +603,132 @@ Get the param from {\ttfamily id}
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00103}{103}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00128}{128}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00104\ \ \ \ \ \{}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classargx_1_1Argx_a2e72f1c581d6ac0ffa02d45c3e6b540f}{mainArgc}}\ <=\ 1)\ \textcolor{keywordflow}{return}\ \{\};}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceargx_a40874387325f4f81850b2ef717831239}{ARGXParam}}\ result;}
-\DoxyCodeLine{00108\ }
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ First,\ check\ if\ this\ is\ a\ top-\/level\ option}}
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&opt\ :\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opt.id\ ==\ \textcolor{keywordtype}{id})}
-\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ the\ position\ of\ the\ main\ option\ in\ arguments}}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mainOptionPos\ =\ -\/1;}
-\DoxyCodeLine{00116\ }
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}-\/>size();\ ++i)}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((*this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})[i]\ ==\ opt.param\ ||\ (*this-\/>mainArgs)[i]\ ==\ opt.sparam)}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.exists\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mainOptionPos\ =\ i;}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00126\ }
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result.exists)}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opt.hasSubParams)}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ each\ sub-\/parameter}}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&sub\ :\ opt.subParams)}
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ subMatched\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00135\ }
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Look\ for\ sub-\/parameters\ after\ the\ main\ option}}
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ mainOptionPos\ +\ 1;\ i\ <\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}-\/>size();\ ++i)}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((*this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})[i]\ ==\ sub.param\ ||\ (*this-\/>mainArgs)[i]\ ==\ sub.sparam)}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subMatched\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00145\ }
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.subExists.push\_back(subMatched);}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00149\ }
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00154\ }
-\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ not\ found\ as\ top-\/level,\ check\ if\ it's\ a\ sub-\/parameter}}
-\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&opt\ :\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ if\ the\ parent\ option\ exists\ and\ get\ its\ position}}
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ parentPos\ =\ -\/1;}
+\DoxyCodeLine{00129\ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classargx_1_1Argx_a2e72f1c581d6ac0ffa02d45c3e6b540f}{mainArgc}}\ <=\ 1)\ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceargx_a40874387325f4f81850b2ef717831239}{ARGXParam}}\ result;}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ First,\ check\ if\ this\ is\ a\ top-\/level\ option}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&opt\ :\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opt.id\ ==\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ the\ position\ of\ the\ main\ option\ in\ arguments}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mainOptionPos\ =\ -\/1;}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}-\/>size();\ ++i)}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((*this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})[i]\ ==\ opt.param\ ||\ (*this-\/>mainArgs)[i]\ ==\ opt.sparam)}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.exists\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mainOptionPos\ =\ i;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result.exists)}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (opt.hasSubParams\ ||\ opt.hasAnySubParams)}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ each\ sub-\/parameter}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&sub\ :\ opt.subParams)}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ subMatched\ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{00160\ }
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}-\/>size();\ ++i)}
-\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((*this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})[i]\ ==\ opt.param\ ||\ (*this-\/>mainArgs)[i]\ ==\ opt.sparam)}
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parentPos\ =\ i;}
-\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00169\ }
-\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parentPos\ >\ -\/1\ \&\&\ opt.hasSubParams)}
-\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ requested\ sub-\/parameter\ exists\ after\ the\ parent}}
-\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&sub\ :\ opt.subParams)}
-\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sub.id\ ==\ \textcolor{keywordtype}{id})}
-\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ parentPos\ +\ 1;\ i\ <\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}-\/>size();\ ++i)}
-\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((*this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})[i]\ ==\ sub.param\ ||\ (*this-\/>mainArgs)[i]\ ==\ sub.sparam)}
-\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.exists\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Look\ for\ sub-\/parameters\ after\ the\ main\ option}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ mainOptionPos\ +\ 1;\ i\ <\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}-\/>size();\ ++i)}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((*this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})[i]\ ==\ sub.param\ ||\ (*this-\/>mainArgs)[i]\ ==\ sub.sparam)}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subMatched\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.subExists.push\_back(subMatched);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ not\ found\ as\ top-\/level,\ check\ if\ it's\ a\ sub-\/parameter}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&opt\ :\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}{options}})}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ if\ the\ parent\ option\ exists\ and\ get\ its\ position}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ parentPos\ =\ -\/1;}
 \DoxyCodeLine{00185\ }
-\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result.exists\ \&\&\ parentPos\ +\ 1\ <\ this-\/>mainArgs-\/>size())}
-\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ nextArg\ =\ (*this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})[parentPos\ +\ 1];}
-\DoxyCodeLine{00189\ }
-\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nextArg\ ==\ sub.param\ ||\ nextArg\ ==\ sub.sparam)\ result.exists\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00192\ }
-\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ any\ sub-\/sub-\/parameters\ if\ they\ exist}}
-\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result.exists\ \&\&\ sub.hasSubParams)}
-\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&subsub\ :\ sub.subParams)}
-\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ subsubMatched\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00199\ }
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}-\/>size();\ ++i)}
-\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((*this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})[i]\ ==\ subsub.param\ ||\ (*this-\/>mainArgs)[i]\ ==\ subsub.sparam)}
-\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subsubMatched\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00208\ }
-\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.subExists.push\_back(subsubMatched);}
-\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00212\ }
-\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
-\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00218\ }
-\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
-\DoxyCodeLine{00220\ \ \ \ \ \}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}-\/>size();\ ++i)}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((*this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})[i]\ ==\ opt.param\ ||\ (*this-\/>mainArgs)[i]\ ==\ opt.sparam)}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parentPos\ =\ i;}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parentPos\ >\ -\/1\ \&\&\ (opt.hasSubParams\ ||\ opt.hasAnySubParams))}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ requested\ sub-\/parameter\ exists\ after\ the\ parent}}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&sub\ :\ opt.subParams)}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sub.id\ ==\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ parentPos\ +\ 1;\ i\ <\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}-\/>size();\ ++i)}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((*this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})[i]\ ==\ sub.param\ ||\ (*this-\/>mainArgs)[i]\ ==\ sub.sparam)}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.exists\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result.exists\ \&\&\ parentPos\ +\ 1\ <\ this-\/>mainArgs-\/>size())}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ nextArg\ =\ (*this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})[parentPos\ +\ 1];}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nextArg\ ==\ sub.param\ ||\ nextArg\ ==\ sub.sparam)\ result.exists\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ any\ sub-\/sub-\/parameters\ if\ they\ exist}}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result.exists\ \&\&\ (sub.hasSubParams\ ||\ sub.hasAnySubParams))}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&subsub\ :\ sub.subParams)}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ subsubMatched\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}}-\/>size();\ ++i)}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((*this-\/>\mbox{\hyperlink{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}{mainArgs}})[i]\ ==\ subsub.param\ ||\ (*this-\/>mainArgs)[i]\ ==\ subsub.sparam)}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subsubMatched\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.subExists.push\_back(subsubMatched);}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00245\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{types_8hpp_source_l00050}{argx\+::\+ARGXParam\+::exists}}, \mbox{\hyperlink{Argx_8hpp_source_l00025}{main\+Argc}}, \mbox{\hyperlink{Argx_8hpp_source_l00023}{main\+Args}}, \mbox{\hyperlink{Argx_8hpp_source_l00022}{options}}, and \mbox{\hyperlink{types_8hpp_source_l00051}{argx\+::\+ARGXParam\+::sub\+Exists}}.
+References \mbox{\hyperlink{types_8hpp_source_l00051}{argx\+::\+ARGXParam\+::exists}}, \mbox{\hyperlink{Argx_8hpp_source_l00025}{main\+Argc}}, \mbox{\hyperlink{Argx_8hpp_source_l00023}{main\+Args}}, \mbox{\hyperlink{Argx_8hpp_source_l00022}{options}}, and \mbox{\hyperlink{types_8hpp_source_l00052}{argx\+::\+ARGXParam\+::sub\+Exists}}.
 
 \Hypertarget{classargx_1_1Argx_adb8fa05c9916682bf3cabeb2a12895f4}\index{argx::Argx@{argx::Argx}!getSubParam@{getSubParam}}
 \index{getSubParam@{getSubParam}!argx::Argx@{argx::Argx}}
@@ -666,16 +752,16 @@ bool
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00222}{222}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00247}{247}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00223\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a82c1649fbd03d4f3ea94bf8a14e1299d}{paramExists}}(\textcolor{keywordtype}{id})\ \&\&\ param.\mbox{\hyperlink{structargx_1_1ARGXParam_ace0572ca0af0b51da129b562bee6a673}{subExists}}[this-\/>\mbox{\hyperlink{classargx_1_1Argx_a9343612a7c209f2323d2cd10fd3fe387}{findParam}}(\textcolor{keywordtype}{id})];\ \}}
+\DoxyCodeLine{00248\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classargx_1_1Argx_a82c1649fbd03d4f3ea94bf8a14e1299d}{paramExists}}(\textcolor{keywordtype}{id})\ \&\&\ param.\mbox{\hyperlink{structargx_1_1ARGXParam_ace0572ca0af0b51da129b562bee6a673}{subExists}}[this-\/>\mbox{\hyperlink{classargx_1_1Argx_a9343612a7c209f2323d2cd10fd3fe387}{findParam}}(\textcolor{keywordtype}{id})];\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{Argx_8cpp_source_l00048}{find\+Param()}}, \mbox{\hyperlink{Argx_8cpp_source_l00094}{param\+Exists()}}, and \mbox{\hyperlink{types_8hpp_source_l00051}{argx\+::\+ARGXParam\+::sub\+Exists}}.
+References \mbox{\hyperlink{Argx_8cpp_source_l00073}{find\+Param()}}, \mbox{\hyperlink{Argx_8cpp_source_l00119}{param\+Exists()}}, and \mbox{\hyperlink{types_8hpp_source_l00052}{argx\+::\+ARGXParam\+::sub\+Exists}}.
 
 \Hypertarget{classargx_1_1Argx_a82c1649fbd03d4f3ea94bf8a14e1299d}\index{argx::Argx@{argx::Argx}!paramExists@{paramExists}}
 \index{paramExists@{paramExists}!argx::Argx@{argx::Argx}}
@@ -697,27 +783,29 @@ bool
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00094}{94}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
+Definition at line \mbox{\hyperlink{Argx_8cpp_source_l00119}{119}} of file \mbox{\hyperlink{Argx_8cpp_source}{Argx.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00095\ \ \ \ \ \{}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classargx_1_1Argx_a9343612a7c209f2323d2cd10fd3fe387}{findParam}}(\textcolor{keywordtype}{id})\ >=\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};;}
-\DoxyCodeLine{00097\ }
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classargx_1_1Argx_a9343612a7c209f2323d2cd10fd3fe387}{findParam}}(\textcolor{keywordtype}{id})\ >=\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};;}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00124\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{Argx_8cpp_source_l00048}{find\+Param()}}.
+References \mbox{\hyperlink{Argx_8cpp_source_l00073}{find\+Param()}}.
 
 
 
-Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00222}{get\+Sub\+Param()}}.
+Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00247}{get\+Sub\+Param()}}.
 
 
 
+\label{doc-variable-members}
+\Hypertarget{classargx_1_1Argx_doc-variable-members}
 \doxysubsection{Member Data Documentation}
 \Hypertarget{classargx_1_1Argx_adf94f5a9f22d8ea2cde21df63c2f3d8a}\index{argx::Argx@{argx::Argx}!id@{id}}
 \index{id@{id}!argx::Argx@{argx::Argx}}
@@ -731,7 +819,7 @@ Definition at line \mbox{\hyperlink{Argx_8hpp_source_l00020}{20}} of file \mbox{
 
 
 
-Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00023}{Argx()}}, and \mbox{\hyperlink{Argx_8cpp_source_l00326}{get\+ID()}}.
+Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00034}{Argx()}}.
 
 \Hypertarget{classargx_1_1Argx_a2e72f1c581d6ac0ffa02d45c3e6b540f}\index{argx::Argx@{argx::Argx}!mainArgc@{mainArgc}}
 \index{mainArgc@{mainArgc}!argx::Argx@{argx::Argx}}
@@ -745,7 +833,7 @@ Definition at line \mbox{\hyperlink{Argx_8hpp_source_l00025}{25}} of file \mbox{
 
 
 
-Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00023}{Argx()}}, \mbox{\hyperlink{Argx_8cpp_source_l00320}{get\+Argc()}}, and \mbox{\hyperlink{Argx_8cpp_source_l00103}{get\+Param()}}.
+Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00034}{Argx()}}, \mbox{\hyperlink{Argx_8cpp_source_l00385}{get\+Argc()}}, and \mbox{\hyperlink{Argx_8cpp_source_l00128}{get\+Param()}}.
 
 \Hypertarget{classargx_1_1Argx_a4e820cdc862457fd8618229ce47a690f}\index{argx::Argx@{argx::Argx}!mainArgs@{mainArgs}}
 \index{mainArgs@{mainArgs}!argx::Argx@{argx::Argx}}
@@ -759,7 +847,7 @@ Definition at line \mbox{\hyperlink{Argx_8hpp_source_l00023}{23}} of file \mbox{
 
 
 
-Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00023}{Argx()}}, \mbox{\hyperlink{Argx_8cpp_source_l00033}{\texorpdfstring{$\sim$}{\string~}\+Argx()}}, \mbox{\hyperlink{Argx_8cpp_source_l00048}{find\+Param()}}, \mbox{\hyperlink{Argx_8cpp_source_l00317}{get\+Main\+Args()}}, and \mbox{\hyperlink{Argx_8cpp_source_l00103}{get\+Param()}}.
+Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00034}{Argx()}}, \mbox{\hyperlink{Argx_8cpp_source_l00045}{\texorpdfstring{$\sim$}{\string~}\+Argx()}}, \mbox{\hyperlink{Argx_8cpp_source_l00073}{find\+Param()}}, \mbox{\hyperlink{Argx_8cpp_source_l00050}{get\+Arg\+Pos()}}, \mbox{\hyperlink{Argx_8cpp_source_l00382}{get\+Main\+Args()}}, and \mbox{\hyperlink{Argx_8cpp_source_l00128}{get\+Param()}}.
 
 \Hypertarget{classargx_1_1Argx_aba86dd3c8b11c495afd4c7eada1c0ac5}\index{argx::Argx@{argx::Argx}!options@{options}}
 \index{options@{options}!argx::Argx@{argx::Argx}}
@@ -773,7 +861,7 @@ Definition at line \mbox{\hyperlink{Argx_8hpp_source_l00022}{22}} of file \mbox{
 
 
 
-Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00038}{add()}}, \mbox{\hyperlink{Argx_8cpp_source_l00293}{compare\+Args()}}, \mbox{\hyperlink{Argx_8cpp_source_l00225}{create\+Docs()}}, \mbox{\hyperlink{Argx_8cpp_source_l00048}{find\+Param()}}, \mbox{\hyperlink{Argx_8cpp_source_l00323}{get\+Options()}}, and \mbox{\hyperlink{Argx_8cpp_source_l00103}{get\+Param()}}.
+Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00064}{add()}}, \mbox{\hyperlink{Argx_8cpp_source_l00319}{compare\+Args()}}, \mbox{\hyperlink{Argx_8cpp_source_l00250}{create\+Docs()}}, \mbox{\hyperlink{Argx_8cpp_source_l00073}{find\+Param()}}, \mbox{\hyperlink{Argx_8cpp_source_l00388}{get\+Options()}}, and \mbox{\hyperlink{Argx_8cpp_source_l00128}{get\+Param()}}.
 
 
 

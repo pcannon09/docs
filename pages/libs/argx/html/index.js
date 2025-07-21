@@ -8,5 +8,6 @@ var index =
       [ "Specific information", "index.html#autotoc_md6", null ],
       [ "Summary", "index.html#autotoc_md7", null ]
     ] ],
-    [ "IMPORTANT NOTES", "index.html#autotoc_md8", null ]
+    [ "IMPORTANT NOTES", "index.html#autotoc_md8", null ],
+    [ "APIs", "index.html#autotoc_md9", null ]
 ];

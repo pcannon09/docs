@@ -8,6 +8,7 @@ var classargx_1_1Argx =
     [ "createDocs", "d9/da2/classargx_1_1Argx.html#a99bbe74c7f09f6bb3a343dbdde050a64", null ],
     [ "findParam", "d9/da2/classargx_1_1Argx.html#a9343612a7c209f2323d2cd10fd3fe387", null ],
     [ "getArgc", "d9/da2/classargx_1_1Argx.html#a812254e076a5ec208ba9d2eab470edb4", null ],
+    [ "getArgPos", "d9/da2/classargx_1_1Argx.html#a73dccd80c13749ea006b46653cc2a8a0", null ],
     [ "getID", "d9/da2/classargx_1_1Argx.html#a671ad717805d76e459c74a3e0fee0625", null ],
     [ "getMainArgs", "d9/da2/classargx_1_1Argx.html#a6146d9644c99b670b15d78cb92057bff", null ],
     [ "getOptions", "d9/da2/classargx_1_1Argx.html#a3378e7eb2efcb1386b487ece1b5aec35", null ],
