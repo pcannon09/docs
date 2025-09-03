@@ -7,7 +7,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline><highlight class="normal">#<sp/>ARGX<sp/>-<sp/>1.1.0-build</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>ARGX<sp/>-<sp/>1.2.0-beta</highlight></codeline>
 <codeline><highlight class="normal">##<sp/>C++<sp/>Argument<sp/>parser</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>Made<sp/>by:<sp/>pcannon09</highlight></codeline>
 <codeline></codeline>
@@ -17,26 +17,27 @@
 <codeline><highlight class="normal">###<sp/>Compiler<sp/>and<sp/>C++<sp/>Standard<sp/>Support</highlight></codeline>
 <codeline><highlight class="normal">|<sp/>Argx<sp/>Version<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Minimum<sp/>C++<sp/>Standard<sp/>|<sp/><sp/><sp/><sp/><sp/>GCC<sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/>Clang<sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSVC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|:--------------------:|:--------------------:|:-----------:|:-----------:|:--------------------------------:|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/>1.1.0-build<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>C++11<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>GCC<sp/>4.8+<sp/><sp/><sp/><sp/>|<sp/>Clang<sp/>3.3+<sp/><sp/>|<sp/>MSVC<sp/>2017+<sp/>(/std:c++11<sp/>or<sp/>later)<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/>1.0.0-build<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>C++11<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>GCC<sp/>4.8+<sp/><sp/><sp/><sp/>|<sp/>Clang<sp/>3.3+<sp/><sp/>|<sp/>MSVC<sp/>2017+<sp/>(/std:c++11<sp/>or<sp/>later)<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>1.2.0-beta<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>C++14<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>GCC<sp/>5.1+<sp/><sp/><sp/><sp/>|<sp/>Clang<sp/>3.4+<sp/><sp/>|<sp/>MSVC<sp/>14.0+<sp/>(/std:c++11<sp/>or<sp/>later)<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>1.1.0-build<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>C++11<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>GCC<sp/>4.8+<sp/><sp/><sp/><sp/>|<sp/>Clang<sp/>3.3+<sp/><sp/>|<sp/>MSVC<sp/>11.0+<sp/>(/std:c++11<sp/>or<sp/>later)<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>1.0.0-build<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>C++11<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>GCC<sp/>4.8+<sp/><sp/><sp/><sp/>|<sp/>Clang<sp/>3.3+<sp/><sp/>|<sp/>MSVC<sp/>11.0+<sp/>(/std:c++11<sp/>or<sp/>later)<sp/>|</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">###<sp/>Specific<sp/>information</highlight></codeline>
-<codeline><highlight class="normal">**NOTE:<sp/>For<sp/>version<sp/>1.0.0-build**</highlight></codeline>
-<codeline><highlight class="normal">*<sp/>Minimum<sp/>standard<sp/>required<sp/>to<sp/>compile<sp/>------<sp/>**C++11**<sp/>(**GCC<sp/>4.8+**,<sp/>**Clang<sp/>3.3+**<sp/>and<sp/>**MSVC<sp/>2017+**)</highlight></codeline>
+<codeline><highlight class="normal">**NOTE:<sp/>For<sp/>version<sp/>1.2.0-beta**</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Minimum<sp/>standard<sp/>required<sp/>to<sp/>compile<sp/>as<sp/>for<sp/>latest<sp/>version:<sp/>**C++14**<sp/>(**GCC<sp/>5.1+**,<sp/>**Clang<sp/>3.4+**<sp/>and<sp/>**MSVC<sp/>14.0+**)</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">###<sp/>Summary</highlight></codeline>
-<codeline><highlight class="normal">*<sp/>The<sp/>minimum<sp/>required<sp/>version<sp/>for<sp/>Argx<sp/>is<sp/>C++<sp/>for<sp/>**GCC<sp/>4.8+**,<sp/>**Clang<sp/>3.3+**<sp/>and<sp/>**MSVC<sp/>2017+**</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>The<sp/>minimum<sp/>required<sp/>version<sp/>for<sp/>Argx<sp/>1.2.0-beta<sp/>is<sp/>C++<sp/>for<sp/>**GCC<sp/>5.1+**,<sp/>**Clang<sp/>3.4+**<sp/>and<sp/>**MSVC<sp/>14.0+**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>IMPORTANT<sp/>NOTES</highlight></codeline>
 <codeline><highlight class="normal">**This<sp/>library<sp/>has<sp/>been<sp/>tested<sp/>in<sp/>Arch<sp/>Linux,<sp/>please<sp/>open<sp/>an<sp/>issue<sp/>if<sp/>you<sp/>encounter<sp/>a<sp/>problem<sp/>with<sp/>other<sp/>Operating<sp/>Systems**</highlight></codeline>
-<codeline><highlight class="normal">**Tested<sp/>with<sp/>Clang<sp/>19**</highlight></codeline>
+<codeline><highlight class="normal">**Tested<sp/>with<sp/>Clang<sp/>20**</highlight></codeline>
 <codeline><highlight class="normal">**If<sp/>you<sp/>encounter<sp/>any<sp/>other<sp/>issues<sp/>with<sp/>other<sp/>compilers,<sp/>open<sp/>an<sp/>issue<sp/>in<sp/>github**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">*<sp/>For<sp/>more<sp/>information,<sp/>please<sp/>check<sp/>the<sp/>documentation<sp/>at<sp/>**https://pcannon09.github.io/docs/pages/libs/argx/html/index.html**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>APIs</highlight></codeline>
-<codeline><highlight class="normal">####<sp/>Python3<sp/>API:<sp/>**https://github.com/pcannon09/argx-py**</highlight></codeline>
-<codeline><highlight class="normal">####<sp/>C<sp/>API<sp/>/<sp/>Clone:<sp/>**https://github.com/pcannon09/argx-c**</highlight></codeline>
+<codeline><highlight class="normal">####<sp/>Python3<sp/>API:<sp/>**https://github.com/pcannon09/argx-py**<sp/>(Not<sp/>updated<sp/>for<sp/>1.2.y<sp/>version<sp/>support)</highlight></codeline>
+<codeline><highlight class="normal">####<sp/>C<sp/>API<sp/>/<sp/>Clone:<sp/>**https://github.com/pcannon09/argx-c**<sp/>(Not<sp/>updated<sp/>for<sp/>1.2.y<sp/>version<sp/>replicate)</highlight></codeline>
     </programlisting>
     <location file="README.md"/>
   </compounddef>

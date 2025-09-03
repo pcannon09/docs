@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
 <title>
-<para>ARGX - 1.1.0-build </para>
+<para>ARGX - 1.2.0-beta </para>
 </title>
-<indexterm><primary>ARGX - 1.1.0-build</primary></indexterm>
+<indexterm><primary>ARGX - 1.2.0-beta</primary></indexterm>
 
 <para><anchor xml:id="_index_1md_README"/></para>
 <section xml:id="_index_1autotoc_md1">
@@ -40,6 +40,18 @@
 </thead><tbody>
       <row  class='markdownTableRowOdd'>
 <entry align='center'>
+<para>1.2.0-beta  </para>
+</entry><entry align='center'>
+<para>C++14  </para>
+</entry><entry align='center'>
+<para>GCC 5.1+  </para>
+</entry><entry align='center'>
+<para>Clang 3.4+  </para>
+</entry><entry align='center'>
+<para>MSVC 14.0+ (/std:c++11 or later)  </para>
+</entry></row>
+      <row  class='markdownTableRowEven'>
+<entry align='center'>
 <para>1.1.0-build  </para>
 </entry><entry align='center'>
 <para>C++11  </para>
@@ -48,9 +60,9 @@
 </entry><entry align='center'>
 <para>Clang 3.3+  </para>
 </entry><entry align='center'>
-<para>MSVC 2017+ (/std:c++11 or later)  </para>
+<para>MSVC 11.0+ (/std:c++11 or later)  </para>
 </entry></row>
-      <row  class='markdownTableRowEven'>
+      <row  class='markdownTableRowOdd'>
 <entry align='center'>
 <para>1.0.0-build  </para>
 </entry><entry align='center'>
@@ -60,7 +72,7 @@
 </entry><entry align='center'>
 <para>Clang 3.3+  </para>
 </entry><entry align='center'>
-<para>MSVC 2017+ (/std:c++11 or later)  </para>
+<para>MSVC 11.0+ (/std:c++11 or later)  </para>
 </entry></row>
     </tbody>
     </tgroup>
@@ -69,9 +81,9 @@
 </section>
 <section xml:id="_index_1autotoc_md6">
 <title>Specific information</title>
-<para><emphasis role="bold">NOTE: For version 1.0.0-build</emphasis><itemizedlist>
+<para><emphasis role="bold">NOTE: For version 1.2.0-beta</emphasis><itemizedlist>
 <listitem>
-<para>Minimum standard required to compile ---&#8212; <emphasis role="bold">C++11</emphasis> (<emphasis role="bold">GCC 4.8+</emphasis>, <emphasis role="bold">Clang 3.3+</emphasis> and <emphasis role="bold">MSVC 2017+</emphasis>)</para>
+<para>Minimum standard required to compile as for latest version: <emphasis role="bold">C++14</emphasis> (<emphasis role="bold">GCC 5.1+</emphasis>, <emphasis role="bold">Clang 3.4+</emphasis> and <emphasis role="bold">MSVC 14.0+</emphasis>)</para>
 </listitem></itemizedlist>
 </para>
 </section>
@@ -79,14 +91,14 @@
 <title>Summary</title>
 <para><itemizedlist>
 <listitem>
-<para>The minimum required version for Argx is C++ for <emphasis role="bold">GCC 4.8+</emphasis>, <emphasis role="bold">Clang 3.3+</emphasis> and <emphasis role="bold">MSVC 2017+</emphasis></para>
+<para>The minimum required version for Argx 1.2.0-beta is C++ for <emphasis role="bold">GCC 5.1+</emphasis>, <emphasis role="bold">Clang 3.4+</emphasis> and <emphasis role="bold">MSVC 14.0+</emphasis></para>
 </listitem></itemizedlist>
 </para>
 </section>
 </section>
 <section xml:id="_index_1autotoc_md8">
 <title>IMPORTANT NOTES</title>
-<para><emphasis role="bold">This library has been tested in Arch Linux, please open an issue if you encounter a problem with other Operating Systems</emphasis> <emphasis role="bold">Tested with Clang 19</emphasis> <emphasis role="bold">If you encounter any other issues with other compilers, open an issue in github</emphasis></para>
+<para><emphasis role="bold">This library has been tested in Arch Linux, please open an issue if you encounter a problem with other Operating Systems</emphasis> <emphasis role="bold">Tested with Clang 20</emphasis> <emphasis role="bold">If you encounter any other issues with other compilers, open an issue in github</emphasis></para>
 
 <para><itemizedlist>
 <listitem>
@@ -96,8 +108,8 @@
 </section>
 <section xml:id="_index_1autotoc_md9">
 <title>APIs</title><section xml:id="_index_1autotoc_md10">
-<title>Python3 API: <emphasis role="bold"><link xlink:href="https://github.com/pcannon09/argx-py">https://github.com/pcannon09/argx-py</link></emphasis></title></section>
+<title>Python3 API: <emphasis role="bold"><link xlink:href="https://github.com/pcannon09/argx-py">https://github.com/pcannon09/argx-py</link></emphasis> (Not updated for 1.2.y version support)</title></section>
 <section xml:id="_index_1autotoc_md11">
-<title>C API / Clone: <emphasis role="bold"><link xlink:href="https://github.com/pcannon09/argx-c">https://github.com/pcannon09/argx-c</link></emphasis></title></section>
+<title>C API / Clone: <emphasis role="bold"><link xlink:href="https://github.com/pcannon09/argx-c">https://github.com/pcannon09/argx-c</link></emphasis> (Not updated for 1.2.y version replicate)</title></section>
 </section>
 </chapter>

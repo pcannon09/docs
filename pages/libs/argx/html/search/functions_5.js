@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['what_0',['what',['../da/d2b/classargx_1_1ARGXAddError.html#ad5d8832d580b8af9cc8b48bb75a1e752',1,'argx::ARGXAddError']]]
+  ['paramexists_0',['paramExists',['../d9/da2/classargx_1_1Argx.html#a82c1649fbd03d4f3ea94bf8a14e1299d',1,'argx::Argx']]],
+  ['paramtoid_1',['paramToID',['../d9/da2/classargx_1_1Argx.html#a0269687632438687f9afd44f80c2eaa9',1,'argx::Argx']]]
 ];

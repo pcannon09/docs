@@ -30,32 +30,28 @@ Definition at line <link linkend="_types_8hpp_source_1l00015">15</link> of file 
 <indexterm><primary>code</primary><secondary>argx::ARGXError</secondary></indexterm>
 <indexterm><primary>argx::ARGXError</primary><secondary>code</secondary></indexterm>
 <para><computeroutput>int argx::ARGXError::code</computeroutput></para><para>
-Definition at line <link linkend="_types_8hpp_source_1l00021">21</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
-<para>
-Referenced by <link linkend="_Argx_8cpp_source_1l00064">argx::Argx::add()</link>.</para>
+Definition at line <link linkend="_types_8hpp_source_1l00022">22</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
 </section>
 <anchor xml:id="_structargx_1_1ARGXError_1adbf9556ec51d02e2dec17bf2aa93845e"/><section>
     <title>error</title>
 <indexterm><primary>error</primary><secondary>argx::ARGXError</secondary></indexterm>
 <indexterm><primary>argx::ARGXError</primary><secondary>error</secondary></indexterm>
 <para><computeroutput>std::string argx::ARGXError::error</computeroutput></para><para>
-Definition at line <link linkend="_types_8hpp_source_1l00018">18</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+Definition at line <link linkend="_types_8hpp_source_1l00019">19</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
 </section>
 <anchor xml:id="_structargx_1_1ARGXError_1a6c18e106da3546f417fe13217c518a85"/><section>
     <title>help</title>
 <indexterm><primary>help</primary><secondary>argx::ARGXError</secondary></indexterm>
 <indexterm><primary>argx::ARGXError</primary><secondary>help</secondary></indexterm>
 <para><computeroutput>std::string argx::ARGXError::help</computeroutput></para><para>
-Definition at line <link linkend="_types_8hpp_source_1l00019">19</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+Definition at line <link linkend="_types_8hpp_source_1l00020">20</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
 </section>
 <anchor xml:id="_structargx_1_1ARGXError_1aa3083201a43c82fd69c3f7a04118b184"/><section>
     <title>type</title>
 <indexterm><primary>type</primary><secondary>argx::ARGXError</secondary></indexterm>
 <indexterm><primary>argx::ARGXError</primary><secondary>type</secondary></indexterm>
 <para><computeroutput>std::string argx::ARGXError::type</computeroutput></para><para>
-Definition at line <link linkend="_types_8hpp_source_1l00017">17</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
-<para>
-Referenced by <link linkend="_Argx_8cpp_source_1l00064">argx::Argx::add()</link>.</para>
+Definition at line <link linkend="_types_8hpp_source_1l00018">18</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

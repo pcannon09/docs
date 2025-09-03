@@ -26,7 +26,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="_ARGXAddError_8hpp_source_1l00010">10</link> of file <link linkend="_ARGXAddError_8hpp_source">ARGXAddError.hpp</link>.</para>
+Definition at line <link linkend="_ARGXAddError_8hpp_source_1l00012">12</link> of file <link linkend="_ARGXAddError_8hpp_source">ARGXAddError.hpp</link>.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
@@ -40,7 +40,7 @@ Definition at line <link linkend="_ARGXAddError_8cpp_source_1l00008">8</link> of
 <programlisting linenumbering="unnumbered">00009 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<link linkend="_classargx_1_1ARGXAddError_1a09e860d9791a4a6b00cb716cec8a8479">msg</link>(<link linkend="_classargx_1_1ARGXAddError_1a09e860d9791a4a6b00cb716cec8a8479">msg</link>),&#32;<link linkend="_classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de">help</link>(<link linkend="_classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de">help</link>)
 00010 &#32;&#32;&#32;&#32;{&#32;}
 </programlisting><para>
-References <link linkend="_ARGXAddError_8hpp_source_1l00014">help</link>, and <link linkend="_ARGXAddError_8hpp_source_1l00013">msg</link>.</para>
+References <link linkend="_ARGXAddError_8hpp_source_1l00017">help</link>, and <link linkend="_ARGXAddError_8hpp_source_1l00016">msg</link>.</para>
 </section>
 </section>
 <section>
@@ -53,7 +53,7 @@ References <link linkend="_ARGXAddError_8hpp_source_1l00014">help</link>, and <l
 Definition at line <link linkend="_ARGXAddError_8cpp_source_1l00012">12</link> of file <link linkend="_ARGXAddError_8cpp_source">ARGXAddError.cpp</link>.</para>
 <programlisting linenumbering="unnumbered">00013 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;{&#32;this-&gt;<link linkend="_classargx_1_1ARGXAddError_1a09e860d9791a4a6b00cb716cec8a8479">msg</link>.c_str(),&#32;this-&gt;<link linkend="_classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de">help</link>.c_str()&#32;};&#32;}
 </programlisting><para>
-References <link linkend="_ARGXAddError_8hpp_source_1l00014">help</link>, and <link linkend="_ARGXAddError_8hpp_source_1l00013">msg</link>.</para>
+References <link linkend="_ARGXAddError_8hpp_source_1l00017">help</link>, and <link linkend="_ARGXAddError_8hpp_source_1l00016">msg</link>.</para>
 </section>
 </section>
 <section>
@@ -63,7 +63,7 @@ References <link linkend="_ARGXAddError_8hpp_source_1l00014">help</link>, and <l
 <indexterm><primary>help</primary><secondary>argx::ARGXAddError</secondary></indexterm>
 <indexterm><primary>argx::ARGXAddError</primary><secondary>help</secondary></indexterm>
 <para><computeroutput>std::string argx::ARGXAddError::help<computeroutput>[private]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="_ARGXAddError_8hpp_source_1l00014">14</link> of file <link linkend="_ARGXAddError_8hpp_source">ARGXAddError.hpp</link>.</para>
+Definition at line <link linkend="_ARGXAddError_8hpp_source_1l00017">17</link> of file <link linkend="_ARGXAddError_8hpp_source">ARGXAddError.hpp</link>.</para>
 <para>
 Referenced by <link linkend="_ARGXAddError_8cpp_source_1l00008">ARGXAddError()</link>, and <link linkend="_ARGXAddError_8cpp_source_1l00012">what()</link>.</para>
 </section>
@@ -72,7 +72,7 @@ Referenced by <link linkend="_ARGXAddError_8cpp_source_1l00008">ARGXAddError()</
 <indexterm><primary>msg</primary><secondary>argx::ARGXAddError</secondary></indexterm>
 <indexterm><primary>argx::ARGXAddError</primary><secondary>msg</secondary></indexterm>
 <para><computeroutput>std::string argx::ARGXAddError::msg<computeroutput>[private]</computeroutput></computeroutput></para><para>
-Definition at line <link linkend="_ARGXAddError_8hpp_source_1l00013">13</link> of file <link linkend="_ARGXAddError_8hpp_source">ARGXAddError.hpp</link>.</para>
+Definition at line <link linkend="_ARGXAddError_8hpp_source_1l00016">16</link> of file <link linkend="_ARGXAddError_8hpp_source">ARGXAddError.hpp</link>.</para>
 <para>
 Referenced by <link linkend="_ARGXAddError_8cpp_source_1l00008">ARGXAddError()</link>, and <link linkend="_ARGXAddError_8cpp_source_1l00012">what()</link>.</para>
 </section>

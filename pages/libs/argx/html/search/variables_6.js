@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['param_0',['param',['../da/dd5/structargx_1_1ARGXOptions.html#a6324ea753af15d2a184e382e913694f0',1,'argx::ARGXOptions']]]
+  ['options_0',['options',['../d9/da2/classargx_1_1Argx.html#aba86dd3c8b11c495afd4c7eada1c0ac5',1,'argx::Argx']]]
 ];

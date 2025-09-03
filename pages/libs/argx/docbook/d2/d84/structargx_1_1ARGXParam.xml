@@ -17,7 +17,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="_types_8hpp_source_1l00049">49</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+Definition at line <link linkend="_types_8hpp_source_1l00057">57</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
 </section>
 <section>
 <title>Member Data Documentation</title>
@@ -26,18 +26,18 @@ Definition at line <link linkend="_types_8hpp_source_1l00049">49</link> of file 
 <indexterm><primary>exists</primary><secondary>argx::ARGXParam</secondary></indexterm>
 <indexterm><primary>argx::ARGXParam</primary><secondary>exists</secondary></indexterm>
 <para><computeroutput>bool argx::ARGXParam::exists = false</computeroutput></para><para>
-Definition at line <link linkend="_types_8hpp_source_1l00051">51</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+Definition at line <link linkend="_types_8hpp_source_1l00059">59</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
 <para>
-Referenced by <link linkend="_Argx_8cpp_source_1l00128">argx::Argx::getParam()</link>.</para>
+Referenced by <link linkend="_Argx_8cpp_source_1l00168">argx::Argx::getParam()</link>.</para>
 </section>
 <anchor xml:id="_structargx_1_1ARGXParam_1ace0572ca0af0b51da129b562bee6a673"/><section>
     <title>subExists</title>
 <indexterm><primary>subExists</primary><secondary>argx::ARGXParam</secondary></indexterm>
 <indexterm><primary>argx::ARGXParam</primary><secondary>subExists</secondary></indexterm>
 <para><computeroutput>std::vector&lt;bool&gt; argx::ARGXParam::subExists</computeroutput></para><para>
-Definition at line <link linkend="_types_8hpp_source_1l00052">52</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+Definition at line <link linkend="_types_8hpp_source_1l00060">60</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
 <para>
-Referenced by <link linkend="_Argx_8cpp_source_1l00128">argx::Argx::getParam()</link>, and <link linkend="_Argx_8cpp_source_1l00247">argx::Argx::getSubParam()</link>.</para>
+Referenced by <link linkend="_Argx_8cpp_source_1l00168">argx::Argx::getParam()</link>, and <link linkend="_Argx_8cpp_source_1l00287">argx::Argx::getSubParam()</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

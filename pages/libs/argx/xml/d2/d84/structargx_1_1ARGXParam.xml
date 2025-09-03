@@ -17,8 +17,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/types.hpp" line="51" column="6" bodyfile="inc/types.hpp" bodystart="51" bodyend="-1"/>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" compoundref="d1/dad/Argx_8cpp" startline="128" endline="245">argx::Argx::getParam</referencedby>
+        <location file="inc/types.hpp" line="59" column="6" bodyfile="inc/types.hpp" bodystart="59" bodyend="-1"/>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" compoundref="d1/dad/Argx_8cpp" startline="168" endline="285">argx::Argx::getParam</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d2/d84/structargx_1_1ARGXParam_1ace0572ca0af0b51da129b562bee6a673" prot="public" static="no" mutable="no">
         <type>std::vector&lt; bool &gt;</type>
@@ -32,9 +32,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/types.hpp" line="52" column="13" bodyfile="inc/types.hpp" bodystart="52" bodyend="-1"/>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" compoundref="d1/dad/Argx_8cpp" startline="128" endline="245">argx::Argx::getParam</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1adb8fa05c9916682bf3cabeb2a12895f4" compoundref="d1/dad/Argx_8cpp" startline="247" endline="248">argx::Argx::getSubParam</referencedby>
+        <location file="inc/types.hpp" line="60" column="13" bodyfile="inc/types.hpp" bodystart="60" bodyend="-1"/>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" compoundref="d1/dad/Argx_8cpp" startline="168" endline="285">argx::Argx::getParam</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1adb8fa05c9916682bf3cabeb2a12895f4" compoundref="d1/dad/Argx_8cpp" startline="287" endline="288">argx::Argx::getSubParam</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -53,7 +53,7 @@
         <label>std::vector&lt; bool &gt;</label>
       </node>
     </collaborationgraph>
-    <location file="inc/types.hpp" line="49" column="1" bodyfile="inc/types.hpp" bodystart="50" bodyend="53"/>
+    <location file="inc/types.hpp" line="57" column="1" bodyfile="inc/types.hpp" bodystart="58" bodyend="61"/>
     <listofallmembers>
       <member refid="d2/d84/structargx_1_1ARGXParam_1a47afcd85c9734d815006ee41647ac4e0" prot="public" virt="non-virtual"><scope>argx::ARGXParam</scope><name>exists</name></member>
       <member refid="d2/d84/structargx_1_1ARGXParam_1ace0572ca0af0b51da129b562bee6a673" prot="public" virt="non-virtual"><scope>argx::ARGXParam</scope><name>subExists</name></member>

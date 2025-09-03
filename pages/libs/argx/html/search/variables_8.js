@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type_0',['type',['../d9/db2/structargx_1_1ARGXError.html#aa3083201a43c82fd69c3f7a04118b184',1,'argx::ARGXError']]]
+  ['required_0',['required',['../da/dd5/structargx_1_1ARGXOptions.html#ab35134d0ed79694e46420ada0813565f',1,'argx::ARGXOptions']]]
 ];

@@ -10,33 +10,38 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_macros_8hpp_source_1l00006"/>00006 <emphasis role="comment">&#32;*/</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00007"/>00007 
 <anchor xml:id="_macros_8hpp_source_1l00008"/>00008 <emphasis role="comment">//&#32;Versioning</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00009"/><link linkend="_macros_8hpp_1a774e5c096afc126e4fd6031c4143df1c">00009</link> <emphasis role="preprocessor">#define&#32;ARGX_VERSION_MAJOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00010"/><link linkend="_macros_8hpp_1a6fca140f9d55dd241c689047db70c236">00010</link> <emphasis role="preprocessor">#define&#32;ARGX_VERSION_MINOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00011"/><link linkend="_macros_8hpp_1a8bb35e7bdac8b6af29d07e6fd7468b08">00011</link> <emphasis role="preprocessor">#define&#32;ARGX_VERSION_PATCH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00009"/><link linkend="_macros_8hpp_1a774e5c096afc126e4fd6031c4143df1c">00009</link> <emphasis role="preprocessor">#define&#32;ARGX_VERSION_MAJOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00010"/><link linkend="_macros_8hpp_1a6fca140f9d55dd241c689047db70c236">00010</link> <emphasis role="preprocessor">#define&#32;ARGX_VERSION_MINOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00011"/><link linkend="_macros_8hpp_1a8bb35e7bdac8b6af29d07e6fd7468b08">00011</link> <emphasis role="preprocessor">#define&#32;ARGX_VERSION_PATCH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
 <anchor xml:id="_macros_8hpp_source_1l00012"/>00012 
-<anchor xml:id="_macros_8hpp_source_1l00013"/><link linkend="_macros_8hpp_1a2cf696b4344dbd9c545a9165cb10cb76">00013</link> <emphasis role="preprocessor">#define&#32;ARGX_VERSION_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;20250721</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00014"/>00014 
-<anchor xml:id="_macros_8hpp_source_1l00015"/>00015 <emphasis role="comment">//&#32;Version&#32;states:</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00016"/>00016 <emphasis role="comment">//&#32;*&#32;dev&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00017"/>00017 <emphasis role="comment">//&#32;*&#32;beta&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00018"/>00018 <emphasis role="comment">//&#32;*&#32;snap&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00019"/>00019 <emphasis role="comment">//&#32;*&#32;build&#32;(AKA:&#32;Release)&#32;&#32;&#32;3</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00020"/>00020 <emphasis role="preprocessor">#ifndef&#32;ARGX_AS_PYTHON_PACKAGE</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00021"/><link linkend="_macros_8hpp_1a2dd1c90360210f9bc40f65de8558b60f">00021</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;ARGX_VERSION_STATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;build&quot;</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00022"/>00022 <emphasis role="preprocessor">#else</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00023"/>00023 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;ARGX_VERSION_STATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00024"/>00024 <emphasis role="preprocessor">#endif</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00025"/>00025 
-<anchor xml:id="_macros_8hpp_source_1l00026"/><link linkend="_macros_8hpp_1aa639891463acaa985538b2760398bca3">00026</link> <emphasis role="preprocessor">#define&#32;ARGX_VERSION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((ARGX_VERSION_MAJOR&lt;&lt;16)|(ARGX_VERSION_MINOR&lt;&lt;8)|(ARGX_VERSION_PATCH)|(ARGX_VERSION_STATE&#32;&lt;&lt;&#32;24))</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00027"/>00027 
-<anchor xml:id="_macros_8hpp_source_1l00028"/><link linkend="_macros_8hpp_1a9a03c00fec9110110cb43d0c67e195f3">00028</link> <emphasis role="preprocessor">#define&#32;ARGX_VERSION_CHECK(ARGX_VERSION_MAJOR,&#32;ARGX_VERSION_MINOR,&#32;ARGX_VERSION_PATCH,&#32;ARGX_VERSION_STATE)&#32;\</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00029"/>00029 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(((ARGX_VERSION_MAJOR)&lt;&lt;16)|((ARGX_VERSION_MINOR)&lt;&lt;8)|(ARGX_VERSION_PATCH)|((ARGX_VERSION_STATE)&#32;&lt;&lt;&#32;24))</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00030"/>00030 
-<anchor xml:id="_macros_8hpp_source_1l00031"/>00031 <emphasis role="comment">//&#32;DEV&#32;or&#32;PROD</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00032"/><link linkend="_macros_8hpp_1a2c2541090a31c495b5e800500cdff4ef">00032</link> <emphasis role="preprocessor">#define&#32;ARGX_DEV&#32;false</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00033"/>00033 
-<anchor xml:id="_macros_8hpp_source_1l00034"/>00034 <emphasis role="comment">//&#32;Macro&#32;utils</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00035"/><link linkend="_macros_8hpp_1a35b3310e39905bdf63646a9f2a02ef18">00035</link> <emphasis role="preprocessor">#define&#32;ARGX_STRINGIFY(x)&#32;#x</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00036"/><link linkend="_macros_8hpp_1a4fd1f3a5c43cb1afcd72db492e2cee28">00036</link> <emphasis role="preprocessor">#define&#32;ARGX_TOSTRING(x)&#32;ARGX_STRINGIFY(x)</emphasis>
-<anchor xml:id="_macros_8hpp_source_1l00037"/>00037 
+<anchor xml:id="_macros_8hpp_source_1l00013"/><link linkend="_macros_8hpp_1a2cf696b4344dbd9c545a9165cb10cb76">00013</link> <emphasis role="preprocessor">#define&#32;ARGX_VERSION_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;20250903</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00014"/><link linkend="_macros_8hpp_1af2425c803e6b94429a9120dad6f1022b">00014</link> <emphasis role="preprocessor">#define&#32;ARGX_PY_REQUIRED_VERSION_STD&#32;&#32;&#32;&#32;20250721</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00015"/>00015 
+<anchor xml:id="_macros_8hpp_source_1l00016"/>00016 <emphasis role="comment">//&#32;Version&#32;states:</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00017"/>00017 <emphasis role="comment">//&#32;*&#32;dev&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00018"/>00018 <emphasis role="comment">//&#32;*&#32;beta&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00019"/>00019 <emphasis role="comment">//&#32;*&#32;snap&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00020"/>00020 <emphasis role="comment">//&#32;*&#32;build&#32;(AKA:&#32;Release)&#32;&#32;&#32;3</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00021"/>00021 <emphasis role="preprocessor">#ifndef&#32;ARGX_AS_PYTHON_PACKAGE</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00022"/><link linkend="_macros_8hpp_1a2dd1c90360210f9bc40f65de8558b60f">00022</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;ARGX_VERSION_STATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;beta&quot;</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00023"/>00023 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00024"/>00024 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;ARGX_VERSION_STATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00025"/>00025 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00026"/>00026 
+<anchor xml:id="_macros_8hpp_source_1l00027"/><link linkend="_macros_8hpp_1aa639891463acaa985538b2760398bca3">00027</link> <emphasis role="preprocessor">#define&#32;ARGX_VERSION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((ARGX_VERSION_MAJOR&lt;&lt;16)|(ARGX_VERSION_MINOR&lt;&lt;8)|(ARGX_VERSION_PATCH)|(ARGX_VERSION_STATE&#32;&lt;&lt;&#32;24))</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00028"/>00028 
+<anchor xml:id="_macros_8hpp_source_1l00029"/><link linkend="_macros_8hpp_1a9a03c00fec9110110cb43d0c67e195f3">00029</link> <emphasis role="preprocessor">#define&#32;ARGX_VERSION_CHECK(ARGX_VERSION_MAJOR,&#32;ARGX_VERSION_MINOR,&#32;ARGX_VERSION_PATCH,&#32;ARGX_VERSION_STATE)&#32;\</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00030"/>00030 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(((ARGX_VERSION_MAJOR)&lt;&lt;16)|((ARGX_VERSION_MINOR)&lt;&lt;8)|(ARGX_VERSION_PATCH)|((ARGX_VERSION_STATE)&#32;&lt;&lt;&#32;24))</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00031"/>00031 
+<anchor xml:id="_macros_8hpp_source_1l00032"/>00032 <emphasis role="comment">//&#32;DEV&#32;or&#32;PROD</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00033"/><link linkend="_macros_8hpp_1a2c2541090a31c495b5e800500cdff4ef">00033</link> <emphasis role="preprocessor">#define&#32;ARGX_DEV&#32;false</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00034"/>00034 
+<anchor xml:id="_macros_8hpp_source_1l00035"/>00035 <emphasis role="comment">//&#32;Macro&#32;utils</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00036"/><link linkend="_macros_8hpp_1a35b3310e39905bdf63646a9f2a02ef18">00036</link> <emphasis role="preprocessor">#define&#32;ARGX_STRINGIFY(x)&#32;#x</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00037"/><link linkend="_macros_8hpp_1a4fd1f3a5c43cb1afcd72db492e2cee28">00037</link> <emphasis role="preprocessor">#define&#32;ARGX_TOSTRING(x)&#32;ARGX_STRINGIFY(x)</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00038"/>00038 
+<anchor xml:id="_macros_8hpp_source_1l00039"/>00039 <emphasis role="preprocessor">#if&#32;defined(ARGX_AS_PYTHON_PACKAGE)&#32;&amp;&amp;&#32;ARGX_VERSION_STD&#32;!=&#32;ARGX_PY_REQUIRED_VERSION_STD</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00040"/>00040 <emphasis role="preprocessor">#&#32;&#32;&#32;error&#32;&quot;This&#32;ARGX&#32;standard&#32;does&#32;not&#32;comply&#32;with&#32;the&#32;python&#32;package,&#32;make&#32;sure&#32;to&#32;have&#32;20250721&#32;as&#32;the&#32;default&#32;standard&#32;for&#32;ARGX&#32;python&#32;packages&quot;</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00041"/>00041 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_macros_8hpp_source_1l00042"/>00042 
 </programlisting></section>

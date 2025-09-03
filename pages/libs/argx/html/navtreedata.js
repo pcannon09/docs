@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "Argx", "index.html", [
-    [ "ARGX - 1.1.0-build", "index.html", "index" ],
+    [ "ARGX - 1.2.0-beta", "index.html", "index" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [

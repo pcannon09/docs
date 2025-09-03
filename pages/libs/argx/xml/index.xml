@@ -13,13 +13,20 @@
     <member refid="d9/da2/classargx_1_1Argx_1a99bbe74c7f09f6bb3a343dbdde050a64" kind="function"><name>createDocs</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" kind="function"><name>findParam</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a812254e076a5ec208ba9d2eab470edb4" kind="function"><name>getArgc</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a7fb43159f183399c8674cd5e521d3caf" kind="function"><name>getArgIDPos</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a73dccd80c13749ea006b46653cc2a8a0" kind="function"><name>getArgPos</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a671ad717805d76e459c74a3e0fee0625" kind="function"><name>getID</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a6146d9644c99b670b15d78cb92057bff" kind="function"><name>getMainArgs</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1ae7f1dcaf2c945c8592a3e89b15a0189b" kind="function"><name>getOption</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a3378e7eb2efcb1386b487ece1b5aec35" kind="function"><name>getOptions</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" kind="function"><name>getParam</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1adb8fa05c9916682bf3cabeb2a12895f4" kind="function"><name>getSubParam</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" kind="function"><name>getSubValue</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1ac1e4d316a44cfdc596a181af15e74962" kind="function"><name>getWrongArgs</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a8d66cd4ebaeb1c03ef474c260ce90977" kind="function"><name>hasTag</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a82c1649fbd03d4f3ea94bf8a14e1299d" kind="function"><name>paramExists</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a0269687632438687f9afd44f80c2eaa9" kind="function"><name>paramToID</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1a9d961d98a70713290d237dd8f3d68369" kind="function"><name>subParamExists</name></member>
   </compound>
   <compound refid="da/d2b/classargx_1_1ARGXAddError" kind="class"><name>argx::ARGXAddError</name>
     <member refid="da/d2b/classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de" kind="variable"><name>help</name></member>
@@ -34,13 +41,16 @@
     <member refid="d9/db2/structargx_1_1ARGXError_1aa3083201a43c82fd69c3f7a04118b184" kind="variable"><name>type</name></member>
   </compound>
   <compound refid="da/dd5/structargx_1_1ARGXOptions" kind="struct"><name>argx::ARGXOptions</name>
+    <member refid="da/dd5/structargx_1_1ARGXOptions_1abcd90d184d4e1a80e3ebfe23197a70c0" kind="variable"><name>defaultValue</name></member>
     <member refid="da/dd5/structargx_1_1ARGXOptions_1ad2eec2de8559ea5cc4e446c0d47c6279" kind="variable"><name>hasAnySubParams</name></member>
     <member refid="da/dd5/structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a" kind="variable"><name>hasSubParams</name></member>
     <member refid="da/dd5/structargx_1_1ARGXOptions_1a0bd17b9be2b313a37c353d9d8b8c5b65" kind="variable"><name>id</name></member>
     <member refid="da/dd5/structargx_1_1ARGXOptions_1a825a889884b7b19a5c1550a328780ab9" kind="variable"><name>info</name></member>
     <member refid="da/dd5/structargx_1_1ARGXOptions_1a6324ea753af15d2a184e382e913694f0" kind="variable"><name>param</name></member>
+    <member refid="da/dd5/structargx_1_1ARGXOptions_1ab35134d0ed79694e46420ada0813565f" kind="variable"><name>required</name></member>
     <member refid="da/dd5/structargx_1_1ARGXOptions_1aa0cd2dddf236a7bd15c1636aa7ec4a9c" kind="variable"><name>sparam</name></member>
     <member refid="da/dd5/structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed" kind="variable"><name>subParams</name></member>
+    <member refid="da/dd5/structargx_1_1ARGXOptions_1ad11a81f21049b37b90572126ccdaf52f" kind="variable"><name>tag</name></member>
   </compound>
   <compound refid="d2/d84/structargx_1_1ARGXParam" kind="struct"><name>argx::ARGXParam</name>
     <member refid="d2/d84/structargx_1_1ARGXParam_1a47afcd85c9734d815006ee41647ac4e0" kind="variable"><name>exists</name></member>
@@ -62,6 +72,7 @@
   </compound>
   <compound refid="db/dbe/macros_8hpp" kind="file"><name>macros.hpp</name>
     <member refid="db/dbe/macros_8hpp_1a2c2541090a31c495b5e800500cdff4ef" kind="define"><name>ARGX_DEV</name></member>
+    <member refid="db/dbe/macros_8hpp_1af2425c803e6b94429a9120dad6f1022b" kind="define"><name>ARGX_PY_REQUIRED_VERSION_STD</name></member>
     <member refid="db/dbe/macros_8hpp_1a35b3310e39905bdf63646a9f2a02ef18" kind="define"><name>ARGX_STRINGIFY</name></member>
     <member refid="db/dbe/macros_8hpp_1a4fd1f3a5c43cb1afcd72db492e2cee28" kind="define"><name>ARGX_TOSTRING</name></member>
     <member refid="db/dbe/macros_8hpp_1aa639891463acaa985538b2760398bca3" kind="define"><name>ARGX_VERSION</name></member>

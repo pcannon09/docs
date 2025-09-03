@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ARGXAddError.hpp" line="14" column="13" bodyfile="inc/ARGXAddError.hpp" bodystart="14" bodyend="-1"/>
+        <location file="inc/ARGXAddError.hpp" line="17" column="13" bodyfile="inc/ARGXAddError.hpp" bodystart="17" bodyend="-1"/>
         <referencedby refid="da/d2b/classargx_1_1ARGXAddError_1ac2b5ced72ae86e5ca250b1f401cc1a5f" compoundref="d2/d48/ARGXAddError_8cpp" startline="8" endline="10">ARGXAddError</referencedby>
         <referencedby refid="da/d2b/classargx_1_1ARGXAddError_1ad5d8832d580b8af9cc8b48bb75a1e752" compoundref="d2/d48/ARGXAddError_8cpp" startline="12" endline="13">what</referencedby>
       </memberdef>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ARGXAddError.hpp" line="13" column="13" bodyfile="inc/ARGXAddError.hpp" bodystart="13" bodyend="-1"/>
+        <location file="inc/ARGXAddError.hpp" line="16" column="13" bodyfile="inc/ARGXAddError.hpp" bodystart="16" bodyend="-1"/>
         <referencedby refid="da/d2b/classargx_1_1ARGXAddError_1ac2b5ced72ae86e5ca250b1f401cc1a5f" compoundref="d2/d48/ARGXAddError_8cpp" startline="8" endline="10">ARGXAddError</referencedby>
         <referencedby refid="da/d2b/classargx_1_1ARGXAddError_1ad5d8832d580b8af9cc8b48bb75a1e752" compoundref="d2/d48/ARGXAddError_8cpp" startline="12" endline="13">what</referencedby>
       </memberdef>
@@ -59,9 +59,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ARGXAddError.hpp" line="17" column="1" bodyfile="src/ARGXAddError.cpp" bodystart="8" bodyend="10"/>
-        <references refid="da/d2b/classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de" compoundref="d2/d1d/ARGXAddError_8hpp" startline="14">help</references>
-        <references refid="da/d2b/classargx_1_1ARGXAddError_1a09e860d9791a4a6b00cb716cec8a8479" compoundref="d2/d1d/ARGXAddError_8hpp" startline="13">msg</references>
+        <location file="inc/ARGXAddError.hpp" line="20" column="1" bodyfile="src/ARGXAddError.cpp" bodystart="8" bodyend="10"/>
+        <references refid="da/d2b/classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de" compoundref="d2/d1d/ARGXAddError_8hpp" startline="17">help</references>
+        <references refid="da/d2b/classargx_1_1ARGXAddError_1a09e860d9791a4a6b00cb716cec8a8479" compoundref="d2/d1d/ARGXAddError_8hpp" startline="16">msg</references>
       </memberdef>
       <memberdef kind="function" id="da/d2b/classargx_1_1ARGXAddError_1ad5d8832d580b8af9cc8b48bb75a1e752" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::pair&lt; const char *, const char * &gt;</type>
@@ -75,9 +75,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ARGXAddError.hpp" line="19" column="11" bodyfile="src/ARGXAddError.cpp" bodystart="12" bodyend="13"/>
-        <references refid="da/d2b/classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de" compoundref="d2/d1d/ARGXAddError_8hpp" startline="14">help</references>
-        <references refid="da/d2b/classargx_1_1ARGXAddError_1a09e860d9791a4a6b00cb716cec8a8479" compoundref="d2/d1d/ARGXAddError_8hpp" startline="13">msg</references>
+        <location file="inc/ARGXAddError.hpp" line="22" column="11" bodyfile="src/ARGXAddError.cpp" bodystart="12" bodyend="13"/>
+        <references refid="da/d2b/classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de" compoundref="d2/d1d/ARGXAddError_8hpp" startline="17">help</references>
+        <references refid="da/d2b/classargx_1_1ARGXAddError_1a09e860d9791a4a6b00cb716cec8a8479" compoundref="d2/d1d/ARGXAddError_8hpp" startline="16">msg</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -102,7 +102,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="inc/ARGXAddError.hpp" line="10" column="1" bodyfile="inc/ARGXAddError.hpp" bodystart="11" bodyend="20"/>
+    <location file="inc/ARGXAddError.hpp" line="12" column="1" bodyfile="inc/ARGXAddError.hpp" bodystart="14" bodyend="23"/>
     <listofallmembers>
       <member refid="da/d2b/classargx_1_1ARGXAddError_1ac2b5ced72ae86e5ca250b1f401cc1a5f" prot="public" virt="non-virtual"><scope>argx::ARGXAddError</scope><name>ARGXAddError</name></member>
       <member refid="da/d2b/classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de" prot="private" virt="non-virtual"><scope>argx::ARGXAddError</scope><name>help</name></member>

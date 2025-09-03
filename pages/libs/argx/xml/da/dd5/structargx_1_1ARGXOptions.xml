@@ -4,6 +4,21 @@
     <compoundname>argx::ARGXOptions</compoundname>
     <includes refid="dd/de3/types_8hpp" local="no">types.hpp</includes>
     <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1abcd90d184d4e1a80e3ebfe23197a70c0" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string argx::ARGXOptions::defaultValue</definition>
+        <argsstring></argsstring>
+        <name>defaultValue</name>
+        <qualifiedname>argx::ARGXOptions::defaultValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="48" column="13" bodyfile="inc/types.hpp" bodystart="48" bodyend="-1"/>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="486" endline="534">argx::Argx::getSubValue</referencedby>
+      </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1ad2eec2de8559ea5cc4e446c0d47c6279" prot="public" static="no" mutable="no">
         <type>bool</type>
         <definition>bool argx::ARGXOptions::hasAnySubParams</definition>
@@ -17,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/types.hpp" line="44" column="6" bodyfile="inc/types.hpp" bodystart="44" bodyend="-1"/>
+        <location file="inc/types.hpp" line="51" column="6" bodyfile="inc/types.hpp" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -32,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/types.hpp" line="43" column="6" bodyfile="inc/types.hpp" bodystart="43" bodyend="-1"/>
+        <location file="inc/types.hpp" line="50" column="6" bodyfile="inc/types.hpp" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a0bd17b9be2b313a37c353d9d8b8c5b65" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -48,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/types.hpp" line="29" column="13" bodyfile="inc/types.hpp" bodystart="29" bodyend="-1"/>
+        <location file="inc/types.hpp" line="30" column="13" bodyfile="inc/types.hpp" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a825a889884b7b19a5c1550a328780ab9" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -62,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/types.hpp" line="41" column="13" bodyfile="inc/types.hpp" bodystart="41" bodyend="-1"/>
+        <location file="inc/types.hpp" line="42" column="13" bodyfile="inc/types.hpp" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a6324ea753af15d2a184e382e913694f0" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -71,14 +86,30 @@
         <name>param</name>
         <qualifiedname>argx::ARGXOptions::param</qualifiedname>
         <briefdescription>
-<para>Param (param): </para>
+<para>Param (param). </para>
         </briefdescription>
         <detaileddescription>
 <para>EXAMPLE: <ndash/>help, <ndash/>version </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/types.hpp" line="35" column="13" bodyfile="inc/types.hpp" bodystart="35" bodyend="-1"/>
+        <location file="inc/types.hpp" line="36" column="13" bodyfile="inc/types.hpp" bodystart="36" bodyend="-1"/>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a7fb43159f183399c8674cd5e521d3caf" compoundref="d1/dad/Argx_8cpp" startline="50" endline="61">argx::Argx::getArgIDPos</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1ab35134d0ed79694e46420ada0813565f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool argx::ARGXOptions::required</definition>
+        <argsstring></argsstring>
+        <name>required</name>
+        <qualifiedname>argx::ARGXOptions::required</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="52" column="6" bodyfile="inc/types.hpp" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1aa0cd2dddf236a7bd15c1636aa7ec4a9c" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -93,7 +124,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/types.hpp" line="40" column="13" bodyfile="inc/types.hpp" bodystart="40" bodyend="-1"/>
+        <location file="inc/types.hpp" line="41" column="13" bodyfile="inc/types.hpp" bodystart="41" bodyend="-1"/>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a7fb43159f183399c8674cd5e521d3caf" compoundref="d1/dad/Argx_8cpp" startline="50" endline="61">argx::Argx::getArgIDPos</referencedby>
       </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed" prot="public" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="da/dd5/structargx_1_1ARGXOptions" kindref="compound">ARGXOptions</ref> &gt;</type>
@@ -107,8 +139,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/types.hpp" line="46" column="13" bodyfile="inc/types.hpp" bodystart="46" bodyend="-1"/>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1adb4e8a622135970b4e12f14d49a76e52" compoundref="d1/dad/Argx_8cpp" startline="319" endline="380">argx::Argx::compareArgs</referencedby>
+        <location file="inc/types.hpp" line="54" column="13" bodyfile="inc/types.hpp" bodystart="54" bodyend="-1"/>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1adb4e8a622135970b4e12f14d49a76e52" compoundref="d1/dad/Argx_8cpp" startline="415" endline="476">argx::Argx::compareArgs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1ad11a81f21049b37b90572126ccdaf52f" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string argx::ARGXOptions::tag</definition>
+        <argsstring></argsstring>
+        <name>tag</name>
+        <qualifiedname>argx::ARGXOptions::tag</qualifiedname>
+        <initializer>= &quot;default&quot;</initializer>
+        <briefdescription>
+<para>Set default tag to categorize arguments. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/types.hpp" line="47" column="13" bodyfile="inc/types.hpp" bodystart="47" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -120,10 +168,12 @@
         <label>argx::ARGXOptions</label>
         <link refid="da/dd5/structargx_1_1ARGXOptions"/>
         <childnode refid="2" relation="usage">
+          <edgelabel>defaultValue</edgelabel>
           <edgelabel>id</edgelabel>
           <edgelabel>info</edgelabel>
           <edgelabel>param</edgelabel>
           <edgelabel>sparam</edgelabel>
+          <edgelabel>tag</edgelabel>
         </childnode>
         <childnode refid="4" relation="usage">
           <edgelabel>subParams</edgelabel>
@@ -144,15 +194,18 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="inc/types.hpp" line="24" column="1" bodyfile="inc/types.hpp" bodystart="25" bodyend="47"/>
+    <location file="inc/types.hpp" line="25" column="1" bodyfile="inc/types.hpp" bodystart="26" bodyend="55"/>
     <listofallmembers>
+      <member refid="da/dd5/structargx_1_1ARGXOptions_1abcd90d184d4e1a80e3ebfe23197a70c0" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>defaultValue</name></member>
       <member refid="da/dd5/structargx_1_1ARGXOptions_1ad2eec2de8559ea5cc4e446c0d47c6279" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>hasAnySubParams</name></member>
       <member refid="da/dd5/structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>hasSubParams</name></member>
       <member refid="da/dd5/structargx_1_1ARGXOptions_1a0bd17b9be2b313a37c353d9d8b8c5b65" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>id</name></member>
       <member refid="da/dd5/structargx_1_1ARGXOptions_1a825a889884b7b19a5c1550a328780ab9" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>info</name></member>
       <member refid="da/dd5/structargx_1_1ARGXOptions_1a6324ea753af15d2a184e382e913694f0" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>param</name></member>
+      <member refid="da/dd5/structargx_1_1ARGXOptions_1ab35134d0ed79694e46420ada0813565f" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>required</name></member>
       <member refid="da/dd5/structargx_1_1ARGXOptions_1aa0cd2dddf236a7bd15c1636aa7ec4a9c" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>sparam</name></member>
       <member refid="da/dd5/structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>subParams</name></member>
+      <member refid="da/dd5/structargx_1_1ARGXOptions_1ad11a81f21049b37b90572126ccdaf52f" prot="public" virt="non-virtual"><scope>argx::ARGXOptions</scope><name>tag</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

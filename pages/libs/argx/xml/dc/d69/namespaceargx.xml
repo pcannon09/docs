@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/types.hpp" line="22" column="11"/>
+        <location file="inc/types.hpp" line="23" column="11"/>
       </memberdef>
       <memberdef kind="typedef" id="dc/d69/namespaceargx_1a9933be078f36db7b1424f6dd0372eb72" prot="public" static="no">
         <type>struct argx::ARGXOptions</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/types.hpp" line="47" column="13"/>
+        <location file="inc/types.hpp" line="55" column="13"/>
       </memberdef>
       <memberdef kind="typedef" id="dc/d69/namespaceargx_1a40874387325f4f81850b2ef717831239" prot="public" static="no">
         <type>struct argx::ARGXParam</type>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/types.hpp" line="53" column="11"/>
+        <location file="inc/types.hpp" line="61" column="11"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

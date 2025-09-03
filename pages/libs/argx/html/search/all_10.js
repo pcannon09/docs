@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['type_0',['type',['../d9/db2/structargx_1_1ARGXError.html#aa3083201a43c82fd69c3f7a04118b184',1,'argx::ARGXError']]],
-  ['types_2ehpp_1',['types.hpp',['../dd/de3/types_8hpp.html',1,'']]]
+  ['readme_2emd_0',['README.md',['../da/ddd/README_8md.html',1,'']]],
+  ['replicate_1',['C API / Clone: &lt;b&gt;&lt;a href=&quot;https://github.com/pcannon09/argx-c&quot;&gt;https://github.com/pcannon09/argx-c&lt;/a&gt;&lt;/b&gt; (Not updated for 1.2.y version replicate)',['../index.html#autotoc_md11',1,'']]],
+  ['required_2',['required',['../da/dd5/structargx_1_1ARGXOptions.html#ab35134d0ed79694e46420ada0813565f',1,'argx::ARGXOptions']]],
+  ['requirements_3',['Requirements',['../index.html#autotoc_md4',1,'']]]
 ];

@@ -4,7 +4,7 @@
     <name>Argx.hpp</name>
     <path>inc/</path>
     <filename>d0/d32/Argx_8hpp.html</filename>
-    <includes id="db/dbe/macros_8hpp" name="macros.hpp" local="yes" import="no" module="no" objc="no">../inc/macros.hpp</includes>
+    <includes id="db/dbe/macros_8hpp" name="macros.hpp" local="yes" import="no" module="no" objc="no">macros.hpp</includes>
     <includes id="dd/de3/types_8hpp" name="types.hpp" local="yes" import="no" module="no" objc="no">../inc/types.hpp</includes>
     <class kind="class">argx::Argx</class>
     <namespace>argx</namespace>
@@ -25,6 +25,13 @@
       <name>ARGX_DEV</name>
       <anchorfile>db/dbe/macros_8hpp.html</anchorfile>
       <anchor>a2c2541090a31c495b5e800500cdff4ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>ARGX_PY_REQUIRED_VERSION_STD</name>
+      <anchorfile>db/dbe/macros_8hpp.html</anchorfile>
+      <anchor>af2425c803e6b94429a9120dad6f1022b</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
@@ -181,6 +188,13 @@
     </member>
     <member kind="function">
       <type>int</type>
+      <name>getArgIDPos</name>
+      <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
+      <anchor>a7fb43159f183399c8674cd5e521d3caf</anchor>
+      <arglist>(const std::string &amp;arg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
       <name>getArgPos</name>
       <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
       <anchor>a73dccd80c13749ea006b46653cc2a8a0</anchor>
@@ -199,6 +213,13 @@
       <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
       <anchor>a6146d9644c99b670b15d78cb92057bff</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>ARGXOptions</type>
+      <name>getOption</name>
+      <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
+      <anchor>ae7f1dcaf2c945c8592a3e89b15a0189b</anchor>
+      <arglist>(const std::string &amp;id)</arglist>
     </member>
     <member kind="function">
       <type>std::vector&lt; ARGXOptions &gt;</type>
@@ -222,10 +243,45 @@
       <arglist>(const argx::ARGXParam &amp;param, const std::string &amp;id)</arglist>
     </member>
     <member kind="function">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>getSubValue</name>
+      <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
+      <anchor>a25786788983b04754ac5d9f9aaa9bee5</anchor>
+      <arglist>(const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getWrongArgs</name>
+      <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
+      <anchor>ac1e4d316a44cfdc596a181af15e74962</anchor>
+      <arglist>(const std::vector&lt; std::string &gt; &amp;argv)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasTag</name>
+      <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
+      <anchor>a8d66cd4ebaeb1c03ef474c260ce90977</anchor>
+      <arglist>(const std::string &amp;id, const std::string &amp;tag)</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>paramExists</name>
       <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
       <anchor>a82c1649fbd03d4f3ea94bf8a14e1299d</anchor>
+      <arglist>(const std::string &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>paramToID</name>
+      <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
+      <anchor>a0269687632438687f9afd44f80c2eaa9</anchor>
+      <arglist>(const std::string &amp;param)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>subParamExists</name>
+      <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
+      <anchor>a9d961d98a70713290d237dd8f3d68369</anchor>
       <arglist>(const std::string &amp;id)</arglist>
     </member>
     <member kind="variable" protection="private">
@@ -325,6 +381,13 @@
     <name>argx::ARGXOptions</name>
     <filename>da/dd5/structargx_1_1ARGXOptions.html</filename>
     <member kind="variable">
+      <type>std::string</type>
+      <name>defaultValue</name>
+      <anchorfile>da/dd5/structargx_1_1ARGXOptions.html</anchorfile>
+      <anchor>abcd90d184d4e1a80e3ebfe23197a70c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
       <type>bool</type>
       <name>hasAnySubParams</name>
       <anchorfile>da/dd5/structargx_1_1ARGXOptions.html</anchorfile>
@@ -360,6 +423,13 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
+      <type>bool</type>
+      <name>required</name>
+      <anchorfile>da/dd5/structargx_1_1ARGXOptions.html</anchorfile>
+      <anchor>ab35134d0ed79694e46420ada0813565f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
       <type>std::string</type>
       <name>sparam</name>
       <anchorfile>da/dd5/structargx_1_1ARGXOptions.html</anchorfile>
@@ -371,6 +441,13 @@
       <name>subParams</name>
       <anchorfile>da/dd5/structargx_1_1ARGXOptions.html</anchorfile>
       <anchor>a6345f9a87edfb31007c6e3b53f9eeaed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>tag</name>
+      <anchorfile>da/dd5/structargx_1_1ARGXOptions.html</anchorfile>
+      <anchor>ad11a81f21049b37b90572126ccdaf52f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -433,8 +510,8 @@
   </compound>
   <compound kind="page">
     <name>index</name>
-    <title>ARGX - 1.1.0-build</title>
+    <title>ARGX - 1.2.0-beta</title>
     <filename>index.html</filename>
-    <docanchor file="index.html" title="ARGX - 1.1.0-build">md_README</docanchor>
+    <docanchor file="index.html" title="ARGX - 1.2.0-beta">md_README</docanchor>
   </compound>
 </tagfile>

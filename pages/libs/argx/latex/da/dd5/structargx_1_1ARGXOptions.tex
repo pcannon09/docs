@@ -7,6 +7,8 @@
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
+std\+::string \mbox{\hyperlink{structargx_1_1ARGXOptions_abcd90d184d4e1a80e3ebfe23197a70c0}{default\+Value}}
+\item 
 bool \mbox{\hyperlink{structargx_1_1ARGXOptions_ad2eec2de8559ea5cc4e446c0d47c6279}{has\+Any\+Sub\+Params}} = false
 \item 
 bool \mbox{\hyperlink{structargx_1_1ARGXOptions_a02e69197bd3efa35da99edcc4018eb1a}{has\+Sub\+Params}} = false
@@ -16,23 +18,41 @@ std\+::string \mbox{\hyperlink{structargx_1_1ARGXOptions_a0bd17b9be2b313a37c353d
 std\+::string \mbox{\hyperlink{structargx_1_1ARGXOptions_a825a889884b7b19a5c1550a328780ab9}{info}}
 \item 
 std\+::string \mbox{\hyperlink{structargx_1_1ARGXOptions_a6324ea753af15d2a184e382e913694f0}{param}}
-\begin{DoxyCompactList}\small\item\em Param (param)\+: \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Param (param). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structargx_1_1ARGXOptions_ab35134d0ed79694e46420ada0813565f}{required}} = false
+\item 
 std\+::string \mbox{\hyperlink{structargx_1_1ARGXOptions_aa0cd2dddf236a7bd15c1636aa7ec4a9c}{sparam}}
 \begin{DoxyCompactList}\small\item\em Short Param (sparam)\+: \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{structargx_1_1ARGXOptions}{ARGXOptions}} $>$ \mbox{\hyperlink{structargx_1_1ARGXOptions_a6345f9a87edfb31007c6e3b53f9eeaed}{sub\+Params}}
-\end{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structargx_1_1ARGXOptions_ad11a81f21049b37b90572126ccdaf52f}{tag}} = "{}default"{}
+\begin{DoxyCompactList}\small\item\em Set default tag to categorize arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{types_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
+Definition at line \mbox{\hyperlink{types_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
 
 
 \label{doc-variable-members}
 \Hypertarget{structargx_1_1ARGXOptions_doc-variable-members}
 \doxysubsection{Member Data Documentation}
+\Hypertarget{structargx_1_1ARGXOptions_abcd90d184d4e1a80e3ebfe23197a70c0}\index{argx::ARGXOptions@{argx::ARGXOptions}!defaultValue@{defaultValue}}
+\index{defaultValue@{defaultValue}!argx::ARGXOptions@{argx::ARGXOptions}}
+\doxysubsubsection{\texorpdfstring{defaultValue}{defaultValue}}
+{\footnotesize\ttfamily \label{structargx_1_1ARGXOptions_abcd90d184d4e1a80e3ebfe23197a70c0} 
+std\+::string argx\+::\+ARGXOptions\+::default\+Value}
+
+
+
+Definition at line \mbox{\hyperlink{types_8hpp_source_l00048}{48}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00486}{argx\+::\+Argx\+::get\+Sub\+Value()}}.
+
 \Hypertarget{structargx_1_1ARGXOptions_ad2eec2de8559ea5cc4e446c0d47c6279}\index{argx::ARGXOptions@{argx::ARGXOptions}!hasAnySubParams@{hasAnySubParams}}
 \index{hasAnySubParams@{hasAnySubParams}!argx::ARGXOptions@{argx::ARGXOptions}}
 \doxysubsubsection{\texorpdfstring{hasAnySubParams}{hasAnySubParams}}
@@ -41,7 +61,7 @@ bool argx\+::\+ARGXOptions\+::has\+Any\+Sub\+Params = false}
 
 
 
-Definition at line \mbox{\hyperlink{types_8hpp_source_l00044}{44}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
+Definition at line \mbox{\hyperlink{types_8hpp_source_l00051}{51}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
 \Hypertarget{structargx_1_1ARGXOptions_a02e69197bd3efa35da99edcc4018eb1a}\index{argx::ARGXOptions@{argx::ARGXOptions}!hasSubParams@{hasSubParams}}
 \index{hasSubParams@{hasSubParams}!argx::ARGXOptions@{argx::ARGXOptions}}
@@ -51,7 +71,7 @@ bool argx\+::\+ARGXOptions\+::has\+Sub\+Params = false}
 
 
 
-Definition at line \mbox{\hyperlink{types_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
+Definition at line \mbox{\hyperlink{types_8hpp_source_l00050}{50}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
 \Hypertarget{structargx_1_1ARGXOptions_a0bd17b9be2b313a37c353d9d8b8c5b65}\index{argx::ARGXOptions@{argx::ARGXOptions}!id@{id}}
 \index{id@{id}!argx::ARGXOptions@{argx::ARGXOptions}}
@@ -65,7 +85,7 @@ ID (id)
 
 ID of the option 
 
-Definition at line \mbox{\hyperlink{types_8hpp_source_l00029}{29}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
+Definition at line \mbox{\hyperlink{types_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
 \Hypertarget{structargx_1_1ARGXOptions_a825a889884b7b19a5c1550a328780ab9}\index{argx::ARGXOptions@{argx::ARGXOptions}!info@{info}}
 \index{info@{info}!argx::ARGXOptions@{argx::ARGXOptions}}
@@ -75,7 +95,7 @@ std\+::string argx\+::\+ARGXOptions\+::info}
 
 
 
-Definition at line \mbox{\hyperlink{types_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
+Definition at line \mbox{\hyperlink{types_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
 \Hypertarget{structargx_1_1ARGXOptions_a6324ea753af15d2a184e382e913694f0}\index{argx::ARGXOptions@{argx::ARGXOptions}!param@{param}}
 \index{param@{param}!argx::ARGXOptions@{argx::ARGXOptions}}
@@ -85,11 +105,25 @@ std\+::string argx\+::\+ARGXOptions\+::param}
 
 
 
-Param (param)\+: 
+Param (param). 
 
 EXAMPLE\+: --help, --version 
 
-Definition at line \mbox{\hyperlink{types_8hpp_source_l00035}{35}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
+Definition at line \mbox{\hyperlink{types_8hpp_source_l00036}{36}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00050}{argx\+::\+Argx\+::get\+Arg\+IDPos()}}.
+
+\Hypertarget{structargx_1_1ARGXOptions_ab35134d0ed79694e46420ada0813565f}\index{argx::ARGXOptions@{argx::ARGXOptions}!required@{required}}
+\index{required@{required}!argx::ARGXOptions@{argx::ARGXOptions}}
+\doxysubsubsection{\texorpdfstring{required}{required}}
+{\footnotesize\ttfamily \label{structargx_1_1ARGXOptions_ab35134d0ed79694e46420ada0813565f} 
+bool argx\+::\+ARGXOptions\+::required = false}
+
+
+
+Definition at line \mbox{\hyperlink{types_8hpp_source_l00052}{52}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
 \Hypertarget{structargx_1_1ARGXOptions_aa0cd2dddf236a7bd15c1636aa7ec4a9c}\index{argx::ARGXOptions@{argx::ARGXOptions}!sparam@{sparam}}
 \index{sparam@{sparam}!argx::ARGXOptions@{argx::ARGXOptions}}
@@ -103,7 +137,11 @@ Short Param (sparam)\+:
 
 
 
-Definition at line \mbox{\hyperlink{types_8hpp_source_l00040}{40}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
+Definition at line \mbox{\hyperlink{types_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00050}{argx\+::\+Argx\+::get\+Arg\+IDPos()}}.
 
 \Hypertarget{structargx_1_1ARGXOptions_a6345f9a87edfb31007c6e3b53f9eeaed}\index{argx::ARGXOptions@{argx::ARGXOptions}!subParams@{subParams}}
 \index{subParams@{subParams}!argx::ARGXOptions@{argx::ARGXOptions}}
@@ -113,11 +151,25 @@ std\+::vector$<$\mbox{\hyperlink{structargx_1_1ARGXOptions}{ARGXOptions}}$>$ arg
 
 
 
-Definition at line \mbox{\hyperlink{types_8hpp_source_l00046}{46}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
+Definition at line \mbox{\hyperlink{types_8hpp_source_l00054}{54}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
 
 
-Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00319}{argx\+::\+Argx\+::compare\+Args()}}.
+Referenced by \mbox{\hyperlink{Argx_8cpp_source_l00415}{argx\+::\+Argx\+::compare\+Args()}}.
+
+\Hypertarget{structargx_1_1ARGXOptions_ad11a81f21049b37b90572126ccdaf52f}\index{argx::ARGXOptions@{argx::ARGXOptions}!tag@{tag}}
+\index{tag@{tag}!argx::ARGXOptions@{argx::ARGXOptions}}
+\doxysubsubsection{\texorpdfstring{tag}{tag}}
+{\footnotesize\ttfamily \label{structargx_1_1ARGXOptions_ad11a81f21049b37b90572126ccdaf52f} 
+std\+::string argx\+::\+ARGXOptions\+::tag = "{}default"{}}
+
+
+
+Set default tag to categorize arguments. 
+
+
+
+Definition at line \mbox{\hyperlink{types_8hpp_source_l00047}{47}} of file \mbox{\hyperlink{types_8hpp_source}{types.\+hpp}}.
 
 
 

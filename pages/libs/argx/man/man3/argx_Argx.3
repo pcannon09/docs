@@ -1,4 +1,4 @@
-.TH "argx::Argx" 3 "Version 1.1.0-build" "Argx" \" -*- nroff -*-
+.TH "argx::Argx" 3 "Version 1.2.0-beta" "Argx" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,6 +21,7 @@ argx::Argx
 .ti -1c
 .RI "\fB~Argx\fP ()"
 .br
+.RI "Deconstruct allocated objects\&. "
 .ti -1c
 .RI "void \fBadd\fP (\fBARGXOptions\fP option) const"
 .br
@@ -36,11 +37,15 @@ argx::Argx
 .ti -1c
 .RI "int \fBfindParam\fP (const std::string &\fBid\fP)"
 .br
-.RI "Find parameter index\&. "
+.RI "Find parameter and sub-parameter index\&. "
 .ti -1c
 .RI "int \fBgetArgc\fP () const"
 .br
 .RI "Get the main options from the \fRmain()\fP function as argc\&. "
+.ti -1c
+.RI "int \fBgetArgIDPos\fP (const std::string &arg)"
+.br
+.RI "Get argument using ID\&. "
 .ti -1c
 .RI "int \fBgetArgPos\fP (const std::string &arg)"
 .br
@@ -54,6 +59,10 @@ argx::Argx
 .br
 .RI "Get main arguments from \fRmain()\fP function \fRargv\fP "
 .ti -1c
+.RI "\fBARGXOptions\fP \fBgetOption\fP (const std::string &\fBid\fP)"
+.br
+.RI "Get Options from specified ID\&. "
+.ti -1c
 .RI "std::vector< \fBARGXOptions\fP > \fBgetOptions\fP () const"
 .br
 .RI "Get main set options as \fBARGXOptions\fP\&. "
@@ -66,9 +75,29 @@ argx::Argx
 .br
 .RI "Get the sub-param from \fRid\fP "
 .ti -1c
+.RI "std::vector< std::string > \fBgetSubValue\fP (const std::string &\fBid\fP)"
+.br
+.RI "Get sub-parameter values, starting from the first value found until the first found value that corresponds to a registered parameter\&. "
+.ti -1c
+.RI "int \fBgetWrongArgs\fP (const std::vector< std::string > &argv)"
+.br
+.RI "Get the incorrect arguments and sub-arguments that were not registered\&. "
+.ti -1c
+.RI "bool \fBhasTag\fP (const std::string &\fBid\fP, const std::string &tag)"
+.br
+.RI "Check if the \fRtag\fP exists in option with ID of \fRid\fP "
+.ti -1c
 .RI "bool \fBparamExists\fP (const std::string &\fBid\fP)"
 .br
 .RI "Get if param exists in the param options\&. "
+.ti -1c
+.RI "std::string \fBparamToID\fP (const std::string &param)"
+.br
+.RI "Normal parameter or sub-paramter to its corresponding ID\&. "
+.ti -1c
+.RI "bool \fBsubParamExists\fP (const std::string &\fBid\fP)"
+.br
+.RI "Get if sub-param exists in the param options\&. "
 .in -1c
 .SS "Private Attributes"
 
@@ -137,6 +166,8 @@ Definition at line \fB42\fP of file \fBArgx\&.cpp\fP\&.
 .SS "argx::Argx::~Argx ()"
 
 .PP
+Deconstruct allocated objects\&. 
+.PP
 Definition at line \fB45\fP of file \fBArgx\&.cpp\fP\&.
 .nf
 46     {
@@ -161,20 +192,14 @@ Add param options\&.
 .PP
 
 .PP
-Definition at line \fB64\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB90\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-65     {
-66         ARGXError error;
-67         error\&.type = "success";
-68         error\&.code = 0;
-69 
-70         this\->options\&.emplace_back(option);
-71     }
+91     { this\->options\&.emplace_back(option); }
 .PP
 .fi
 
 .PP
-References \fBargx::ARGXError::code\fP, \fBoptions\fP, and \fBargx::ARGXError::type\fP\&.
+References \fBoptions\fP\&.
 .SS "bool argx::Argx::compareArgs (std::vector< \fBARGXOptions\fP > options, std::vector< std::string > argv)"
 
 .PP
@@ -194,69 +219,69 @@ bool
 .PP
 
 .PP
-Definition at line \fB319\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB415\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-320     {
-321         for (size_t i = 1; i < argv\&.size(); ++i)
-322         {
-323             const std::string &arg = argv[i];
-324 
-325             bool found = false;
-326             bool hasSubParams = false;
-327             bool hasAnySubParams = false;
-328 
-329             ARGXOptions matchedOption;
-330 
-331             // Find the matching option
-332             for (const auto &option : options)
-333             {
-334                 if (option\&.sparam == arg || option\&.param == arg)
-335                 {
-336                     found = true;
-337                     hasSubParams = option\&.hasSubParams;
-338                     hasAnySubParams = option\&.hasAnySubParams;
-339                     matchedOption = option;
-340 
-341                     break;
-342                 }
-343             }
-344 
-345             if (!found) return false;
-346 
-347             if (hasSubParams || hasAnySubParams)
-348             {
-349                 // Check if there's a next argument
-350                 if (i + 1 < argv\&.size())
-351                 {
-352                     const std::string &nextArg = argv[i + 1];
-353 
-354                     // Check if next argument is a sub\-parameter
-355                     bool isSubParam = false;
-356 
-357                     if (!nextArg\&.empty() && nextArg[0] != '\-')
-358                     {
-359                         // Validate if it's a valid sub\-parameter
-360                         for (const auto &subOption : matchedOption\&.subParams)
-361                         {
-362                             if (subOption\&.param == nextArg || subOption\&.sparam == nextArg)
-363                             {
-364                                 isSubParam = true;
-365 
-366                                 break;
-367                             }
-368                         }
-369 
-370                         if (isSubParam) ++i; // Get the sub\-parameter
-371                         else if (hasSubParams || hasAnySubParams) return false;
-372                     }
-373 
-374                     else if (hasSubParams || hasAnySubParams) return false;
-375                 }
-376             }
-377         }
-378 
-379         return true;
-380     }
+416     {
+417         for (size_t i = 1 ; i < argv\&.size(); ++i)
+418         {
+419             const std::string &arg = argv[i];
+420 
+421             bool found = false;
+422             bool hasSubParams = false;
+423             bool hasAnySubParams = false;
+424 
+425             ARGXOptions matchedOption;
+426 
+427             // Find the matching option
+428             for (const auto &option : options)
+429             {
+430                 if (option\&.sparam == arg || option\&.param == arg)
+431                 {
+432                     found = true;
+433                     hasSubParams = option\&.hasSubParams;
+434                     hasAnySubParams = option\&.hasAnySubParams;
+435                     matchedOption = option;
+436 
+437                     break;
+438                 }
+439             }
+440 
+441             if (!found) return false;
+442 
+443             if (hasSubParams || hasAnySubParams)
+444             {
+445                 // Check if there's a next argument
+446                 if (i + 1 < argv\&.size())
+447                 {
+448                     const std::string &nextArg = argv[i + 1];
+449 
+450                     // Check if next argument is a sub\-parameter
+451                     bool isSubParam = false;
+452 
+453                     if (!nextArg\&.empty() && nextArg[0] != '\-')
+454                     {
+455                         // Validate if it's a valid sub\-parameter
+456                         for (const auto &subOption : matchedOption\&.subParams)
+457                         {
+458                             if (subOption\&.param == nextArg || subOption\&.sparam == nextArg)
+459                             {
+460                                 isSubParam = true;
+461 
+462                                 break;
+463                             }
+464                         }
+465 
+466                         if (isSubParam) ++i; // Get the sub\-parameter
+467                         else if (hasSubParams || hasAnySubParams) return false;
+468                     }
+469 
+470                     else if (hasSubParams || hasAnySubParams) return false;
+471                 }
+472             }
+473         }
+474 
+475         return true;
+476     }
 .PP
 .fi
 
@@ -283,74 +308,74 @@ std::string Documentation as a string
 .PP
 
 .PP
-Definition at line \fB250\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB290\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-251     {
-252         std::string contentStr;
-253 
-254         if (style == ARGXStyle::Professional)
-255         {
-256             for (const auto &x : this\->options)
-257             {
-258                 // Main option header line
-259                 contentStr += "ID: " + x\&.id + "\\n";
-260                 contentStr += "[ " + x\&.sparam + " | " + x\&.param;
-261 
-262                 if (x\&.hasSubParams && !x\&.subParams\&.empty())
-263                 {
-264                     contentStr += " [ ";
-265 
-266                     for (size_t i = 0; i < x\&.subParams\&.size(); ++i)
-267                     {
-268                         const auto &sub = x\&.subParams[i];
-269 
-270                         contentStr += sub\&.param;
-271 
-272                         if (i < x\&.subParams\&.size() \- 1) contentStr += " | ";
-273                         else if (i <= x\&.subParams\&.size()) contentStr += ' ';
-274                     }
-275 
-276                     contentStr += "] ] ";
-277                 }
-278 
-279                 else contentStr += " ] ";
-280 
-281                 contentStr += x\&.info + "\\n";
-282 
-283                 // Print all sub\-options with sparam and param, aligned with ideographic spaces if there are
-284                 if (x\&.hasSubParams && !x\&.subParams\&.empty())
-285                 {
-286                     for (const auto &sub : x\&.subParams)
-287                     {
-288                         // Create ideographic spaces matching the length of main param for alignment
-289                         std::wstring wideSpaces(x\&.param\&.size(), L'\\u3000');
-290                         std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
-291                         std::string spacing = converter\&.to_bytes(wideSpaces);
-292 
-293                         contentStr += spacing + "  [ " + sub\&.sparam + " | " + sub\&.param + " ] " + sub\&.info + "\\n";
-294                     }
-295                 }
-296             }
-297         }
-298 
-299         else if (style == ARGXStyle::Simple)
-300         {
-301             for (const auto &x : this\->options)
-302             {
-303                 contentStr += x\&.sparam + ", " + x\&.param + " \- " + x\&.info + "\\n";
-304 
-305                 if (x\&.hasSubParams && !x\&.subParams\&.empty())
-306                 {
-307                     for (const auto &sub : x\&.subParams)
-308                     {
-309                         contentStr += "  " + sub\&.sparam + ", " + sub\&.param + " \- " + sub\&.info + "\\n";
-310                     }
-311                 }
-312             }
-313         } // ARGXStyle
-314 
-315         return title + "\\n" + mainInfo + "\\n" + contentStr;
-316     }
+291     {
+292         std::string contentStr;
+293 
+294         if (style == ARGXStyle::Professional)
+295         {
+296             for (const auto &x : this\->options)
+297             {
+298                 // Main option header line
+299                 contentStr += "ID: " + x\&.id + "\\n";
+300                 contentStr += "[ " + x\&.sparam + " | " + x\&.param;
+301 
+302                 if (x\&.hasSubParams && !x\&.subParams\&.empty())
+303                 {
+304                     contentStr += " [ ";
+305 
+306                     for (size_t i = 0; i < x\&.subParams\&.size(); ++i)
+307                     {
+308                         const auto &sub = x\&.subParams[i];
+309 
+310                         contentStr += sub\&.param;
+311 
+312                         if (i < x\&.subParams\&.size() \- 1) contentStr += " | ";
+313                         else if (i <= x\&.subParams\&.size()) contentStr += ' ';
+314                     }
+315 
+316                     contentStr += "] ] ";
+317                 }
+318 
+319                 else contentStr += " ] ";
+320 
+321                 contentStr += x\&.info + "\\n";
+322 
+323                 // Print all sub\-options with sparam and param, aligned with ideographic spaces if there are
+324                 if (x\&.hasSubParams && !x\&.subParams\&.empty())
+325                 {
+326                     for (const auto &sub : x\&.subParams)
+327                     {
+328                         // Create ideographic spaces matching the length of main param for alignment
+329                         std::wstring wideSpaces(x\&.param\&.size(), L'\\u3000');
+330                         std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
+331                         std::string spacing = converter\&.to_bytes(wideSpaces);
+332 
+333                         contentStr += spacing + "  [ " + sub\&.sparam + " | " + sub\&.param + " ] " + sub\&.info + "\\n";
+334                     }
+335                 }
+336             }
+337         }
+338 
+339         else if (style == ARGXStyle::Simple)
+340         {
+341             for (const auto &x : this\->options)
+342             {
+343                 contentStr += x\&.sparam + ", " + x\&.param + " \- " + x\&.info + "\\n";
+344 
+345                 if (x\&.hasSubParams && !x\&.subParams\&.empty())
+346                 {
+347                     for (const auto &sub : x\&.subParams)
+348                     {
+349                         contentStr += "  " + sub\&.sparam + ", " + sub\&.param + " \- " + sub\&.info + "\\n";
+350                     }
+351                 }
+352             }
+353         } // ARGXStyle
+354 
+355         return title + "\\n" + mainInfo + "\\n" + contentStr;
+356     }
 .PP
 .fi
 
@@ -359,61 +384,73 @@ References \fBoptions\fP, \fBargx::Professional\fP, and \fBargx::Simple\fP\&.
 .SS "int argx::Argx::findParam (const std::string & id)"
 
 .PP
-Find parameter index\&. 
+Find parameter and sub-parameter index\&. 
 .PP
-Definition at line \fB73\fP of file \fBArgx\&.cpp\fP\&.
+\fBParameters\fP
+.RS 4
+\fIid\fP ID to find 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int Index 
+.RE
+.PP
+
+.PP
+Definition at line \fB93\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-74     {
-75         // First check if it's a main parameter
-76         for (size_t i = 0; i < this\->options\&.size(); i++)
-77         {
-78             if (this\->options[i]\&.id == id)
-79             {
-80                 // Check if this main parameter exists in arguments
-81                 for (const std::string &arg : *this\->mainArgs)
-82                 {
-83                     if (arg == this\->options[i]\&.param || arg == this\->options[i]\&.sparam)
-84                     {
-85                         return static_cast<int>(i);
-86                     }
-87                 }
-88             }
-89         }
-90 
-91         // Then look for sub\-parameters
-92         for (const auto &opt : this\->options)
-93         {
-94             // Check if the parent option exists in the arguments
-95             bool parentExists = false;
-96 
-97             for (const std::string &arg : *this\->mainArgs)
-98             {
-99                 if (arg == opt\&.param || arg == opt\&.sparam)
-100                 {
-101                     parentExists = true;
-102                     break;
-103                 }
-104             }
-105 
-106             if (parentExists)
-107             {
-108                 // Find the index of the requested sub\-parameter
-109                 for (size_t i = 0; i < opt\&.subParams\&.size(); i++)
-110                 {
-111                     if (opt\&.subParams[i]\&.id == id) return static_cast<int>(i);
-112                 }
-113             }
-114         }
-115 
-116         return \-1; // Not found
-117     }
+94     {
+95         // First check if it's a main parameter
+96         for (size_t i = 0; i < this\->options\&.size(); i++)
+97         {
+98             if (this\->options[i]\&.id == id)
+99             {
+100                 // Check if this main parameter exists in arguments
+101                 for (const std::string &arg : *this\->mainArgs)
+102                 {
+103                     if (arg == this\->options[i]\&.param || arg == this\->options[i]\&.sparam)
+104                     {
+105                         return static_cast<int>(i);
+106                     }
+107                 }
+108             }
+109         }
+110 
+111         // Then look for sub\-parameters
+112         for (const auto &opt : this\->options)
+113         {
+114             // Check if the parent option exists in the arguments
+115             bool parentExists = false;
+116 
+117             for (const std::string &arg : *this\->mainArgs)
+118             {
+119                 if (arg == opt\&.param || arg == opt\&.sparam)
+120                 {
+121                     parentExists = true;
+122                     break;
+123                 }
+124             }
+125 
+126             if (parentExists)
+127             {
+128                 // Find the index of the requested sub\-parameter
+129                 for (size_t i = 0; i < opt\&.subParams\&.size(); i++)
+130                 {
+131                     if (opt\&.subParams[i]\&.id == id) return static_cast<int>(i);
+132                 }
+133             }
+134         }
+135 
+136         return \-1; // Not found
+137     }
 .PP
 .fi
 
 .PP
 References \fBmainArgs\fP, and \fBoptions\fP\&.
 .PP
-Referenced by \fBgetSubParam()\fP, and \fBparamExists()\fP\&.
+Referenced by \fBgetSubParam()\fP, \fBhasTag()\fP, and \fBparamExists()\fP\&.
 .SS "int argx::Argx::getArgc () const"
 
 .PP
@@ -426,14 +463,49 @@ int Number of params including the executable param
 .PP
 
 .PP
-Definition at line \fB385\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB539\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-386     { return this\->mainArgc; }
+540     { return this\->mainArgc; }
 .PP
 .fi
 
 .PP
 References \fBmainArgc\fP\&.
+.SS "int argx::Argx::getArgIDPos (const std::string & arg)"
+
+.PP
+Get argument using ID\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarg\fP Argument to find 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int Argument position 
+.RE
+.PP
+
+.PP
+Definition at line \fB50\fP of file \fBArgx\&.cpp\fP\&.
+.nf
+51     {
+52         ARGXOptions option = this\->getOption(arg);
+53         
+54         int argPos = this\->getArgPos(option\&.param);
+55         int shortArgPos = this\->getArgPos(option\&.sparam);
+56 
+57         if (argPos >= 0) return argPos;
+58         if (shortArgPos >= 0) return shortArgPos;
+59 
+60         return \-1;
+61     }
+.PP
+.fi
+
+.PP
+References \fBgetArgPos()\fP, \fBgetOption()\fP, \fBargx::ARGXOptions::param\fP, and \fBargx::ARGXOptions::sparam\fP\&.
 .SS "int argx::Argx::getArgPos (const std::string & arg)"
 
 .PP
@@ -451,25 +523,27 @@ int Return position of found \fRarg\fP from the options
 .PP
 
 .PP
-Definition at line \fB50\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB76\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-51     {
-52         if (!this\->mainArgs)
-53             return \-1;
-54 
-55         for (size_t i = 0; i < this\->mainArgs\->size(); ++i)
-56         {
-57             if (this\->mainArgs\->at(i) == arg)
-58                 return static_cast<int>(i);
-59         }
-60 
-61         return \-1;
-62     }
+77     {
+78         if (!this\->mainArgs)
+79             return \-2;
+80 
+81         for (size_t i = 0; i < this\->mainArgs\->size(); ++i)
+82         {
+83             if (this\->mainArgs\->at(i) == arg)
+84                 return i;
+85         }
+86 
+87         return \-1;
+88     }
 .PP
 .fi
 
 .PP
 References \fBmainArgs\fP\&.
+.PP
+Referenced by \fBgetArgIDPos()\fP, and \fBgetSubValue()\fP\&.
 .SS "std::string argx::Argx::getID () const"
 
 .PP
@@ -482,9 +556,9 @@ std::string \fBArgx\fP ID
 .PP
 
 .PP
-Definition at line \fB391\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB545\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-392     { return this\->id; }
+546     { return this\->id; }
 .PP
 .fi
 
@@ -500,14 +574,45 @@ std::vector<std::string> Vector of strings for main arguments from \fRargv\fP
 .PP
 
 .PP
-Definition at line \fB382\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB536\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-383     { return *this\->mainArgs; }
+537     { return *this\->mainArgs; }
 .PP
 .fi
 
 .PP
 References \fBmainArgs\fP\&.
+.PP
+Referenced by \fBgetSubValue()\fP\&.
+.SS "\fBARGXOptions\fP argx::Argx::getOption (const std::string & id)"
+
+.PP
+Get Options from specified ID\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID to find 
+.br
+\fI\fBARGXOptions\fP\fP Option information 
+.RE
+.PP
+
+.PP
+Definition at line \fB478\fP of file \fBArgx\&.cpp\fP\&.
+.nf
+479     {
+480         for (const auto &x : this\->options)
+481             if (x\&.id == id) return x;
+482 
+483         return {};
+484     }
+.PP
+.fi
+
+.PP
+References \fBoptions\fP\&.
+.PP
+Referenced by \fBgetArgIDPos()\fP, and \fBgetSubValue()\fP\&.
 .SS "std::vector< \fBARGXOptions\fP > argx::Argx::getOptions () const"
 
 .PP
@@ -520,9 +625,9 @@ std::vector<ARGXOptions> Options to return
 .PP
 
 .PP
-Definition at line \fB388\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB542\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-389     { return this\->options; }
+543     { return this\->options; }
 .PP
 .fi
 
@@ -545,125 +650,125 @@ Get the param from \fRid\fP
 .PP
 
 .PP
-Definition at line \fB128\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB168\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-129     {
-130         if (this\->mainArgc <= 1) return {};
-131 
-132         ARGXParam result;
-133 
-134         // First, check if this is a top\-level option
-135         for (const auto &opt : this\->options)
-136         {
-137             if (opt\&.id == id)
-138             {
-139                 // Find the position of the main option in arguments
-140                 int mainOptionPos = \-1;
-141 
-142                 for (size_t i = 0; i < this\->mainArgs\->size(); ++i)
-143                 {
-144                     if ((*this\->mainArgs)[i] == opt\&.param || (*this\->mainArgs)[i] == opt\&.sparam)
-145                     {
-146                         result\&.exists = true;
-147                         mainOptionPos = i;
-148                         break;
-149                     }
-150                 }
-151 
-152                 if (result\&.exists)
-153                 {
-154                     if (opt\&.hasSubParams || opt\&.hasAnySubParams)
-155                     {
-156                         // Check each sub\-parameter
-157                         for (const auto &sub : opt\&.subParams)
-158                         {
-159                             bool subMatched = false;
-160 
-161                             // Look for sub\-parameters after the main option
-162                             for (size_t i = mainOptionPos + 1; i < this\->mainArgs\->size(); ++i)
-163                             {
-164                                 if ((*this\->mainArgs)[i] == sub\&.param || (*this\->mainArgs)[i] == sub\&.sparam)
-165                                 {
-166                                     subMatched = true;
-167                                     break;
-168                                 }
-169                             }
-170 
-171                             result\&.subExists\&.push_back(subMatched);
-172                         }
-173                     }
-174 
-175                     return result;
-176                 }
-177             }
-178         }
-179 
-180         // If not found as top\-level, check if it's a sub\-parameter
-181         for (const auto &opt : this\->options)
-182         {
-183             // Find if the parent option exists and get its position
-184             size_t parentPos = \-1;
-185 
-186             for (size_t i = 0; i < this\->mainArgs\->size(); ++i)
-187             {
-188                 if ((*this\->mainArgs)[i] == opt\&.param || (*this\->mainArgs)[i] == opt\&.sparam)
-189                 {
-190                     parentPos = i;
-191                     break;
-192                 }
-193             }
-194 
-195             if (parentPos > \-1 && (opt\&.hasSubParams || opt\&.hasAnySubParams))
-196             {
-197                 // Check if the requested sub\-parameter exists after the parent
-198                 for (const auto &sub : opt\&.subParams)
-199                 {
-200                     if (sub\&.id == id)
-201                     {
-202                         for (size_t i = parentPos + 1; i < this\->mainArgs\->size(); ++i)
-203                         {
-204                             if ((*this\->mainArgs)[i] == sub\&.param || (*this\->mainArgs)[i] == sub\&.sparam)
-205                             {
-206                                 result\&.exists = true;
-207                                 break;
-208                             }
-209                         }
+169     {
+170         if (this\->mainArgc <= 1) return {};
+171 
+172         ARGXParam result;
+173 
+174         // First, check if this is a top\-level option
+175         for (const auto &opt : this\->options)
+176         {
+177             if (opt\&.id == id)
+178             {
+179                 // Find the position of the main option in arguments
+180                 int mainOptionPos = \-1;
+181 
+182                 for (size_t i = 0; i < this\->mainArgs\->size(); ++i)
+183                 {
+184                     if ((*this\->mainArgs)[i] == opt\&.param || (*this\->mainArgs)[i] == opt\&.sparam)
+185                     {
+186                         result\&.exists = true;
+187                         mainOptionPos = i;
+188                         break;
+189                     }
+190                 }
+191 
+192                 if (result\&.exists)
+193                 {
+194                     if (opt\&.hasSubParams || opt\&.hasAnySubParams)
+195                     {
+196                         // Check each sub\-parameter
+197                         for (const auto &sub : opt\&.subParams)
+198                         {
+199                             bool subMatched = false;
+200 
+201                             // Look for sub\-parameters after the main option
+202                             for (size_t i = mainOptionPos + 1; i < this\->mainArgs\->size(); ++i)
+203                             {
+204                                 if ((*this\->mainArgs)[i] == sub\&.param || (*this\->mainArgs)[i] == sub\&.sparam)
+205                                 {
+206                                     subMatched = true;
+207                                     break;
+208                                 }
+209                             }
 210 
-211                         if (!result\&.exists && parentPos + 1 < this\->mainArgs\->size())
-212                         {
-213                             std::string nextArg = (*this\->mainArgs)[parentPos + 1];
+211                             result\&.subExists\&.push_back(subMatched);
+212                         }
+213                     }
 214 
-215                             if (nextArg == sub\&.param || nextArg == sub\&.sparam) result\&.exists = true;
-216                         }
-217 
-218                         // Handle any sub\-sub\-parameters if they exist
-219                         if (result\&.exists && (sub\&.hasSubParams || sub\&.hasAnySubParams))
-220                         {
-221                             for (const auto &subsub : sub\&.subParams)
-222                             {
-223                                 bool subsubMatched = false;
-224 
-225                                 for (size_t i = 0; i < this\->mainArgs\->size(); ++i)
-226                                 {
-227                                     if ((*this\->mainArgs)[i] == subsub\&.param || (*this\->mainArgs)[i] == subsub\&.sparam)
-228                                     {
-229                                         subsubMatched = true;
-230                                         break;
-231                                     }
-232                                 }
-233 
-234                                 result\&.subExists\&.push_back(subsubMatched);
-235                             }
-236                         }
-237 
-238                         return result;
-239                     }
-240                 }
-241             }
-242         }
-243 
-244         return result;
-245     }
+215                     return result;
+216                 }
+217             }
+218         }
+219 
+220         // If not found as top\-level, check if it's a sub\-parameter
+221         for (const auto &opt : this\->options)
+222         {
+223             // Find if the parent option exists and get its position
+224             size_t parentPos = \-1;
+225 
+226             for (size_t i = 0; i < this\->mainArgs\->size(); ++i)
+227             {
+228                 if ((*this\->mainArgs)[i] == opt\&.param || (*this\->mainArgs)[i] == opt\&.sparam)
+229                 {
+230                     parentPos = i;
+231                     break;
+232                 }
+233             }
+234 
+235             if (parentPos > \-1 && (opt\&.hasSubParams || opt\&.hasAnySubParams))
+236             {
+237                 // Check if the requested sub\-parameter exists after the parent
+238                 for (const auto &sub : opt\&.subParams)
+239                 {
+240                     if (sub\&.id == id)
+241                     {
+242                         for (size_t i = parentPos + 1 ; i < this\->mainArgs\->size(); ++i)
+243                         {
+244                             if ((*this\->mainArgs)[i] == sub\&.param || (*this\->mainArgs)[i] == sub\&.sparam)
+245                             {
+246                                 result\&.exists = true;
+247                                 break;
+248                             }
+249                         }
+250 
+251                         if (!result\&.exists && parentPos + 1 < this\->mainArgs\->size())
+252                         {
+253                             std::string nextArg = (*this\->mainArgs)[parentPos + 1];
+254 
+255                             if (nextArg == sub\&.param || nextArg == sub\&.sparam) result\&.exists = true;
+256                         }
+257 
+258                         // Handle any sub\-sub\-parameters if they exist
+259                         if (result\&.exists && (sub\&.hasSubParams || sub\&.hasAnySubParams))
+260                         {
+261                             for (const auto &subsub : sub\&.subParams)
+262                             {
+263                                 bool subsubMatched = false;
+264 
+265                                 for (size_t i = 0; i < this\->mainArgs\->size(); ++i)
+266                                 {
+267                                     if ((*this\->mainArgs)[i] == subsub\&.param || (*this\->mainArgs)[i] == subsub\&.sparam)
+268                                     {
+269                                         subsubMatched = true;
+270                                         break;
+271                                     }
+272                                 }
+273 
+274                                 result\&.subExists\&.push_back(subsubMatched);
+275                             }
+276                         }
+277 
+278                         return result;
+279                     }
+280                 }
+281             }
+282         }
+283 
+284         return result;
+285     }
 .PP
 .fi
 
@@ -688,14 +793,201 @@ bool
 .PP
 
 .PP
-Definition at line \fB247\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB287\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-248     { return this\->paramExists(id) && param\&.subExists[this\->findParam(id)]; }
+288     { return this\->paramExists(id) && param\&.subExists[this\->findParam(id)]; }
 .PP
 .fi
 
 .PP
 References \fBfindParam()\fP, \fBparamExists()\fP, and \fBargx::ARGXParam::subExists\fP\&.
+.SS "std::vector< std::string > argx::Argx::getSubValue (const std::string & id)"
+
+.PP
+Get sub-parameter values, starting from the first value found until the first found value that corresponds to a registered parameter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID to find to get sub-value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::vector<std::string> Values found from first to last 
+.RE
+.PP
+
+.PP
+Definition at line \fB486\fP of file \fBArgx\&.cpp\fP\&.
+.nf
+487     {
+488         // Use `Argx::getArgPos()` function for sub\-params
+489         size_t idPos = this\->getArgPos(id) + 1;
+490 
+491         if (idPos < 0 || idPos == std::string::npos)
+492             return {this\->getOption(id)\&.defaultValue};
+493 
+494         std::vector<std::string> values;
+495 
+496         for (size_t i = idPos ; i < this\->getMainArgs()\&.size() ; i++)
+497         {
+498             // End of the sub\-parameter finding
+499             // Assume the search is done due to an existsing sub\-param
+500             if (i != idPos && this\->subParamExists(this\->getMainArgs()[i]))
+501                 break;
+502 
+503             values\&.emplace_back(this\->getMainArgs()[i]);
+504         }
+505 
+506         std::string defaultValue;
+507 
+508         {
+509             bool breakOut = false;
+510 
+511             for (size_t i = 0; i < this\->mainArgs\->size(); ++i)
+512             {
+513                 for (size_t j = 0 ; j < this\->options\&.size() ; ++j)
+514                 {
+515                     if (this\->options[i]\&.subParams[j]\&.id == id)
+516                     {
+517                         defaultValue = this\->options[i]\&.subParams[j]\&.defaultValue;
+518 
+519 
+520                         breakOut = true;
+521 
+522                         break;
+523                     }
+524                 }
+525 
+526                 if (breakOut) break;
+527             }
+528         }
+529 
+530         if (values\&.empty())
+531             values\&.emplace_back(defaultValue);
+532 
+533         return values;
+534     }
+.PP
+.fi
+
+.PP
+References \fBargx::ARGXOptions::defaultValue\fP, \fBgetArgPos()\fP, \fBgetMainArgs()\fP, \fBgetOption()\fP, \fBmainArgs\fP, \fBoptions\fP, and \fBsubParamExists()\fP\&.
+.SS "int argx::Argx::getWrongArgs (const std::vector< std::string > & argv)"
+
+.PP
+Get the incorrect arguments and sub-arguments that were not registered\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargv\fP Main arguments from argv 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int Argument position 
+.RE
+.PP
+
+.PP
+Definition at line \fB358\fP of file \fBArgx\&.cpp\fP\&.
+.nf
+359     {
+360         size_t pos = 1; // Skip program name
+361 
+362         while (pos < argv\&.size())
+363         {
+364             const auto &arg = argv[pos];
+365             bool recognized = false;
+366 
+367             for (const auto &opt : this\->options)
+368             {
+369                 if (arg == opt\&.param || arg == opt\&.sparam)
+370                 {
+371                     recognized = true;
+372 
+373                     // Skip all subparams if they exist
+374                     if (opt\&.hasSubParams || opt\&.hasAnySubParams)
+375                     {
+376                         // Count subparams that actually exist in argv
+377                         for (size_t sub = 1; sub + pos < argv\&.size(); ++sub)
+378                         {
+379                             const std::string &nextArg = argv[pos + sub];
+380 
+381                             // If nextArg matches one of the defined subParams, skip it
+382                             bool isSub = false;
+383 
+384                             for (const auto &subOpt : opt\&.subParams)
+385                             {
+386                                 if (nextArg == subOpt\&.param || nextArg == subOpt\&.sparam)
+387                                 {
+388                                     isSub = true;
+389 
+390                                     break;
+391                                 }
+392                             }
+393 
+394                             if (!isSub) break;
+395 
+396                             ++pos; // Skip this subparam
+397                         }
+398                     }
+399 
+400                     break; // stop checking options
+401                 }
+402             }
+403 
+404             if (!recognized)
+405             {
+406                 return (int)pos;
+407             }
+408 
+409             ++pos;
+410         }
+411 
+412         return \-1;
+413     }
+.PP
+.fi
+
+.PP
+References \fBoptions\fP\&.
+.SS "bool argx::Argx::hasTag (const std::string & id, const std::string & tag)"
+
+.PP
+Check if the \fRtag\fP exists in option with ID of \fRid\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID from option 
+.br
+\fItag\fP Tag to find 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool Return false if there is no match, else, return true 
+.RE
+.PP
+
+.PP
+Definition at line \fB156\fP of file \fBArgx\&.cpp\fP\&.
+.nf
+157     {
+158         int paramID = this\->findParam(id);
+159 
+160         if (paramID < 0) return false;
+161         
+162         // Validate if tag from options is equal to this tag from function param
+163         if (this\->options[paramID]\&.tag == tag) return true;
+164 
+165         return false;
+166     }
+.PP
+.fi
+
+.PP
+References \fBfindParam()\fP, and \fBoptions\fP\&.
 .SS "bool argx::Argx::paramExists (const std::string & id)"
 
 .PP
@@ -713,13 +1005,13 @@ bool
 .PP
 
 .PP
-Definition at line \fB119\fP of file \fBArgx\&.cpp\fP\&.
+Definition at line \fB139\fP of file \fBArgx\&.cpp\fP\&.
 .nf
-120     {
-121         if (this\->findParam(id) >= 0) return true;;
-122 
-123         return false;
-124     }
+140     {
+141         if (this\->findParam(id) >= 0) return true;
+142 
+143         return false;
+144     }
 .PP
 .fi
 
@@ -727,6 +1019,75 @@ Definition at line \fB119\fP of file \fBArgx\&.cpp\fP\&.
 References \fBfindParam()\fP\&.
 .PP
 Referenced by \fBgetSubParam()\fP\&.
+.SS "std::string argx::Argx::paramToID (const std::string & param)"
+
+.PP
+Normal parameter or sub-paramter to its corresponding ID\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparam\fP Parameter value or name 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string ID of the param or sub-param 
+.RE
+.PP
+
+.PP
+Definition at line \fB63\fP of file \fBArgx\&.cpp\fP\&.
+.nf
+64     {
+65         std::string id;
+66 
+67         for (const auto &option : this\->options)
+68         {
+69             if (option\&.param == param || option\&.sparam == param)
+70                 return option\&.id;
+71         }
+72 
+73         return id;
+74     }
+.PP
+.fi
+
+.PP
+References \fBid\fP, and \fBoptions\fP\&.
+.SS "bool argx::Argx::subParamExists (const std::string & id)"
+
+.PP
+Get if sub-param exists in the param options\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID to get 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Definition at line \fB146\fP of file \fBArgx\&.cpp\fP\&.
+.nf
+147     {
+148         for (const auto &p : this\->options)
+149         {
+150             if (p\&.sparam == id) return true;
+151         }
+152         
+153         return false;
+154     }
+.PP
+.fi
+
+.PP
+References \fBoptions\fP\&.
+.PP
+Referenced by \fBgetSubValue()\fP\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "std::string argx::Argx::id\fR [private]\fP"
@@ -734,7 +1095,7 @@ Referenced by \fBgetSubParam()\fP\&.
 .PP
 Definition at line \fB20\fP of file \fBArgx\&.hpp\fP\&.
 .PP
-Referenced by \fBArgx()\fP\&.
+Referenced by \fBArgx()\fP, and \fBparamToID()\fP\&.
 .SS "unsigned int argx::Argx::mainArgc\fR [static]\fP, \fR [private]\fP"
 
 .PP
@@ -746,13 +1107,13 @@ Referenced by \fBArgx()\fP, \fBgetArgc()\fP, and \fBgetParam()\fP\&.
 .PP
 Definition at line \fB23\fP of file \fBArgx\&.hpp\fP\&.
 .PP
-Referenced by \fBArgx()\fP, \fB~Argx()\fP, \fBfindParam()\fP, \fBgetArgPos()\fP, \fBgetMainArgs()\fP, and \fBgetParam()\fP\&.
+Referenced by \fBArgx()\fP, \fB~Argx()\fP, \fBfindParam()\fP, \fBgetArgPos()\fP, \fBgetMainArgs()\fP, \fBgetParam()\fP, and \fBgetSubValue()\fP\&.
 .SS "std::vector< \fBARGXOptions\fP > argx::Argx::options\fR [static]\fP, \fR [private]\fP"
 
 .PP
 Definition at line \fB22\fP of file \fBArgx\&.hpp\fP\&.
 .PP
-Referenced by \fBadd()\fP, \fBcompareArgs()\fP, \fBcreateDocs()\fP, \fBfindParam()\fP, \fBgetOptions()\fP, and \fBgetParam()\fP\&.
+Referenced by \fBadd()\fP, \fBcompareArgs()\fP, \fBcreateDocs()\fP, \fBfindParam()\fP, \fBgetOption()\fP, \fBgetOptions()\fP, \fBgetParam()\fP, \fBgetSubValue()\fP, \fBgetWrongArgs()\fP, \fBhasTag()\fP, \fBparamToID()\fP, and \fBsubParamExists()\fP\&.
 
 .SH "Author"
 .PP 

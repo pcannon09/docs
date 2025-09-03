@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Argx: ARGX - 1.1.0-build</title>
+<title>Argx: ARGX - 1.2.0-beta</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Argx<span id="projectnumber">&#160;1.1.0-build</span>
+   <div id="projectname">Argx<span id="projectnumber">&#160;1.2.0-beta</span>
    </div>
-   <div id="projectbrief">Simple argument parser made in C++</div>
+   <div id="projectbrief">Simple yet powerful argument parser made in C++</div>
   </td>
  </tr>
  </tbody>
@@ -89,7 +89,7 @@ $(function(){initNavTree('index.html','',''); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">ARGX - 1.1.0-build </div></div>
+  <div class="headertitle"><div class="title">ARGX - 1.2.0-beta </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a></p>
@@ -106,32 +106,34 @@ Compiler and C++ Standard Support</h2>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">Argx Version  </th><th class="markdownTableHeadCenter">Minimum C++ Standard  </th><th class="markdownTableHeadCenter">GCC  </th><th class="markdownTableHeadCenter">Clang  </th><th class="markdownTableHeadCenter">MSVC  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">1.1.0-build  </td><td class="markdownTableBodyCenter">C++11  </td><td class="markdownTableBodyCenter">GCC 4.8+  </td><td class="markdownTableBodyCenter">Clang 3.3+  </td><td class="markdownTableBodyCenter">MSVC 2017+ (/std:c++11 or later)  </td></tr>
+<td class="markdownTableBodyCenter">1.2.0-beta  </td><td class="markdownTableBodyCenter">C++14  </td><td class="markdownTableBodyCenter">GCC 5.1+  </td><td class="markdownTableBodyCenter">Clang 3.4+  </td><td class="markdownTableBodyCenter">MSVC 14.0+ (/std:c++11 or later)  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">1.0.0-build  </td><td class="markdownTableBodyCenter">C++11  </td><td class="markdownTableBodyCenter">GCC 4.8+  </td><td class="markdownTableBodyCenter">Clang 3.3+  </td><td class="markdownTableBodyCenter">MSVC 2017+ (/std:c++11 or later)  </td></tr>
+<td class="markdownTableBodyCenter">1.1.0-build  </td><td class="markdownTableBodyCenter">C++11  </td><td class="markdownTableBodyCenter">GCC 4.8+  </td><td class="markdownTableBodyCenter">Clang 3.3+  </td><td class="markdownTableBodyCenter">MSVC 11.0+ (/std:c++11 or later)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">1.0.0-build  </td><td class="markdownTableBodyCenter">C++11  </td><td class="markdownTableBodyCenter">GCC 4.8+  </td><td class="markdownTableBodyCenter">Clang 3.3+  </td><td class="markdownTableBodyCenter">MSVC 11.0+ (/std:c++11 or later)  </td></tr>
 </table>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
 Specific information</h2>
-<p><b>NOTE: For version 1.0.0-build</b></p><ul>
-<li>Minimum standard required to compile ---&mdash; <b>C++11</b> (<b>GCC 4.8+</b>, <b>Clang 3.3+</b> and <b>MSVC 2017+</b>)</li>
+<p><b>NOTE: For version 1.2.0-beta</b></p><ul>
+<li>Minimum standard required to compile as for latest version: <b>C++14</b> (<b>GCC 5.1+</b>, <b>Clang 3.4+</b> and <b>MSVC 14.0+</b>)</li>
 </ul>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
 Summary</h2>
 <ul>
-<li>The minimum required version for Argx is C++ for <b>GCC 4.8+</b>, <b>Clang 3.3+</b> and <b>MSVC 2017+</b></li>
+<li>The minimum required version for Argx 1.2.0-beta is C++ for <b>GCC 5.1+</b>, <b>Clang 3.4+</b> and <b>MSVC 14.0+</b></li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
 IMPORTANT NOTES</h1>
-<p><b>This library has been tested in Arch Linux, please open an issue if you encounter a problem with other Operating Systems</b> <b>Tested with Clang 19</b> <b>If you encounter any other issues with other compilers, open an issue in github</b></p>
+<p><b>This library has been tested in Arch Linux, please open an issue if you encounter a problem with other Operating Systems</b> <b>Tested with Clang 20</b> <b>If you encounter any other issues with other compilers, open an issue in github</b></p>
 <ul>
 <li>For more information, please check the documentation at <b><a href="https://pcannon09.github.io/docs/pages/libs/argx/html/index.html">https://pcannon09.github.io/docs/pages/libs/argx/html/index.html</a></b></li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
 APIs</h1>
 <h3 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
-Python3 API: <b><a href="https://github.com/pcannon09/argx-py">https://github.com/pcannon09/argx-py</a></b></h3>
+Python3 API: <b><a href="https://github.com/pcannon09/argx-py">https://github.com/pcannon09/argx-py</a></b> (Not updated for 1.2.y version support)</h3>
 <h3 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
-C API / Clone: <b><a href="https://github.com/pcannon09/argx-c">https://github.com/pcannon09/argx-c</a></b></h3>
+C API / Clone: <b><a href="https://github.com/pcannon09/argx-c">https://github.com/pcannon09/argx-c</a></b> (Not updated for 1.2.y version replicate)</h3>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->

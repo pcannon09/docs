@@ -1,6 +1,7 @@
 var macros_8hpp =
 [
     [ "ARGX_DEV", "db/dbe/macros_8hpp.html#a2c2541090a31c495b5e800500cdff4ef", null ],
+    [ "ARGX_PY_REQUIRED_VERSION_STD", "db/dbe/macros_8hpp.html#af2425c803e6b94429a9120dad6f1022b", null ],
     [ "ARGX_STRINGIFY", "db/dbe/macros_8hpp.html#a35b3310e39905bdf63646a9f2a02ef18", null ],
     [ "ARGX_TOSTRING", "db/dbe/macros_8hpp.html#a4fd1f3a5c43cb1afcd72db492e2cee28", null ],
     [ "ARGX_VERSION", "db/dbe/macros_8hpp.html#aa639891463acaa985538b2760398bca3", null ],

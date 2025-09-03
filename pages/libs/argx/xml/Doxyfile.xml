@@ -2,8 +2,8 @@
 <doxyfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="doxyfile.xsd" version="1.14.0" xml:lang="en-US">
   <option  id='DOXYFILE_ENCODING' default='yes' type='string'><value><![CDATA[UTF-8]]></value></option>
   <option  id='PROJECT_NAME' default='no' type='string'><value><![CDATA[Argx]]></value></option>
-  <option  id='PROJECT_NUMBER' default='no' type='string'><value><![CDATA[1.1.0-build]]></value></option>
-  <option  id='PROJECT_BRIEF' default='no' type='string'><value><![CDATA["Simple argument parser made in C++"]]></value></option>
+  <option  id='PROJECT_NUMBER' default='no' type='string'><value><![CDATA[1.2.0-beta]]></value></option>
+  <option  id='PROJECT_BRIEF' default='no' type='string'><value><![CDATA["Simple yet powerful argument parser made in C++"]]></value></option>
   <option  id='PROJECT_LOGO' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='PROJECT_ICON' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='OUTPUT_DIRECTORY' default='no' type='string'><value><![CDATA[docs/]]></value></option>
@@ -327,7 +327,7 @@
   <option  id='INCLUDE_FILE_PATTERNS' default='yes' type='stringlist'>
   </option>
   <option  id='PREDEFINED' default='no' type='stringlist'>
-    <value><![CDATA[__cplusplus=201103L]]></value>
+    <value><![CDATA[__cplusplus=201402L]]></value>
     <value><![CDATA[DEPRECATED(x)=]]></value>
     <value><![CDATA[NODISCARD=]]></value>
     <value><![CDATA[CONSTEXPR=constexpr]]></value>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.md',['../da/ddd/README_8md.html',1,'']]],
-  ['requirements_1',['Requirements',['../index.html#autotoc_md4',1,'']]]
+  ['options_0',['options',['../d9/da2/classargx_1_1Argx.html#aba86dd3c8b11c495afd4c7eada1c0ac5',1,'argx::Argx']]]
 ];

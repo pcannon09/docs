@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['0_20build_0',['ARGX - 1.1.0-build',['../index.html',1,'']]]
+  ['0_20beta_0',['ARGX - 1.2.0-beta',['../index.html',1,'']]]
 ];
