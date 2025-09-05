@@ -52,7 +52,7 @@ Definition at line <link linkend="_types_8hpp_source_1l00025">25</link> of file 
 <para><computeroutput>std::string argx::ARGXOptions::defaultValue</computeroutput></para><para>
 Definition at line <link linkend="_types_8hpp_source_1l00048">48</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
 <para>
-Referenced by <link linkend="_Argx_8cpp_source_1l00486">argx::Argx::getSubValue()</link>.</para>
+Referenced by <link linkend="_Argx_8cpp_source_1l00580">argx::Argx::getSubValue()</link>.</para>
 </section>
 <anchor xml:id="_structargx_1_1ARGXOptions_1ad2eec2de8559ea5cc4e446c0d47c6279"/><section>
     <title>hasAnySubParams</title>
@@ -60,6 +60,8 @@ Referenced by <link linkend="_Argx_8cpp_source_1l00486">argx::Argx::getSubValue(
 <indexterm><primary>argx::ARGXOptions</primary><secondary>hasAnySubParams</secondary></indexterm>
 <para><computeroutput>bool argx::ARGXOptions::hasAnySubParams = false</computeroutput></para><para>
 Definition at line <link linkend="_types_8hpp_source_1l00051">51</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8cpp_source_1l00489">argx::Argx::compareArgs()</link>, and <link linkend="_Argx_8cpp_source_1l00395">argx::Argx::getWrongArgs()</link>.</para>
 </section>
 <anchor xml:id="_structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a"/><section>
     <title>hasSubParams</title>
@@ -67,6 +69,8 @@ Definition at line <link linkend="_types_8hpp_source_1l00051">51</link> of file 
 <indexterm><primary>argx::ARGXOptions</primary><secondary>hasSubParams</secondary></indexterm>
 <para><computeroutput>bool argx::ARGXOptions::hasSubParams = false</computeroutput></para><para>
 Definition at line <link linkend="_types_8hpp_source_1l00050">50</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_Argx_8cpp_source_1l00489">argx::Argx::compareArgs()</link>, and <link linkend="_Argx_8cpp_source_1l00395">argx::Argx::getWrongArgs()</link>.</para>
 </section>
 <anchor xml:id="_structargx_1_1ARGXOptions_1a0bd17b9be2b313a37c353d9d8b8c5b65"/><section>
     <title>id</title>
@@ -101,7 +105,7 @@ Definition at line <link linkend="_types_8hpp_source_1l00042">42</link> of file 
 <para>
 Definition at line <link linkend="_types_8hpp_source_1l00036">36</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
 <para>
-Referenced by <link linkend="_Argx_8cpp_source_1l00050">argx::Argx::getArgIDPos()</link>.</para>
+Referenced by <link linkend="_Argx_8cpp_source_1l00053">argx::Argx::getArgIDPos()</link>.</para>
 </section>
 <anchor xml:id="_structargx_1_1ARGXOptions_1ab35134d0ed79694e46420ada0813565f"/><section>
     <title>required</title>
@@ -121,7 +125,7 @@ Definition at line <link linkend="_types_8hpp_source_1l00052">52</link> of file 
 <para>
 Definition at line <link linkend="_types_8hpp_source_1l00041">41</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
 <para>
-Referenced by <link linkend="_Argx_8cpp_source_1l00050">argx::Argx::getArgIDPos()</link>.</para>
+Referenced by <link linkend="_Argx_8cpp_source_1l00053">argx::Argx::getArgIDPos()</link>.</para>
 </section>
 <anchor xml:id="_structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed"/><section>
     <title>subParams</title>
@@ -130,7 +134,7 @@ Referenced by <link linkend="_Argx_8cpp_source_1l00050">argx::Argx::getArgIDPos(
 <para><computeroutput>std::vector&lt;<link linkend="_structargx_1_1ARGXOptions">ARGXOptions</link>&gt; argx::ARGXOptions::subParams</computeroutput></para><para>
 Definition at line <link linkend="_types_8hpp_source_1l00054">54</link> of file <link linkend="_types_8hpp_source">types.hpp</link>.</para>
 <para>
-Referenced by <link linkend="_Argx_8cpp_source_1l00415">argx::Argx::compareArgs()</link>.</para>
+Referenced by <link linkend="_Argx_8cpp_source_1l00489">argx::Argx::compareArgs()</link>, and <link linkend="_Argx_8cpp_source_1l00395">argx::Argx::getWrongArgs()</link>.</para>
 </section>
 <anchor xml:id="_structargx_1_1ARGXOptions_1ad11a81f21049b37b90572126ccdaf52f"/><section>
     <title>tag</title>

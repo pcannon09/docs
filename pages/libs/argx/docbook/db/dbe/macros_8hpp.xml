@@ -21,9 +21,9 @@
 </listitem>
             <listitem><para>#define <link linkend="_macros_8hpp_1a6fca140f9d55dd241c689047db70c236">ARGX_VERSION_MINOR</link>&#160;&#160;&#160;2</para>
 </listitem>
-            <listitem><para>#define <link linkend="_macros_8hpp_1a8bb35e7bdac8b6af29d07e6fd7468b08">ARGX_VERSION_PATCH</link>&#160;&#160;&#160;0</para>
+            <listitem><para>#define <link linkend="_macros_8hpp_1a8bb35e7bdac8b6af29d07e6fd7468b08">ARGX_VERSION_PATCH</link>&#160;&#160;&#160;2</para>
 </listitem>
-            <listitem><para>#define <link linkend="_macros_8hpp_1a2dd1c90360210f9bc40f65de8558b60f">ARGX_VERSION_STATE</link>&#160;&#160;&#160;&quot;beta&quot;</para>
+            <listitem><para>#define <link linkend="_macros_8hpp_1a2dd1c90360210f9bc40f65de8558b60f">ARGX_VERSION_STATE</link>&#160;&#160;&#160;&quot;build&quot;</para>
 </listitem>
             <listitem><para>#define <link linkend="_macros_8hpp_1a2cf696b4344dbd9c545a9165cb10cb76">ARGX_VERSION_STD</link>&#160;&#160;&#160;20250903</para>
 </listitem>
@@ -96,14 +96,14 @@ Definition at line <link linkend="_macros_8hpp_source_1l00010">10</link> of file
     <title>ARGX_VERSION_PATCH</title>
 <indexterm><primary>ARGX_VERSION_PATCH</primary><secondary>macros.hpp</secondary></indexterm>
 <indexterm><primary>macros.hpp</primary><secondary>ARGX_VERSION_PATCH</secondary></indexterm>
-<para><computeroutput>#define ARGX_VERSION_PATCH&#160;&#160;&#160;0</computeroutput></para><para>
+<para><computeroutput>#define ARGX_VERSION_PATCH&#160;&#160;&#160;2</computeroutput></para><para>
 Definition at line <link linkend="_macros_8hpp_source_1l00011">11</link> of file <link linkend="_macros_8hpp_source">macros.hpp</link>.</para>
 </section>
 <anchor xml:id="_macros_8hpp_1a2dd1c90360210f9bc40f65de8558b60f"/><section>
     <title>ARGX_VERSION_STATE</title>
 <indexterm><primary>ARGX_VERSION_STATE</primary><secondary>macros.hpp</secondary></indexterm>
 <indexterm><primary>macros.hpp</primary><secondary>ARGX_VERSION_STATE</secondary></indexterm>
-<para><computeroutput>#define ARGX_VERSION_STATE&#160;&#160;&#160;&quot;beta&quot;</computeroutput></para><para>
+<para><computeroutput>#define ARGX_VERSION_STATE&#160;&#160;&#160;&quot;build&quot;</computeroutput></para><para>
 Definition at line <link linkend="_macros_8hpp_source_1l00022">22</link> of file <link linkend="_macros_8hpp_source">macros.hpp</link>.</para>
 </section>
 <anchor xml:id="_macros_8hpp_1a2cf696b4344dbd9c545a9165cb10cb76"/><section>

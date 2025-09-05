@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['error_0',['error',['../d9/db2/structargx_1_1ARGXError.html#adbf9556ec51d02e2dec17bf2aa93845e',1,'argx::ARGXError']]],
-  ['exists_1',['exists',['../d2/d84/structargx_1_1ARGXParam.html#a47afcd85c9734d815006ee41647ac4e0',1,'argx::ARGXParam']]]
+  ['findparam_0',['findParam',['../d9/da2/classargx_1_1Argx.html#a9343612a7c209f2323d2cd10fd3fe387',1,'argx::Argx']]],
+  ['for_201_202_20y_20version_20replicate_1',['C API / Clone: &lt;b&gt;&lt;a href=&quot;https://github.com/pcannon09/argx-c&quot;&gt;https://github.com/pcannon09/argx-c&lt;/a&gt;&lt;/b&gt; (Not updated for 1.2.y version replicate)',['../index.html#autotoc_md11',1,'']]],
+  ['for_201_202_20y_20version_20support_2',['Python3 API: &lt;b&gt;&lt;a href=&quot;https://github.com/pcannon09/argx-py&quot;&gt;https://github.com/pcannon09/argx-py&lt;/a&gt;&lt;/b&gt; (Not updated for 1.2.y version support)',['../index.html#autotoc_md10',1,'']]],
+  ['formatwrongargs_3',['formatWrongArgs',['../d9/da2/classargx_1_1Argx.html#ad35955a51e2dd4b50a7ccf20f757fe55',1,'argx::Argx']]]
 ];

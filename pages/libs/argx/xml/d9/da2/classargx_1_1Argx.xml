@@ -17,8 +17,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="inc/Argx.hpp" line="20" column="13" bodyfile="inc/Argx.hpp" bodystart="20" bodyend="-1"/>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" compoundref="d1/dad/Argx_8cpp" startline="34" endline="39">Argx</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a0269687632438687f9afd44f80c2eaa9" compoundref="d1/dad/Argx_8cpp" startline="63" endline="74">paramToID</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" compoundref="d1/dad/Argx_8cpp" startline="34" endline="42">Argx</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a0269687632438687f9afd44f80c2eaa9" compoundref="d1/dad/Argx_8cpp" startline="66" endline="77">paramToID</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-attrib">
@@ -35,9 +35,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="inc/Argx.hpp" line="25" column="21" bodyfile="inc/Argx.hpp" bodystart="25" bodyend="-1"/>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" compoundref="d1/dad/Argx_8cpp" startline="34" endline="39">Argx</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a812254e076a5ec208ba9d2eab470edb4" compoundref="d1/dad/Argx_8cpp" startline="539" endline="540">getArgc</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" compoundref="d1/dad/Argx_8cpp" startline="168" endline="285">getParam</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" compoundref="d1/dad/Argx_8cpp" startline="34" endline="42">Argx</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a812254e076a5ec208ba9d2eab470edb4" compoundref="d1/dad/Argx_8cpp" startline="636" endline="637">getArgc</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" compoundref="d1/dad/Argx_8cpp" startline="171" endline="288">getParam</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d9/da2/classargx_1_1Argx_1a4e820cdc862457fd8618229ce47a690f" prot="private" static="yes" mutable="no">
         <type>std::vector&lt; std::string &gt; *</type>
@@ -53,13 +53,14 @@
         <inbodydescription>
         </inbodydescription>
         <location file="inc/Argx.hpp" line="23" column="20" bodyfile="inc/Argx.hpp" bodystart="23" bodyend="-1"/>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" compoundref="d1/dad/Argx_8cpp" startline="34" endline="39">Argx</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a97654cab13febb7fb7870b14c9d31c6e" compoundref="d1/dad/Argx_8cpp" startline="45" endline="48">~Argx</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" compoundref="d1/dad/Argx_8cpp" startline="93" endline="137">findParam</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a73dccd80c13749ea006b46653cc2a8a0" compoundref="d1/dad/Argx_8cpp" startline="76" endline="88">getArgPos</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a6146d9644c99b670b15d78cb92057bff" compoundref="d1/dad/Argx_8cpp" startline="536" endline="537">getMainArgs</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" compoundref="d1/dad/Argx_8cpp" startline="168" endline="285">getParam</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="486" endline="534">getSubValue</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" compoundref="d1/dad/Argx_8cpp" startline="34" endline="42">Argx</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a97654cab13febb7fb7870b14c9d31c6e" compoundref="d1/dad/Argx_8cpp" startline="48" endline="51">~Argx</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" compoundref="d1/dad/Argx_8cpp" startline="96" endline="140">findParam</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a73dccd80c13749ea006b46653cc2a8a0" compoundref="d1/dad/Argx_8cpp" startline="79" endline="91">getArgPos</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a6146d9644c99b670b15d78cb92057bff" compoundref="d1/dad/Argx_8cpp" startline="633" endline="634">getMainArgs</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" compoundref="d1/dad/Argx_8cpp" startline="171" endline="288">getParam</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="580" endline="631">getSubValue</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1ac1e4d316a44cfdc596a181af15e74962" compoundref="d1/dad/Argx_8cpp" startline="395" endline="480">getWrongArgs</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d9/da2/classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5" prot="private" static="yes" mutable="no">
         <type>std::vector&lt; <ref refid="da/dd5/structargx_1_1ARGXOptions" kindref="compound">ARGXOptions</ref> &gt;</type>
@@ -74,18 +75,18 @@
         <inbodydescription>
         </inbodydescription>
         <location file="inc/Argx.hpp" line="22" column="20" bodyfile="inc/Argx.hpp" bodystart="22" bodyend="-1"/>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1aab16d8baf18e1db7ce66995a7cad312e" compoundref="d1/dad/Argx_8cpp" startline="90" endline="91">add</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1adb4e8a622135970b4e12f14d49a76e52" compoundref="d1/dad/Argx_8cpp" startline="415" endline="476">compareArgs</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a99bbe74c7f09f6bb3a343dbdde050a64" compoundref="d1/dad/Argx_8cpp" startline="290" endline="356">createDocs</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" compoundref="d1/dad/Argx_8cpp" startline="93" endline="137">findParam</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1ae7f1dcaf2c945c8592a3e89b15a0189b" compoundref="d1/dad/Argx_8cpp" startline="478" endline="484">getOption</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a3378e7eb2efcb1386b487ece1b5aec35" compoundref="d1/dad/Argx_8cpp" startline="542" endline="543">getOptions</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" compoundref="d1/dad/Argx_8cpp" startline="168" endline="285">getParam</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="486" endline="534">getSubValue</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1ac1e4d316a44cfdc596a181af15e74962" compoundref="d1/dad/Argx_8cpp" startline="358" endline="413">getWrongArgs</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a8d66cd4ebaeb1c03ef474c260ce90977" compoundref="d1/dad/Argx_8cpp" startline="156" endline="166">hasTag</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a0269687632438687f9afd44f80c2eaa9" compoundref="d1/dad/Argx_8cpp" startline="63" endline="74">paramToID</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a9d961d98a70713290d237dd8f3d68369" compoundref="d1/dad/Argx_8cpp" startline="146" endline="154">subParamExists</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1aab16d8baf18e1db7ce66995a7cad312e" compoundref="d1/dad/Argx_8cpp" startline="93" endline="94">add</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1adb4e8a622135970b4e12f14d49a76e52" compoundref="d1/dad/Argx_8cpp" startline="489" endline="570">compareArgs</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a99bbe74c7f09f6bb3a343dbdde050a64" compoundref="d1/dad/Argx_8cpp" startline="293" endline="359">createDocs</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" compoundref="d1/dad/Argx_8cpp" startline="96" endline="140">findParam</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1ae7f1dcaf2c945c8592a3e89b15a0189b" compoundref="d1/dad/Argx_8cpp" startline="572" endline="578">getOption</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a3378e7eb2efcb1386b487ece1b5aec35" compoundref="d1/dad/Argx_8cpp" startline="639" endline="640">getOptions</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" compoundref="d1/dad/Argx_8cpp" startline="171" endline="288">getParam</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="580" endline="631">getSubValue</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1ac1e4d316a44cfdc596a181af15e74962" compoundref="d1/dad/Argx_8cpp" startline="395" endline="480">getWrongArgs</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a8d66cd4ebaeb1c03ef474c260ce90977" compoundref="d1/dad/Argx_8cpp" startline="159" endline="169">hasTag</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a0269687632438687f9afd44f80c2eaa9" compoundref="d1/dad/Argx_8cpp" startline="66" endline="77">paramToID</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a9d961d98a70713290d237dd8f3d68369" compoundref="d1/dad/Argx_8cpp" startline="149" endline="157">subParamExists</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -101,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="51" column="1" bodyfile="src/Argx.cpp" bodystart="42" bodyend="43"/>
+        <location file="inc/Argx.hpp" line="51" column="1" bodyfile="src/Argx.cpp" bodystart="45" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -155,12 +156,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="48" column="1" bodyfile="src/Argx.cpp" bodystart="34" bodyend="39"/>
-        <references refid="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" compoundref="d1/dad/Argx_8cpp" startline="34" endline="39">Argx</references>
+        <location file="inc/Argx.hpp" line="48" column="1" bodyfile="src/Argx.cpp" bodystart="34" bodyend="42"/>
+        <references refid="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" compoundref="d1/dad/Argx_8cpp" startline="34" endline="42">Argx</references>
         <references refid="d9/da2/classargx_1_1Argx_1adf94f5a9f22d8ea2cde21df63c2f3d8a" compoundref="d0/d32/Argx_8hpp" startline="20">id</references>
         <references refid="d9/da2/classargx_1_1Argx_1a2e72f1c581d6ac0ffa02d45c3e6b540f" compoundref="d0/d32/Argx_8hpp" startline="25">mainArgc</references>
         <references refid="d9/da2/classargx_1_1Argx_1a4e820cdc862457fd8618229ce47a690f" compoundref="d0/d32/Argx_8hpp" startline="23">mainArgs</references>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" compoundref="d1/dad/Argx_8cpp" startline="34" endline="39">Argx</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" compoundref="d1/dad/Argx_8cpp" startline="34" endline="42">Argx</referencedby>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1a97654cab13febb7fb7870b14c9d31c6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -175,7 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="56" column="1" bodyfile="src/Argx.cpp" bodystart="45" bodyend="48"/>
+        <location file="inc/Argx.hpp" line="56" column="1" bodyfile="src/Argx.cpp" bodystart="48" bodyend="51"/>
         <references refid="d9/da2/classargx_1_1Argx_1a4e820cdc862457fd8618229ce47a690f" compoundref="d0/d32/Argx_8hpp" startline="23">mainArgs</references>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1aab16d8baf18e1db7ce66995a7cad312e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -205,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="69" column="6" bodyfile="src/Argx.cpp" bodystart="90" bodyend="91"/>
+        <location file="inc/Argx.hpp" line="76" column="6" bodyfile="src/Argx.cpp" bodystart="93" bodyend="94"/>
         <references refid="d9/da2/classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5" compoundref="d0/d32/Argx_8hpp" startline="22">options</references>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1adb4e8a622135970b4e12f14d49a76e52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -249,7 +250,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="149" column="6" bodyfile="src/Argx.cpp" bodystart="415" bodyend="476"/>
+        <location file="inc/Argx.hpp" line="156" column="6" bodyfile="src/Argx.cpp" bodystart="489" bodyend="570"/>
+        <references refid="da/dd5/structargx_1_1ARGXOptions_1ad2eec2de8559ea5cc4e446c0d47c6279" compoundref="dd/de3/types_8hpp" startline="51">argx::ARGXOptions::hasAnySubParams</references>
+        <references refid="da/dd5/structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a" compoundref="dd/de3/types_8hpp" startline="50">argx::ARGXOptions::hasSubParams</references>
         <references refid="d9/da2/classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5" compoundref="d0/d32/Argx_8hpp" startline="22">options</references>
         <references refid="da/dd5/structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed" compoundref="dd/de3/types_8hpp" startline="54">argx::ARGXOptions::subParams</references>
       </memberdef>
@@ -306,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="85" column="13" bodyfile="src/Argx.cpp" bodystart="290" bodyend="356"/>
+        <location file="inc/Argx.hpp" line="92" column="13" bodyfile="src/Argx.cpp" bodystart="293" bodyend="359"/>
         <references refid="d9/da2/classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5" compoundref="d0/d32/Argx_8hpp" startline="22">options</references>
         <references refid="dc/d69/namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2" compoundref="dd/de3/types_8hpp" startline="11">argx::Professional</references>
         <references refid="dc/d69/namespaceargx_1a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780" compoundref="dd/de3/types_8hpp" startline="12">argx::Simple</references>
@@ -340,12 +343,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="99" column="5" bodyfile="src/Argx.cpp" bodystart="93" bodyend="137"/>
+        <location file="inc/Argx.hpp" line="106" column="5" bodyfile="src/Argx.cpp" bodystart="96" bodyend="140"/>
         <references refid="d9/da2/classargx_1_1Argx_1a4e820cdc862457fd8618229ce47a690f" compoundref="d0/d32/Argx_8hpp" startline="23">mainArgs</references>
         <references refid="d9/da2/classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5" compoundref="d0/d32/Argx_8hpp" startline="22">options</references>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1adb8fa05c9916682bf3cabeb2a12895f4" compoundref="d1/dad/Argx_8cpp" startline="287" endline="288">getSubParam</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a8d66cd4ebaeb1c03ef474c260ce90977" compoundref="d1/dad/Argx_8cpp" startline="156" endline="166">hasTag</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a82c1649fbd03d4f3ea94bf8a14e1299d" compoundref="d1/dad/Argx_8cpp" startline="139" endline="144">paramExists</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1adb8fa05c9916682bf3cabeb2a12895f4" compoundref="d1/dad/Argx_8cpp" startline="290" endline="291">getSubParam</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a8d66cd4ebaeb1c03ef474c260ce90977" compoundref="d1/dad/Argx_8cpp" startline="159" endline="169">hasTag</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a82c1649fbd03d4f3ea94bf8a14e1299d" compoundref="d1/dad/Argx_8cpp" startline="142" endline="147">paramExists</referencedby>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1a812254e076a5ec208ba9d2eab470edb4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -363,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="105" column="5" bodyfile="src/Argx.cpp" bodystart="539" bodyend="540"/>
+        <location file="inc/Argx.hpp" line="112" column="5" bodyfile="src/Argx.cpp" bodystart="636" bodyend="637"/>
         <references refid="d9/da2/classargx_1_1Argx_1a2e72f1c581d6ac0ffa02d45c3e6b540f" compoundref="d0/d32/Argx_8hpp" startline="25">mainArgc</references>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1a7fb43159f183399c8674cd5e521d3caf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -395,9 +398,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="112" column="5" bodyfile="src/Argx.cpp" bodystart="50" bodyend="61"/>
-        <references refid="d9/da2/classargx_1_1Argx_1a73dccd80c13749ea006b46653cc2a8a0" compoundref="d1/dad/Argx_8cpp" startline="76" endline="88">getArgPos</references>
-        <references refid="d9/da2/classargx_1_1Argx_1ae7f1dcaf2c945c8592a3e89b15a0189b" compoundref="d1/dad/Argx_8cpp" startline="478" endline="484">getOption</references>
+        <location file="inc/Argx.hpp" line="119" column="5" bodyfile="src/Argx.cpp" bodystart="53" bodyend="64"/>
+        <references refid="d9/da2/classargx_1_1Argx_1a73dccd80c13749ea006b46653cc2a8a0" compoundref="d1/dad/Argx_8cpp" startline="79" endline="91">getArgPos</references>
+        <references refid="d9/da2/classargx_1_1Argx_1ae7f1dcaf2c945c8592a3e89b15a0189b" compoundref="d1/dad/Argx_8cpp" startline="572" endline="578">getOption</references>
         <references refid="da/dd5/structargx_1_1ARGXOptions_1a6324ea753af15d2a184e382e913694f0" compoundref="dd/de3/types_8hpp" startline="36">argx::ARGXOptions::param</references>
         <references refid="da/dd5/structargx_1_1ARGXOptions_1aa0cd2dddf236a7bd15c1636aa7ec4a9c" compoundref="dd/de3/types_8hpp" startline="41">argx::ARGXOptions::sparam</references>
       </memberdef>
@@ -430,10 +433,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="63" column="5" bodyfile="src/Argx.cpp" bodystart="76" bodyend="88"/>
+        <location file="inc/Argx.hpp" line="70" column="5" bodyfile="src/Argx.cpp" bodystart="79" bodyend="91"/>
         <references refid="d9/da2/classargx_1_1Argx_1a4e820cdc862457fd8618229ce47a690f" compoundref="d0/d32/Argx_8hpp" startline="23">mainArgs</references>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a7fb43159f183399c8674cd5e521d3caf" compoundref="d1/dad/Argx_8cpp" startline="50" endline="61">getArgIDPos</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="486" endline="534">getSubValue</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a7fb43159f183399c8674cd5e521d3caf" compoundref="d1/dad/Argx_8cpp" startline="53" endline="64">getArgIDPos</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="580" endline="631">getSubValue</referencedby>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1a671ad717805d76e459c74a3e0fee0625" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -451,7 +454,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="189" column="13" bodyfile="src/Argx.cpp" bodystart="545" bodyend="546"/>
+        <location file="inc/Argx.hpp" line="196" column="13" bodyfile="src/Argx.cpp" bodystart="642" bodyend="643"/>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1a6146d9644c99b670b15d78cb92057bff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; std::string &gt;</type>
@@ -469,9 +472,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="177" column="13" bodyfile="src/Argx.cpp" bodystart="536" bodyend="537"/>
+        <location file="inc/Argx.hpp" line="184" column="13" bodyfile="src/Argx.cpp" bodystart="633" bodyend="634"/>
         <references refid="d9/da2/classargx_1_1Argx_1a4e820cdc862457fd8618229ce47a690f" compoundref="d0/d32/Argx_8hpp" startline="23">mainArgs</references>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="486" endline="534">getSubValue</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="580" endline="631">getSubValue</referencedby>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1ae7f1dcaf2c945c8592a3e89b15a0189b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="da/dd5/structargx_1_1ARGXOptions" kindref="compound">ARGXOptions</ref></type>
@@ -508,10 +511,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="156" column="13" bodyfile="src/Argx.cpp" bodystart="478" bodyend="484"/>
+        <location file="inc/Argx.hpp" line="163" column="13" bodyfile="src/Argx.cpp" bodystart="572" bodyend="578"/>
         <references refid="d9/da2/classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5" compoundref="d0/d32/Argx_8hpp" startline="22">options</references>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a7fb43159f183399c8674cd5e521d3caf" compoundref="d1/dad/Argx_8cpp" startline="50" endline="61">getArgIDPos</referencedby>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="486" endline="534">getSubValue</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a7fb43159f183399c8674cd5e521d3caf" compoundref="d1/dad/Argx_8cpp" startline="53" endline="64">getArgIDPos</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="580" endline="631">getSubValue</referencedby>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1a3378e7eb2efcb1386b487ece1b5aec35" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; <ref refid="da/dd5/structargx_1_1ARGXOptions" kindref="compound">ARGXOptions</ref> &gt;</type>
@@ -529,7 +532,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="183" column="13" bodyfile="src/Argx.cpp" bodystart="542" bodyend="543"/>
+        <location file="inc/Argx.hpp" line="190" column="13" bodyfile="src/Argx.cpp" bodystart="639" bodyend="640"/>
         <references refid="d9/da2/classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5" compoundref="d0/d32/Argx_8hpp" startline="22">options</references>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1a250e2f53873829c3567dc0aec9dc2952" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -561,7 +564,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="76" column="11" bodyfile="src/Argx.cpp" bodystart="168" bodyend="285"/>
+        <location file="inc/Argx.hpp" line="83" column="11" bodyfile="src/Argx.cpp" bodystart="171" bodyend="288"/>
         <references refid="d2/d84/structargx_1_1ARGXParam_1a47afcd85c9734d815006ee41647ac4e0" compoundref="dd/de3/types_8hpp" startline="59">argx::ARGXParam::exists</references>
         <references refid="d9/da2/classargx_1_1Argx_1a2e72f1c581d6ac0ffa02d45c3e6b540f" compoundref="d0/d32/Argx_8hpp" startline="25">mainArgc</references>
         <references refid="d9/da2/classargx_1_1Argx_1a4e820cdc862457fd8618229ce47a690f" compoundref="d0/d32/Argx_8hpp" startline="23">mainArgs</references>
@@ -609,9 +612,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="164" column="6" bodyfile="src/Argx.cpp" bodystart="287" bodyend="288"/>
-        <references refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" compoundref="d1/dad/Argx_8cpp" startline="93" endline="137">findParam</references>
-        <references refid="d9/da2/classargx_1_1Argx_1a82c1649fbd03d4f3ea94bf8a14e1299d" compoundref="d1/dad/Argx_8cpp" startline="139" endline="144">paramExists</references>
+        <location file="inc/Argx.hpp" line="171" column="6" bodyfile="src/Argx.cpp" bodystart="290" bodyend="291"/>
+        <references refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" compoundref="d1/dad/Argx_8cpp" startline="96" endline="140">findParam</references>
+        <references refid="d9/da2/classargx_1_1Argx_1a82c1649fbd03d4f3ea94bf8a14e1299d" compoundref="d1/dad/Argx_8cpp" startline="142" endline="147">paramExists</references>
         <references refid="d2/d84/structargx_1_1ARGXParam_1ace0572ca0af0b51da129b562bee6a673" compoundref="dd/de3/types_8hpp" startline="60">argx::ARGXParam::subExists</references>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -643,14 +646,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="171" column="13" bodyfile="src/Argx.cpp" bodystart="486" bodyend="534"/>
+        <location file="inc/Argx.hpp" line="178" column="13" bodyfile="src/Argx.cpp" bodystart="580" bodyend="631"/>
         <references refid="da/dd5/structargx_1_1ARGXOptions_1abcd90d184d4e1a80e3ebfe23197a70c0" compoundref="dd/de3/types_8hpp" startline="48">argx::ARGXOptions::defaultValue</references>
-        <references refid="d9/da2/classargx_1_1Argx_1a73dccd80c13749ea006b46653cc2a8a0" compoundref="d1/dad/Argx_8cpp" startline="76" endline="88">getArgPos</references>
-        <references refid="d9/da2/classargx_1_1Argx_1a6146d9644c99b670b15d78cb92057bff" compoundref="d1/dad/Argx_8cpp" startline="536" endline="537">getMainArgs</references>
-        <references refid="d9/da2/classargx_1_1Argx_1ae7f1dcaf2c945c8592a3e89b15a0189b" compoundref="d1/dad/Argx_8cpp" startline="478" endline="484">getOption</references>
+        <references refid="d9/da2/classargx_1_1Argx_1a73dccd80c13749ea006b46653cc2a8a0" compoundref="d1/dad/Argx_8cpp" startline="79" endline="91">getArgPos</references>
+        <references refid="d9/da2/classargx_1_1Argx_1a6146d9644c99b670b15d78cb92057bff" compoundref="d1/dad/Argx_8cpp" startline="633" endline="634">getMainArgs</references>
+        <references refid="d9/da2/classargx_1_1Argx_1ae7f1dcaf2c945c8592a3e89b15a0189b" compoundref="d1/dad/Argx_8cpp" startline="572" endline="578">getOption</references>
         <references refid="d9/da2/classargx_1_1Argx_1a4e820cdc862457fd8618229ce47a690f" compoundref="d0/d32/Argx_8hpp" startline="23">mainArgs</references>
         <references refid="d9/da2/classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5" compoundref="d0/d32/Argx_8hpp" startline="22">options</references>
-        <references refid="d9/da2/classargx_1_1Argx_1a9d961d98a70713290d237dd8f3d68369" compoundref="d1/dad/Argx_8cpp" startline="146" endline="154">subParamExists</references>
+        <references refid="d9/da2/classargx_1_1Argx_1a9d961d98a70713290d237dd8f3d68369" compoundref="d1/dad/Argx_8cpp" startline="149" endline="157">subParamExists</references>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1ac1e4d316a44cfdc596a181af15e74962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -681,8 +684,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="119" column="5" bodyfile="src/Argx.cpp" bodystart="358" bodyend="413"/>
+        <location file="inc/Argx.hpp" line="126" column="5" bodyfile="src/Argx.cpp" bodystart="395" bodyend="480"/>
+        <references refid="da/dd5/structargx_1_1ARGXOptions_1ad2eec2de8559ea5cc4e446c0d47c6279" compoundref="dd/de3/types_8hpp" startline="51">argx::ARGXOptions::hasAnySubParams</references>
+        <references refid="da/dd5/structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a" compoundref="dd/de3/types_8hpp" startline="50">argx::ARGXOptions::hasSubParams</references>
+        <references refid="d9/da2/classargx_1_1Argx_1a4e820cdc862457fd8618229ce47a690f" compoundref="d0/d32/Argx_8hpp" startline="23">mainArgs</references>
         <references refid="d9/da2/classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5" compoundref="d0/d32/Argx_8hpp" startline="22">options</references>
+        <references refid="da/dd5/structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed" compoundref="dd/de3/types_8hpp" startline="54">argx::ARGXOptions::subParams</references>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1a8d66cd4ebaeb1c03ef474c260ce90977" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -725,8 +732,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="134" column="6" bodyfile="src/Argx.cpp" bodystart="156" bodyend="166"/>
-        <references refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" compoundref="d1/dad/Argx_8cpp" startline="93" endline="137">findParam</references>
+        <location file="inc/Argx.hpp" line="141" column="6" bodyfile="src/Argx.cpp" bodystart="159" bodyend="169"/>
+        <references refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" compoundref="d1/dad/Argx_8cpp" startline="96" endline="140">findParam</references>
         <references refid="d9/da2/classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5" compoundref="d0/d32/Argx_8hpp" startline="22">options</references>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1a82c1649fbd03d4f3ea94bf8a14e1299d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -758,9 +765,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="126" column="6" bodyfile="src/Argx.cpp" bodystart="139" bodyend="144"/>
-        <references refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" compoundref="d1/dad/Argx_8cpp" startline="93" endline="137">findParam</references>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1adb8fa05c9916682bf3cabeb2a12895f4" compoundref="d1/dad/Argx_8cpp" startline="287" endline="288">getSubParam</referencedby>
+        <location file="inc/Argx.hpp" line="133" column="6" bodyfile="src/Argx.cpp" bodystart="142" bodyend="147"/>
+        <references refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" compoundref="d1/dad/Argx_8cpp" startline="96" endline="140">findParam</references>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1adb8fa05c9916682bf3cabeb2a12895f4" compoundref="d1/dad/Argx_8cpp" startline="290" endline="291">getSubParam</referencedby>
       </memberdef>
       <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1a0269687632438687f9afd44f80c2eaa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -791,7 +798,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="92" column="13" bodyfile="src/Argx.cpp" bodystart="63" bodyend="74"/>
+        <location file="inc/Argx.hpp" line="99" column="13" bodyfile="src/Argx.cpp" bodystart="66" bodyend="77"/>
         <references refid="d9/da2/classargx_1_1Argx_1adf94f5a9f22d8ea2cde21df63c2f3d8a" compoundref="d0/d32/Argx_8hpp" startline="20">id</references>
         <references refid="d9/da2/classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5" compoundref="d0/d32/Argx_8hpp" startline="22">options</references>
       </memberdef>
@@ -824,9 +831,42 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/Argx.hpp" line="141" column="6" bodyfile="src/Argx.cpp" bodystart="146" bodyend="154"/>
+        <location file="inc/Argx.hpp" line="148" column="6" bodyfile="src/Argx.cpp" bodystart="149" bodyend="157"/>
         <references refid="d9/da2/classargx_1_1Argx_1aba86dd3c8b11c495afd4c7eada1c0ac5" compoundref="d0/d32/Argx_8hpp" startline="22">options</references>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="486" endline="534">getSubValue</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="580" endline="631">getSubValue</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d9/da2/classargx_1_1Argx_1ad35955a51e2dd4b50a7ccf20f757fe55" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int argx::Argx::formatWrongArgs</definition>
+        <argsstring>(const int &amp;_int)</argsstring>
+        <name>formatWrongArgs</name>
+        <qualifiedname>argx::Argx::formatWrongArgs</qualifiedname>
+        <param>
+          <type>const int &amp;</type>
+          <declname>_int</declname>
+        </param>
+        <briefdescription>
+<para>Format to a positive number if number is negative for a correct execution of code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number to convert </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int Positive value number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/Argx.hpp" line="63" column="12" bodyfile="src/Argx.cpp" bodystart="482" bodyend="487"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -883,7 +923,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="inc/Argx.hpp" line="17" column="1" bodyfile="inc/Argx.hpp" bodystart="18" bodyend="190"/>
+    <location file="inc/Argx.hpp" line="17" column="1" bodyfile="inc/Argx.hpp" bodystart="18" bodyend="197"/>
     <listofallmembers>
       <member refid="d9/da2/classargx_1_1Argx_1aab16d8baf18e1db7ce66995a7cad312e" prot="public" virt="non-virtual"><scope>argx::Argx</scope><name>add</name></member>
       <member refid="d9/da2/classargx_1_1Argx_1a031a29c3cbb346b0379e1bfb99c35076" prot="public" virt="non-virtual"><scope>argx::Argx</scope><name>Argx</name></member>
@@ -891,6 +931,7 @@
       <member refid="d9/da2/classargx_1_1Argx_1adb4e8a622135970b4e12f14d49a76e52" prot="public" virt="non-virtual"><scope>argx::Argx</scope><name>compareArgs</name></member>
       <member refid="d9/da2/classargx_1_1Argx_1a99bbe74c7f09f6bb3a343dbdde050a64" prot="public" virt="non-virtual"><scope>argx::Argx</scope><name>createDocs</name></member>
       <member refid="d9/da2/classargx_1_1Argx_1a9343612a7c209f2323d2cd10fd3fe387" prot="public" virt="non-virtual"><scope>argx::Argx</scope><name>findParam</name></member>
+      <member refid="d9/da2/classargx_1_1Argx_1ad35955a51e2dd4b50a7ccf20f757fe55" prot="public" virt="non-virtual"><scope>argx::Argx</scope><name>formatWrongArgs</name></member>
       <member refid="d9/da2/classargx_1_1Argx_1a812254e076a5ec208ba9d2eab470edb4" prot="public" virt="non-virtual"><scope>argx::Argx</scope><name>getArgc</name></member>
       <member refid="d9/da2/classargx_1_1Argx_1a7fb43159f183399c8674cd5e521d3caf" prot="public" virt="non-virtual"><scope>argx::Argx</scope><name>getArgIDPos</name></member>
       <member refid="d9/da2/classargx_1_1Argx_1a73dccd80c13749ea006b46653cc2a8a0" prot="public" virt="non-virtual"><scope>argx::Argx</scope><name>getArgPos</name></member>

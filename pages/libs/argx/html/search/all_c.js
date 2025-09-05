@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['macros_2ehpp_0',['macros.hpp',['../db/dbe/macros_8hpp.html',1,'']]],
-  ['made_20by_3a_20pcannon09_1',['Made by: pcannon09',['../index.html#autotoc_md2',1,'']]],
-  ['mainargc_2',['mainArgc',['../d9/da2/classargx_1_1Argx.html#a2e72f1c581d6ac0ffa02d45c3e6b540f',1,'argx::Argx']]],
-  ['mainargs_3',['mainArgs',['../d9/da2/classargx_1_1Argx.html#a4e820cdc862457fd8618229ce47a690f',1,'argx::Argx']]],
-  ['msg_4',['msg',['../da/d2b/classargx_1_1ARGXAddError.html#a09e860d9791a4a6b00cb716cec8a8479',1,'argx::ARGXAddError']]]
+  ['not_20updated_20for_201_202_20y_20version_20replicate_0',['C API / Clone: &lt;b&gt;&lt;a href=&quot;https://github.com/pcannon09/argx-c&quot;&gt;https://github.com/pcannon09/argx-c&lt;/a&gt;&lt;/b&gt; (Not updated for 1.2.y version replicate)',['../index.html#autotoc_md11',1,'']]],
+  ['not_20updated_20for_201_202_20y_20version_20support_1',['Python3 API: &lt;b&gt;&lt;a href=&quot;https://github.com/pcannon09/argx-py&quot;&gt;https://github.com/pcannon09/argx-py&lt;/a&gt;&lt;/b&gt; (Not updated for 1.2.y version support)',['../index.html#autotoc_md10',1,'']]],
+  ['notes_2',['IMPORTANT NOTES',['../index.html#autotoc_md8',1,'']]]
 ];

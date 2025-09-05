@@ -17,7 +17,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="inc/types.hpp" line="48" column="13" bodyfile="inc/types.hpp" bodystart="48" bodyend="-1"/>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="486" endline="534">argx::Argx::getSubValue</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a25786788983b04754ac5d9f9aaa9bee5" compoundref="d1/dad/Argx_8cpp" startline="580" endline="631">argx::Argx::getSubValue</referencedby>
       </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1ad2eec2de8559ea5cc4e446c0d47c6279" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -33,6 +33,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="inc/types.hpp" line="51" column="6" bodyfile="inc/types.hpp" bodystart="51" bodyend="-1"/>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1adb4e8a622135970b4e12f14d49a76e52" compoundref="d1/dad/Argx_8cpp" startline="489" endline="570">argx::Argx::compareArgs</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1ac1e4d316a44cfdc596a181af15e74962" compoundref="d1/dad/Argx_8cpp" startline="395" endline="480">argx::Argx::getWrongArgs</referencedby>
       </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a02e69197bd3efa35da99edcc4018eb1a" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -48,6 +50,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="inc/types.hpp" line="50" column="6" bodyfile="inc/types.hpp" bodystart="50" bodyend="-1"/>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1adb4e8a622135970b4e12f14d49a76e52" compoundref="d1/dad/Argx_8cpp" startline="489" endline="570">argx::Argx::compareArgs</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1ac1e4d316a44cfdc596a181af15e74962" compoundref="d1/dad/Argx_8cpp" startline="395" endline="480">argx::Argx::getWrongArgs</referencedby>
       </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a0bd17b9be2b313a37c353d9d8b8c5b65" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -94,7 +98,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="inc/types.hpp" line="36" column="13" bodyfile="inc/types.hpp" bodystart="36" bodyend="-1"/>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a7fb43159f183399c8674cd5e521d3caf" compoundref="d1/dad/Argx_8cpp" startline="50" endline="61">argx::Argx::getArgIDPos</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a7fb43159f183399c8674cd5e521d3caf" compoundref="d1/dad/Argx_8cpp" startline="53" endline="64">argx::Argx::getArgIDPos</referencedby>
       </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1ab35134d0ed79694e46420ada0813565f" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -125,7 +129,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="inc/types.hpp" line="41" column="13" bodyfile="inc/types.hpp" bodystart="41" bodyend="-1"/>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1a7fb43159f183399c8674cd5e521d3caf" compoundref="d1/dad/Argx_8cpp" startline="50" endline="61">argx::Argx::getArgIDPos</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1a7fb43159f183399c8674cd5e521d3caf" compoundref="d1/dad/Argx_8cpp" startline="53" endline="64">argx::Argx::getArgIDPos</referencedby>
       </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1a6345f9a87edfb31007c6e3b53f9eeaed" prot="public" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="da/dd5/structargx_1_1ARGXOptions" kindref="compound">ARGXOptions</ref> &gt;</type>
@@ -140,7 +144,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="inc/types.hpp" line="54" column="13" bodyfile="inc/types.hpp" bodystart="54" bodyend="-1"/>
-        <referencedby refid="d9/da2/classargx_1_1Argx_1adb4e8a622135970b4e12f14d49a76e52" compoundref="d1/dad/Argx_8cpp" startline="415" endline="476">argx::Argx::compareArgs</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1adb4e8a622135970b4e12f14d49a76e52" compoundref="d1/dad/Argx_8cpp" startline="489" endline="570">argx::Argx::compareArgs</referencedby>
+        <referencedby refid="d9/da2/classargx_1_1Argx_1ac1e4d316a44cfdc596a181af15e74962" compoundref="d1/dad/Argx_8cpp" startline="395" endline="480">argx::Argx::getWrongArgs</referencedby>
       </memberdef>
       <memberdef kind="variable" id="da/dd5/structargx_1_1ARGXOptions_1ad11a81f21049b37b90572126ccdaf52f" prot="public" static="no" mutable="no">
         <type>std::string</type>

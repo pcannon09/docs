@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="indexpage" kind="page">
     <compoundname>index</compoundname>
-    <title>ARGX - 1.2.0-beta</title>
+    <title>ARGX - 1.2.1-build</title>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -23,21 +23,21 @@
 </entry><entry thead="yes" align='center'><para>MSVC  </para>
 </entry></row>
 <row>
-<entry thead="no" align='center'><para>1.2.0-beta  </para>
+<entry thead="no" align='center'><para>1.2.y-build  </para>
 </entry><entry thead="no" align='center'><para>C++14  </para>
 </entry><entry thead="no" align='center'><para>GCC 5.1+  </para>
 </entry><entry thead="no" align='center'><para>Clang 3.4+  </para>
 </entry><entry thead="no" align='center'><para>MSVC 14.0+ (/std:c++11 or later)  </para>
 </entry></row>
 <row>
-<entry thead="no" align='center'><para>1.1.0-build  </para>
+<entry thead="no" align='center'><para>1.1.y-build  </para>
 </entry><entry thead="no" align='center'><para>C++11  </para>
 </entry><entry thead="no" align='center'><para>GCC 4.8+  </para>
 </entry><entry thead="no" align='center'><para>Clang 3.3+  </para>
 </entry><entry thead="no" align='center'><para>MSVC 11.0+ (/std:c++11 or later)  </para>
 </entry></row>
 <row>
-<entry thead="no" align='center'><para>1.0.0-build  </para>
+<entry thead="no" align='center'><para>1.0.y-build  </para>
 </entry><entry thead="no" align='center'><para>C++11  </para>
 </entry><entry thead="no" align='center'><para>GCC 4.8+  </para>
 </entry><entry thead="no" align='center'><para>Clang 3.3+  </para>
@@ -47,14 +47,14 @@
 </para>
 </sect2>
 <sect2 id="index_1autotoc_md6">
-<title>Specific information</title><para><bold>NOTE: For version 1.2.0-beta</bold><itemizedlist>
+<title>Specific information</title><para><bold>NOTE: For version 1.2.y-build</bold><itemizedlist>
 <listitem><para>Minimum standard required to compile as for latest version: <bold>C++14</bold> (<bold>GCC 5.1+</bold>, <bold>Clang 3.4+</bold> and <bold>MSVC 14.0+</bold>)</para>
 </listitem></itemizedlist>
 </para>
 </sect2>
 <sect2 id="index_1autotoc_md7">
 <title>Summary</title><para><itemizedlist>
-<listitem><para>The minimum required version for Argx 1.2.0-beta is C++ for <bold>GCC 5.1+</bold>, <bold>Clang 3.4+</bold> and <bold>MSVC 14.0+</bold></para>
+<listitem><para>The minimum required version for Argx 1.2.y-build is C++ for <bold>GCC 5.1+</bold>, <bold>Clang 3.4+</bold> and <bold>MSVC 14.0+</bold></para>
 </listitem></itemizedlist>
 </para>
 </sect2>

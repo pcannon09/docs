@@ -27,6 +27,7 @@
     <member refid="d9/da2/classargx_1_1Argx_1a82c1649fbd03d4f3ea94bf8a14e1299d" kind="function"><name>paramExists</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a0269687632438687f9afd44f80c2eaa9" kind="function"><name>paramToID</name></member>
     <member refid="d9/da2/classargx_1_1Argx_1a9d961d98a70713290d237dd8f3d68369" kind="function"><name>subParamExists</name></member>
+    <member refid="d9/da2/classargx_1_1Argx_1ad35955a51e2dd4b50a7ccf20f757fe55" kind="function"><name>formatWrongArgs</name></member>
   </compound>
   <compound refid="da/d2b/classargx_1_1ARGXAddError" kind="class"><name>argx::ARGXAddError</name>
     <member refid="da/d2b/classargx_1_1ARGXAddError_1a6b122902c596ea869ade7e746cd781de" kind="variable"><name>help</name></member>

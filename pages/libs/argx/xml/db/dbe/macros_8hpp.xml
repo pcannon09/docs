@@ -118,7 +118,7 @@
       </memberdef>
       <memberdef kind="define" id="db/dbe/macros_8hpp_1a8bb35e7bdac8b6af29d07e6fd7468b08" prot="public" static="no">
         <name>ARGX_VERSION_PATCH</name>
-        <initializer>0</initializer>
+        <initializer>2</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -129,7 +129,7 @@
       </memberdef>
       <memberdef kind="define" id="db/dbe/macros_8hpp_1a2dd1c90360210f9bc40f65de8558b60f" prot="public" static="no">
         <name>ARGX_VERSION_STATE</name>
-        <initializer>&quot;beta&quot;</initializer>
+        <initializer>&quot;build&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -165,7 +165,7 @@
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Versioning</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9" refid="db/dbe/macros_8hpp_1a774e5c096afc126e4fd6031c4143df1c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARGX_VERSION_MAJOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10" refid="db/dbe/macros_8hpp_1a6fca140f9d55dd241c689047db70c236" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARGX_VERSION_MINOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="db/dbe/macros_8hpp_1a8bb35e7bdac8b6af29d07e6fd7468b08" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARGX_VERSION_PATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="db/dbe/macros_8hpp_1a8bb35e7bdac8b6af29d07e6fd7468b08" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARGX_VERSION_PATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
 <codeline lineno="13" refid="db/dbe/macros_8hpp_1a2cf696b4344dbd9c545a9165cb10cb76" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARGX_VERSION_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20250903</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14" refid="db/dbe/macros_8hpp_1af2425c803e6b94429a9120dad6f1022b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARGX_PY_REQUIRED_VERSION_STD<sp/><sp/><sp/><sp/>20250721</highlight><highlight class="normal"></highlight></codeline>
@@ -176,9 +176,9 @@
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>snap<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>build<sp/>(AKA:<sp/>Release)<sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ARGX_AS_PYTHON_PACKAGE</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="db/dbe/macros_8hpp_1a2dd1c90360210f9bc40f65de8558b60f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>ARGX_VERSION_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;beta&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="db/dbe/macros_8hpp_1a2dd1c90360210f9bc40f65de8558b60f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>ARGX_VERSION_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;build&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>ARGX_VERSION_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>ARGX_VERSION_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27" refid="db/dbe/macros_8hpp_1aa639891463acaa985538b2760398bca3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARGX_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((ARGX_VERSION_MAJOR&lt;&lt;16)|(ARGX_VERSION_MINOR&lt;&lt;8)|(ARGX_VERSION_PATCH)|(ARGX_VERSION_STATE<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>

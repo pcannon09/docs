@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['tag_0',['tag',['../da/dd5/structargx_1_1ARGXOptions.html#ad11a81f21049b37b90572126ccdaf52f',1,'argx::ARGXOptions']]],
-  ['type_1',['type',['../d9/db2/structargx_1_1ARGXError.html#aa3083201a43c82fd69c3f7a04118b184',1,'argx::ARGXError']]],
-  ['types_2ehpp_2',['types.hpp',['../dd/de3/types_8hpp.html',1,'']]]
+  ['updated_20for_201_202_20y_20version_20replicate_0',['C API / Clone: &lt;b&gt;&lt;a href=&quot;https://github.com/pcannon09/argx-c&quot;&gt;https://github.com/pcannon09/argx-c&lt;/a&gt;&lt;/b&gt; (Not updated for 1.2.y version replicate)',['../index.html#autotoc_md11',1,'']]],
+  ['updated_20for_201_202_20y_20version_20support_1',['Python3 API: &lt;b&gt;&lt;a href=&quot;https://github.com/pcannon09/argx-py&quot;&gt;https://github.com/pcannon09/argx-py&lt;/a&gt;&lt;/b&gt; (Not updated for 1.2.y version support)',['../index.html#autotoc_md10',1,'']]]
 ];

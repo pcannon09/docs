@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Argx<span id="projectnumber">&#160;1.2.0-beta</span>
+   <div id="projectname">Argx<span id="projectnumber">&#160;1.2.2-build</span>
    </div>
    <div id="projectbrief">Simple yet powerful argument parser made in C++</div>
   </td>
@@ -141,6 +141,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9d961d98a70713290d237dd8f3d68369" id="r_a9d961d98a70713290d237dd8f3d68369"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d961d98a70713290d237dd8f3d68369">subParamExists</a> (const std::string &amp;<a class="el" href="#adf94f5a9f22d8ea2cde21df63c2f3d8a">id</a>)</td></tr>
 <tr class="memdesc:a9d961d98a70713290d237dd8f3d68369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get if sub-param exists in the param options.  <br /></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ad35955a51e2dd4b50a7ccf20f757fe55" id="r_ad35955a51e2dd4b50a7ccf20f757fe55"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad35955a51e2dd4b50a7ccf20f757fe55">formatWrongArgs</a> (const int &amp;_int)</td></tr>
+<tr class="memdesc:ad35955a51e2dd4b50a7ccf20f757fe55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format to a positive number if number is negative for a correct execution of code.  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:adf94f5a9f22d8ea2cde21df63c2f3d8a" id="r_adf94f5a9f22d8ea2cde21df63c2f3d8a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf94f5a9f22d8ea2cde21df63c2f3d8a">id</a></td></tr>
@@ -194,7 +199,10 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   36</span>    {</div>
 <div class="line"><span class="lineno">   37</span>        this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a> = <span class="keyword">new</span> std::vector&lt;std::string&gt;(argv, argv + argc);</div>
 <div class="line"><span class="lineno">   38</span>        this-&gt;<a class="code hl_variable" href="#a2e72f1c581d6ac0ffa02d45c3e6b540f">mainArgc</a> = argc;</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (!this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)</div>
+<div class="line"><span class="lineno">   41</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;`Args::mainArgs` is not valid for ID of &quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot; variable is NULL&quot;</span>;</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
 <div class="ttc" id="aclassargx_1_1Argx_html_a2e72f1c581d6ac0ffa02d45c3e6b540f"><div class="ttname"><a href="#a2e72f1c581d6ac0ffa02d45c3e6b540f">argx::Argx::mainArgc</a></div><div class="ttdeci">static unsigned int mainArgc</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d32/Argx_8hpp_source.html#l00025">Argx.hpp:25</a></div></div>
 <div class="ttc" id="aclassargx_1_1Argx_html_a4e820cdc862457fd8618229ce47a690f"><div class="ttname"><a href="#a4e820cdc862457fd8618229ce47a690f">argx::Argx::mainArgs</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; * mainArgs</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d32/Argx_8hpp_source.html#l00023">Argx.hpp:23</a></div></div>
 <div class="ttc" id="aclassargx_1_1Argx_html_adf94f5a9f22d8ea2cde21df63c2f3d8a"><div class="ttname"><a href="#adf94f5a9f22d8ea2cde21df63c2f3d8a">argx::Argx::id</a></div><div class="ttdeci">std::string id</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d32/Argx_8hpp_source.html#l00020">Argx.hpp:20</a></div></div>
@@ -220,8 +228,8 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00042">42</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>    { }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00045">45</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    { }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -242,10 +250,10 @@ Static Private Attributes</h2></td></tr>
 
 <p>Deconstruct allocated objects. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00045">45</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keyword">delete</span> this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00048">48</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>) { <span class="keyword">delete</span> this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a> = <span class="keyword">nullptr</span>; }</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00023">mainArgs</a>.</p>
 
@@ -275,8 +283,8 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00090">90</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>    { this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>.emplace_back(option); }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00093">93</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>    { this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>.emplace_back(option); }</div>
 <div class="ttc" id="aclassargx_1_1Argx_html_aba86dd3c8b11c495afd4c7eada1c0ac5"><div class="ttname"><a href="#aba86dd3c8b11c495afd4c7eada1c0ac5">argx::Argx::options</a></div><div class="ttdeci">static std::vector&lt; ARGXOptions &gt; options</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d32/Argx_8hpp_source.html#l00022">Argx.hpp:22</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>.</p>
@@ -312,71 +320,91 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00415">415</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  416</span>    {</div>
-<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1 ; i &lt; argv.size(); ++i)</div>
-<div class="line"><span class="lineno">  418</span>        {</div>
-<div class="line"><span class="lineno">  419</span>            <span class="keyword">const</span> std::string &amp;arg = argv[i];</div>
-<div class="line"><span class="lineno">  420</span> </div>
-<div class="line"><span class="lineno">  421</span>            <span class="keywordtype">bool</span> found = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  422</span>            <span class="keywordtype">bool</span> hasSubParams = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  423</span>            <span class="keywordtype">bool</span> hasAnySubParams = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  424</span> </div>
-<div class="line"><span class="lineno">  425</span>            <a class="code hl_typedef" href="../../dc/d69/namespaceargx.html#a9933be078f36db7b1424f6dd0372eb72">ARGXOptions</a> matchedOption;</div>
-<div class="line"><span class="lineno">  426</span> </div>
-<div class="line"><span class="lineno">  427</span>            <span class="comment">// Find the matching option</span></div>
-<div class="line"><span class="lineno">  428</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;option : <a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
-<div class="line"><span class="lineno">  429</span>            {</div>
-<div class="line"><span class="lineno">  430</span>                <span class="keywordflow">if</span> (option.sparam == arg || option.param == arg)</div>
-<div class="line"><span class="lineno">  431</span>                {</div>
-<div class="line"><span class="lineno">  432</span>                    found = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  433</span>                    hasSubParams = option.hasSubParams;</div>
-<div class="line"><span class="lineno">  434</span>                    hasAnySubParams = option.hasAnySubParams;</div>
-<div class="line"><span class="lineno">  435</span>                    matchedOption = option;</div>
-<div class="line"><span class="lineno">  436</span> </div>
-<div class="line"><span class="lineno">  437</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  438</span>                }</div>
-<div class="line"><span class="lineno">  439</span>            }</div>
-<div class="line"><span class="lineno">  440</span> </div>
-<div class="line"><span class="lineno">  441</span>            <span class="keywordflow">if</span> (!found) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  442</span> </div>
-<div class="line"><span class="lineno">  443</span>            <span class="keywordflow">if</span> (hasSubParams || hasAnySubParams)</div>
-<div class="line"><span class="lineno">  444</span>            {</div>
-<div class="line"><span class="lineno">  445</span>                <span class="comment">// Check if there&#39;s a next argument</span></div>
-<div class="line"><span class="lineno">  446</span>                <span class="keywordflow">if</span> (i + 1 &lt; argv.size())</div>
-<div class="line"><span class="lineno">  447</span>                {</div>
-<div class="line"><span class="lineno">  448</span>                    <span class="keyword">const</span> std::string &amp;nextArg = argv[i + 1];</div>
-<div class="line"><span class="lineno">  449</span> </div>
-<div class="line"><span class="lineno">  450</span>                    <span class="comment">// Check if next argument is a sub-parameter</span></div>
-<div class="line"><span class="lineno">  451</span>                    <span class="keywordtype">bool</span> isSubParam = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  452</span> </div>
-<div class="line"><span class="lineno">  453</span>                    <span class="keywordflow">if</span> (!nextArg.empty() &amp;&amp; nextArg[0] != <span class="charliteral">&#39;-&#39;</span>)</div>
-<div class="line"><span class="lineno">  454</span>                    {</div>
-<div class="line"><span class="lineno">  455</span>                        <span class="comment">// Validate if it&#39;s a valid sub-parameter</span></div>
-<div class="line"><span class="lineno">  456</span>                        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;subOption : matchedOption.subParams)</div>
-<div class="line"><span class="lineno">  457</span>                        {</div>
-<div class="line"><span class="lineno">  458</span>                            <span class="keywordflow">if</span> (subOption.param == nextArg || subOption.sparam == nextArg)</div>
-<div class="line"><span class="lineno">  459</span>                            {</div>
-<div class="line"><span class="lineno">  460</span>                                isSubParam = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  461</span> </div>
-<div class="line"><span class="lineno">  462</span>                                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  463</span>                            }</div>
-<div class="line"><span class="lineno">  464</span>                        }</div>
-<div class="line"><span class="lineno">  465</span> </div>
-<div class="line"><span class="lineno">  466</span>                        <span class="keywordflow">if</span> (isSubParam) ++i; <span class="comment">// Get the sub-parameter</span></div>
-<div class="line"><span class="lineno">  467</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hasSubParams || hasAnySubParams) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  468</span>                    }</div>
-<div class="line"><span class="lineno">  469</span> </div>
-<div class="line"><span class="lineno">  470</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hasSubParams || hasAnySubParams) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  471</span>                }</div>
-<div class="line"><span class="lineno">  472</span>            }</div>
-<div class="line"><span class="lineno">  473</span>        }</div>
-<div class="line"><span class="lineno">  474</span> </div>
-<div class="line"><span class="lineno">  475</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  476</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00489">489</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  490</span>    {</div>
+<div class="line"><span class="lineno">  491</span>        <span class="comment">// iterate over argv and skip program name</span></div>
+<div class="line"><span class="lineno">  492</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; argv.size(); ++i)</div>
+<div class="line"><span class="lineno">  493</span>        {</div>
+<div class="line"><span class="lineno">  494</span>            <span class="keyword">const</span> std::string &amp;arg = argv[i];</div>
+<div class="line"><span class="lineno">  495</span> </div>
+<div class="line"><span class="lineno">  496</span>            <span class="comment">// find a matching top-level option</span></div>
+<div class="line"><span class="lineno">  497</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="../../dc/d69/namespaceargx.html#a9933be078f36db7b1424f6dd0372eb72">ARGXOptions</a> *matched = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  498</span> </div>
+<div class="line"><span class="lineno">  499</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;opt : <a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
+<div class="line"><span class="lineno">  500</span>            {</div>
+<div class="line"><span class="lineno">  501</span>                <span class="keywordflow">if</span> (opt.sparam == arg || opt.param == arg)</div>
+<div class="line"><span class="lineno">  502</span>                {</div>
+<div class="line"><span class="lineno">  503</span>                    matched = &amp;opt;</div>
+<div class="line"><span class="lineno">  504</span> </div>
+<div class="line"><span class="lineno">  505</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  506</span>                }</div>
+<div class="line"><span class="lineno">  507</span>            }</div>
+<div class="line"><span class="lineno">  508</span> </div>
+<div class="line"><span class="lineno">  509</span>            <span class="comment">// No matched top-level option</span></div>
+<div class="line"><span class="lineno">  510</span>            <span class="keywordflow">if</span> (!matched) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  511</span> </div>
+<div class="line"><span class="lineno">  512</span>            <span class="comment">// if option supports subparams, try to get them</span></div>
+<div class="line"><span class="lineno">  513</span>            <span class="keywordflow">if</span> (matched-&gt;hasSubParams || matched-&gt;hasAnySubParams)</div>
+<div class="line"><span class="lineno">  514</span>            {</div>
+<div class="line"><span class="lineno">  515</span>                <span class="keywordtype">size_t</span> j = i + 1;</div>
+<div class="line"><span class="lineno">  516</span> </div>
+<div class="line"><span class="lineno">  517</span>                <span class="keywordflow">while</span> (j &lt; argv.size())</div>
+<div class="line"><span class="lineno">  518</span>                {</div>
+<div class="line"><span class="lineno">  519</span>                    <span class="keyword">const</span> std::string &amp;next = argv[j];</div>
+<div class="line"><span class="lineno">  520</span> </div>
+<div class="line"><span class="lineno">  521</span>                    <span class="comment">// Check the next declared subparam of `matched`</span></div>
+<div class="line"><span class="lineno">  522</span>                    <span class="keywordtype">bool</span> isSub = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  523</span> </div>
+<div class="line"><span class="lineno">  524</span>                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;sub : matched-&gt;subParams)</div>
+<div class="line"><span class="lineno">  525</span>                    {</div>
+<div class="line"><span class="lineno">  526</span>                        <span class="keywordflow">if</span> (next == sub.param || next == sub.sparam)</div>
+<div class="line"><span class="lineno">  527</span>                        {</div>
+<div class="line"><span class="lineno">  528</span>                            isSub = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  529</span> </div>
+<div class="line"><span class="lineno">  530</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  531</span>                        }</div>
+<div class="line"><span class="lineno">  532</span>                    }</div>
+<div class="line"><span class="lineno">  533</span> </div>
+<div class="line"><span class="lineno">  534</span>                    <span class="comment">// Get it and continue scanning for more subparams</span></div>
+<div class="line"><span class="lineno">  535</span>                    <span class="keywordflow">if</span> (isSub)</div>
+<div class="line"><span class="lineno">  536</span>                    {</div>
+<div class="line"><span class="lineno">  537</span>                        ++j;</div>
+<div class="line"><span class="lineno">  538</span> </div>
+<div class="line"><span class="lineno">  539</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  540</span>                    }</div>
+<div class="line"><span class="lineno">  541</span> </div>
+<div class="line"><span class="lineno">  542</span>                    <span class="comment">// not a subparam then check if it&#39;s a known top-level option</span></div>
+<div class="line"><span class="lineno">  543</span>                    <span class="keywordtype">bool</span> isGlobal = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  544</span> </div>
+<div class="line"><span class="lineno">  545</span>                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;g : <a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
+<div class="line"><span class="lineno">  546</span>                    {</div>
+<div class="line"><span class="lineno">  547</span>                        <span class="keywordflow">if</span> (next == g.param || next == g.sparam)</div>
+<div class="line"><span class="lineno">  548</span>                        {</div>
+<div class="line"><span class="lineno">  549</span>                            isGlobal = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  550</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  551</span>                        }</div>
+<div class="line"><span class="lineno">  552</span>                    }</div>
+<div class="line"><span class="lineno">  553</span> </div>
+<div class="line"><span class="lineno">  554</span> </div>
+<div class="line"><span class="lineno">  555</span>                    <span class="comment">// stop scanning subparams; outer loop will handle this global option</span></div>
+<div class="line"><span class="lineno">  556</span>                    <span class="keywordflow">if</span> (isGlobal) <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  557</span> </div>
+<div class="line"><span class="lineno">  558</span>                    <span class="comment">// neither a subparam nor a global option to an invalid sequence</span></div>
+<div class="line"><span class="lineno">  559</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  560</span>                }</div>
+<div class="line"><span class="lineno">  561</span> </div>
+<div class="line"><span class="lineno">  562</span>                <span class="comment">// advance outer index to the last consumed token ( j - 1 ).</span></div>
+<div class="line"><span class="lineno">  563</span>                <span class="comment">// outer for-loop will increment i, so set `i = j - 1` to continue at j</span></div>
+<div class="line"><span class="lineno">  564</span>                <span class="keywordflow">if</span> (j &gt; i + 1)</div>
+<div class="line"><span class="lineno">  565</span>                    i = j - 1;</div>
+<div class="line"><span class="lineno">  566</span>            }</div>
+<div class="line"><span class="lineno">  567</span>        }</div>
+<div class="line"><span class="lineno">  568</span> </div>
+<div class="line"><span class="lineno">  569</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  570</span>    }</div>
 <div class="ttc" id="anamespaceargx_html_a9933be078f36db7b1424f6dd0372eb72"><div class="ttname"><a href="../../dc/d69/namespaceargx.html#a9933be078f36db7b1424f6dd0372eb72">argx::ARGXOptions</a></div><div class="ttdeci">struct argx::ARGXOptions ARGXOptions</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>, and <a class="el" href="../../dd/de3/types_8hpp_source.html#l00054">argx::ARGXOptions::subParams</a>.</p>
+<p class="reference">References <a class="el" href="../../dd/de3/types_8hpp_source.html#l00051">argx::ARGXOptions::hasAnySubParams</a>, <a class="el" href="../../dd/de3/types_8hpp_source.html#l00050">argx::ARGXOptions::hasSubParams</a>, <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>, and <a class="el" href="../../dd/de3/types_8hpp_source.html#l00054">argx::ARGXOptions::subParams</a>.</p>
 
 </div>
 </div>
@@ -415,73 +443,73 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string Documentation as a string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00290">290</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  291</span>    {</div>
-<div class="line"><span class="lineno">  292</span>        std::string contentStr;</div>
-<div class="line"><span class="lineno">  293</span> </div>
-<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">if</span> (style == <a class="code hl_enumvalue" href="../../dc/d69/namespaceargx.html#a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2">ARGXStyle::Professional</a>)</div>
-<div class="line"><span class="lineno">  295</span>        {</div>
-<div class="line"><span class="lineno">  296</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;x : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
-<div class="line"><span class="lineno">  297</span>            {</div>
-<div class="line"><span class="lineno">  298</span>                <span class="comment">// Main option header line</span></div>
-<div class="line"><span class="lineno">  299</span>                contentStr += <span class="stringliteral">&quot;ID: &quot;</span> + x.id + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  300</span>                contentStr += <span class="stringliteral">&quot;[ &quot;</span> + x.sparam + <span class="stringliteral">&quot; | &quot;</span> + x.param;</div>
-<div class="line"><span class="lineno">  301</span> </div>
-<div class="line"><span class="lineno">  302</span>                <span class="keywordflow">if</span> (x.hasSubParams &amp;&amp; !x.subParams.empty())</div>
-<div class="line"><span class="lineno">  303</span>                {</div>
-<div class="line"><span class="lineno">  304</span>                    contentStr += <span class="stringliteral">&quot; [ &quot;</span>;</div>
-<div class="line"><span class="lineno">  305</span> </div>
-<div class="line"><span class="lineno">  306</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; x.subParams.size(); ++i)</div>
-<div class="line"><span class="lineno">  307</span>                    {</div>
-<div class="line"><span class="lineno">  308</span>                        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;sub = x.subParams[i];</div>
-<div class="line"><span class="lineno">  309</span> </div>
-<div class="line"><span class="lineno">  310</span>                        contentStr += sub.param;</div>
-<div class="line"><span class="lineno">  311</span> </div>
-<div class="line"><span class="lineno">  312</span>                        <span class="keywordflow">if</span> (i &lt; x.subParams.size() - 1) contentStr += <span class="stringliteral">&quot; | &quot;</span>;</div>
-<div class="line"><span class="lineno">  313</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i &lt;= x.subParams.size()) contentStr += <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  314</span>                    }</div>
-<div class="line"><span class="lineno">  315</span> </div>
-<div class="line"><span class="lineno">  316</span>                    contentStr += <span class="stringliteral">&quot;] ] &quot;</span>;</div>
-<div class="line"><span class="lineno">  317</span>                }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00293">293</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  294</span>    {</div>
+<div class="line"><span class="lineno">  295</span>        std::string contentStr;</div>
+<div class="line"><span class="lineno">  296</span> </div>
+<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">if</span> (style == <a class="code hl_enumvalue" href="../../dc/d69/namespaceargx.html#a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2">ARGXStyle::Professional</a>)</div>
+<div class="line"><span class="lineno">  298</span>        {</div>
+<div class="line"><span class="lineno">  299</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;x : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
+<div class="line"><span class="lineno">  300</span>            {</div>
+<div class="line"><span class="lineno">  301</span>                <span class="comment">// Main option header line</span></div>
+<div class="line"><span class="lineno">  302</span>                contentStr += <span class="stringliteral">&quot;ID: &quot;</span> + x.id + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  303</span>                contentStr += <span class="stringliteral">&quot;[ &quot;</span> + x.sparam + <span class="stringliteral">&quot; | &quot;</span> + x.param;</div>
+<div class="line"><span class="lineno">  304</span> </div>
+<div class="line"><span class="lineno">  305</span>                <span class="keywordflow">if</span> (x.hasSubParams &amp;&amp; !x.subParams.empty())</div>
+<div class="line"><span class="lineno">  306</span>                {</div>
+<div class="line"><span class="lineno">  307</span>                    contentStr += <span class="stringliteral">&quot; [ &quot;</span>;</div>
+<div class="line"><span class="lineno">  308</span> </div>
+<div class="line"><span class="lineno">  309</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; x.subParams.size(); ++i)</div>
+<div class="line"><span class="lineno">  310</span>                    {</div>
+<div class="line"><span class="lineno">  311</span>                        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;sub = x.subParams[i];</div>
+<div class="line"><span class="lineno">  312</span> </div>
+<div class="line"><span class="lineno">  313</span>                        contentStr += sub.param;</div>
+<div class="line"><span class="lineno">  314</span> </div>
+<div class="line"><span class="lineno">  315</span>                        <span class="keywordflow">if</span> (i &lt; x.subParams.size() - 1) contentStr += <span class="stringliteral">&quot; | &quot;</span>;</div>
+<div class="line"><span class="lineno">  316</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i &lt;= x.subParams.size()) contentStr += <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  317</span>                    }</div>
 <div class="line"><span class="lineno">  318</span> </div>
-<div class="line"><span class="lineno">  319</span>                <span class="keywordflow">else</span> contentStr += <span class="stringliteral">&quot; ] &quot;</span>;</div>
-<div class="line"><span class="lineno">  320</span> </div>
-<div class="line"><span class="lineno">  321</span>                contentStr += x.info + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  322</span> </div>
-<div class="line"><span class="lineno">  323</span>                <span class="comment">// Print all sub-options with sparam and param, aligned with ideographic spaces if there are</span></div>
-<div class="line"><span class="lineno">  324</span>                <span class="keywordflow">if</span> (x.hasSubParams &amp;&amp; !x.subParams.empty())</div>
-<div class="line"><span class="lineno">  325</span>                {</div>
-<div class="line"><span class="lineno">  326</span>                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;sub : x.subParams)</div>
-<div class="line"><span class="lineno">  327</span>                    {</div>
-<div class="line"><span class="lineno">  328</span>                        <span class="comment">// Create ideographic spaces matching the length of main param for alignment</span></div>
-<div class="line"><span class="lineno">  329</span>                        std::wstring wideSpaces(x.param.size(), L<span class="stringliteral">&#39;\u3000&#39;</span>);</div>
-<div class="line"><span class="lineno">  330</span>                        std::wstring_convert&lt;std::codecvt_utf8&lt;wchar_t&gt;&gt; converter;</div>
-<div class="line"><span class="lineno">  331</span>                        std::string spacing = converter.to_bytes(wideSpaces);</div>
-<div class="line"><span class="lineno">  332</span> </div>
-<div class="line"><span class="lineno">  333</span>                        contentStr += spacing + <span class="stringliteral">&quot;  [ &quot;</span> + sub.sparam + <span class="stringliteral">&quot; | &quot;</span> + sub.param + <span class="stringliteral">&quot; ] &quot;</span> + sub.info + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  334</span>                    }</div>
-<div class="line"><span class="lineno">  335</span>                }</div>
-<div class="line"><span class="lineno">  336</span>            }</div>
-<div class="line"><span class="lineno">  337</span>        }</div>
-<div class="line"><span class="lineno">  338</span> </div>
-<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (style == <a class="code hl_enumvalue" href="../../dc/d69/namespaceargx.html#a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780">ARGXStyle::Simple</a>)</div>
-<div class="line"><span class="lineno">  340</span>        {</div>
-<div class="line"><span class="lineno">  341</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;x : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
-<div class="line"><span class="lineno">  342</span>            {</div>
-<div class="line"><span class="lineno">  343</span>                contentStr += x.sparam + <span class="stringliteral">&quot;, &quot;</span> + x.param + <span class="stringliteral">&quot; - &quot;</span> + x.info + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  344</span> </div>
-<div class="line"><span class="lineno">  345</span>                <span class="keywordflow">if</span> (x.hasSubParams &amp;&amp; !x.subParams.empty())</div>
-<div class="line"><span class="lineno">  346</span>                {</div>
-<div class="line"><span class="lineno">  347</span>                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;sub : x.subParams)</div>
-<div class="line"><span class="lineno">  348</span>                    {</div>
-<div class="line"><span class="lineno">  349</span>                        contentStr += <span class="stringliteral">&quot;  &quot;</span> + sub.sparam + <span class="stringliteral">&quot;, &quot;</span> + sub.param + <span class="stringliteral">&quot; - &quot;</span> + sub.info + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  350</span>                    }</div>
-<div class="line"><span class="lineno">  351</span>                }</div>
-<div class="line"><span class="lineno">  352</span>            }</div>
-<div class="line"><span class="lineno">  353</span>        } <span class="comment">// ARGXStyle</span></div>
-<div class="line"><span class="lineno">  354</span> </div>
-<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">return</span> title + <span class="stringliteral">&quot;\n&quot;</span> + mainInfo + <span class="stringliteral">&quot;\n&quot;</span> + contentStr;</div>
-<div class="line"><span class="lineno">  356</span>    }</div>
+<div class="line"><span class="lineno">  319</span>                    contentStr += <span class="stringliteral">&quot;] ] &quot;</span>;</div>
+<div class="line"><span class="lineno">  320</span>                }</div>
+<div class="line"><span class="lineno">  321</span> </div>
+<div class="line"><span class="lineno">  322</span>                <span class="keywordflow">else</span> contentStr += <span class="stringliteral">&quot; ] &quot;</span>;</div>
+<div class="line"><span class="lineno">  323</span> </div>
+<div class="line"><span class="lineno">  324</span>                contentStr += x.info + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  325</span> </div>
+<div class="line"><span class="lineno">  326</span>                <span class="comment">// Print all sub-options with sparam and param, aligned with ideographic spaces if there are</span></div>
+<div class="line"><span class="lineno">  327</span>                <span class="keywordflow">if</span> (x.hasSubParams &amp;&amp; !x.subParams.empty())</div>
+<div class="line"><span class="lineno">  328</span>                {</div>
+<div class="line"><span class="lineno">  329</span>                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;sub : x.subParams)</div>
+<div class="line"><span class="lineno">  330</span>                    {</div>
+<div class="line"><span class="lineno">  331</span>                        <span class="comment">// Create ideographic spaces matching the length of main param for alignment</span></div>
+<div class="line"><span class="lineno">  332</span>                        std::wstring wideSpaces(x.param.size(), L<span class="stringliteral">&#39;\u3000&#39;</span>);</div>
+<div class="line"><span class="lineno">  333</span>                        std::wstring_convert&lt;std::codecvt_utf8&lt;wchar_t&gt;&gt; converter;</div>
+<div class="line"><span class="lineno">  334</span>                        std::string spacing = converter.to_bytes(wideSpaces);</div>
+<div class="line"><span class="lineno">  335</span> </div>
+<div class="line"><span class="lineno">  336</span>                        contentStr += spacing + <span class="stringliteral">&quot;  [ &quot;</span> + sub.sparam + <span class="stringliteral">&quot; | &quot;</span> + sub.param + <span class="stringliteral">&quot; ] &quot;</span> + sub.info + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  337</span>                    }</div>
+<div class="line"><span class="lineno">  338</span>                }</div>
+<div class="line"><span class="lineno">  339</span>            }</div>
+<div class="line"><span class="lineno">  340</span>        }</div>
+<div class="line"><span class="lineno">  341</span> </div>
+<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (style == <a class="code hl_enumvalue" href="../../dc/d69/namespaceargx.html#a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780">ARGXStyle::Simple</a>)</div>
+<div class="line"><span class="lineno">  343</span>        {</div>
+<div class="line"><span class="lineno">  344</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;x : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
+<div class="line"><span class="lineno">  345</span>            {</div>
+<div class="line"><span class="lineno">  346</span>                contentStr += x.sparam + <span class="stringliteral">&quot;, &quot;</span> + x.param + <span class="stringliteral">&quot; - &quot;</span> + x.info + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  347</span> </div>
+<div class="line"><span class="lineno">  348</span>                <span class="keywordflow">if</span> (x.hasSubParams &amp;&amp; !x.subParams.empty())</div>
+<div class="line"><span class="lineno">  349</span>                {</div>
+<div class="line"><span class="lineno">  350</span>                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;sub : x.subParams)</div>
+<div class="line"><span class="lineno">  351</span>                    {</div>
+<div class="line"><span class="lineno">  352</span>                        contentStr += <span class="stringliteral">&quot;  &quot;</span> + sub.sparam + <span class="stringliteral">&quot;, &quot;</span> + sub.param + <span class="stringliteral">&quot; - &quot;</span> + sub.info + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  353</span>                    }</div>
+<div class="line"><span class="lineno">  354</span>                }</div>
+<div class="line"><span class="lineno">  355</span>            }</div>
+<div class="line"><span class="lineno">  356</span>        } <span class="comment">// ARGXStyle</span></div>
+<div class="line"><span class="lineno">  357</span> </div>
+<div class="line"><span class="lineno">  358</span>        <span class="keywordflow">return</span> title + <span class="stringliteral">&quot;\n&quot;</span> + mainInfo + <span class="stringliteral">&quot;\n&quot;</span> + contentStr;</div>
+<div class="line"><span class="lineno">  359</span>    }</div>
 <div class="ttc" id="anamespaceargx_html_a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780"><div class="ttname"><a href="../../dc/d69/namespaceargx.html#a1aaf93330a8dedabb4307940b33f49d9a1fbb1e3943c2c6c560247ac8f9289780">argx::ARGXStyle::Simple</a></div><div class="ttdeci">@ Simple</div><div class="ttdef"><b>Definition</b> <a href="../../dd/de3/types_8hpp_source.html#l00012">types.hpp:12</a></div></div>
 <div class="ttc" id="anamespaceargx_html_a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2"><div class="ttname"><a href="../../dc/d69/namespaceargx.html#a1aaf93330a8dedabb4307940b33f49d9a9e8b160226c9fe22a910c782ce5076e2">argx::ARGXStyle::Professional</a></div><div class="ttdeci">@ Professional</div><div class="ttdef"><b>Definition</b> <a href="../../dd/de3/types_8hpp_source.html#l00011">types.hpp:11</a></div></div>
 </div><!-- fragment -->
@@ -513,56 +541,97 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int Index </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00093">93</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>    {</div>
-<div class="line"><span class="lineno">   95</span>        <span class="comment">// First check if it&#39;s a main parameter</span></div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>.size(); i++)</div>
-<div class="line"><span class="lineno">   97</span>        {</div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>[i].<span class="keywordtype">id</span> == <span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">   99</span>            {</div>
-<div class="line"><span class="lineno">  100</span>                <span class="comment">// Check if this main parameter exists in arguments</span></div>
-<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string &amp;arg : *this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)</div>
-<div class="line"><span class="lineno">  102</span>                {</div>
-<div class="line"><span class="lineno">  103</span>                    <span class="keywordflow">if</span> (arg == this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>[i].param || arg == this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>[i].sparam)</div>
-<div class="line"><span class="lineno">  104</span>                    {</div>
-<div class="line"><span class="lineno">  105</span>                        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(i);</div>
-<div class="line"><span class="lineno">  106</span>                    }</div>
-<div class="line"><span class="lineno">  107</span>                }</div>
-<div class="line"><span class="lineno">  108</span>            }</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>        <span class="comment">// Then look for sub-parameters</span></div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;opt : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
-<div class="line"><span class="lineno">  113</span>        {</div>
-<div class="line"><span class="lineno">  114</span>            <span class="comment">// Check if the parent option exists in the arguments</span></div>
-<div class="line"><span class="lineno">  115</span>            <span class="keywordtype">bool</span> parentExists = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string &amp;arg : *this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)</div>
-<div class="line"><span class="lineno">  118</span>            {</div>
-<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">if</span> (arg == opt.param || arg == opt.sparam)</div>
-<div class="line"><span class="lineno">  120</span>                {</div>
-<div class="line"><span class="lineno">  121</span>                    parentExists = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  122</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  123</span>                }</div>
-<div class="line"><span class="lineno">  124</span>            }</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">if</span> (parentExists)</div>
-<div class="line"><span class="lineno">  127</span>            {</div>
-<div class="line"><span class="lineno">  128</span>                <span class="comment">// Find the index of the requested sub-parameter</span></div>
-<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; opt.subParams.size(); i++)</div>
-<div class="line"><span class="lineno">  130</span>                {</div>
-<div class="line"><span class="lineno">  131</span>                    <span class="keywordflow">if</span> (opt.subParams[i].id == <span class="keywordtype">id</span>) <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(i);</div>
-<div class="line"><span class="lineno">  132</span>                }</div>
-<div class="line"><span class="lineno">  133</span>            }</div>
-<div class="line"><span class="lineno">  134</span>        }</div>
-<div class="line"><span class="lineno">  135</span> </div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> -1; <span class="comment">// Not found</span></div>
-<div class="line"><span class="lineno">  137</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00096">96</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>    {</div>
+<div class="line"><span class="lineno">   98</span>        <span class="comment">// First check if it&#39;s a main parameter</span></div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>.size(); i++)</div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>[i].<span class="keywordtype">id</span> == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  102</span>            {</div>
+<div class="line"><span class="lineno">  103</span>                <span class="comment">// Check if this main parameter exists in arguments</span></div>
+<div class="line"><span class="lineno">  104</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string &amp;arg : *this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)</div>
+<div class="line"><span class="lineno">  105</span>                {</div>
+<div class="line"><span class="lineno">  106</span>                    <span class="keywordflow">if</span> (arg == this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>[i].param || arg == this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>[i].sparam)</div>
+<div class="line"><span class="lineno">  107</span>                    {</div>
+<div class="line"><span class="lineno">  108</span>                        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(i);</div>
+<div class="line"><span class="lineno">  109</span>                    }</div>
+<div class="line"><span class="lineno">  110</span>                }</div>
+<div class="line"><span class="lineno">  111</span>            }</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>        <span class="comment">// Then look for sub-parameters</span></div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;opt : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
+<div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  117</span>            <span class="comment">// Check if the parent option exists in the arguments</span></div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordtype">bool</span> parentExists = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string &amp;arg : *this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)</div>
+<div class="line"><span class="lineno">  121</span>            {</div>
+<div class="line"><span class="lineno">  122</span>                <span class="keywordflow">if</span> (arg == opt.param || arg == opt.sparam)</div>
+<div class="line"><span class="lineno">  123</span>                {</div>
+<div class="line"><span class="lineno">  124</span>                    parentExists = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  125</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  126</span>                }</div>
+<div class="line"><span class="lineno">  127</span>            }</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">if</span> (parentExists)</div>
+<div class="line"><span class="lineno">  130</span>            {</div>
+<div class="line"><span class="lineno">  131</span>                <span class="comment">// Find the index of the requested sub-parameter</span></div>
+<div class="line"><span class="lineno">  132</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; opt.subParams.size(); i++)</div>
+<div class="line"><span class="lineno">  133</span>                {</div>
+<div class="line"><span class="lineno">  134</span>                    <span class="keywordflow">if</span> (opt.subParams[i].id == <span class="keywordtype">id</span>) <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(i);</div>
+<div class="line"><span class="lineno">  135</span>                }</div>
+<div class="line"><span class="lineno">  136</span>            }</div>
+<div class="line"><span class="lineno">  137</span>        }</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">return</span> -1; <span class="comment">// Not found</span></div>
+<div class="line"><span class="lineno">  140</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00023">mainArgs</a>, and <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00287">getSubParam()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00156">hasTag()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00139">paramExists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00290">getSubParam()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00159">hasTag()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00142">paramExists()</a>.</p>
 
+</div>
+</div>
+<a id="ad35955a51e2dd4b50a7ccf20f757fe55" name="ad35955a51e2dd4b50a7ccf20f757fe55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad35955a51e2dd4b50a7ccf20f757fe55">&#9670;&#160;</a></span>formatWrongArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int argx::Argx::formatWrongArgs </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>_int</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Format to a positive number if number is negative for a correct execution of code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_int</td><td>Number to convert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int Positive value number </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00482">482</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  483</span>    {</div>
+<div class="line"><span class="lineno">  484</span>        <span class="keywordflow">if</span> (_int &lt; 0) <span class="keywordflow">return</span> -_int; <span class="comment">// Convert to unsigned SAFELY</span></div>
+<div class="line"><span class="lineno">  485</span> </div>
+<div class="line"><span class="lineno">  486</span>        <span class="keywordflow">return</span> _int;</div>
+<div class="line"><span class="lineno">  487</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a812254e076a5ec208ba9d2eab470edb4" name="a812254e076a5ec208ba9d2eab470edb4"></a>
@@ -583,8 +652,8 @@ Static Private Attributes</h2></td></tr>
 <p>Get the main options from the <span class="tt">main()</span> function as argc. </p>
 <dl class="section return"><dt>Returns</dt><dd>int Number of params including the executable param </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00539">539</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  540</span>    { <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a2e72f1c581d6ac0ffa02d45c3e6b540f">mainArgc</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00636">636</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  637</span>    { <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#a2e72f1c581d6ac0ffa02d45c3e6b540f">mainArgc</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00025">mainArgc</a>.</p>
 
@@ -614,22 +683,22 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int Argument position </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00050">50</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
-<div class="line"><span class="lineno">   52</span>        <a class="code hl_typedef" href="../../dc/d69/namespaceargx.html#a9933be078f36db7b1424f6dd0372eb72">ARGXOptions</a> option = this-&gt;<a class="code hl_function" href="#ae7f1dcaf2c945c8592a3e89b15a0189b">getOption</a>(arg);</div>
-<div class="line"><span class="lineno">   53</span>        </div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">int</span> argPos = this-&gt;<a class="code hl_function" href="#a73dccd80c13749ea006b46653cc2a8a0">getArgPos</a>(option.param);</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordtype">int</span> shortArgPos = this-&gt;<a class="code hl_function" href="#a73dccd80c13749ea006b46653cc2a8a0">getArgPos</a>(option.sparam);</div>
-<div class="line"><span class="lineno">   56</span> </div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (argPos &gt;= 0) <span class="keywordflow">return</span> argPos;</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (shortArgPos &gt;= 0) <span class="keywordflow">return</span> shortArgPos;</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00053">53</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_typedef" href="../../dc/d69/namespaceargx.html#a9933be078f36db7b1424f6dd0372eb72">ARGXOptions</a> option = this-&gt;<a class="code hl_function" href="#ae7f1dcaf2c945c8592a3e89b15a0189b">getOption</a>(arg);</div>
+<div class="line"><span class="lineno">   56</span>        </div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordtype">int</span> argPos = this-&gt;<a class="code hl_function" href="#a73dccd80c13749ea006b46653cc2a8a0">getArgPos</a>(option.param);</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordtype">int</span> shortArgPos = this-&gt;<a class="code hl_function" href="#a73dccd80c13749ea006b46653cc2a8a0">getArgPos</a>(option.sparam);</div>
 <div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="ttc" id="aclassargx_1_1Argx_html_a73dccd80c13749ea006b46653cc2a8a0"><div class="ttname"><a href="#a73dccd80c13749ea006b46653cc2a8a0">argx::Argx::getArgPos</a></div><div class="ttdeci">int getArgPos(const std::string &amp;arg)</div><div class="ttdoc">Get argument position with specified arg</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dad/Argx_8cpp_source.html#l00076">Argx.cpp:76</a></div></div>
-<div class="ttc" id="aclassargx_1_1Argx_html_ae7f1dcaf2c945c8592a3e89b15a0189b"><div class="ttname"><a href="#ae7f1dcaf2c945c8592a3e89b15a0189b">argx::Argx::getOption</a></div><div class="ttdeci">ARGXOptions getOption(const std::string &amp;id)</div><div class="ttdoc">Get Options from specified ID.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dad/Argx_8cpp_source.html#l00478">Argx.cpp:478</a></div></div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (argPos &gt;= 0) <span class="keywordflow">return</span> argPos;</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (shortArgPos &gt;= 0) <span class="keywordflow">return</span> shortArgPos;</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aclassargx_1_1Argx_html_a73dccd80c13749ea006b46653cc2a8a0"><div class="ttname"><a href="#a73dccd80c13749ea006b46653cc2a8a0">argx::Argx::getArgPos</a></div><div class="ttdeci">int getArgPos(const std::string &amp;arg)</div><div class="ttdoc">Get argument position with specified arg</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dad/Argx_8cpp_source.html#l00079">Argx.cpp:79</a></div></div>
+<div class="ttc" id="aclassargx_1_1Argx_html_ae7f1dcaf2c945c8592a3e89b15a0189b"><div class="ttname"><a href="#ae7f1dcaf2c945c8592a3e89b15a0189b">argx::Argx::getOption</a></div><div class="ttdeci">ARGXOptions getOption(const std::string &amp;id)</div><div class="ttdoc">Get Options from specified ID.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dad/Argx_8cpp_source.html#l00572">Argx.cpp:572</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00076">getArgPos()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00478">getOption()</a>, <a class="el" href="../../dd/de3/types_8hpp_source.html#l00036">argx::ARGXOptions::param</a>, and <a class="el" href="../../dd/de3/types_8hpp_source.html#l00041">argx::ARGXOptions::sparam</a>.</p>
+<p class="reference">References <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00079">getArgPos()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00572">getOption()</a>, <a class="el" href="../../dd/de3/types_8hpp_source.html#l00036">argx::ARGXOptions::param</a>, and <a class="el" href="../../dd/de3/types_8hpp_source.html#l00041">argx::ARGXOptions::sparam</a>.</p>
 
 </div>
 </div>
@@ -657,23 +726,23 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int Return position of found <span class="tt">arg</span> from the options </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00076">76</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (!this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">return</span> -2;</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
-<div class="line"><span class="lineno">   82</span>        {</div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;at(i) == arg)</div>
-<div class="line"><span class="lineno">   84</span>                <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00079">79</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (!this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">return</span> -2;</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;at(i) == arg)</div>
+<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00023">mainArgs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00050">getArgIDPos()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00486">getSubValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00053">getArgIDPos()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00580">getSubValue()</a>.</p>
 
 </div>
 </div>
@@ -695,8 +764,8 @@ Static Private Attributes</h2></td></tr>
 <p>Get <a class="el" href="../../d9/da2/classargx_1_1Argx.html">Argx</a> ID. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string <a class="el" href="../../d9/da2/classargx_1_1Argx.html">Argx</a> ID </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00545">545</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  546</span>    { <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#adf94f5a9f22d8ea2cde21df63c2f3d8a">id</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00642">642</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  643</span>    { <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#adf94f5a9f22d8ea2cde21df63c2f3d8a">id</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -718,12 +787,12 @@ Static Private Attributes</h2></td></tr>
 <p>Get main arguments from <span class="tt">main()</span> function <span class="tt">argv</span> </p>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::string&gt; Vector of strings for main arguments from <span class="tt">argv</span> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00536">536</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  537</span>    { <span class="keywordflow">return</span> *this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00633">633</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  634</span>    { <span class="keywordflow">return</span> *this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00023">mainArgs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00486">getSubValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00580">getSubValue()</a>.</p>
 
 </div>
 </div>
@@ -751,17 +820,17 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00478">478</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  479</span>    {</div>
-<div class="line"><span class="lineno">  480</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;x : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
-<div class="line"><span class="lineno">  481</span>            <span class="keywordflow">if</span> (x.id == <span class="keywordtype">id</span>) <span class="keywordflow">return</span> x;</div>
-<div class="line"><span class="lineno">  482</span> </div>
-<div class="line"><span class="lineno">  483</span>        <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">  484</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00572">572</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  573</span>    {</div>
+<div class="line"><span class="lineno">  574</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;x : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
+<div class="line"><span class="lineno">  575</span>            <span class="keywordflow">if</span> (x.id == <span class="keywordtype">id</span>) <span class="keywordflow">return</span> x;</div>
+<div class="line"><span class="lineno">  576</span> </div>
+<div class="line"><span class="lineno">  577</span>        <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno">  578</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00050">getArgIDPos()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00486">getSubValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00053">getArgIDPos()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00580">getSubValue()</a>.</p>
 
 </div>
 </div>
@@ -783,8 +852,8 @@ Static Private Attributes</h2></td></tr>
 <p>Get main set options as <a class="el" href="../../da/dd5/structargx_1_1ARGXOptions.html">ARGXOptions</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;ARGXOptions&gt; Options to return </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00542">542</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  543</span>    { <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00639">639</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  640</span>    { <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>; }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>.</p>
 
@@ -814,124 +883,124 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d2/d84/structargx_1_1ARGXParam.html">ARGXParam</a> Returnted parameter to get </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00168">168</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>    {</div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a2e72f1c581d6ac0ffa02d45c3e6b540f">mainArgc</a> &lt;= 1) <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">  171</span> </div>
-<div class="line"><span class="lineno">  172</span>        <a class="code hl_typedef" href="../../dc/d69/namespaceargx.html#a40874387325f4f81850b2ef717831239">ARGXParam</a> result;</div>
-<div class="line"><span class="lineno">  173</span> </div>
-<div class="line"><span class="lineno">  174</span>        <span class="comment">// First, check if this is a top-level option</span></div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;opt : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
-<div class="line"><span class="lineno">  176</span>        {</div>
-<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">if</span> (opt.id == <span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">  178</span>            {</div>
-<div class="line"><span class="lineno">  179</span>                <span class="comment">// Find the position of the main option in arguments</span></div>
-<div class="line"><span class="lineno">  180</span>                <span class="keywordtype">int</span> mainOptionPos = -1;</div>
-<div class="line"><span class="lineno">  181</span> </div>
-<div class="line"><span class="lineno">  182</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
-<div class="line"><span class="lineno">  183</span>                {</div>
-<div class="line"><span class="lineno">  184</span>                    <span class="keywordflow">if</span> ((*this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)[i] == opt.param || (*this-&gt;mainArgs)[i] == opt.sparam)</div>
-<div class="line"><span class="lineno">  185</span>                    {</div>
-<div class="line"><span class="lineno">  186</span>                        result.exists = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  187</span>                        mainOptionPos = i;</div>
-<div class="line"><span class="lineno">  188</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  189</span>                    }</div>
-<div class="line"><span class="lineno">  190</span>                }</div>
-<div class="line"><span class="lineno">  191</span> </div>
-<div class="line"><span class="lineno">  192</span>                <span class="keywordflow">if</span> (result.exists)</div>
-<div class="line"><span class="lineno">  193</span>                {</div>
-<div class="line"><span class="lineno">  194</span>                    <span class="keywordflow">if</span> (opt.hasSubParams || opt.hasAnySubParams)</div>
-<div class="line"><span class="lineno">  195</span>                    {</div>
-<div class="line"><span class="lineno">  196</span>                        <span class="comment">// Check each sub-parameter</span></div>
-<div class="line"><span class="lineno">  197</span>                        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;sub : opt.subParams)</div>
-<div class="line"><span class="lineno">  198</span>                        {</div>
-<div class="line"><span class="lineno">  199</span>                            <span class="keywordtype">bool</span> subMatched = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  200</span> </div>
-<div class="line"><span class="lineno">  201</span>                            <span class="comment">// Look for sub-parameters after the main option</span></div>
-<div class="line"><span class="lineno">  202</span>                            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = mainOptionPos + 1; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
-<div class="line"><span class="lineno">  203</span>                            {</div>
-<div class="line"><span class="lineno">  204</span>                                <span class="keywordflow">if</span> ((*this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)[i] == sub.param || (*this-&gt;mainArgs)[i] == sub.sparam)</div>
-<div class="line"><span class="lineno">  205</span>                                {</div>
-<div class="line"><span class="lineno">  206</span>                                    subMatched = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  207</span>                                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  208</span>                                }</div>
-<div class="line"><span class="lineno">  209</span>                            }</div>
-<div class="line"><span class="lineno">  210</span> </div>
-<div class="line"><span class="lineno">  211</span>                            result.subExists.push_back(subMatched);</div>
-<div class="line"><span class="lineno">  212</span>                        }</div>
-<div class="line"><span class="lineno">  213</span>                    }</div>
-<div class="line"><span class="lineno">  214</span> </div>
-<div class="line"><span class="lineno">  215</span>                    <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  216</span>                }</div>
-<div class="line"><span class="lineno">  217</span>            }</div>
-<div class="line"><span class="lineno">  218</span>        }</div>
-<div class="line"><span class="lineno">  219</span> </div>
-<div class="line"><span class="lineno">  220</span>        <span class="comment">// If not found as top-level, check if it&#39;s a sub-parameter</span></div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;opt : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
-<div class="line"><span class="lineno">  222</span>        {</div>
-<div class="line"><span class="lineno">  223</span>            <span class="comment">// Find if the parent option exists and get its position</span></div>
-<div class="line"><span class="lineno">  224</span>            <span class="keywordtype">size_t</span> parentPos = -1;</div>
-<div class="line"><span class="lineno">  225</span> </div>
-<div class="line"><span class="lineno">  226</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
-<div class="line"><span class="lineno">  227</span>            {</div>
-<div class="line"><span class="lineno">  228</span>                <span class="keywordflow">if</span> ((*this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)[i] == opt.param || (*this-&gt;mainArgs)[i] == opt.sparam)</div>
-<div class="line"><span class="lineno">  229</span>                {</div>
-<div class="line"><span class="lineno">  230</span>                    parentPos = i;</div>
-<div class="line"><span class="lineno">  231</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  232</span>                }</div>
-<div class="line"><span class="lineno">  233</span>            }</div>
-<div class="line"><span class="lineno">  234</span> </div>
-<div class="line"><span class="lineno">  235</span>            <span class="keywordflow">if</span> (parentPos &gt; -1 &amp;&amp; (opt.hasSubParams || opt.hasAnySubParams))</div>
-<div class="line"><span class="lineno">  236</span>            {</div>
-<div class="line"><span class="lineno">  237</span>                <span class="comment">// Check if the requested sub-parameter exists after the parent</span></div>
-<div class="line"><span class="lineno">  238</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;sub : opt.subParams)</div>
-<div class="line"><span class="lineno">  239</span>                {</div>
-<div class="line"><span class="lineno">  240</span>                    <span class="keywordflow">if</span> (sub.id == <span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">  241</span>                    {</div>
-<div class="line"><span class="lineno">  242</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = parentPos + 1 ; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
-<div class="line"><span class="lineno">  243</span>                        {</div>
-<div class="line"><span class="lineno">  244</span>                            <span class="keywordflow">if</span> ((*this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)[i] == sub.param || (*this-&gt;mainArgs)[i] == sub.sparam)</div>
-<div class="line"><span class="lineno">  245</span>                            {</div>
-<div class="line"><span class="lineno">  246</span>                                result.exists = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  247</span>                                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  248</span>                            }</div>
-<div class="line"><span class="lineno">  249</span>                        }</div>
-<div class="line"><span class="lineno">  250</span> </div>
-<div class="line"><span class="lineno">  251</span>                        <span class="keywordflow">if</span> (!result.exists &amp;&amp; parentPos + 1 &lt; this-&gt;mainArgs-&gt;size())</div>
-<div class="line"><span class="lineno">  252</span>                        {</div>
-<div class="line"><span class="lineno">  253</span>                            std::string nextArg = (*this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)[parentPos + 1];</div>
-<div class="line"><span class="lineno">  254</span> </div>
-<div class="line"><span class="lineno">  255</span>                            <span class="keywordflow">if</span> (nextArg == sub.param || nextArg == sub.sparam) result.exists = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  256</span>                        }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00171">171</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>    {</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#a2e72f1c581d6ac0ffa02d45c3e6b540f">mainArgc</a> &lt;= 1) <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>        <a class="code hl_typedef" href="../../dc/d69/namespaceargx.html#a40874387325f4f81850b2ef717831239">ARGXParam</a> result;</div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span>        <span class="comment">// First, check if this is a top-level option</span></div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;opt : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
+<div class="line"><span class="lineno">  179</span>        {</div>
+<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">if</span> (opt.id == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  181</span>            {</div>
+<div class="line"><span class="lineno">  182</span>                <span class="comment">// Find the position of the main option in arguments</span></div>
+<div class="line"><span class="lineno">  183</span>                <span class="keywordtype">int</span> mainOptionPos = -1;</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
+<div class="line"><span class="lineno">  186</span>                {</div>
+<div class="line"><span class="lineno">  187</span>                    <span class="keywordflow">if</span> ((*this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)[i] == opt.param || (*this-&gt;mainArgs)[i] == opt.sparam)</div>
+<div class="line"><span class="lineno">  188</span>                    {</div>
+<div class="line"><span class="lineno">  189</span>                        result.exists = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  190</span>                        mainOptionPos = i;</div>
+<div class="line"><span class="lineno">  191</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  192</span>                    }</div>
+<div class="line"><span class="lineno">  193</span>                }</div>
+<div class="line"><span class="lineno">  194</span> </div>
+<div class="line"><span class="lineno">  195</span>                <span class="keywordflow">if</span> (result.exists)</div>
+<div class="line"><span class="lineno">  196</span>                {</div>
+<div class="line"><span class="lineno">  197</span>                    <span class="keywordflow">if</span> (opt.hasSubParams || opt.hasAnySubParams)</div>
+<div class="line"><span class="lineno">  198</span>                    {</div>
+<div class="line"><span class="lineno">  199</span>                        <span class="comment">// Check each sub-parameter</span></div>
+<div class="line"><span class="lineno">  200</span>                        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;sub : opt.subParams)</div>
+<div class="line"><span class="lineno">  201</span>                        {</div>
+<div class="line"><span class="lineno">  202</span>                            <span class="keywordtype">bool</span> subMatched = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>                            <span class="comment">// Look for sub-parameters after the main option</span></div>
+<div class="line"><span class="lineno">  205</span>                            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = mainOptionPos + 1; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
+<div class="line"><span class="lineno">  206</span>                            {</div>
+<div class="line"><span class="lineno">  207</span>                                <span class="keywordflow">if</span> ((*this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)[i] == sub.param || (*this-&gt;mainArgs)[i] == sub.sparam)</div>
+<div class="line"><span class="lineno">  208</span>                                {</div>
+<div class="line"><span class="lineno">  209</span>                                    subMatched = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  210</span>                                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  211</span>                                }</div>
+<div class="line"><span class="lineno">  212</span>                            }</div>
+<div class="line"><span class="lineno">  213</span> </div>
+<div class="line"><span class="lineno">  214</span>                            result.subExists.push_back(subMatched);</div>
+<div class="line"><span class="lineno">  215</span>                        }</div>
+<div class="line"><span class="lineno">  216</span>                    }</div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span>                    <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  219</span>                }</div>
+<div class="line"><span class="lineno">  220</span>            }</div>
+<div class="line"><span class="lineno">  221</span>        }</div>
+<div class="line"><span class="lineno">  222</span> </div>
+<div class="line"><span class="lineno">  223</span>        <span class="comment">// If not found as top-level, check if it&#39;s a sub-parameter</span></div>
+<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;opt : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
+<div class="line"><span class="lineno">  225</span>        {</div>
+<div class="line"><span class="lineno">  226</span>            <span class="comment">// Find if the parent option exists and get its position</span></div>
+<div class="line"><span class="lineno">  227</span>            <span class="keywordtype">size_t</span> parentPos = -1;</div>
+<div class="line"><span class="lineno">  228</span> </div>
+<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
+<div class="line"><span class="lineno">  230</span>            {</div>
+<div class="line"><span class="lineno">  231</span>                <span class="keywordflow">if</span> ((*this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)[i] == opt.param || (*this-&gt;mainArgs)[i] == opt.sparam)</div>
+<div class="line"><span class="lineno">  232</span>                {</div>
+<div class="line"><span class="lineno">  233</span>                    parentPos = i;</div>
+<div class="line"><span class="lineno">  234</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  235</span>                }</div>
+<div class="line"><span class="lineno">  236</span>            }</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>            <span class="keywordflow">if</span> (parentPos &gt; -1 &amp;&amp; (opt.hasSubParams || opt.hasAnySubParams))</div>
+<div class="line"><span class="lineno">  239</span>            {</div>
+<div class="line"><span class="lineno">  240</span>                <span class="comment">// Check if the requested sub-parameter exists after the parent</span></div>
+<div class="line"><span class="lineno">  241</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;sub : opt.subParams)</div>
+<div class="line"><span class="lineno">  242</span>                {</div>
+<div class="line"><span class="lineno">  243</span>                    <span class="keywordflow">if</span> (sub.id == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  244</span>                    {</div>
+<div class="line"><span class="lineno">  245</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = parentPos + 1 ; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
+<div class="line"><span class="lineno">  246</span>                        {</div>
+<div class="line"><span class="lineno">  247</span>                            <span class="keywordflow">if</span> ((*this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)[i] == sub.param || (*this-&gt;mainArgs)[i] == sub.sparam)</div>
+<div class="line"><span class="lineno">  248</span>                            {</div>
+<div class="line"><span class="lineno">  249</span>                                result.exists = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  250</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  251</span>                            }</div>
+<div class="line"><span class="lineno">  252</span>                        }</div>
+<div class="line"><span class="lineno">  253</span> </div>
+<div class="line"><span class="lineno">  254</span>                        <span class="keywordflow">if</span> (!result.exists &amp;&amp; parentPos + 1 &lt; this-&gt;mainArgs-&gt;size())</div>
+<div class="line"><span class="lineno">  255</span>                        {</div>
+<div class="line"><span class="lineno">  256</span>                            std::string nextArg = (*this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)[parentPos + 1];</div>
 <div class="line"><span class="lineno">  257</span> </div>
-<div class="line"><span class="lineno">  258</span>                        <span class="comment">// Handle any sub-sub-parameters if they exist</span></div>
-<div class="line"><span class="lineno">  259</span>                        <span class="keywordflow">if</span> (result.exists &amp;&amp; (sub.hasSubParams || sub.hasAnySubParams))</div>
-<div class="line"><span class="lineno">  260</span>                        {</div>
-<div class="line"><span class="lineno">  261</span>                            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;subsub : sub.subParams)</div>
-<div class="line"><span class="lineno">  262</span>                            {</div>
-<div class="line"><span class="lineno">  263</span>                                <span class="keywordtype">bool</span> subsubMatched = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  264</span> </div>
-<div class="line"><span class="lineno">  265</span>                                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
-<div class="line"><span class="lineno">  266</span>                                {</div>
-<div class="line"><span class="lineno">  267</span>                                    <span class="keywordflow">if</span> ((*this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)[i] == subsub.param || (*this-&gt;mainArgs)[i] == subsub.sparam)</div>
-<div class="line"><span class="lineno">  268</span>                                    {</div>
-<div class="line"><span class="lineno">  269</span>                                        subsubMatched = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  270</span>                                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  271</span>                                    }</div>
-<div class="line"><span class="lineno">  272</span>                                }</div>
-<div class="line"><span class="lineno">  273</span> </div>
-<div class="line"><span class="lineno">  274</span>                                result.subExists.push_back(subsubMatched);</div>
-<div class="line"><span class="lineno">  275</span>                            }</div>
-<div class="line"><span class="lineno">  276</span>                        }</div>
-<div class="line"><span class="lineno">  277</span> </div>
-<div class="line"><span class="lineno">  278</span>                        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  279</span>                    }</div>
-<div class="line"><span class="lineno">  280</span>                }</div>
-<div class="line"><span class="lineno">  281</span>            }</div>
-<div class="line"><span class="lineno">  282</span>        }</div>
-<div class="line"><span class="lineno">  283</span> </div>
-<div class="line"><span class="lineno">  284</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  285</span>    }</div>
+<div class="line"><span class="lineno">  258</span>                            <span class="keywordflow">if</span> (nextArg == sub.param || nextArg == sub.sparam) result.exists = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  259</span>                        }</div>
+<div class="line"><span class="lineno">  260</span> </div>
+<div class="line"><span class="lineno">  261</span>                        <span class="comment">// Handle any sub-sub-parameters if they exist</span></div>
+<div class="line"><span class="lineno">  262</span>                        <span class="keywordflow">if</span> (result.exists &amp;&amp; (sub.hasSubParams || sub.hasAnySubParams))</div>
+<div class="line"><span class="lineno">  263</span>                        {</div>
+<div class="line"><span class="lineno">  264</span>                            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;subsub : sub.subParams)</div>
+<div class="line"><span class="lineno">  265</span>                            {</div>
+<div class="line"><span class="lineno">  266</span>                                <span class="keywordtype">bool</span> subsubMatched = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  267</span> </div>
+<div class="line"><span class="lineno">  268</span>                                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
+<div class="line"><span class="lineno">  269</span>                                {</div>
+<div class="line"><span class="lineno">  270</span>                                    <span class="keywordflow">if</span> ((*this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>)[i] == subsub.param || (*this-&gt;mainArgs)[i] == subsub.sparam)</div>
+<div class="line"><span class="lineno">  271</span>                                    {</div>
+<div class="line"><span class="lineno">  272</span>                                        subsubMatched = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  273</span>                                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  274</span>                                    }</div>
+<div class="line"><span class="lineno">  275</span>                                }</div>
+<div class="line"><span class="lineno">  276</span> </div>
+<div class="line"><span class="lineno">  277</span>                                result.subExists.push_back(subsubMatched);</div>
+<div class="line"><span class="lineno">  278</span>                            }</div>
+<div class="line"><span class="lineno">  279</span>                        }</div>
+<div class="line"><span class="lineno">  280</span> </div>
+<div class="line"><span class="lineno">  281</span>                        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  282</span>                    }</div>
+<div class="line"><span class="lineno">  283</span>                }</div>
+<div class="line"><span class="lineno">  284</span>            }</div>
+<div class="line"><span class="lineno">  285</span>        }</div>
+<div class="line"><span class="lineno">  286</span> </div>
+<div class="line"><span class="lineno">  287</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  288</span>    }</div>
 <div class="ttc" id="anamespaceargx_html_a40874387325f4f81850b2ef717831239"><div class="ttname"><a href="../../dc/d69/namespaceargx.html#a40874387325f4f81850b2ef717831239">argx::ARGXParam</a></div><div class="ttdeci">struct argx::ARGXParam ARGXParam</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../dd/de3/types_8hpp_source.html#l00059">argx::ARGXParam::exists</a>, <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00025">mainArgc</a>, <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00023">mainArgs</a>, <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>, and <a class="el" href="../../dd/de3/types_8hpp_source.html#l00060">argx::ARGXParam::subExists</a>.</p>
@@ -967,13 +1036,13 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00287">287</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  288</span>    { <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="#a82c1649fbd03d4f3ea94bf8a14e1299d">paramExists</a>(<span class="keywordtype">id</span>) &amp;&amp; param.<a class="code hl_variable" href="../../d2/d84/structargx_1_1ARGXParam.html#ace0572ca0af0b51da129b562bee6a673">subExists</a>[this-&gt;<a class="code hl_function" href="#a9343612a7c209f2323d2cd10fd3fe387">findParam</a>(<span class="keywordtype">id</span>)]; }</div>
-<div class="ttc" id="aclassargx_1_1Argx_html_a82c1649fbd03d4f3ea94bf8a14e1299d"><div class="ttname"><a href="#a82c1649fbd03d4f3ea94bf8a14e1299d">argx::Argx::paramExists</a></div><div class="ttdeci">bool paramExists(const std::string &amp;id)</div><div class="ttdoc">Get if param exists in the param options.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dad/Argx_8cpp_source.html#l00139">Argx.cpp:139</a></div></div>
-<div class="ttc" id="aclassargx_1_1Argx_html_a9343612a7c209f2323d2cd10fd3fe387"><div class="ttname"><a href="#a9343612a7c209f2323d2cd10fd3fe387">argx::Argx::findParam</a></div><div class="ttdeci">int findParam(const std::string &amp;id)</div><div class="ttdoc">Find parameter and sub-parameter index.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dad/Argx_8cpp_source.html#l00093">Argx.cpp:93</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00290">290</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  291</span>    { <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="#a82c1649fbd03d4f3ea94bf8a14e1299d">paramExists</a>(<span class="keywordtype">id</span>) &amp;&amp; param.<a class="code hl_variable" href="../../d2/d84/structargx_1_1ARGXParam.html#ace0572ca0af0b51da129b562bee6a673">subExists</a>[this-&gt;<a class="code hl_function" href="#a9343612a7c209f2323d2cd10fd3fe387">findParam</a>(<span class="keywordtype">id</span>)]; }</div>
+<div class="ttc" id="aclassargx_1_1Argx_html_a82c1649fbd03d4f3ea94bf8a14e1299d"><div class="ttname"><a href="#a82c1649fbd03d4f3ea94bf8a14e1299d">argx::Argx::paramExists</a></div><div class="ttdeci">bool paramExists(const std::string &amp;id)</div><div class="ttdoc">Get if param exists in the param options.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dad/Argx_8cpp_source.html#l00142">Argx.cpp:142</a></div></div>
+<div class="ttc" id="aclassargx_1_1Argx_html_a9343612a7c209f2323d2cd10fd3fe387"><div class="ttname"><a href="#a9343612a7c209f2323d2cd10fd3fe387">argx::Argx::findParam</a></div><div class="ttdeci">int findParam(const std::string &amp;id)</div><div class="ttdoc">Find parameter and sub-parameter index.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dad/Argx_8cpp_source.html#l00096">Argx.cpp:96</a></div></div>
 <div class="ttc" id="astructargx_1_1ARGXParam_html_ace0572ca0af0b51da129b562bee6a673"><div class="ttname"><a href="../../d2/d84/structargx_1_1ARGXParam.html#ace0572ca0af0b51da129b562bee6a673">argx::ARGXParam::subExists</a></div><div class="ttdeci">std::vector&lt; bool &gt; subExists</div><div class="ttdef"><b>Definition</b> <a href="../../dd/de3/types_8hpp_source.html#l00060">types.hpp:60</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00093">findParam()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00139">paramExists()</a>, and <a class="el" href="../../dd/de3/types_8hpp_source.html#l00060">argx::ARGXParam::subExists</a>.</p>
+<p class="reference">References <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00096">findParam()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00142">paramExists()</a>, and <a class="el" href="../../dd/de3/types_8hpp_source.html#l00060">argx::ARGXParam::subExists</a>.</p>
 
 </div>
 </div>
@@ -1001,60 +1070,63 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::string&gt; Values found from first to last </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00486">486</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  487</span>    {</div>
-<div class="line"><span class="lineno">  488</span>        <span class="comment">// Use `Argx::getArgPos()` function for sub-params</span></div>
-<div class="line"><span class="lineno">  489</span>        <span class="keywordtype">size_t</span> idPos = this-&gt;<a class="code hl_function" href="#a73dccd80c13749ea006b46653cc2a8a0">getArgPos</a>(<span class="keywordtype">id</span>) + 1;</div>
-<div class="line"><span class="lineno">  490</span> </div>
-<div class="line"><span class="lineno">  491</span>        <span class="keywordflow">if</span> (idPos &lt; 0 || idPos == std::string::npos)</div>
-<div class="line"><span class="lineno">  492</span>            <span class="keywordflow">return</span> {this-&gt;<a class="code hl_function" href="#ae7f1dcaf2c945c8592a3e89b15a0189b">getOption</a>(<span class="keywordtype">id</span>).<a class="code hl_variable" href="../../da/dd5/structargx_1_1ARGXOptions.html#abcd90d184d4e1a80e3ebfe23197a70c0">defaultValue</a>};</div>
-<div class="line"><span class="lineno">  493</span> </div>
-<div class="line"><span class="lineno">  494</span>        std::vector&lt;std::string&gt; values;</div>
-<div class="line"><span class="lineno">  495</span> </div>
-<div class="line"><span class="lineno">  496</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = idPos ; i &lt; this-&gt;<a class="code hl_function" href="#a6146d9644c99b670b15d78cb92057bff">getMainArgs</a>().size() ; i++)</div>
-<div class="line"><span class="lineno">  497</span>        {</div>
-<div class="line"><span class="lineno">  498</span>            <span class="comment">// End of the sub-parameter finding</span></div>
-<div class="line"><span class="lineno">  499</span>            <span class="comment">// Assume the search is done due to an existsing sub-param</span></div>
-<div class="line"><span class="lineno">  500</span>            <span class="keywordflow">if</span> (i != idPos &amp;&amp; this-&gt;<a class="code hl_function" href="#a9d961d98a70713290d237dd8f3d68369">subParamExists</a>(this-&gt;<a class="code hl_function" href="#a6146d9644c99b670b15d78cb92057bff">getMainArgs</a>()[i]))</div>
-<div class="line"><span class="lineno">  501</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  502</span> </div>
-<div class="line"><span class="lineno">  503</span>            values.emplace_back(this-&gt;<a class="code hl_function" href="#a6146d9644c99b670b15d78cb92057bff">getMainArgs</a>()[i]);</div>
-<div class="line"><span class="lineno">  504</span>        }</div>
-<div class="line"><span class="lineno">  505</span> </div>
-<div class="line"><span class="lineno">  506</span>        std::string defaultValue;</div>
-<div class="line"><span class="lineno">  507</span> </div>
-<div class="line"><span class="lineno">  508</span>        {</div>
-<div class="line"><span class="lineno">  509</span>            <span class="keywordtype">bool</span> breakOut = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  510</span> </div>
-<div class="line"><span class="lineno">  511</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
-<div class="line"><span class="lineno">  512</span>            {</div>
-<div class="line"><span class="lineno">  513</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0 ; j &lt; this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>.size() ; ++j)</div>
-<div class="line"><span class="lineno">  514</span>                {</div>
-<div class="line"><span class="lineno">  515</span>                    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>[i].subParams[j].<span class="keywordtype">id</span> == <span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">  516</span>                    {</div>
-<div class="line"><span class="lineno">  517</span>                        defaultValue = this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>[i].subParams[j].defaultValue;</div>
-<div class="line"><span class="lineno">  518</span> </div>
-<div class="line"><span class="lineno">  519</span> </div>
-<div class="line"><span class="lineno">  520</span>                        breakOut = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  521</span> </div>
-<div class="line"><span class="lineno">  522</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  523</span>                    }</div>
-<div class="line"><span class="lineno">  524</span>                }</div>
-<div class="line"><span class="lineno">  525</span> </div>
-<div class="line"><span class="lineno">  526</span>                <span class="keywordflow">if</span> (breakOut) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  527</span>            }</div>
-<div class="line"><span class="lineno">  528</span>        }</div>
-<div class="line"><span class="lineno">  529</span> </div>
-<div class="line"><span class="lineno">  530</span>        <span class="keywordflow">if</span> (values.empty())</div>
-<div class="line"><span class="lineno">  531</span>            values.emplace_back(defaultValue);</div>
-<div class="line"><span class="lineno">  532</span> </div>
-<div class="line"><span class="lineno">  533</span>        <span class="keywordflow">return</span> values;</div>
-<div class="line"><span class="lineno">  534</span>    }</div>
-<div class="ttc" id="aclassargx_1_1Argx_html_a6146d9644c99b670b15d78cb92057bff"><div class="ttname"><a href="#a6146d9644c99b670b15d78cb92057bff">argx::Argx::getMainArgs</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getMainArgs() const</div><div class="ttdoc">Get main arguments from main() function argv</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dad/Argx_8cpp_source.html#l00536">Argx.cpp:536</a></div></div>
-<div class="ttc" id="aclassargx_1_1Argx_html_a9d961d98a70713290d237dd8f3d68369"><div class="ttname"><a href="#a9d961d98a70713290d237dd8f3d68369">argx::Argx::subParamExists</a></div><div class="ttdeci">bool subParamExists(const std::string &amp;id)</div><div class="ttdoc">Get if sub-param exists in the param options.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dad/Argx_8cpp_source.html#l00146">Argx.cpp:146</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00580">580</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  581</span>    {</div>
+<div class="line"><span class="lineno">  582</span>        <span class="comment">// Use `Argx::getArgPos()` function for sub-params</span></div>
+<div class="line"><span class="lineno">  583</span>        <span class="keywordtype">size_t</span> idPos = this-&gt;<a class="code hl_function" href="#a73dccd80c13749ea006b46653cc2a8a0">getArgPos</a>(<span class="keywordtype">id</span>) + 1;</div>
+<div class="line"><span class="lineno">  584</span> </div>
+<div class="line"><span class="lineno">  585</span>        <span class="keywordflow">if</span> (idPos &lt; 0 || idPos == std::string::npos)</div>
+<div class="line"><span class="lineno">  586</span>            <span class="keywordflow">return</span> {this-&gt;<a class="code hl_function" href="#ae7f1dcaf2c945c8592a3e89b15a0189b">getOption</a>(<span class="keywordtype">id</span>).<a class="code hl_variable" href="../../da/dd5/structargx_1_1ARGXOptions.html#abcd90d184d4e1a80e3ebfe23197a70c0">defaultValue</a>};</div>
+<div class="line"><span class="lineno">  587</span> </div>
+<div class="line"><span class="lineno">  588</span>        std::vector&lt;std::string&gt; values;</div>
+<div class="line"><span class="lineno">  589</span> </div>
+<div class="line"><span class="lineno">  590</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = idPos ; i &lt; this-&gt;<a class="code hl_function" href="#a6146d9644c99b670b15d78cb92057bff">getMainArgs</a>().size() ; i++)</div>
+<div class="line"><span class="lineno">  591</span>        {</div>
+<div class="line"><span class="lineno">  592</span>            <span class="comment">// End of the sub-parameter finding</span></div>
+<div class="line"><span class="lineno">  593</span>            <span class="comment">// Assume the search is done due to an existsing sub-param</span></div>
+<div class="line"><span class="lineno">  594</span>            <span class="keywordflow">if</span> (i != idPos &amp;&amp; this-&gt;<a class="code hl_function" href="#a9d961d98a70713290d237dd8f3d68369">subParamExists</a>(this-&gt;<a class="code hl_function" href="#a6146d9644c99b670b15d78cb92057bff">getMainArgs</a>()[i]))</div>
+<div class="line"><span class="lineno">  595</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  596</span> </div>
+<div class="line"><span class="lineno">  597</span>            values.emplace_back(this-&gt;<a class="code hl_function" href="#a6146d9644c99b670b15d78cb92057bff">getMainArgs</a>()[i]);</div>
+<div class="line"><span class="lineno">  598</span>        }</div>
+<div class="line"><span class="lineno">  599</span> </div>
+<div class="line"><span class="lineno">  600</span>        std::string defaultValue;</div>
+<div class="line"><span class="lineno">  601</span> </div>
+<div class="line"><span class="lineno">  602</span>        {</div>
+<div class="line"><span class="lineno">  603</span>            <span class="keywordtype">bool</span> breakOut = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  604</span> </div>
+<div class="line"><span class="lineno">  605</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size(); ++i)</div>
+<div class="line"><span class="lineno">  606</span>            {</div>
+<div class="line"><span class="lineno">  607</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0 ; j &lt; this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>.size() ; ++j)</div>
+<div class="line"><span class="lineno">  608</span>                {</div>
+<div class="line"><span class="lineno">  609</span>                    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>[i].subParams.size() &gt; j)</div>
+<div class="line"><span class="lineno">  610</span>                    {</div>
+<div class="line"><span class="lineno">  611</span>                        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>[i].subParams[j].<span class="keywordtype">id</span> == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  612</span>                        {</div>
+<div class="line"><span class="lineno">  613</span>                            defaultValue = this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>[i].subParams[j].defaultValue;</div>
+<div class="line"><span class="lineno">  614</span> </div>
+<div class="line"><span class="lineno">  615</span> </div>
+<div class="line"><span class="lineno">  616</span>                            breakOut = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  617</span> </div>
+<div class="line"><span class="lineno">  618</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  619</span>                        }</div>
+<div class="line"><span class="lineno">  620</span>                    }</div>
+<div class="line"><span class="lineno">  621</span>                }</div>
+<div class="line"><span class="lineno">  622</span> </div>
+<div class="line"><span class="lineno">  623</span>                <span class="keywordflow">if</span> (breakOut) <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  624</span>            }</div>
+<div class="line"><span class="lineno">  625</span>        }</div>
+<div class="line"><span class="lineno">  626</span> </div>
+<div class="line"><span class="lineno">  627</span>        <span class="keywordflow">if</span> (values.empty())</div>
+<div class="line"><span class="lineno">  628</span>            values.emplace_back(defaultValue);</div>
+<div class="line"><span class="lineno">  629</span> </div>
+<div class="line"><span class="lineno">  630</span>        <span class="keywordflow">return</span> values;</div>
+<div class="line"><span class="lineno">  631</span>    }</div>
+<div class="ttc" id="aclassargx_1_1Argx_html_a6146d9644c99b670b15d78cb92057bff"><div class="ttname"><a href="#a6146d9644c99b670b15d78cb92057bff">argx::Argx::getMainArgs</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getMainArgs() const</div><div class="ttdoc">Get main arguments from main() function argv</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dad/Argx_8cpp_source.html#l00633">Argx.cpp:633</a></div></div>
+<div class="ttc" id="aclassargx_1_1Argx_html_a9d961d98a70713290d237dd8f3d68369"><div class="ttname"><a href="#a9d961d98a70713290d237dd8f3d68369">argx::Argx::subParamExists</a></div><div class="ttdeci">bool subParamExists(const std::string &amp;id)</div><div class="ttdoc">Get if sub-param exists in the param options.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dad/Argx_8cpp_source.html#l00149">Argx.cpp:149</a></div></div>
 <div class="ttc" id="astructargx_1_1ARGXOptions_html_abcd90d184d4e1a80e3ebfe23197a70c0"><div class="ttname"><a href="../../da/dd5/structargx_1_1ARGXOptions.html#abcd90d184d4e1a80e3ebfe23197a70c0">argx::ARGXOptions::defaultValue</a></div><div class="ttdeci">std::string defaultValue</div><div class="ttdef"><b>Definition</b> <a href="../../dd/de3/types_8hpp_source.html#l00048">types.hpp:48</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../dd/de3/types_8hpp_source.html#l00048">argx::ARGXOptions::defaultValue</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00076">getArgPos()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00536">getMainArgs()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00478">getOption()</a>, <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00023">mainArgs</a>, <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00146">subParamExists()</a>.</p>
+<p class="reference">References <a class="el" href="../../dd/de3/types_8hpp_source.html#l00048">argx::ARGXOptions::defaultValue</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00079">getArgPos()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00633">getMainArgs()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00572">getOption()</a>, <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00023">mainArgs</a>, <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00149">subParamExists()</a>.</p>
 
 </div>
 </div>
@@ -1082,64 +1154,94 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int Argument position </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00358">358</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  359</span>    {</div>
-<div class="line"><span class="lineno">  360</span>        <span class="keywordtype">size_t</span> pos = 1; <span class="comment">// Skip program name</span></div>
-<div class="line"><span class="lineno">  361</span> </div>
-<div class="line"><span class="lineno">  362</span>        <span class="keywordflow">while</span> (pos &lt; argv.size())</div>
-<div class="line"><span class="lineno">  363</span>        {</div>
-<div class="line"><span class="lineno">  364</span>            <span class="keyword">const</span> <span class="keyword">auto</span> &amp;arg = argv[pos];</div>
-<div class="line"><span class="lineno">  365</span>            <span class="keywordtype">bool</span> recognized = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  366</span> </div>
-<div class="line"><span class="lineno">  367</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;opt : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
-<div class="line"><span class="lineno">  368</span>            {</div>
-<div class="line"><span class="lineno">  369</span>                <span class="keywordflow">if</span> (arg == opt.param || arg == opt.sparam)</div>
-<div class="line"><span class="lineno">  370</span>                {</div>
-<div class="line"><span class="lineno">  371</span>                    recognized = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  372</span> </div>
-<div class="line"><span class="lineno">  373</span>                    <span class="comment">// Skip all subparams if they exist</span></div>
-<div class="line"><span class="lineno">  374</span>                    <span class="keywordflow">if</span> (opt.hasSubParams || opt.hasAnySubParams)</div>
-<div class="line"><span class="lineno">  375</span>                    {</div>
-<div class="line"><span class="lineno">  376</span>                        <span class="comment">// Count subparams that actually exist in argv</span></div>
-<div class="line"><span class="lineno">  377</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> sub = 1; sub + pos &lt; argv.size(); ++sub)</div>
-<div class="line"><span class="lineno">  378</span>                        {</div>
-<div class="line"><span class="lineno">  379</span>                            <span class="keyword">const</span> std::string &amp;nextArg = argv[pos + sub];</div>
-<div class="line"><span class="lineno">  380</span> </div>
-<div class="line"><span class="lineno">  381</span>                            <span class="comment">// If nextArg matches one of the defined subParams, skip it</span></div>
-<div class="line"><span class="lineno">  382</span>                            <span class="keywordtype">bool</span> isSub = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  383</span> </div>
-<div class="line"><span class="lineno">  384</span>                            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;subOpt : opt.subParams)</div>
-<div class="line"><span class="lineno">  385</span>                            {</div>
-<div class="line"><span class="lineno">  386</span>                                <span class="keywordflow">if</span> (nextArg == subOpt.param || nextArg == subOpt.sparam)</div>
-<div class="line"><span class="lineno">  387</span>                                {</div>
-<div class="line"><span class="lineno">  388</span>                                    isSub = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  389</span> </div>
-<div class="line"><span class="lineno">  390</span>                                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  391</span>                                }</div>
-<div class="line"><span class="lineno">  392</span>                            }</div>
-<div class="line"><span class="lineno">  393</span> </div>
-<div class="line"><span class="lineno">  394</span>                            <span class="keywordflow">if</span> (!isSub) <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  395</span> </div>
-<div class="line"><span class="lineno">  396</span>                            ++pos; <span class="comment">// Skip this subparam</span></div>
-<div class="line"><span class="lineno">  397</span>                        }</div>
-<div class="line"><span class="lineno">  398</span>                    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00395">395</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  396</span>    {</div>
+<div class="line"><span class="lineno">  397</span>        <span class="keywordtype">int</span> pos = 1; <span class="comment">// skip program name</span></div>
+<div class="line"><span class="lineno">  398</span>        <span class="keywordtype">bool</span> isNormalParam = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  399</span> </div>
-<div class="line"><span class="lineno">  400</span>                    <span class="keywordflow">break</span>; <span class="comment">// stop checking options</span></div>
-<div class="line"><span class="lineno">  401</span>                }</div>
-<div class="line"><span class="lineno">  402</span>            }</div>
+<div class="line"><span class="lineno">  400</span>        <span class="keywordflow">while</span> (pos &lt; (<span class="keywordtype">int</span>)argv.size())</div>
+<div class="line"><span class="lineno">  401</span>        {</div>
+<div class="line"><span class="lineno">  402</span>            <span class="keyword">const</span> std::string &amp;arg = argv[pos];</div>
 <div class="line"><span class="lineno">  403</span> </div>
-<div class="line"><span class="lineno">  404</span>            <span class="keywordflow">if</span> (!recognized)</div>
-<div class="line"><span class="lineno">  405</span>            {</div>
-<div class="line"><span class="lineno">  406</span>                <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)pos;</div>
-<div class="line"><span class="lineno">  407</span>            }</div>
-<div class="line"><span class="lineno">  408</span> </div>
-<div class="line"><span class="lineno">  409</span>            ++pos;</div>
-<div class="line"><span class="lineno">  410</span>        }</div>
-<div class="line"><span class="lineno">  411</span> </div>
-<div class="line"><span class="lineno">  412</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  413</span>    }</div>
+<div class="line"><span class="lineno">  404</span>            <span class="comment">// Find matching top-level option</span></div>
+<div class="line"><span class="lineno">  405</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="../../dc/d69/namespaceargx.html#a9933be078f36db7b1424f6dd0372eb72">ARGXOptions</a> *matched = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  406</span> </div>
+<div class="line"><span class="lineno">  407</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;opt : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
+<div class="line"><span class="lineno">  408</span>            {</div>
+<div class="line"><span class="lineno">  409</span>                <span class="keywordflow">if</span> (arg == opt.param || arg == opt.sparam)</div>
+<div class="line"><span class="lineno">  410</span>                {</div>
+<div class="line"><span class="lineno">  411</span>                    matched = &amp;opt;</div>
+<div class="line"><span class="lineno">  412</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  413</span>                }</div>
+<div class="line"><span class="lineno">  414</span>            }</div>
+<div class="line"><span class="lineno">  415</span>            </div>
+<div class="line"><span class="lineno">  416</span>            <span class="comment">// unknown top-level arg</span></div>
+<div class="line"><span class="lineno">  417</span>            <span class="keywordflow">if</span> (!matched) <span class="keywordflow">return</span> (isNormalParam ? pos : -pos);</div>
+<div class="line"><span class="lineno">  418</span> </div>
+<div class="line"><span class="lineno">  419</span>            <span class="comment">// matched a top-level option</span></div>
+<div class="line"><span class="lineno">  420</span>            isNormalParam = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  421</span> </div>
+<div class="line"><span class="lineno">  422</span>            <span class="keywordflow">if</span> (matched-&gt;hasSubParams || matched-&gt;hasAnySubParams)</div>
+<div class="line"><span class="lineno">  423</span>            {</div>
+<div class="line"><span class="lineno">  424</span>                isNormalParam = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  425</span> </div>
+<div class="line"><span class="lineno">  426</span>                <span class="keywordtype">int</span> scanPos = pos + 1;</div>
+<div class="line"><span class="lineno">  427</span> </div>
+<div class="line"><span class="lineno">  428</span>                <span class="keywordflow">while</span> (scanPos &lt; (<span class="keywordtype">int</span>)argv.size())</div>
+<div class="line"><span class="lineno">  429</span>                {</div>
+<div class="line"><span class="lineno">  430</span>                    <span class="keyword">const</span> std::string &amp;nextArg = argv[scanPos];</div>
+<div class="line"><span class="lineno">  431</span> </div>
+<div class="line"><span class="lineno">  432</span>                    <span class="comment">// Is it a declared subparam for this option?</span></div>
+<div class="line"><span class="lineno">  433</span>                    <span class="keywordtype">bool</span> isSub = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  434</span> </div>
+<div class="line"><span class="lineno">  435</span>                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;subOpt : matched-&gt;subParams)</div>
+<div class="line"><span class="lineno">  436</span>                    {</div>
+<div class="line"><span class="lineno">  437</span>                        <span class="keywordflow">if</span> (nextArg == subOpt.param || nextArg == subOpt.sparam)</div>
+<div class="line"><span class="lineno">  438</span>                        {</div>
+<div class="line"><span class="lineno">  439</span>                            isSub = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  440</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  441</span>                        }</div>
+<div class="line"><span class="lineno">  442</span>                    }</div>
+<div class="line"><span class="lineno">  443</span> </div>
+<div class="line"><span class="lineno">  444</span>                    <span class="keywordflow">if</span> (isSub)</div>
+<div class="line"><span class="lineno">  445</span>                    {</div>
+<div class="line"><span class="lineno">  446</span>                        <span class="comment">// Consume that subparam and continue scanning</span></div>
+<div class="line"><span class="lineno">  447</span>                        pos = scanPos;</div>
+<div class="line"><span class="lineno">  448</span>                        ++scanPos;</div>
+<div class="line"><span class="lineno">  449</span> </div>
+<div class="line"><span class="lineno">  450</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  451</span>                    }</div>
+<div class="line"><span class="lineno">  452</span> </div>
+<div class="line"><span class="lineno">  453</span>                    <span class="comment">// If not a subparam, is it a global option? (do **NOT** consume it)</span></div>
+<div class="line"><span class="lineno">  454</span>                    <span class="keywordtype">bool</span> isGlobalOpt = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  455</span> </div>
+<div class="line"><span class="lineno">  456</span>                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;globalOpt : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
+<div class="line"><span class="lineno">  457</span>                    {</div>
+<div class="line"><span class="lineno">  458</span>                        <span class="keywordflow">if</span> (nextArg == globalOpt.param || nextArg == globalOpt.sparam)</div>
+<div class="line"><span class="lineno">  459</span>                        {</div>
+<div class="line"><span class="lineno">  460</span>                            isGlobalOpt = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  461</span> </div>
+<div class="line"><span class="lineno">  462</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  463</span>                        }</div>
+<div class="line"><span class="lineno">  464</span>                    }</div>
+<div class="line"><span class="lineno">  465</span> </div>
+<div class="line"><span class="lineno">  466</span>                    <span class="comment">// valid global option follows; stop subparam scan and let outer loop handle it</span></div>
+<div class="line"><span class="lineno">  467</span>                    <span class="keywordflow">if</span> (isGlobalOpt) <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  468</span> </div>
+<div class="line"><span class="lineno">  469</span>                    <span class="comment">// neither subparam nor global option; it&#39;s an invalid sub-parameter token</span></div>
+<div class="line"><span class="lineno">  470</span>                    <span class="keywordflow">return</span> -scanPos;</div>
+<div class="line"><span class="lineno">  471</span>                }</div>
+<div class="line"><span class="lineno">  472</span>            }</div>
+<div class="line"><span class="lineno">  473</span> </div>
+<div class="line"><span class="lineno">  474</span>            ++pos;</div>
+<div class="line"><span class="lineno">  475</span>        }</div>
+<div class="line"><span class="lineno">  476</span> </div>
+<div class="line"><span class="lineno">  477</span>        <span class="comment">// If nothing wrong found; return your existing success codes</span></div>
+<div class="line"><span class="lineno">  478</span>        <span class="keywordflow">if</span> (isNormalParam) <span class="keywordflow">return</span> (this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size() &gt; 2 ? 2 : 1);</div>
+<div class="line"><span class="lineno">  479</span>        <span class="keywordflow">else</span> <span class="keywordflow">return</span> (this-&gt;<a class="code hl_variable" href="#a4e820cdc862457fd8618229ce47a690f">mainArgs</a>-&gt;size() &gt; 2 ? -2 : -1);</div>
+<div class="line"><span class="lineno">  480</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>.</p>
+<p class="reference">References <a class="el" href="../../dd/de3/types_8hpp_source.html#l00051">argx::ARGXOptions::hasAnySubParams</a>, <a class="el" href="../../dd/de3/types_8hpp_source.html#l00050">argx::ARGXOptions::hasSubParams</a>, <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00023">mainArgs</a>, <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>, and <a class="el" href="../../dd/de3/types_8hpp_source.html#l00054">argx::ARGXOptions::subParams</a>.</p>
 
 </div>
 </div>
@@ -1172,19 +1274,19 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool Return false if there is no match, else, return true </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00156">156</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>    {</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordtype">int</span> paramID = this-&gt;<a class="code hl_function" href="#a9343612a7c209f2323d2cd10fd3fe387">findParam</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  159</span> </div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">if</span> (paramID &lt; 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  161</span>        </div>
-<div class="line"><span class="lineno">  162</span>        <span class="comment">// Validate if tag from options is equal to this tag from function param</span></div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>[paramID].tag == tag) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00159">159</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>    {</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordtype">int</span> paramID = this-&gt;<a class="code hl_function" href="#a9343612a7c209f2323d2cd10fd3fe387">findParam</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (paramID &lt; 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  164</span>        </div>
+<div class="line"><span class="lineno">  165</span>        <span class="comment">// Validate if tag from options is equal to this tag from function param</span></div>
+<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>[paramID].tag == tag) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  169</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00093">findParam()</a>, and <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>.</p>
+<p class="reference">References <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00096">findParam()</a>, and <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>.</p>
 
 </div>
 </div>
@@ -1212,16 +1314,16 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00139">139</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>    {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="#a9343612a7c209f2323d2cd10fd3fe387">findParam</a>(<span class="keywordtype">id</span>) &gt;= 0) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00142">142</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  143</span>    {</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="#a9343612a7c209f2323d2cd10fd3fe387">findParam</a>(<span class="keywordtype">id</span>) &gt;= 0) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00093">findParam()</a>.</p>
+<p class="reference">References <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00096">findParam()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00287">getSubParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00290">getSubParam()</a>.</p>
 
 </div>
 </div>
@@ -1249,18 +1351,18 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string ID of the param or sub-param </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00063">63</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
-<div class="line"><span class="lineno">   65</span>        std::string <a class="code hl_variable" href="#adf94f5a9f22d8ea2cde21df63c2f3d8a">id</a>;</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;option : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
-<div class="line"><span class="lineno">   68</span>        {</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (option.param == param || option.sparam == param)</div>
-<div class="line"><span class="lineno">   70</span>                <span class="keywordflow">return</span> option.id;</div>
-<div class="line"><span class="lineno">   71</span>        }</div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#adf94f5a9f22d8ea2cde21df63c2f3d8a">id</a>;</div>
-<div class="line"><span class="lineno">   74</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00066">66</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        std::string <a class="code hl_variable" href="#adf94f5a9f22d8ea2cde21df63c2f3d8a">id</a>;</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;option : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span> (option.param == param || option.sparam == param)</div>
+<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">return</span> option.id;</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#adf94f5a9f22d8ea2cde21df63c2f3d8a">id</a>;</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00020">id</a>, and <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>.</p>
 
@@ -1290,19 +1392,19 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00146">146</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>    {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;p : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
-<div class="line"><span class="lineno">  149</span>        {</div>
-<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">if</span> (p.sparam == <span class="keywordtype">id</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  151</span>        }</div>
-<div class="line"><span class="lineno">  152</span>        </div>
-<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  154</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00149">149</a> of file <a class="el" href="../../d1/dad/Argx_8cpp_source.html">Argx.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>    {</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;p : this-&gt;<a class="code hl_variable" href="#aba86dd3c8b11c495afd4c7eada1c0ac5">options</a>)</div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">if</span> (p.sparam == <span class="keywordtype">id</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span>        </div>
+<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">options</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00486">getSubValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00580">getSubValue()</a>.</p>
 
 </div>
 </div>
@@ -1329,7 +1431,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../d0/d32/Argx_8hpp_source.html">Argx.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00034">Argx()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00063">paramToID()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00034">Argx()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00066">paramToID()</a>.</p>
 
 </div>
 </div>
@@ -1355,7 +1457,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00025">25</a> of file <a class="el" href="../../d0/d32/Argx_8hpp_source.html">Argx.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00034">Argx()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00539">getArgc()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00168">getParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00034">Argx()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00636">getArgc()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00171">getParam()</a>.</p>
 
 </div>
 </div>
@@ -1381,7 +1483,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../d0/d32/Argx_8hpp_source.html">Argx.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00034">Argx()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00045">~Argx()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00093">findParam()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00076">getArgPos()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00536">getMainArgs()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00168">getParam()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00486">getSubValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00034">Argx()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00048">~Argx()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00096">findParam()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00079">getArgPos()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00633">getMainArgs()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00171">getParam()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00580">getSubValue()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00395">getWrongArgs()</a>.</p>
 
 </div>
 </div>
@@ -1407,7 +1509,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d32/Argx_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../d0/d32/Argx_8hpp_source.html">Argx.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00090">add()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00415">compareArgs()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00290">createDocs()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00093">findParam()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00478">getOption()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00542">getOptions()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00168">getParam()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00486">getSubValue()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00358">getWrongArgs()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00156">hasTag()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00063">paramToID()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00146">subParamExists()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00093">add()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00489">compareArgs()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00293">createDocs()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00096">findParam()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00572">getOption()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00639">getOptions()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00171">getParam()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00580">getSubValue()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00395">getWrongArgs()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00159">hasTag()</a>, <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00066">paramToID()</a>, and <a class="el" href="../../d1/dad/Argx_8cpp_source.html#l00149">subParamExists()</a>.</p>
 
 </div>
 </div>

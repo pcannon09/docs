@@ -284,6 +284,13 @@
       <anchor>a9d961d98a70713290d237dd8f3d68369</anchor>
       <arglist>(const std::string &amp;id)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static int</type>
+      <name>formatWrongArgs</name>
+      <anchorfile>d9/da2/classargx_1_1Argx.html</anchorfile>
+      <anchor>ad35955a51e2dd4b50a7ccf20f757fe55</anchor>
+      <arglist>(const int &amp;_int)</arglist>
+    </member>
     <member kind="variable" protection="private">
       <type>std::string</type>
       <name>id</name>
@@ -510,8 +517,8 @@
   </compound>
   <compound kind="page">
     <name>index</name>
-    <title>ARGX - 1.2.0-beta</title>
+    <title>ARGX - 1.2.1-build</title>
     <filename>index.html</filename>
-    <docanchor file="index.html" title="ARGX - 1.2.0-beta">md_README</docanchor>
+    <docanchor file="index.html" title="ARGX - 1.2.1-build">md_README</docanchor>
   </compound>
 </tagfile>
