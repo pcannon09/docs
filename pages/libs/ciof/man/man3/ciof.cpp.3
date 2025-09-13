@@ -1,0 +1,49 @@
+.TH "src/ciof.cpp" 3 "Version v1.0.0-build" "CIOF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/ciof.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include '\&.\&./inc/ciof/ciof\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBciof\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBciof::colorSet\fP (int _color)"
+.br
+.RI "Set the colors from the default color palette from the terminal\&. "
+.ti -1c
+.RI "void \fBciof::initANSI\fP ()"
+.br
+.RI "Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER\&. "
+.ti -1c
+.RI "void \fBciof::print\fP ()"
+.br
+.RI "Print a new line\&. "
+.ti -1c
+.RI "std::string \fBciof::rgbSet\fP (unsigned int r, unsigned int g, unsigned int b)"
+.br
+.RI "Set the RGB color in the terminal\&. "
+.ti -1c
+.RI "std::string \fBciof::styleReset\fP ()"
+.br
+.RI "Reset all the styles and colors in the terminal\&. "
+.ti -1c
+.RI "std::string \fBciof::styleSet\fP (const \fBOutputStyle\fP &_style)"
+.br
+.RI "Set the styles according to the \fR\fBOutputStyle\fP\fP type\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CIOF from the source code\&.

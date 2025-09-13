@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="d7/d5a/namespaceciof_1_1impl" kind="namespace" language="C++">
+    <compoundname>ciof::impl</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d7/d5a/namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::impl::__out</definition>
+        <argsstring>(const OutputType &amp;_outType, T _t)</argsstring>
+        <name>__out</name>
+        <qualifiedname>ciof::impl::__out</qualifiedname>
+        <param>
+          <type>const <ref refid="dc/d0e/namespaceciof_1a255b49fbd04393ba7532b832b580e747" kindref="member">OutputType</ref> &amp;</type>
+          <declname>_outType</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <briefdescription>
+<para>Output the with its corresponding type either to: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Standard output</para>
+</listitem><listitem><para>Standard error</para>
+</listitem><listitem><para>Standard log (AKA: Error but unbuffered) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_outType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type for OUT, ERR or LOG </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="95" column="10" declfile="inc/ciof/ciof.hpp" declline="95" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d5a/namespaceciof_1_1impl_1a1891ea20ceaf9eb463765c53d4a0d007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::impl::__out</definition>
+        <argsstring>(const OutputType &amp;_outType, T _t, Args ... _args)</argsstring>
+        <name>__out</name>
+        <qualifiedname>ciof::impl::__out</qualifiedname>
+        <param>
+          <type>const <ref refid="dc/d0e/namespaceciof_1a255b49fbd04393ba7532b832b580e747" kindref="member">OutputType</ref> &amp;</type>
+          <declname>_outType</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <param>
+          <type>Args ...</type>
+          <declname>_args</declname>
+        </param>
+        <briefdescription>
+<para>Output the with its corresponding type either to: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Standard output</para>
+</listitem><listitem><para>Standard error</para>
+</listitem><listitem><para>Standard log (AKA: Error but unbuffered) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_outType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type for OUT, ERR or LOG </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text to add </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>More text to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="107" column="10" declfile="inc/ciof/ciof.hpp" declline="107" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d5a/namespaceciof_1_1impl_1a3c0a39bb238468e7e6843e0a4e920b0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string ciof::impl::parse</definition>
+        <argsstring>(T _fmt, Args ... _args)</argsstring>
+        <name>parse</name>
+        <qualifiedname>ciof::impl::parse</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_fmt</declname>
+        </param>
+        <param>
+          <type>Args ...</type>
+          <declname>_args</declname>
+        </param>
+        <briefdescription>
+<para>Parse the params for printing and echoing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>_fmt parameter 1 to parse </para>
+</simplesect>
+<simplesect kind="return"><para>_args parameter 2 to the last one to parse </para>
+</simplesect>
+<simplesect kind="return"><para>std::string Total parsed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="84" column="17" declfile="inc/ciof/ciof.hpp" declline="84" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d5a/namespaceciof_1_1impl_1ae1e6ee7cf401df4c08b650fa0ebde5ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string ciof::impl::toString</definition>
+        <argsstring>(const T &amp;_val)</argsstring>
+        <name>toString</name>
+        <qualifiedname>ciof::impl::toString</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>_val</declname>
+        </param>
+        <briefdescription>
+<para>Convert to string safely. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>any convertable type to string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string total converted strig </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="75" column="17" declfile="inc/ciof/ciof.hpp" declline="75" declcolumn="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Implementation functions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/ciof/ciof.hpp" line="67" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_1924d7fdc7a72c14ec019757945dfd3b" xml:lang="en-US">
+<title>inc/ciof Directory Reference</title>
+<indexterm><primary>inc/ciof Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_ciof_8hpp">ciof.hpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_CIOFpredefines_8hpp">CIOFpredefines.hpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

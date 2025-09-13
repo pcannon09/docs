@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceciof_1_1impl" xml:lang="en-US">
+<title>ciof::impl Namespace Reference</title>
+<indexterm><primary>ciof::impl</primary></indexterm>
+<para>
+
+<para>Implementation functions. </para>
+ 
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f">__out</link> (const <link linkend="_namespaceciof_1a255b49fbd04393ba7532b832b580e747">OutputType</link> &amp;_outType, T _t)</para>
+
+<para>Output the with its corresponding type either to: </para>
+</listitem>
+            <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>void <link linkend="_namespaceciof_1_1impl_1a1891ea20ceaf9eb463765c53d4a0d007">__out</link> (const <link linkend="_namespaceciof_1a255b49fbd04393ba7532b832b580e747">OutputType</link> &amp;_outType, T _t, Args ... _args)</para>
+
+<para>Output the with its corresponding type either to: </para>
+</listitem>
+            <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>std::string <link linkend="_namespaceciof_1_1impl_1a3c0a39bb238468e7e6843e0a4e920b0b">parse</link> (T _fmt, Args ... _args)</para>
+
+<para>Parse the params for printing and echoing. </para>
+</listitem>
+            <listitem><para>template&lt;typename T&gt; </para><para>std::string <link linkend="_namespaceciof_1_1impl_1ae1e6ee7cf401df4c08b650fa0ebde5ee">toString</link> (const T &amp;_val)</para>
+
+<para>Convert to string safely. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Implementation functions. </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f"/><section>
+    <title>__out()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>__out</primary><secondary>ciof::impl</secondary></indexterm>
+<indexterm><primary>ciof::impl</primary><secondary>__out</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>void ciof::impl::__out (const <link linkend="_namespaceciof_1a255b49fbd04393ba7532b832b580e747">OutputType</link> &amp; _outType, T _t)</computeroutput></para><para>
+
+<para>Output the with its corresponding type either to: </para>
+</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Standard output</para>
+</listitem><listitem>
+<para>Standard error</para>
+</listitem><listitem>
+<para>Standard log (AKA: Error but unbuffered) 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_outType</entry><entry>
+<para>Type for OUT, ERR or LOG </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_t</entry><entry>
+<para>Text to add </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</listitem></itemizedlist>
+</para>
+</section>
+<anchor xml:id="_namespaceciof_1_1impl_1a1891ea20ceaf9eb463765c53d4a0d007"/><section>
+    <title>__out()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>__out</primary><secondary>ciof::impl</secondary></indexterm>
+<indexterm><primary>ciof::impl</primary><secondary>__out</secondary></indexterm>
+<computeroutput>template&lt;typename T, typename ... Args&gt; </computeroutput><para><computeroutput>void ciof::impl::__out (const <link linkend="_namespaceciof_1a255b49fbd04393ba7532b832b580e747">OutputType</link> &amp; _outType, T _t, Args ... _args)</computeroutput></para><para>
+
+<para>Output the with its corresponding type either to: </para>
+</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Standard output</para>
+</listitem><listitem>
+<para>Standard error</para>
+</listitem><listitem>
+<para>Standard log (AKA: Error but unbuffered) 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_outType</entry><entry>
+<para>Type for OUT, ERR or LOG </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_t</entry><entry>
+<para>Text to add </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_args</entry><entry>
+<para>More text to add </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</listitem></itemizedlist>
+</para>
+</section>
+<anchor xml:id="_namespaceciof_1_1impl_1a3c0a39bb238468e7e6843e0a4e920b0b"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>ciof::impl</secondary></indexterm>
+<indexterm><primary>ciof::impl</primary><secondary>parse</secondary></indexterm>
+<computeroutput>template&lt;typename T, typename ... Args&gt; </computeroutput><para><computeroutput>std::string ciof::impl::parse (T _fmt, Args ... _args)</computeroutput></para><para>
+
+<para>Parse the params for printing and echoing. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>_fmt parameter 1 to parse </para>
+
+<para>_args parameter 2 to the last one to parse </para>
+
+<para>std::string Total parsed </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_namespaceciof_1_1impl_1ae1e6ee7cf401df4c08b650fa0ebde5ee"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>ciof::impl</secondary></indexterm>
+<indexterm><primary>ciof::impl</primary><secondary>toString</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>std::string ciof::impl::toString (const T &amp; _val)</computeroutput></para><para>
+
+<para>Convert to string safely. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_val</entry><entry>
+<para>any convertable type to string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>std::string total converted strig </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

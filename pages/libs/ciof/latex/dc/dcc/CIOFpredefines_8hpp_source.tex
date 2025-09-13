@@ -1,0 +1,66 @@
+\doxysection{CIOFpredefines.\+hpp}
+\hypertarget{CIOFpredefines_8hpp_source}{}\label{CIOFpredefines_8hpp_source}\index{inc/ciof/CIOFpredefines.hpp@{inc/ciof/CIOFpredefines.hpp}}
+\mbox{\hyperlink{CIOFpredefines_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00002}00002\ \textcolor{comment}{\ *\ EXAMPLEpredefines.h\ -\/\ pcannonProjectStandards}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00003}00003\ \textcolor{comment}{\ *\ Predefines\ for\ C\ and\ C++\ projects}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00004}00004\ \textcolor{comment}{\ *\ STD\ Information:\ 20250723\ -\/\ 1.0S}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00005}00005\ \textcolor{comment}{\ *\ NOTICE:\ }}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00006}00006\ \textcolor{comment}{\ *\ -\/\ RENAMED\ TO\ CIOFpredefines.hpp}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00007}00007\ \textcolor{comment}{\ *\ -\/\ MADE\ FOR\ The\ CIOF\ Project\ Utils}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00008}00008\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00012}00012\ \textcolor{comment}{//\ Project\ setup}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00013}\mbox{\hyperlink{CIOFpredefines_8hpp_a3d70bd8048f0ef311e9d8005ad06d56e}{00013}}\ \textcolor{preprocessor}{\#define\ CIOF\_DEFAULT\_CPP\_STD\ \ \ \ \ \ \ \ \ \ \ \ 201703L}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00015}00015\ \textcolor{comment}{//\ Versioning}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00016}\mbox{\hyperlink{CIOFpredefines_8hpp_ae837d6691677a6f2f6adf7d006bc2149}{00016}}\ \textcolor{preprocessor}{\#define\ CIOF\_VERSION\_MAJOR\ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00017}\mbox{\hyperlink{CIOFpredefines_8hpp_a37d9da50efb5bc5ac2b63ca3b72de10f}{00017}}\ \textcolor{preprocessor}{\#define\ CIOF\_VERSION\_MINOR\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00018}\mbox{\hyperlink{CIOFpredefines_8hpp_aebcfd1c825546c9cf869fc0852f859ce}{00018}}\ \textcolor{preprocessor}{\#define\ CIOF\_VERSION\_PATCH\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00020}\mbox{\hyperlink{CIOFpredefines_8hpp_afe87ed04a50605abe9a99b2aef3fe153}{00020}}\ \textcolor{preprocessor}{\#define\ CIOF\_VERSION\_STD\ \ \ \ \ \ \ \ \ \ \ \ \ \ 20250913}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00022}00022\ \textcolor{comment}{//\ Version\ states:}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00023}00023\ \textcolor{comment}{//\ *\ dev}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00024}00024\ \textcolor{comment}{//\ *\ alpha}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00025}00025\ \textcolor{comment}{//\ *\ beta}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00026}00026\ \textcolor{comment}{//\ *\ build}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00027}\mbox{\hyperlink{CIOFpredefines_8hpp_a367c2c910bb88fb15e9a5d7e4cf579c9}{00027}}\ \textcolor{preprocessor}{\#define\ CIOF\_VERSION\_STATE\ \ \ \ \ \ \ \ \ \ "{}build"{}}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00029}\mbox{\hyperlink{CIOFpredefines_8hpp_a811af67809723e33dacf49cf06f82847}{00029}}\ \textcolor{preprocessor}{\#define\ CIOF\_VERSION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((CIOF\_VERSION\_MAJOR<<16)|(CIOF\_VERSION\_MINOR<<8)|(CIOF\_VERSION\_PATCH)|(CIOF\_VERSION\_STATE\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00031}\mbox{\hyperlink{CIOFpredefines_8hpp_a257cdf0dd35c0e2e8eb9ea0010a1ea26}{00031}}\ \textcolor{preprocessor}{\#define\ CIOF\_VERSION\_CHECK(CIOF\_VERSION\_MAJOR,\ CIOF\_VERSION\_MINOR,\ CIOF\_VERSION\_PATCH,\ CIOF\_VERSION\_STATE)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00032}00032\ \textcolor{preprocessor}{\ \ \ \ (((CIOF\_VERSION\_MAJOR)<<16)|((CIOF\_VERSION\_MINOR)<<8)|(CIOF\_VERSION\_PATCH)|((CIOF\_VERSION\_STATE)\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00034}00034\ \textcolor{comment}{//\ Macro\ utils}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00035}\mbox{\hyperlink{CIOFpredefines_8hpp_a3f843eb51ab1a7370f82941eeb1d7646}{00035}}\ \textcolor{preprocessor}{\#define\ CIOF\_STRINGIFY(x)\ \#x}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00036}\mbox{\hyperlink{CIOFpredefines_8hpp_a4fd4bdb95be2dd94e5df20f30998b405}{00036}}\ \textcolor{preprocessor}{\#define\ CIOF\_TOSTRING(x)\ CIOF\_STRINGIFY(x)}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00038}00038\ \textcolor{preprocessor}{\#ifndef\ CIOF\_DEV}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00039}\mbox{\hyperlink{CIOFpredefines_8hpp_a41d16094878c667d41faa2acbe80a0b8}{00039}}\ \textcolor{preprocessor}{\#\ \ \ define\ CIOF\_DEV\ true}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00040}00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !defined(CIOF\_DEV)}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00042}00042\ \textcolor{comment}{//\ OS\ Checks}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00043}00043\ \textcolor{preprocessor}{\#ifdef\ WIN32}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00044}00044\ \textcolor{preprocessor}{\#\ \ \ define\ CIOF\_OS\_WIN32}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00045}00045\ \textcolor{preprocessor}{\#\ \ \ if\ !defined(WIN32\_ANSI\_SUPPORT)}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00046}00046\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ define\ WIN32\_ANSI\_SUPPORT\ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00047}00047\ \textcolor{preprocessor}{\#\ \ \ endif}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00048}00048\ \textcolor{preprocessor}{\#\ \ \ if\ WIN32\_ANSI\_SUPPORT\ ==\ 1}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00049}00049\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ warning\ "{}ANSI\ Support\ for\ Windows\ is\ supported\ from\ Windows\ 10\ or\ newer"{}}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00050}00050\ \textcolor{preprocessor}{\#\ \ \ endif}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00051}00051\ \textcolor{preprocessor}{\#elif\ defined(\_\_APPLE\_\_)\ ||\ defined(\_\_MACH\_\_)\ ||\ defined(Macintosh)}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00052}00052\ \textcolor{preprocessor}{\#\ \ \ define\ CIOF\_OS\_MACOS}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00053}00053\ \textcolor{preprocessor}{\#elif\ defined(\_\_linux\_\_)\ ||\ defined(\_\_unix)\ ||\ defined(\_\_unix\_\_)}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00054}00054\ \textcolor{preprocessor}{\#\ \ \ define\ CIOF\_OS\_UNIX\_LINUX}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00055}00055\ \textcolor{preprocessor}{\#elif\ defined(\_\_FreeBSD\_\_)}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00056}00056\ \textcolor{preprocessor}{\#\ \ \ define\ CIOF\_OS\_FREEBSD}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00057}00057\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00058}00058\ \textcolor{preprocessor}{\#\ \ \ warning\ "{}Current\ platform\ might\ not\ supported"{}}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00059}00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ defined(WIN32)\ //\ Platform\ check}}
+\DoxyCodeLine{\Hypertarget{CIOFpredefines_8hpp_source_l00060}00060\ }
+
+\end{DoxyCode}

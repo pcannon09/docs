@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_1924d7fdc7a72c14ec019757945dfd3b" kind="dir">
+    <compoundname>inc/ciof</compoundname>
+    <innerfile refid="d8/d42/ciof_8hpp">ciof.hpp</innerfile>
+    <innerfile refid="dc/dcc/CIOFpredefines_8hpp">CIOFpredefines.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/ciof/"/>
+  </compounddef>
+</doxygen>

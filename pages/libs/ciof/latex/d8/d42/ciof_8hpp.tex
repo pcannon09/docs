@@ -1,0 +1,114 @@
+\doxysection{inc/ciof/ciof.hpp File Reference}
+\hypertarget{ciof_8hpp}{}\label{ciof_8hpp}\index{inc/ciof/ciof.hpp@{inc/ciof/ciof.hpp}}
+{\ttfamily \#include "{}CIOFpredefines.\+hpp"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}ciof.\+ipp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structciof_1_1CIOFOutputConfig}{ciof\+::\+CIOFOutput\+Config}}
+\begin{DoxyCompactList}\small\item\em Set output configuration for \doxylink{namespaceciof_1_1impl_abd44015c794d66d0403c1c740374c73f}{ciof\+::impl\+::\+\_\+\+\_\+out()} function and its wrappers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceciof}{ciof}}
+\item 
+namespace \mbox{\hyperlink{namespaceciof_1_1impl}{ciof\+::impl}}
+\begin{DoxyCompactList}\small\item\em Implementation functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ciof_8hpp_aee9afcb99f41a55dc39da48b35554819}{\+\_\+\+\_\+\+CIOF\+\_\+\+OK}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct ciof\+::\+CIOFOutput\+Config \mbox{\hyperlink{namespaceciof_a11dfa6fc0d7cf783cd52dfe0dbf63de1}{ciof\+::\+CIOFOutput\+Config}}
+\begin{DoxyCompactList}\small\item\em Set output configuration for \doxylink{namespaceciof_1_1impl_abd44015c794d66d0403c1c740374c73f}{ciof\+::impl\+::\+\_\+\+\_\+out()} function and its wrappers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686b}{ciof\+::\+Output\+Style}} \{ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246}{ciof\+::\+Bold}}
+, \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c}{ciof\+::\+Italic}}
+, \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439}{ciof\+::\+Underline}}
+, \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb}{ciof\+::\+Strikethrough}}
+ \}
+\begin{DoxyCompactList}\small\item\em Set output style\+: Bold Italic Underline Strikethrough. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{ciof\+::\+Output\+Type}} \{ \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747a7c147cda9e49590f6abe83d118b7353b}{ciof\+::\+Out}}
+, \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747ab47f6a6092c5d7e4bffec12dff309c3b}{ciof\+::\+Err}}
+, \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b}{ciof\+::\+Log}}
+ \}
+\begin{DoxyCompactList}\small\item\em Set output type for \doxylink{namespaceciof_1_1impl_abd44015c794d66d0403c1c740374c73f}{ciof\+::impl\+::\+\_\+\+\_\+out()} function and its helper functions Out \+: To Standard Output Err \+: To Standard Error Log \+: To Standard Log (Error, unbuffered) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_1_1impl_abd44015c794d66d0403c1c740374c73f}{ciof\+::impl\+::\+\_\+\+\_\+out}} (const \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{Output\+Type}} \&\+\_\+out\+Type, T \+\_\+t)
+\begin{DoxyCompactList}\small\item\em Output the with its corresponding type either to\+: \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename ... Args$>$ }\\void \mbox{\hyperlink{namespaceciof_1_1impl_a1891ea20ceaf9eb463765c53d4a0d007}{ciof\+::impl\+::\+\_\+\+\_\+out}} (const \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{Output\+Type}} \&\+\_\+out\+Type, T \+\_\+t, Args ... \+\_\+args)
+\begin{DoxyCompactList}\small\item\em Output the with its corresponding type either to\+: \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceciof_aefd966015567bb62676f13ef217d3b79}{ciof\+::color\+Set}} (int \+\_\+color)
+\begin{DoxyCompactList}\small\item\em Set the colors from the default color palette from the terminal. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_ae2f933bf22e4842d7aca72ead108f28c}{ciof\+::echo}} (T \+\_\+t)
+\begin{DoxyCompactList}\small\item\em Echo to the standard output for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename ... Args$>$ }\\void \mbox{\hyperlink{namespaceciof_a7cbb15b2dae1555e9c53992b01405e80}{ciof\+::echo}} (T \+\_\+t, Args ... \+\_\+args)
+\begin{DoxyCompactList}\small\item\em Echo to the standard output for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_af084498aae5fae4efa5f82b1bd0cb442}{ciof\+::echo\+Error}} (T \+\_\+t)
+\begin{DoxyCompactList}\small\item\em Echo to the standard error for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename ... Args$>$ }\\void \mbox{\hyperlink{namespaceciof_ab5a04c0ff1d0a664db701e70042d2a44}{ciof\+::echo\+Error}} (T \+\_\+t, Args ... \+\_\+args)
+\begin{DoxyCompactList}\small\item\em Echo to the standard log for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_af11fbdee1a0cc6113e58b31bcbfde05e}{ciof\+::echo\+Log}} (T \+\_\+t)
+\begin{DoxyCompactList}\small\item\em Echo to the standard log for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename ... Args$>$ }\\void \mbox{\hyperlink{namespaceciof_a66c51251b714b7bdedb8f628113311d4}{ciof\+::echo\+Log}} (T \+\_\+t, Args ... \+\_\+args)
+\begin{DoxyCompactList}\small\item\em Echo to the standard log for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename ... Args$>$ }\\std\+::string \mbox{\hyperlink{namespaceciof_a42851a9df059ee00504d50b5331ed963}{ciof\+::format}} (T \+\_\+t, Args ... \+\_\+args)
+\begin{DoxyCompactList}\small\item\em Get everything as a string format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceciof_a0d6add06e42bf2afe40d5e45db195218}{ciof\+::init\+ANSI}} ()
+\begin{DoxyCompactList}\small\item\em Initialize ANSI text option in Windows 10 or later NOTE\+: ONLY WORKS IN WINDOWS 10 OR LATER. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_a890c785dd53fa8333c95e8b9594b55e7}{ciof\+::input}} (const std\+::string \&\+\_\+prompt, T \texorpdfstring{$\ast$}{*}\+\_\+var)
+\begin{DoxyCompactList}\small\item\em Get full input from the user with a prompt. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_a6d046aa36f6f80976075523e2ba0974a}{ciof\+::input}} (T \texorpdfstring{$\ast$}{*}\+\_\+var)
+\begin{DoxyCompactList}\small\item\em Get full input from the user. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename ... Args$>$ }\\std\+::string \mbox{\hyperlink{namespaceciof_1_1impl_a3c0a39bb238468e7e6843e0a4e920b0b}{ciof\+::impl\+::parse}} (T \+\_\+fmt, Args ... \+\_\+args)
+\begin{DoxyCompactList}\small\item\em Parse the params for printing and echoing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceciof_a8c277d3a2caa58aed09e9bb8982d8ff3}{ciof\+::print}} ()
+\begin{DoxyCompactList}\small\item\em Print a new line. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_a89082a2cf2da077c0d3dae3ab99eede2}{ciof\+::print}} (T \+\_\+t)
+\begin{DoxyCompactList}\small\item\em Print to the standard output for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename ... Args$>$ }\\void \mbox{\hyperlink{namespaceciof_af9fb176a7cdcb9944ebf0521df004696}{ciof\+::print}} (T \+\_\+t, Args ... \+\_\+args)
+\begin{DoxyCompactList}\small\item\em Print to the standard output for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_a83792b27f8f1ffb969e4e69c5808cb91}{ciof\+::print\+Error}} (T \+\_\+t)
+\begin{DoxyCompactList}\small\item\em Print to the standard error for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename ... Args$>$ }\\void \mbox{\hyperlink{namespaceciof_a2b535b59d1fdbf6fdd654296b421f7ce}{ciof\+::print\+Error}} (T \+\_\+t, Args ... \+\_\+args)
+\begin{DoxyCompactList}\small\item\em Print to the standard error for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_a4e228d060caae991e1093a7bcd30aa57}{ciof\+::print\+Log}} (T \+\_\+t)
+\begin{DoxyCompactList}\small\item\em Print to the standard log for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename ... Args$>$ }\\void \mbox{\hyperlink{namespaceciof_af2ec490460503a2868462739ca9499cc}{ciof\+::print\+Log}} (T \+\_\+t, Args ... \+\_\+args)
+\begin{DoxyCompactList}\small\item\em Print to the standard log for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceciof_a34c4a83a2f7c4321fb3cd308ad2162bc}{ciof\+::rgb\+Set}} (unsigned int r, unsigned int g, unsigned int b)
+\begin{DoxyCompactList}\small\item\em Set the RGB color in the terminal. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceciof_a25987420300a8bf1380cebe37f6c082f}{ciof\+::style\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset all the styles and colors in the terminal. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceciof_a8ff4eb89ed64bb300da3ddf91cad7e4f}{ciof\+::style\+Set}} (const \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686b}{Output\+Style}} \&\+\_\+style)
+\begin{DoxyCompactList}\small\item\em Set the styles according to the {\ttfamily \doxylink{namespaceciof_a611be4fce5f7300347625ba4b708686b}{Output\+Style}} type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::string \mbox{\hyperlink{namespaceciof_1_1impl_ae1e6ee7cf401df4c08b650fa0ebde5ee}{ciof\+::impl\+::to\+String}} (const T \&\+\_\+val)
+\begin{DoxyCompactList}\small\item\em Convert to string safely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structciof_1_1CIOFOutputConfig}{CIOFOutput\+Config}} \mbox{\hyperlink{namespaceciof_a835007e60a4807051d32c3352e867119}{ciof\+::output\+Conf}}
+\begin{DoxyCompactList}\small\item\em Set default output configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{ciof_8hpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{ciof_8hpp_aee9afcb99f41a55dc39da48b35554819}\index{ciof.hpp@{ciof.hpp}!\_\_CIOF\_OK@{\_\_CIOF\_OK}}
+\index{\_\_CIOF\_OK@{\_\_CIOF\_OK}!ciof.hpp@{ciof.hpp}}
+\doxysubsubsection{\texorpdfstring{\_\_CIOF\_OK}{\_\_CIOF\_OK}}
+{\footnotesize\ttfamily \label{ciof_8hpp_aee9afcb99f41a55dc39da48b35554819} 
+\#define \+\_\+\+\_\+\+CIOF\+\_\+\+OK}
+
+
+
+Definition at line \mbox{\hyperlink{ciof_8hpp_source_l00007}{7}} of file \mbox{\hyperlink{ciof_8hpp_source}{ciof.\+hpp}}.
+

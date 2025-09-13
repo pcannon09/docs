@@ -1,0 +1,114 @@
+.TH "ciof::impl" 3 "Version v1.0.0-build" "CIOF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ciof::impl \- Implementation functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T> void \fB__out\fP (const \fBOutputType\fP &_outType, T _t)"
+.br
+.RI "Output the with its corresponding type either to: "
+.ti -1c
+.RI "template<typename T, typename \&.\&.\&. Args> void \fB__out\fP (const \fBOutputType\fP &_outType, T _t, Args \&.\&.\&. _args)"
+.br
+.RI "Output the with its corresponding type either to: "
+.ti -1c
+.RI "template<typename T, typename \&.\&.\&. Args> std::string \fBparse\fP (T _fmt, Args \&.\&.\&. _args)"
+.br
+.RI "Parse the params for printing and echoing\&. "
+.ti -1c
+.RI "template<typename T> std::string \fBtoString\fP (const T &_val)"
+.br
+.RI "Convert to string safely\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation functions\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T> void ciof::impl::__out (const \fBOutputType\fP & _outType, T _t)"
+
+.PP
+Output the with its corresponding type either to: 
+.IP "\(bu" 2
+Standard output
+.IP "\(bu" 2
+Standard error
+.IP "\(bu" 2
+Standard log (AKA: Error but unbuffered) 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_outType\fP Type for OUT, ERR or LOG 
+.br
+\fI_t\fP Text to add 
+.RE
+.PP
+
+.PP
+
+.SS "template<typename T, typename \&.\&.\&. Args> void ciof::impl::__out (const \fBOutputType\fP & _outType, T _t, Args \&.\&.\&. _args)"
+
+.PP
+Output the with its corresponding type either to: 
+.IP "\(bu" 2
+Standard output
+.IP "\(bu" 2
+Standard error
+.IP "\(bu" 2
+Standard log (AKA: Error but unbuffered) 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_outType\fP Type for OUT, ERR or LOG 
+.br
+\fI_t\fP Text to add 
+.br
+\fI_args\fP More text to add 
+.RE
+.PP
+
+.PP
+
+.SS "template<typename T, typename \&.\&.\&. Args> std::string ciof::impl::parse (T _fmt, Args \&.\&.\&. _args)"
+
+.PP
+Parse the params for printing and echoing\&. 
+.PP
+\fBReturns\fP
+.RS 4
+_fmt parameter 1 to parse 
+
+.PP
+_args parameter 2 to the last one to parse 
+
+.PP
+std::string Total parsed 
+.RE
+.PP
+
+.SS "template<typename T> std::string ciof::impl::toString (const T & _val)"
+
+.PP
+Convert to string safely\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_val\fP any convertable type to string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string total converted strig 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CIOF from the source code\&.

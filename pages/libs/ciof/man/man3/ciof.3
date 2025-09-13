@@ -1,0 +1,543 @@
+.TH "ciof" 3 "Version v1.0.0-build" "CIOF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ciof
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBimpl\fP"
+.br
+.RI "Implementation functions\&. "
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBCIOFOutputConfig\fP"
+.br
+.RI "Set output configuration for \fBciof::impl::__out()\fP function and its wrappers\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct ciof::CIOFOutputConfig \fBCIOFOutputConfig\fP"
+.br
+.RI "Set output configuration for \fBciof::impl::__out()\fP function and its wrappers\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum class \fBOutputStyle\fP { \fBBold\fP, \fBItalic\fP, \fBUnderline\fP, \fBStrikethrough\fP }"
+.br
+.RI "Set output style: Bold Italic Underline Strikethrough\&. "
+.ti -1c
+.RI "enum class \fBOutputType\fP { \fBOut\fP, \fBErr\fP, \fBLog\fP }"
+.br
+.RI "Set output type for \fBciof::impl::__out()\fP function and its helper functions Out : To Standard Output Err : To Standard Error Log : To Standard Log (Error, unbuffered) "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBcolorSet\fP (int _color)"
+.br
+.RI "Set the colors from the default color palette from the terminal\&. "
+.ti -1c
+.RI "template<typename T> void \fBecho\fP (T _t)"
+.br
+.RI "Echo to the standard output for \fR_t\fP "
+.ti -1c
+.RI "template<typename T, typename \&.\&.\&. Args> void \fBecho\fP (T _t, Args \&.\&.\&. _args)"
+.br
+.RI "Echo to the standard output for \fR_t\fP "
+.ti -1c
+.RI "template<typename T> void \fBechoError\fP (T _t)"
+.br
+.RI "Echo to the standard error for \fR_t\fP "
+.ti -1c
+.RI "template<typename T, typename \&.\&.\&. Args> void \fBechoError\fP (T _t, Args \&.\&.\&. _args)"
+.br
+.RI "Echo to the standard log for \fR_t\fP "
+.ti -1c
+.RI "template<typename T> void \fBechoLog\fP (T _t)"
+.br
+.RI "Echo to the standard log for \fR_t\fP "
+.ti -1c
+.RI "template<typename T, typename \&.\&.\&. Args> void \fBechoLog\fP (T _t, Args \&.\&.\&. _args)"
+.br
+.RI "Echo to the standard log for \fR_t\fP "
+.ti -1c
+.RI "template<typename T, typename \&.\&.\&. Args> std::string \fBformat\fP (T _t, Args \&.\&.\&. _args)"
+.br
+.RI "Get everything as a string format\&. "
+.ti -1c
+.RI "void \fBinitANSI\fP ()"
+.br
+.RI "Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER\&. "
+.ti -1c
+.RI "template<typename T> void \fBinput\fP (const std::string &_prompt, T *_var)"
+.br
+.RI "Get full input from the user with a prompt\&. "
+.ti -1c
+.RI "template<typename T> void \fBinput\fP (T *_var)"
+.br
+.RI "Get full input from the user\&. "
+.ti -1c
+.RI "void \fBprint\fP ()"
+.br
+.RI "Print a new line\&. "
+.ti -1c
+.RI "template<typename T> void \fBprint\fP (T _t)"
+.br
+.RI "Print to the standard output for \fR_t\fP "
+.ti -1c
+.RI "template<typename T, typename \&.\&.\&. Args> void \fBprint\fP (T _t, Args \&.\&.\&. _args)"
+.br
+.RI "Print to the standard output for \fR_t\fP "
+.ti -1c
+.RI "template<typename T> void \fBprintError\fP (T _t)"
+.br
+.RI "Print to the standard error for \fR_t\fP "
+.ti -1c
+.RI "template<typename T, typename \&.\&.\&. Args> void \fBprintError\fP (T _t, Args \&.\&.\&. _args)"
+.br
+.RI "Print to the standard error for \fR_t\fP "
+.ti -1c
+.RI "template<typename T> void \fBprintLog\fP (T _t)"
+.br
+.RI "Print to the standard log for \fR_t\fP "
+.ti -1c
+.RI "template<typename T, typename \&.\&.\&. Args> void \fBprintLog\fP (T _t, Args \&.\&.\&. _args)"
+.br
+.RI "Print to the standard log for \fR_t\fP "
+.ti -1c
+.RI "std::string \fBrgbSet\fP (unsigned int r, unsigned int g, unsigned int b)"
+.br
+.RI "Set the RGB color in the terminal\&. "
+.ti -1c
+.RI "std::string \fBstyleReset\fP ()"
+.br
+.RI "Reset all the styles and colors in the terminal\&. "
+.ti -1c
+.RI "std::string \fBstyleSet\fP (const \fBOutputStyle\fP &_style)"
+.br
+.RI "Set the styles according to the \fR\fBOutputStyle\fP\fP type\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBCIOFOutputConfig\fP \fBoutputConf\fP"
+.br
+.RI "Set default output configuration\&. "
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct ciof::CIOFOutputConfig ciof::CIOFOutputConfig"
+
+.PP
+Set output configuration for \fBciof::impl::__out()\fP function and its wrappers\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum class \fBciof::OutputStyle\fP\fR [strong]\fP"
+
+.PP
+Set output style: Bold Italic Underline Strikethrough\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIBold \fP
+.TP
+\f(BIItalic \fP
+.TP
+\f(BIUnderline \fP
+.TP
+\f(BIStrikethrough \fP
+.PP
+Definition at line \fB51\fP of file \fBciof\&.hpp\fP\&.
+.nf
+52     {
+53         Bold,
+54         Italic,
+55         Underline,
+56         Strikethrough
+57     };
+.PP
+.fi
+
+.SS "enum class \fBciof::OutputType\fP\fR [strong]\fP"
+
+.PP
+Set output type for \fBciof::impl::__out()\fP function and its helper functions Out : To Standard Output Err : To Standard Error Log : To Standard Log (Error, unbuffered) 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIOut \fP
+.TP
+\f(BIErr \fP
+.TP
+\f(BILog \fP
+.PP
+Definition at line \fB37\fP of file \fBciof\&.hpp\fP\&.
+.nf
+38     {
+39         Out, // std::cout
+40         Err, // std::cerr
+41         Log, // std::clog
+42     };
+.PP
+.fi
+
+.SH "Function Documentation"
+.PP 
+.SS "std::string ciof::colorSet (int _color)"
+
+.PP
+Set the colors from the default color palette from the terminal\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_color\fP Integer for color 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string Escape code to set the code 
+.RE
+.PP
+
+.PP
+Definition at line \fB51\fP of file \fBciof\&.cpp\fP\&.
+.nf
+52     { return "\\033[" + std::to_string(_color) + "m"; }
+.PP
+.fi
+
+.SS "template<typename T> void ciof::echo (T _t)"
+
+.PP
+Echo to the standard output for \fR_t\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_t\fP Message to print 
+.RE
+.PP
+
+.SS "template<typename T, typename \&.\&.\&. Args> void ciof::echo (T _t, Args \&.\&.\&. _args)"
+
+.PP
+Echo to the standard output for \fR_t\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_t\fP Message to print 
+.br
+\fI_args\fP More messages to add 
+.RE
+.PP
+
+.SS "template<typename T> void ciof::echoError (T _t)"
+
+.PP
+Echo to the standard error for \fR_t\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_t\fP Message to print 
+.RE
+.PP
+
+.SS "template<typename T, typename \&.\&.\&. Args> void ciof::echoError (T _t, Args \&.\&.\&. _args)"
+
+.PP
+Echo to the standard log for \fR_t\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_t\fP Message to print 
+.br
+\fI_args\fP More messages to add 
+.RE
+.PP
+
+.SS "template<typename T> void ciof::echoLog (T _t)"
+
+.PP
+Echo to the standard log for \fR_t\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_t\fP Message to print 
+.RE
+.PP
+
+.SS "template<typename T, typename \&.\&.\&. Args> void ciof::echoLog (T _t, Args \&.\&.\&. _args)"
+
+.PP
+Echo to the standard log for \fR_t\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_t\fP Message to print 
+.br
+\fI_args\fP More messages to add 
+.RE
+.PP
+
+.SS "template<typename T, typename \&.\&.\&. Args> std::string ciof::format (T _t, Args \&.\&.\&. _args)"
+
+.PP
+Get everything as a string format\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_t\fP First param of the string 
+.br
+\fI_args\fP Rest of the params of the string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string Return the formatted string 
+.RE
+.PP
+
+.SS "void ciof::initANSI ()"
+
+.PP
+Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER\&. 
+.PP
+Definition at line \fB18\fP of file \fBciof\&.cpp\fP\&.
+.nf
+19     {
+20 #   ifdef CIOF_OS_WIN32
+21         // NOTE:
+22         // This must ONLY be used in Windows 10 or newer
+23         if (!IsWindows10OrGreater()) return;
+24         
+25         HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+26         DWORD dwMode = 0;
+27 
+28         GetConsoleMode(hOut, &dwMode);
+29 
+30         dwMode |= ENABLE_VIRTUAL_PROCESSING
+31 
+32         SetConsoleMode(hOut, dwMode)
+33 #   endif
+34     }
+.PP
+.fi
+
+.SS "template<typename T> void ciof::input (const std::string & _prompt, T * _var)"
+
+.PP
+Get full input from the user with a prompt\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_prompt\fP Prompt to user 
+.br
+\fI_var\fP Variable to store the value 
+.RE
+.PP
+
+.SS "template<typename T> void ciof::input (T * _var)"
+
+.PP
+Get full input from the user\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_prompt\fP Prompt to user 
+.br
+\fI_var\fP Variable to store the value 
+.RE
+.PP
+
+.SS "void ciof::print ()"
+
+.PP
+Print a new line\&. 
+.PP
+Definition at line \fB15\fP of file \fBciof\&.cpp\fP\&.
+.nf
+16     { std::cout << std::endl; }
+.PP
+.fi
+
+.SS "template<typename T> void ciof::print (T _t)"
+
+.PP
+Print to the standard output for \fR_t\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_t\fP Message to print 
+.RE
+.PP
+
+.SS "template<typename T, typename \&.\&.\&. Args> void ciof::print (T _t, Args \&.\&.\&. _args)"
+
+.PP
+Print to the standard output for \fR_t\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_t\fP Message to print 
+.br
+\fI_args\fP More messages to add 
+.RE
+.PP
+
+.SS "template<typename T> void ciof::printError (T _t)"
+
+.PP
+Print to the standard error for \fR_t\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_t\fP Message to print 
+.RE
+.PP
+
+.SS "template<typename T, typename \&.\&.\&. Args> void ciof::printError (T _t, Args \&.\&.\&. _args)"
+
+.PP
+Print to the standard error for \fR_t\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_t\fP Message to print 
+.br
+\fI_args\fP More messages to add 
+.RE
+.PP
+
+.SS "template<typename T> void ciof::printLog (T _t)"
+
+.PP
+Print to the standard log for \fR_t\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_t\fP Message to print 
+.RE
+.PP
+
+.SS "template<typename T, typename \&.\&.\&. Args> void ciof::printLog (T _t, Args \&.\&.\&. _args)"
+
+.PP
+Print to the standard log for \fR_t\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_t\fP Message to print 
+.br
+\fI_args\fP More messages to add 
+.RE
+.PP
+
+.SS "std::string ciof::rgbSet (unsigned int r, unsigned int g, unsigned int b)"
+
+.PP
+Set the RGB color in the terminal\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIr\fP Red color 
+.br
+\fIg\fP Green color 
+.br
+\fIb\fP Blue color 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string Color escape sequence for RGB colors 
+.RE
+.PP
+
+.PP
+Definition at line \fB54\fP of file \fBciof\&.cpp\fP\&.
+.nf
+55     {
+56         return "\\033[38;2;" + std::to_string(r) + ";"
+57             + std::to_string(g) + ";"
+58             + std::to_string(b) + "m";
+59     }
+.PP
+.fi
+
+.SS "std::string ciof::styleReset ()"
+
+.PP
+Reset all the styles and colors in the terminal\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::string Escape code to ereset colors and styles from terminal 
+.RE
+.PP
+
+.PP
+Definition at line \fB48\fP of file \fBciof\&.cpp\fP\&.
+.nf
+49     { return "\\033[0m"; }
+.PP
+.fi
+
+.SS "std::string ciof::styleSet (const \fBOutputStyle\fP & _style)"
+
+.PP
+Set the styles according to the \fR\fBOutputStyle\fP\fP type\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_style\fP Set the style (Bold, Italics, Underline, \&.\&.\&.) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string Escape code according to the style 
+.RE
+.PP
+
+.PP
+Definition at line \fB36\fP of file \fBciof\&.cpp\fP\&.
+.nf
+37     {
+38         switch (_style)
+39         {
+40             case ciof::OutputStyle::Bold:                   return "\\033[1m"; 
+41             case ciof::OutputStyle::Italic:                 return "\\033[3m"; 
+42             case ciof::OutputStyle::Underline:              return "\\033[4m"; 
+43             case ciof::OutputStyle::Strikethrough:          return "\\033[9m"; 
+44             default:                                        return "";
+45         }
+46     }
+.PP
+.fi
+
+.PP
+References \fBBold\fP, \fBItalic\fP, \fBStrikethrough\fP, and \fBUnderline\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBCIOFOutputConfig\fP ciof::outputConf"
+
+.PP
+Set default output configuration\&. 
+.PP
+Definition at line \fB13\fP of file \fBciof\&.cpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CIOF from the source code\&.

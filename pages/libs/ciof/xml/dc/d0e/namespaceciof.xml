@@ -1,0 +1,946 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dc/d0e/namespaceciof" kind="namespace" language="C++">
+    <compoundname>ciof</compoundname>
+    <innerclass refid="d6/d74/structciof_1_1CIOFOutputConfig" prot="public">ciof::CIOFOutputConfig</innerclass>
+    <innernamespace refid="d7/d5a/namespaceciof_1_1impl">ciof::impl</innernamespace>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686b" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>OutputStyle</name>
+        <qualifiedname>ciof::OutputStyle</qualifiedname>
+        <enumvalue id="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246" prot="public">
+          <name>Bold</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c" prot="public">
+          <name>Italic</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439" prot="public">
+          <name>Underline</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb" prot="public">
+          <name>Strikethrough</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Set output style: Bold Italic Underline Strikethrough. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="51" column="1" bodyfile="inc/ciof/ciof.hpp" bodystart="52" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="enum" id="dc/d0e/namespaceciof_1a255b49fbd04393ba7532b832b580e747" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>OutputType</name>
+        <qualifiedname>ciof::OutputType</qualifiedname>
+        <enumvalue id="dc/d0e/namespaceciof_1a255b49fbd04393ba7532b832b580e747a7c147cda9e49590f6abe83d118b7353b" prot="public">
+          <name>Out</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d0e/namespaceciof_1a255b49fbd04393ba7532b832b580e747ab47f6a6092c5d7e4bffec12dff309c3b" prot="public">
+          <name>Err</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d0e/namespaceciof_1a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b" prot="public">
+          <name>Log</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Set output type for <ref refid="d7/d5a/namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f" kindref="member">ciof::impl::__out()</ref> function and its helper functions Out : To Standard Output Err : To Standard Error Log : To Standard Log (Error, unbuffered) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="37" column="1" bodyfile="inc/ciof/ciof.hpp" bodystart="38" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dc/d0e/namespaceciof_1a11dfa6fc0d7cf783cd52dfe0dbf63de1" prot="public" static="no">
+        <type>struct ciof::CIOFOutputConfig</type>
+        <definition>typedef struct ciof::CIOFOutputConfig ciof::CIOFOutputConfig</definition>
+        <argsstring></argsstring>
+        <name>CIOFOutputConfig</name>
+        <qualifiedname>ciof::CIOFOutputConfig</qualifiedname>
+        <briefdescription>
+<para>Set output configuration for <ref refid="d7/d5a/namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f" kindref="member">ciof::impl::__out()</ref> function and its wrappers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="29" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="dc/d0e/namespaceciof_1a835007e60a4807051d32c3352e867119" prot="public" static="no" mutable="no">
+        <type><ref refid="d6/d74/structciof_1_1CIOFOutputConfig" kindref="compound">CIOFOutputConfig</ref></type>
+        <definition>CIOFOutputConfig ciof::outputConf</definition>
+        <argsstring></argsstring>
+        <name>outputConf</name>
+        <qualifiedname>ciof::outputConf</qualifiedname>
+        <briefdescription>
+<para>Set default output configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ciof.cpp" line="13" column="18" bodyfile="src/ciof.cpp" bodystart="13" bodyend="-1" declfile="inc/ciof/ciof.hpp" declline="62" declcolumn="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1aefd966015567bb62676f13ef217d3b79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ciof::colorSet</definition>
+        <argsstring>(int _color)</argsstring>
+        <name>colorSet</name>
+        <qualifiedname>ciof::colorSet</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_color</declname>
+        </param>
+        <briefdescription>
+<para>Set the colors from the default color palette from the terminal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Integer for color </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string Escape code to set the code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ciof.cpp" line="51" column="13" bodyfile="src/ciof.cpp" bodystart="51" bodyend="52" declfile="inc/ciof/ciof.hpp" declline="254" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::echo</definition>
+        <argsstring>(T _t)</argsstring>
+        <name>echo</name>
+        <qualifiedname>ciof::echo</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <briefdescription>
+<para>Echo to the standard output for <computeroutput>_t</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="169" column="6" declfile="inc/ciof/ciof.hpp" declline="169" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a7cbb15b2dae1555e9c53992b01405e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::echo</definition>
+        <argsstring>(T _t, Args ... _args)</argsstring>
+        <name>echo</name>
+        <qualifiedname>ciof::echo</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <param>
+          <type>Args ...</type>
+          <declname>_args</declname>
+        </param>
+        <briefdescription>
+<para>Echo to the standard output for <computeroutput>_t</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>More messages to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="177" column="6" declfile="inc/ciof/ciof.hpp" declline="177" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1af084498aae5fae4efa5f82b1bd0cb442" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::echoError</definition>
+        <argsstring>(T _t)</argsstring>
+        <name>echoError</name>
+        <qualifiedname>ciof::echoError</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <briefdescription>
+<para>Echo to the standard error for <computeroutput>_t</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="199" column="10" declfile="inc/ciof/ciof.hpp" declline="199" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1ab5a04c0ff1d0a664db701e70042d2a44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::echoError</definition>
+        <argsstring>(T _t, Args ... _args)</argsstring>
+        <name>echoError</name>
+        <qualifiedname>ciof::echoError</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <param>
+          <type>Args ...</type>
+          <declname>_args</declname>
+        </param>
+        <briefdescription>
+<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>More messages to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="207" column="10" declfile="inc/ciof/ciof.hpp" declline="207" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1af11fbdee1a0cc6113e58b31bcbfde05e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::echoLog</definition>
+        <argsstring>(T _t)</argsstring>
+        <name>echoLog</name>
+        <qualifiedname>ciof::echoLog</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <briefdescription>
+<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="184" column="10" declfile="inc/ciof/ciof.hpp" declline="184" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a66c51251b714b7bdedb8f628113311d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::echoLog</definition>
+        <argsstring>(T _t, Args ... _args)</argsstring>
+        <name>echoLog</name>
+        <qualifiedname>ciof::echoLog</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <param>
+          <type>Args ...</type>
+          <declname>_args</declname>
+        </param>
+        <briefdescription>
+<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>More messages to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="192" column="10" declfile="inc/ciof/ciof.hpp" declline="192" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a42851a9df059ee00504d50b5331ed963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string ciof::format</definition>
+        <argsstring>(T _t, Args ... _args)</argsstring>
+        <name>format</name>
+        <qualifiedname>ciof::format</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <param>
+          <type>Args ...</type>
+          <declname>_args</declname>
+        </param>
+        <briefdescription>
+<para>Get everything as a string format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First param of the string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rest of the params of the string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string Return the formatted string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="234" column="13" declfile="inc/ciof/ciof.hpp" declline="234" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a0d6add06e42bf2afe40d5e45db195218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ciof::initANSI</definition>
+        <argsstring>()</argsstring>
+        <name>initANSI</name>
+        <qualifiedname>ciof::initANSI</qualifiedname>
+        <briefdescription>
+<para>Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ciof.cpp" line="18" column="6" bodyfile="src/ciof.cpp" bodystart="18" bodyend="34" declfile="inc/ciof/ciof.hpp" declline="269" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a890c785dd53fa8333c95e8b9594b55e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::input</definition>
+        <argsstring>(const std::string &amp;_prompt, T *_var)</argsstring>
+        <name>input</name>
+        <qualifiedname>ciof::input</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_prompt</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>_var</declname>
+        </param>
+        <briefdescription>
+<para>Get full input from the user with a prompt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_prompt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Prompt to user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable to store the value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="216" column="6" declfile="inc/ciof/ciof.hpp" declline="216" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a6d046aa36f6f80976075523e2ba0974a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::input</definition>
+        <argsstring>(T *_var)</argsstring>
+        <name>input</name>
+        <qualifiedname>ciof::input</qualifiedname>
+        <param>
+          <type>T *</type>
+          <declname>_var</declname>
+        </param>
+        <briefdescription>
+<para>Get full input from the user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_prompt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Prompt to user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable to store the value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="224" column="6" declfile="inc/ciof/ciof.hpp" declline="224" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a8c277d3a2caa58aed09e9bb8982d8ff3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ciof::print</definition>
+        <argsstring>()</argsstring>
+        <name>print</name>
+        <qualifiedname>ciof::print</qualifiedname>
+        <briefdescription>
+<para>Print a new line. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ciof.cpp" line="15" column="6" bodyfile="src/ciof.cpp" bodystart="15" bodyend="16" declfile="inc/ciof/ciof.hpp" declline="116" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a89082a2cf2da077c0d3dae3ab99eede2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::print</definition>
+        <argsstring>(T _t)</argsstring>
+        <name>print</name>
+        <qualifiedname>ciof::print</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <briefdescription>
+<para>Print to the standard output for <computeroutput>_t</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="123" column="6" declfile="inc/ciof/ciof.hpp" declline="123" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1af9fb176a7cdcb9944ebf0521df004696" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::print</definition>
+        <argsstring>(T _t, Args ... _args)</argsstring>
+        <name>print</name>
+        <qualifiedname>ciof::print</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <param>
+          <type>Args ...</type>
+          <declname>_args</declname>
+        </param>
+        <briefdescription>
+<para>Print to the standard output for <computeroutput>_t</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>More messages to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="131" column="6" declfile="inc/ciof/ciof.hpp" declline="131" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a83792b27f8f1ffb969e4e69c5808cb91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::printError</definition>
+        <argsstring>(T _t)</argsstring>
+        <name>printError</name>
+        <qualifiedname>ciof::printError</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <briefdescription>
+<para>Print to the standard error for <computeroutput>_t</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="153" column="6" declfile="inc/ciof/ciof.hpp" declline="153" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a2b535b59d1fdbf6fdd654296b421f7ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::printError</definition>
+        <argsstring>(T _t, Args ... _args)</argsstring>
+        <name>printError</name>
+        <qualifiedname>ciof::printError</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <param>
+          <type>Args ...</type>
+          <declname>_args</declname>
+        </param>
+        <briefdescription>
+<para>Print to the standard error for <computeroutput>_t</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>More messages to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="161" column="6" declfile="inc/ciof/ciof.hpp" declline="161" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a4e228d060caae991e1093a7bcd30aa57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::printLog</definition>
+        <argsstring>(T _t)</argsstring>
+        <name>printLog</name>
+        <qualifiedname>ciof::printLog</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <briefdescription>
+<para>Print to the standard log for <computeroutput>_t</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="138" column="6" declfile="inc/ciof/ciof.hpp" declline="138" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1af2ec490460503a2868462739ca9499cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ciof::printLog</definition>
+        <argsstring>(T _t, Args ... _args)</argsstring>
+        <name>printLog</name>
+        <qualifiedname>ciof::printLog</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>_t</declname>
+        </param>
+        <param>
+          <type>Args ...</type>
+          <declname>_args</declname>
+        </param>
+        <briefdescription>
+<para>Print to the standard log for <computeroutput>_t</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to print </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>More messages to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="146" column="6" declfile="inc/ciof/ciof.hpp" declline="146" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a34c4a83a2f7c4321fb3cd308ad2162bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ciof::rgbSet</definition>
+        <argsstring>(unsigned int r, unsigned int g, unsigned int b)</argsstring>
+        <name>rgbSet</name>
+        <qualifiedname>ciof::rgbSet</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Set the RGB color in the terminal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Red color </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Green color </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blue color </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string Color escape sequence for RGB colors </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ciof.cpp" line="54" column="13" bodyfile="src/ciof.cpp" bodystart="54" bodyend="59" declfile="inc/ciof/ciof.hpp" declline="263" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a25987420300a8bf1380cebe37f6c082f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ciof::styleReset</definition>
+        <argsstring>()</argsstring>
+        <name>styleReset</name>
+        <qualifiedname>ciof::styleReset</qualifiedname>
+        <briefdescription>
+<para>Reset all the styles and colors in the terminal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string Escape code to ereset colors and styles from terminal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ciof.cpp" line="48" column="13" bodyfile="src/ciof.cpp" bodystart="48" bodyend="49" declfile="inc/ciof/ciof.hpp" declline="247" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a8ff4eb89ed64bb300da3ddf91cad7e4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ciof::styleSet</definition>
+        <argsstring>(const OutputStyle &amp;_style)</argsstring>
+        <name>styleSet</name>
+        <qualifiedname>ciof::styleSet</qualifiedname>
+        <param>
+          <type>const <ref refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686b" kindref="member">OutputStyle</ref> &amp;</type>
+          <declname>_style</declname>
+        </param>
+        <briefdescription>
+<para>Set the styles according to the <computeroutput><ref refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686b" kindref="member">OutputStyle</ref></computeroutput> type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set the style (Bold, Italics, Underline, ...) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string Escape code according to the style </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ciof.cpp" line="36" column="13" bodyfile="src/ciof.cpp" bodystart="36" bodyend="46" declfile="inc/ciof/ciof.hpp" declline="241" declcolumn="13"/>
+        <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246" compoundref="d8/d42/ciof_8hpp" startline="53">Bold</references>
+        <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c" compoundref="d8/d42/ciof_8hpp" startline="54">Italic</references>
+        <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb" compoundref="d8/d42/ciof_8hpp" startline="56">Strikethrough</references>
+        <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439" compoundref="d8/d42/ciof_8hpp" startline="55">Underline</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/ciof/ciof.hpp" line="11" column="1"/>
+  </compounddef>
+</doxygen>

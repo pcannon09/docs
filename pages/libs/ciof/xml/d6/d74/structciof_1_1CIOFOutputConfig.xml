@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="d6/d74/structciof_1_1CIOFOutputConfig" kind="struct" language="C++" prot="public">
+    <compoundname>ciof::CIOFOutputConfig</compoundname>
+    <includes refid="d8/d42/ciof_8hpp" local="no">ciof.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d6/d74/structciof_1_1CIOFOutputConfig_1aeb9bf813d089448e9ebedb3858d77f74" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ciof::CIOFOutputConfig::ignoreAllFormating</definition>
+        <argsstring></argsstring>
+        <name>ignoreAllFormating</name>
+        <qualifiedname>ciof::CIOFOutputConfig::ignoreAllFormating</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="22" column="6" bodyfile="inc/ciof/ciof.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/structciof_1_1CIOFOutputConfig_1ad15d1fdd800eb4da46896e369646298f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ciof::CIOFOutputConfig::processing</definition>
+        <argsstring></argsstring>
+        <name>processing</name>
+        <qualifiedname>ciof::CIOFOutputConfig::processing</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="25" column="6" bodyfile="inc/ciof/ciof.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/structciof_1_1CIOFOutputConfig_1a6c554213c7a2c40c2e98795b53c62cc8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ciof::CIOFOutputConfig::spacing</definition>
+        <argsstring></argsstring>
+        <name>spacing</name>
+        <qualifiedname>ciof::CIOFOutputConfig::spacing</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="19" column="6" bodyfile="inc/ciof/ciof.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/structciof_1_1CIOFOutputConfig_1a4e97b336cd4468de3d275c8377514c73" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ciof::CIOFOutputConfig::spacingDelimeter</definition>
+        <argsstring></argsstring>
+        <name>spacingDelimeter</name>
+        <qualifiedname>ciof::CIOFOutputConfig::spacingDelimeter</qualifiedname>
+        <initializer>= &quot; &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/ciof.hpp" line="28" column="13" bodyfile="inc/ciof/ciof.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Set output configuration for <ref refid="d7/d5a/namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f" kindref="member">ciof::impl::__out()</ref> function and its wrappers. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ciof::CIOFOutputConfig</label>
+        <link refid="d6/d74/structciof_1_1CIOFOutputConfig"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>spacingDelimeter</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="inc/ciof/ciof.hpp" line="16" column="1" bodyfile="inc/ciof/ciof.hpp" bodystart="17" bodyend="29"/>
+    <listofallmembers>
+      <member refid="d6/d74/structciof_1_1CIOFOutputConfig_1aeb9bf813d089448e9ebedb3858d77f74" prot="public" virt="non-virtual"><scope>ciof::CIOFOutputConfig</scope><name>ignoreAllFormating</name></member>
+      <member refid="d6/d74/structciof_1_1CIOFOutputConfig_1ad15d1fdd800eb4da46896e369646298f" prot="public" virt="non-virtual"><scope>ciof::CIOFOutputConfig</scope><name>processing</name></member>
+      <member refid="d6/d74/structciof_1_1CIOFOutputConfig_1a6c554213c7a2c40c2e98795b53c62cc8" prot="public" virt="non-virtual"><scope>ciof::CIOFOutputConfig</scope><name>spacing</name></member>
+      <member refid="d6/d74/structciof_1_1CIOFOutputConfig_1a4e97b336cd4468de3d275c8377514c73" prot="public" virt="non-virtual"><scope>ciof::CIOFOutputConfig</scope><name>spacingDelimeter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

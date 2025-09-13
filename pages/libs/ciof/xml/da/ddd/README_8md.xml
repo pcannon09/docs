@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="da/ddd/README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>CIOF<sp/>-<sp/>Custom<sp/>Input<sp/>Output<sp/>Format</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">`CIOF`<sp/>is<sp/>a<sp/>lightweight<sp/>C++17+<sp/>input/output<sp/>framework<sp/>designed<sp/>to<sp/>simplify<sp/>formatted<sp/>printing,<sp/>logging,<sp/>and<sp/>user<sp/>interaction.</highlight></codeline>
+<codeline><highlight class="normal">It<sp/>provides<sp/>a<sp/>set<sp/>of<sp/>high-level<sp/>utilities<sp/>to<sp/>handle<sp/>standard<sp/>output,<sp/>error<sp/>logging,<sp/>ANSI<sp/>styling,<sp/>and<sp/>user<sp/>input<sp/>consistently<sp/>across<sp/>platforms**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Unified<sp/>Output<sp/>Handling**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Output<sp/>to<sp/>`std::cout`,<sp/>`std::cerr`,<sp/>or<sp/>`std::clog`<sp/>with<sp/>a<sp/>simple<sp/>API.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Configurable<sp/>Output**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Control<sp/>spacing,<sp/>delimiters,<sp/>and<sp/>formatting<sp/>globally<sp/>via<sp/>`ciof::outputConf`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Print<sp/>&amp;<sp/>Echo<sp/>Helpers**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>`print()`<sp/>for<sp/>output<sp/>with<sp/>newline</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>`echo()`<sp/>for<sp/>output<sp/>without<sp/>newline</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Variants<sp/>for<sp/>standard<sp/>log<sp/>and<sp/>error<sp/>streams</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Input<sp/>Utilities**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Read<sp/>values<sp/>interactively<sp/>with<sp/>`input()`<sp/>functions,<sp/>optionally<sp/>with<sp/>a<sp/>prompt.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**ANSI<sp/>Styling<sp/>Support**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Easily<sp/>apply<sp/>bold,<sp/>italic,<sp/>underline,<sp/>strikethrough,<sp/>or<sp/>custom<sp/>RGB<sp/>colors.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Cross-Platform<sp/>(with<sp/>limitations)**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Works<sp/>on<sp/>Linux,<sp/>macOS,<sp/>and<sp/>Windows<sp/>10+.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Versions<sp/>lower<sp/>than<sp/>Windows<sp/>10<sp/>have<sp/>no<sp/>support<sp/>for<sp/>ANSI</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Output<sp/>behavior<sp/>can<sp/>be<sp/>controlled<sp/>globally<sp/>using<sp/>`ciof::CIOFOutputConfig`.</highlight></codeline>
+<codeline><highlight class="normal">Options<sp/>include<sp/>automatic<sp/>spacing,<sp/>custom<sp/>delimiters,<sp/>ignoring<sp/>formatting<sp/>keywords,<sp/>and<sp/>enabling/disabling<sp/>processing.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Supported<sp/>Compilers</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>GCC<sp/>&gt;=<sp/>7.0</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Clang<sp/>&gt;=<sp/>6.0</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>MSVC<sp/>&gt;=<sp/>19.14<sp/>(Visual<sp/>Studio<sp/>2017<sp/>15.7)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">All<sp/>compilers<sp/>must<sp/>support<sp/>C++17<sp/>or<sp/>higher.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Platform<sp/>Support</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Linux<sp/>-<sp/>Fully<sp/>supported</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>macOS<sp/>-<sp/>Fully<sp/>supported</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Windows<sp/>10<sp/>or<sp/>later<sp/>only<sp/>-<sp/>Versions<sp/>lower<sp/>than<sp/>Windows<sp/>10<sp/>have<sp/>no<sp/>support<sp/>for<sp/>ANSI,<sp/>but<sp/>still<sp/>functional</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>MINIMAL<sp/>CMAKE<sp/>EXAMPLE</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cmake</highlight></codeline>
+<codeline><highlight class="normal">cmake_minimum_required(VERSION<sp/>3.24)</highlight></codeline>
+<codeline><highlight class="normal">project(ciofTestingProject<sp/>VERSION<sp/>1.0<sp/>LANGUAGES<sp/>CXX)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Set<sp/>C++17</highlight></codeline>
+<codeline><highlight class="normal">set(CMAKE_CXX_STANDARD<sp/>17)</highlight></codeline>
+<codeline><highlight class="normal">set(CMAKE_CXX_STANDARD_REQUIRED<sp/>ON)</highlight></codeline>
+<codeline><highlight class="normal">set(CMAKE_CXX_EXTENSIONS<sp/>OFF)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Find<sp/>the<sp/>system-installed<sp/>CIOF<sp/>package</highlight></codeline>
+<codeline><highlight class="normal">find_package(ciof<sp/>REQUIRED)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Add<sp/>the<sp/>test<sp/>executable</highlight></codeline>
+<codeline><highlight class="normal">add_executable(ciofTesting<sp/>ciofTesting.cpp)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Include<sp/>CIOF<sp/>headers<sp/>and<sp/>link<sp/>its<sp/>library</highlight></codeline>
+<codeline><highlight class="normal">target_link_libraries(ciofTesting<sp/>PRIVATE<sp/>Ciof::ciof_static)<sp/>#<sp/>or<sp/>`ciof_shared`</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>MINIMAL<sp/>CODE<sp/>EXAMPLE</highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;ciof/ciof.hpp&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()<sp/>{<sp/>ciof::print(&quot;CIOF<sp/>Works.&quot;);<sp/>}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

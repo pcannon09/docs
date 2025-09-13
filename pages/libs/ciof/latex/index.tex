@@ -1,0 +1,77 @@
+\chapter{CIOF -\/ Custom Input Output Format }
+\hypertarget{index}{}\label{index}\index{CIOF -\/ Custom Input Output Format@{CIOF -\/ Custom Input Output Format}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+
+
+{\ttfamily CIOF} is a lightweight C++17+ input/output framework designed to simplify formatted printing, logging, and user interaction. It provides a set of high-\/level utilities to handle standard output, error logging, ANSI styling, and user input consistently across platforms\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Features}{Features}}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item {\bfseries{Unified Output Handling}} Output to {\ttfamily std\+::cout}, {\ttfamily std\+::cerr}, or {\ttfamily std\+::clog} with a simple API.
+\item {\bfseries{Configurable Output}} Control spacing, delimiters, and formatting globally via {\ttfamily \doxylink{namespaceciof_a835007e60a4807051d32c3352e867119}{ciof\+::output\+Conf}}.
+\item {\bfseries{Print \& Echo Helpers}}
+\begin{DoxyItemize}
+\item {\ttfamily print()} for output with newline
+\item {\ttfamily echo()} for output without newline
+\item Variants for standard log and error streams
+\end{DoxyItemize}
+\item {\bfseries{Input Utilities}} Read values interactively with {\ttfamily input()} functions, optionally with a prompt.
+\item {\bfseries{ANSI Styling Support}} Easily apply bold, italic, underline, strikethrough, or custom RGB colors.
+\item {\bfseries{Cross-\/\+Platform (with limitations)}} Works on Linux, mac\+OS, and Windows 10+. Versions lower than Windows 10 have no support for ANSI
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Configuration}{Configuration}}\label{index_autotoc_md4}
+Output behavior can be controlled globally using {\ttfamily \doxylink{structciof_1_1CIOFOutputConfig}{ciof\+::\+CIOFOutput\+Config}}. Options include automatic spacing, custom delimiters, ignoring formatting keywords, and enabling/disabling processing.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{Supported Compilers}{Supported Compilers}}\label{index_autotoc_md6}
+
+\begin{DoxyItemize}
+\item GCC \texorpdfstring{$>$}{>}= 7.\+0
+\item Clang \texorpdfstring{$>$}{>}= 6.\+0
+\item MSVC \texorpdfstring{$>$}{>}= 19.\+14 (Visual Studio 2017 15.\+7)
+\end{DoxyItemize}
+
+All compilers must support C++17 or higher.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{Platform Support}{Platform Support}}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Linux -\/ Fully supported
+\item mac\+OS -\/ Fully supported
+\item Windows 10 or later only -\/ Versions lower than Windows 10 have no support for ANSI, but still functional
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysection{\texorpdfstring{MINIMAL CMAKE EXAMPLE}{MINIMAL CMAKE EXAMPLE}}\label{index_autotoc_md9}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\_minimum\_required(VERSION\ 3.24)}
+\DoxyCodeLine{project(ciofTestingProject\ VERSION\ 1.0\ LANGUAGES\ CXX)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Set\ C++17}
+\DoxyCodeLine{set(CMAKE\_CXX\_STANDARD\ 17)}
+\DoxyCodeLine{set(CMAKE\_CXX\_STANDARD\_REQUIRED\ ON)}
+\DoxyCodeLine{set(CMAKE\_CXX\_EXTENSIONS\ OFF)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Find\ the\ system-\/installed\ CIOF\ package}
+\DoxyCodeLine{find\_package(ciof\ REQUIRED)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Add\ the\ test\ executable}
+\DoxyCodeLine{add\_executable(ciofTesting\ ciofTesting.cpp)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Include\ CIOF\ headers\ and\ link\ its\ library}
+\DoxyCodeLine{target\_link\_libraries(ciofTesting\ PRIVATE\ Ciof::ciof\_static)\ \#\ or\ \`{}ciof\_shared`}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md10}{}\doxysection{\texorpdfstring{MINIMAL CODE EXAMPLE}{MINIMAL CODE EXAMPLE}}\label{index_autotoc_md10}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ciof_8hpp}{ciof/ciof.hpp}}>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main()\ \{\ \mbox{\hyperlink{namespaceciof_a8c277d3a2caa58aed09e9bb8982d8ff3}{ciof::print}}(\textcolor{stringliteral}{"{}CIOF\ Works."{}});\ \}}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['ciof_0',['ciof',['../dc/d0e/namespaceciof.html',1,'']]],
+  ['ciof_20custom_20input_20output_20format_1',['CIOF - Custom Input Output Format',['../index.html',1,'']]],
+  ['ciof_2ecpp_2',['ciof.cpp',['../d0/d04/ciof_8cpp.html',1,'']]],
+  ['ciof_2ehpp_3',['ciof.hpp',['../d8/d42/ciof_8hpp.html',1,'']]],
+  ['ciof_3a_3aimpl_4',['impl',['../d7/d5a/namespaceciof_1_1impl.html',1,'ciof']]],
+  ['ciof_5fdefault_5fcpp_5fstd_5',['CIOF_DEFAULT_CPP_STD',['../dc/dcc/CIOFpredefines_8hpp.html#a3d70bd8048f0ef311e9d8005ad06d56e',1,'CIOFpredefines.hpp']]],
+  ['ciof_5fdev_6',['CIOF_DEV',['../dc/dcc/CIOFpredefines_8hpp.html#a41d16094878c667d41faa2acbe80a0b8',1,'CIOFpredefines.hpp']]],
+  ['ciof_5fstringify_7',['CIOF_STRINGIFY',['../dc/dcc/CIOFpredefines_8hpp.html#a3f843eb51ab1a7370f82941eeb1d7646',1,'CIOFpredefines.hpp']]],
+  ['ciof_5ftostring_8',['CIOF_TOSTRING',['../dc/dcc/CIOFpredefines_8hpp.html#a4fd4bdb95be2dd94e5df20f30998b405',1,'CIOFpredefines.hpp']]],
+  ['ciof_5fversion_9',['CIOF_VERSION',['../dc/dcc/CIOFpredefines_8hpp.html#a811af67809723e33dacf49cf06f82847',1,'CIOFpredefines.hpp']]],
+  ['ciof_5fversion_5fcheck_10',['CIOF_VERSION_CHECK',['../dc/dcc/CIOFpredefines_8hpp.html#a257cdf0dd35c0e2e8eb9ea0010a1ea26',1,'CIOFpredefines.hpp']]],
+  ['ciof_5fversion_5fmajor_11',['CIOF_VERSION_MAJOR',['../dc/dcc/CIOFpredefines_8hpp.html#ae837d6691677a6f2f6adf7d006bc2149',1,'CIOFpredefines.hpp']]],
+  ['ciof_5fversion_5fminor_12',['CIOF_VERSION_MINOR',['../dc/dcc/CIOFpredefines_8hpp.html#a37d9da50efb5bc5ac2b63ca3b72de10f',1,'CIOFpredefines.hpp']]],
+  ['ciof_5fversion_5fpatch_13',['CIOF_VERSION_PATCH',['../dc/dcc/CIOFpredefines_8hpp.html#aebcfd1c825546c9cf869fc0852f859ce',1,'CIOFpredefines.hpp']]],
+  ['ciof_5fversion_5fstate_14',['CIOF_VERSION_STATE',['../dc/dcc/CIOFpredefines_8hpp.html#a367c2c910bb88fb15e9a5d7e4cf579c9',1,'CIOFpredefines.hpp']]],
+  ['ciof_5fversion_5fstd_15',['CIOF_VERSION_STD',['../dc/dcc/CIOFpredefines_8hpp.html#afe87ed04a50605abe9a99b2aef3fe153',1,'CIOFpredefines.hpp']]],
+  ['ciofoutputconfig_16',['CIOFOutputConfig',['../d6/d74/structciof_1_1CIOFOutputConfig.html',1,'ciof::CIOFOutputConfig'],['../dc/d0e/namespaceciof.html#a11dfa6fc0d7cf783cd52dfe0dbf63de1',1,'ciof::CIOFOutputConfig']]],
+  ['ciofpredefines_2ehpp_17',['CIOFpredefines.hpp',['../dc/dcc/CIOFpredefines_8hpp.html',1,'']]],
+  ['cmake_20example_18',['MINIMAL CMAKE EXAMPLE',['../index.html#autotoc_md9',1,'']]],
+  ['code_20example_19',['MINIMAL CODE EXAMPLE',['../index.html#autotoc_md10',1,'']]],
+  ['colorset_20',['colorSet',['../dc/d0e/namespaceciof.html#aefd966015567bb62676f13ef217d3b79',1,'ciof']]],
+  ['compilers_21',['Supported Compilers',['../index.html#autotoc_md6',1,'']]],
+  ['configuration_22',['Configuration',['../index.html#autotoc_md4',1,'']]],
+  ['custom_20input_20output_20format_23',['CIOF - Custom Input Output Format',['../index.html',1,'']]]
+];

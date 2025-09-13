@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>CIOF - Custom Input Output Format</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/></para>
+<para><computeroutput>CIOF</computeroutput> is a lightweight C++17+ input/output framework designed to simplify formatted printing, logging, and user interaction. It provides a set of high-level utilities to handle standard output, error logging, ANSI styling, and user input consistently across platforms**</para>
+<para><hruler/>
+</para>
+<sect1 id="index_1autotoc_md2">
+<title>Features</title><para><itemizedlist>
+<listitem><para><bold>Unified Output Handling</bold> Output to <computeroutput>std::cout</computeroutput>, <computeroutput>std::cerr</computeroutput>, or <computeroutput>std::clog</computeroutput> with a simple API.</para>
+</listitem><listitem><para><bold>Configurable Output</bold> Control spacing, delimiters, and formatting globally via <computeroutput><ref refid="dc/d0e/namespaceciof_1a835007e60a4807051d32c3352e867119" kindref="member">ciof::outputConf</ref></computeroutput>.</para>
+</listitem><listitem><para><bold>Print &amp; Echo Helpers</bold><itemizedlist>
+<listitem><para><computeroutput>print()</computeroutput> for output with newline</para>
+</listitem><listitem><para><computeroutput>echo()</computeroutput> for output without newline</para>
+</listitem><listitem><para>Variants for standard log and error streams</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>Input Utilities</bold> Read values interactively with <computeroutput>input()</computeroutput> functions, optionally with a prompt.</para>
+</listitem><listitem><para><bold>ANSI Styling Support</bold> Easily apply bold, italic, underline, strikethrough, or custom RGB colors.</para>
+</listitem><listitem><para><bold>Cross-Platform (with limitations)</bold> Works on Linux, macOS, and Windows 10+. Versions lower than Windows 10 have no support for ANSI</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md4">
+<title>Configuration</title><para>Output behavior can be controlled globally using <computeroutput><ref refid="d6/d74/structciof_1_1CIOFOutputConfig" kindref="compound">ciof::CIOFOutputConfig</ref></computeroutput>. Options include automatic spacing, custom delimiters, ignoring formatting keywords, and enabling/disabling processing.</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md6">
+<title>Supported Compilers</title><para><itemizedlist>
+<listitem><para>GCC &gt;= 7.0</para>
+</listitem><listitem><para>Clang &gt;= 6.0</para>
+</listitem><listitem><para>MSVC &gt;= 19.14 (Visual Studio 2017 15.7)</para>
+</listitem></itemizedlist>
+</para>
+<para>All compilers must support C++17 or higher.</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md8">
+<title>Platform Support</title><para><itemizedlist>
+<listitem><para>Linux - Fully supported</para>
+</listitem><listitem><para>macOS - Fully supported</para>
+</listitem><listitem><para>Windows 10 or later only - Versions lower than Windows 10 have no support for ANSI, but still functional</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md9">
+<title>MINIMAL CMAKE EXAMPLE</title><para><programlisting filename=".cmake"><codeline><highlight class="normal">cmake_minimum_required(VERSION<sp/>3.24)</highlight></codeline>
+<codeline><highlight class="normal">project(ciofTestingProject<sp/>VERSION<sp/>1.0<sp/>LANGUAGES<sp/>CXX)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Set<sp/>C++17</highlight></codeline>
+<codeline><highlight class="normal">set(CMAKE_CXX_STANDARD<sp/>17)</highlight></codeline>
+<codeline><highlight class="normal">set(CMAKE_CXX_STANDARD_REQUIRED<sp/>ON)</highlight></codeline>
+<codeline><highlight class="normal">set(CMAKE_CXX_EXTENSIONS<sp/>OFF)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Find<sp/>the<sp/>system-installed<sp/>CIOF<sp/>package</highlight></codeline>
+<codeline><highlight class="normal">find_package(ciof<sp/>REQUIRED)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Add<sp/>the<sp/>test<sp/>executable</highlight></codeline>
+<codeline><highlight class="normal">add_executable(ciofTesting<sp/>ciofTesting.cpp)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Include<sp/>CIOF<sp/>headers<sp/>and<sp/>link<sp/>its<sp/>library</highlight></codeline>
+<codeline><highlight class="normal">target_link_libraries(ciofTesting<sp/>PRIVATE<sp/>Ciof::ciof_static)<sp/>#<sp/>or<sp/>`ciof_shared`</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="index_1autotoc_md10">
+<title>MINIMAL CODE EXAMPLE</title><para><programlisting filename=".cpp"><codeline><highlight class="preprocessor">#include<sp/>&lt;<ref refid="d8/d42/ciof_8hpp" kindref="compound">ciof/ciof.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()<sp/>{<sp/><ref refid="dc/d0e/namespaceciof_1a8c277d3a2caa58aed09e9bb8982d8ff3" kindref="member">ciof::print</ref>(</highlight><highlight class="stringliteral">&quot;CIOF<sp/>Works.&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+</programlisting> </para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

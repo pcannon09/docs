@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="en-US">
+  <compound refid="d6/d74/structciof_1_1CIOFOutputConfig" kind="struct"><name>ciof::CIOFOutputConfig</name>
+    <member refid="d6/d74/structciof_1_1CIOFOutputConfig_1aeb9bf813d089448e9ebedb3858d77f74" kind="variable"><name>ignoreAllFormating</name></member>
+    <member refid="d6/d74/structciof_1_1CIOFOutputConfig_1ad15d1fdd800eb4da46896e369646298f" kind="variable"><name>processing</name></member>
+    <member refid="d6/d74/structciof_1_1CIOFOutputConfig_1a6c554213c7a2c40c2e98795b53c62cc8" kind="variable"><name>spacing</name></member>
+    <member refid="d6/d74/structciof_1_1CIOFOutputConfig_1a4e97b336cd4468de3d275c8377514c73" kind="variable"><name>spacingDelimeter</name></member>
+  </compound>
+  <compound refid="dc/d0e/namespaceciof" kind="namespace"><name>ciof</name>
+    <member refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686b" kind="enum"><name>OutputStyle</name></member>
+    <member refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246" kind="enumvalue"><name>Bold</name></member>
+    <member refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c" kind="enumvalue"><name>Italic</name></member>
+    <member refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439" kind="enumvalue"><name>Underline</name></member>
+    <member refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb" kind="enumvalue"><name>Strikethrough</name></member>
+    <member refid="dc/d0e/namespaceciof_1a255b49fbd04393ba7532b832b580e747" kind="enum"><name>OutputType</name></member>
+    <member refid="dc/d0e/namespaceciof_1a255b49fbd04393ba7532b832b580e747a7c147cda9e49590f6abe83d118b7353b" kind="enumvalue"><name>Out</name></member>
+    <member refid="dc/d0e/namespaceciof_1a255b49fbd04393ba7532b832b580e747ab47f6a6092c5d7e4bffec12dff309c3b" kind="enumvalue"><name>Err</name></member>
+    <member refid="dc/d0e/namespaceciof_1a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b" kind="enumvalue"><name>Log</name></member>
+    <member refid="dc/d0e/namespaceciof_1a11dfa6fc0d7cf783cd52dfe0dbf63de1" kind="typedef"><name>CIOFOutputConfig</name></member>
+    <member refid="dc/d0e/namespaceciof_1a835007e60a4807051d32c3352e867119" kind="variable"><name>outputConf</name></member>
+    <member refid="dc/d0e/namespaceciof_1aefd966015567bb62676f13ef217d3b79" kind="function"><name>colorSet</name></member>
+    <member refid="dc/d0e/namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c" kind="function"><name>echo</name></member>
+    <member refid="dc/d0e/namespaceciof_1a7cbb15b2dae1555e9c53992b01405e80" kind="function"><name>echo</name></member>
+    <member refid="dc/d0e/namespaceciof_1af084498aae5fae4efa5f82b1bd0cb442" kind="function"><name>echoError</name></member>
+    <member refid="dc/d0e/namespaceciof_1ab5a04c0ff1d0a664db701e70042d2a44" kind="function"><name>echoError</name></member>
+    <member refid="dc/d0e/namespaceciof_1af11fbdee1a0cc6113e58b31bcbfde05e" kind="function"><name>echoLog</name></member>
+    <member refid="dc/d0e/namespaceciof_1a66c51251b714b7bdedb8f628113311d4" kind="function"><name>echoLog</name></member>
+    <member refid="dc/d0e/namespaceciof_1a42851a9df059ee00504d50b5331ed963" kind="function"><name>format</name></member>
+    <member refid="dc/d0e/namespaceciof_1a0d6add06e42bf2afe40d5e45db195218" kind="function"><name>initANSI</name></member>
+    <member refid="dc/d0e/namespaceciof_1a890c785dd53fa8333c95e8b9594b55e7" kind="function"><name>input</name></member>
+    <member refid="dc/d0e/namespaceciof_1a6d046aa36f6f80976075523e2ba0974a" kind="function"><name>input</name></member>
+    <member refid="dc/d0e/namespaceciof_1a8c277d3a2caa58aed09e9bb8982d8ff3" kind="function"><name>print</name></member>
+    <member refid="dc/d0e/namespaceciof_1a89082a2cf2da077c0d3dae3ab99eede2" kind="function"><name>print</name></member>
+    <member refid="dc/d0e/namespaceciof_1af9fb176a7cdcb9944ebf0521df004696" kind="function"><name>print</name></member>
+    <member refid="dc/d0e/namespaceciof_1a83792b27f8f1ffb969e4e69c5808cb91" kind="function"><name>printError</name></member>
+    <member refid="dc/d0e/namespaceciof_1a2b535b59d1fdbf6fdd654296b421f7ce" kind="function"><name>printError</name></member>
+    <member refid="dc/d0e/namespaceciof_1a4e228d060caae991e1093a7bcd30aa57" kind="function"><name>printLog</name></member>
+    <member refid="dc/d0e/namespaceciof_1af2ec490460503a2868462739ca9499cc" kind="function"><name>printLog</name></member>
+    <member refid="dc/d0e/namespaceciof_1a34c4a83a2f7c4321fb3cd308ad2162bc" kind="function"><name>rgbSet</name></member>
+    <member refid="dc/d0e/namespaceciof_1a25987420300a8bf1380cebe37f6c082f" kind="function"><name>styleReset</name></member>
+    <member refid="dc/d0e/namespaceciof_1a8ff4eb89ed64bb300da3ddf91cad7e4f" kind="function"><name>styleSet</name></member>
+  </compound>
+  <compound refid="d7/d5a/namespaceciof_1_1impl" kind="namespace"><name>ciof::impl</name>
+    <member refid="d7/d5a/namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f" kind="function"><name>__out</name></member>
+    <member refid="d7/d5a/namespaceciof_1_1impl_1a1891ea20ceaf9eb463765c53d4a0d007" kind="function"><name>__out</name></member>
+    <member refid="d7/d5a/namespaceciof_1_1impl_1a3c0a39bb238468e7e6843e0a4e920b0b" kind="function"><name>parse</name></member>
+    <member refid="d7/d5a/namespaceciof_1_1impl_1ae1e6ee7cf401df4c08b650fa0ebde5ee" kind="function"><name>toString</name></member>
+  </compound>
+  <compound refid="d8/dcc/namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="d8/d42/ciof_8hpp" kind="file"><name>ciof.hpp</name>
+    <member refid="d8/d42/ciof_8hpp_1aee9afcb99f41a55dc39da48b35554819" kind="define"><name>__CIOF_OK</name></member>
+  </compound>
+  <compound refid="dc/dcc/CIOFpredefines_8hpp" kind="file"><name>CIOFpredefines.hpp</name>
+    <member refid="dc/dcc/CIOFpredefines_8hpp_1a3d70bd8048f0ef311e9d8005ad06d56e" kind="define"><name>CIOF_DEFAULT_CPP_STD</name></member>
+    <member refid="dc/dcc/CIOFpredefines_8hpp_1a41d16094878c667d41faa2acbe80a0b8" kind="define"><name>CIOF_DEV</name></member>
+    <member refid="dc/dcc/CIOFpredefines_8hpp_1a3f843eb51ab1a7370f82941eeb1d7646" kind="define"><name>CIOF_STRINGIFY</name></member>
+    <member refid="dc/dcc/CIOFpredefines_8hpp_1a4fd4bdb95be2dd94e5df20f30998b405" kind="define"><name>CIOF_TOSTRING</name></member>
+    <member refid="dc/dcc/CIOFpredefines_8hpp_1a811af67809723e33dacf49cf06f82847" kind="define"><name>CIOF_VERSION</name></member>
+    <member refid="dc/dcc/CIOFpredefines_8hpp_1a257cdf0dd35c0e2e8eb9ea0010a1ea26" kind="define"><name>CIOF_VERSION_CHECK</name></member>
+    <member refid="dc/dcc/CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149" kind="define"><name>CIOF_VERSION_MAJOR</name></member>
+    <member refid="dc/dcc/CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f" kind="define"><name>CIOF_VERSION_MINOR</name></member>
+    <member refid="dc/dcc/CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce" kind="define"><name>CIOF_VERSION_PATCH</name></member>
+    <member refid="dc/dcc/CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9" kind="define"><name>CIOF_VERSION_STATE</name></member>
+    <member refid="dc/dcc/CIOFpredefines_8hpp_1afe87ed04a50605abe9a99b2aef3fe153" kind="define"><name>CIOF_VERSION_STD</name></member>
+  </compound>
+  <compound refid="da/ddd/README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="d0/d04/ciof_8cpp" kind="file"><name>ciof.cpp</name>
+  </compound>
+  <compound refid="dir_1924d7fdc7a72c14ec019757945dfd3b" kind="dir"><name>inc/ciof</name>
+  </compound>
+  <compound refid="dir_bfccd401955b95cf8c75461437045ac0" kind="dir"><name>inc</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

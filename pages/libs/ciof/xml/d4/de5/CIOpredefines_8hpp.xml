@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="d4/de5/CIOpredefines_8hpp" kind="file" language="C++">
+    <compoundname>CIOpredefines.hpp</compoundname>
+    <includedby refid="d8/d42/ciof_8hpp" local="yes">inc/ciof/ciof.hpp</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>inc/ciof/CIOpredefines.hpp</label>
+        <link refid="d4/de5/CIOpredefines_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>inc/ciof/ciof.hpp</label>
+        <link refid="d8/d42/ciof_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/ciof.cpp</label>
+        <link refid="d0/d04/ciof_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="d4/de5/CIOpredefines_8hpp_1a393fb6a55175c571e8a68cc6b4b8d041" prot="public" static="no">
+        <name>CIOS_DEFAULT_CPP_STD</name>
+        <initializer>201703L</initializer>
+        <briefdescription>
+<para>EXAMPLEpredefines.h - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1.0S NOTICE: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>RENAMED TO CIOSpredefines.hpp </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/CIOpredefines.hpp" line="12" column="9" bodyfile="inc/ciof/CIOpredefines.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d4/de5/CIOpredefines_8hpp_1a7259e518741c1de650e9232bd864b22c" prot="public" static="no">
+        <name>CIOS_DEV</name>
+        <initializer>true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/CIOpredefines.hpp" line="38" column="12" bodyfile="inc/ciof/CIOpredefines.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d4/de5/CIOpredefines_8hpp_1ab0af42681bafc4c50b53eac47e03477f" prot="public" static="no">
+        <name>CIOS_STRINGIFY</name>
+        <param><defname>x</defname></param>
+        <initializer>#x</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/CIOpredefines.hpp" line="34" column="9" bodyfile="inc/ciof/CIOpredefines.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d4/de5/CIOpredefines_8hpp_1a0e7de3b5b558873bf3cd7b57e4c0cce4" prot="public" static="no">
+        <name>CIOS_TOSTRING</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="d4/de5/CIOpredefines_8hpp_1ab0af42681bafc4c50b53eac47e03477f" kindref="member">CIOS_STRINGIFY</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/CIOpredefines.hpp" line="35" column="9" bodyfile="inc/ciof/CIOpredefines.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d4/de5/CIOpredefines_8hpp_1ae54877088af40d039bd77217ce6c6919" prot="public" static="no">
+        <name>CIOS_VERSION</name>
+        <initializer>((<ref refid="d4/de5/CIOpredefines_8hpp_1a81521edf4a2f661a34f92934072173d0" kindref="member">CIOS_VERSION_MAJOR</ref>&lt;&lt;16)|(<ref refid="d4/de5/CIOpredefines_8hpp_1a9b870c05688dd4977dd08e4e4dfc26ed" kindref="member">CIOS_VERSION_MINOR</ref>&lt;&lt;8)|(<ref refid="d4/de5/CIOpredefines_8hpp_1ae4fea725bc5458400b381092f9591f89" kindref="member">CIOS_VERSION_PATCH</ref>)|(<ref refid="d4/de5/CIOpredefines_8hpp_1a340daf84f27fb6da08392572113811b4" kindref="member">CIOS_VERSION_STATE</ref> &lt;&lt; 24))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/CIOpredefines.hpp" line="28" column="9" bodyfile="inc/ciof/CIOpredefines.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d4/de5/CIOpredefines_8hpp_1a47a77bc6ca57c4dbd1142e503da0fe0e" prot="public" static="no">
+        <name>CIOS_VERSION_CHECK</name>
+        <param><defname>CIOS_VERSION_MAJOR</defname></param>
+        <param><defname>CIOS_VERSION_MINOR</defname></param>
+        <param><defname>CIOS_VERSION_PATCH</defname></param>
+        <param><defname>CIOS_VERSION_STATE</defname></param>
+        <initializer>    (((<ref refid="d4/de5/CIOpredefines_8hpp_1a81521edf4a2f661a34f92934072173d0" kindref="member">CIOS_VERSION_MAJOR</ref>)&lt;&lt;16)|((<ref refid="d4/de5/CIOpredefines_8hpp_1a9b870c05688dd4977dd08e4e4dfc26ed" kindref="member">CIOS_VERSION_MINOR</ref>)&lt;&lt;8)|(<ref refid="d4/de5/CIOpredefines_8hpp_1ae4fea725bc5458400b381092f9591f89" kindref="member">CIOS_VERSION_PATCH</ref>)|((<ref refid="d4/de5/CIOpredefines_8hpp_1a340daf84f27fb6da08392572113811b4" kindref="member">CIOS_VERSION_STATE</ref>) &lt;&lt; 24))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/CIOpredefines.hpp" line="30" column="9" bodyfile="inc/ciof/CIOpredefines.hpp" bodystart="30" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="define" id="d4/de5/CIOpredefines_8hpp_1a81521edf4a2f661a34f92934072173d0" prot="public" static="no">
+        <name>CIOS_VERSION_MAJOR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/CIOpredefines.hpp" line="15" column="9" bodyfile="inc/ciof/CIOpredefines.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d4/de5/CIOpredefines_8hpp_1a9b870c05688dd4977dd08e4e4dfc26ed" prot="public" static="no">
+        <name>CIOS_VERSION_MINOR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/CIOpredefines.hpp" line="16" column="9" bodyfile="inc/ciof/CIOpredefines.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d4/de5/CIOpredefines_8hpp_1ae4fea725bc5458400b381092f9591f89" prot="public" static="no">
+        <name>CIOS_VERSION_PATCH</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/CIOpredefines.hpp" line="17" column="9" bodyfile="inc/ciof/CIOpredefines.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d4/de5/CIOpredefines_8hpp_1a340daf84f27fb6da08392572113811b4" prot="public" static="no">
+        <name>CIOS_VERSION_STATE</name>
+        <initializer>&quot;dev&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/CIOpredefines.hpp" line="26" column="9" bodyfile="inc/ciof/CIOpredefines.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d4/de5/CIOpredefines_8hpp_1a73acfb5a807f6bedf7f81ae156397f13" prot="public" static="no">
+        <name>CIOS_VERSION_STD</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/CIOpredefines.hpp" line="19" column="9" bodyfile="inc/ciof/CIOpredefines.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>EXAMPLEpredefines.h<sp/>-<sp/>pcannonProjectStandards</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Predefines<sp/>for<sp/>C<sp/>and<sp/>C++<sp/>projects</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>STD<sp/>Information:<sp/>20250723<sp/>-<sp/>1.0S</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>NOTICE:<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>-<sp/>RENAMED<sp/>TO<sp/>CIOSpredefines.hpp</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Project<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="d4/de5/CIOpredefines_8hpp_1a393fb6a55175c571e8a68cc6b4b8d041" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOS_DEFAULT_CPP_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>201703L</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Versioning</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="d4/de5/CIOpredefines_8hpp_1a81521edf4a2f661a34f92934072173d0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOS_VERSION_MAJOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="d4/de5/CIOpredefines_8hpp_1a9b870c05688dd4977dd08e4e4dfc26ed" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOS_VERSION_MINOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="d4/de5/CIOpredefines_8hpp_1ae4fea725bc5458400b381092f9591f89" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOS_VERSION_PATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="d4/de5/CIOpredefines_8hpp_1a73acfb5a807f6bedf7f81ae156397f13" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOS_VERSION_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>states:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>alpha</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>beta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>build</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="d4/de5/CIOpredefines_8hpp_1a340daf84f27fb6da08392572113811b4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOS_VERSION_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;dev&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="d4/de5/CIOpredefines_8hpp_1ae54877088af40d039bd77217ce6c6919" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOS_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((CIOS_VERSION_MAJOR&lt;&lt;16)|(CIOS_VERSION_MINOR&lt;&lt;8)|(CIOS_VERSION_PATCH)|(CIOS_VERSION_STATE<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="d4/de5/CIOpredefines_8hpp_1a47a77bc6ca57c4dbd1142e503da0fe0e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOS_VERSION_CHECK(CIOS_VERSION_MAJOR,<sp/>CIOS_VERSION_MINOR,<sp/>CIOS_VERSION_PATCH,<sp/>CIOS_VERSION_STATE)<sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(((CIOS_VERSION_MAJOR)&lt;&lt;16)|((CIOS_VERSION_MINOR)&lt;&lt;8)|(CIOS_VERSION_PATCH)|((CIOS_VERSION_STATE)<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Macro<sp/>utils</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="d4/de5/CIOpredefines_8hpp_1ab0af42681bafc4c50b53eac47e03477f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOS_STRINGIFY(x)<sp/>#x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="d4/de5/CIOpredefines_8hpp_1a0e7de3b5b558873bf3cd7b57e4c0cce4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOS_TOSTRING(x)<sp/>CIOS_STRINGIFY(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CIOS_DEV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="d4/de5/CIOpredefines_8hpp_1a7259e518741c1de650e9232bd864b22c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOS_DEV<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!defined(CIOS_DEV)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OS<sp/>Checks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOS_OS_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>if<sp/>!defined(WIN32_ANSI_SUPPORT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>WIN32_ANSI_SUPPORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>if<sp/>WIN32_ANSI_SUPPORT<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>warning<sp/>&quot;ANSI<sp/>Support<sp/>for<sp/>Windows<sp/>is<sp/>supported<sp/>from<sp/>Windows<sp/>10<sp/>or<sp/>newer&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__APPLE__)<sp/>||<sp/>defined(__MACH__)<sp/>||<sp/>defined(Macintosh)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOS_OS_MACOS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__linux__)<sp/>||<sp/>defined(__unix)<sp/>||<sp/>defined(__unix__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOS_OS_UNIX_LINUX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__FreeBSD__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOS_OS_FREEBSD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>warning<sp/>&quot;Current<sp/>platform<sp/>might<sp/>not<sp/>supported&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>defined(WIN32)<sp/>//<sp/>Platform<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/ciof/CIOpredefines.hpp"/>
+  </compounddef>
+</doxygen>

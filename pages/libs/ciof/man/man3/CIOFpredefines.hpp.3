@@ -1,0 +1,124 @@
+.TH "inc/ciof/CIOFpredefines.hpp" 3 "Version v1.0.0-build" "CIOF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/ciof/CIOFpredefines.hpp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCIOF_DEFAULT_CPP_STD\fP   201703L"
+.br
+.RI "EXAMPLEpredefines\&.h - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1\&.0S NOTICE: "
+.ti -1c
+.RI "#define \fBCIOF_DEV\fP   true"
+.br
+.ti -1c
+.RI "#define \fBCIOF_STRINGIFY\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBCIOF_TOSTRING\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBCIOF_VERSION\fP   ((\fBCIOF_VERSION_MAJOR\fP<<16)|(\fBCIOF_VERSION_MINOR\fP<<8)|(\fBCIOF_VERSION_PATCH\fP)|(\fBCIOF_VERSION_STATE\fP << 24))"
+.br
+.ti -1c
+.RI "#define \fBCIOF_VERSION_CHECK\fP(\fBCIOF_VERSION_MAJOR\fP,  \fBCIOF_VERSION_MINOR\fP,  \fBCIOF_VERSION_PATCH\fP,  \fBCIOF_VERSION_STATE\fP)"
+.br
+.ti -1c
+.RI "#define \fBCIOF_VERSION_MAJOR\fP   1"
+.br
+.ti -1c
+.RI "#define \fBCIOF_VERSION_MINOR\fP   0"
+.br
+.ti -1c
+.RI "#define \fBCIOF_VERSION_PATCH\fP   0"
+.br
+.ti -1c
+.RI "#define \fBCIOF_VERSION_STATE\fP   'build'"
+.br
+.ti -1c
+.RI "#define \fBCIOF_VERSION_STD\fP   20250913"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CIOF_DEFAULT_CPP_STD   201703L"
+
+.PP
+EXAMPLEpredefines\&.h - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1\&.0S NOTICE: 
+.IP "\(bu" 2
+RENAMED TO \fBCIOFpredefines\&.hpp\fP
+.IP "\(bu" 2
+MADE FOR The CIOF Project Utils 
+.PP
+
+.PP
+Definition at line \fB13\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+.SS "#define CIOF_DEV   true"
+
+.PP
+Definition at line \fB39\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+.SS "#define CIOF_STRINGIFY( x)"
+\fBValue:\fP
+.nf
+#x
+.PP
+.fi
+
+.PP
+Definition at line \fB35\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+.SS "#define CIOF_TOSTRING( x)"
+\fBValue:\fP
+.nf
+CIOF_STRINGIFY(x)
+.PP
+.fi
+
+.PP
+Definition at line \fB36\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+.SS "#define CIOF_VERSION   ((\fBCIOF_VERSION_MAJOR\fP<<16)|(\fBCIOF_VERSION_MINOR\fP<<8)|(\fBCIOF_VERSION_PATCH\fP)|(\fBCIOF_VERSION_STATE\fP << 24))"
+
+.PP
+Definition at line \fB29\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+.SS "#define CIOF_VERSION_CHECK( \fBCIOF_VERSION_MAJOR\fP,  \fBCIOF_VERSION_MINOR\fP,  \fBCIOF_VERSION_PATCH\fP,  \fBCIOF_VERSION_STATE\fP)"
+\fBValue:\fP
+.nf
+    (((CIOF_VERSION_MAJOR)<<16)|((CIOF_VERSION_MINOR)<<8)|(CIOF_VERSION_PATCH)|((CIOF_VERSION_STATE) << 24))
+.PP
+.fi
+
+.PP
+Definition at line \fB31\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+.nf
+31 #define CIOF_VERSION_CHECK(CIOF_VERSION_MAJOR, CIOF_VERSION_MINOR, CIOF_VERSION_PATCH, CIOF_VERSION_STATE) \\
+32     (((CIOF_VERSION_MAJOR)<<16)|((CIOF_VERSION_MINOR)<<8)|(CIOF_VERSION_PATCH)|((CIOF_VERSION_STATE) << 24))
+.PP
+.fi
+
+.SS "#define CIOF_VERSION_MAJOR   1"
+
+.PP
+Definition at line \fB16\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+.SS "#define CIOF_VERSION_MINOR   0"
+
+.PP
+Definition at line \fB17\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+.SS "#define CIOF_VERSION_PATCH   0"
+
+.PP
+Definition at line \fB18\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+.SS "#define CIOF_VERSION_STATE   'build'"
+
+.PP
+Definition at line \fB27\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+.SS "#define CIOF_VERSION_STD   20250913"
+
+.PP
+Definition at line \fB20\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CIOF from the source code\&.

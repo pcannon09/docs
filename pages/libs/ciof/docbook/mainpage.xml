@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+<title>
+<para>CIOF - Custom Input Output Format </para>
+</title>
+<indexterm><primary>CIOF - Custom Input Output Format</primary></indexterm>
+
+<para><anchor xml:id="_index_1md_README"/></para>
+
+<para><computeroutput>CIOF</computeroutput> is a lightweight C++17+ input/output framework designed to simplify formatted printing, logging, and user interaction. It provides a set of high-level utilities to handle standard output, error logging, ANSI styling, and user input consistently across platforms**</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+<section xml:id="_index_1autotoc_md2">
+<title>Features</title>
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Unified Output Handling</emphasis> Output to <computeroutput>std::cout</computeroutput>, <computeroutput>std::cerr</computeroutput>, or <computeroutput>std::clog</computeroutput> with a simple API.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Configurable Output</emphasis> Control spacing, delimiters, and formatting globally via <computeroutput><link linkend="_namespaceciof_1a835007e60a4807051d32c3352e867119">ciof::outputConf</link></computeroutput>.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Print &amp; Echo Helpers</emphasis><itemizedlist>
+<listitem>
+<para><computeroutput>print()</computeroutput> for output with newline</para>
+</listitem><listitem>
+<para><computeroutput>echo()</computeroutput> for output without newline</para>
+</listitem><listitem>
+<para>Variants for standard log and error streams</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para><emphasis role="bold">Input Utilities</emphasis> Read values interactively with <computeroutput>input()</computeroutput> functions, optionally with a prompt.</para>
+</listitem><listitem>
+<para><emphasis role="bold">ANSI Styling Support</emphasis> Easily apply bold, italic, underline, strikethrough, or custom RGB colors.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Cross-Platform (with limitations)</emphasis> Works on Linux, macOS, and Windows 10+. Versions lower than Windows 10 have no support for ANSI</para>
+</listitem></itemizedlist>
+</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md4">
+<title>Configuration</title>
+<para>Output behavior can be controlled globally using <computeroutput><link linkend="_structciof_1_1CIOFOutputConfig">ciof::CIOFOutputConfig</link></computeroutput>. Options include automatic spacing, custom delimiters, ignoring formatting keywords, and enabling/disabling processing.</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md6">
+<title>Supported Compilers</title>
+<para><itemizedlist>
+<listitem>
+<para>GCC &gt;= 7.0</para>
+</listitem><listitem>
+<para>Clang &gt;= 6.0</para>
+</listitem><listitem>
+<para>MSVC &gt;= 19.14 (Visual Studio 2017 15.7)</para>
+</listitem></itemizedlist>
+</para>
+
+<para>All compilers must support C++17 or higher.</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md8">
+<title>Platform Support</title>
+<para><itemizedlist>
+<listitem>
+<para>Linux - Fully supported</para>
+</listitem><listitem>
+<para>macOS - Fully supported</para>
+</listitem><listitem>
+<para>Windows 10 or later only - Versions lower than Windows 10 have no support for ANSI, but still functional</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md9">
+<title>MINIMAL CMAKE EXAMPLE</title>
+<para><literallayout><computeroutput>cmake_minimum_required(VERSION&#32;3.24)
+project(ciofTestingProject&#32;VERSION&#32;1.0&#32;LANGUAGES&#32;CXX)
+
+#&#32;Set&#32;C++17
+set(CMAKE_CXX_STANDARD&#32;17)
+set(CMAKE_CXX_STANDARD_REQUIRED&#32;ON)
+set(CMAKE_CXX_EXTENSIONS&#32;OFF)
+
+#&#32;Find&#32;the&#32;system-installed&#32;CIOF&#32;package
+find_package(ciof&#32;REQUIRED)
+
+#&#32;Add&#32;the&#32;test&#32;executable
+add_executable(ciofTesting&#32;ciofTesting.cpp)
+
+#&#32;Include&#32;CIOF&#32;headers&#32;and&#32;link&#32;its&#32;library
+target_link_libraries(ciofTesting&#32;PRIVATE&#32;Ciof::ciof_static)&#32;#&#32;or&#32;`ciof_shared`
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_index_1autotoc_md10">
+<title>MINIMAL CODE EXAMPLE</title>
+<para><literallayout><computeroutput>#include&#32;&lt;ciof/ciof.hpp&gt;
+
+int&#32;main()&#32;{&#32;ciof::print(&quot;CIOF&#32;Works.&quot;);&#32;}
+</computeroutput></literallayout> </para>
+</section>
+</chapter>

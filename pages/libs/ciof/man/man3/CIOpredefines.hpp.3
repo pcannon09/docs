@@ -1,0 +1,122 @@
+.TH "inc/ciof/CIOpredefines.hpp" 3 "Version 20250912-beta1" "CIOF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/ciof/CIOpredefines.hpp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCIOS_DEFAULT_CPP_STD\fP   201703L"
+.br
+.RI "EXAMPLEpredefines\&.h - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1\&.0S NOTICE: "
+.ti -1c
+.RI "#define \fBCIOS_DEV\fP   true"
+.br
+.ti -1c
+.RI "#define \fBCIOS_STRINGIFY\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBCIOS_TOSTRING\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBCIOS_VERSION\fP   ((\fBCIOS_VERSION_MAJOR\fP<<16)|(\fBCIOS_VERSION_MINOR\fP<<8)|(\fBCIOS_VERSION_PATCH\fP)|(\fBCIOS_VERSION_STATE\fP << 24))"
+.br
+.ti -1c
+.RI "#define \fBCIOS_VERSION_CHECK\fP(\fBCIOS_VERSION_MAJOR\fP,  \fBCIOS_VERSION_MINOR\fP,  \fBCIOS_VERSION_PATCH\fP,  \fBCIOS_VERSION_STATE\fP)"
+.br
+.ti -1c
+.RI "#define \fBCIOS_VERSION_MAJOR\fP   0"
+.br
+.ti -1c
+.RI "#define \fBCIOS_VERSION_MINOR\fP   0"
+.br
+.ti -1c
+.RI "#define \fBCIOS_VERSION_PATCH\fP   0"
+.br
+.ti -1c
+.RI "#define \fBCIOS_VERSION_STATE\fP   'dev'"
+.br
+.ti -1c
+.RI "#define \fBCIOS_VERSION_STD\fP   0"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CIOS_DEFAULT_CPP_STD   201703L"
+
+.PP
+EXAMPLEpredefines\&.h - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1\&.0S NOTICE: 
+.IP "\(bu" 2
+RENAMED TO CIOSpredefines\&.hpp 
+.PP
+
+.PP
+Definition at line \fB12\fP of file \fBCIOpredefines\&.hpp\fP\&.
+.SS "#define CIOS_DEV   true"
+
+.PP
+Definition at line \fB38\fP of file \fBCIOpredefines\&.hpp\fP\&.
+.SS "#define CIOS_STRINGIFY( x)"
+\fBValue:\fP
+.nf
+#x
+.PP
+.fi
+
+.PP
+Definition at line \fB34\fP of file \fBCIOpredefines\&.hpp\fP\&.
+.SS "#define CIOS_TOSTRING( x)"
+\fBValue:\fP
+.nf
+CIOS_STRINGIFY(x)
+.PP
+.fi
+
+.PP
+Definition at line \fB35\fP of file \fBCIOpredefines\&.hpp\fP\&.
+.SS "#define CIOS_VERSION   ((\fBCIOS_VERSION_MAJOR\fP<<16)|(\fBCIOS_VERSION_MINOR\fP<<8)|(\fBCIOS_VERSION_PATCH\fP)|(\fBCIOS_VERSION_STATE\fP << 24))"
+
+.PP
+Definition at line \fB28\fP of file \fBCIOpredefines\&.hpp\fP\&.
+.SS "#define CIOS_VERSION_CHECK( \fBCIOS_VERSION_MAJOR\fP,  \fBCIOS_VERSION_MINOR\fP,  \fBCIOS_VERSION_PATCH\fP,  \fBCIOS_VERSION_STATE\fP)"
+\fBValue:\fP
+.nf
+    (((CIOS_VERSION_MAJOR)<<16)|((CIOS_VERSION_MINOR)<<8)|(CIOS_VERSION_PATCH)|((CIOS_VERSION_STATE) << 24))
+.PP
+.fi
+
+.PP
+Definition at line \fB30\fP of file \fBCIOpredefines\&.hpp\fP\&.
+.nf
+30 #define CIOS_VERSION_CHECK(CIOS_VERSION_MAJOR, CIOS_VERSION_MINOR, CIOS_VERSION_PATCH, CIOS_VERSION_STATE) \\
+31     (((CIOS_VERSION_MAJOR)<<16)|((CIOS_VERSION_MINOR)<<8)|(CIOS_VERSION_PATCH)|((CIOS_VERSION_STATE) << 24))
+.PP
+.fi
+
+.SS "#define CIOS_VERSION_MAJOR   0"
+
+.PP
+Definition at line \fB15\fP of file \fBCIOpredefines\&.hpp\fP\&.
+.SS "#define CIOS_VERSION_MINOR   0"
+
+.PP
+Definition at line \fB16\fP of file \fBCIOpredefines\&.hpp\fP\&.
+.SS "#define CIOS_VERSION_PATCH   0"
+
+.PP
+Definition at line \fB17\fP of file \fBCIOpredefines\&.hpp\fP\&.
+.SS "#define CIOS_VERSION_STATE   'dev'"
+
+.PP
+Definition at line \fB26\fP of file \fBCIOpredefines\&.hpp\fP\&.
+.SS "#define CIOS_VERSION_STD   0"
+
+.PP
+Definition at line \fB19\fP of file \fBCIOpredefines\&.hpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CIOF from the source code\&.

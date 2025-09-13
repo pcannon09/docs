@@ -1,0 +1,957 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceciof" xml:lang="en-US">
+<title>ciof Namespace Reference</title>
+<indexterm><primary>ciof</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceciof_1_1impl">impl</link></para>
+
+<para>Implementation functions. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structciof_1_1CIOFOutputConfig">CIOFOutputConfig</link></para>
+
+<para>Set output configuration for <link linkend="_namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f">ciof::impl::__out()</link> function and its wrappers. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct ciof::CIOFOutputConfig <link linkend="_namespaceciof_1a11dfa6fc0d7cf783cd52dfe0dbf63de1">CIOFOutputConfig</link></para>
+
+<para>Set output configuration for <link linkend="_namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f">ciof::impl::__out()</link> function and its wrappers. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum class <link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686b">OutputStyle</link> { <link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246">Bold</link>
+, <link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c">Italic</link>
+, <link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439">Underline</link>
+, <link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb">Strikethrough</link>
+ }</para>
+
+<para>Set output style: Bold Italic Underline Strikethrough. </para>
+</listitem>
+            <listitem><para>enum class <link linkend="_namespaceciof_1a255b49fbd04393ba7532b832b580e747">OutputType</link> { <link linkend="_namespaceciof_1a255b49fbd04393ba7532b832b580e747a7c147cda9e49590f6abe83d118b7353b">Out</link>
+, <link linkend="_namespaceciof_1a255b49fbd04393ba7532b832b580e747ab47f6a6092c5d7e4bffec12dff309c3b">Err</link>
+, <link linkend="_namespaceciof_1a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b">Log</link>
+ }</para>
+
+<para>Set output type for <link linkend="_namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f">ciof::impl::__out()</link> function and its helper functions Out : To Standard Output Err : To Standard Error Log : To Standard Log (Error, unbuffered) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_namespaceciof_1aefd966015567bb62676f13ef217d3b79">colorSet</link> (int _color)</para>
+
+<para>Set the colors from the default color palette from the terminal. </para>
+</listitem>
+            <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c">echo</link> (T _t)</para>
+
+<para>Echo to the standard output for <computeroutput>_t</computeroutput> </para>
+</listitem>
+            <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>void <link linkend="_namespaceciof_1a7cbb15b2dae1555e9c53992b01405e80">echo</link> (T _t, Args ... _args)</para>
+
+<para>Echo to the standard output for <computeroutput>_t</computeroutput> </para>
+</listitem>
+            <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1af084498aae5fae4efa5f82b1bd0cb442">echoError</link> (T _t)</para>
+
+<para>Echo to the standard error for <computeroutput>_t</computeroutput> </para>
+</listitem>
+            <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>void <link linkend="_namespaceciof_1ab5a04c0ff1d0a664db701e70042d2a44">echoError</link> (T _t, Args ... _args)</para>
+
+<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+</listitem>
+            <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1af11fbdee1a0cc6113e58b31bcbfde05e">echoLog</link> (T _t)</para>
+
+<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+</listitem>
+            <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>void <link linkend="_namespaceciof_1a66c51251b714b7bdedb8f628113311d4">echoLog</link> (T _t, Args ... _args)</para>
+
+<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+</listitem>
+            <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>std::string <link linkend="_namespaceciof_1a42851a9df059ee00504d50b5331ed963">format</link> (T _t, Args ... _args)</para>
+
+<para>Get everything as a string format. </para>
+</listitem>
+            <listitem><para>void <link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">initANSI</link> ()</para>
+
+<para>Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER. </para>
+</listitem>
+            <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1a890c785dd53fa8333c95e8b9594b55e7">input</link> (const std::string &amp;_prompt, T *_var)</para>
+
+<para>Get full input from the user with a prompt. </para>
+</listitem>
+            <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1a6d046aa36f6f80976075523e2ba0974a">input</link> (T *_var)</para>
+
+<para>Get full input from the user. </para>
+</listitem>
+            <listitem><para>void <link linkend="_namespaceciof_1a8c277d3a2caa58aed09e9bb8982d8ff3">print</link> ()</para>
+
+<para>Print a new line. </para>
+</listitem>
+            <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1a89082a2cf2da077c0d3dae3ab99eede2">print</link> (T _t)</para>
+
+<para>Print to the standard output for <computeroutput>_t</computeroutput> </para>
+</listitem>
+            <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>void <link linkend="_namespaceciof_1af9fb176a7cdcb9944ebf0521df004696">print</link> (T _t, Args ... _args)</para>
+
+<para>Print to the standard output for <computeroutput>_t</computeroutput> </para>
+</listitem>
+            <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1a83792b27f8f1ffb969e4e69c5808cb91">printError</link> (T _t)</para>
+
+<para>Print to the standard error for <computeroutput>_t</computeroutput> </para>
+</listitem>
+            <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>void <link linkend="_namespaceciof_1a2b535b59d1fdbf6fdd654296b421f7ce">printError</link> (T _t, Args ... _args)</para>
+
+<para>Print to the standard error for <computeroutput>_t</computeroutput> </para>
+</listitem>
+            <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1a4e228d060caae991e1093a7bcd30aa57">printLog</link> (T _t)</para>
+
+<para>Print to the standard log for <computeroutput>_t</computeroutput> </para>
+</listitem>
+            <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>void <link linkend="_namespaceciof_1af2ec490460503a2868462739ca9499cc">printLog</link> (T _t, Args ... _args)</para>
+
+<para>Print to the standard log for <computeroutput>_t</computeroutput> </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_namespaceciof_1a34c4a83a2f7c4321fb3cd308ad2162bc">rgbSet</link> (unsigned int r, unsigned int g, unsigned int b)</para>
+
+<para>Set the RGB color in the terminal. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_namespaceciof_1a25987420300a8bf1380cebe37f6c082f">styleReset</link> ()</para>
+
+<para>Reset all the styles and colors in the terminal. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_namespaceciof_1a8ff4eb89ed64bb300da3ddf91cad7e4f">styleSet</link> (const <link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686b">OutputStyle</link> &amp;_style)</para>
+
+<para>Set the styles according to the <computeroutput><link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686b">OutputStyle</link></computeroutput> type. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structciof_1_1CIOFOutputConfig">CIOFOutputConfig</link> <link linkend="_namespaceciof_1a835007e60a4807051d32c3352e867119">outputConf</link></para>
+
+<para>Set default output configuration. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_namespaceciof_1a11dfa6fc0d7cf783cd52dfe0dbf63de1"/><section>
+    <title>CIOFOutputConfig</title>
+<indexterm><primary>CIOFOutputConfig</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>CIOFOutputConfig</secondary></indexterm>
+<para><computeroutput>typedef struct ciof::CIOFOutputConfig ciof::CIOFOutputConfig</computeroutput></para><para>
+
+<para>Set output configuration for <link linkend="_namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f">ciof::impl::__out()</link> function and its wrappers. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespaceciof_1a611be4fce5f7300347625ba4b708686b"/><section>
+    <title>OutputStyle</title>
+<indexterm><primary>OutputStyle</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>OutputStyle</secondary></indexterm>
+<para><computeroutput>enum class <link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686b">ciof::OutputStyle</link><computeroutput>[strong]</computeroutput></computeroutput></para><para>
+
+<para>Set output style: Bold Italic Underline Strikethrough. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Bold</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>Bold</secondary></indexterm>
+<anchor xml:id="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246"/>Bold</entry><entry></entry></row><row><entry><indexterm><primary>Italic</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>Italic</secondary></indexterm>
+<anchor xml:id="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c"/>Italic</entry><entry></entry></row><row><entry><indexterm><primary>Underline</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>Underline</secondary></indexterm>
+<anchor xml:id="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439"/>Underline</entry><entry></entry></row><row><entry><indexterm><primary>Strikethrough</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>Strikethrough</secondary></indexterm>
+<anchor xml:id="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb"/>Strikethrough</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_ciof_8hpp_source_1l00051">51</link> of file <link linkend="_ciof_8hpp_source">ciof.hpp</link>.</para>
+<programlisting linenumbering="unnumbered">00052 &#32;&#32;&#32;&#32;{
+00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246">Bold</link>,
+00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c">Italic</link>,
+00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439">Underline</link>,
+00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb">Strikethrough</link>
+00057 &#32;&#32;&#32;&#32;};
+</programlisting></section>
+<anchor xml:id="_namespaceciof_1a255b49fbd04393ba7532b832b580e747"/><section>
+    <title>OutputType</title>
+<indexterm><primary>OutputType</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>OutputType</secondary></indexterm>
+<para><computeroutput>enum class <link linkend="_namespaceciof_1a255b49fbd04393ba7532b832b580e747">ciof::OutputType</link><computeroutput>[strong]</computeroutput></computeroutput></para><para>
+
+<para>Set output type for <link linkend="_namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f">ciof::impl::__out()</link> function and its helper functions Out : To Standard Output Err : To Standard Error Log : To Standard Log (Error, unbuffered) </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Out</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>Out</secondary></indexterm>
+<anchor xml:id="_namespaceciof_1a255b49fbd04393ba7532b832b580e747a7c147cda9e49590f6abe83d118b7353b"/>Out</entry><entry></entry></row><row><entry><indexterm><primary>Err</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>Err</secondary></indexterm>
+<anchor xml:id="_namespaceciof_1a255b49fbd04393ba7532b832b580e747ab47f6a6092c5d7e4bffec12dff309c3b"/>Err</entry><entry></entry></row><row><entry><indexterm><primary>Log</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>Log</secondary></indexterm>
+<anchor xml:id="_namespaceciof_1a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b"/>Log</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_ciof_8hpp_source_1l00037">37</link> of file <link linkend="_ciof_8hpp_source">ciof.hpp</link>.</para>
+<programlisting linenumbering="unnumbered">00038 &#32;&#32;&#32;&#32;{
+00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespaceciof_1a255b49fbd04393ba7532b832b580e747a7c147cda9e49590f6abe83d118b7353b">Out</link>,&#32;<emphasis role="comment">//&#32;std::cout</emphasis>
+00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespaceciof_1a255b49fbd04393ba7532b832b580e747ab47f6a6092c5d7e4bffec12dff309c3b">Err</link>,&#32;<emphasis role="comment">//&#32;std::cerr</emphasis>
+00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespaceciof_1a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b">Log</link>,&#32;<emphasis role="comment">//&#32;std::clog</emphasis>
+00042 &#32;&#32;&#32;&#32;};
+</programlisting></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespaceciof_1aefd966015567bb62676f13ef217d3b79"/><section>
+    <title>colorSet()</title>
+<indexterm><primary>colorSet</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>colorSet</secondary></indexterm>
+<para><computeroutput>std::string ciof::colorSet (int _color)</computeroutput></para><para>
+
+<para>Set the colors from the default color palette from the terminal. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_color</entry><entry>
+<para>Integer for color </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>std::string Escape code to set the code </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_ciof_8cpp_source_1l00051">51</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00052 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[&quot;</emphasis>&#32;+&#32;std::to_string(_color)&#32;+&#32;<emphasis role="stringliteral">&quot;m&quot;</emphasis>;&#32;}
+</programlisting></section>
+<anchor xml:id="_namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c"/><section>
+    <title>echo()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>echo</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>echo</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>void ciof::echo (T _t)</computeroutput></para><para>
+
+<para>Echo to the standard output for <computeroutput>_t</computeroutput> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_t</entry><entry>
+<para>Message to print </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1a7cbb15b2dae1555e9c53992b01405e80"/><section>
+    <title>echo()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>echo</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>echo</secondary></indexterm>
+<computeroutput>template&lt;typename T, typename ... Args&gt; </computeroutput><para><computeroutput>void ciof::echo (T _t, Args ... _args)</computeroutput></para><para>
+
+<para>Echo to the standard output for <computeroutput>_t</computeroutput> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_t</entry><entry>
+<para>Message to print </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_args</entry><entry>
+<para>More messages to add </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1af084498aae5fae4efa5f82b1bd0cb442"/><section>
+    <title>echoError()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>echoError</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>echoError</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>void ciof::echoError (T _t)</computeroutput></para><para>
+
+<para>Echo to the standard error for <computeroutput>_t</computeroutput> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_t</entry><entry>
+<para>Message to print </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1ab5a04c0ff1d0a664db701e70042d2a44"/><section>
+    <title>echoError()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>echoError</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>echoError</secondary></indexterm>
+<computeroutput>template&lt;typename T, typename ... Args&gt; </computeroutput><para><computeroutput>void ciof::echoError (T _t, Args ... _args)</computeroutput></para><para>
+
+<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_t</entry><entry>
+<para>Message to print </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_args</entry><entry>
+<para>More messages to add </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1af11fbdee1a0cc6113e58b31bcbfde05e"/><section>
+    <title>echoLog()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>echoLog</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>echoLog</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>void ciof::echoLog (T _t)</computeroutput></para><para>
+
+<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_t</entry><entry>
+<para>Message to print </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1a66c51251b714b7bdedb8f628113311d4"/><section>
+    <title>echoLog()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>echoLog</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>echoLog</secondary></indexterm>
+<computeroutput>template&lt;typename T, typename ... Args&gt; </computeroutput><para><computeroutput>void ciof::echoLog (T _t, Args ... _args)</computeroutput></para><para>
+
+<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_t</entry><entry>
+<para>Message to print </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_args</entry><entry>
+<para>More messages to add </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1a42851a9df059ee00504d50b5331ed963"/><section>
+    <title>format()</title>
+<indexterm><primary>format</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>format</secondary></indexterm>
+<computeroutput>template&lt;typename T, typename ... Args&gt; </computeroutput><para><computeroutput>std::string ciof::format (T _t, Args ... _args)</computeroutput></para><para>
+
+<para>Get everything as a string format. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_t</entry><entry>
+<para>First param of the string </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_args</entry><entry>
+<para>Rest of the params of the string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>std::string Return the formatted string </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218"/><section>
+    <title>initANSI()</title>
+<indexterm><primary>initANSI</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>initANSI</secondary></indexterm>
+<para><computeroutput>void ciof::initANSI ( )</computeroutput></para><para>
+
+<para>Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER. </para>
+</para>
+<para>
+Definition at line <link linkend="_ciof_8cpp_source_1l00018">18</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00019 &#32;&#32;&#32;&#32;{
+00020 <emphasis role="preprocessor">#&#32;&#32;&#32;ifdef&#32;CIOF_OS_WIN32</emphasis>
+00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;NOTE:</emphasis>
+00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;This&#32;must&#32;ONLY&#32;be&#32;used&#32;in&#32;Windows&#32;10&#32;or&#32;newer</emphasis>
+00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!IsWindows10OrGreater())&#32;<emphasis role="keywordflow">return</emphasis>;
+00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HANDLE&#32;hOut&#32;=&#32;GetStdHandle(STD_OUTPUT_HANDLE);
+00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DWORD&#32;dwMode&#32;=&#32;0;
+00027 
+00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetConsoleMode(hOut,&#32;&amp;dwMode);
+00029 
+00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dwMode&#32;|=&#32;ENABLE_VIRTUAL_PROCESSING
+00031 
+00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetConsoleMode(hOut,&#32;dwMode)
+00033 <emphasis role="preprocessor">#&#32;&#32;&#32;endif</emphasis>
+00034 &#32;&#32;&#32;&#32;}
+</programlisting></section>
+<anchor xml:id="_namespaceciof_1a890c785dd53fa8333c95e8b9594b55e7"/><section>
+    <title>input()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>input</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>input</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>void ciof::input (const std::string &amp; _prompt, T * _var)</computeroutput></para><para>
+
+<para>Get full input from the user with a prompt. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_prompt</entry><entry>
+<para>Prompt to user </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_var</entry><entry>
+<para>Variable to store the value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1a6d046aa36f6f80976075523e2ba0974a"/><section>
+    <title>input()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>input</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>input</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>void ciof::input (T * _var)</computeroutput></para><para>
+
+<para>Get full input from the user. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_prompt</entry><entry>
+<para>Prompt to user </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_var</entry><entry>
+<para>Variable to store the value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1a8c277d3a2caa58aed09e9bb8982d8ff3"/><section>
+    <title>print()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>print</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>print</secondary></indexterm>
+<para><computeroutput>void ciof::print ( )</computeroutput></para><para>
+
+<para>Print a new line. </para>
+</para>
+<para>
+Definition at line <link linkend="_ciof_8cpp_source_1l00015">15</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00016 &#32;&#32;&#32;&#32;{&#32;std::cout&#32;&lt;&lt;&#32;std::endl;&#32;}
+</programlisting></section>
+<anchor xml:id="_namespaceciof_1a89082a2cf2da077c0d3dae3ab99eede2"/><section>
+    <title>print()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>print</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>print</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>void ciof::print (T _t)</computeroutput></para><para>
+
+<para>Print to the standard output for <computeroutput>_t</computeroutput> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_t</entry><entry>
+<para>Message to print </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1af9fb176a7cdcb9944ebf0521df004696"/><section>
+    <title>print()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>print</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>print</secondary></indexterm>
+<computeroutput>template&lt;typename T, typename ... Args&gt; </computeroutput><para><computeroutput>void ciof::print (T _t, Args ... _args)</computeroutput></para><para>
+
+<para>Print to the standard output for <computeroutput>_t</computeroutput> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_t</entry><entry>
+<para>Message to print </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_args</entry><entry>
+<para>More messages to add </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1a83792b27f8f1ffb969e4e69c5808cb91"/><section>
+    <title>printError()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>printError</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>printError</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>void ciof::printError (T _t)</computeroutput></para><para>
+
+<para>Print to the standard error for <computeroutput>_t</computeroutput> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_t</entry><entry>
+<para>Message to print </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1a2b535b59d1fdbf6fdd654296b421f7ce"/><section>
+    <title>printError()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>printError</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>printError</secondary></indexterm>
+<computeroutput>template&lt;typename T, typename ... Args&gt; </computeroutput><para><computeroutput>void ciof::printError (T _t, Args ... _args)</computeroutput></para><para>
+
+<para>Print to the standard error for <computeroutput>_t</computeroutput> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_t</entry><entry>
+<para>Message to print </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_args</entry><entry>
+<para>More messages to add </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1a4e228d060caae991e1093a7bcd30aa57"/><section>
+    <title>printLog()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>printLog</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>printLog</secondary></indexterm>
+<computeroutput>template&lt;typename T&gt; </computeroutput><para><computeroutput>void ciof::printLog (T _t)</computeroutput></para><para>
+
+<para>Print to the standard log for <computeroutput>_t</computeroutput> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_t</entry><entry>
+<para>Message to print </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1af2ec490460503a2868462739ca9499cc"/><section>
+    <title>printLog()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>printLog</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>printLog</secondary></indexterm>
+<computeroutput>template&lt;typename T, typename ... Args&gt; </computeroutput><para><computeroutput>void ciof::printLog (T _t, Args ... _args)</computeroutput></para><para>
+
+<para>Print to the standard log for <computeroutput>_t</computeroutput> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_t</entry><entry>
+<para>Message to print </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_args</entry><entry>
+<para>More messages to add </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_namespaceciof_1a34c4a83a2f7c4321fb3cd308ad2162bc"/><section>
+    <title>rgbSet()</title>
+<indexterm><primary>rgbSet</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>rgbSet</secondary></indexterm>
+<para><computeroutput>std::string ciof::rgbSet (unsigned int r, unsigned int g, unsigned int b)</computeroutput></para><para>
+
+<para>Set the RGB color in the terminal. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>r</entry><entry>
+<para>Red color </para>
+</entry>
+                            </row>
+                            <row>
+<entry>g</entry><entry>
+<para>Green color </para>
+</entry>
+                            </row>
+                            <row>
+<entry>b</entry><entry>
+<para>Blue color </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>std::string Color escape sequence for RGB colors </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_ciof_8cpp_source_1l00054">54</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00055 &#32;&#32;&#32;&#32;{
+00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[38;2;&quot;</emphasis>&#32;+&#32;std::to_string(r)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>
+00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;std::to_string(g)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>
+00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;std::to_string(b)&#32;+&#32;<emphasis role="stringliteral">&quot;m&quot;</emphasis>;
+00059 &#32;&#32;&#32;&#32;}
+</programlisting></section>
+<anchor xml:id="_namespaceciof_1a25987420300a8bf1380cebe37f6c082f"/><section>
+    <title>styleReset()</title>
+<indexterm><primary>styleReset</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>styleReset</secondary></indexterm>
+<para><computeroutput>std::string ciof::styleReset ( )</computeroutput></para><para>
+
+<para>Reset all the styles and colors in the terminal. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>std::string Escape code to ereset colors and styles from terminal </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_ciof_8cpp_source_1l00048">48</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00049 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[0m&quot;</emphasis>;&#32;}
+</programlisting></section>
+<anchor xml:id="_namespaceciof_1a8ff4eb89ed64bb300da3ddf91cad7e4f"/><section>
+    <title>styleSet()</title>
+<indexterm><primary>styleSet</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>styleSet</secondary></indexterm>
+<para><computeroutput>std::string ciof::styleSet (const <link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686b">OutputStyle</link> &amp; _style)</computeroutput></para><para>
+
+<para>Set the styles according to the <computeroutput><link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686b">OutputStyle</link></computeroutput> type. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_style</entry><entry>
+<para>Set the style (Bold, Italics, Underline, ...) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>std::string Escape code according to the style </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_ciof_8cpp_source_1l00036">36</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00037 &#32;&#32;&#32;&#32;{
+00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(_style)
+00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246">ciof::OutputStyle::Bold</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[1m&quot;</emphasis>;&#32;
+00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c">ciof::OutputStyle::Italic</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[3m&quot;</emphasis>;&#32;
+00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439">ciof::OutputStyle::Underline</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[4m&quot;</emphasis>;&#32;
+00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb">ciof::OutputStyle::Strikethrough</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[9m&quot;</emphasis>;&#32;
+00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00046 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_ciof_8hpp_source_1l00053">Bold</link>, <link linkend="_ciof_8hpp_source_1l00054">Italic</link>, <link linkend="_ciof_8hpp_source_1l00056">Strikethrough</link>, and <link linkend="_ciof_8hpp_source_1l00055">Underline</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespaceciof_1a835007e60a4807051d32c3352e867119"/><section>
+    <title>outputConf</title>
+<indexterm><primary>outputConf</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>outputConf</secondary></indexterm>
+<para><computeroutput><link linkend="_structciof_1_1CIOFOutputConfig">CIOFOutputConfig</link> ciof::outputConf</computeroutput></para><para>
+
+<para>Set default output configuration. </para>
+</para>
+<para>
+Definition at line <link linkend="_ciof_8cpp_source_1l00013">13</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+</section>
+</section>
+</section>

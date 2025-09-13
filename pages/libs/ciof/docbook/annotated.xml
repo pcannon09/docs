@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_structciof_1_1CIOFOutputConfig">ciof::CIOFOutputConfig</link>
+<para>Set output configuration for <link linkend="_namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f">ciof::impl::__out()</link> function and its wrappers </para>
+</section>

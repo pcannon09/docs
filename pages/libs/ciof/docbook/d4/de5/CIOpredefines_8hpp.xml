@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_CIOpredefines_8hpp" xml:lang="en-US">
+<title>inc/ciof/CIOpredefines.hpp File Reference</title>
+<indexterm><primary>inc/ciof/CIOpredefines.hpp</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_CIOpredefines_8hpp_1a393fb6a55175c571e8a68cc6b4b8d041">CIOS_DEFAULT_CPP_STD</link>&#160;&#160;&#160;201703L</para>
+
+<para>EXAMPLEpredefines.h - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1.0S NOTICE: </para>
+</listitem>
+            <listitem><para>#define <link linkend="_CIOpredefines_8hpp_1a7259e518741c1de650e9232bd864b22c">CIOS_DEV</link>&#160;&#160;&#160;true</para>
+</listitem>
+            <listitem><para>#define <link linkend="_CIOpredefines_8hpp_1ab0af42681bafc4c50b53eac47e03477f">CIOS_STRINGIFY</link>(x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_CIOpredefines_8hpp_1a0e7de3b5b558873bf3cd7b57e4c0cce4">CIOS_TOSTRING</link>(x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_CIOpredefines_8hpp_1ae54877088af40d039bd77217ce6c6919">CIOS_VERSION</link>&#160;&#160;&#160;((<link linkend="_CIOpredefines_8hpp_1a81521edf4a2f661a34f92934072173d0">CIOS_VERSION_MAJOR</link>&lt;&lt;16)|(<link linkend="_CIOpredefines_8hpp_1a9b870c05688dd4977dd08e4e4dfc26ed">CIOS_VERSION_MINOR</link>&lt;&lt;8)|(<link linkend="_CIOpredefines_8hpp_1ae4fea725bc5458400b381092f9591f89">CIOS_VERSION_PATCH</link>)|(<link linkend="_CIOpredefines_8hpp_1a340daf84f27fb6da08392572113811b4">CIOS_VERSION_STATE</link> &lt;&lt; 24))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_CIOpredefines_8hpp_1a47a77bc6ca57c4dbd1142e503da0fe0e">CIOS_VERSION_CHECK</link>(<link linkend="_CIOpredefines_8hpp_1a81521edf4a2f661a34f92934072173d0">CIOS_VERSION_MAJOR</link>,  <link linkend="_CIOpredefines_8hpp_1a9b870c05688dd4977dd08e4e4dfc26ed">CIOS_VERSION_MINOR</link>,  <link linkend="_CIOpredefines_8hpp_1ae4fea725bc5458400b381092f9591f89">CIOS_VERSION_PATCH</link>,  <link linkend="_CIOpredefines_8hpp_1a340daf84f27fb6da08392572113811b4">CIOS_VERSION_STATE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_CIOpredefines_8hpp_1a81521edf4a2f661a34f92934072173d0">CIOS_VERSION_MAJOR</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_CIOpredefines_8hpp_1a9b870c05688dd4977dd08e4e4dfc26ed">CIOS_VERSION_MINOR</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_CIOpredefines_8hpp_1ae4fea725bc5458400b381092f9591f89">CIOS_VERSION_PATCH</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_CIOpredefines_8hpp_1a340daf84f27fb6da08392572113811b4">CIOS_VERSION_STATE</link>&#160;&#160;&#160;&quot;dev&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_CIOpredefines_8hpp_1a73acfb5a807f6bedf7f81ae156397f13">CIOS_VERSION_STD</link>&#160;&#160;&#160;0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_CIOpredefines_8hpp_1a393fb6a55175c571e8a68cc6b4b8d041"/><section>
+    <title>CIOS_DEFAULT_CPP_STD</title>
+<indexterm><primary>CIOS_DEFAULT_CPP_STD</primary><secondary>CIOpredefines.hpp</secondary></indexterm>
+<indexterm><primary>CIOpredefines.hpp</primary><secondary>CIOS_DEFAULT_CPP_STD</secondary></indexterm>
+<para><computeroutput>#define CIOS_DEFAULT_CPP_STD&#160;&#160;&#160;201703L</computeroutput></para><para>
+
+<para>EXAMPLEpredefines.h - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1.0S NOTICE: </para>
+</para>
+
+<para><itemizedlist>
+<listitem>
+<para>RENAMED TO CIOSpredefines.hpp </para>
+</listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_CIOpredefines_8hpp_source_1l00012">12</link> of file <link linkend="_CIOpredefines_8hpp_source">CIOpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_CIOpredefines_8hpp_1a7259e518741c1de650e9232bd864b22c"/><section>
+    <title>CIOS_DEV</title>
+<indexterm><primary>CIOS_DEV</primary><secondary>CIOpredefines.hpp</secondary></indexterm>
+<indexterm><primary>CIOpredefines.hpp</primary><secondary>CIOS_DEV</secondary></indexterm>
+<para><computeroutput>#define CIOS_DEV&#160;&#160;&#160;true</computeroutput></para><para>
+Definition at line <link linkend="_CIOpredefines_8hpp_source_1l00038">38</link> of file <link linkend="_CIOpredefines_8hpp_source">CIOpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_CIOpredefines_8hpp_1ab0af42681bafc4c50b53eac47e03477f"/><section>
+    <title>CIOS_STRINGIFY</title>
+<indexterm><primary>CIOS_STRINGIFY</primary><secondary>CIOpredefines.hpp</secondary></indexterm>
+<indexterm><primary>CIOpredefines.hpp</primary><secondary>CIOS_STRINGIFY</secondary></indexterm>
+<para><computeroutput>#define CIOS_STRINGIFY( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><emphasis role="preprocessor">#x</emphasis>
+</programlisting><para>
+Definition at line <link linkend="_CIOpredefines_8hpp_source_1l00034">34</link> of file <link linkend="_CIOpredefines_8hpp_source">CIOpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_CIOpredefines_8hpp_1a0e7de3b5b558873bf3cd7b57e4c0cce4"/><section>
+    <title>CIOS_TOSTRING</title>
+<indexterm><primary>CIOS_TOSTRING</primary><secondary>CIOpredefines.hpp</secondary></indexterm>
+<indexterm><primary>CIOpredefines.hpp</primary><secondary>CIOS_TOSTRING</secondary></indexterm>
+<para><computeroutput>#define CIOS_TOSTRING( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><link linkend="_CIOpredefines_8hpp_1ab0af42681bafc4c50b53eac47e03477f">CIOS_STRINGIFY</link>(x)
+</programlisting><para>
+Definition at line <link linkend="_CIOpredefines_8hpp_source_1l00035">35</link> of file <link linkend="_CIOpredefines_8hpp_source">CIOpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_CIOpredefines_8hpp_1ae54877088af40d039bd77217ce6c6919"/><section>
+    <title>CIOS_VERSION</title>
+<indexterm><primary>CIOS_VERSION</primary><secondary>CIOpredefines.hpp</secondary></indexterm>
+<indexterm><primary>CIOpredefines.hpp</primary><secondary>CIOS_VERSION</secondary></indexterm>
+<para><computeroutput>#define CIOS_VERSION&#160;&#160;&#160;((<link linkend="_CIOpredefines_8hpp_1a81521edf4a2f661a34f92934072173d0">CIOS_VERSION_MAJOR</link>&lt;&lt;16)|(<link linkend="_CIOpredefines_8hpp_1a9b870c05688dd4977dd08e4e4dfc26ed">CIOS_VERSION_MINOR</link>&lt;&lt;8)|(<link linkend="_CIOpredefines_8hpp_1ae4fea725bc5458400b381092f9591f89">CIOS_VERSION_PATCH</link>)|(<link linkend="_CIOpredefines_8hpp_1a340daf84f27fb6da08392572113811b4">CIOS_VERSION_STATE</link> &lt;&lt; 24))</computeroutput></para><para>
+Definition at line <link linkend="_CIOpredefines_8hpp_source_1l00028">28</link> of file <link linkend="_CIOpredefines_8hpp_source">CIOpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_CIOpredefines_8hpp_1a47a77bc6ca57c4dbd1142e503da0fe0e"/><section>
+    <title>CIOS_VERSION_CHECK</title>
+<indexterm><primary>CIOS_VERSION_CHECK</primary><secondary>CIOpredefines.hpp</secondary></indexterm>
+<indexterm><primary>CIOpredefines.hpp</primary><secondary>CIOS_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define CIOS_VERSION_CHECK( <link linkend="_CIOpredefines_8hpp_1a81521edf4a2f661a34f92934072173d0">CIOS_VERSION_MAJOR</link>,  <link linkend="_CIOpredefines_8hpp_1a9b870c05688dd4977dd08e4e4dfc26ed">CIOS_VERSION_MINOR</link>,  <link linkend="_CIOpredefines_8hpp_1ae4fea725bc5458400b381092f9591f89">CIOS_VERSION_PATCH</link>,  <link linkend="_CIOpredefines_8hpp_1a340daf84f27fb6da08392572113811b4">CIOS_VERSION_STATE</link>)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;(((<link linkend="_CIOpredefines_8hpp_1a81521edf4a2f661a34f92934072173d0">CIOS_VERSION_MAJOR</link>)&lt;&lt;16)|((<link linkend="_CIOpredefines_8hpp_1a9b870c05688dd4977dd08e4e4dfc26ed">CIOS_VERSION_MINOR</link>)&lt;&lt;8)|(<link linkend="_CIOpredefines_8hpp_1ae4fea725bc5458400b381092f9591f89">CIOS_VERSION_PATCH</link>)|((<link linkend="_CIOpredefines_8hpp_1a340daf84f27fb6da08392572113811b4">CIOS_VERSION_STATE</link>)&#32;&lt;&lt;&#32;24))
+</programlisting><para>
+Definition at line <link linkend="_CIOpredefines_8hpp_source_1l00030">30</link> of file <link linkend="_CIOpredefines_8hpp_source">CIOpredefines.hpp</link>.</para>
+<programlisting linenumbering="unnumbered">00030 <emphasis role="preprocessor">#define&#32;CIOS_VERSION_CHECK(CIOS_VERSION_MAJOR,&#32;CIOS_VERSION_MINOR,&#32;CIOS_VERSION_PATCH,&#32;CIOS_VERSION_STATE)&#32;\</emphasis>
+00031 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(((CIOS_VERSION_MAJOR)&lt;&lt;16)|((CIOS_VERSION_MINOR)&lt;&lt;8)|(CIOS_VERSION_PATCH)|((CIOS_VERSION_STATE)&#32;&lt;&lt;&#32;24))</emphasis>
+</programlisting></section>
+<anchor xml:id="_CIOpredefines_8hpp_1a81521edf4a2f661a34f92934072173d0"/><section>
+    <title>CIOS_VERSION_MAJOR</title>
+<indexterm><primary>CIOS_VERSION_MAJOR</primary><secondary>CIOpredefines.hpp</secondary></indexterm>
+<indexterm><primary>CIOpredefines.hpp</primary><secondary>CIOS_VERSION_MAJOR</secondary></indexterm>
+<para><computeroutput>#define CIOS_VERSION_MAJOR&#160;&#160;&#160;0</computeroutput></para><para>
+Definition at line <link linkend="_CIOpredefines_8hpp_source_1l00015">15</link> of file <link linkend="_CIOpredefines_8hpp_source">CIOpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_CIOpredefines_8hpp_1a9b870c05688dd4977dd08e4e4dfc26ed"/><section>
+    <title>CIOS_VERSION_MINOR</title>
+<indexterm><primary>CIOS_VERSION_MINOR</primary><secondary>CIOpredefines.hpp</secondary></indexterm>
+<indexterm><primary>CIOpredefines.hpp</primary><secondary>CIOS_VERSION_MINOR</secondary></indexterm>
+<para><computeroutput>#define CIOS_VERSION_MINOR&#160;&#160;&#160;0</computeroutput></para><para>
+Definition at line <link linkend="_CIOpredefines_8hpp_source_1l00016">16</link> of file <link linkend="_CIOpredefines_8hpp_source">CIOpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_CIOpredefines_8hpp_1ae4fea725bc5458400b381092f9591f89"/><section>
+    <title>CIOS_VERSION_PATCH</title>
+<indexterm><primary>CIOS_VERSION_PATCH</primary><secondary>CIOpredefines.hpp</secondary></indexterm>
+<indexterm><primary>CIOpredefines.hpp</primary><secondary>CIOS_VERSION_PATCH</secondary></indexterm>
+<para><computeroutput>#define CIOS_VERSION_PATCH&#160;&#160;&#160;0</computeroutput></para><para>
+Definition at line <link linkend="_CIOpredefines_8hpp_source_1l00017">17</link> of file <link linkend="_CIOpredefines_8hpp_source">CIOpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_CIOpredefines_8hpp_1a340daf84f27fb6da08392572113811b4"/><section>
+    <title>CIOS_VERSION_STATE</title>
+<indexterm><primary>CIOS_VERSION_STATE</primary><secondary>CIOpredefines.hpp</secondary></indexterm>
+<indexterm><primary>CIOpredefines.hpp</primary><secondary>CIOS_VERSION_STATE</secondary></indexterm>
+<para><computeroutput>#define CIOS_VERSION_STATE&#160;&#160;&#160;&quot;dev&quot;</computeroutput></para><para>
+Definition at line <link linkend="_CIOpredefines_8hpp_source_1l00026">26</link> of file <link linkend="_CIOpredefines_8hpp_source">CIOpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_CIOpredefines_8hpp_1a73acfb5a807f6bedf7f81ae156397f13"/><section>
+    <title>CIOS_VERSION_STD</title>
+<indexterm><primary>CIOS_VERSION_STD</primary><secondary>CIOpredefines.hpp</secondary></indexterm>
+<indexterm><primary>CIOpredefines.hpp</primary><secondary>CIOS_VERSION_STD</secondary></indexterm>
+<para><computeroutput>#define CIOS_VERSION_STD&#160;&#160;&#160;0</computeroutput></para><para>
+Definition at line <link linkend="_CIOpredefines_8hpp_source_1l00019">19</link> of file <link linkend="_CIOpredefines_8hpp_source">CIOpredefines.hpp</link>.</para>
+</section>
+</section>
+</section>
