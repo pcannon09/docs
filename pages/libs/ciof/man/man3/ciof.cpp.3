@@ -6,6 +6,8 @@ src/ciof.cpp
 .SH SYNOPSIS
 .br
 .PP
+\fR#include <iostream>\fP
+.br
 \fR#include '\&.\&./inc/ciof/ciof\&.hpp'\fP
 .br
 
@@ -23,6 +25,14 @@ src/ciof.cpp
 .RI "std::string \fBciof::colorSet\fP (int _color)"
 .br
 .RI "Set the colors from the default color palette from the terminal\&. "
+.ti -1c
+.RI "void \fBciof::cursorPos\fP (int _row, int _col)"
+.br
+.RI "Get the set cursor position using _row and _col Essentially calls the \fR\fBgetCursorPos()\fP\fP function and then sets the row and col according to the \fR\fBgetCursorPos()\fP\fP function\&. "
+.ti -1c
+.RI "std::string \fBciof::getCursorPos\fP (int _row, int _col)"
+.br
+.RI "Get the set cursor position using _row and _col\&. "
 .ti -1c
 .RI "void \fBciof::initANSI\fP ()"
 .br

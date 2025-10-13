@@ -2,7 +2,7 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ciof_8cpp" xml:lang="en-US">
 <title>src/ciof.cpp File Reference</title>
 <indexterm><primary>src/ciof.cpp</primary></indexterm>
-<programlisting linenumbering="unnumbered">#include &quot;../inc/ciof/ciof.hpp&quot;<?linebreak?></programlisting><simplesect>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;<?linebreak?>#include &quot;../inc/ciof/ciof.hpp&quot;<?linebreak?></programlisting><simplesect>
     <title>Namespaces    </title>
         <itemizedlist>
             <listitem><para>namespace <link linkend="_namespaceciof">ciof</link></para>
@@ -15,6 +15,14 @@
             <listitem><para>std::string <link linkend="_namespaceciof_1aefd966015567bb62676f13ef217d3b79">ciof::colorSet</link> (int _color)</para>
 
 <para>Set the colors from the default color palette from the terminal. </para>
+</listitem>
+            <listitem><para>void <link linkend="_namespaceciof_1a21412a124eb62a7aeedb4d4885600947">ciof::cursorPos</link> (int _row, int _col)</para>
+
+<para>Get the set cursor position using _row and _col Essentially calls the <computeroutput><link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos()</link></computeroutput> function and then sets the row and col according to the <computeroutput><link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos()</link></computeroutput> function. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">ciof::getCursorPos</link> (int _row, int _col)</para>
+
+<para>Get the set cursor position using _row and _col. </para>
 </listitem>
             <listitem><para>void <link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">ciof::initANSI</link> ()</para>
 

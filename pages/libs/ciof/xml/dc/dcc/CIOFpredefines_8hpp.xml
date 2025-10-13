@@ -113,7 +113,7 @@
       </memberdef>
       <memberdef kind="define" id="dc/dcc/CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f" prot="public" static="no">
         <name>CIOF_VERSION_MINOR</name>
-        <initializer>0</initializer>
+        <initializer>1</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -146,7 +146,7 @@
       </memberdef>
       <memberdef kind="define" id="dc/dcc/CIOFpredefines_8hpp_1afe87ed04a50605abe9a99b2aef3fe153" prot="public" static="no">
         <name>CIOF_VERSION_STD</name>
-        <initializer>20250913</initializer>
+        <initializer>20251013</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -177,10 +177,10 @@
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Versioning</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16" refid="dc/dcc/CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_MAJOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17" refid="dc/dcc/CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_MINOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="dc/dcc/CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_MINOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18" refid="dc/dcc/CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_PATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="dc/dcc/CIOFpredefines_8hpp_1afe87ed04a50605abe9a99b2aef3fe153" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20250913</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="dc/dcc/CIOFpredefines_8hpp_1afe87ed04a50605abe9a99b2aef3fe153" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20251013</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>states:</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>dev</highlight><highlight class="normal"></highlight></codeline>

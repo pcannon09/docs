@@ -92,92 +92,106 @@ $(function(){initNavTree('d0/d04/ciof_8cpp_source.html','../../',''); });
   <div class="headertitle"><div class="title">ciof.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d0/d04/ciof_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../d8/d42/ciof_8hpp.html">../inc/ciof/ciof.hpp</a>&quot;</span></div>
+<a href="../../d0/d04/ciof_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#ifndef __CIOF_OK</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#   error &quot;CIOF Is not OK, make sure to not have any errors at compile time&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#endif </span><span class="comment">// NOT : __CIOF_OK</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifdef CIOF_OS_WIN32</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#   include &lt;windows.h&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d0e/namespaceciof.html">ciof</a></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a835007e60a4807051d32c3352e867119">   13</a></span>    <a class="code hl_struct" href="../../d6/d74/structciof_1_1CIOFOutputConfig.html">CIOFOutputConfig</a> <a class="code hl_variable" href="../../dc/d0e/namespaceciof.html#a835007e60a4807051d32c3352e867119">outputConf</a>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a8c277d3a2caa58aed09e9bb8982d8ff3">   15</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#a8c277d3a2caa58aed09e9bb8982d8ff3">print</a>()</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    { std::cout &lt;&lt; std::endl; }</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d8/d42/ciof_8hpp.html">../inc/ciof/ciof.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef __CIOF_OK</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#   error &quot;CIOF Is not OK, make sure to not have any errors at compile time&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#endif </span><span class="comment">// NOT : __CIOF_OK</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifdef CIOF_OS_WIN32</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#   include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d0e/namespaceciof.html">ciof</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a835007e60a4807051d32c3352e867119">   15</a></span>    <a class="code hl_struct" href="../../d6/d74/structciof_1_1CIOFOutputConfig.html">CIOFOutputConfig</a> <a class="code hl_variable" href="../../dc/d0e/namespaceciof.html#a835007e60a4807051d32c3352e867119">outputConf</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a8c277d3a2caa58aed09e9bb8982d8ff3">   17</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#a8c277d3a2caa58aed09e9bb8982d8ff3">print</a>()</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    { std::cout &lt;&lt; std::endl; }</div>
 </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a0d6add06e42bf2afe40d5e45db195218">   18</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#a0d6add06e42bf2afe40d5e45db195218">initANSI</a>()</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#   ifdef CIOF_OS_WIN32</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="comment">// NOTE:</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">// This must ONLY be used in Windows 10 or newer</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">if</span> (!IsWindows10OrGreater()) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        DWORD dwMode = 0;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        GetConsoleMode(hOut, &amp;dwMode);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        dwMode |= ENABLE_VIRTUAL_PROCESSING</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        SetConsoleMode(hOut, dwMode)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#   endif</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a23e6d40b211eeebdc7ac2c5b9edefe5e">   20</a></span>    std::string <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos</a>(<span class="keywordtype">int</span> _row, <span class="keywordtype">int</span> _col)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    { <span class="keywordflow">return</span> std::string(<span class="stringliteral">&quot;\033[&quot;</span> + std::to_string(_row) + <span class="stringliteral">&quot;;&quot;</span> + std::to_string(_col) + <span class="stringliteral">&quot;H&quot;</span>); }</div>
 </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    </div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a8ff4eb89ed64bb300da3ddf91cad7e4f">   36</a></span>    std::string <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#a8ff4eb89ed64bb300da3ddf91cad7e4f">styleSet</a>(<span class="keyword">const</span> <a class="code hl_enumeration" href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686b">OutputStyle</a> &amp;_style)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">switch</span> (_style)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246">ciof::OutputStyle::Bold</a>:                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[1m&quot;</span>; </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c">ciof::OutputStyle::Italic</a>:                <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[3m&quot;</span>; </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439">ciof::OutputStyle::Underline</a>:              <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[4m&quot;</span>; </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb">ciof::OutputStyle::Strikethrough</a>:          <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[9m&quot;</span>; </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">default</span>:                                        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a21412a124eb62a7aeedb4d4885600947">   23</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#a21412a124eb62a7aeedb4d4885600947">cursorPos</a>(<span class="keywordtype">int</span> _row, <span class="keywordtype">int</span> _col)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    { std::cout &lt;&lt; <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos</a>(_row, _col) &lt;&lt; std::flush; }</div>
 </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a25987420300a8bf1380cebe37f6c082f">   48</a></span>    std::string <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#a25987420300a8bf1380cebe37f6c082f">styleReset</a>()</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    { <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[0m&quot;</span>; }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a0d6add06e42bf2afe40d5e45db195218">   26</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#a0d6add06e42bf2afe40d5e45db195218">initANSI</a>()</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#   ifdef CIOF_OS_WIN32</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="comment">// NOTE:</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="comment">// This must ONLY be used in Windows 10 or newer</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">if</span> (!IsWindows10OrGreater()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        DWORD dwMode = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        GetConsoleMode(hOut, &amp;dwMode);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        dwMode |= ENABLE_VIRTUAL_PROCESSING</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        SetConsoleMode(hOut, dwMode)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#   endif</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
 </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#aefd966015567bb62676f13ef217d3b79">   51</a></span>    std::string <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#aefd966015567bb62676f13ef217d3b79">colorSet</a>(<span class="keywordtype">int</span> _color)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    { <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[&quot;</span> + std::to_string(_color) + <span class="stringliteral">&quot;m&quot;</span>; }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a8ff4eb89ed64bb300da3ddf91cad7e4f">   44</a></span>    std::string <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#a8ff4eb89ed64bb300da3ddf91cad7e4f">styleSet</a>(<span class="keyword">const</span> <a class="code hl_enumeration" href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686b">OutputStyle</a> &amp;_style)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">switch</span> (_style)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246">ciof::OutputStyle::Bold</a>:                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[1m&quot;</span>; </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c">ciof::OutputStyle::Italic</a>:                <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[3m&quot;</span>; </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439">ciof::OutputStyle::Underline</a>:              <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[4m&quot;</span>; </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb">ciof::OutputStyle::Strikethrough</a>:          <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[9m&quot;</span>; </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">default</span>:                                        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a34c4a83a2f7c4321fb3cd308ad2162bc">   54</a></span>    std::string <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#a34c4a83a2f7c4321fb3cd308ad2162bc">rgbSet</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> r, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> g, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> b)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[38;2;&quot;</span> + std::to_string(r) + <span class="stringliteral">&quot;;&quot;</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            + std::to_string(g) + <span class="stringliteral">&quot;;&quot;</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            + std::to_string(b) + <span class="stringliteral">&quot;m&quot;</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a25987420300a8bf1380cebe37f6c082f">   56</a></span>    std::string <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#a25987420300a8bf1380cebe37f6c082f">styleReset</a>()</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    { <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[0m&quot;</span>; }</div>
 </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#aefd966015567bb62676f13ef217d3b79">   59</a></span>    std::string <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#aefd966015567bb62676f13ef217d3b79">colorSet</a>(<span class="keywordtype">int</span> _color)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    { <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[&quot;</span> + std::to_string(_color) + <span class="stringliteral">&quot;m&quot;</span>; }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../dc/d0e/namespaceciof.html#a34c4a83a2f7c4321fb3cd308ad2162bc">   62</a></span>    std::string <a class="code hl_function" href="../../dc/d0e/namespaceciof.html#a34c4a83a2f7c4321fb3cd308ad2162bc">rgbSet</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> r, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> g, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> b)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;\033[38;2;&quot;</span> + std::to_string(r) + <span class="stringliteral">&quot;;&quot;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            + std::to_string(g) + <span class="stringliteral">&quot;;&quot;</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            + std::to_string(b) + <span class="stringliteral">&quot;m&quot;</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
 <div class="ttc" id="aciof_8hpp_html"><div class="ttname"><a href="../../d8/d42/ciof_8hpp.html">ciof.hpp</a></div></div>
 <div class="ttc" id="anamespaceciof_html"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html">ciof</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/d42/ciof_8hpp_source.html#l00011">ciof.hpp:12</a></div></div>
-<div class="ttc" id="anamespaceciof_html_a0d6add06e42bf2afe40d5e45db195218"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a0d6add06e42bf2afe40d5e45db195218">ciof::initANSI</a></div><div class="ttdeci">void initANSI()</div><div class="ttdoc">Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">ciof.cpp:18</a></div></div>
-<div class="ttc" id="anamespaceciof_html_a25987420300a8bf1380cebe37f6c082f"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a25987420300a8bf1380cebe37f6c082f">ciof::styleReset</a></div><div class="ttdeci">std::string styleReset()</div><div class="ttdoc">Reset all the styles and colors in the terminal.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">ciof.cpp:48</a></div></div>
-<div class="ttc" id="anamespaceciof_html_a34c4a83a2f7c4321fb3cd308ad2162bc"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a34c4a83a2f7c4321fb3cd308ad2162bc">ciof::rgbSet</a></div><div class="ttdeci">std::string rgbSet(unsigned int r, unsigned int g, unsigned int b)</div><div class="ttdoc">Set the RGB color in the terminal.</div><div class="ttdef"><b>Definition</b> <a href="#l00054">ciof.cpp:54</a></div></div>
+<div class="ttc" id="anamespaceciof_html_a0d6add06e42bf2afe40d5e45db195218"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a0d6add06e42bf2afe40d5e45db195218">ciof::initANSI</a></div><div class="ttdeci">void initANSI()</div><div class="ttdoc">Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">ciof.cpp:26</a></div></div>
+<div class="ttc" id="anamespaceciof_html_a21412a124eb62a7aeedb4d4885600947"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a21412a124eb62a7aeedb4d4885600947">ciof::cursorPos</a></div><div class="ttdeci">void cursorPos(int _row, int _col)</div><div class="ttdoc">Get the set cursor position using _row and _col Essentially calls the getCursorPos() function and the...</div><div class="ttdef"><b>Definition</b> <a href="#l00023">ciof.cpp:23</a></div></div>
+<div class="ttc" id="anamespaceciof_html_a23e6d40b211eeebdc7ac2c5b9edefe5e"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a23e6d40b211eeebdc7ac2c5b9edefe5e">ciof::getCursorPos</a></div><div class="ttdeci">std::string getCursorPos(int _row, int _col)</div><div class="ttdoc">Get the set cursor position using _row and _col.</div><div class="ttdef"><b>Definition</b> <a href="#l00020">ciof.cpp:20</a></div></div>
+<div class="ttc" id="anamespaceciof_html_a25987420300a8bf1380cebe37f6c082f"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a25987420300a8bf1380cebe37f6c082f">ciof::styleReset</a></div><div class="ttdeci">std::string styleReset()</div><div class="ttdoc">Reset all the styles and colors in the terminal.</div><div class="ttdef"><b>Definition</b> <a href="#l00056">ciof.cpp:56</a></div></div>
+<div class="ttc" id="anamespaceciof_html_a34c4a83a2f7c4321fb3cd308ad2162bc"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a34c4a83a2f7c4321fb3cd308ad2162bc">ciof::rgbSet</a></div><div class="ttdeci">std::string rgbSet(unsigned int r, unsigned int g, unsigned int b)</div><div class="ttdoc">Set the RGB color in the terminal.</div><div class="ttdef"><b>Definition</b> <a href="#l00062">ciof.cpp:62</a></div></div>
 <div class="ttc" id="anamespaceciof_html_a611be4fce5f7300347625ba4b708686b"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686b">ciof::OutputStyle</a></div><div class="ttdeci">OutputStyle</div><div class="ttdoc">Set output style: Bold Italic Underline Strikethrough.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d42/ciof_8hpp_source.html#l00051">ciof.hpp:52</a></div></div>
 <div class="ttc" id="anamespaceciof_html_a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246">ciof::OutputStyle::Bold</a></div><div class="ttdeci">@ Bold</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d42/ciof_8hpp_source.html#l00053">ciof.hpp:53</a></div></div>
 <div class="ttc" id="anamespaceciof_html_a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c">ciof::OutputStyle::Italic</a></div><div class="ttdeci">@ Italic</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d42/ciof_8hpp_source.html#l00054">ciof.hpp:54</a></div></div>
 <div class="ttc" id="anamespaceciof_html_a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439">ciof::OutputStyle::Underline</a></div><div class="ttdeci">@ Underline</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d42/ciof_8hpp_source.html#l00055">ciof.hpp:55</a></div></div>
 <div class="ttc" id="anamespaceciof_html_a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb">ciof::OutputStyle::Strikethrough</a></div><div class="ttdeci">@ Strikethrough</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d42/ciof_8hpp_source.html#l00056">ciof.hpp:56</a></div></div>
-<div class="ttc" id="anamespaceciof_html_a835007e60a4807051d32c3352e867119"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a835007e60a4807051d32c3352e867119">ciof::outputConf</a></div><div class="ttdeci">CIOFOutputConfig outputConf</div><div class="ttdoc">Set default output configuration.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">ciof.cpp:13</a></div></div>
-<div class="ttc" id="anamespaceciof_html_a8c277d3a2caa58aed09e9bb8982d8ff3"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a8c277d3a2caa58aed09e9bb8982d8ff3">ciof::print</a></div><div class="ttdeci">void print()</div><div class="ttdoc">Print a new line.</div><div class="ttdef"><b>Definition</b> <a href="#l00015">ciof.cpp:15</a></div></div>
-<div class="ttc" id="anamespaceciof_html_a8ff4eb89ed64bb300da3ddf91cad7e4f"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a8ff4eb89ed64bb300da3ddf91cad7e4f">ciof::styleSet</a></div><div class="ttdeci">std::string styleSet(const OutputStyle &amp;_style)</div><div class="ttdoc">Set the styles according to the OutputStyle type.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">ciof.cpp:36</a></div></div>
-<div class="ttc" id="anamespaceciof_html_aefd966015567bb62676f13ef217d3b79"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#aefd966015567bb62676f13ef217d3b79">ciof::colorSet</a></div><div class="ttdeci">std::string colorSet(int _color)</div><div class="ttdoc">Set the colors from the default color palette from the terminal.</div><div class="ttdef"><b>Definition</b> <a href="#l00051">ciof.cpp:51</a></div></div>
+<div class="ttc" id="anamespaceciof_html_a835007e60a4807051d32c3352e867119"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a835007e60a4807051d32c3352e867119">ciof::outputConf</a></div><div class="ttdeci">CIOFOutputConfig outputConf</div><div class="ttdoc">Set default output configuration.</div><div class="ttdef"><b>Definition</b> <a href="#l00015">ciof.cpp:15</a></div></div>
+<div class="ttc" id="anamespaceciof_html_a8c277d3a2caa58aed09e9bb8982d8ff3"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a8c277d3a2caa58aed09e9bb8982d8ff3">ciof::print</a></div><div class="ttdeci">void print()</div><div class="ttdoc">Print a new line.</div><div class="ttdef"><b>Definition</b> <a href="#l00017">ciof.cpp:17</a></div></div>
+<div class="ttc" id="anamespaceciof_html_a8ff4eb89ed64bb300da3ddf91cad7e4f"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#a8ff4eb89ed64bb300da3ddf91cad7e4f">ciof::styleSet</a></div><div class="ttdeci">std::string styleSet(const OutputStyle &amp;_style)</div><div class="ttdoc">Set the styles according to the OutputStyle type.</div><div class="ttdef"><b>Definition</b> <a href="#l00044">ciof.cpp:44</a></div></div>
+<div class="ttc" id="anamespaceciof_html_aefd966015567bb62676f13ef217d3b79"><div class="ttname"><a href="../../dc/d0e/namespaceciof.html#aefd966015567bb62676f13ef217d3b79">ciof::colorSet</a></div><div class="ttdeci">std::string colorSet(int _color)</div><div class="ttdoc">Set the colors from the default color palette from the terminal.</div><div class="ttdef"><b>Definition</b> <a href="#l00059">ciof.cpp:59</a></div></div>
 <div class="ttc" id="astructciof_1_1CIOFOutputConfig_html"><div class="ttname"><a href="../../d6/d74/structciof_1_1CIOFOutputConfig.html">ciof::CIOFOutputConfig</a></div><div class="ttdoc">Set output configuration for ciof::impl::__out() function and its wrappers.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d42/ciof_8hpp_source.html#l00016">ciof.hpp:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

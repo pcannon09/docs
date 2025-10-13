@@ -271,13 +271,29 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_ciof_8hpp_source_1l00267"/>00267 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;NOTE:&#32;ONLY&#32;WORKS&#32;IN&#32;WINDOWS&#32;10&#32;OR&#32;LATER</emphasis>
 <anchor xml:id="_ciof_8hpp_source_1l00268"/>00268 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*/</emphasis>
 <anchor xml:id="_ciof_8hpp_source_1l00269"/>00269 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">initANSI</link>();
-<anchor xml:id="_ciof_8hpp_source_1l00270"/>00270 }
-<anchor xml:id="_ciof_8hpp_source_1l00271"/>00271 
-<anchor xml:id="_ciof_8hpp_source_1l00272"/>00272 <emphasis role="preprocessor">#include&#32;&quot;ciof.ipp&quot;</emphasis>
-<anchor xml:id="_ciof_8hpp_source_1l00273"/>00273 
-<anchor xml:id="_ciof_8hpp_source_1l00274"/>00274 <emphasis role="preprocessor">#else</emphasis>
-<anchor xml:id="_ciof_8hpp_source_1l00275"/>00275 <emphasis role="preprocessor">#&#32;&#32;&#32;error&#32;&quot;Cannot&#32;compile&#32;with&#32;the&#32;current&#32;C++&#32;standard&quot;</emphasis>
-<anchor xml:id="_ciof_8hpp_source_1l00276"/>00276 <emphasis role="preprocessor">#&#32;&#32;&#32;pragma&#32;message(&quot;Use&#32;C++&#32;&quot;&#32;CIOF_TOSTRING(CIOF_DEFAULT_CPP_STD)&#32;&quot;&#32;or&#32;higer&#32;instead&#32;of&#32;&quot;&#32;CIOF_TOSTRING(__cplusplus))</emphasis>
-<anchor xml:id="_ciof_8hpp_source_1l00277"/>00277 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;__cplusplus</emphasis>
-<anchor xml:id="_ciof_8hpp_source_1l00278"/>00278 
+<anchor xml:id="_ciof_8hpp_source_1l00270"/>00270 <emphasis role="comment"></emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00271"/>00271 <emphasis role="comment">&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00272"/>00272 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;the&#32;set&#32;cursor&#32;position&#32;using&#32;_row&#32;and&#32;_col</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00273"/>00273 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;_row&#32;Row&#32;to&#32;set&#32;(X)</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00274"/>00274 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;_col&#32;Column&#32;to&#32;set&#32;(Y)</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00275"/>00275 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;std::string&#32;Return&#32;the&#32;string&#32;to&#32;set&#32;the&#32;position&#32;using&#32;ANSI</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00276"/>00276 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00277"/>00277 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos</link>(<emphasis role="keywordtype">int</emphasis>&#32;_row,&#32;<emphasis role="keywordtype">int</emphasis>&#32;_col);
+<anchor xml:id="_ciof_8hpp_source_1l00278"/>00278 <emphasis role="comment"></emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00279"/>00279 <emphasis role="comment">&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00280"/>00280 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;the&#32;set&#32;cursor&#32;position&#32;using&#32;_row&#32;and&#32;_col</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00281"/>00281 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;Essentially&#32;calls&#32;the&#32;`getCursorPos()`&#32;function&#32;and&#32;then&#32;sets&#32;the&#32;row&#32;and&#32;col&#32;according&#32;to&#32;the&#32;`getCursorPos()`&#32;function</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00282"/>00282 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;_row&#32;Row&#32;to&#32;set&#32;(X)</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00283"/>00283 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;_col&#32;Column&#32;to&#32;set&#32;(Y)</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00284"/>00284 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00285"/>00285 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespaceciof_1a21412a124eb62a7aeedb4d4885600947">cursorPos</link>(<emphasis role="keywordtype">int</emphasis>&#32;_row,&#32;<emphasis role="keywordtype">int</emphasis>&#32;_col);
+<anchor xml:id="_ciof_8hpp_source_1l00286"/>00286 }
+<anchor xml:id="_ciof_8hpp_source_1l00287"/>00287 
+<anchor xml:id="_ciof_8hpp_source_1l00288"/>00288 <emphasis role="preprocessor">#include&#32;&quot;ciof.ipp&quot;</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00289"/>00289 
+<anchor xml:id="_ciof_8hpp_source_1l00290"/>00290 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00291"/>00291 <emphasis role="preprocessor">#&#32;&#32;&#32;error&#32;&quot;Cannot&#32;compile&#32;with&#32;the&#32;current&#32;C++&#32;standard&quot;</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00292"/>00292 <emphasis role="preprocessor">#&#32;&#32;&#32;pragma&#32;message(&quot;Use&#32;C++&#32;&quot;&#32;CIOF_TOSTRING(CIOF_DEFAULT_CPP_STD)&#32;&quot;&#32;or&#32;higer&#32;instead&#32;of&#32;&quot;&#32;CIOF_TOSTRING(__cplusplus))</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00293"/>00293 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;__cplusplus</emphasis>
+<anchor xml:id="_ciof_8hpp_source_1l00294"/>00294 
 </programlisting></section>

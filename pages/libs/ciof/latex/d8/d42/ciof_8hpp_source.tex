@@ -271,14 +271,30 @@
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00267}00267\ \textcolor{comment}{\ \ \ \ \ *\ NOTE:\ ONLY\ WORKS\ IN\ WINDOWS\ 10\ OR\ LATER}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00268}00268\ \textcolor{comment}{\ \ \ \ \ */}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00269}00269\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_a0d6add06e42bf2afe40d5e45db195218}{initANSI}}();}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00270}00270\ \}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00271}00271\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00272}00272\ \textcolor{preprocessor}{\#include\ "{}ciof.ipp"{}}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00273}00273\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00274}00274\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00275}00275\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Cannot\ compile\ with\ the\ current\ C++\ standard"{}}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00276}00276\ \textcolor{preprocessor}{\#\ \ \ pragma\ message("{}Use\ C++\ "{}\ CIOF\_TOSTRING(CIOF\_DEFAULT\_CPP\_STD)\ "{}\ or\ higer\ instead\ of\ "{}\ CIOF\_TOSTRING(\_\_cplusplus))}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00277}00277\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00278}00278\ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00270}00270\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00271}00271\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00272}00272\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ the\ set\ cursor\ position\ using\ \_row\ and\ \_col}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00273}00273\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_row\ Row\ to\ set\ (X)}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00274}00274\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_col\ Column\ to\ set\ (Y)}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00275}00275\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Return\ the\ string\ to\ set\ the\ position\ using\ ANSI}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00276}00276\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00277}00277\ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{getCursorPos}}(\textcolor{keywordtype}{int}\ \_row,\ \textcolor{keywordtype}{int}\ \_col);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00278}00278\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00279}00279\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00280}00280\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ the\ set\ cursor\ position\ using\ \_row\ and\ \_col}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00281}00281\ \textcolor{comment}{\ \ \ \ \ *\ Essentially\ calls\ the\ \`{}getCursorPos()`\ function\ and\ then\ sets\ the\ row\ and\ col\ according\ to\ the\ \`{}getCursorPos()`\ function}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00282}00282\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_row\ Row\ to\ set\ (X)}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00283}00283\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_col\ Column\ to\ set\ (Y)}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00284}00284\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00285}00285\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_a21412a124eb62a7aeedb4d4885600947}{cursorPos}}(\textcolor{keywordtype}{int}\ \_row,\ \textcolor{keywordtype}{int}\ \_col);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00286}00286\ \}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00288}00288\ \textcolor{preprocessor}{\#include\ "{}ciof.ipp"{}}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00289}00289\ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00290}00290\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00291}00291\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Cannot\ compile\ with\ the\ current\ C++\ standard"{}}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00292}00292\ \textcolor{preprocessor}{\#\ \ \ pragma\ message("{}Use\ C++\ "{}\ CIOF\_TOSTRING(CIOF\_DEFAULT\_CPP\_STD)\ "{}\ or\ higer\ instead\ of\ "{}\ CIOF\_TOSTRING(\_\_cplusplus))}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00293}00293\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00294}00294\ }
 
 \end{DoxyCode}

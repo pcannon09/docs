@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['minimal_20cmake_20example_0',['MINIMAL CMAKE EXAMPLE',['../index.html#autotoc_md9',1,'']]],
-  ['minimal_20code_20example_1',['MINIMAL CODE EXAMPLE',['../index.html#autotoc_md10',1,'']]]
+  ['log_0',['Log',['../dc/d0e/namespaceciof.html#a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b',1,'ciof']]]
 ];

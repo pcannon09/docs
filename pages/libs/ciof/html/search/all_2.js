@@ -23,5 +23,6 @@ var searchData=
   ['colorset_20',['colorSet',['../dc/d0e/namespaceciof.html#aefd966015567bb62676f13ef217d3b79',1,'ciof']]],
   ['compilers_21',['Supported Compilers',['../index.html#autotoc_md6',1,'']]],
   ['configuration_22',['Configuration',['../index.html#autotoc_md4',1,'']]],
-  ['custom_20input_20output_20format_23',['CIOF - Custom Input Output Format',['../index.html',1,'']]]
+  ['cursorpos_23',['cursorPos',['../dc/d0e/namespaceciof.html#a21412a124eb62a7aeedb4d4885600947',1,'ciof']]],
+  ['custom_20input_20output_20format_24',['CIOF - Custom Input Output Format',['../index.html',1,'']]]
 ];

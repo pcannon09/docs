@@ -34,6 +34,8 @@ enum class \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{Out
 \item 
 std\+::string \mbox{\hyperlink{namespaceciof_aefd966015567bb62676f13ef217d3b79}{color\+Set}} (int \+\_\+color)
 \begin{DoxyCompactList}\small\item\em Set the colors from the default color palette from the terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceciof_a21412a124eb62a7aeedb4d4885600947}{cursor\+Pos}} (int \+\_\+row, int \+\_\+col)
+\begin{DoxyCompactList}\small\item\em Get the set cursor position using \+\_\+row and \+\_\+col Essentially calls the {\ttfamily \doxylink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{get\+Cursor\+Pos()}} function and then sets the row and col according to the {\ttfamily \doxylink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{get\+Cursor\+Pos()}} function. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_ae2f933bf22e4842d7aca72ead108f28c}{echo}} (T \+\_\+t)
 \begin{DoxyCompactList}\small\item\em Echo to the standard output for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T, typename ... Args$>$ }\\void \mbox{\hyperlink{namespaceciof_a7cbb15b2dae1555e9c53992b01405e80}{echo}} (T \+\_\+t, Args ... \+\_\+args)
@@ -48,6 +50,8 @@ std\+::string \mbox{\hyperlink{namespaceciof_aefd966015567bb62676f13ef217d3b79}{
 \begin{DoxyCompactList}\small\item\em Echo to the standard log for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T, typename ... Args$>$ }\\std\+::string \mbox{\hyperlink{namespaceciof_a42851a9df059ee00504d50b5331ed963}{format}} (T \+\_\+t, Args ... \+\_\+args)
 \begin{DoxyCompactList}\small\item\em Get everything as a string format. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{get\+Cursor\+Pos}} (int \+\_\+row, int \+\_\+col)
+\begin{DoxyCompactList}\small\item\em Get the set cursor position using \+\_\+row and \+\_\+col. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespaceciof_a0d6add06e42bf2afe40d5e45db195218}{init\+ANSI}} ()
 \begin{DoxyCompactList}\small\item\em Initialize ANSI text option in Windows 10 or later NOTE\+: ONLY WORKS IN WINDOWS 10 OR LATER. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_a890c785dd53fa8333c95e8b9594b55e7}{input}} (const std\+::string \&\+\_\+prompt, T \texorpdfstring{$\ast$}{*}\+\_\+var)
@@ -203,13 +207,43 @@ std\+::string Escape code to set the code
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
+Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00052\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033["{}}\ +\ std::to\_string(\_color)\ +\ \textcolor{stringliteral}{"{}m"{}};\ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033["{}}\ +\ std::to\_string(\_color)\ +\ \textcolor{stringliteral}{"{}m"{}};\ \}}
 
 \end{DoxyCode}
+\Hypertarget{namespaceciof_a21412a124eb62a7aeedb4d4885600947}\index{ciof@{ciof}!cursorPos@{cursorPos}}
+\index{cursorPos@{cursorPos}!ciof@{ciof}}
+\doxysubsubsection{\texorpdfstring{cursorPos()}{cursorPos()}}
+{\footnotesize\ttfamily \label{namespaceciof_a21412a124eb62a7aeedb4d4885600947} 
+void ciof\+::cursor\+Pos (\begin{DoxyParamCaption}\item[{int}]{\+\_\+row}{, }\item[{int}]{\+\_\+col}{}\end{DoxyParamCaption})}
+
+
+
+Get the set cursor position using \+\_\+row and \+\_\+col Essentially calls the {\ttfamily \doxylink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{get\+Cursor\+Pos()}} function and then sets the row and col according to the {\ttfamily \doxylink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{get\+Cursor\+Pos()}} function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+row} & Row to set (X) \\
+\hline
+{\em \+\_\+col} & Column to set (Y) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \{\ std::cout\ <<\ \mbox{\hyperlink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{getCursorPos}}(\_row,\ \_col)\ <<\ std::flush;\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ciof_8cpp_source_l00020}{get\+Cursor\+Pos()}}.
+
 \Hypertarget{namespaceciof_ae2f933bf22e4842d7aca72ead108f28c}\index{ciof@{ciof}!echo@{echo}}
 \index{echo@{echo}!ciof@{ciof}}
 \doxysubsubsection{\texorpdfstring{echo()}{echo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -333,6 +367,39 @@ Get everything as a string format.
 \begin{DoxyReturn}{Returns}
 std\+::string Return the formatted string 
 \end{DoxyReturn}
+\Hypertarget{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}\index{ciof@{ciof}!getCursorPos@{getCursorPos}}
+\index{getCursorPos@{getCursorPos}!ciof@{ciof}}
+\doxysubsubsection{\texorpdfstring{getCursorPos()}{getCursorPos()}}
+{\footnotesize\ttfamily \label{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e} 
+std\+::string ciof\+::get\+Cursor\+Pos (\begin{DoxyParamCaption}\item[{int}]{\+\_\+row}{, }\item[{int}]{\+\_\+col}{}\end{DoxyParamCaption})}
+
+
+
+Get the set cursor position using \+\_\+row and \+\_\+col. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+row} & Row to set (X) \\
+\hline
+{\em \+\_\+col} & Column to set (Y) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string Return the string to set the position using ANSI 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ std::string(\textcolor{stringliteral}{"{}\(\backslash\)033["{}}\ +\ std::to\_string(\_row)\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ std::to\_string(\_col)\ +\ \textcolor{stringliteral}{"{}H"{}});\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{ciof_8cpp_source_l00023}{cursor\+Pos()}}.
+
 \Hypertarget{namespaceciof_a0d6add06e42bf2afe40d5e45db195218}\index{ciof@{ciof}!initANSI@{initANSI}}
 \index{initANSI@{initANSI}!ciof@{ciof}}
 \doxysubsubsection{\texorpdfstring{initANSI()}{initANSI()}}
@@ -345,26 +412,26 @@ Initialize ANSI text option in Windows 10 or later NOTE\+: ONLY WORKS IN WINDOWS
 
 
 
-Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
+Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00019\ \ \ \ \ \{}
-\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#\ \ \ ifdef\ CIOF\_OS\_WIN32}}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOTE:}}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ must\ ONLY\ be\ used\ in\ Windows\ 10\ or\ newer}}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!IsWindows10OrGreater())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ HANDLE\ hOut\ =\ GetStdHandle(STD\_OUTPUT\_HANDLE);}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ DWORD\ dwMode\ =\ 0;}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ GetConsoleMode(hOut,\ \&dwMode);}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ dwMode\ |=\ ENABLE\_VIRTUAL\_PROCESSING}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ SetConsoleMode(hOut,\ dwMode)}
-\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#\ \ \ endif}}
-\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#\ \ \ ifdef\ CIOF\_OS\_WIN32}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOTE:}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ must\ ONLY\ be\ used\ in\ Windows\ 10\ or\ newer}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!IsWindows10OrGreater())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ HANDLE\ hOut\ =\ GetStdHandle(STD\_OUTPUT\_HANDLE);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ DWORD\ dwMode\ =\ 0;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ GetConsoleMode(hOut,\ \&dwMode);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ dwMode\ |=\ ENABLE\_VIRTUAL\_PROCESSING}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ SetConsoleMode(hOut,\ dwMode)}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#\ \ \ endif}}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{namespaceciof_a890c785dd53fa8333c95e8b9594b55e7}\index{ciof@{ciof}!input@{input}}
@@ -415,11 +482,11 @@ Print a new line.
 
 
 
-Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
+Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00016\ \ \ \ \ \{\ std::cout\ <<\ std::endl;\ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \{\ std::cout\ <<\ std::endl;\ \}}
 
 \end{DoxyCode}
 \Hypertarget{namespaceciof_a89082a2cf2da077c0d3dae3ab99eede2}\index{ciof@{ciof}!print@{print}}
@@ -548,15 +615,15 @@ std\+::string Color escape sequence for RGB colors
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
+Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00055\ \ \ \ \ \{}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[38;2;"{}}\ +\ std::to\_string(r)\ +\ \textcolor{stringliteral}{"{};"{}}}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ +\ std::to\_string(g)\ +\ \textcolor{stringliteral}{"{};"{}}}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ +\ std::to\_string(b)\ +\ \textcolor{stringliteral}{"{}m"{}};}
-\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[38;2;"{}}\ +\ std::to\_string(r)\ +\ \textcolor{stringliteral}{"{};"{}}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ +\ std::to\_string(g)\ +\ \textcolor{stringliteral}{"{};"{}}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ +\ std::to\_string(b)\ +\ \textcolor{stringliteral}{"{}m"{}};}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{namespaceciof_a25987420300a8bf1380cebe37f6c082f}\index{ciof@{ciof}!styleReset@{styleReset}}
@@ -574,11 +641,11 @@ std\+::string Escape code to ereset colors and styles from terminal
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
+Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00049\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}};\ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}};\ \}}
 
 \end{DoxyCode}
 \Hypertarget{namespaceciof_a8ff4eb89ed64bb300da3ddf91cad7e4f}\index{ciof@{ciof}!styleSet@{styleSet}}
@@ -601,20 +668,20 @@ std\+::string Escape code according to the style
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
+Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00037\ \ \ \ \ \{}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_style)}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246}{ciof::OutputStyle::Bold}}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[1m"{}};\ }
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c}{ciof::OutputStyle::Italic}}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[3m"{}};\ }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439}{ciof::OutputStyle::Underline}}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[4m"{}};\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb}{ciof::OutputStyle::Strikethrough}}:\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[9m"{}};\ }
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_style)}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246}{ciof::OutputStyle::Bold}}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[1m"{}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c}{ciof::OutputStyle::Italic}}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[3m"{}};\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439}{ciof::OutputStyle::Underline}}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[4m"{}};\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb}{ciof::OutputStyle::Strikethrough}}:\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[9m"{}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -638,5 +705,5 @@ Set default output configuration.
 
 
 
-Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
+Definition at line \mbox{\hyperlink{ciof_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{ciof_8cpp_source}{ciof.\+cpp}}.
 

@@ -20,6 +20,7 @@ var namespaceciof =
       [ "Log", "dc/d0e/namespaceciof.html#a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b", null ]
     ] ],
     [ "colorSet", "dc/d0e/namespaceciof.html#aefd966015567bb62676f13ef217d3b79", null ],
+    [ "cursorPos", "dc/d0e/namespaceciof.html#a21412a124eb62a7aeedb4d4885600947", null ],
     [ "echo", "dc/d0e/namespaceciof.html#ae2f933bf22e4842d7aca72ead108f28c", null ],
     [ "echo", "dc/d0e/namespaceciof.html#a7cbb15b2dae1555e9c53992b01405e80", null ],
     [ "echoError", "dc/d0e/namespaceciof.html#af084498aae5fae4efa5f82b1bd0cb442", null ],
@@ -27,6 +28,7 @@ var namespaceciof =
     [ "echoLog", "dc/d0e/namespaceciof.html#af11fbdee1a0cc6113e58b31bcbfde05e", null ],
     [ "echoLog", "dc/d0e/namespaceciof.html#a66c51251b714b7bdedb8f628113311d4", null ],
     [ "format", "dc/d0e/namespaceciof.html#a42851a9df059ee00504d50b5331ed963", null ],
+    [ "getCursorPos", "dc/d0e/namespaceciof.html#a23e6d40b211eeebdc7ac2c5b9edefe5e", null ],
     [ "initANSI", "dc/d0e/namespaceciof.html#a0d6add06e42bf2afe40d5e45db195218", null ],
     [ "input", "dc/d0e/namespaceciof.html#a890c785dd53fa8333c95e8b9594b55e7", null ],
     [ "input", "dc/d0e/namespaceciof.html#a6d046aa36f6f80976075523e2ba0974a", null ],

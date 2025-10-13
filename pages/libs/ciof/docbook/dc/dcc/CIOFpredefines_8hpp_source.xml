@@ -18,10 +18,10 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_CIOFpredefines_8hpp_source_1l00014"/>00014 
 <anchor xml:id="_CIOFpredefines_8hpp_source_1l00015"/>00015 <emphasis role="comment">//&#32;Versioning</emphasis>
 <anchor xml:id="_CIOFpredefines_8hpp_source_1l00016"/><link linkend="_CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149">00016</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_MAJOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00017"/><link linkend="_CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f">00017</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_MINOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00017"/><link linkend="_CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f">00017</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_MINOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
 <anchor xml:id="_CIOFpredefines_8hpp_source_1l00018"/><link linkend="_CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce">00018</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_PATCH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
 <anchor xml:id="_CIOFpredefines_8hpp_source_1l00019"/>00019 
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00020"/><link linkend="_CIOFpredefines_8hpp_1afe87ed04a50605abe9a99b2aef3fe153">00020</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;20250913</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00020"/><link linkend="_CIOFpredefines_8hpp_1afe87ed04a50605abe9a99b2aef3fe153">00020</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;20251013</emphasis>
 <anchor xml:id="_CIOFpredefines_8hpp_source_1l00021"/>00021 
 <anchor xml:id="_CIOFpredefines_8hpp_source_1l00022"/>00022 <emphasis role="comment">//&#32;Version&#32;states:</emphasis>
 <anchor xml:id="_CIOFpredefines_8hpp_source_1l00023"/>00023 <emphasis role="comment">//&#32;*&#32;dev</emphasis>

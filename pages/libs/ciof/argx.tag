@@ -184,6 +184,13 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>cursorPos</name>
+      <anchorfile>dc/d0e/namespaceciof.html</anchorfile>
+      <anchor>a21412a124eb62a7aeedb4d4885600947</anchor>
+      <arglist>(int _row, int _col)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
       <name>echo</name>
       <anchorfile>dc/d0e/namespaceciof.html</anchorfile>
       <anchor>ae2f933bf22e4842d7aca72ead108f28c</anchor>
@@ -230,6 +237,13 @@
       <anchorfile>dc/d0e/namespaceciof.html</anchorfile>
       <anchor>a42851a9df059ee00504d50b5331ed963</anchor>
       <arglist>(T _t, Args ... _args)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>getCursorPos</name>
+      <anchorfile>dc/d0e/namespaceciof.html</anchorfile>
+      <anchor>a23e6d40b211eeebdc7ac2c5b9edefe5e</anchor>
+      <arglist>(int _row, int _col)</arglist>
     </member>
     <member kind="function">
       <type>void</type>

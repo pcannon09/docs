@@ -75,6 +75,10 @@ inc/ciof/ciof.hpp
 .br
 .RI "Set the colors from the default color palette from the terminal\&. "
 .ti -1c
+.RI "void \fBciof::cursorPos\fP (int _row, int _col)"
+.br
+.RI "Get the set cursor position using _row and _col Essentially calls the \fR\fBgetCursorPos()\fP\fP function and then sets the row and col according to the \fR\fBgetCursorPos()\fP\fP function\&. "
+.ti -1c
 .RI "template<typename T> void \fBciof::echo\fP (T _t)"
 .br
 .RI "Echo to the standard output for \fR_t\fP "
@@ -102,6 +106,10 @@ inc/ciof/ciof.hpp
 .RI "template<typename T, typename \&.\&.\&. Args> std::string \fBciof::format\fP (T _t, Args \&.\&.\&. _args)"
 .br
 .RI "Get everything as a string format\&. "
+.ti -1c
+.RI "std::string \fBciof::getCursorPos\fP (int _row, int _col)"
+.br
+.RI "Get the set cursor position using _row and _col\&. "
 .ti -1c
 .RI "void \fBciof::initANSI\fP ()"
 .br

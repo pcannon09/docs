@@ -48,6 +48,8 @@ enum class \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{cio
 \begin{DoxyCompactList}\small\item\em Output the with its corresponding type either to\+: \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{namespaceciof_aefd966015567bb62676f13ef217d3b79}{ciof\+::color\+Set}} (int \+\_\+color)
 \begin{DoxyCompactList}\small\item\em Set the colors from the default color palette from the terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceciof_a21412a124eb62a7aeedb4d4885600947}{ciof\+::cursor\+Pos}} (int \+\_\+row, int \+\_\+col)
+\begin{DoxyCompactList}\small\item\em Get the set cursor position using \+\_\+row and \+\_\+col Essentially calls the {\ttfamily \doxylink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{get\+Cursor\+Pos()}} function and then sets the row and col according to the {\ttfamily \doxylink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{get\+Cursor\+Pos()}} function. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_ae2f933bf22e4842d7aca72ead108f28c}{ciof\+::echo}} (T \+\_\+t)
 \begin{DoxyCompactList}\small\item\em Echo to the standard output for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T, typename ... Args$>$ }\\void \mbox{\hyperlink{namespaceciof_a7cbb15b2dae1555e9c53992b01405e80}{ciof\+::echo}} (T \+\_\+t, Args ... \+\_\+args)
@@ -62,6 +64,8 @@ std\+::string \mbox{\hyperlink{namespaceciof_aefd966015567bb62676f13ef217d3b79}{
 \begin{DoxyCompactList}\small\item\em Echo to the standard log for {\ttfamily \+\_\+t} \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T, typename ... Args$>$ }\\std\+::string \mbox{\hyperlink{namespaceciof_a42851a9df059ee00504d50b5331ed963}{ciof\+::format}} (T \+\_\+t, Args ... \+\_\+args)
 \begin{DoxyCompactList}\small\item\em Get everything as a string format. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{ciof\+::get\+Cursor\+Pos}} (int \+\_\+row, int \+\_\+col)
+\begin{DoxyCompactList}\small\item\em Get the set cursor position using \+\_\+row and \+\_\+col. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespaceciof_a0d6add06e42bf2afe40d5e45db195218}{ciof\+::init\+ANSI}} ()
 \begin{DoxyCompactList}\small\item\em Initialize ANSI text option in Windows 10 or later NOTE\+: ONLY WORKS IN WINDOWS 10 OR LATER. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_a890c785dd53fa8333c95e8b9594b55e7}{ciof\+::input}} (const std\+::string \&\+\_\+prompt, T \texorpdfstring{$\ast$}{*}\+\_\+var)

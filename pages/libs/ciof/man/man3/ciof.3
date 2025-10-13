@@ -50,6 +50,10 @@ ciof
 .br
 .RI "Set the colors from the default color palette from the terminal\&. "
 .ti -1c
+.RI "void \fBcursorPos\fP (int _row, int _col)"
+.br
+.RI "Get the set cursor position using _row and _col Essentially calls the \fR\fBgetCursorPos()\fP\fP function and then sets the row and col according to the \fR\fBgetCursorPos()\fP\fP function\&. "
+.ti -1c
 .RI "template<typename T> void \fBecho\fP (T _t)"
 .br
 .RI "Echo to the standard output for \fR_t\fP "
@@ -77,6 +81,10 @@ ciof
 .RI "template<typename T, typename \&.\&.\&. Args> std::string \fBformat\fP (T _t, Args \&.\&.\&. _args)"
 .br
 .RI "Get everything as a string format\&. "
+.ti -1c
+.RI "std::string \fBgetCursorPos\fP (int _row, int _col)"
+.br
+.RI "Get the set cursor position using _row and _col\&. "
 .ti -1c
 .RI "void \fBinitANSI\fP ()"
 .br
@@ -216,12 +224,34 @@ std::string Escape code to set the code
 .PP
 
 .PP
-Definition at line \fB51\fP of file \fBciof\&.cpp\fP\&.
+Definition at line \fB59\fP of file \fBciof\&.cpp\fP\&.
 .nf
-52     { return "\\033[" + std::to_string(_color) + "m"; }
+60     { return "\\033[" + std::to_string(_color) + "m"; }
 .PP
 .fi
 
+.SS "void ciof::cursorPos (int _row, int _col)"
+
+.PP
+Get the set cursor position using _row and _col Essentially calls the \fR\fBgetCursorPos()\fP\fP function and then sets the row and col according to the \fR\fBgetCursorPos()\fP\fP function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_row\fP Row to set (X) 
+.br
+\fI_col\fP Column to set (Y) 
+.RE
+.PP
+
+.PP
+Definition at line \fB23\fP of file \fBciof\&.cpp\fP\&.
+.nf
+24     { std::cout << getCursorPos(_row, _col) << std::flush; }
+.PP
+.fi
+
+.PP
+References \fBgetCursorPos()\fP\&.
 .SS "template<typename T> void ciof::echo (T _t)"
 
 .PP
@@ -312,29 +342,56 @@ std::string Return the formatted string
 .RE
 .PP
 
+.SS "std::string ciof::getCursorPos (int _row, int _col)"
+
+.PP
+Get the set cursor position using _row and _col\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_row\fP Row to set (X) 
+.br
+\fI_col\fP Column to set (Y) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string Return the string to set the position using ANSI 
+.RE
+.PP
+
+.PP
+Definition at line \fB20\fP of file \fBciof\&.cpp\fP\&.
+.nf
+21     { return std::string("\\033[" + std::to_string(_row) + ";" + std::to_string(_col) + "H"); }
+.PP
+.fi
+
+.PP
+Referenced by \fBcursorPos()\fP\&.
 .SS "void ciof::initANSI ()"
 
 .PP
 Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER\&. 
 .PP
-Definition at line \fB18\fP of file \fBciof\&.cpp\fP\&.
+Definition at line \fB26\fP of file \fBciof\&.cpp\fP\&.
 .nf
-19     {
-20 #   ifdef CIOF_OS_WIN32
-21         // NOTE:
-22         // This must ONLY be used in Windows 10 or newer
-23         if (!IsWindows10OrGreater()) return;
-24         
-25         HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
-26         DWORD dwMode = 0;
-27 
-28         GetConsoleMode(hOut, &dwMode);
-29 
-30         dwMode |= ENABLE_VIRTUAL_PROCESSING
-31 
-32         SetConsoleMode(hOut, dwMode)
-33 #   endif
-34     }
+27     {
+28 #   ifdef CIOF_OS_WIN32
+29         // NOTE:
+30         // This must ONLY be used in Windows 10 or newer
+31         if (!IsWindows10OrGreater()) return;
+32         
+33         HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+34         DWORD dwMode = 0;
+35 
+36         GetConsoleMode(hOut, &dwMode);
+37 
+38         dwMode |= ENABLE_VIRTUAL_PROCESSING
+39 
+40         SetConsoleMode(hOut, dwMode)
+41 #   endif
+42     }
 .PP
 .fi
 
@@ -369,9 +426,9 @@ Get full input from the user\&.
 .PP
 Print a new line\&. 
 .PP
-Definition at line \fB15\fP of file \fBciof\&.cpp\fP\&.
+Definition at line \fB17\fP of file \fBciof\&.cpp\fP\&.
 .nf
-16     { std::cout << std::endl; }
+18     { std::cout << std::endl; }
 .PP
 .fi
 
@@ -468,13 +525,13 @@ std::string Color escape sequence for RGB colors
 .PP
 
 .PP
-Definition at line \fB54\fP of file \fBciof\&.cpp\fP\&.
+Definition at line \fB62\fP of file \fBciof\&.cpp\fP\&.
 .nf
-55     {
-56         return "\\033[38;2;" + std::to_string(r) + ";"
-57             + std::to_string(g) + ";"
-58             + std::to_string(b) + "m";
-59     }
+63     {
+64         return "\\033[38;2;" + std::to_string(r) + ";"
+65             + std::to_string(g) + ";"
+66             + std::to_string(b) + "m";
+67     }
 .PP
 .fi
 
@@ -490,9 +547,9 @@ std::string Escape code to ereset colors and styles from terminal
 .PP
 
 .PP
-Definition at line \fB48\fP of file \fBciof\&.cpp\fP\&.
+Definition at line \fB56\fP of file \fBciof\&.cpp\fP\&.
 .nf
-49     { return "\\033[0m"; }
+57     { return "\\033[0m"; }
 .PP
 .fi
 
@@ -513,18 +570,18 @@ std::string Escape code according to the style
 .PP
 
 .PP
-Definition at line \fB36\fP of file \fBciof\&.cpp\fP\&.
+Definition at line \fB44\fP of file \fBciof\&.cpp\fP\&.
 .nf
-37     {
-38         switch (_style)
-39         {
-40             case ciof::OutputStyle::Bold:                   return "\\033[1m"; 
-41             case ciof::OutputStyle::Italic:                 return "\\033[3m"; 
-42             case ciof::OutputStyle::Underline:              return "\\033[4m"; 
-43             case ciof::OutputStyle::Strikethrough:          return "\\033[9m"; 
-44             default:                                        return "";
-45         }
-46     }
+45     {
+46         switch (_style)
+47         {
+48             case ciof::OutputStyle::Bold:                   return "\\033[1m"; 
+49             case ciof::OutputStyle::Italic:                 return "\\033[3m"; 
+50             case ciof::OutputStyle::Underline:              return "\\033[4m"; 
+51             case ciof::OutputStyle::Strikethrough:          return "\\033[9m"; 
+52             default:                                        return "";
+53         }
+54     }
 .PP
 .fi
 
@@ -537,7 +594,7 @@ References \fBBold\fP, \fBItalic\fP, \fBStrikethrough\fP, and \fBUnderline\fP\&.
 .PP
 Set default output configuration\&. 
 .PP
-Definition at line \fB13\fP of file \fBciof\&.cpp\fP\&.
+Definition at line \fB15\fP of file \fBciof\&.cpp\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for CIOF from the source code\&.

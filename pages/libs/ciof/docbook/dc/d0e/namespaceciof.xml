@@ -56,6 +56,10 @@
 
 <para>Set the colors from the default color palette from the terminal. </para>
 </listitem>
+            <listitem><para>void <link linkend="_namespaceciof_1a21412a124eb62a7aeedb4d4885600947">cursorPos</link> (int _row, int _col)</para>
+
+<para>Get the set cursor position using _row and _col Essentially calls the <computeroutput><link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos()</link></computeroutput> function and then sets the row and col according to the <computeroutput><link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos()</link></computeroutput> function. </para>
+</listitem>
             <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c">echo</link> (T _t)</para>
 
 <para>Echo to the standard output for <computeroutput>_t</computeroutput> </para>
@@ -83,6 +87,10 @@
             <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>std::string <link linkend="_namespaceciof_1a42851a9df059ee00504d50b5331ed963">format</link> (T _t, Args ... _args)</para>
 
 <para>Get everything as a string format. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos</link> (int _row, int _col)</para>
+
+<para>Get the set cursor position using _row and _col. </para>
 </listitem>
             <listitem><para>void <link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">initANSI</link> ()</para>
 
@@ -264,9 +272,50 @@ Parameters</title>
 </formalpara>
 </para>
 <para>
-Definition at line <link linkend="_ciof_8cpp_source_1l00051">51</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
-<programlisting linenumbering="unnumbered">00052 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[&quot;</emphasis>&#32;+&#32;std::to_string(_color)&#32;+&#32;<emphasis role="stringliteral">&quot;m&quot;</emphasis>;&#32;}
+Definition at line <link linkend="_ciof_8cpp_source_1l00059">59</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00060 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[&quot;</emphasis>&#32;+&#32;std::to_string(_color)&#32;+&#32;<emphasis role="stringliteral">&quot;m&quot;</emphasis>;&#32;}
 </programlisting></section>
+<anchor xml:id="_namespaceciof_1a21412a124eb62a7aeedb4d4885600947"/><section>
+    <title>cursorPos()</title>
+<indexterm><primary>cursorPos</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>cursorPos</secondary></indexterm>
+<para><computeroutput>void ciof::cursorPos (int _row, int _col)</computeroutput></para><para>
+
+<para>Get the set cursor position using _row and _col Essentially calls the <computeroutput><link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos()</link></computeroutput> function and then sets the row and col according to the <computeroutput><link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos()</link></computeroutput> function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_row</entry><entry>
+<para>Row to set (X) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_col</entry><entry>
+<para>Column to set (Y) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_ciof_8cpp_source_1l00023">23</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00024 &#32;&#32;&#32;&#32;{&#32;std::cout&#32;&lt;&lt;&#32;<link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos</link>(_row,&#32;_col)&#32;&lt;&lt;&#32;std::flush;&#32;}
+</programlisting><para>
+References <link linkend="_ciof_8cpp_source_1l00020">getCursorPos()</link>.</para>
+</section>
 <anchor xml:id="_namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c"/><section>
     <title>echo()<computeroutput>[1/2]</computeroutput></title>
 <indexterm><primary>echo</primary><secondary>ciof</secondary></indexterm>
@@ -508,6 +557,51 @@ Parameters</title>
 </formalpara>
 </para>
 </section>
+<anchor xml:id="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e"/><section>
+    <title>getCursorPos()</title>
+<indexterm><primary>getCursorPos</primary><secondary>ciof</secondary></indexterm>
+<indexterm><primary>ciof</primary><secondary>getCursorPos</secondary></indexterm>
+<para><computeroutput>std::string ciof::getCursorPos (int _row, int _col)</computeroutput></para><para>
+
+<para>Get the set cursor position using _row and _col. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_row</entry><entry>
+<para>Row to set (X) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_col</entry><entry>
+<para>Column to set (Y) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>std::string Return the string to set the position using ANSI </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_ciof_8cpp_source_1l00020">20</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00021 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;std::string(<emphasis role="stringliteral">&quot;\033[&quot;</emphasis>&#32;+&#32;std::to_string(_row)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>&#32;+&#32;std::to_string(_col)&#32;+&#32;<emphasis role="stringliteral">&quot;H&quot;</emphasis>);&#32;}
+</programlisting><para>
+Referenced by <link linkend="_ciof_8cpp_source_1l00023">cursorPos()</link>.</para>
+</section>
 <anchor xml:id="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218"/><section>
     <title>initANSI()</title>
 <indexterm><primary>initANSI</primary><secondary>ciof</secondary></indexterm>
@@ -517,23 +611,23 @@ Parameters</title>
 <para>Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER. </para>
 </para>
 <para>
-Definition at line <link linkend="_ciof_8cpp_source_1l00018">18</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
-<programlisting linenumbering="unnumbered">00019 &#32;&#32;&#32;&#32;{
-00020 <emphasis role="preprocessor">#&#32;&#32;&#32;ifdef&#32;CIOF_OS_WIN32</emphasis>
-00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;NOTE:</emphasis>
-00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;This&#32;must&#32;ONLY&#32;be&#32;used&#32;in&#32;Windows&#32;10&#32;or&#32;newer</emphasis>
-00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!IsWindows10OrGreater())&#32;<emphasis role="keywordflow">return</emphasis>;
-00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
-00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HANDLE&#32;hOut&#32;=&#32;GetStdHandle(STD_OUTPUT_HANDLE);
-00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DWORD&#32;dwMode&#32;=&#32;0;
-00027 
-00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetConsoleMode(hOut,&#32;&amp;dwMode);
-00029 
-00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dwMode&#32;|=&#32;ENABLE_VIRTUAL_PROCESSING
-00031 
-00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetConsoleMode(hOut,&#32;dwMode)
-00033 <emphasis role="preprocessor">#&#32;&#32;&#32;endif</emphasis>
-00034 &#32;&#32;&#32;&#32;}
+Definition at line <link linkend="_ciof_8cpp_source_1l00026">26</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00027 &#32;&#32;&#32;&#32;{
+00028 <emphasis role="preprocessor">#&#32;&#32;&#32;ifdef&#32;CIOF_OS_WIN32</emphasis>
+00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;NOTE:</emphasis>
+00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;This&#32;must&#32;ONLY&#32;be&#32;used&#32;in&#32;Windows&#32;10&#32;or&#32;newer</emphasis>
+00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!IsWindows10OrGreater())&#32;<emphasis role="keywordflow">return</emphasis>;
+00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HANDLE&#32;hOut&#32;=&#32;GetStdHandle(STD_OUTPUT_HANDLE);
+00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DWORD&#32;dwMode&#32;=&#32;0;
+00035 
+00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetConsoleMode(hOut,&#32;&amp;dwMode);
+00037 
+00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dwMode&#32;|=&#32;ENABLE_VIRTUAL_PROCESSING
+00039 
+00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetConsoleMode(hOut,&#32;dwMode)
+00041 <emphasis role="preprocessor">#&#32;&#32;&#32;endif</emphasis>
+00042 &#32;&#32;&#32;&#32;}
 </programlisting></section>
 <anchor xml:id="_namespaceciof_1a890c785dd53fa8333c95e8b9594b55e7"/><section>
     <title>input()<computeroutput>[1/2]</computeroutput></title>
@@ -616,8 +710,8 @@ Parameters</title>
 <para>Print a new line. </para>
 </para>
 <para>
-Definition at line <link linkend="_ciof_8cpp_source_1l00015">15</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
-<programlisting linenumbering="unnumbered">00016 &#32;&#32;&#32;&#32;{&#32;std::cout&#32;&lt;&lt;&#32;std::endl;&#32;}
+Definition at line <link linkend="_ciof_8cpp_source_1l00017">17</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00018 &#32;&#32;&#32;&#32;{&#32;std::cout&#32;&lt;&lt;&#32;std::endl;&#32;}
 </programlisting></section>
 <anchor xml:id="_namespaceciof_1a89082a2cf2da077c0d3dae3ab99eede2"/><section>
     <title>print()<computeroutput>[2/3]</computeroutput></title>
@@ -865,12 +959,12 @@ Parameters</title>
 </formalpara>
 </para>
 <para>
-Definition at line <link linkend="_ciof_8cpp_source_1l00054">54</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
-<programlisting linenumbering="unnumbered">00055 &#32;&#32;&#32;&#32;{
-00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[38;2;&quot;</emphasis>&#32;+&#32;std::to_string(r)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>
-00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;std::to_string(g)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>
-00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;std::to_string(b)&#32;+&#32;<emphasis role="stringliteral">&quot;m&quot;</emphasis>;
-00059 &#32;&#32;&#32;&#32;}
+Definition at line <link linkend="_ciof_8cpp_source_1l00062">62</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00063 &#32;&#32;&#32;&#32;{
+00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[38;2;&quot;</emphasis>&#32;+&#32;std::to_string(r)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>
+00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;std::to_string(g)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>
+00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;std::to_string(b)&#32;+&#32;<emphasis role="stringliteral">&quot;m&quot;</emphasis>;
+00067 &#32;&#32;&#32;&#32;}
 </programlisting></section>
 <anchor xml:id="_namespaceciof_1a25987420300a8bf1380cebe37f6c082f"/><section>
     <title>styleReset()</title>
@@ -887,8 +981,8 @@ Definition at line <link linkend="_ciof_8cpp_source_1l00054">54</link> of file <
 </formalpara>
 </para>
 <para>
-Definition at line <link linkend="_ciof_8cpp_source_1l00048">48</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
-<programlisting linenumbering="unnumbered">00049 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[0m&quot;</emphasis>;&#32;}
+Definition at line <link linkend="_ciof_8cpp_source_1l00056">56</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00057 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[0m&quot;</emphasis>;&#32;}
 </programlisting></section>
 <anchor xml:id="_namespaceciof_1a8ff4eb89ed64bb300da3ddf91cad7e4f"/><section>
     <title>styleSet()</title>
@@ -925,17 +1019,17 @@ Parameters</title>
 </formalpara>
 </para>
 <para>
-Definition at line <link linkend="_ciof_8cpp_source_1l00036">36</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
-<programlisting linenumbering="unnumbered">00037 &#32;&#32;&#32;&#32;{
-00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(_style)
-00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246">ciof::OutputStyle::Bold</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[1m&quot;</emphasis>;&#32;
-00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c">ciof::OutputStyle::Italic</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[3m&quot;</emphasis>;&#32;
-00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439">ciof::OutputStyle::Underline</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[4m&quot;</emphasis>;&#32;
-00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb">ciof::OutputStyle::Strikethrough</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[9m&quot;</emphasis>;&#32;
-00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
-00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-00046 &#32;&#32;&#32;&#32;}
+Definition at line <link linkend="_ciof_8cpp_source_1l00044">44</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00045 &#32;&#32;&#32;&#32;{
+00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(_style)
+00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246">ciof::OutputStyle::Bold</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[1m&quot;</emphasis>;&#32;
+00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c">ciof::OutputStyle::Italic</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[3m&quot;</emphasis>;&#32;
+00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439">ciof::OutputStyle::Underline</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[4m&quot;</emphasis>;&#32;
+00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb">ciof::OutputStyle::Strikethrough</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[9m&quot;</emphasis>;&#32;
+00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00054 &#32;&#32;&#32;&#32;}
 </programlisting><para>
 References <link linkend="_ciof_8hpp_source_1l00053">Bold</link>, <link linkend="_ciof_8hpp_source_1l00054">Italic</link>, <link linkend="_ciof_8hpp_source_1l00056">Strikethrough</link>, and <link linkend="_ciof_8hpp_source_1l00055">Underline</link>.</para>
 </section>
@@ -951,7 +1045,7 @@ References <link linkend="_ciof_8hpp_source_1l00053">Bold</link>, <link linkend=
 <para>Set default output configuration. </para>
 </para>
 <para>
-Definition at line <link linkend="_ciof_8cpp_source_1l00013">13</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
+Definition at line <link linkend="_ciof_8cpp_source_1l00015">15</link> of file <link linkend="_ciof_8cpp_source">ciof.cpp</link>.</para>
 </section>
 </section>
 </section>

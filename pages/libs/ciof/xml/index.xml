@@ -19,6 +19,7 @@
     <member refid="dc/d0e/namespaceciof_1a11dfa6fc0d7cf783cd52dfe0dbf63de1" kind="typedef"><name>CIOFOutputConfig</name></member>
     <member refid="dc/d0e/namespaceciof_1a835007e60a4807051d32c3352e867119" kind="variable"><name>outputConf</name></member>
     <member refid="dc/d0e/namespaceciof_1aefd966015567bb62676f13ef217d3b79" kind="function"><name>colorSet</name></member>
+    <member refid="dc/d0e/namespaceciof_1a21412a124eb62a7aeedb4d4885600947" kind="function"><name>cursorPos</name></member>
     <member refid="dc/d0e/namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c" kind="function"><name>echo</name></member>
     <member refid="dc/d0e/namespaceciof_1a7cbb15b2dae1555e9c53992b01405e80" kind="function"><name>echo</name></member>
     <member refid="dc/d0e/namespaceciof_1af084498aae5fae4efa5f82b1bd0cb442" kind="function"><name>echoError</name></member>
@@ -26,6 +27,7 @@
     <member refid="dc/d0e/namespaceciof_1af11fbdee1a0cc6113e58b31bcbfde05e" kind="function"><name>echoLog</name></member>
     <member refid="dc/d0e/namespaceciof_1a66c51251b714b7bdedb8f628113311d4" kind="function"><name>echoLog</name></member>
     <member refid="dc/d0e/namespaceciof_1a42851a9df059ee00504d50b5331ed963" kind="function"><name>format</name></member>
+    <member refid="dc/d0e/namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e" kind="function"><name>getCursorPos</name></member>
     <member refid="dc/d0e/namespaceciof_1a0d6add06e42bf2afe40d5e45db195218" kind="function"><name>initANSI</name></member>
     <member refid="dc/d0e/namespaceciof_1a890c785dd53fa8333c95e8b9594b55e7" kind="function"><name>input</name></member>
     <member refid="dc/d0e/namespaceciof_1a6d046aa36f6f80976075523e2ba0974a" kind="function"><name>input</name></member>

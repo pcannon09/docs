@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['stylereset_0',['styleReset',['../dc/d0e/namespaceciof.html#a25987420300a8bf1380cebe37f6c082f',1,'ciof']]],
-  ['styleset_1',['styleSet',['../dc/d0e/namespaceciof.html#a8ff4eb89ed64bb300da3ddf91cad7e4f',1,'ciof']]]
+  ['rgbset_0',['rgbSet',['../dc/d0e/namespaceciof.html#a34c4a83a2f7c4321fb3cd308ad2162bc',1,'ciof']]]
 ];

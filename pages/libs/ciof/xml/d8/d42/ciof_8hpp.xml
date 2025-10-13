@@ -329,15 +329,31 @@
 <codeline lineno="267"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>NOTE:<sp/>ONLY<sp/>WORKS<sp/>IN<sp/>WINDOWS<sp/>10<sp/>OR<sp/>LATER</highlight></codeline>
 <codeline lineno="268"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/d0e/namespaceciof_1a0d6add06e42bf2afe40d5e45db195218" kindref="member">initANSI</ref>();</highlight></codeline>
-<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="271"><highlight class="normal"></highlight></codeline>
-<codeline lineno="272"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ciof.ipp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="273"><highlight class="normal"></highlight></codeline>
-<codeline lineno="274"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="275"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>error<sp/>&quot;Cannot<sp/>compile<sp/>with<sp/>the<sp/>current<sp/>C++<sp/>standard&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="276"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>pragma<sp/>message(&quot;Use<sp/>C++<sp/>&quot;<sp/>CIOF_TOSTRING(CIOF_DEFAULT_CPP_STD)<sp/>&quot;<sp/>or<sp/>higer<sp/>instead<sp/>of<sp/>&quot;<sp/>CIOF_TOSTRING(__cplusplus))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="277"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="271"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="272"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Get<sp/>the<sp/>set<sp/>cursor<sp/>position<sp/>using<sp/>_row<sp/>and<sp/>_col</highlight></codeline>
+<codeline lineno="273"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>_row<sp/>Row<sp/>to<sp/>set<sp/>(X)</highlight></codeline>
+<codeline lineno="274"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>_col<sp/>Column<sp/>to<sp/>set<sp/>(Y)</highlight></codeline>
+<codeline lineno="275"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>std::string<sp/>Return<sp/>the<sp/>string<sp/>to<sp/>set<sp/>the<sp/>position<sp/>using<sp/>ANSI</highlight></codeline>
+<codeline lineno="276"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="dc/d0e/namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e" kindref="member">getCursorPos</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_row,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_col);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="279"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="280"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Get<sp/>the<sp/>set<sp/>cursor<sp/>position<sp/>using<sp/>_row<sp/>and<sp/>_col</highlight></codeline>
+<codeline lineno="281"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Essentially<sp/>calls<sp/>the<sp/>`getCursorPos()`<sp/>function<sp/>and<sp/>then<sp/>sets<sp/>the<sp/>row<sp/>and<sp/>col<sp/>according<sp/>to<sp/>the<sp/>`getCursorPos()`<sp/>function</highlight></codeline>
+<codeline lineno="282"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>_row<sp/>Row<sp/>to<sp/>set<sp/>(X)</highlight></codeline>
+<codeline lineno="283"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>_col<sp/>Column<sp/>to<sp/>set<sp/>(Y)</highlight></codeline>
+<codeline lineno="284"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/d0e/namespaceciof_1a21412a124eb62a7aeedb4d4885600947" kindref="member">cursorPos</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_row,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_col);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ciof.ipp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>error<sp/>&quot;Cannot<sp/>compile<sp/>with<sp/>the<sp/>current<sp/>C++<sp/>standard&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>pragma<sp/>message(&quot;Use<sp/>C++<sp/>&quot;<sp/>CIOF_TOSTRING(CIOF_DEFAULT_CPP_STD)<sp/>&quot;<sp/>or<sp/>higer<sp/>instead<sp/>of<sp/>&quot;<sp/>CIOF_TOSTRING(__cplusplus))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="inc/ciof/ciof.hpp"/>
   </compounddef>

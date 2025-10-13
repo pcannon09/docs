@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "_bcefilmoprstu",
+  0: "_bcefgilmoprstu",
   1: "c",
   2: "c",
   3: "cr",
-  4: "_cefiprst",
+  4: "_cefgiprst",
   5: "iops",
   6: "c",
   7: "o",

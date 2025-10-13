@@ -1,5 +1,6 @@
 \doxysection{src/ciof.cpp File Reference}
 \hypertarget{ciof_8cpp}{}\label{ciof_8cpp}\index{src/ciof.cpp@{src/ciof.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include "{}../inc/ciof/ciof.\+hpp"{}}\newline
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
@@ -11,6 +12,10 @@ namespace \mbox{\hyperlink{namespaceciof}{ciof}}
 \item 
 std\+::string \mbox{\hyperlink{namespaceciof_aefd966015567bb62676f13ef217d3b79}{ciof\+::color\+Set}} (int \+\_\+color)
 \begin{DoxyCompactList}\small\item\em Set the colors from the default color palette from the terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceciof_a21412a124eb62a7aeedb4d4885600947}{ciof\+::cursor\+Pos}} (int \+\_\+row, int \+\_\+col)
+\begin{DoxyCompactList}\small\item\em Get the set cursor position using \+\_\+row and \+\_\+col Essentially calls the {\ttfamily \doxylink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{get\+Cursor\+Pos()}} function and then sets the row and col according to the {\ttfamily \doxylink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{get\+Cursor\+Pos()}} function. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{ciof\+::get\+Cursor\+Pos}} (int \+\_\+row, int \+\_\+col)
+\begin{DoxyCompactList}\small\item\em Get the set cursor position using \+\_\+row and \+\_\+col. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespaceciof_a0d6add06e42bf2afe40d5e45db195218}{ciof\+::init\+ANSI}} ()
 \begin{DoxyCompactList}\small\item\em Initialize ANSI text option in Windows 10 or later NOTE\+: ONLY WORKS IN WINDOWS 10 OR LATER. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespaceciof_a8c277d3a2caa58aed09e9bb8982d8ff3}{ciof\+::print}} ()

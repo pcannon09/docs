@@ -73,6 +73,10 @@
 
 <para>Set the colors from the default color palette from the terminal. </para>
 </listitem>
+            <listitem><para>void <link linkend="_namespaceciof_1a21412a124eb62a7aeedb4d4885600947">ciof::cursorPos</link> (int _row, int _col)</para>
+
+<para>Get the set cursor position using _row and _col Essentially calls the <computeroutput><link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos()</link></computeroutput> function and then sets the row and col according to the <computeroutput><link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos()</link></computeroutput> function. </para>
+</listitem>
             <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c">ciof::echo</link> (T _t)</para>
 
 <para>Echo to the standard output for <computeroutput>_t</computeroutput> </para>
@@ -100,6 +104,10 @@
             <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>std::string <link linkend="_namespaceciof_1a42851a9df059ee00504d50b5331ed963">ciof::format</link> (T _t, Args ... _args)</para>
 
 <para>Get everything as a string format. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">ciof::getCursorPos</link> (int _row, int _col)</para>
+
+<para>Get the set cursor position using _row and _col. </para>
 </listitem>
             <listitem><para>void <link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">ciof::initANSI</link> ()</para>
 

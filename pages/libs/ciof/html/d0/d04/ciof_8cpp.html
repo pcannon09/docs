@@ -92,7 +92,8 @@ $(function(){initNavTree('d0/d04/ciof_8cpp.html','../../',''); });
   <div class="headertitle"><div class="title">ciof.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/d42/ciof_8hpp_source.html">../inc/ciof/ciof.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d42/ciof_8hpp_source.html">../inc/ciof/ciof.hpp</a>&quot;</code><br />
 </div>
 <p><a href="../../d0/d04/ciof_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -104,6 +105,10 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:aefd966015567bb62676f13ef217d3b79" id="r_aefd966015567bb62676f13ef217d3b79"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceciof.html#aefd966015567bb62676f13ef217d3b79">ciof::colorSet</a> (int _color)</td></tr>
 <tr class="memdesc:aefd966015567bb62676f13ef217d3b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the colors from the default color palette from the terminal.  <br /></td></tr>
+<tr class="memitem:a21412a124eb62a7aeedb4d4885600947" id="r_a21412a124eb62a7aeedb4d4885600947"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceciof.html#a21412a124eb62a7aeedb4d4885600947">ciof::cursorPos</a> (int _row, int _col)</td></tr>
+<tr class="memdesc:a21412a124eb62a7aeedb4d4885600947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set cursor position using _row and _col Essentially calls the <span class="tt"><a class="el" href="../../dc/d0e/namespaceciof.html#a23e6d40b211eeebdc7ac2c5b9edefe5e" title="Get the set cursor position using _row and _col.">getCursorPos()</a></span> function and then sets the row and col according to the <span class="tt"><a class="el" href="../../dc/d0e/namespaceciof.html#a23e6d40b211eeebdc7ac2c5b9edefe5e" title="Get the set cursor position using _row and _col.">getCursorPos()</a></span> function.  <br /></td></tr>
+<tr class="memitem:a23e6d40b211eeebdc7ac2c5b9edefe5e" id="r_a23e6d40b211eeebdc7ac2c5b9edefe5e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceciof.html#a23e6d40b211eeebdc7ac2c5b9edefe5e">ciof::getCursorPos</a> (int _row, int _col)</td></tr>
+<tr class="memdesc:a23e6d40b211eeebdc7ac2c5b9edefe5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set cursor position using _row and _col.  <br /></td></tr>
 <tr class="memitem:a0d6add06e42bf2afe40d5e45db195218" id="r_a0d6add06e42bf2afe40d5e45db195218"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceciof.html#a0d6add06e42bf2afe40d5e45db195218">ciof::initANSI</a> ()</td></tr>
 <tr class="memdesc:a0d6add06e42bf2afe40d5e45db195218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER.  <br /></td></tr>
 <tr class="memitem:a8c277d3a2caa58aed09e9bb8982d8ff3" id="r_a8c277d3a2caa58aed09e9bb8982d8ff3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0e/namespaceciof.html#a8c277d3a2caa58aed09e9bb8982d8ff3">ciof::print</a> ()</td></tr>

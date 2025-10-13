@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="13" column="18" bodyfile="src/ciof.cpp" bodystart="13" bodyend="-1" declfile="inc/ciof/ciof.hpp" declline="62" declcolumn="25"/>
+        <location file="src/ciof.cpp" line="15" column="18" bodyfile="src/ciof.cpp" bodystart="15" bodyend="-1" declfile="inc/ciof/ciof.hpp" declline="62" declcolumn="25"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -145,7 +145,49 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="51" column="13" bodyfile="src/ciof.cpp" bodystart="51" bodyend="52" declfile="inc/ciof/ciof.hpp" declline="254" declcolumn="13"/>
+        <location file="src/ciof.cpp" line="59" column="13" bodyfile="src/ciof.cpp" bodystart="59" bodyend="60" declfile="inc/ciof/ciof.hpp" declline="254" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a21412a124eb62a7aeedb4d4885600947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ciof::cursorPos</definition>
+        <argsstring>(int _row, int _col)</argsstring>
+        <name>cursorPos</name>
+        <qualifiedname>ciof::cursorPos</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_col</declname>
+        </param>
+        <briefdescription>
+<para>Get the set cursor position using _row and _col Essentially calls the <computeroutput><ref refid="dc/d0e/namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e" kindref="member">getCursorPos()</ref></computeroutput> function and then sets the row and col according to the <computeroutput><ref refid="dc/d0e/namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e" kindref="member">getCursorPos()</ref></computeroutput> function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row to set (X) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column to set (Y) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ciof.cpp" line="23" column="6" bodyfile="src/ciof.cpp" bodystart="23" bodyend="24" declfile="inc/ciof/ciof.hpp" declline="285" declcolumn="6"/>
+        <references refid="dc/d0e/namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e" compoundref="d0/d04/ciof_8cpp" startline="20" endline="21">getCursorPos</references>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -455,6 +497,50 @@
         </inbodydescription>
         <location file="inc/ciof/ciof.hpp" line="234" column="13" declfile="inc/ciof/ciof.hpp" declline="234" declcolumn="13"/>
       </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ciof::getCursorPos</definition>
+        <argsstring>(int _row, int _col)</argsstring>
+        <name>getCursorPos</name>
+        <qualifiedname>ciof::getCursorPos</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_col</declname>
+        </param>
+        <briefdescription>
+<para>Get the set cursor position using _row and _col. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row to set (X) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column to set (Y) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string Return the string to set the position using ANSI </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ciof.cpp" line="20" column="13" bodyfile="src/ciof.cpp" bodystart="20" bodyend="21" declfile="inc/ciof/ciof.hpp" declline="277" declcolumn="13"/>
+        <referencedby refid="dc/d0e/namespaceciof_1a21412a124eb62a7aeedb4d4885600947" compoundref="d0/d04/ciof_8cpp" startline="23" endline="24">cursorPos</referencedby>
+      </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a0d6add06e42bf2afe40d5e45db195218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void ciof::initANSI</definition>
@@ -468,7 +554,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="18" column="6" bodyfile="src/ciof.cpp" bodystart="18" bodyend="34" declfile="inc/ciof/ciof.hpp" declline="269" declcolumn="6"/>
+        <location file="src/ciof.cpp" line="26" column="6" bodyfile="src/ciof.cpp" bodystart="26" bodyend="42" declfile="inc/ciof/ciof.hpp" declline="269" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a890c785dd53fa8333c95e8b9594b55e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -571,7 +657,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="15" column="6" bodyfile="src/ciof.cpp" bodystart="15" bodyend="16" declfile="inc/ciof/ciof.hpp" declline="116" declcolumn="6"/>
+        <location file="src/ciof.cpp" line="17" column="6" bodyfile="src/ciof.cpp" bodystart="17" bodyend="18" declfile="inc/ciof/ciof.hpp" declline="116" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a89082a2cf2da077c0d3dae3ab99eede2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -881,7 +967,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="54" column="13" bodyfile="src/ciof.cpp" bodystart="54" bodyend="59" declfile="inc/ciof/ciof.hpp" declline="263" declcolumn="13"/>
+        <location file="src/ciof.cpp" line="62" column="13" bodyfile="src/ciof.cpp" bodystart="62" bodyend="67" declfile="inc/ciof/ciof.hpp" declline="263" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a25987420300a8bf1380cebe37f6c082f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -899,7 +985,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="48" column="13" bodyfile="src/ciof.cpp" bodystart="48" bodyend="49" declfile="inc/ciof/ciof.hpp" declline="247" declcolumn="13"/>
+        <location file="src/ciof.cpp" line="56" column="13" bodyfile="src/ciof.cpp" bodystart="56" bodyend="57" declfile="inc/ciof/ciof.hpp" declline="247" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a8ff4eb89ed64bb300da3ddf91cad7e4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -930,7 +1016,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="36" column="13" bodyfile="src/ciof.cpp" bodystart="36" bodyend="46" declfile="inc/ciof/ciof.hpp" declline="241" declcolumn="13"/>
+        <location file="src/ciof.cpp" line="44" column="13" bodyfile="src/ciof.cpp" bodystart="44" bodyend="54" declfile="inc/ciof/ciof.hpp" declline="241" declcolumn="13"/>
         <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246" compoundref="d8/d42/ciof_8hpp" startline="53">Bold</references>
         <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c" compoundref="d8/d42/ciof_8hpp" startline="54">Italic</references>
         <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb" compoundref="d8/d42/ciof_8hpp" startline="56">Strikethrough</references>
