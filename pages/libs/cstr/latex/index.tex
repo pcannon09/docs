@@ -1,0 +1,62 @@
+\chapter{CSTR }
+\hypertarget{index}{}\label{index}\index{CSTR@{CSTR}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{1.\+0.\+0}{1.\+0.\+0}}\label{index_autotoc_md1}
+{\ttfamily \doxylink{structCSTR}{CSTR}} is a lightweight C string utility library that provides a safer and more flexible alternative to raw C-\/style strings. It wraps dynamic allocation, formatting, substring manipulation, and replacement in a consistent API without pulling in heavy dependencies.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Requirements}{Requirements}}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Supported Compilers}{Supported Compilers}}\label{index_autotoc_md4}
+{\bfseries{GCC}} \texorpdfstring{$>$}{>}= 7.\+0
+
+{\bfseries{Clang}} \texorpdfstring{$>$}{>}= 6.\+0
+
+All compilers {\bfseries{must support C11}} or higher.\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Features}{Features}}\label{index_autotoc_md5}
+
+\begin{DoxyItemize}
+\item {\bfseries{Dynamic String Management}} Create, copy, resize, and destroy strings with automatic memory handling.
+\item {\bfseries{Safe Set and Append Operations}} {\ttfamily \doxylink{cstr_8h_a5869f4de55dbc9604a41377a98a5d8d1}{cstr\+\_\+set()}} and {\ttfamily \doxylink{cstr_8h_a7a74e1845b0b12ce83fee782b9106f13}{cstr\+\_\+add()}} handle allocation internally with optional capacity limiting.
+\item {\bfseries{Substring and In-\/\+Place Editing}} Includes {\ttfamily \doxylink{cstr_8h_a48a4112d753f753d4d8725fc3e7c5a33}{cstr\+\_\+substr()}}, {\ttfamily \doxylink{cstr_8h_a629281b6e3cecf239e0c1d05cd242b35}{cstr\+\_\+erase()}}, {\ttfamily \doxylink{cstr_8h_a0ba51ccc14c1f17db5b453aa857c92eb}{cstr\+\_\+insert()}}, and {\ttfamily \doxylink{cstr_8h_a3f8f5540a61c0814d0518cd2bad72eb8}{cstr\+\_\+shrink()}}.
+\item {\bfseries{Replacement Utilities}} Replace single or all occurrences using {\ttfamily \doxylink{cstr_8h_ad5ffa3660e5c00c93763589cb4d55ea8}{cstr\+\_\+replace()}} and {\ttfamily \doxylink{cstr_8h_a260c899e712785b5e45f07c6b4d6a934}{cstr\+\_\+replace\+All()}}.
+\item {\bfseries{Case and Formatting Helpers}} Convert to upper/lower, reverse, clear, or generate strings from numeric values.
+\item {\bfseries{Search and Compare Support}} {\ttfamily \doxylink{cstr_8h_ababe5de017b72cf0fbc1c1f74bc22337}{cstr\+\_\+find()}}, {\ttfamily \doxylink{cstr_8h_af211d3b88dcfbfa8d8e467c819017e5d}{cstr\+\_\+find\+From()}}, {\ttfamily \doxylink{cstr_8h_a5d7d68335475e3e92ad7af71c1436f01}{cstr\+\_\+starts\+With()}}, {\ttfamily \doxylink{cstr_8h_afa6b390abaebf90c0ffe07c92662bdcc}{cstr\+\_\+ends\+With()}}, and {\ttfamily \doxylink{cstr_8h_a19f903d2ed994c92fea4c65903c3b552}{cstr\+\_\+comp()}}.
+\item {\bfseries{Optional Capacity Locking}} Enabling {\ttfamily force\+Cap} prevents automatic reallocation and returns {\ttfamily CSTR\+\_\+\+FORCECAP\+\_\+\+LIMIT} on overflow attempts.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md7}{}\doxysection{\texorpdfstring{Basic Usage}{Basic Usage}}\label{index_autotoc_md7}
+This code will set the {\ttfamily s} variable to {\ttfamily HELLO, WORLD!}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cstr_8h}{cstr.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{structCSTR}{CSTR}}\ s\ =\ \mbox{\hyperlink{cstr_8h_ac6b2cbbf55bc53365030b1549166f7c8}{cstr\_init}}();\ \textcolor{comment}{//\ Create\ an\ empty\ string}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{cstr_8h_a5869f4de55dbc9604a41377a98a5d8d1}{cstr\_set}}(\&s,\ \textcolor{stringliteral}{"{}Hello"{}});\ \textcolor{comment}{//\ Set\ the\ string\ to\ \`{}Hello`}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{cstr_8h_a7a74e1845b0b12ce83fee782b9106f13}{cstr\_add}}(\&s,\ \textcolor{stringliteral}{"{},\ World!"{}});\ \textcolor{comment}{//\ Add\ \`{},\ World!`}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{cstr_8h_a9a33ebbb1989f05327b1b5464de45b31}{cstr\_upper}}(\&s);\ \textcolor{comment}{//\ Set\ the\ full\ string\ variable\ to\ upper\ case}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{cstr_8h_a409ae3278ea2df20ece65251e829075a}{cstr\_destroy}}(\&s);\ \textcolor{comment}{//\ Destroy\ the\ string\ and\ free\ the\ allocated\ memory}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md9}{}\doxysection{\texorpdfstring{Error Handling}{Error Handling}}\label{index_autotoc_md9}
+Most functions return\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily CSTR\+\_\+\+SUCCESS} on success
+\item {\ttfamily CSTR\+\_\+\+FAIL} on invalid usage or memory errors
+\item {\ttfamily CSTR\+\_\+\+FORCECAP\+\_\+\+LIMIT} when {\ttfamily force\+Cap} is enabled and the buffer can\textquotesingle{}t grow
+\end{DoxyItemize}
+
+{\ttfamily \doxylink{cstr_8h_acf036d9c3a58a17c081904e6c79d5317}{cstr\+\_\+bool()}} is included as a helper to stringify boolean values, if failed, it will still return {\ttfamily false}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md11}{}\doxysection{\texorpdfstring{Internal Helpers}{Internal Helpers}}\label{index_autotoc_md11}
+The library includes internal functions such as {\ttfamily \doxylink{cstr_8h_aa36f129519da357efafe1e2fb11df576}{\+\_\+\+\_\+cstr\+\_\+set\+Format()}} for variadic formatted writes. These are not part of the public API\texorpdfstring{$\ast$}{*} and should not be used directly 

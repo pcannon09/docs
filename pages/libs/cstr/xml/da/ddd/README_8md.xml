@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="da/ddd/README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>CSTR</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>1.0.0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">`CSTR`<sp/>is<sp/>a<sp/>lightweight<sp/>C<sp/>string<sp/>utility<sp/>library<sp/>that<sp/>provides<sp/>a<sp/>safer<sp/>and<sp/>more<sp/>flexible<sp/>alternative<sp/>to<sp/>raw<sp/>C-style<sp/>strings.<sp/>It<sp/>wraps<sp/>dynamic<sp/>allocation,<sp/>formatting,<sp/>substring<sp/>manipulation,<sp/>and<sp/>replacement<sp/>in<sp/>a<sp/>consistent<sp/>API<sp/>without<sp/>pulling<sp/>in<sp/>heavy<sp/>dependencies.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Requirements</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Supported<sp/>Compilers</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**GCC**<sp/>&gt;=<sp/>7.0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Clang**<sp/>&gt;=<sp/>6.0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">All<sp/>compilers<sp/>**must<sp/>support<sp/>C11**<sp/>or<sp/>higher.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Dynamic<sp/>String<sp/>Management**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Create,<sp/>copy,<sp/>resize,<sp/>and<sp/>destroy<sp/>strings<sp/>with<sp/>automatic<sp/>memory<sp/>handling.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Safe<sp/>Set<sp/>and<sp/>Append<sp/>Operations**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>`cstr_set()`<sp/>and<sp/>`cstr_add()`<sp/>handle<sp/>allocation<sp/>internally<sp/>with<sp/>optional<sp/>capacity<sp/>limiting.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Substring<sp/>and<sp/>In-Place<sp/>Editing**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Includes<sp/>`cstr_substr()`,<sp/>`cstr_erase()`,<sp/>`cstr_insert()`,<sp/>and<sp/>`cstr_shrink()`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Replacement<sp/>Utilities**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Replace<sp/>single<sp/>or<sp/>all<sp/>occurrences<sp/>using<sp/>`cstr_replace()`<sp/>and<sp/>`cstr_replaceAll()`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Case<sp/>and<sp/>Formatting<sp/>Helpers**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Convert<sp/>to<sp/>upper/lower,<sp/>reverse,<sp/>clear,<sp/>or<sp/>generate<sp/>strings<sp/>from<sp/>numeric<sp/>values.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Search<sp/>and<sp/>Compare<sp/>Support**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>`cstr_find()`,<sp/>`cstr_findFrom()`,<sp/>`cstr_startsWith()`,<sp/>`cstr_endsWith()`,<sp/>and<sp/>`cstr_comp()`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Optional<sp/>Capacity<sp/>Locking**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Enabling<sp/>`forceCap`<sp/>prevents<sp/>automatic<sp/>reallocation<sp/>and<sp/>returns<sp/>`CSTR_FORCECAP_LIMIT`<sp/>on<sp/>overflow<sp/>attempts.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Basic<sp/>Usage</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>code<sp/>will<sp/>set<sp/>the<sp/>`s`<sp/>variable<sp/>to<sp/>`HELLO,<sp/>WORLD!`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;cstr.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main(void)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CSTR<sp/>s<sp/>=<sp/>cstr_init();<sp/>//<sp/>Create<sp/>an<sp/>empty<sp/>string</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cstr_set(&amp;s,<sp/>&quot;Hello&quot;);<sp/>//<sp/>Set<sp/>the<sp/>string<sp/>to<sp/>`Hello`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cstr_add(&amp;s,<sp/>&quot;,<sp/>World!&quot;);<sp/>//<sp/>Add<sp/>`,<sp/>World!`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cstr_upper(&amp;s);<sp/>//<sp/>Set<sp/>the<sp/>full<sp/>string<sp/>variable<sp/>to<sp/>upper<sp/>case</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cstr_destroy(&amp;s);<sp/>//<sp/>Destroy<sp/>the<sp/>string<sp/>and<sp/>free<sp/>the<sp/>allocated<sp/>memory</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Error<sp/>Handling</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Most<sp/>functions<sp/>return:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`CSTR_SUCCESS`<sp/>on<sp/>success</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`CSTR_FAIL`<sp/>on<sp/>invalid<sp/>usage<sp/>or<sp/>memory<sp/>errors</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`CSTR_FORCECAP_LIMIT`<sp/>when<sp/>`forceCap`<sp/>is<sp/>enabled<sp/>and<sp/>the<sp/>buffer<sp/>can&apos;t<sp/>grow</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">`cstr_bool()`<sp/>is<sp/>included<sp/>as<sp/>a<sp/>helper<sp/>to<sp/>stringify<sp/>boolean<sp/>values,<sp/>if<sp/>failed,<sp/>it<sp/>will<sp/>still<sp/>return<sp/>`false`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Internal<sp/>Helpers</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>library<sp/>includes<sp/>internal<sp/>functions<sp/>such<sp/>as<sp/>`__cstr_setFormat()`<sp/>for<sp/>variadic<sp/>formatted<sp/>writes.<sp/>These<sp/>are<sp/>not<sp/>part<sp/>of<sp/>the<sp/>public<sp/>API*<sp/>and<sp/>should<sp/>not<sp/>be<sp/>used<sp/>directly</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

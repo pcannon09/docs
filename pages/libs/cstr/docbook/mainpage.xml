@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+<title>
+<para>CSTR </para>
+</title>
+<indexterm><primary>CSTR</primary></indexterm>
+
+<para><anchor xml:id="_index_1md_README"/></para>
+<section xml:id="_index_1autotoc_md1">
+<title>1.0.0</title>
+<para><computeroutput><link linkend="_structCSTR">CSTR</link></computeroutput> is a lightweight C string utility library that provides a safer and more flexible alternative to raw C-style strings. It wraps dynamic allocation, formatting, substring manipulation, and replacement in a consistent API without pulling in heavy dependencies.</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md3">
+<title>Requirements</title><section xml:id="_index_1autotoc_md4">
+<title>Supported Compilers</title>
+<para><emphasis role="bold">GCC</emphasis> &gt;= 7.0</para>
+
+<para><emphasis role="bold">Clang</emphasis> &gt;= 6.0</para>
+
+<para>All compilers <emphasis role="bold">must support C11</emphasis> or higher.</para>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md5">
+<title>Features</title>
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Dynamic String Management</emphasis> Create, copy, resize, and destroy strings with automatic memory handling.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Safe Set and Append Operations</emphasis> <computeroutput><link linkend="_cstr_8h_1a5869f4de55dbc9604a41377a98a5d8d1">cstr_set()</link></computeroutput> and <computeroutput><link linkend="_cstr_8h_1a7a74e1845b0b12ce83fee782b9106f13">cstr_add()</link></computeroutput> handle allocation internally with optional capacity limiting.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Substring and In-Place Editing</emphasis> Includes <computeroutput><link linkend="_cstr_8h_1a48a4112d753f753d4d8725fc3e7c5a33">cstr_substr()</link></computeroutput>, <computeroutput><link linkend="_cstr_8h_1a629281b6e3cecf239e0c1d05cd242b35">cstr_erase()</link></computeroutput>, <computeroutput><link linkend="_cstr_8h_1a0ba51ccc14c1f17db5b453aa857c92eb">cstr_insert()</link></computeroutput>, and <computeroutput><link linkend="_cstr_8h_1a3f8f5540a61c0814d0518cd2bad72eb8">cstr_shrink()</link></computeroutput>.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Replacement Utilities</emphasis> Replace single or all occurrences using <computeroutput><link linkend="_cstr_8h_1ad5ffa3660e5c00c93763589cb4d55ea8">cstr_replace()</link></computeroutput> and <computeroutput><link linkend="_cstr_8h_1a260c899e712785b5e45f07c6b4d6a934">cstr_replaceAll()</link></computeroutput>.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Case and Formatting Helpers</emphasis> Convert to upper/lower, reverse, clear, or generate strings from numeric values.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Search and Compare Support</emphasis> <computeroutput><link linkend="_cstr_8h_1ababe5de017b72cf0fbc1c1f74bc22337">cstr_find()</link></computeroutput>, <computeroutput><link linkend="_cstr_8h_1af211d3b88dcfbfa8d8e467c819017e5d">cstr_findFrom()</link></computeroutput>, <computeroutput><link linkend="_cstr_8h_1a5d7d68335475e3e92ad7af71c1436f01">cstr_startsWith()</link></computeroutput>, <computeroutput><link linkend="_cstr_8h_1afa6b390abaebf90c0ffe07c92662bdcc">cstr_endsWith()</link></computeroutput>, and <computeroutput><link linkend="_cstr_8h_1a19f903d2ed994c92fea4c65903c3b552">cstr_comp()</link></computeroutput>.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Optional Capacity Locking</emphasis> Enabling <computeroutput>forceCap</computeroutput> prevents automatic reallocation and returns <computeroutput>CSTR_FORCECAP_LIMIT</computeroutput> on overflow attempts.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md7">
+<title>Basic Usage</title>
+<para>This code will set the <computeroutput>s</computeroutput> variable to <computeroutput>HELLO, WORLD!</computeroutput></para>
+
+<para><literallayout><computeroutput>#include&#32;&quot;cstr.h&quot;
+
+int&#32;main(void)
+{
+&#32;&#32;&#32;&#32;CSTR&#32;s&#32;=&#32;cstr_init();&#32;//&#32;Create&#32;an&#32;empty&#32;string
+&#32;&#32;&#32;&#32;cstr_set(&amp;s,&#32;&quot;Hello&quot;);&#32;//&#32;Set&#32;the&#32;string&#32;to&#32;`Hello`
+&#32;&#32;&#32;&#32;cstr_add(&amp;s,&#32;&quot;,&#32;World!&quot;);&#32;//&#32;Add&#32;`,&#32;World!`
+&#32;&#32;&#32;&#32;cstr_upper(&amp;s);&#32;//&#32;Set&#32;the&#32;full&#32;string&#32;variable&#32;to&#32;upper&#32;case
+&#32;&#32;&#32;&#32;cstr_destroy(&amp;s);&#32;//&#32;Destroy&#32;the&#32;string&#32;and&#32;free&#32;the&#32;allocated&#32;memory
+}
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md9">
+<title>Error Handling</title>
+<para>Most functions return:</para>
+
+<para><itemizedlist>
+<listitem>
+<para><computeroutput>CSTR_SUCCESS</computeroutput> on success</para>
+</listitem><listitem>
+<para><computeroutput>CSTR_FAIL</computeroutput> on invalid usage or memory errors</para>
+</listitem><listitem>
+<para><computeroutput>CSTR_FORCECAP_LIMIT</computeroutput> when <computeroutput>forceCap</computeroutput> is enabled and the buffer can&apos;t grow</para>
+</listitem></itemizedlist>
+</para>
+
+<para><computeroutput><link linkend="_cstr_8h_1acf036d9c3a58a17c081904e6c79d5317">cstr_bool()</link></computeroutput> is included as a helper to stringify boolean values, if failed, it will still return <computeroutput>false</computeroutput></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md11">
+<title>Internal Helpers</title>
+<para>The library includes internal functions such as <computeroutput><link linkend="_cstr_8h_1aa36f129519da357efafe1e2fb11df576">__cstr_setFormat()</link></computeroutput> for variadic formatted writes. These are not part of the public API* and should not be used directly </para>
+</section>
+</chapter>

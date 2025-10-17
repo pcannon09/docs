@@ -1,0 +1,60 @@
+\doxysection{CSTRpredefines.\+h}
+\hypertarget{CSTRpredefines_8h_source}{}\label{CSTRpredefines_8h_source}\index{inc/cstr/CSTRpredefines.h@{inc/cstr/CSTRpredefines.h}}
+\mbox{\hyperlink{CSTRpredefines_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00002}00002\ \textcolor{comment}{\ *\ CSTRpredefines.h\ -\/\ pcannonProjectStandards}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00003}00003\ \textcolor{comment}{\ *\ Predefines\ for\ C\ and\ C++\ projects}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00004}00004\ \textcolor{comment}{\ *\ STD\ Information:\ 20250723\ -\/\ 1.0S}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00005}00005\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00007}00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00009}00009\ \textcolor{comment}{//\ Project\ setup}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00010}00010\ \textcolor{preprocessor}{\#define\ CSTR\_DEFAULT\_C\_STD\ \ \ \ \ \ \ \ \ \ 201112L}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00012}00012\ \textcolor{comment}{//\ Versioning}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00013}00013\ \textcolor{preprocessor}{\#define\ CSTR\_VERSION\_MAJOR\ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00014}00014\ \textcolor{preprocessor}{\#define\ CSTR\_VERSION\_MINOR\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00015}00015\ \textcolor{preprocessor}{\#define\ CSTR\_VERSION\_PATCH\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00017}00017\ \textcolor{preprocessor}{\#define\ CSTR\_VERSION\_STD\ \ \ \ \ \ \ \ \ \ \ \ \ \ 20251017}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00019}00019\ \textcolor{comment}{//\ Version\ states:}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00020}00020\ \textcolor{comment}{//\ *\ dev}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00021}00021\ \textcolor{comment}{//\ *\ beta}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00022}00022\ \textcolor{comment}{//\ *\ build}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00023}00023\ \textcolor{preprocessor}{\#define\ CSTR\_VERSION\_STATE\ \ \ \ \ \ \ \ \ \ "{}build"{}}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00025}00025\ \textcolor{preprocessor}{\#define\ CSTR\_VERSION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((CSTR\_VERSION\_MAJOR<<16)|(CSTR\_VERSION\_MINOR<<8)|(CSTR\_VERSION\_PATCH)|(CSTR\_VERSION\_STATE\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00027}00027\ \textcolor{preprocessor}{\#define\ CSTR\_VERSION\_CHECK(CSTR\_VERSION\_MAJOR,\ CSTR\_VERSION\_MINOR,\ CSTR\_VERSION\_PATCH,\ CSTR\_VERSION\_STATE)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00028}00028\ \textcolor{preprocessor}{\ \ \ \ (((CSTR\_VERSION\_MAJOR)<<16)|((CSTR\_VERSION\_MINOR)<<8)|(CSTR\_VERSION\_PATCH)|((CSTR\_VERSION\_STATE)\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00030}00030\ \textcolor{comment}{//\ Macro\ utils}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00031}00031\ \textcolor{preprocessor}{\#define\ CSTR\_STRINGIFY(x)\ \#x}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00032}00032\ \textcolor{preprocessor}{\#define\ CSTR\_TOSTRING(x)\ CSTR\_STRINGIFY(x)}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00034}00034\ \textcolor{preprocessor}{\#ifndef\ CSTR\_DEV}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00035}00035\ \textcolor{preprocessor}{\#\ \ \ define\ CSTR\_DEV\ true}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00036}00036\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00038}00038\ \textcolor{preprocessor}{\#if\ \_MSC\_VER}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00039}00039\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Currently\ not\ available\ for\ MSVC\ compilers"{}}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00040}00040\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00042}00042\ \textcolor{preprocessor}{\#ifdef\ WIN32}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00043}00043\ \textcolor{preprocessor}{\#\ \ \ define\ CSTR\_OS\_WIN32}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00044}00044\ \textcolor{preprocessor}{\#\ \ \ warning\ "{}No\ full\ support\ for\ Windows"{}}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00045}00045\ \textcolor{preprocessor}{\#elif\ defined(\_\_APPLE\_\_)\ ||\ defined(\_\_MACH\_\_)\ ||\ defined(Macintosh)}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00046}00046\ \textcolor{preprocessor}{\#\ \ \ define\ CSTR\_OS\_MACOS}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00047}00047\ \textcolor{preprocessor}{\#elif\ defined(\_\_linux\_\_)\ ||\ defined(\_\_unix)\ ||\ defined(\_\_unix\_\_)}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00048}00048\ \textcolor{preprocessor}{\#\ \ \ define\ CSTR\_OS\_UNIX\_LINUX}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00049}00049\ \textcolor{preprocessor}{\#elif\ defined(\_\_FreeBSD\_\_)}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00050}00050\ \textcolor{preprocessor}{\#\ \ \ define\ CSTR\_OS\_FREEBSD}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00051}00051\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00052}00052\ \textcolor{preprocessor}{\#\ \ \ warning\ "{}Current\ platform\ might\ not\ be\ supported"{}}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00053}00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ defined(WIN32)\ //\ Platform\ check}}
+\DoxyCodeLine{\Hypertarget{CSTRpredefines_8h_source_l00054}00054\ }
+
+\end{DoxyCode}

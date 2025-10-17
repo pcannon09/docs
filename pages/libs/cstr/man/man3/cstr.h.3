@@ -1,0 +1,591 @@
+.TH "inc/cstr/cstr.h" 3 "Version v1.0.0-build" "CSTR" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/cstr/cstr.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBCSTR\fP"
+.br
+.RI "Custom dynamic string type\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fB__cstr_setFormat\fP (\fBCSTR\fP *_str, const char *_fmt,\&.\&.\&.)"
+.br
+.RI "Internal helper to format and set the string content\&. "
+.ti -1c
+.RI "int \fB__cstr_updateCap\fP (\fBCSTR\fP *_str)"
+.br
+.RI "Update the capacity automatically IMPORTANT: This function won't do anything if macro \fRCSTR_DYNAMIC_CAPACITY\fP is NOT defined\&. "
+.ti -1c
+.RI "int \fBcstr_add\fP (\fBCSTR\fP *_str, const char *_suffix)"
+.br
+.RI "Append a suffix to the end of a \fBCSTR\fP\&. "
+.ti -1c
+.RI "const char * \fBcstr_bool\fP (const bool _bool)"
+.br
+.RI "Return "true" or "false" based on a boolean value\&. "
+.ti -1c
+.RI "int \fBcstr_clear\fP (\fBCSTR\fP *_str)"
+.br
+.RI "Clear a \fBCSTR\fP to an empty string without freeing memory\&. "
+.ti -1c
+.RI "bool \fBcstr_comp\fP (const \fBCSTR\fP _s1, const \fBCSTR\fP _s2)"
+.br
+.RI "Compare two \fBCSTR\fP instances for equality\&. "
+.ti -1c
+.RI "int \fBcstr_destroy\fP (\fBCSTR\fP *_str)"
+.br
+.RI "Destroy and clean up a \fBCSTR\fP and its allocated objects\&. "
+.ti -1c
+.RI "bool \fBcstr_empty\fP (const \fBCSTR\fP *_str)"
+.br
+.RI "Get if the string is empty Return true if: \fR\&.len\fP smaller or equal to 0 \fR\&.data\fP is empty ("") \fR\&.initialized\fP is false \fR_str\fP is NULL If none of the requirements are met, means that it's not empty, hence, return false\&. "
+.ti -1c
+.RI "bool \fBcstr_endsWith\fP (const \fBCSTR\fP _str, const char *_suffix)"
+.br
+.RI "Check if a \fBCSTR\fP ends with the given suffix\&. "
+.ti -1c
+.RI "int \fBcstr_erase\fP (\fBCSTR\fP *_str, int _pos, size_t _len)"
+.br
+.RI "Erase a portion of the string\&. "
+.ti -1c
+.RI "size_t \fBcstr_find\fP (const \fBCSTR\fP *_str, const char *_find)"
+.br
+.RI "Find the first occurrence of a substring\&. "
+.ti -1c
+.RI "size_t \fBcstr_findFrom\fP (const \fBCSTR\fP *_str, const char *_find, size_t pos)"
+.br
+.RI "Find a substring starting from a specific index\&. "
+.ti -1c
+.RI "int \fBcstr_fromDouble\fP (\fBCSTR\fP *_str, double _val)"
+.br
+.RI "Create a numeric string from a double\&. "
+.ti -1c
+.RI "int \fBcstr_fromFloat\fP (\fBCSTR\fP *_str, float _val)"
+.br
+.RI "Create a numeric string from a float\&. "
+.ti -1c
+.RI "int \fBcstr_fromHex\fP (\fBCSTR\fP *_str, unsigned int _val)"
+.br
+.RI "Create a hexadecimal string from an unsigned integer\&. "
+.ti -1c
+.RI "int \fBcstr_fromInt\fP (\fBCSTR\fP *_str, int _val)"
+.br
+.RI "Create a numeric string from an integer\&. "
+.ti -1c
+.RI "int \fBcstr_fromLong\fP (\fBCSTR\fP *_str, long _val)"
+.br
+.RI "Create a numeric string from a long\&. "
+.ti -1c
+.RI "\fBCSTR\fP \fBcstr_init\fP (void)"
+.br
+.RI "Initialize a new empty \fBCSTR\fP\&. "
+.ti -1c
+.RI "int \fBcstr_initCopy\fP (\fBCSTR\fP *_dest, const char *_src)"
+.br
+.RI "Initialize a \fBCSTR\fP with a copy of an original C-string\&. "
+.ti -1c
+.RI "int \fBcstr_insert\fP (\fBCSTR\fP *_str, const char *_data, size_t _pos)"
+.br
+.RI "Insert a string at a specific position in a \fBCSTR\fP\&. "
+.ti -1c
+.RI "int \fBcstr_lower\fP (\fBCSTR\fP *_str)"
+.br
+.RI "Convert all characters in a \fBCSTR\fP to lowercase\&. "
+.ti -1c
+.RI "int \fBcstr_replace\fP (\fBCSTR\fP *_str, const char *_old, const char *_new)"
+.br
+.RI "Replace only the first occurrence of a substring\&. "
+.ti -1c
+.RI "int \fBcstr_replaceAll\fP (\fBCSTR\fP *_str, const char *_old, const char *_new)"
+.br
+.RI "Replace all occurrences of a substring\&. "
+.ti -1c
+.RI "int \fBcstr_reverse\fP (\fBCSTR\fP *_str)"
+.br
+.RI "Reverse the content of a \fBCSTR\fP in place\&. "
+.ti -1c
+.RI "int \fBcstr_set\fP (\fBCSTR\fP *_str, const char *_data)"
+.br
+.RI "Set the content of a \fBCSTR\fP to a new C-string in \fR\&.data\fP "
+.ti -1c
+.RI "int \fBcstr_shrink\fP (\fBCSTR\fP *_str, const size_t _len)"
+.br
+.RI "Clear the content of a \fBCSTR\fP and optionally shrink capacity\&. "
+.ti -1c
+.RI "bool \fBcstr_startsWith\fP (\fBCSTR\fP _str, const char *_prefix)"
+.br
+.RI "Check if a \fBCSTR\fP begins with the given prefix\&. "
+.ti -1c
+.RI "int \fBcstr_substr\fP (\fBCSTR\fP *_str, size_t _start, size_t _len)"
+.br
+.RI "Extract a substring in place from a \fBCSTR\fP\&. "
+.ti -1c
+.RI "int \fBcstr_upper\fP (\fBCSTR\fP *_str)"
+.br
+.RI "Convert all characters in a \fBCSTR\fP to uppercase\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int __cstr_setFormat (\fBCSTR\fP * _str, const char * _fmt,  \&.\&.\&.)\fR [static]\fP"
+
+.PP
+Internal helper to format and set the string content\&. Uses a printf-style format string and variadic arguments to overwrite the content of a \fBCSTR\fP\&. The function computes the required buffer size, reallocates if needed (unless forceCap is active), formats the string, and updates length/capacity\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to modify\&. 
+.br
+\fI_fmt\fP printf-style format string\&. 
+.br
+\fI\&.\&.\&.\fP Variadic arguments corresponding to the format\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.IP "\(bu" 2
+CSTR_SUCCESS on success
+.IP "\(bu" 2
+CSTR_FAIL if parameters are invalid, allocation fails, or vsnprintf reports an error
+.IP "\(bu" 2
+CSTR_FORCECAP_LIMIT if forceCap is enabled and the required size exceeds current capacity
+.PP
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Typically used in the other defined functions for \fBCSTR\fP inner API 
+.RE
+.PP
+
+.SS "int __cstr_updateCap (\fBCSTR\fP * _str)"
+
+.PP
+Update the capacity automatically IMPORTANT: This function won't do anything if macro \fRCSTR_DYNAMIC_CAPACITY\fP is NOT defined\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Return if fail or success 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Typically used in the other defined functions for \fBCSTR\fP inner API 
+.RE
+.PP
+
+.SS "int cstr_add (\fBCSTR\fP * _str, const char * _suffix)"
+
+.PP
+Append a suffix to the end of a \fBCSTR\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to modify 
+.br
+\fI_suffix\fP NULL terminated string to append 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS, CSTR_FAIL, or CSTR_FORCECAP_LIMIT 
+.RE
+.PP
+
+.SS "const char * cstr_bool (const bool _bool)"
+
+.PP
+Return "true" or "false" based on a boolean value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_bool\fP Boolean value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+"true" if _bool is true, otherwise "false"\&. 
+.RE
+.PP
+
+.SS "int cstr_clear (\fBCSTR\fP * _str)"
+
+.PP
+Clear a \fBCSTR\fP to an empty string without freeing memory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to clear 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS or CSTR_FAIL 
+.RE
+.PP
+
+.SS "bool cstr_comp (const \fBCSTR\fP _s1, const \fBCSTR\fP _s2)"
+
+.PP
+Compare two \fBCSTR\fP instances for equality\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_s1\fP First \fBCSTR\fP (by value) 
+.br
+\fI_s2\fP Second \fBCSTR\fP (by value) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if equal, false otherwise 
+.RE
+.PP
+
+.SS "int cstr_destroy (\fBCSTR\fP * _str)"
+
+.PP
+Destroy and clean up a \fBCSTR\fP and its allocated objects\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to destroy 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS on success, otherwise CSTR_FAIL 
+.RE
+.PP
+
+.SS "bool cstr_empty (const \fBCSTR\fP * _str)"
+
+.PP
+Get if the string is empty Return true if: \fR\&.len\fP smaller or equal to 0 \fR\&.data\fP is empty ("") \fR\&.initialized\fP is false \fR_str\fP is NULL If none of the requirements are met, means that it's not empty, hence, return false\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Is the string empty? Yes (true), No (false) 
+.RE
+.PP
+
+.SS "bool cstr_endsWith (const \fBCSTR\fP _str, const char * _suffix)"
+
+.PP
+Check if a \fBCSTR\fP ends with the given suffix\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP The \fBCSTR\fP to check (by value) 
+.br
+\fI_suffix\fP The suffix string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if it ends with suffix, false otherwise 
+.RE
+.PP
+
+.SS "int cstr_erase (\fBCSTR\fP * _str, int _pos, size_t _len)"
+
+.PP
+Erase a portion of the string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP 
+.br
+\fI_pos\fP Starting position 
+.br
+\fI_len\fP Number of characters to remove 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS or CSTR_FAIL 
+.RE
+.PP
+
+.SS "size_t cstr_find (const \fBCSTR\fP * _str, const char * _find)"
+
+.PP
+Find the first occurrence of a substring\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to search 
+.br
+\fI_find\fP Substring to locate 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Index of first match, or CSTR_NPOS if not found 
+.RE
+.PP
+
+.SS "size_t cstr_findFrom (const \fBCSTR\fP * _str, const char * _find, size_t pos)"
+
+.PP
+Find a substring starting from a specific index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to search 
+.br
+\fI_find\fP Substring to locate 
+.br
+\fIpos\fP Starting index 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Index of match, or CSTR_NPOS if not found 
+.RE
+.PP
+
+.SS "int cstr_fromDouble (\fBCSTR\fP * _str, double _val)"
+
+.PP
+Create a numeric string from a double\&. 
+.SS "int cstr_fromFloat (\fBCSTR\fP * _str, float _val)"
+
+.PP
+Create a numeric string from a float\&. 
+.SS "int cstr_fromHex (\fBCSTR\fP * _str, unsigned int _val)"
+
+.PP
+Create a hexadecimal string from an unsigned integer\&. 
+.SS "int cstr_fromInt (\fBCSTR\fP * _str, int _val)"
+
+.PP
+Create a numeric string from an integer\&. 
+.SS "int cstr_fromLong (\fBCSTR\fP * _str, long _val)"
+
+.PP
+Create a numeric string from a long\&. 
+.SS "\fBCSTR\fP cstr_init (void )"
+
+.PP
+Initialize a new empty \fBCSTR\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+A new \fBCSTR\fP instance\&. Check \fR\&.initialized\fP or if \fBCSTR\fP is not NULL to confirm success 
+.RE
+.PP
+
+.SS "int cstr_initCopy (\fBCSTR\fP * _dest, const char * _src)"
+
+.PP
+Initialize a \fBCSTR\fP with a copy of an original C-string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_dest\fP Pointer to the destination \fBCSTR\fP 
+.br
+\fI_src\fP NULL terminated string to copy from 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS on success, otherwise CSTR_FAIL 
+.RE
+.PP
+
+.SS "int cstr_insert (\fBCSTR\fP * _str, const char * _data, size_t _pos)"
+
+.PP
+Insert a string at a specific position in a \fBCSTR\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to modify 
+.br
+\fI_data\fP NULL terminated string to insert 
+.br
+\fI_pos\fP Position at which to insert, 0-based 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS, CSTR_FAIL, or CSTR_FORCECAP_LIMIT 
+.RE
+.PP
+
+.SS "int cstr_lower (\fBCSTR\fP * _str)"
+
+.PP
+Convert all characters in a \fBCSTR\fP to lowercase\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to modify 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS or CSTR_FAIL 
+.RE
+.PP
+
+.SS "int cstr_replace (\fBCSTR\fP * _str, const char * _old, const char * _new)"
+
+.PP
+Replace only the first occurrence of a substring\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP 
+.br
+\fI_old\fP Substring to locate 
+.br
+\fI_new\fP Replacement string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS or an error code (CSTR_FAIL, \&.\&.\&.) 
+.RE
+.PP
+
+.SS "int cstr_replaceAll (\fBCSTR\fP * _str, const char * _old, const char * _new)"
+
+.PP
+Replace all occurrences of a substring\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP 
+.br
+\fI_old\fP Substring to locate 
+.br
+\fI_new\fP Replacement string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS or CSTR_FAIL 
+.RE
+.PP
+
+.SS "int cstr_reverse (\fBCSTR\fP * _str)"
+
+.PP
+Reverse the content of a \fBCSTR\fP in place\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to modify 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS or CSTR_FAIL 
+.RE
+.PP
+
+.SS "int cstr_set (\fBCSTR\fP * _str, const char * _data)"
+
+.PP
+Set the content of a \fBCSTR\fP to a new C-string in \fR\&.data\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to modify 
+.br
+\fI_data\fP Null terminated string to set 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS, CSTR_FAIL, or CSTR_FORCECAP_LIMIT 
+.RE
+.PP
+
+.SS "int cstr_shrink (\fBCSTR\fP * _str, const size_t _len)"
+
+.PP
+Clear the content of a \fBCSTR\fP and optionally shrink capacity\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to shrink 
+.br
+\fI_len\fP New length (characters to keep) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS or CSTR_FAIL 
+.RE
+.PP
+
+.SS "bool cstr_startsWith (\fBCSTR\fP _str, const char * _prefix)"
+
+.PP
+Check if a \fBCSTR\fP begins with the given prefix\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP The \fBCSTR\fP to check by value 
+.br
+\fI_prefix\fP The prefix string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if it starts with prefix, else return false 
+.RE
+.PP
+
+.SS "int cstr_substr (\fBCSTR\fP * _str, size_t _start, size_t _len)"
+
+.PP
+Extract a substring in place from a \fBCSTR\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to modify 
+.br
+\fI_start\fP Starting index of the substring 
+.br
+\fI_len\fP Length of the substring 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS or CSTR_FAIL 
+.RE
+.PP
+
+.SS "int cstr_upper (\fBCSTR\fP * _str)"
+
+.PP
+Convert all characters in a \fBCSTR\fP to uppercase\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to modify 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS or CSTR_FAIL 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTR from the source code\&.

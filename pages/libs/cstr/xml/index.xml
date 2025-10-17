@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="en-US">
+  <compound refid="de/d5e/structCSTR" kind="struct"><name>CSTR</name>
+    <member refid="de/d5e/structCSTR_1ab232b3d18c8c47775417d3ea87bb8624" kind="variable"><name>cap</name></member>
+    <member refid="de/d5e/structCSTR_1adc16bec3dee2fe6501a372918d1766c7" kind="variable"><name>data</name></member>
+    <member refid="de/d5e/structCSTR_1af96673309f99797d1c8a393d0f21323f" kind="variable"><name>forceCap</name></member>
+    <member refid="de/d5e/structCSTR_1a3e40b8f4e913a6e2d49df1f8e16bd323" kind="variable"><name>initialized</name></member>
+    <member refid="de/d5e/structCSTR_1a4d4fd3c90e98dd67542e65b6b388980b" kind="variable"><name>len</name></member>
+  </compound>
+  <compound refid="d8/dcc/namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="da/d9a/cstr_8h" kind="file"><name>cstr.h</name>
+    <member refid="da/d9a/cstr_8h_1aa36f129519da357efafe1e2fb11df576" kind="function"><name>__cstr_setFormat</name></member>
+    <member refid="da/d9a/cstr_8h_1aa64fd1fa39e95f059301cde622fe1895" kind="function"><name>__cstr_updateCap</name></member>
+    <member refid="da/d9a/cstr_8h_1a7a74e1845b0b12ce83fee782b9106f13" kind="function"><name>cstr_add</name></member>
+    <member refid="da/d9a/cstr_8h_1acf036d9c3a58a17c081904e6c79d5317" kind="function"><name>cstr_bool</name></member>
+    <member refid="da/d9a/cstr_8h_1af89d1a993ff85c0be3926ff1541d8c57" kind="function"><name>cstr_clear</name></member>
+    <member refid="da/d9a/cstr_8h_1a19f903d2ed994c92fea4c65903c3b552" kind="function"><name>cstr_comp</name></member>
+    <member refid="da/d9a/cstr_8h_1a409ae3278ea2df20ece65251e829075a" kind="function"><name>cstr_destroy</name></member>
+    <member refid="da/d9a/cstr_8h_1aac10925de8ce0961faa123541f9e3bab" kind="function"><name>cstr_empty</name></member>
+    <member refid="da/d9a/cstr_8h_1afa6b390abaebf90c0ffe07c92662bdcc" kind="function"><name>cstr_endsWith</name></member>
+    <member refid="da/d9a/cstr_8h_1a629281b6e3cecf239e0c1d05cd242b35" kind="function"><name>cstr_erase</name></member>
+    <member refid="da/d9a/cstr_8h_1ababe5de017b72cf0fbc1c1f74bc22337" kind="function"><name>cstr_find</name></member>
+    <member refid="da/d9a/cstr_8h_1af211d3b88dcfbfa8d8e467c819017e5d" kind="function"><name>cstr_findFrom</name></member>
+    <member refid="da/d9a/cstr_8h_1a5e208d26ff6fcc88a7ddb77fd332bbe7" kind="function"><name>cstr_fromDouble</name></member>
+    <member refid="da/d9a/cstr_8h_1a37ba4068bdf1af73b0781ffe9ea7f8b8" kind="function"><name>cstr_fromFloat</name></member>
+    <member refid="da/d9a/cstr_8h_1a3afbc750e95934020262efc1a0a4d11a" kind="function"><name>cstr_fromHex</name></member>
+    <member refid="da/d9a/cstr_8h_1a536dc346ad93e3750e1842ea43bb4450" kind="function"><name>cstr_fromInt</name></member>
+    <member refid="da/d9a/cstr_8h_1ab5087cdbf0f78126f767966a4fd61cb2" kind="function"><name>cstr_fromLong</name></member>
+    <member refid="da/d9a/cstr_8h_1ac6b2cbbf55bc53365030b1549166f7c8" kind="function"><name>cstr_init</name></member>
+    <member refid="da/d9a/cstr_8h_1a94a452fa90f6788aca985a9afaa6ba36" kind="function"><name>cstr_initCopy</name></member>
+    <member refid="da/d9a/cstr_8h_1a0ba51ccc14c1f17db5b453aa857c92eb" kind="function"><name>cstr_insert</name></member>
+    <member refid="da/d9a/cstr_8h_1a1dba58127f74ebaa9244dc9bff79b065" kind="function"><name>cstr_lower</name></member>
+    <member refid="da/d9a/cstr_8h_1ad5ffa3660e5c00c93763589cb4d55ea8" kind="function"><name>cstr_replace</name></member>
+    <member refid="da/d9a/cstr_8h_1a260c899e712785b5e45f07c6b4d6a934" kind="function"><name>cstr_replaceAll</name></member>
+    <member refid="da/d9a/cstr_8h_1a184ac1e789dc883dbb3b61c2ab3155d8" kind="function"><name>cstr_reverse</name></member>
+    <member refid="da/d9a/cstr_8h_1a5869f4de55dbc9604a41377a98a5d8d1" kind="function"><name>cstr_set</name></member>
+    <member refid="da/d9a/cstr_8h_1a3f8f5540a61c0814d0518cd2bad72eb8" kind="function"><name>cstr_shrink</name></member>
+    <member refid="da/d9a/cstr_8h_1a5d7d68335475e3e92ad7af71c1436f01" kind="function"><name>cstr_startsWith</name></member>
+    <member refid="da/d9a/cstr_8h_1a48a4112d753f753d4d8725fc3e7c5a33" kind="function"><name>cstr_substr</name></member>
+    <member refid="da/d9a/cstr_8h_1a9a33ebbb1989f05327b1b5464de45b31" kind="function"><name>cstr_upper</name></member>
+  </compound>
+  <compound refid="d5/d5a/CSTRpredefines_8h" kind="file"><name>CSTRpredefines.h</name>
+  </compound>
+  <compound refid="da/ddd/README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="dir_b62ae530609d100b5fc25986854b7f94" kind="dir"><name>inc/cstr</name>
+  </compound>
+  <compound refid="dir_bfccd401955b95cf8c75461437045ac0" kind="dir"><name>inc</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

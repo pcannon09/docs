@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>CSTR</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/></para>
+<sect1 id="index_1autotoc_md1">
+<title>1.0.0</title><para><computeroutput><ref refid="de/d5e/structCSTR" kindref="compound">CSTR</ref></computeroutput> is a lightweight C string utility library that provides a safer and more flexible alternative to raw C-style strings. It wraps dynamic allocation, formatting, substring manipulation, and replacement in a consistent API without pulling in heavy dependencies.</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md3">
+<title>Requirements</title><sect2 id="index_1autotoc_md4">
+<title>Supported Compilers</title><para><bold>GCC</bold> &gt;= 7.0</para>
+<para><bold>Clang</bold> &gt;= 6.0</para>
+<para>All compilers <bold>must support C11</bold> or higher.</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md5">
+<title>Features</title><para><itemizedlist>
+<listitem><para><bold>Dynamic String Management</bold> Create, copy, resize, and destroy strings with automatic memory handling.</para>
+</listitem><listitem><para><bold>Safe Set and Append Operations</bold> <computeroutput><ref refid="da/d9a/cstr_8h_1a5869f4de55dbc9604a41377a98a5d8d1" kindref="member">cstr_set()</ref></computeroutput> and <computeroutput><ref refid="da/d9a/cstr_8h_1a7a74e1845b0b12ce83fee782b9106f13" kindref="member">cstr_add()</ref></computeroutput> handle allocation internally with optional capacity limiting.</para>
+</listitem><listitem><para><bold>Substring and In-Place Editing</bold> Includes <computeroutput><ref refid="da/d9a/cstr_8h_1a48a4112d753f753d4d8725fc3e7c5a33" kindref="member">cstr_substr()</ref></computeroutput>, <computeroutput><ref refid="da/d9a/cstr_8h_1a629281b6e3cecf239e0c1d05cd242b35" kindref="member">cstr_erase()</ref></computeroutput>, <computeroutput><ref refid="da/d9a/cstr_8h_1a0ba51ccc14c1f17db5b453aa857c92eb" kindref="member">cstr_insert()</ref></computeroutput>, and <computeroutput><ref refid="da/d9a/cstr_8h_1a3f8f5540a61c0814d0518cd2bad72eb8" kindref="member">cstr_shrink()</ref></computeroutput>.</para>
+</listitem><listitem><para><bold>Replacement Utilities</bold> Replace single or all occurrences using <computeroutput><ref refid="da/d9a/cstr_8h_1ad5ffa3660e5c00c93763589cb4d55ea8" kindref="member">cstr_replace()</ref></computeroutput> and <computeroutput><ref refid="da/d9a/cstr_8h_1a260c899e712785b5e45f07c6b4d6a934" kindref="member">cstr_replaceAll()</ref></computeroutput>.</para>
+</listitem><listitem><para><bold>Case and Formatting Helpers</bold> Convert to upper/lower, reverse, clear, or generate strings from numeric values.</para>
+</listitem><listitem><para><bold>Search and Compare Support</bold> <computeroutput><ref refid="da/d9a/cstr_8h_1ababe5de017b72cf0fbc1c1f74bc22337" kindref="member">cstr_find()</ref></computeroutput>, <computeroutput><ref refid="da/d9a/cstr_8h_1af211d3b88dcfbfa8d8e467c819017e5d" kindref="member">cstr_findFrom()</ref></computeroutput>, <computeroutput><ref refid="da/d9a/cstr_8h_1a5d7d68335475e3e92ad7af71c1436f01" kindref="member">cstr_startsWith()</ref></computeroutput>, <computeroutput><ref refid="da/d9a/cstr_8h_1afa6b390abaebf90c0ffe07c92662bdcc" kindref="member">cstr_endsWith()</ref></computeroutput>, and <computeroutput><ref refid="da/d9a/cstr_8h_1a19f903d2ed994c92fea4c65903c3b552" kindref="member">cstr_comp()</ref></computeroutput>.</para>
+</listitem><listitem><para><bold>Optional Capacity Locking</bold> Enabling <computeroutput>forceCap</computeroutput> prevents automatic reallocation and returns <computeroutput>CSTR_FORCECAP_LIMIT</computeroutput> on overflow attempts.</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md7">
+<title>Basic Usage</title><para>This code will set the <computeroutput>s</computeroutput> variable to <computeroutput>HELLO, WORLD!</computeroutput></para>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#include<sp/>&quot;<ref refid="da/d9a/cstr_8h" kindref="compound">cstr.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d5e/structCSTR" kindref="compound">CSTR</ref><sp/>s<sp/>=<sp/><ref refid="da/d9a/cstr_8h_1ac6b2cbbf55bc53365030b1549166f7c8" kindref="member">cstr_init</ref>();<sp/></highlight><highlight class="comment">//<sp/>Create<sp/>an<sp/>empty<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/d9a/cstr_8h_1a5869f4de55dbc9604a41377a98a5d8d1" kindref="member">cstr_set</ref>(&amp;s,<sp/></highlight><highlight class="stringliteral">&quot;Hello&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>string<sp/>to<sp/>`Hello`</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/d9a/cstr_8h_1a7a74e1845b0b12ce83fee782b9106f13" kindref="member">cstr_add</ref>(&amp;s,<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>World!&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Add<sp/>`,<sp/>World!`</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/d9a/cstr_8h_1a9a33ebbb1989f05327b1b5464de45b31" kindref="member">cstr_upper</ref>(&amp;s);<sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>full<sp/>string<sp/>variable<sp/>to<sp/>upper<sp/>case</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/d9a/cstr_8h_1a409ae3278ea2df20ece65251e829075a" kindref="member">cstr_destroy</ref>(&amp;s);<sp/></highlight><highlight class="comment">//<sp/>Destroy<sp/>the<sp/>string<sp/>and<sp/>free<sp/>the<sp/>allocated<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md9">
+<title>Error Handling</title><para>Most functions return:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>CSTR_SUCCESS</computeroutput> on success</para>
+</listitem><listitem><para><computeroutput>CSTR_FAIL</computeroutput> on invalid usage or memory errors</para>
+</listitem><listitem><para><computeroutput>CSTR_FORCECAP_LIMIT</computeroutput> when <computeroutput>forceCap</computeroutput> is enabled and the buffer can&apos;t grow</para>
+</listitem></itemizedlist>
+</para>
+<para><computeroutput><ref refid="da/d9a/cstr_8h_1acf036d9c3a58a17c081904e6c79d5317" kindref="member">cstr_bool()</ref></computeroutput> is included as a helper to stringify boolean values, if failed, it will still return <computeroutput>false</computeroutput></para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md11">
+<title>Internal Helpers</title><para>The library includes internal functions such as <computeroutput><ref refid="da/d9a/cstr_8h_1aa36f129519da357efafe1e2fb11df576" kindref="member">__cstr_setFormat()</ref></computeroutput> for variadic formatted writes. These are not part of the public API* and should not be used directly </para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

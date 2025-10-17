@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_CSTRpredefines_8h_source" xml:lang="en-US">
+<title>CSTRpredefines.h</title>
+<indexterm><primary>inc/cstr/CSTRpredefines.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_CSTRpredefines_8h_source_1l00001"/>00001 <emphasis role="comment">/**</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00002"/>00002 <emphasis role="comment">&#32;*&#32;CSTRpredefines.h&#32;-&#32;pcannonProjectStandards</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00003"/>00003 <emphasis role="comment">&#32;*&#32;Predefines&#32;for&#32;C&#32;and&#32;C++&#32;projects</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00004"/>00004 <emphasis role="comment">&#32;*&#32;STD&#32;Information:&#32;20250723&#32;-&#32;1.0S</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00005"/>00005 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00006"/>00006 
+<anchor xml:id="_CSTRpredefines_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00008"/>00008 
+<anchor xml:id="_CSTRpredefines_8h_source_1l00009"/>00009 <emphasis role="comment">//&#32;Project&#32;setup</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#define&#32;CSTR_DEFAULT_C_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;201112L</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00011"/>00011 
+<anchor xml:id="_CSTRpredefines_8h_source_1l00012"/>00012 <emphasis role="comment">//&#32;Versioning</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#define&#32;CSTR_VERSION_MAJOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#define&#32;CSTR_VERSION_MINOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#define&#32;CSTR_VERSION_PATCH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00016"/>00016 
+<anchor xml:id="_CSTRpredefines_8h_source_1l00017"/>00017 <emphasis role="preprocessor">#define&#32;CSTR_VERSION_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;20251017</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00018"/>00018 
+<anchor xml:id="_CSTRpredefines_8h_source_1l00019"/>00019 <emphasis role="comment">//&#32;Version&#32;states:</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00020"/>00020 <emphasis role="comment">//&#32;*&#32;dev</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00021"/>00021 <emphasis role="comment">//&#32;*&#32;beta</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00022"/>00022 <emphasis role="comment">//&#32;*&#32;build</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00023"/>00023 <emphasis role="preprocessor">#define&#32;CSTR_VERSION_STATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;build&quot;</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00024"/>00024 
+<anchor xml:id="_CSTRpredefines_8h_source_1l00025"/>00025 <emphasis role="preprocessor">#define&#32;CSTR_VERSION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((CSTR_VERSION_MAJOR&lt;&lt;16)|(CSTR_VERSION_MINOR&lt;&lt;8)|(CSTR_VERSION_PATCH)|(CSTR_VERSION_STATE&#32;&lt;&lt;&#32;24))</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00026"/>00026 
+<anchor xml:id="_CSTRpredefines_8h_source_1l00027"/>00027 <emphasis role="preprocessor">#define&#32;CSTR_VERSION_CHECK(CSTR_VERSION_MAJOR,&#32;CSTR_VERSION_MINOR,&#32;CSTR_VERSION_PATCH,&#32;CSTR_VERSION_STATE)&#32;\</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00028"/>00028 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(((CSTR_VERSION_MAJOR)&lt;&lt;16)|((CSTR_VERSION_MINOR)&lt;&lt;8)|(CSTR_VERSION_PATCH)|((CSTR_VERSION_STATE)&#32;&lt;&lt;&#32;24))</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00029"/>00029 
+<anchor xml:id="_CSTRpredefines_8h_source_1l00030"/>00030 <emphasis role="comment">//&#32;Macro&#32;utils</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00031"/>00031 <emphasis role="preprocessor">#define&#32;CSTR_STRINGIFY(x)&#32;#x</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00032"/>00032 <emphasis role="preprocessor">#define&#32;CSTR_TOSTRING(x)&#32;CSTR_STRINGIFY(x)</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00033"/>00033 
+<anchor xml:id="_CSTRpredefines_8h_source_1l00034"/>00034 <emphasis role="preprocessor">#ifndef&#32;CSTR_DEV</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00035"/>00035 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CSTR_DEV&#32;true</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00036"/>00036 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00037"/>00037 
+<anchor xml:id="_CSTRpredefines_8h_source_1l00038"/>00038 <emphasis role="preprocessor">#if&#32;_MSC_VER</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#&#32;&#32;&#32;error&#32;&quot;Currently&#32;not&#32;available&#32;for&#32;MSVC&#32;compilers&quot;</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00041"/>00041 
+<anchor xml:id="_CSTRpredefines_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;WIN32</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00043"/>00043 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CSTR_OS_WIN32</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#&#32;&#32;&#32;warning&#32;&quot;No&#32;full&#32;support&#32;for&#32;Windows&quot;</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00045"/>00045 <emphasis role="preprocessor">#elif&#32;defined(__APPLE__)&#32;||&#32;defined(__MACH__)&#32;||&#32;defined(Macintosh)</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00046"/>00046 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CSTR_OS_MACOS</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00047"/>00047 <emphasis role="preprocessor">#elif&#32;defined(__linux__)&#32;||&#32;defined(__unix)&#32;||&#32;defined(__unix__)</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00048"/>00048 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CSTR_OS_UNIX_LINUX</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00049"/>00049 <emphasis role="preprocessor">#elif&#32;defined(__FreeBSD__)</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00050"/>00050 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CSTR_OS_FREEBSD</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00051"/>00051 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00052"/>00052 <emphasis role="preprocessor">#&#32;&#32;&#32;warning&#32;&quot;Current&#32;platform&#32;might&#32;not&#32;be&#32;supported&quot;</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00053"/>00053 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;defined(WIN32)&#32;//&#32;Platform&#32;check</emphasis>
+<anchor xml:id="_CSTRpredefines_8h_source_1l00054"/>00054 
+</programlisting></section>

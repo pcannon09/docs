@@ -1,0 +1,1091 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cstr_8h" xml:lang="en-US">
+<title>inc/cstr/cstr.h File Reference</title>
+<indexterm><primary>inc/cstr/cstr.h</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structCSTR">CSTR</link></para>
+
+<para>Custom dynamic string type. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>static int <link linkend="_cstr_8h_1aa36f129519da357efafe1e2fb11df576">__cstr_setFormat</link> (<link linkend="_structCSTR">CSTR</link> *_str, const char *_fmt,...)</para>
+
+<para>Internal helper to format and set the string content. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1aa64fd1fa39e95f059301cde622fe1895">__cstr_updateCap</link> (<link linkend="_structCSTR">CSTR</link> *_str)</para>
+
+<para>Update the capacity automatically IMPORTANT: This function won&apos;t do anything if macro <computeroutput>CSTR_DYNAMIC_CAPACITY</computeroutput> is NOT defined. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a7a74e1845b0b12ce83fee782b9106f13">cstr_add</link> (<link linkend="_structCSTR">CSTR</link> *_str, const char *_suffix)</para>
+
+<para>Append a suffix to the end of a <link linkend="_structCSTR">CSTR</link>. </para>
+</listitem>
+            <listitem><para>const char * <link linkend="_cstr_8h_1acf036d9c3a58a17c081904e6c79d5317">cstr_bool</link> (const bool _bool)</para>
+
+<para>Return &quot;true&quot; or &quot;false&quot; based on a boolean value. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1af89d1a993ff85c0be3926ff1541d8c57">cstr_clear</link> (<link linkend="_structCSTR">CSTR</link> *_str)</para>
+
+<para>Clear a <link linkend="_structCSTR">CSTR</link> to an empty string without freeing memory. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_cstr_8h_1a19f903d2ed994c92fea4c65903c3b552">cstr_comp</link> (const <link linkend="_structCSTR">CSTR</link> _s1, const <link linkend="_structCSTR">CSTR</link> _s2)</para>
+
+<para>Compare two <link linkend="_structCSTR">CSTR</link> instances for equality. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a409ae3278ea2df20ece65251e829075a">cstr_destroy</link> (<link linkend="_structCSTR">CSTR</link> *_str)</para>
+
+<para>Destroy and clean up a <link linkend="_structCSTR">CSTR</link> and its allocated objects. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_cstr_8h_1aac10925de8ce0961faa123541f9e3bab">cstr_empty</link> (const <link linkend="_structCSTR">CSTR</link> *_str)</para>
+
+<para>Get if the string is empty Return true if: <computeroutput>.len</computeroutput> smaller or equal to 0 <computeroutput>.data</computeroutput> is empty (&quot;&quot;) <computeroutput>.initialized</computeroutput> is false <computeroutput>_str</computeroutput> is NULL If none of the requirements are met, means that it&apos;s not empty, hence, return false. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_cstr_8h_1afa6b390abaebf90c0ffe07c92662bdcc">cstr_endsWith</link> (const <link linkend="_structCSTR">CSTR</link> _str, const char *_suffix)</para>
+
+<para>Check if a <link linkend="_structCSTR">CSTR</link> ends with the given suffix. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a629281b6e3cecf239e0c1d05cd242b35">cstr_erase</link> (<link linkend="_structCSTR">CSTR</link> *_str, int _pos, size_t _len)</para>
+
+<para>Erase a portion of the string. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_cstr_8h_1ababe5de017b72cf0fbc1c1f74bc22337">cstr_find</link> (const <link linkend="_structCSTR">CSTR</link> *_str, const char *_find)</para>
+
+<para>Find the first occurrence of a substring. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_cstr_8h_1af211d3b88dcfbfa8d8e467c819017e5d">cstr_findFrom</link> (const <link linkend="_structCSTR">CSTR</link> *_str, const char *_find, size_t pos)</para>
+
+<para>Find a substring starting from a specific index. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a5e208d26ff6fcc88a7ddb77fd332bbe7">cstr_fromDouble</link> (<link linkend="_structCSTR">CSTR</link> *_str, double _val)</para>
+
+<para>Create a numeric string from a double. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a37ba4068bdf1af73b0781ffe9ea7f8b8">cstr_fromFloat</link> (<link linkend="_structCSTR">CSTR</link> *_str, float _val)</para>
+
+<para>Create a numeric string from a float. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a3afbc750e95934020262efc1a0a4d11a">cstr_fromHex</link> (<link linkend="_structCSTR">CSTR</link> *_str, unsigned int _val)</para>
+
+<para>Create a hexadecimal string from an unsigned integer. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a536dc346ad93e3750e1842ea43bb4450">cstr_fromInt</link> (<link linkend="_structCSTR">CSTR</link> *_str, int _val)</para>
+
+<para>Create a numeric string from an integer. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1ab5087cdbf0f78126f767966a4fd61cb2">cstr_fromLong</link> (<link linkend="_structCSTR">CSTR</link> *_str, long _val)</para>
+
+<para>Create a numeric string from a long. </para>
+</listitem>
+            <listitem><para><link linkend="_structCSTR">CSTR</link> <link linkend="_cstr_8h_1ac6b2cbbf55bc53365030b1549166f7c8">cstr_init</link> (void)</para>
+
+<para>Initialize a new empty <link linkend="_structCSTR">CSTR</link>. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a94a452fa90f6788aca985a9afaa6ba36">cstr_initCopy</link> (<link linkend="_structCSTR">CSTR</link> *_dest, const char *_src)</para>
+
+<para>Initialize a <link linkend="_structCSTR">CSTR</link> with a copy of an original C-string. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a0ba51ccc14c1f17db5b453aa857c92eb">cstr_insert</link> (<link linkend="_structCSTR">CSTR</link> *_str, const char *_data, size_t _pos)</para>
+
+<para>Insert a string at a specific position in a <link linkend="_structCSTR">CSTR</link>. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a1dba58127f74ebaa9244dc9bff79b065">cstr_lower</link> (<link linkend="_structCSTR">CSTR</link> *_str)</para>
+
+<para>Convert all characters in a <link linkend="_structCSTR">CSTR</link> to lowercase. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1ad5ffa3660e5c00c93763589cb4d55ea8">cstr_replace</link> (<link linkend="_structCSTR">CSTR</link> *_str, const char *_old, const char *_new)</para>
+
+<para>Replace only the first occurrence of a substring. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a260c899e712785b5e45f07c6b4d6a934">cstr_replaceAll</link> (<link linkend="_structCSTR">CSTR</link> *_str, const char *_old, const char *_new)</para>
+
+<para>Replace all occurrences of a substring. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a184ac1e789dc883dbb3b61c2ab3155d8">cstr_reverse</link> (<link linkend="_structCSTR">CSTR</link> *_str)</para>
+
+<para>Reverse the content of a <link linkend="_structCSTR">CSTR</link> in place. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a5869f4de55dbc9604a41377a98a5d8d1">cstr_set</link> (<link linkend="_structCSTR">CSTR</link> *_str, const char *_data)</para>
+
+<para>Set the content of a <link linkend="_structCSTR">CSTR</link> to a new C-string in <computeroutput>.data</computeroutput> </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a3f8f5540a61c0814d0518cd2bad72eb8">cstr_shrink</link> (<link linkend="_structCSTR">CSTR</link> *_str, const size_t _len)</para>
+
+<para>Clear the content of a <link linkend="_structCSTR">CSTR</link> and optionally shrink capacity. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_cstr_8h_1a5d7d68335475e3e92ad7af71c1436f01">cstr_startsWith</link> (<link linkend="_structCSTR">CSTR</link> _str, const char *_prefix)</para>
+
+<para>Check if a <link linkend="_structCSTR">CSTR</link> begins with the given prefix. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a48a4112d753f753d4d8725fc3e7c5a33">cstr_substr</link> (<link linkend="_structCSTR">CSTR</link> *_str, size_t _start, size_t _len)</para>
+
+<para>Extract a substring in place from a <link linkend="_structCSTR">CSTR</link>. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cstr_8h_1a9a33ebbb1989f05327b1b5464de45b31">cstr_upper</link> (<link linkend="_structCSTR">CSTR</link> *_str)</para>
+
+<para>Convert all characters in a <link linkend="_structCSTR">CSTR</link> to uppercase. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_cstr_8h_1aa36f129519da357efafe1e2fb11df576"/><section>
+    <title>__cstr_setFormat()</title>
+<indexterm><primary>__cstr_setFormat</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>__cstr_setFormat</secondary></indexterm>
+<para><computeroutput>int __cstr_setFormat (<link linkend="_structCSTR">CSTR</link> * _str, const char * _fmt,  ...)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Internal helper to format and set the string content. </para>
+</para>
+
+<para>Uses a printf-style format string and variadic arguments to overwrite the content of a <link linkend="_structCSTR">CSTR</link>. The function computes the required buffer size, reallocates if needed (unless forceCap is active), formats the string, and updates length/capacity.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to modify. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_fmt</entry><entry>
+<para>printf-style format string. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>...</entry><entry>
+<para>Variadic arguments corresponding to the format.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><itemizedlist>
+<listitem>
+<para>CSTR_SUCCESS on success</para>
+</listitem><listitem>
+<para>CSTR_FAIL if parameters are invalid, allocation fails, or vsnprintf reports an error</para>
+</listitem><listitem>
+<para>CSTR_FORCECAP_LIMIT if forceCap is enabled and the required size exceeds current capacity</para>
+</listitem></itemizedlist>
+</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Typically used in the other defined functions for <link linkend="_structCSTR">CSTR</link> inner API </para>
+</note>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1aa64fd1fa39e95f059301cde622fe1895"/><section>
+    <title>__cstr_updateCap()</title>
+<indexterm><primary>__cstr_updateCap</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>__cstr_updateCap</secondary></indexterm>
+<para><computeroutput>int __cstr_updateCap (<link linkend="_structCSTR">CSTR</link> * _str)</computeroutput></para><para>
+
+<para>Update the capacity automatically IMPORTANT: This function won&apos;t do anything if macro <computeroutput>CSTR_DYNAMIC_CAPACITY</computeroutput> is NOT defined. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Return if fail or success </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Typically used in the other defined functions for <link linkend="_structCSTR">CSTR</link> inner API </para>
+</note>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a7a74e1845b0b12ce83fee782b9106f13"/><section>
+    <title>cstr_add()</title>
+<indexterm><primary>cstr_add</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_add</secondary></indexterm>
+<para><computeroutput>int cstr_add (<link linkend="_structCSTR">CSTR</link> * _str, const char * _suffix)</computeroutput></para><para>
+
+<para>Append a suffix to the end of a <link linkend="_structCSTR">CSTR</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to modify </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_suffix</entry><entry>
+<para>NULL terminated string to append </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS, CSTR_FAIL, or CSTR_FORCECAP_LIMIT </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1acf036d9c3a58a17c081904e6c79d5317"/><section>
+    <title>cstr_bool()</title>
+<indexterm><primary>cstr_bool</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_bool</secondary></indexterm>
+<para><computeroutput>const char * cstr_bool (const bool _bool)</computeroutput></para><para>
+
+<para>Return &quot;true&quot; or &quot;false&quot; based on a boolean value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_bool</entry><entry>
+<para>Boolean value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>&quot;true&quot; if _bool is true, otherwise &quot;false&quot;. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1af89d1a993ff85c0be3926ff1541d8c57"/><section>
+    <title>cstr_clear()</title>
+<indexterm><primary>cstr_clear</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_clear</secondary></indexterm>
+<para><computeroutput>int cstr_clear (<link linkend="_structCSTR">CSTR</link> * _str)</computeroutput></para><para>
+
+<para>Clear a <link linkend="_structCSTR">CSTR</link> to an empty string without freeing memory. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to clear </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS or CSTR_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a19f903d2ed994c92fea4c65903c3b552"/><section>
+    <title>cstr_comp()</title>
+<indexterm><primary>cstr_comp</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_comp</secondary></indexterm>
+<para><computeroutput>bool cstr_comp (const <link linkend="_structCSTR">CSTR</link> _s1, const <link linkend="_structCSTR">CSTR</link> _s2)</computeroutput></para><para>
+
+<para>Compare two <link linkend="_structCSTR">CSTR</link> instances for equality. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_s1</entry><entry>
+<para>First <link linkend="_structCSTR">CSTR</link> (by value) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_s2</entry><entry>
+<para>Second <link linkend="_structCSTR">CSTR</link> (by value) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if equal, false otherwise </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a409ae3278ea2df20ece65251e829075a"/><section>
+    <title>cstr_destroy()</title>
+<indexterm><primary>cstr_destroy</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_destroy</secondary></indexterm>
+<para><computeroutput>int cstr_destroy (<link linkend="_structCSTR">CSTR</link> * _str)</computeroutput></para><para>
+
+<para>Destroy and clean up a <link linkend="_structCSTR">CSTR</link> and its allocated objects. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to destroy </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS on success, otherwise CSTR_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1aac10925de8ce0961faa123541f9e3bab"/><section>
+    <title>cstr_empty()</title>
+<indexterm><primary>cstr_empty</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_empty</secondary></indexterm>
+<para><computeroutput>bool cstr_empty (const <link linkend="_structCSTR">CSTR</link> * _str)</computeroutput></para><para>
+
+<para>Get if the string is empty Return true if: <computeroutput>.len</computeroutput> smaller or equal to 0 <computeroutput>.data</computeroutput> is empty (&quot;&quot;) <computeroutput>.initialized</computeroutput> is false <computeroutput>_str</computeroutput> is NULL If none of the requirements are met, means that it&apos;s not empty, hence, return false. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Is the string empty? Yes (true), No (false) </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1afa6b390abaebf90c0ffe07c92662bdcc"/><section>
+    <title>cstr_endsWith()</title>
+<indexterm><primary>cstr_endsWith</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_endsWith</secondary></indexterm>
+<para><computeroutput>bool cstr_endsWith (const <link linkend="_structCSTR">CSTR</link> _str, const char * _suffix)</computeroutput></para><para>
+
+<para>Check if a <link linkend="_structCSTR">CSTR</link> ends with the given suffix. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>The <link linkend="_structCSTR">CSTR</link> to check (by value) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_suffix</entry><entry>
+<para>The suffix string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if it ends with suffix, false otherwise </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a629281b6e3cecf239e0c1d05cd242b35"/><section>
+    <title>cstr_erase()</title>
+<indexterm><primary>cstr_erase</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_erase</secondary></indexterm>
+<para><computeroutput>int cstr_erase (<link linkend="_structCSTR">CSTR</link> * _str, int _pos, size_t _len)</computeroutput></para><para>
+
+<para>Erase a portion of the string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_pos</entry><entry>
+<para>Starting position </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_len</entry><entry>
+<para>Number of characters to remove </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS or CSTR_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1ababe5de017b72cf0fbc1c1f74bc22337"/><section>
+    <title>cstr_find()</title>
+<indexterm><primary>cstr_find</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_find</secondary></indexterm>
+<para><computeroutput>size_t cstr_find (const <link linkend="_structCSTR">CSTR</link> * _str, const char * _find)</computeroutput></para><para>
+
+<para>Find the first occurrence of a substring. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to search </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_find</entry><entry>
+<para>Substring to locate </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Index of first match, or CSTR_NPOS if not found </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1af211d3b88dcfbfa8d8e467c819017e5d"/><section>
+    <title>cstr_findFrom()</title>
+<indexterm><primary>cstr_findFrom</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_findFrom</secondary></indexterm>
+<para><computeroutput>size_t cstr_findFrom (const <link linkend="_structCSTR">CSTR</link> * _str, const char * _find, size_t pos)</computeroutput></para><para>
+
+<para>Find a substring starting from a specific index. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to search </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_find</entry><entry>
+<para>Substring to locate </para>
+</entry>
+                            </row>
+                            <row>
+<entry>pos</entry><entry>
+<para>Starting index </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Index of match, or CSTR_NPOS if not found </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a5e208d26ff6fcc88a7ddb77fd332bbe7"/><section>
+    <title>cstr_fromDouble()</title>
+<indexterm><primary>cstr_fromDouble</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_fromDouble</secondary></indexterm>
+<para><computeroutput>int cstr_fromDouble (<link linkend="_structCSTR">CSTR</link> * _str, double _val)</computeroutput></para><para>
+
+<para>Create a numeric string from a double. </para>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a37ba4068bdf1af73b0781ffe9ea7f8b8"/><section>
+    <title>cstr_fromFloat()</title>
+<indexterm><primary>cstr_fromFloat</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_fromFloat</secondary></indexterm>
+<para><computeroutput>int cstr_fromFloat (<link linkend="_structCSTR">CSTR</link> * _str, float _val)</computeroutput></para><para>
+
+<para>Create a numeric string from a float. </para>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a3afbc750e95934020262efc1a0a4d11a"/><section>
+    <title>cstr_fromHex()</title>
+<indexterm><primary>cstr_fromHex</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_fromHex</secondary></indexterm>
+<para><computeroutput>int cstr_fromHex (<link linkend="_structCSTR">CSTR</link> * _str, unsigned int _val)</computeroutput></para><para>
+
+<para>Create a hexadecimal string from an unsigned integer. </para>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a536dc346ad93e3750e1842ea43bb4450"/><section>
+    <title>cstr_fromInt()</title>
+<indexterm><primary>cstr_fromInt</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_fromInt</secondary></indexterm>
+<para><computeroutput>int cstr_fromInt (<link linkend="_structCSTR">CSTR</link> * _str, int _val)</computeroutput></para><para>
+
+<para>Create a numeric string from an integer. </para>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1ab5087cdbf0f78126f767966a4fd61cb2"/><section>
+    <title>cstr_fromLong()</title>
+<indexterm><primary>cstr_fromLong</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_fromLong</secondary></indexterm>
+<para><computeroutput>int cstr_fromLong (<link linkend="_structCSTR">CSTR</link> * _str, long _val)</computeroutput></para><para>
+
+<para>Create a numeric string from a long. </para>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1ac6b2cbbf55bc53365030b1549166f7c8"/><section>
+    <title>cstr_init()</title>
+<indexterm><primary>cstr_init</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_init</secondary></indexterm>
+<para><computeroutput><link linkend="_structCSTR">CSTR</link> cstr_init (void )</computeroutput></para><para>
+
+<para>Initialize a new empty <link linkend="_structCSTR">CSTR</link>. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A new <link linkend="_structCSTR">CSTR</link> instance. Check <computeroutput>.initialized</computeroutput> or if <link linkend="_structCSTR">CSTR</link> is not NULL to confirm success </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a94a452fa90f6788aca985a9afaa6ba36"/><section>
+    <title>cstr_initCopy()</title>
+<indexterm><primary>cstr_initCopy</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_initCopy</secondary></indexterm>
+<para><computeroutput>int cstr_initCopy (<link linkend="_structCSTR">CSTR</link> * _dest, const char * _src)</computeroutput></para><para>
+
+<para>Initialize a <link linkend="_structCSTR">CSTR</link> with a copy of an original C-string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_dest</entry><entry>
+<para>Pointer to the destination <link linkend="_structCSTR">CSTR</link> </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_src</entry><entry>
+<para>NULL terminated string to copy from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS on success, otherwise CSTR_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a0ba51ccc14c1f17db5b453aa857c92eb"/><section>
+    <title>cstr_insert()</title>
+<indexterm><primary>cstr_insert</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_insert</secondary></indexterm>
+<para><computeroutput>int cstr_insert (<link linkend="_structCSTR">CSTR</link> * _str, const char * _data, size_t _pos)</computeroutput></para><para>
+
+<para>Insert a string at a specific position in a <link linkend="_structCSTR">CSTR</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to modify </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_data</entry><entry>
+<para>NULL terminated string to insert </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_pos</entry><entry>
+<para>Position at which to insert, 0-based </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS, CSTR_FAIL, or CSTR_FORCECAP_LIMIT </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a1dba58127f74ebaa9244dc9bff79b065"/><section>
+    <title>cstr_lower()</title>
+<indexterm><primary>cstr_lower</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_lower</secondary></indexterm>
+<para><computeroutput>int cstr_lower (<link linkend="_structCSTR">CSTR</link> * _str)</computeroutput></para><para>
+
+<para>Convert all characters in a <link linkend="_structCSTR">CSTR</link> to lowercase. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to modify </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS or CSTR_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1ad5ffa3660e5c00c93763589cb4d55ea8"/><section>
+    <title>cstr_replace()</title>
+<indexterm><primary>cstr_replace</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_replace</secondary></indexterm>
+<para><computeroutput>int cstr_replace (<link linkend="_structCSTR">CSTR</link> * _str, const char * _old, const char * _new)</computeroutput></para><para>
+
+<para>Replace only the first occurrence of a substring. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_old</entry><entry>
+<para>Substring to locate </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_new</entry><entry>
+<para>Replacement string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS or an error code (CSTR_FAIL, ...) </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a260c899e712785b5e45f07c6b4d6a934"/><section>
+    <title>cstr_replaceAll()</title>
+<indexterm><primary>cstr_replaceAll</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_replaceAll</secondary></indexterm>
+<para><computeroutput>int cstr_replaceAll (<link linkend="_structCSTR">CSTR</link> * _str, const char * _old, const char * _new)</computeroutput></para><para>
+
+<para>Replace all occurrences of a substring. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_old</entry><entry>
+<para>Substring to locate </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_new</entry><entry>
+<para>Replacement string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS or CSTR_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a184ac1e789dc883dbb3b61c2ab3155d8"/><section>
+    <title>cstr_reverse()</title>
+<indexterm><primary>cstr_reverse</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_reverse</secondary></indexterm>
+<para><computeroutput>int cstr_reverse (<link linkend="_structCSTR">CSTR</link> * _str)</computeroutput></para><para>
+
+<para>Reverse the content of a <link linkend="_structCSTR">CSTR</link> in place. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to modify </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS or CSTR_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a5869f4de55dbc9604a41377a98a5d8d1"/><section>
+    <title>cstr_set()</title>
+<indexterm><primary>cstr_set</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_set</secondary></indexterm>
+<para><computeroutput>int cstr_set (<link linkend="_structCSTR">CSTR</link> * _str, const char * _data)</computeroutput></para><para>
+
+<para>Set the content of a <link linkend="_structCSTR">CSTR</link> to a new C-string in <computeroutput>.data</computeroutput> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to modify </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_data</entry><entry>
+<para>Null terminated string to set </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS, CSTR_FAIL, or CSTR_FORCECAP_LIMIT </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a3f8f5540a61c0814d0518cd2bad72eb8"/><section>
+    <title>cstr_shrink()</title>
+<indexterm><primary>cstr_shrink</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_shrink</secondary></indexterm>
+<para><computeroutput>int cstr_shrink (<link linkend="_structCSTR">CSTR</link> * _str, const size_t _len)</computeroutput></para><para>
+
+<para>Clear the content of a <link linkend="_structCSTR">CSTR</link> and optionally shrink capacity. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to shrink </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_len</entry><entry>
+<para>New length (characters to keep) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS or CSTR_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a5d7d68335475e3e92ad7af71c1436f01"/><section>
+    <title>cstr_startsWith()</title>
+<indexterm><primary>cstr_startsWith</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_startsWith</secondary></indexterm>
+<para><computeroutput>bool cstr_startsWith (<link linkend="_structCSTR">CSTR</link> _str, const char * _prefix)</computeroutput></para><para>
+
+<para>Check if a <link linkend="_structCSTR">CSTR</link> begins with the given prefix. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>The <link linkend="_structCSTR">CSTR</link> to check by value </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_prefix</entry><entry>
+<para>The prefix string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if it starts with prefix, else return false </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a48a4112d753f753d4d8725fc3e7c5a33"/><section>
+    <title>cstr_substr()</title>
+<indexterm><primary>cstr_substr</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_substr</secondary></indexterm>
+<para><computeroutput>int cstr_substr (<link linkend="_structCSTR">CSTR</link> * _str, size_t _start, size_t _len)</computeroutput></para><para>
+
+<para>Extract a substring in place from a <link linkend="_structCSTR">CSTR</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to modify </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_start</entry><entry>
+<para>Starting index of the substring </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_len</entry><entry>
+<para>Length of the substring </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS or CSTR_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1a9a33ebbb1989f05327b1b5464de45b31"/><section>
+    <title>cstr_upper()</title>
+<indexterm><primary>cstr_upper</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_upper</secondary></indexterm>
+<para><computeroutput>int cstr_upper (<link linkend="_structCSTR">CSTR</link> * _str)</computeroutput></para><para>
+
+<para>Convert all characters in a <link linkend="_structCSTR">CSTR</link> to uppercase. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to modify </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS or CSTR_FAIL </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

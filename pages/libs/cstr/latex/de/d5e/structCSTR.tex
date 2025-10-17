@@ -1,0 +1,116 @@
+\doxysection{CSTR Struct Reference}
+\hypertarget{structCSTR}{}\label{structCSTR}\index{CSTR@{CSTR}}
+
+
+Custom dynamic string type.  
+
+
+
+
+{\ttfamily \#include $<$cstr.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{structCSTR_ab232b3d18c8c47775417d3ea87bb8624}{cap}}
+\begin{DoxyCompactList}\small\item\em Total allocated capacity (including NULL terminator) \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structCSTR_adc16bec3dee2fe6501a372918d1766c7}{data}}
+\begin{DoxyCompactList}\small\item\em Pointer to the character buffer Always NULL terminated if properly managed through the API. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structCSTR_af96673309f99797d1c8a393d0f21323f}{force\+Cap}}
+\begin{DoxyCompactList}\small\item\em If true, capacity is fixed and operations that exceed it return an error instead of reallocating the size. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structCSTR_a3e40b8f4e913a6e2d49df1f8e16bd323}{initialized}}
+\begin{DoxyCompactList}\small\item\em Tracks whether this \doxylink{structCSTR}{CSTR} has been initialized. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{structCSTR_a4d4fd3c90e98dd67542e65b6b388980b}{len}}
+\begin{DoxyCompactList}\small\item\em Current string length (not counting the NULL terminator) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Custom dynamic string type. 
+
+The fields should typically be managed only through the cstr\+\_\+\texorpdfstring{$\ast$}{*} API Directly modifying them can lead to undefined behavior unless explicitly intended 
+
+Definition at line \mbox{\hyperlink{cstr_8h_source_l00040}{40}} of file \mbox{\hyperlink{cstr_8h_source}{cstr.\+h}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{structCSTR_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structCSTR_ab232b3d18c8c47775417d3ea87bb8624}\index{CSTR@{CSTR}!cap@{cap}}
+\index{cap@{cap}!CSTR@{CSTR}}
+\doxysubsubsection{\texorpdfstring{cap}{cap}}
+{\footnotesize\ttfamily \label{structCSTR_ab232b3d18c8c47775417d3ea87bb8624} 
+size\+\_\+t CSTR\+::cap}
+
+
+
+Total allocated capacity (including NULL terminator) 
+
+
+
+Definition at line \mbox{\hyperlink{cstr_8h_source_l00068}{68}} of file \mbox{\hyperlink{cstr_8h_source}{cstr.\+h}}.
+
+\Hypertarget{structCSTR_adc16bec3dee2fe6501a372918d1766c7}\index{CSTR@{CSTR}!data@{data}}
+\index{data@{data}!CSTR@{CSTR}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \label{structCSTR_adc16bec3dee2fe6501a372918d1766c7} 
+char\texorpdfstring{$\ast$}{*} CSTR\+::data}
+
+
+
+Pointer to the character buffer Always NULL terminated if properly managed through the API. 
+
+
+
+Definition at line \mbox{\hyperlink{cstr_8h_source_l00052}{52}} of file \mbox{\hyperlink{cstr_8h_source}{cstr.\+h}}.
+
+\Hypertarget{structCSTR_af96673309f99797d1c8a393d0f21323f}\index{CSTR@{CSTR}!forceCap@{forceCap}}
+\index{forceCap@{forceCap}!CSTR@{CSTR}}
+\doxysubsubsection{\texorpdfstring{forceCap}{forceCap}}
+{\footnotesize\ttfamily \label{structCSTR_af96673309f99797d1c8a393d0f21323f} 
+bool CSTR\+::force\+Cap}
+
+
+
+If true, capacity is fixed and operations that exceed it return an error instead of reallocating the size. 
+
+
+
+Definition at line \mbox{\hyperlink{cstr_8h_source_l00058}{58}} of file \mbox{\hyperlink{cstr_8h_source}{cstr.\+h}}.
+
+\Hypertarget{structCSTR_a3e40b8f4e913a6e2d49df1f8e16bd323}\index{CSTR@{CSTR}!initialized@{initialized}}
+\index{initialized@{initialized}!CSTR@{CSTR}}
+\doxysubsubsection{\texorpdfstring{initialized}{initialized}}
+{\footnotesize\ttfamily \label{structCSTR_a3e40b8f4e913a6e2d49df1f8e16bd323} 
+bool CSTR\+::initialized}
+
+
+
+Tracks whether this \doxylink{structCSTR}{CSTR} has been initialized. 
+
+\begin{DoxyNote}{Note}
+Should only be set by internal or initialization functions 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{cstr_8h_source_l00046}{46}} of file \mbox{\hyperlink{cstr_8h_source}{cstr.\+h}}.
+
+\Hypertarget{structCSTR_a4d4fd3c90e98dd67542e65b6b388980b}\index{CSTR@{CSTR}!len@{len}}
+\index{len@{len}!CSTR@{CSTR}}
+\doxysubsubsection{\texorpdfstring{len}{len}}
+{\footnotesize\ttfamily \label{structCSTR_a4d4fd3c90e98dd67542e65b6b388980b} 
+size\+\_\+t CSTR\+::len}
+
+
+
+Current string length (not counting the NULL terminator) 
+
+
+
+Definition at line \mbox{\hyperlink{cstr_8h_source_l00063}{63}} of file \mbox{\hyperlink{cstr_8h_source}{cstr.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/cstr/\mbox{\hyperlink{cstr_8h}{cstr.\+h}}\end{DoxyCompactItemize}

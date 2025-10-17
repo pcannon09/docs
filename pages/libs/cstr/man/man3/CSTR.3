@@ -1,0 +1,85 @@
+.TH "CSTR" 3 "Version v1.0.0-build" "CSTR" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CSTR \- Custom dynamic string type\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <cstr\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "size_t \fBcap\fP"
+.br
+.RI "Total allocated capacity (including NULL terminator) "
+.ti -1c
+.RI "char * \fBdata\fP"
+.br
+.RI "Pointer to the character buffer Always NULL terminated if properly managed through the API\&. "
+.ti -1c
+.RI "bool \fBforceCap\fP"
+.br
+.RI "If true, capacity is fixed and operations that exceed it return an error instead of reallocating the size\&. "
+.ti -1c
+.RI "bool \fBinitialized\fP"
+.br
+.RI "Tracks whether this \fBCSTR\fP has been initialized\&. "
+.ti -1c
+.RI "size_t \fBlen\fP"
+.br
+.RI "Current string length (not counting the NULL terminator) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Custom dynamic string type\&. 
+
+The fields should typically be managed only through the cstr_* API Directly modifying them can lead to undefined behavior unless explicitly intended 
+.PP
+Definition at line \fB40\fP of file \fBcstr\&.h\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "size_t CSTR::cap"
+
+.PP
+Total allocated capacity (including NULL terminator) 
+.PP
+Definition at line \fB68\fP of file \fBcstr\&.h\fP\&.
+.SS "char* CSTR::data"
+
+.PP
+Pointer to the character buffer Always NULL terminated if properly managed through the API\&. 
+.PP
+Definition at line \fB52\fP of file \fBcstr\&.h\fP\&.
+.SS "bool CSTR::forceCap"
+
+.PP
+If true, capacity is fixed and operations that exceed it return an error instead of reallocating the size\&. 
+.PP
+Definition at line \fB58\fP of file \fBcstr\&.h\fP\&.
+.SS "bool CSTR::initialized"
+
+.PP
+Tracks whether this \fBCSTR\fP has been initialized\&. 
+.PP
+\fBNote\fP
+.RS 4
+Should only be set by internal or initialization functions 
+.RE
+.PP
+
+.PP
+Definition at line \fB46\fP of file \fBcstr\&.h\fP\&.
+.SS "size_t CSTR::len"
+
+.PP
+Current string length (not counting the NULL terminator) 
+.PP
+Definition at line \fB63\fP of file \fBcstr\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CSTR from the source code\&.
