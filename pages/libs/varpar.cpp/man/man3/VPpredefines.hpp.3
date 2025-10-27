@@ -1,0 +1,118 @@
+.TH "inc/varparse.cpp/VPpredefines.hpp" 3 "Version v1.0.0-build" "varpar.cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/varparse.cpp/VPpredefines.hpp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBVP_DEFAULT_CPP_STD\fP   201703L"
+.br
+.RI "VPpredefines\&.h - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1\&.0S NOTES: Renamed to \fR\fBVPpredefines\&.hpp\fP\fP\&. "
+.ti -1c
+.RI "#define \fBVP_DEV\fP   true"
+.br
+.ti -1c
+.RI "#define \fBVP_STRINGIFY\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBVP_TOSTRING\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBVP_VERSION\fP   ((\fBVP_VERSION_MAJOR\fP<<16)|(\fBVP_VERSION_MINOR\fP<<8)|(\fBVP_VERSION_PATCH\fP)|(\fBVP_VERSION_STATE\fP << 24))"
+.br
+.ti -1c
+.RI "#define \fBVP_VERSION_CHECK\fP(\fBVP_VERSION_MAJOR\fP,  \fBVP_VERSION_MINOR\fP,  \fBVP_VERSION_PATCH\fP,  \fBVP_VERSION_STATE\fP)"
+.br
+.ti -1c
+.RI "#define \fBVP_VERSION_MAJOR\fP   1"
+.br
+.ti -1c
+.RI "#define \fBVP_VERSION_MINOR\fP   0"
+.br
+.ti -1c
+.RI "#define \fBVP_VERSION_PATCH\fP   0"
+.br
+.ti -1c
+.RI "#define \fBVP_VERSION_STATE\fP   'build'"
+.br
+.ti -1c
+.RI "#define \fBVP_VERSION_STD\fP   20251027"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define VP_DEFAULT_CPP_STD   201703L"
+
+.PP
+VPpredefines\&.h - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1\&.0S NOTES: Renamed to \fR\fBVPpredefines\&.hpp\fP\fP\&. 
+.PP
+Definition at line \fB12\fP of file \fBVPpredefines\&.hpp\fP\&.
+.SS "#define VP_DEV   true"
+
+.PP
+Definition at line \fB37\fP of file \fBVPpredefines\&.hpp\fP\&.
+.SS "#define VP_STRINGIFY( x)"
+\fBValue:\fP
+.nf
+#x
+.PP
+.fi
+
+.PP
+Definition at line \fB33\fP of file \fBVPpredefines\&.hpp\fP\&.
+.SS "#define VP_TOSTRING( x)"
+\fBValue:\fP
+.nf
+VP_STRINGIFY(x)
+.PP
+.fi
+
+.PP
+Definition at line \fB34\fP of file \fBVPpredefines\&.hpp\fP\&.
+.SS "#define VP_VERSION   ((\fBVP_VERSION_MAJOR\fP<<16)|(\fBVP_VERSION_MINOR\fP<<8)|(\fBVP_VERSION_PATCH\fP)|(\fBVP_VERSION_STATE\fP << 24))"
+
+.PP
+Definition at line \fB27\fP of file \fBVPpredefines\&.hpp\fP\&.
+.SS "#define VP_VERSION_CHECK( \fBVP_VERSION_MAJOR\fP,  \fBVP_VERSION_MINOR\fP,  \fBVP_VERSION_PATCH\fP,  \fBVP_VERSION_STATE\fP)"
+\fBValue:\fP
+.nf
+    (((VP_VERSION_MAJOR)<<16)|((VP_VERSION_MINOR)<<8)|(VP_VERSION_PATCH)|((VP_VERSION_STATE) << 24))
+.PP
+.fi
+
+.PP
+Definition at line \fB29\fP of file \fBVPpredefines\&.hpp\fP\&.
+.nf
+29 #define VP_VERSION_CHECK(VP_VERSION_MAJOR, VP_VERSION_MINOR, VP_VERSION_PATCH, VP_VERSION_STATE) \\
+30     (((VP_VERSION_MAJOR)<<16)|((VP_VERSION_MINOR)<<8)|(VP_VERSION_PATCH)|((VP_VERSION_STATE) << 24))
+.PP
+.fi
+
+.SS "#define VP_VERSION_MAJOR   1"
+
+.PP
+Definition at line \fB15\fP of file \fBVPpredefines\&.hpp\fP\&.
+.SS "#define VP_VERSION_MINOR   0"
+
+.PP
+Definition at line \fB16\fP of file \fBVPpredefines\&.hpp\fP\&.
+.SS "#define VP_VERSION_PATCH   0"
+
+.PP
+Definition at line \fB17\fP of file \fBVPpredefines\&.hpp\fP\&.
+.SS "#define VP_VERSION_STATE   'build'"
+
+.PP
+Definition at line \fB25\fP of file \fBVPpredefines\&.hpp\fP\&.
+.SS "#define VP_VERSION_STD   20251027"
+
+.PP
+Definition at line \fB19\fP of file \fBVPpredefines\&.hpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for varpar\&.cpp from the source code\&.

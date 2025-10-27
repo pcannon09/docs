@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="db/d4c/VPpredefines_8hpp" kind="file" language="C++">
+    <compoundname>VPpredefines.hpp</compoundname>
+    <includedby refid="d9/d91/VP__Parse_8hpp" local="yes">inc/varparse.cpp/VP_Parse.hpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>inc/varparse.cpp/VP_Parse.hpp</label>
+        <link refid="d9/d91/VP__Parse_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>inc/varparse.cpp/VPpredefines.hpp</label>
+        <link refid="db/d4c/VPpredefines_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/VP_Parse.cpp</label>
+        <link refid="db/de3/VP__Parse_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="db/d4c/VPpredefines_8hpp_1a15dbb22bf5159c4980c6dd33c60ac822" prot="public" static="no">
+        <name>VP_DEFAULT_CPP_STD</name>
+        <initializer>201703L</initializer>
+        <briefdescription>
+<para>VPpredefines.h - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1.0S NOTES: Renamed to <computeroutput><ref refid="db/d4c/VPpredefines_8hpp" kindref="compound">VPpredefines.hpp</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VPpredefines.hpp" line="12" column="9" bodyfile="inc/varparse.cpp/VPpredefines.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d4c/VPpredefines_8hpp_1a99240917d1d719ed5b348a0b9e45ec1a" prot="public" static="no">
+        <name>VP_DEV</name>
+        <initializer>true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VPpredefines.hpp" line="37" column="12" bodyfile="inc/varparse.cpp/VPpredefines.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d4c/VPpredefines_8hpp_1a6741c6a947dfa9b4dd9c6cfbee6c3182" prot="public" static="no">
+        <name>VP_STRINGIFY</name>
+        <param><defname>x</defname></param>
+        <initializer>#x</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VPpredefines.hpp" line="33" column="9" bodyfile="inc/varparse.cpp/VPpredefines.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d4c/VPpredefines_8hpp_1a8752acd8cfec08e8d3f76f9fcd6f0354" prot="public" static="no">
+        <name>VP_TOSTRING</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="db/d4c/VPpredefines_8hpp_1a6741c6a947dfa9b4dd9c6cfbee6c3182" kindref="member">VP_STRINGIFY</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VPpredefines.hpp" line="34" column="9" bodyfile="inc/varparse.cpp/VPpredefines.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d4c/VPpredefines_8hpp_1ab6c7ba376b4202fd3238af9ae909c1e7" prot="public" static="no">
+        <name>VP_VERSION</name>
+        <initializer>((<ref refid="db/d4c/VPpredefines_8hpp_1a0d04e082465a6e340ebb6c5ada136014" kindref="member">VP_VERSION_MAJOR</ref>&lt;&lt;16)|(<ref refid="db/d4c/VPpredefines_8hpp_1a1019f18e2f8142ddb746e04c1e7c96d0" kindref="member">VP_VERSION_MINOR</ref>&lt;&lt;8)|(<ref refid="db/d4c/VPpredefines_8hpp_1add0085d50a19df118f761bd30ff31915" kindref="member">VP_VERSION_PATCH</ref>)|(<ref refid="db/d4c/VPpredefines_8hpp_1a3426791e9b2549b2ac97b36308bffac6" kindref="member">VP_VERSION_STATE</ref> &lt;&lt; 24))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VPpredefines.hpp" line="27" column="9" bodyfile="inc/varparse.cpp/VPpredefines.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d4c/VPpredefines_8hpp_1a8b7a6e9c413f7dbde2c61703af00b44c" prot="public" static="no">
+        <name>VP_VERSION_CHECK</name>
+        <param><defname>VP_VERSION_MAJOR</defname></param>
+        <param><defname>VP_VERSION_MINOR</defname></param>
+        <param><defname>VP_VERSION_PATCH</defname></param>
+        <param><defname>VP_VERSION_STATE</defname></param>
+        <initializer>    (((<ref refid="db/d4c/VPpredefines_8hpp_1a0d04e082465a6e340ebb6c5ada136014" kindref="member">VP_VERSION_MAJOR</ref>)&lt;&lt;16)|((<ref refid="db/d4c/VPpredefines_8hpp_1a1019f18e2f8142ddb746e04c1e7c96d0" kindref="member">VP_VERSION_MINOR</ref>)&lt;&lt;8)|(<ref refid="db/d4c/VPpredefines_8hpp_1add0085d50a19df118f761bd30ff31915" kindref="member">VP_VERSION_PATCH</ref>)|((<ref refid="db/d4c/VPpredefines_8hpp_1a3426791e9b2549b2ac97b36308bffac6" kindref="member">VP_VERSION_STATE</ref>) &lt;&lt; 24))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VPpredefines.hpp" line="29" column="9" bodyfile="inc/varparse.cpp/VPpredefines.hpp" bodystart="29" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d4c/VPpredefines_8hpp_1a0d04e082465a6e340ebb6c5ada136014" prot="public" static="no">
+        <name>VP_VERSION_MAJOR</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VPpredefines.hpp" line="15" column="9" bodyfile="inc/varparse.cpp/VPpredefines.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d4c/VPpredefines_8hpp_1a1019f18e2f8142ddb746e04c1e7c96d0" prot="public" static="no">
+        <name>VP_VERSION_MINOR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VPpredefines.hpp" line="16" column="9" bodyfile="inc/varparse.cpp/VPpredefines.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d4c/VPpredefines_8hpp_1add0085d50a19df118f761bd30ff31915" prot="public" static="no">
+        <name>VP_VERSION_PATCH</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VPpredefines.hpp" line="17" column="9" bodyfile="inc/varparse.cpp/VPpredefines.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d4c/VPpredefines_8hpp_1a3426791e9b2549b2ac97b36308bffac6" prot="public" static="no">
+        <name>VP_VERSION_STATE</name>
+        <initializer>&quot;build&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VPpredefines.hpp" line="25" column="9" bodyfile="inc/varparse.cpp/VPpredefines.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d4c/VPpredefines_8hpp_1adba9e3334a27d813053e1a2fdc8aa742" prot="public" static="no">
+        <name>VP_VERSION_STD</name>
+        <initializer>20251027</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VPpredefines.hpp" line="19" column="9" bodyfile="inc/varparse.cpp/VPpredefines.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>VPpredefines.h<sp/>-<sp/>pcannonProjectStandards</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Predefines<sp/>for<sp/>C<sp/>and<sp/>C++<sp/>projects</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>STD<sp/>Information:<sp/>20250723<sp/>-<sp/>1.0S</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>NOTES:</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Renamed<sp/>to<sp/>`VPpredefines.hpp`</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Project<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="db/d4c/VPpredefines_8hpp_1a15dbb22bf5159c4980c6dd33c60ac822" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VP_DEFAULT_CPP_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>201703L</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Versioning</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="db/d4c/VPpredefines_8hpp_1a0d04e082465a6e340ebb6c5ada136014" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VP_VERSION_MAJOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="db/d4c/VPpredefines_8hpp_1a1019f18e2f8142ddb746e04c1e7c96d0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VP_VERSION_MINOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="db/d4c/VPpredefines_8hpp_1add0085d50a19df118f761bd30ff31915" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VP_VERSION_PATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="db/d4c/VPpredefines_8hpp_1adba9e3334a27d813053e1a2fdc8aa742" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VP_VERSION_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20251027</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>states:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>beta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>build</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="db/d4c/VPpredefines_8hpp_1a3426791e9b2549b2ac97b36308bffac6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VP_VERSION_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;build&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="db/d4c/VPpredefines_8hpp_1ab6c7ba376b4202fd3238af9ae909c1e7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VP_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((VP_VERSION_MAJOR&lt;&lt;16)|(VP_VERSION_MINOR&lt;&lt;8)|(VP_VERSION_PATCH)|(VP_VERSION_STATE<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="db/d4c/VPpredefines_8hpp_1a8b7a6e9c413f7dbde2c61703af00b44c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VP_VERSION_CHECK(VP_VERSION_MAJOR,<sp/>VP_VERSION_MINOR,<sp/>VP_VERSION_PATCH,<sp/>VP_VERSION_STATE)<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(((VP_VERSION_MAJOR)&lt;&lt;16)|((VP_VERSION_MINOR)&lt;&lt;8)|(VP_VERSION_PATCH)|((VP_VERSION_STATE)<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Macro<sp/>utils</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="db/d4c/VPpredefines_8hpp_1a6741c6a947dfa9b4dd9c6cfbee6c3182" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VP_STRINGIFY(x)<sp/>#x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="db/d4c/VPpredefines_8hpp_1a8752acd8cfec08e8d3f76f9fcd6f0354" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VP_TOSTRING(x)<sp/>VP_STRINGIFY(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VP_DEV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="db/d4c/VPpredefines_8hpp_1a99240917d1d719ed5b348a0b9e45ec1a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>VP_DEV<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>VP_OS_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__APPLE__)<sp/>||<sp/>defined(__MACH__)<sp/>||<sp/>defined(Macintosh)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>VP_OS_MACOS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__linux__)<sp/>||<sp/>defined(__unix)<sp/>||<sp/>defined(__unix__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>VP_OS_UNIX_LINUX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__FreeBSD__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>VP_OS_FREEBSD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>error<sp/>&quot;Current<sp/>platform<sp/>is<sp/>not<sp/>supported&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>defined(WIN32)<sp/>//<sp/>Platform<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/varparse.cpp/VPpredefines.hpp"/>
+  </compounddef>
+</doxygen>

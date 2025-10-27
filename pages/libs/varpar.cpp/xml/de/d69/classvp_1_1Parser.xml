@@ -1,0 +1,350 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="de/d69/classvp_1_1Parser" kind="class" language="C++" prot="public">
+    <compoundname>vp::Parser</compoundname>
+    <includes refid="d9/d91/VP__Parse_8hpp" local="no">VP_Parse.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="de/d69/classvp_1_1Parser_1a3a32b1c7ced72af69a654e2be9b05bab" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string vp::Parser::extension</definition>
+        <argsstring></argsstring>
+        <name>extension</name>
+        <qualifiedname>vp::Parser::extension</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="44" column="13" bodyfile="inc/varparse.cpp/VP_Parse.hpp" bodystart="44" bodyend="-1"/>
+        <referencedby refid="de/d69/classvp_1_1Parser_1a46d7a7260cc6704bd09a757ad8015fbf" compoundref="db/de3/VP__Parse_8cpp" startline="16" endline="46">Parser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="de/d69/classvp_1_1Parser_1a0dba0d4012b3aa1ad16d58a89c1597ce" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string vp::Parser::fpath</definition>
+        <argsstring></argsstring>
+        <name>fpath</name>
+        <qualifiedname>vp::Parser::fpath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="39" column="13" bodyfile="inc/varparse.cpp/VP_Parse.hpp" bodystart="39" bodyend="-1"/>
+        <referencedby refid="de/d69/classvp_1_1Parser_1a46d7a7260cc6704bd09a757ad8015fbf" compoundref="db/de3/VP__Parse_8cpp" startline="16" endline="46">Parser</referencedby>
+        <referencedby refid="de/d69/classvp_1_1Parser_1a73b347e24a79937ef18dcd8fb91e4583" compoundref="db/de3/VP__Parse_8cpp" startline="55" endline="104">__parse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="de/d69/classvp_1_1Parser_1a984f4a6ce9f5578af0edd6878b1f583b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string vp::Parser::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>vp::Parser::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="38" column="13" bodyfile="inc/varparse.cpp/VP_Parse.hpp" bodystart="38" bodyend="-1"/>
+        <referencedby refid="de/d69/classvp_1_1Parser_1a46d7a7260cc6704bd09a757ad8015fbf" compoundref="db/de3/VP__Parse_8cpp" startline="16" endline="46">Parser</referencedby>
+        <referencedby refid="de/d69/classvp_1_1Parser_1ad5246aed9edc845750b0207198f851b1" compoundref="db/de3/VP__Parse_8cpp" startline="117" endline="118">getID</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="de/d69/classvp_1_1Parser_1ab1ce18785fdc3d4014af72c8892a5456" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d4d/structvp_1_1ParserReturn" kindref="compound">ParserReturn</ref></type>
+        <definition>ParserReturn vp::Parser::parseRet</definition>
+        <argsstring></argsstring>
+        <name>parseRet</name>
+        <qualifiedname>vp::Parser::parseRet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="42" column="14" bodyfile="inc/varparse.cpp/VP_Parse.hpp" bodystart="42" bodyend="-1"/>
+        <referencedby refid="de/d69/classvp_1_1Parser_1a4dd4f68395787602c1536fb695081087" compoundref="db/de3/VP__Parse_8cpp" startline="106" endline="112">getVal</referencedby>
+        <referencedby refid="de/d69/classvp_1_1Parser_1a765a0d08947ed756cd3bb75f03fd2909" compoundref="db/de3/VP__Parse_8cpp" startline="48" endline="53">parse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="de/d69/classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/d86/structvp_1_1ParserStatus" kindref="compound">ParserStatus</ref></type>
+        <definition>ParserStatus vp::Parser::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <qualifiedname>vp::Parser::status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="41" column="15" bodyfile="inc/varparse.cpp/VP_Parse.hpp" bodystart="41" bodyend="-1"/>
+        <referencedby refid="de/d69/classvp_1_1Parser_1a46d7a7260cc6704bd09a757ad8015fbf" compoundref="db/de3/VP__Parse_8cpp" startline="16" endline="46">Parser</referencedby>
+        <referencedby refid="de/d69/classvp_1_1Parser_1a27ffd0fb917c5adbefcfce4ebf001033" compoundref="db/de3/VP__Parse_8cpp" startline="114" endline="115">checkStatus</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="de/d69/classvp_1_1Parser_1a73b347e24a79937ef18dcd8fb91e4583" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d7/d4d/structvp_1_1ParserReturn" kindref="compound">ParserReturn</ref></type>
+        <definition>ParserReturn vp::Parser::__parse</definition>
+        <argsstring>()</argsstring>
+        <name>__parse</name>
+        <qualifiedname>vp::Parser::__parse</qualifiedname>
+        <briefdescription>
+<para>Private member of the parse function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="d7/d4d/structvp_1_1ParserReturn" kindref="compound">ParserReturn</ref> Parsed information </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="51" column="22" bodyfile="src/VP_Parse.cpp" bodystart="55" bodyend="104"/>
+        <references refid="de/d69/classvp_1_1Parser_1a0dba0d4012b3aa1ad16d58a89c1597ce" compoundref="d9/d91/VP__Parse_8hpp" startline="39">fpath</references>
+        <referencedby refid="de/d69/classvp_1_1Parser_1a765a0d08947ed756cd3bb75f03fd2909" compoundref="db/de3/VP__Parse_8cpp" startline="48" endline="53">parse</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/d69/classvp_1_1Parser_1a46d7a7260cc6704bd09a757ad8015fbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vp::Parser::Parser</definition>
+        <argsstring>(const std::string &amp;_id, const std::string &amp;_file, const std::string &amp;_extension=&quot;.varpar&quot;)</argsstring>
+        <name>Parser</name>
+        <qualifiedname>vp::Parser::Parser</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_file</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_extension</declname>
+          <defval>&quot;.varpar&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Create the object, set errors if there are and set some configuration from the parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set the ID of the object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set the path of the file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_extension</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set the file extension </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="60" column="1" bodyfile="src/VP_Parse.cpp" bodystart="16" bodyend="46"/>
+        <references refid="db/de3/VP__Parse_8cpp_1adb99666973bac16ee2e3ae6bd5cfb242" compoundref="db/de3/VP__Parse_8cpp" startline="11" endline="12">__VP_ERROR_THROW_DEFAULT_MSG</references>
+        <references refid="de/d69/classvp_1_1Parser_1a3a32b1c7ced72af69a654e2be9b05bab" compoundref="d9/d91/VP__Parse_8hpp" startline="44">extension</references>
+        <references refid="de/d69/classvp_1_1Parser_1a0dba0d4012b3aa1ad16d58a89c1597ce" compoundref="d9/d91/VP__Parse_8hpp" startline="39">fpath</references>
+        <references refid="de/d69/classvp_1_1Parser_1a984f4a6ce9f5578af0edd6878b1f583b" compoundref="d9/d91/VP__Parse_8hpp" startline="38">id</references>
+        <references refid="de/d69/classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f" compoundref="d9/d91/VP__Parse_8hpp" startline="41">status</references>
+      </memberdef>
+      <memberdef kind="function" id="de/d69/classvp_1_1Parser_1a9973f22c277eea48e1e562c314968bd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vp::Parser::~Parser</definition>
+        <argsstring>()</argsstring>
+        <name>~Parser</name>
+        <qualifiedname>vp::Parser::~Parser</qualifiedname>
+        <briefdescription>
+<para>Deconstructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d69/classvp_1_1Parser_1a27ffd0fb917c5adbefcfce4ebf001033" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/d86/structvp_1_1ParserStatus" kindref="compound">ParserStatus</ref></type>
+        <definition>ParserStatus vp::Parser::checkStatus</definition>
+        <argsstring>() const</argsstring>
+        <name>checkStatus</name>
+        <qualifiedname>vp::Parser::checkStatus</qualifiedname>
+        <briefdescription>
+<para>Get the constructed starts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="d9/d86/structvp_1_1ParserStatus" kindref="compound">ParserStatus</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="84" column="14" bodyfile="src/VP_Parse.cpp" bodystart="114" bodyend="115"/>
+        <references refid="de/d69/classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f" compoundref="d9/d91/VP__Parse_8hpp" startline="41">status</references>
+      </memberdef>
+      <memberdef kind="function" id="de/d69/classvp_1_1Parser_1ad5246aed9edc845750b0207198f851b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string vp::Parser::getID</definition>
+        <argsstring>() const</argsstring>
+        <name>getID</name>
+        <qualifiedname>vp::Parser::getID</qualifiedname>
+        <briefdescription>
+<para>Get the current object ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string Current object ID </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="90" column="13" bodyfile="src/VP_Parse.cpp" bodystart="117" bodyend="118"/>
+        <references refid="de/d69/classvp_1_1Parser_1a984f4a6ce9f5578af0edd6878b1f583b" compoundref="d9/d91/VP__Parse_8hpp" startline="38">id</references>
+      </memberdef>
+      <memberdef kind="function" id="de/d69/classvp_1_1Parser_1a4dd4f68395787602c1536fb695081087" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string vp::Parser::getVal</definition>
+        <argsstring>(const std::string &amp;_key) const</argsstring>
+        <name>getVal</name>
+        <qualifiedname>vp::Parser::getVal</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_key</declname>
+        </param>
+        <briefdescription>
+<para>Get value of _key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key value to find </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string Return the value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="78" column="13" bodyfile="src/VP_Parse.cpp" bodystart="106" bodyend="112"/>
+        <references refid="de/d69/classvp_1_1Parser_1ab1ce18785fdc3d4014af72c8892a5456" compoundref="d9/d91/VP__Parse_8hpp" startline="42">parseRet</references>
+      </memberdef>
+      <memberdef kind="function" id="de/d69/classvp_1_1Parser_1a765a0d08947ed756cd3bb75f03fd2909" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d4d/structvp_1_1ParserReturn" kindref="compound">ParserReturn</ref></type>
+        <definition>ParserReturn vp::Parser::parse</definition>
+        <argsstring>()</argsstring>
+        <name>parse</name>
+        <qualifiedname>vp::Parser::parse</qualifiedname>
+        <briefdescription>
+<para>Public API wrapper for <computeroutput><ref refid="de/d69/classvp_1_1Parser_1a73b347e24a79937ef18dcd8fb91e4583" kindref="member">Parser::__parse()</ref></computeroutput> function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="d7/d4d/structvp_1_1ParserReturn" kindref="compound">ParserReturn</ref> Parsed information </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="71" column="14" bodyfile="src/VP_Parse.cpp" bodystart="48" bodyend="53"/>
+        <references refid="de/d69/classvp_1_1Parser_1a73b347e24a79937ef18dcd8fb91e4583" compoundref="db/de3/VP__Parse_8cpp" startline="55" endline="104">__parse</references>
+        <references refid="de/d69/classvp_1_1Parser_1ab1ce18785fdc3d4014af72c8892a5456" compoundref="d9/d91/VP__Parse_8hpp" startline="42">parseRet</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="6">
+        <label>std::map&lt; std::string, std::string &gt;</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>elements</edgelabel>
+          <edgelabel>keys</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>std::vector&lt; std::string &gt;</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vp::Parser</label>
+        <link refid="de/d69/classvp_1_1Parser"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>extension</edgelabel>
+          <edgelabel>fpath</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>status</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>parseRet</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>vp::ParserReturn</label>
+        <link refid="d7/d4d/structvp_1_1ParserReturn"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>config</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>vp::ParserStatus</label>
+        <link refid="d9/d86/structvp_1_1ParserStatus"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>error</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="inc/varparse.cpp/VP_Parse.hpp" line="35" column="1" bodyfile="inc/varparse.cpp/VP_Parse.hpp" bodystart="36" bodyend="91"/>
+    <listofallmembers>
+      <member refid="de/d69/classvp_1_1Parser_1a73b347e24a79937ef18dcd8fb91e4583" prot="protected" virt="virtual"><scope>vp::Parser</scope><name>__parse</name></member>
+      <member refid="de/d69/classvp_1_1Parser_1a27ffd0fb917c5adbefcfce4ebf001033" prot="public" virt="non-virtual"><scope>vp::Parser</scope><name>checkStatus</name></member>
+      <member refid="de/d69/classvp_1_1Parser_1a3a32b1c7ced72af69a654e2be9b05bab" prot="private" virt="non-virtual"><scope>vp::Parser</scope><name>extension</name></member>
+      <member refid="de/d69/classvp_1_1Parser_1a0dba0d4012b3aa1ad16d58a89c1597ce" prot="private" virt="non-virtual"><scope>vp::Parser</scope><name>fpath</name></member>
+      <member refid="de/d69/classvp_1_1Parser_1ad5246aed9edc845750b0207198f851b1" prot="public" virt="non-virtual"><scope>vp::Parser</scope><name>getID</name></member>
+      <member refid="de/d69/classvp_1_1Parser_1a4dd4f68395787602c1536fb695081087" prot="public" virt="non-virtual"><scope>vp::Parser</scope><name>getVal</name></member>
+      <member refid="de/d69/classvp_1_1Parser_1a984f4a6ce9f5578af0edd6878b1f583b" prot="private" virt="non-virtual"><scope>vp::Parser</scope><name>id</name></member>
+      <member refid="de/d69/classvp_1_1Parser_1a765a0d08947ed756cd3bb75f03fd2909" prot="public" virt="non-virtual"><scope>vp::Parser</scope><name>parse</name></member>
+      <member refid="de/d69/classvp_1_1Parser_1a46d7a7260cc6704bd09a757ad8015fbf" prot="public" virt="non-virtual"><scope>vp::Parser</scope><name>Parser</name></member>
+      <member refid="de/d69/classvp_1_1Parser_1ab1ce18785fdc3d4014af72c8892a5456" prot="private" virt="non-virtual"><scope>vp::Parser</scope><name>parseRet</name></member>
+      <member refid="de/d69/classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f" prot="private" virt="non-virtual"><scope>vp::Parser</scope><name>status</name></member>
+      <member refid="de/d69/classvp_1_1Parser_1a9973f22c277eea48e1e562c314968bd0" prot="public" virt="non-virtual"><scope>vp::Parser</scope><name>~Parser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

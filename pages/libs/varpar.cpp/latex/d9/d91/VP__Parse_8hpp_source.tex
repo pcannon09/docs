@@ -1,0 +1,102 @@
+\doxysection{VP\+\_\+\+Parse.\+hpp}
+\hypertarget{VP__Parse_8hpp_source}{}\label{VP__Parse_8hpp_source}\index{inc/varparse.cpp/VP\_Parse.hpp@{inc/varparse.cpp/VP\_Parse.hpp}}
+\mbox{\hyperlink{VP__Parse_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{VPpredefines_8hpp}{VPpredefines.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#if\ VP\_DEFAULT\_CPP\_STD\ >=\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00010}\mbox{\hyperlink{namespacevp}{00010}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacevp}{vp}}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00011}00011\ \{\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00012}00012\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00013}00013\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ the\ error\ and\ if\ the\ \`{}Parser`\ class\ was\ constructed}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00014}00014\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00015}\mbox{\hyperlink{structvp_1_1ParserStatus}{00015}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvp_1_1ParserStatus}{ParserStatus}}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00017}\mbox{\hyperlink{structvp_1_1ParserStatus_a4fca833cc9bbee7722793c48961dfac3}{00017}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structvp_1_1ParserStatus_a4fca833cc9bbee7722793c48961dfac3}{error}};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00019}\mbox{\hyperlink{structvp_1_1ParserStatus_a6c74cdf7a1ba1706ea10f90f1c180195}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structvp_1_1ParserStatus_a6c74cdf7a1ba1706ea10f90f1c180195}{constructed}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00020}\mbox{\hyperlink{namespacevp_a03bdbb3011959e2cb9b0256ae4931c3f}{00020}}\ \ \ \ \ \}\ \mbox{\hyperlink{namespacevp_a03bdbb3011959e2cb9b0256ae4931c3f}{ParserStatus}};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00021}00021\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00022}00022\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00023}00023\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Returned\ parser\ information}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00024}00024\ \textcolor{comment}{\ \ \ \ \ *\ This\ includes\ the\ configuration,\ output\ and\ success\ of\ the\ \`{}Parser`}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00025}00025\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00026}\mbox{\hyperlink{structvp_1_1ParserReturn}{00026}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvp_1_1ParserReturn}{ParserReturn}}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00028}\mbox{\hyperlink{structvp_1_1ParserReturn_a5b16b9a13d4b625f74f04b39aa8cb5e7}{00028}}\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::string>\ \mbox{\hyperlink{structvp_1_1ParserReturn_a5b16b9a13d4b625f74f04b39aa8cb5e7}{config}};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00030}\mbox{\hyperlink{structvp_1_1ParserReturn_a267f1f83e2befc4d2c5504a7e64921ce}{00030}}\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{structvp_1_1ParserReturn_a267f1f83e2befc4d2c5504a7e64921ce}{output}};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00032}\mbox{\hyperlink{structvp_1_1ParserReturn_af7053f12cfba17ae795d246fcb7f33d3}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structvp_1_1ParserReturn_af7053f12cfba17ae795d246fcb7f33d3}{success}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00033}\mbox{\hyperlink{namespacevp_a7b57f4f0e8a0b3826aae9c210d9aff9e}{00033}}\ \ \ \ \ \}\ \mbox{\hyperlink{namespacevp_a7b57f4f0e8a0b3826aae9c210d9aff9e}{ParserReturn}};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00035}\mbox{\hyperlink{classvp_1_1Parser}{00035}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvp_1_1Parser_a46d7a7260cc6704bd09a757ad8015fbf}{Parser}}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00038}\mbox{\hyperlink{classvp_1_1Parser_a984f4a6ce9f5578af0edd6878b1f583b}{00038}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classvp_1_1Parser_a984f4a6ce9f5578af0edd6878b1f583b}{id}};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00039}\mbox{\hyperlink{classvp_1_1Parser_a0dba0d4012b3aa1ad16d58a89c1597ce}{00039}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classvp_1_1Parser_a0dba0d4012b3aa1ad16d58a89c1597ce}{fpath}};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00041}\mbox{\hyperlink{classvp_1_1Parser_ada8181e33a36ab0da77b9c8785ca9c8f}{00041}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvp_1_1ParserStatus}{ParserStatus}}\ \mbox{\hyperlink{classvp_1_1Parser_ada8181e33a36ab0da77b9c8785ca9c8f}{status}};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00042}\mbox{\hyperlink{classvp_1_1Parser_ab1ce18785fdc3d4014af72c8892a5456}{00042}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvp_1_1ParserReturn}{ParserReturn}}\ \mbox{\hyperlink{classvp_1_1Parser_ab1ce18785fdc3d4014af72c8892a5456}{parseRet}};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00044}\mbox{\hyperlink{classvp_1_1Parser_a3a32b1c7ced72af69a654e2be9b05bab}{00044}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classvp_1_1Parser_a3a32b1c7ced72af69a654e2be9b05bab}{extension}};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{protected}:\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00047}00047\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00048}00048\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Private\ member\ of\ the\ parse\ function}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00049}00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ ParserReturn\ Parsed\ information}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00050}00050\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{structvp_1_1ParserReturn}{ParserReturn}}\ \mbox{\hyperlink{classvp_1_1Parser_a73b347e24a79937ef18dcd8fb91e4583}{\_\_parse}}();}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00054}00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Create\ the\ object,\ set\ errors\ if\ there\ are\ and\ set\ some\ configuration\ from\ the\ parameters}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00056}00056\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_id\ Set\ the\ ID\ of\ the\ object}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00057}00057\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_file\ Set\ the\ path\ of\ the\ file}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00058}00058\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_extension\ Set\ the\ file\ extension}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00059}00059\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvp_1_1Parser_a46d7a7260cc6704bd09a757ad8015fbf}{Parser}}(\textcolor{keyword}{const}\ std::string\ \&\_id,\ \textcolor{keyword}{const}\ std::string\ \&\_file,\ \textcolor{keyword}{const}\ std::string\ \&\_extension\ =\ \textcolor{stringliteral}{"{}.varpar"{}});}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00061}00061\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00063}00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Deconstructor}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00064}00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00065}\mbox{\hyperlink{classvp_1_1Parser_a9973f22c277eea48e1e562c314968bd0}{00065}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvp_1_1Parser_a9973f22c277eea48e1e562c314968bd0}{\string~Parser}}();}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00066}00066\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00068}00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Public\ API\ wrapper\ for\ \`{}Parser::\_\_parse()`\ function}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00069}00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ ParserReturn\ Parsed\ information}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00070}00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvp_1_1ParserReturn}{ParserReturn}}\ \mbox{\hyperlink{classvp_1_1Parser_a765a0d08947ed756cd3bb75f03fd2909}{parse}}();}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00072}00072\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ value\ of\ \_key}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00075}00075\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_key\ Key\ value\ to\ find}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00076}00076\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::string\ Return\ the\ value}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00077}00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00078}00078\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classvp_1_1Parser_a4dd4f68395787602c1536fb695081087}{getVal}}(\textcolor{keyword}{const}\ std::string\ \&\_key)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00079}00079\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00080}00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00081}00081\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ the\ constructed\ starts}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00082}00082\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ ParserStatus}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00083}00083\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvp_1_1ParserStatus}{ParserStatus}}\ \mbox{\hyperlink{classvp_1_1Parser_a27ffd0fb917c5adbefcfce4ebf001033}{checkStatus}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00085}00085\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00086}00086\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00087}00087\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ the\ current\ object\ ID}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00088}00088\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::string\ Current\ object\ ID}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00089}00089\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00090}00090\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classvp_1_1Parser_ad5246aed9edc845750b0207198f851b1}{getID}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00091}00091\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00092}00092\ \}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00093}00093\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00094}00094\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Use\ C++17\ as\ the\ minimum\ standard"{}}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00095}00095\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VP\_DEFAULT\_CPP\_STD\ >=\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{VP__Parse_8hpp_source_l00096}00096\ }
+
+\end{DoxyCode}

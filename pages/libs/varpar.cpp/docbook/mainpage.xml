@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+<title>
+<para>VarPar - Variable Parser </para>
+</title>
+<indexterm><primary>VarPar - Variable Parser</primary></indexterm>
+
+<para><anchor xml:id="_index_1md_README"/></para>
+
+<para><computeroutput>VarPar</computeroutput> (Variable Parser) is a extremely lightweight <emphasis role="bold">C++17+ configuration file parser</emphasis> that provides simple, strict key value parsing for flat text configuration files</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+<section xml:id="_index_1autotoc_md2">
+<title>Features</title>
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Strict Parsing:</emphasis> Ensures each key is uniquely defined and every line contains a valid <computeroutput>key = value</computeroutput> pair</para>
+</listitem><listitem>
+<para><emphasis role="bold">Automatic Validation:</emphasis> Checks file existence and verifies the correct file extension before parsing</para>
+</listitem><listitem>
+<para><emphasis role="bold">Informative Error Handling:</emphasis> Reports precise error messages and line numbers for duplicate or malformed entries</para>
+</listitem><listitem>
+<para><emphasis role="bold">Minimal Dependencies:</emphasis> Uses only standard C++17 libraries</para>
+</listitem><listitem>
+<para><emphasis role="bold">Lightweight Runtime Status:</emphasis> Parser state (constructed / error) is tracked through <computeroutput>ParserStatus</computeroutput> for safe checks</para>
+</listitem></itemizedlist>
+</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md4">
+<title>Core Components</title><section xml:id="_index_1autotoc_md5">
+<title><computeroutput>vp::Parser</computeroutput></title>
+<para>Main parsing class responsible for reading and interpreting configuration files.</para>
+<section xml:id="_index_1autotoc_md6">
+<title>Constructor</title>
+<para><literallayout><computeroutput>vp::Parser(const&#32;std::string&amp;&#32;_id,&#32;const&#32;std::string&amp;&#32;_file,&#32;const&#32;std::string&amp;&#32;_extension&#32;=&#32;&quot;.varpar&quot;);
+</computeroutput></literallayout></para>
+
+<para><emphasis role="bold">Parameters</emphasis></para>
+
+<para><itemizedlist>
+<listitem>
+<para><computeroutput>_id</computeroutput> — Unique identifier string for this parser instance.</para>
+</listitem><listitem>
+<para><computeroutput>_file</computeroutput> — File path to the config file.</para>
+</listitem><listitem>
+<para><computeroutput>_extension</computeroutput> — Required file extension (default as: <computeroutput>.varpar</computeroutput>).</para>
+</listitem></itemizedlist>
+</para>
+
+<para><emphasis role="bold">Behavior</emphasis></para>
+
+<para><itemizedlist>
+<listitem>
+<para>Validates that <computeroutput>_file</computeroutput> exists.</para>
+</listitem><listitem>
+<para>Confirms that <computeroutput>_file</computeroutput> has the required <computeroutput>_extension</computeroutput>.</para>
+</listitem><listitem>
+<para>If any checks fail, the parser sets its internal error status and logs the issue to <computeroutput>std::cerr</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md8">
+<title><computeroutput>ParserReturn</computeroutput></title>
+<para>Struct returned by the parser after execution.</para>
+
+<para><literallayout><computeroutput>struct&#32;ParserReturn&#32;{
+&#32;&#32;&#32;&#32;std::map&lt;std::string,&#32;std::string&gt;&#32;config;&#32;&#32;//&#32;Parsed&#32;key&#32;value&#32;pairs
+&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;output;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Raw&#32;messages&#32;and&#32;errors
+&#32;&#32;&#32;&#32;bool&#32;success;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Parsing&#32;result&#32;flag
+};
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md10">
+<title><computeroutput>ParserStatus</computeroutput></title>
+<para>Represents the parser’s internal construction status.</para>
+
+<para><literallayout><computeroutput>struct&#32;ParserStatus&#32;{
+&#32;&#32;&#32;&#32;bool&#32;constructed;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Whether&#32;parser&#32;was&#32;constructed&#32;successfully
+&#32;&#32;&#32;&#32;std::string&#32;error;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Any&#32;error&#32;message&#32;generated&#32;during&#32;setup
+};
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md12">
+<title>Public Methods</title><section xml:id="_index_1autotoc_md13">
+<title><computeroutput>ParserReturn parse()</computeroutput></title>
+<para>Executes parsing and returns a structured result. If successful, <computeroutput>ParserReturn::success</computeroutput> is <computeroutput>true</computeroutput> and <computeroutput>config</computeroutput> contains parsed pairs.</para>
+</section>
+<section xml:id="_index_1autotoc_md14">
+<title><computeroutput>std::string getVal(const std::string&amp; _key) const</computeroutput></title>
+<para>Retrieves a parsed value by key. Returns an empty string if the key is missing.</para>
+</section>
+<section xml:id="_index_1autotoc_md15">
+<title><computeroutput>ParserStatus checkStatus() const</computeroutput></title>
+<para>Returns the internal construction status for validation before parsing.</para>
+</section>
+<section xml:id="_index_1autotoc_md16">
+<title><computeroutput>std::string getID() const</computeroutput></title>
+<para>Returns the parser’s unique identifier.</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md18">
+<title>Parsing Rules</title>
+<para><itemizedlist>
+<listitem>
+<para>Lines starting with <computeroutput>;</computeroutput> or empty lines are ignored.</para>
+</listitem><listitem>
+<para>Lines must follow the format: <literallayout><computeroutput>key&#32;=&#32;value
+</computeroutput></literallayout></para>
+</listitem><listitem>
+<para>Whitespace around keys and values is trimmed automatically.</para>
+</listitem><listitem>
+<para>Duplicate keys produce an immediate error, halting parsing.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md20">
+<title>Example File (<computeroutput>config.varpar</computeroutput>)</title>
+<para><literallayout><computeroutput>;&#32;Example&#32;config&#32;file
+hello_world&#32;=&#32;&quot;Bye...&quot;
+random&#32;=&#32;&quot;aa&quot;
+randomText&#32;=&#32;&quot;aab&quot;
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md22">
+<title>Example Usage</title>
+<para><literallayout><computeroutput>#include&#32;&lt;iostream&gt;
+#include&#32;&lt;varparse/VP_Parse.hpp&gt;
+
+int&#32;main()
+{
+&#32;&#32;&#32;&#32;vp::Parser&#32;parse(&quot;main-parse&quot;,&#32;&quot;/path/to/file.varpar&quot;);
+
+&#32;&#32;&#32;&#32;if&#32;(auto&#32;status&#32;=&#32;parse.checkStatus()&#32;;&#32;!status.constructed)
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;&quot;Failed&#32;to&#32;construct:&#32;&quot;&#32;&lt;&lt;&#32;parse.getID()&#32;&lt;&lt;&#32;&quot;\n&quot;;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;status.error&#32;&lt;&lt;&#32;&quot;\n&quot;;
+
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::exit(1);
+&#32;&#32;&#32;&#32;}
+
+&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;&quot;Output:\n&quot;;
+
+&#32;&#32;&#32;&#32;vp::ParserReturn&#32;parsed&#32;=&#32;parse.parse();
+
+&#32;&#32;&#32;&#32;for&#32;(const&#32;auto&#32;&amp;x&#32;:&#32;parsed.output)
+&#32;&#32;&#32;&#32;{&#32;std::cout&#32;&lt;&lt;&#32;x&#32;&lt;&lt;&#32;&quot;\n&quot;;&#32;}
+
+&#32;&#32;&#32;&#32;if&#32;(!parsed.success)
+&#32;&#32;&#32;&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;&quot;[&#32;!&#32;]&#32;Exiting&#32;due&#32;to&#32;an&#32;error\n&quot;;
+
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::exit(1);
+&#32;&#32;&#32;&#32;}
+
+&#32;&#32;&#32;&#32;for&#32;(const&#32;auto&#32;&amp;[k,&#32;v]&#32;:&#32;parsed.config)
+&#32;&#32;&#32;&#32;{&#32;std::cout&#32;&lt;&lt;&#32;k&#32;&lt;&lt;&#32;&quot;&#32;=&#32;&quot;&#32;&lt;&lt;&#32;v&#32;&lt;&lt;&#32;&quot;\n&quot;;&#32;}
+
+&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;&quot;Value&#32;of&#32;`hello_world`:&#32;&quot;&#32;&lt;&lt;&#32;parse.getVal(&quot;hello_world&quot;)&#32;&lt;&lt;&#32;&quot;\n&quot;;
+
+&#32;&#32;&#32;&#32;return&#32;0;
+}
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md24">
+<title>Error Example</title>
+<para>Given this invalid input:</para>
+
+<para><literallayout><computeroutput>hello_world&#32;=&#32;&quot;Bye...&quot;
+hello_world&#32;=&#32;&quot;Bye...a&quot;
+</computeroutput></literallayout></para>
+
+<para>Output:</para>
+
+<para><literallayout><computeroutput>ERR:&#32;LINE:&#32;2
+Duplicate&#32;member&#32;:&#32;hello_world&#32;=&#32;&quot;Bye...a&quot;
+</computeroutput></literallayout></para>
+
+<para>Due to the fact that there are two keys with the same name</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md26">
+<title>Supported Compilers</title>
+<para><itemizedlist>
+<listitem>
+<para>GCC &gt;= 7.0</para>
+</listitem><listitem>
+<para>Clang &gt;= 6.0</para>
+</listitem><listitem>
+<para>MSVC &gt;= 19.14 (Visual Studio 2017 15.7+)</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Requires <emphasis role="bold">C++17</emphasis> or newer </para>
+</section>
+</chapter>

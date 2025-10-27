@@ -1,0 +1,404 @@
+\doxysection{vp\+::Parser Class Reference}
+\hypertarget{classvp_1_1Parser}{}\label{classvp_1_1Parser}\index{vp::Parser@{vp::Parser}}
+
+
+{\ttfamily \#include $<$VP\+\_\+\+Parse.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvp_1_1Parser_a46d7a7260cc6704bd09a757ad8015fbf}{Parser}} (const std\+::string \&\+\_\+id, const std\+::string \&\+\_\+file, const std\+::string \&\+\_\+extension="{}.varpar"{})
+\begin{DoxyCompactList}\small\item\em Create the object, set errors if there are and set some configuration from the parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvp_1_1Parser_a9973f22c277eea48e1e562c314968bd0}{\texorpdfstring{$\sim$}{\string~}\+Parser}} ()
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structvp_1_1ParserStatus}{Parser\+Status}} \mbox{\hyperlink{classvp_1_1Parser_a27ffd0fb917c5adbefcfce4ebf001033}{check\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Get the constructed starts. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classvp_1_1Parser_ad5246aed9edc845750b0207198f851b1}{get\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Get the current object ID. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classvp_1_1Parser_a4dd4f68395787602c1536fb695081087}{get\+Val}} (const std\+::string \&\+\_\+key) const
+\begin{DoxyCompactList}\small\item\em Get value of \+\_\+key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structvp_1_1ParserReturn}{Parser\+Return}} \mbox{\hyperlink{classvp_1_1Parser_a765a0d08947ed756cd3bb75f03fd2909}{parse}} ()
+\begin{DoxyCompactList}\small\item\em Public API wrapper for {\ttfamily \doxylink{classvp_1_1Parser_a73b347e24a79937ef18dcd8fb91e4583}{Parser\+::\+\_\+\+\_\+parse()}} function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{structvp_1_1ParserReturn}{Parser\+Return}} \mbox{\hyperlink{classvp_1_1Parser_a73b347e24a79937ef18dcd8fb91e4583}{\+\_\+\+\_\+parse}} ()
+\begin{DoxyCompactList}\small\item\em Private member of the parse function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classvp_1_1Parser_a3a32b1c7ced72af69a654e2be9b05bab}{extension}}
+\item 
+std\+::string \mbox{\hyperlink{classvp_1_1Parser_a0dba0d4012b3aa1ad16d58a89c1597ce}{fpath}}
+\item 
+std\+::string \mbox{\hyperlink{classvp_1_1Parser_a984f4a6ce9f5578af0edd6878b1f583b}{id}}
+\item 
+\mbox{\hyperlink{structvp_1_1ParserReturn}{Parser\+Return}} \mbox{\hyperlink{classvp_1_1Parser_ab1ce18785fdc3d4014af72c8892a5456}{parse\+Ret}}
+\item 
+\mbox{\hyperlink{structvp_1_1ParserStatus}{Parser\+Status}} \mbox{\hyperlink{classvp_1_1Parser_ada8181e33a36ab0da77b9c8785ca9c8f}{status}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{VP__Parse_8hpp_source_l00035}{35}} of file \mbox{\hyperlink{VP__Parse_8hpp_source}{VP\+\_\+\+Parse.\+hpp}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classvp_1_1Parser_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvp_1_1Parser_a46d7a7260cc6704bd09a757ad8015fbf}\index{vp::Parser@{vp::Parser}!Parser@{Parser}}
+\index{Parser@{Parser}!vp::Parser@{vp::Parser}}
+\doxysubsubsection{\texorpdfstring{Parser()}{Parser()}}
+{\footnotesize\ttfamily \label{classvp_1_1Parser_a46d7a7260cc6704bd09a757ad8015fbf} 
+vp\+::\+Parser\+::\+Parser (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+id}{, }\item[{const std\+::string \&}]{\+\_\+file}{, }\item[{const std\+::string \&}]{\+\_\+extension}{ = {\ttfamily "{}.varpar"{}}}\end{DoxyParamCaption})}
+
+
+
+Create the object, set errors if there are and set some configuration from the parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & Set the ID of the object \\
+\hline
+{\em \+\_\+file} & Set the path of the file \\
+\hline
+{\em \+\_\+extension} & Set the file extension \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{VP__Parse_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{VP__Parse_8cpp_source}{VP\+\_\+\+Parse.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classvp_1_1Parser_a984f4a6ce9f5578af0edd6878b1f583b}{id}}(\_id),\ \mbox{\hyperlink{classvp_1_1Parser_a0dba0d4012b3aa1ad16d58a89c1597ce}{fpath}}(\_file),\ \mbox{\hyperlink{classvp_1_1Parser_a3a32b1c7ced72af69a654e2be9b05bab}{extension}}(\_extension)}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fs::exists(\_file))}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&error\ =\ \mbox{\hyperlink{VP__Parse_8cpp_adb99666973bac16ee2e3ae6bd5cfb242}{\_\_VP\_ERROR\_THROW\_DEFAULT\_MSG}}\ +\ \_file\ +\ \textcolor{stringliteral}{"{}\ :\ Does\ not\ exist"{}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ error\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classvp_1_1Parser_ada8181e33a36ab0da77b9c8785ca9c8f}{status}}.error\ =\ error;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classvp_1_1Parser_ada8181e33a36ab0da77b9c8785ca9c8f}{status}}.constructed\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&extensionSubstr\ =\ this-\/>\mbox{\hyperlink{classvp_1_1Parser_a0dba0d4012b3aa1ad16d58a89c1597ce}{fpath}}.substr(\mbox{\hyperlink{classvp_1_1Parser_a0dba0d4012b3aa1ad16d58a89c1597ce}{fpath}}.size()\ -\/\ \_extension.size());}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (extensionSubstr\ !=\ \_extension)}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&error\ =\ \mbox{\hyperlink{VP__Parse_8cpp_adb99666973bac16ee2e3ae6bd5cfb242}{\_\_VP\_ERROR\_THROW\_DEFAULT\_MSG}}\ +\ \_file\ +\ \textcolor{stringliteral}{"{}\ :\ Does\ not\ have\ the\ required\ file\ extension,\ required\ is:\ "{}}\ +\ \_extension;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ error\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classvp_1_1Parser_ada8181e33a36ab0da77b9c8785ca9c8f}{status}}.error\ =\ error;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classvp_1_1Parser_ada8181e33a36ab0da77b9c8785ca9c8f}{status}}.constructed\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classvp_1_1Parser_ada8181e33a36ab0da77b9c8785ca9c8f}{status}}.constructed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{VP__Parse_8cpp_source_l00011}{\+\_\+\+\_\+\+VP\+\_\+\+ERROR\+\_\+\+THROW\+\_\+\+DEFAULT\+\_\+\+MSG}}, \mbox{\hyperlink{VP__Parse_8hpp_source_l00044}{extension}}, \mbox{\hyperlink{VP__Parse_8hpp_source_l00039}{fpath}}, \mbox{\hyperlink{VP__Parse_8hpp_source_l00038}{id}}, and \mbox{\hyperlink{VP__Parse_8hpp_source_l00041}{status}}.
+
+\Hypertarget{classvp_1_1Parser_a9973f22c277eea48e1e562c314968bd0}\index{vp::Parser@{vp::Parser}!````~Parser@{\texorpdfstring{$\sim$}{\string~}Parser}}
+\index{````~Parser@{\texorpdfstring{$\sim$}{\string~}Parser}!vp::Parser@{vp::Parser}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Parser()}{\string~Parser()}}
+{\footnotesize\ttfamily \label{classvp_1_1Parser_a9973f22c277eea48e1e562c314968bd0} 
+vp\+::\+Parser\+::\texorpdfstring{$\sim$}{\string~}\+Parser (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Deconstructor. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{classvp_1_1Parser_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvp_1_1Parser_a73b347e24a79937ef18dcd8fb91e4583}\index{vp::Parser@{vp::Parser}!\_\_parse@{\_\_parse}}
+\index{\_\_parse@{\_\_parse}!vp::Parser@{vp::Parser}}
+\doxysubsubsection{\texorpdfstring{\_\_parse()}{\_\_parse()}}
+{\footnotesize\ttfamily \label{classvp_1_1Parser_a73b347e24a79937ef18dcd8fb91e4583} 
+\mbox{\hyperlink{structvp_1_1ParserReturn}{Parser\+Return}} vp\+::\+Parser\+::\+\_\+\+\_\+parse (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Private member of the parse function. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structvp_1_1ParserReturn}{Parser\+Return} Parsed information 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{VP__Parse_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{VP__Parse_8cpp_source}{VP\+\_\+\+Parse.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ std::vector<std::string>\ output;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::string>\ conf;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ std::ifstream\ file(this-\/>\mbox{\hyperlink{classvp_1_1Parser_a0dba0d4012b3aa1ad16d58a89c1597ce}{fpath}});}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ std::string\ line;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ ssize\_t\ lineNum\ =\ 0;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(file,\ line))}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ lineNum++;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Skip\ if\ comment\ or\ empty\ line}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line.empty()\ ||\ line[0]\ ==\ \textcolor{charliteral}{';'})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ std::istringstream\ iss(line);}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ key,\ val;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::getline(iss,\ key,\ \textcolor{charliteral}{'='})\ \&\&\ std::getline(iss,\ val))}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ key.erase(0,\ key.find\_first\_not\_of(\textcolor{stringliteral}{"{}\ \(\backslash\)t"{}}));}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ key.erase(key.find\_last\_not\_of(\textcolor{stringliteral}{"{}\ \(\backslash\)t"{}})\ +\ 1);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val.erase(0,\ val.find\_first\_not\_of(\textcolor{stringliteral}{"{}\ \(\backslash\)t"{}}));}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val.erase(val.find\_last\_not\_of(\textcolor{stringliteral}{"{}\ \(\backslash\)t"{}})\ +\ 1);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (conf.find(key)\ !=\ conf.end())}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ output.emplace\_back(std::string(\textcolor{stringliteral}{"{}ERR:\ LINE:\ "{}}\ +\ std::to\_string(lineNum)));}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ output.emplace\_back(\textcolor{stringliteral}{"{}Duplicate\ member\ :\ "{}}\ +\ line);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\ conf,\ output,\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ conf[key]\ =\ val;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ output.emplace\_back(std::string(\textcolor{stringliteral}{"{}ERR:\ LINE:\ "{}}\ +\ std::to\_string(lineNum)));}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ output.emplace\_back(std::string(\textcolor{stringliteral}{"{}No\ equality\ operator\ to\ set\ value\ for\ \`{}"{}}\ +\ line\ +\ \textcolor{stringliteral}{"{}\`{}"{}}));}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\ conf,\ output,\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\ conf,\ output,\ \textcolor{keyword}{true}\ \};}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{VP__Parse_8hpp_source_l00039}{fpath}}.
+
+
+
+Referenced by \mbox{\hyperlink{VP__Parse_8cpp_source_l00048}{parse()}}.
+
+\Hypertarget{classvp_1_1Parser_a27ffd0fb917c5adbefcfce4ebf001033}\index{vp::Parser@{vp::Parser}!checkStatus@{checkStatus}}
+\index{checkStatus@{checkStatus}!vp::Parser@{vp::Parser}}
+\doxysubsubsection{\texorpdfstring{checkStatus()}{checkStatus()}}
+{\footnotesize\ttfamily \label{classvp_1_1Parser_a27ffd0fb917c5adbefcfce4ebf001033} 
+\mbox{\hyperlink{structvp_1_1ParserStatus}{Parser\+Status}} vp\+::\+Parser\+::check\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the constructed starts. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structvp_1_1ParserStatus}{Parser\+Status} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{VP__Parse_8cpp_source_l00114}{114}} of file \mbox{\hyperlink{VP__Parse_8cpp_source}{VP\+\_\+\+Parse.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00115\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classvp_1_1Parser_ada8181e33a36ab0da77b9c8785ca9c8f}{status}};\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{VP__Parse_8hpp_source_l00041}{status}}.
+
+\Hypertarget{classvp_1_1Parser_ad5246aed9edc845750b0207198f851b1}\index{vp::Parser@{vp::Parser}!getID@{getID}}
+\index{getID@{getID}!vp::Parser@{vp::Parser}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily \label{classvp_1_1Parser_ad5246aed9edc845750b0207198f851b1} 
+std\+::string vp\+::\+Parser\+::get\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the current object ID. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string Current object ID 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{VP__Parse_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{VP__Parse_8cpp_source}{VP\+\_\+\+Parse.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classvp_1_1Parser_a984f4a6ce9f5578af0edd6878b1f583b}{id}};\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{VP__Parse_8hpp_source_l00038}{id}}.
+
+\Hypertarget{classvp_1_1Parser_a4dd4f68395787602c1536fb695081087}\index{vp::Parser@{vp::Parser}!getVal@{getVal}}
+\index{getVal@{getVal}!vp::Parser@{vp::Parser}}
+\doxysubsubsection{\texorpdfstring{getVal()}{getVal()}}
+{\footnotesize\ttfamily \label{classvp_1_1Parser_a4dd4f68395787602c1536fb695081087} 
+std\+::string vp\+::\+Parser\+::get\+Val (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+key}{}\end{DoxyParamCaption}) const}
+
+
+
+Get value of \+\_\+key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+key} & Key value to find \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string Return the value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{VP__Parse_8cpp_source_l00106}{106}} of file \mbox{\hyperlink{VP__Parse_8cpp_source}{VP\+\_\+\+Parse.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107\ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classvp_1_1Parser_ab1ce18785fdc3d4014af72c8892a5456}{parseRet}}.config.find(\_key)\ !=\ this-\/>parseRet.config.end())}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classvp_1_1Parser_ab1ce18785fdc3d4014af72c8892a5456}{parseRet}}.config.at(\_key);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{VP__Parse_8hpp_source_l00042}{parse\+Ret}}.
+
+\Hypertarget{classvp_1_1Parser_a765a0d08947ed756cd3bb75f03fd2909}\index{vp::Parser@{vp::Parser}!parse@{parse}}
+\index{parse@{parse}!vp::Parser@{vp::Parser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{classvp_1_1Parser_a765a0d08947ed756cd3bb75f03fd2909} 
+\mbox{\hyperlink{structvp_1_1ParserReturn}{Parser\+Return}} vp\+::\+Parser\+::parse (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Public API wrapper for {\ttfamily \doxylink{classvp_1_1Parser_a73b347e24a79937ef18dcd8fb91e4583}{Parser\+::\+\_\+\+\_\+parse()}} function. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structvp_1_1ParserReturn}{Parser\+Return} Parsed information 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{VP__Parse_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{VP__Parse_8cpp_source}{VP\+\_\+\+Parse.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classvp_1_1Parser_ab1ce18785fdc3d4014af72c8892a5456}{parseRet}}\ =\ this-\/>\mbox{\hyperlink{classvp_1_1Parser_a73b347e24a79937ef18dcd8fb91e4583}{\_\_parse}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classvp_1_1Parser_ab1ce18785fdc3d4014af72c8892a5456}{parseRet}};}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{VP__Parse_8cpp_source_l00055}{\+\_\+\+\_\+parse()}}, and \mbox{\hyperlink{VP__Parse_8hpp_source_l00042}{parse\+Ret}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classvp_1_1Parser_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvp_1_1Parser_a3a32b1c7ced72af69a654e2be9b05bab}\index{vp::Parser@{vp::Parser}!extension@{extension}}
+\index{extension@{extension}!vp::Parser@{vp::Parser}}
+\doxysubsubsection{\texorpdfstring{extension}{extension}}
+{\footnotesize\ttfamily \label{classvp_1_1Parser_a3a32b1c7ced72af69a654e2be9b05bab} 
+std\+::string vp\+::\+Parser\+::extension\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{VP__Parse_8hpp_source_l00044}{44}} of file \mbox{\hyperlink{VP__Parse_8hpp_source}{VP\+\_\+\+Parse.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{VP__Parse_8cpp_source_l00016}{Parser()}}.
+
+\Hypertarget{classvp_1_1Parser_a0dba0d4012b3aa1ad16d58a89c1597ce}\index{vp::Parser@{vp::Parser}!fpath@{fpath}}
+\index{fpath@{fpath}!vp::Parser@{vp::Parser}}
+\doxysubsubsection{\texorpdfstring{fpath}{fpath}}
+{\footnotesize\ttfamily \label{classvp_1_1Parser_a0dba0d4012b3aa1ad16d58a89c1597ce} 
+std\+::string vp\+::\+Parser\+::fpath\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{VP__Parse_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{VP__Parse_8hpp_source}{VP\+\_\+\+Parse.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{VP__Parse_8cpp_source_l00016}{Parser()}}, and \mbox{\hyperlink{VP__Parse_8cpp_source_l00055}{\+\_\+\+\_\+parse()}}.
+
+\Hypertarget{classvp_1_1Parser_a984f4a6ce9f5578af0edd6878b1f583b}\index{vp::Parser@{vp::Parser}!id@{id}}
+\index{id@{id}!vp::Parser@{vp::Parser}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{classvp_1_1Parser_a984f4a6ce9f5578af0edd6878b1f583b} 
+std\+::string vp\+::\+Parser\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{VP__Parse_8hpp_source_l00038}{38}} of file \mbox{\hyperlink{VP__Parse_8hpp_source}{VP\+\_\+\+Parse.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{VP__Parse_8cpp_source_l00016}{Parser()}}, and \mbox{\hyperlink{VP__Parse_8cpp_source_l00117}{get\+ID()}}.
+
+\Hypertarget{classvp_1_1Parser_ab1ce18785fdc3d4014af72c8892a5456}\index{vp::Parser@{vp::Parser}!parseRet@{parseRet}}
+\index{parseRet@{parseRet}!vp::Parser@{vp::Parser}}
+\doxysubsubsection{\texorpdfstring{parseRet}{parseRet}}
+{\footnotesize\ttfamily \label{classvp_1_1Parser_ab1ce18785fdc3d4014af72c8892a5456} 
+\mbox{\hyperlink{structvp_1_1ParserReturn}{Parser\+Return}} vp\+::\+Parser\+::parse\+Ret\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{VP__Parse_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{VP__Parse_8hpp_source}{VP\+\_\+\+Parse.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{VP__Parse_8cpp_source_l00106}{get\+Val()}}, and \mbox{\hyperlink{VP__Parse_8cpp_source_l00048}{parse()}}.
+
+\Hypertarget{classvp_1_1Parser_ada8181e33a36ab0da77b9c8785ca9c8f}\index{vp::Parser@{vp::Parser}!status@{status}}
+\index{status@{status}!vp::Parser@{vp::Parser}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \label{classvp_1_1Parser_ada8181e33a36ab0da77b9c8785ca9c8f} 
+\mbox{\hyperlink{structvp_1_1ParserStatus}{Parser\+Status}} vp\+::\+Parser\+::status\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{VP__Parse_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{VP__Parse_8hpp_source}{VP\+\_\+\+Parse.\+hpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{VP__Parse_8cpp_source_l00016}{Parser()}}, and \mbox{\hyperlink{VP__Parse_8cpp_source_l00114}{check\+Status()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/varparse.\+cpp/\mbox{\hyperlink{VP__Parse_8hpp}{VP\+\_\+\+Parse.\+hpp}}\item 
+src/\mbox{\hyperlink{VP__Parse_8cpp}{VP\+\_\+\+Parse.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classvp_1_1Parser" xml:lang="en-US">
+<title>vp::Parser Class Reference</title>
+<indexterm><primary>vp::Parser</primary></indexterm>
+<para>
+<computeroutput>#include &lt;VP_Parse.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classvp_1_1Parser_1a46d7a7260cc6704bd09a757ad8015fbf">Parser</link> (const std::string &amp;_id, const std::string &amp;_file, const std::string &amp;_extension=&quot;.varpar&quot;)</para>
+
+<para>Create the object, set errors if there are and set some configuration from the parameters. </para>
+</listitem>
+            <listitem><para><link linkend="_classvp_1_1Parser_1a9973f22c277eea48e1e562c314968bd0">~Parser</link> ()</para>
+
+<para>Deconstructor. </para>
+</listitem>
+            <listitem><para><link linkend="_structvp_1_1ParserStatus">ParserStatus</link> <link linkend="_classvp_1_1Parser_1a27ffd0fb917c5adbefcfce4ebf001033">checkStatus</link> () const</para>
+
+<para>Get the constructed starts. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classvp_1_1Parser_1ad5246aed9edc845750b0207198f851b1">getID</link> () const</para>
+
+<para>Get the current object ID. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classvp_1_1Parser_1a4dd4f68395787602c1536fb695081087">getVal</link> (const std::string &amp;_key) const</para>
+
+<para>Get value of _key. </para>
+</listitem>
+            <listitem><para><link linkend="_structvp_1_1ParserReturn">ParserReturn</link> <link linkend="_classvp_1_1Parser_1a765a0d08947ed756cd3bb75f03fd2909">parse</link> ()</para>
+
+<para>Public API wrapper for <computeroutput><link linkend="_classvp_1_1Parser_1a73b347e24a79937ef18dcd8fb91e4583">Parser::__parse()</link></computeroutput> function. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual <link linkend="_structvp_1_1ParserReturn">ParserReturn</link> <link linkend="_classvp_1_1Parser_1a73b347e24a79937ef18dcd8fb91e4583">__parse</link> ()</para>
+
+<para>Private member of the parse function. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_classvp_1_1Parser_1a3a32b1c7ced72af69a654e2be9b05bab">extension</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classvp_1_1Parser_1a0dba0d4012b3aa1ad16d58a89c1597ce">fpath</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classvp_1_1Parser_1a984f4a6ce9f5578af0edd6878b1f583b">id</link></para>
+</listitem>
+            <listitem><para><link linkend="_structvp_1_1ParserReturn">ParserReturn</link> <link linkend="_classvp_1_1Parser_1ab1ce18785fdc3d4014af72c8892a5456">parseRet</link></para>
+</listitem>
+            <listitem><para><link linkend="_structvp_1_1ParserStatus">ParserStatus</link> <link linkend="_classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f">status</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_VP__Parse_8hpp_source_1l00035">35</link> of file <link linkend="_VP__Parse_8hpp_source">VP_Parse.hpp</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classvp_1_1Parser_1a46d7a7260cc6704bd09a757ad8015fbf"/><section>
+    <title>Parser()</title>
+<indexterm><primary>Parser</primary><secondary>vp::Parser</secondary></indexterm>
+<indexterm><primary>vp::Parser</primary><secondary>Parser</secondary></indexterm>
+<para><computeroutput>vp::Parser::Parser (const std::string &amp; _id, const std::string &amp; _file, const std::string &amp; _extension = <computeroutput>&quot;.varpar&quot;</computeroutput>
+)</computeroutput></para><para>
+
+<para>Create the object, set errors if there are and set some configuration from the parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_id</entry><entry>
+<para>Set the ID of the object </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_file</entry><entry>
+<para>Set the path of the file </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_extension</entry><entry>
+<para>Set the file extension </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_VP__Parse_8cpp_source_1l00016">16</link> of file <link linkend="_VP__Parse_8cpp_source">VP_Parse.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<link linkend="_classvp_1_1Parser_1a984f4a6ce9f5578af0edd6878b1f583b">id</link>(_id),&#32;<link linkend="_classvp_1_1Parser_1a0dba0d4012b3aa1ad16d58a89c1597ce">fpath</link>(_file),&#32;<link linkend="_classvp_1_1Parser_1a3a32b1c7ced72af69a654e2be9b05bab">extension</link>(_extension)
+00018 &#32;&#32;&#32;&#32;{
+00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!fs::exists(_file))
+00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;error&#32;=&#32;<link linkend="_VP__Parse_8cpp_1adb99666973bac16ee2e3ae6bd5cfb242">__VP_ERROR_THROW_DEFAULT_MSG</link>&#32;+&#32;_file&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;:&#32;Does&#32;not&#32;exist&quot;</emphasis>;
+00022 
+00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;error&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+00024 
+00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f">status</link>.error&#32;=&#32;error;
+00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f">status</link>.constructed&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00027 
+00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00030 
+00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;extensionSubstr&#32;=&#32;this-&gt;<link linkend="_classvp_1_1Parser_1a0dba0d4012b3aa1ad16d58a89c1597ce">fpath</link>.substr(<link linkend="_classvp_1_1Parser_1a0dba0d4012b3aa1ad16d58a89c1597ce">fpath</link>.size()&#32;-&#32;_extension.size());
+00032 
+00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(extensionSubstr&#32;!=&#32;_extension)
+00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;error&#32;=&#32;<link linkend="_VP__Parse_8cpp_1adb99666973bac16ee2e3ae6bd5cfb242">__VP_ERROR_THROW_DEFAULT_MSG</link>&#32;+&#32;_file&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;:&#32;Does&#32;not&#32;have&#32;the&#32;required&#32;file&#32;extension,&#32;required&#32;is:&#32;&quot;</emphasis>&#32;+&#32;_extension;
+00036 
+00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;error&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+00038 
+00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f">status</link>.error&#32;=&#32;error;
+00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f">status</link>.constructed&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00044 
+00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f">status</link>.constructed&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+00046 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_VP__Parse_8cpp_source_1l00011">__VP_ERROR_THROW_DEFAULT_MSG</link>, <link linkend="_VP__Parse_8hpp_source_1l00044">extension</link>, <link linkend="_VP__Parse_8hpp_source_1l00039">fpath</link>, <link linkend="_VP__Parse_8hpp_source_1l00038">id</link>, and <link linkend="_VP__Parse_8hpp_source_1l00041">status</link>.</para>
+</section>
+<anchor xml:id="_classvp_1_1Parser_1a9973f22c277eea48e1e562c314968bd0"/><section>
+    <title>~Parser()</title>
+<indexterm><primary>~Parser</primary><secondary>vp::Parser</secondary></indexterm>
+<indexterm><primary>vp::Parser</primary><secondary>~Parser</secondary></indexterm>
+<para><computeroutput>vp::Parser::~Parser ( )</computeroutput></para><para>
+
+<para>Deconstructor. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classvp_1_1Parser_1a73b347e24a79937ef18dcd8fb91e4583"/><section>
+    <title>__parse()</title>
+<indexterm><primary>__parse</primary><secondary>vp::Parser</secondary></indexterm>
+<indexterm><primary>vp::Parser</primary><secondary>__parse</secondary></indexterm>
+<para><computeroutput><link linkend="_structvp_1_1ParserReturn">ParserReturn</link> vp::Parser::__parse ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Private member of the parse function. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_structvp_1_1ParserReturn">ParserReturn</link> Parsed information </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_VP__Parse_8cpp_source_1l00055">55</link> of file <link linkend="_VP__Parse_8cpp_source">VP_Parse.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00056 &#32;&#32;&#32;&#32;{
+00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;output;
+00058 
+00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;std::string,&#32;std::string&gt;&#32;conf;
+00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::ifstream&#32;file(this-&gt;<link linkend="_classvp_1_1Parser_1a0dba0d4012b3aa1ad16d58a89c1597ce">fpath</link>);
+00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;line;
+00062 
+00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ssize_t&#32;lineNum&#32;=&#32;0;
+00064 
+00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(std::getline(file,&#32;line))
+00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lineNum++;
+00068 
+00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Skip&#32;if&#32;comment&#32;or&#32;empty&#32;line</emphasis>
+00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(line.empty()&#32;||&#32;line[0]&#32;==&#32;<emphasis role="charliteral">&apos;;&apos;</emphasis>)&#32;<emphasis role="keywordflow">continue</emphasis>;
+00071 
+00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::istringstream&#32;iss(line);
+00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;key,&#32;val;
+00074 
+00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(std::getline(iss,&#32;key,&#32;<emphasis role="charliteral">&apos;=&apos;</emphasis>)&#32;&amp;&amp;&#32;std::getline(iss,&#32;val))
+00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;key.erase(0,&#32;key.find_first_not_of(<emphasis role="stringliteral">&quot;&#32;\t&quot;</emphasis>));
+00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;key.erase(key.find_last_not_of(<emphasis role="stringliteral">&quot;&#32;\t&quot;</emphasis>)&#32;+&#32;1);
+00079 
+00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;val.erase(0,&#32;val.find_first_not_of(<emphasis role="stringliteral">&quot;&#32;\t&quot;</emphasis>));
+00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;val.erase(val.find_last_not_of(<emphasis role="stringliteral">&quot;&#32;\t&quot;</emphasis>)&#32;+&#32;1);
+00082 
+00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(conf.find(key)&#32;!=&#32;conf.end())
+00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;output.emplace_back(std::string(<emphasis role="stringliteral">&quot;ERR:&#32;LINE:&#32;&quot;</emphasis>&#32;+&#32;std::to_string(lineNum)));
+00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;output.emplace_back(<emphasis role="stringliteral">&quot;Duplicate&#32;member&#32;:&#32;&quot;</emphasis>&#32;+&#32;line);
+00087 
+00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{&#32;conf,&#32;output,&#32;<emphasis role="keyword">false</emphasis>&#32;};
+00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00090 
+00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;conf[key]&#32;=&#32;val;
+00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00093 
+00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;output.emplace_back(std::string(<emphasis role="stringliteral">&quot;ERR:&#32;LINE:&#32;&quot;</emphasis>&#32;+&#32;std::to_string(lineNum)));
+00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;output.emplace_back(std::string(<emphasis role="stringliteral">&quot;No&#32;equality&#32;operator&#32;to&#32;set&#32;value&#32;for&#32;`&quot;</emphasis>&#32;+&#32;line&#32;+&#32;<emphasis role="stringliteral">&quot;`&quot;</emphasis>));
+00098 
+00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{&#32;conf,&#32;output,&#32;<emphasis role="keyword">false</emphasis>&#32;};
+00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00102 
+00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{&#32;conf,&#32;output,&#32;<emphasis role="keyword">true</emphasis>&#32;};
+00104 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_VP__Parse_8hpp_source_1l00039">fpath</link>.</para>
+<para>
+Referenced by <link linkend="_VP__Parse_8cpp_source_1l00048">parse()</link>.</para>
+</section>
+<anchor xml:id="_classvp_1_1Parser_1a27ffd0fb917c5adbefcfce4ebf001033"/><section>
+    <title>checkStatus()</title>
+<indexterm><primary>checkStatus</primary><secondary>vp::Parser</secondary></indexterm>
+<indexterm><primary>vp::Parser</primary><secondary>checkStatus</secondary></indexterm>
+<para><computeroutput><link linkend="_structvp_1_1ParserStatus">ParserStatus</link> vp::Parser::checkStatus ( ) const</computeroutput></para><para>
+
+<para>Get the constructed starts. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_structvp_1_1ParserStatus">ParserStatus</link> </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_VP__Parse_8cpp_source_1l00114">114</link> of file <link linkend="_VP__Parse_8cpp_source">VP_Parse.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00115 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f">status</link>;&#32;}
+</programlisting><para>
+References <link linkend="_VP__Parse_8hpp_source_1l00041">status</link>.</para>
+</section>
+<anchor xml:id="_classvp_1_1Parser_1ad5246aed9edc845750b0207198f851b1"/><section>
+    <title>getID()</title>
+<indexterm><primary>getID</primary><secondary>vp::Parser</secondary></indexterm>
+<indexterm><primary>vp::Parser</primary><secondary>getID</secondary></indexterm>
+<para><computeroutput>std::string vp::Parser::getID ( ) const</computeroutput></para><para>
+
+<para>Get the current object ID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>std::string Current object ID </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_VP__Parse_8cpp_source_1l00117">117</link> of file <link linkend="_VP__Parse_8cpp_source">VP_Parse.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00118 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classvp_1_1Parser_1a984f4a6ce9f5578af0edd6878b1f583b">id</link>;&#32;}
+</programlisting><para>
+References <link linkend="_VP__Parse_8hpp_source_1l00038">id</link>.</para>
+</section>
+<anchor xml:id="_classvp_1_1Parser_1a4dd4f68395787602c1536fb695081087"/><section>
+    <title>getVal()</title>
+<indexterm><primary>getVal</primary><secondary>vp::Parser</secondary></indexterm>
+<indexterm><primary>vp::Parser</primary><secondary>getVal</secondary></indexterm>
+<para><computeroutput>std::string vp::Parser::getVal (const std::string &amp; _key) const</computeroutput></para><para>
+
+<para>Get value of _key. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_key</entry><entry>
+<para>Key value to find </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>std::string Return the value </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_VP__Parse_8cpp_source_1l00106">106</link> of file <link linkend="_VP__Parse_8cpp_source">VP_Parse.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00107 &#32;&#32;&#32;&#32;{
+00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(this-&gt;<link linkend="_classvp_1_1Parser_1ab1ce18785fdc3d4014af72c8892a5456">parseRet</link>.config.find(_key)&#32;!=&#32;this-&gt;parseRet.config.end())
+00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classvp_1_1Parser_1ab1ce18785fdc3d4014af72c8892a5456">parseRet</link>.config.at(_key);
+00110 
+00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+00112 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_VP__Parse_8hpp_source_1l00042">parseRet</link>.</para>
+</section>
+<anchor xml:id="_classvp_1_1Parser_1a765a0d08947ed756cd3bb75f03fd2909"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>vp::Parser</secondary></indexterm>
+<indexterm><primary>vp::Parser</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput><link linkend="_structvp_1_1ParserReturn">ParserReturn</link> vp::Parser::parse ( )</computeroutput></para><para>
+
+<para>Public API wrapper for <computeroutput><link linkend="_classvp_1_1Parser_1a73b347e24a79937ef18dcd8fb91e4583">Parser::__parse()</link></computeroutput> function. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_structvp_1_1ParserReturn">ParserReturn</link> Parsed information </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_VP__Parse_8cpp_source_1l00048">48</link> of file <link linkend="_VP__Parse_8cpp_source">VP_Parse.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00049 &#32;&#32;&#32;&#32;{
+00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classvp_1_1Parser_1ab1ce18785fdc3d4014af72c8892a5456">parseRet</link>&#32;=&#32;this-&gt;<link linkend="_classvp_1_1Parser_1a73b347e24a79937ef18dcd8fb91e4583">__parse</link>();
+00051 
+00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classvp_1_1Parser_1ab1ce18785fdc3d4014af72c8892a5456">parseRet</link>;
+00053 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_VP__Parse_8cpp_source_1l00055">__parse()</link>, and <link linkend="_VP__Parse_8hpp_source_1l00042">parseRet</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classvp_1_1Parser_1a3a32b1c7ced72af69a654e2be9b05bab"/><section>
+    <title>extension</title>
+<indexterm><primary>extension</primary><secondary>vp::Parser</secondary></indexterm>
+<indexterm><primary>vp::Parser</primary><secondary>extension</secondary></indexterm>
+<para><computeroutput>std::string vp::Parser::extension<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_VP__Parse_8hpp_source_1l00044">44</link> of file <link linkend="_VP__Parse_8hpp_source">VP_Parse.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_VP__Parse_8cpp_source_1l00016">Parser()</link>.</para>
+</section>
+<anchor xml:id="_classvp_1_1Parser_1a0dba0d4012b3aa1ad16d58a89c1597ce"/><section>
+    <title>fpath</title>
+<indexterm><primary>fpath</primary><secondary>vp::Parser</secondary></indexterm>
+<indexterm><primary>vp::Parser</primary><secondary>fpath</secondary></indexterm>
+<para><computeroutput>std::string vp::Parser::fpath<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_VP__Parse_8hpp_source_1l00039">39</link> of file <link linkend="_VP__Parse_8hpp_source">VP_Parse.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_VP__Parse_8cpp_source_1l00016">Parser()</link>, and <link linkend="_VP__Parse_8cpp_source_1l00055">__parse()</link>.</para>
+</section>
+<anchor xml:id="_classvp_1_1Parser_1a984f4a6ce9f5578af0edd6878b1f583b"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>vp::Parser</secondary></indexterm>
+<indexterm><primary>vp::Parser</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>std::string vp::Parser::id<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_VP__Parse_8hpp_source_1l00038">38</link> of file <link linkend="_VP__Parse_8hpp_source">VP_Parse.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_VP__Parse_8cpp_source_1l00016">Parser()</link>, and <link linkend="_VP__Parse_8cpp_source_1l00117">getID()</link>.</para>
+</section>
+<anchor xml:id="_classvp_1_1Parser_1ab1ce18785fdc3d4014af72c8892a5456"/><section>
+    <title>parseRet</title>
+<indexterm><primary>parseRet</primary><secondary>vp::Parser</secondary></indexterm>
+<indexterm><primary>vp::Parser</primary><secondary>parseRet</secondary></indexterm>
+<para><computeroutput><link linkend="_structvp_1_1ParserReturn">ParserReturn</link> vp::Parser::parseRet<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_VP__Parse_8hpp_source_1l00042">42</link> of file <link linkend="_VP__Parse_8hpp_source">VP_Parse.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_VP__Parse_8cpp_source_1l00106">getVal()</link>, and <link linkend="_VP__Parse_8cpp_source_1l00048">parse()</link>.</para>
+</section>
+<anchor xml:id="_classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f"/><section>
+    <title>status</title>
+<indexterm><primary>status</primary><secondary>vp::Parser</secondary></indexterm>
+<indexterm><primary>vp::Parser</primary><secondary>status</secondary></indexterm>
+<para><computeroutput><link linkend="_structvp_1_1ParserStatus">ParserStatus</link> vp::Parser::status<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_VP__Parse_8hpp_source_1l00041">41</link> of file <link linkend="_VP__Parse_8hpp_source">VP_Parse.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_VP__Parse_8cpp_source_1l00016">Parser()</link>, and <link linkend="_VP__Parse_8cpp_source_1l00114">checkStatus()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+inc/varparse.cpp/<link linkend="_VP__Parse_8hpp">VP_Parse.hpp</link>src/<link linkend="_VP__Parse_8cpp">VP_Parse.cpp</link></section>
+</section>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_VP__Parse_8hpp" xml:lang="en-US">
+<title>inc/varparse.cpp/VP_Parse.hpp File Reference</title>
+<indexterm><primary>inc/varparse.cpp/VP_Parse.hpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;VPpredefines.hpp&quot;<?linebreak?>#include &lt;string&gt;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &lt;map&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classvp_1_1Parser">vp::Parser</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structvp_1_1ParserReturn">vp::ParserReturn</link></para>
+
+<para>Returned parser information This includes the configuration, output and success of the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput>. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structvp_1_1ParserStatus">vp::ParserStatus</link></para>
+
+<para>Set the error and if the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput> class was constructed. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacevp">vp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct vp::ParserReturn <link linkend="_namespacevp_1a7b57f4f0e8a0b3826aae9c210d9aff9e">vp::ParserReturn</link></para>
+
+<para>Returned parser information This includes the configuration, output and success of the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput>. </para>
+</listitem>
+            <listitem><para>typedef struct vp::ParserStatus <link linkend="_namespacevp_1a03bdbb3011959e2cb9b0256ae4931c3f">vp::ParserStatus</link></para>
+
+<para>Set the error and if the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput> class was constructed. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

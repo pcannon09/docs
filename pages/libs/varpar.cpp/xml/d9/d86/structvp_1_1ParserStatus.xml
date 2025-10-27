@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="d9/d86/structvp_1_1ParserStatus" kind="struct" language="C++" prot="public">
+    <compoundname>vp::ParserStatus</compoundname>
+    <includes refid="d9/d91/VP__Parse_8hpp" local="no">VP_Parse.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d9/d86/structvp_1_1ParserStatus_1a6c74cdf7a1ba1706ea10f90f1c180195" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vp::ParserStatus::constructed</definition>
+        <argsstring></argsstring>
+        <name>constructed</name>
+        <qualifiedname>vp::ParserStatus::constructed</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="19" column="6" bodyfile="inc/varparse.cpp/VP_Parse.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d86/structvp_1_1ParserStatus_1a4fca833cc9bbee7722793c48961dfac3" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string vp::ParserStatus::error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <qualifiedname>vp::ParserStatus::error</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="17" column="13" bodyfile="inc/varparse.cpp/VP_Parse.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Set the error and if the <computeroutput><ref refid="de/d69/classvp_1_1Parser" kindref="compound">Parser</ref></computeroutput> class was constructed. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vp::ParserStatus</label>
+        <link refid="d9/d86/structvp_1_1ParserStatus"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>error</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="inc/varparse.cpp/VP_Parse.hpp" line="15" column="1" bodyfile="inc/varparse.cpp/VP_Parse.hpp" bodystart="16" bodyend="20"/>
+    <listofallmembers>
+      <member refid="d9/d86/structvp_1_1ParserStatus_1a6c74cdf7a1ba1706ea10f90f1c180195" prot="public" virt="non-virtual"><scope>vp::ParserStatus</scope><name>constructed</name></member>
+      <member refid="d9/d86/structvp_1_1ParserStatus_1a4fca833cc9bbee7722793c48961dfac3" prot="public" virt="non-virtual"><scope>vp::ParserStatus</scope><name>error</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

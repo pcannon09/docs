@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_VPpredefines_8hpp_source" xml:lang="en-US">
+<title>VPpredefines.hpp</title>
+<indexterm><primary>inc/varparse.cpp/VPpredefines.hpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_VPpredefines_8hpp_source_1l00001"/>00001 <emphasis role="comment">/**</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00002"/>00002 <emphasis role="comment">&#32;*&#32;VPpredefines.h&#32;-&#32;pcannonProjectStandards</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00003"/>00003 <emphasis role="comment">&#32;*&#32;Predefines&#32;for&#32;C&#32;and&#32;C++&#32;projects</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00004"/>00004 <emphasis role="comment">&#32;*&#32;STD&#32;Information:&#32;20250723&#32;-&#32;1.0S</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00005"/>00005 <emphasis role="comment">&#32;*&#32;NOTES:</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00006"/>00006 <emphasis role="comment">&#32;*&#32;&#32;Renamed&#32;to&#32;`VPpredefines.hpp`</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00007"/>00007 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00008"/>00008 
+<anchor xml:id="_VPpredefines_8hpp_source_1l00009"/>00009 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00010"/>00010 
+<anchor xml:id="_VPpredefines_8hpp_source_1l00011"/>00011 <emphasis role="comment">//&#32;Project&#32;setup</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00012"/><link linkend="_VPpredefines_8hpp_1a15dbb22bf5159c4980c6dd33c60ac822">00012</link> <emphasis role="preprocessor">#define&#32;VP_DEFAULT_CPP_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;201703L</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00013"/>00013 
+<anchor xml:id="_VPpredefines_8hpp_source_1l00014"/>00014 <emphasis role="comment">//&#32;Versioning</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00015"/><link linkend="_VPpredefines_8hpp_1a0d04e082465a6e340ebb6c5ada136014">00015</link> <emphasis role="preprocessor">#define&#32;VP_VERSION_MAJOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00016"/><link linkend="_VPpredefines_8hpp_1a1019f18e2f8142ddb746e04c1e7c96d0">00016</link> <emphasis role="preprocessor">#define&#32;VP_VERSION_MINOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00017"/><link linkend="_VPpredefines_8hpp_1add0085d50a19df118f761bd30ff31915">00017</link> <emphasis role="preprocessor">#define&#32;VP_VERSION_PATCH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00018"/>00018 
+<anchor xml:id="_VPpredefines_8hpp_source_1l00019"/><link linkend="_VPpredefines_8hpp_1adba9e3334a27d813053e1a2fdc8aa742">00019</link> <emphasis role="preprocessor">#define&#32;VP_VERSION_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;20251027</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00020"/>00020 
+<anchor xml:id="_VPpredefines_8hpp_source_1l00021"/>00021 <emphasis role="comment">//&#32;Version&#32;states:</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00022"/>00022 <emphasis role="comment">//&#32;*&#32;dev</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00023"/>00023 <emphasis role="comment">//&#32;*&#32;beta</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00024"/>00024 <emphasis role="comment">//&#32;*&#32;build</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00025"/><link linkend="_VPpredefines_8hpp_1a3426791e9b2549b2ac97b36308bffac6">00025</link> <emphasis role="preprocessor">#define&#32;VP_VERSION_STATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;build&quot;</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00026"/>00026 
+<anchor xml:id="_VPpredefines_8hpp_source_1l00027"/><link linkend="_VPpredefines_8hpp_1ab6c7ba376b4202fd3238af9ae909c1e7">00027</link> <emphasis role="preprocessor">#define&#32;VP_VERSION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((VP_VERSION_MAJOR&lt;&lt;16)|(VP_VERSION_MINOR&lt;&lt;8)|(VP_VERSION_PATCH)|(VP_VERSION_STATE&#32;&lt;&lt;&#32;24))</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00028"/>00028 
+<anchor xml:id="_VPpredefines_8hpp_source_1l00029"/><link linkend="_VPpredefines_8hpp_1a8b7a6e9c413f7dbde2c61703af00b44c">00029</link> <emphasis role="preprocessor">#define&#32;VP_VERSION_CHECK(VP_VERSION_MAJOR,&#32;VP_VERSION_MINOR,&#32;VP_VERSION_PATCH,&#32;VP_VERSION_STATE)&#32;\</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00030"/>00030 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(((VP_VERSION_MAJOR)&lt;&lt;16)|((VP_VERSION_MINOR)&lt;&lt;8)|(VP_VERSION_PATCH)|((VP_VERSION_STATE)&#32;&lt;&lt;&#32;24))</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00031"/>00031 
+<anchor xml:id="_VPpredefines_8hpp_source_1l00032"/>00032 <emphasis role="comment">//&#32;Macro&#32;utils</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00033"/><link linkend="_VPpredefines_8hpp_1a6741c6a947dfa9b4dd9c6cfbee6c3182">00033</link> <emphasis role="preprocessor">#define&#32;VP_STRINGIFY(x)&#32;#x</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00034"/><link linkend="_VPpredefines_8hpp_1a8752acd8cfec08e8d3f76f9fcd6f0354">00034</link> <emphasis role="preprocessor">#define&#32;VP_TOSTRING(x)&#32;VP_STRINGIFY(x)</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00035"/>00035 
+<anchor xml:id="_VPpredefines_8hpp_source_1l00036"/>00036 <emphasis role="preprocessor">#ifndef&#32;VP_DEV</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00037"/><link linkend="_VPpredefines_8hpp_1a99240917d1d719ed5b348a0b9e45ec1a">00037</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;VP_DEV&#32;true</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00038"/>00038 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00039"/>00039 
+<anchor xml:id="_VPpredefines_8hpp_source_1l00040"/>00040 <emphasis role="preprocessor">#ifdef&#32;WIN32</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00041"/>00041 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;VP_OS_WIN32</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00042"/>00042 <emphasis role="preprocessor">#elif&#32;defined(__APPLE__)&#32;||&#32;defined(__MACH__)&#32;||&#32;defined(Macintosh)</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00043"/>00043 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;VP_OS_MACOS</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00044"/>00044 <emphasis role="preprocessor">#elif&#32;defined(__linux__)&#32;||&#32;defined(__unix)&#32;||&#32;defined(__unix__)</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00045"/>00045 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;VP_OS_UNIX_LINUX</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00046"/>00046 <emphasis role="preprocessor">#elif&#32;defined(__FreeBSD__)</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00047"/>00047 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;VP_OS_FREEBSD</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00048"/>00048 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00049"/>00049 <emphasis role="preprocessor">#&#32;&#32;&#32;error&#32;&quot;Current&#32;platform&#32;is&#32;not&#32;supported&quot;</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00050"/>00050 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;defined(WIN32)&#32;//&#32;Platform&#32;check</emphasis>
+<anchor xml:id="_VPpredefines_8hpp_source_1l00051"/>00051 
+</programlisting></section>

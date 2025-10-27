@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>VarPar - Variable Parser</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/></para>
+<para><computeroutput>VarPar</computeroutput> (Variable Parser) is a extremely lightweight <bold>C++17+ configuration file parser</bold> that provides simple, strict key value parsing for flat text configuration files</para>
+<para><hruler/>
+</para>
+<sect1 id="index_1autotoc_md2">
+<title>Features</title><para><itemizedlist>
+<listitem><para><bold>Strict Parsing:</bold> Ensures each key is uniquely defined and every line contains a valid <computeroutput>key = value</computeroutput> pair</para>
+</listitem><listitem><para><bold>Automatic Validation:</bold> Checks file existence and verifies the correct file extension before parsing</para>
+</listitem><listitem><para><bold>Informative Error Handling:</bold> Reports precise error messages and line numbers for duplicate or malformed entries</para>
+</listitem><listitem><para><bold>Minimal Dependencies:</bold> Uses only standard C++17 libraries</para>
+</listitem><listitem><para><bold>Lightweight Runtime Status:</bold> Parser state (constructed / error) is tracked through <computeroutput>ParserStatus</computeroutput> for safe checks</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md4">
+<title>Core Components</title><sect2 id="index_1autotoc_md5">
+<title><computeroutput>vp::Parser</computeroutput></title><para>Main parsing class responsible for reading and interpreting configuration files.</para>
+<sect3 id="index_1autotoc_md6">
+<title>Constructor</title><para><programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="de/d69/classvp_1_1Parser" kindref="compound">vp::Parser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>_id,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>_file,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>_extension<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;.varpar&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para><bold>Parameters</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>_id</computeroutput> — Unique identifier string for this parser instance.</para>
+</listitem><listitem><para><computeroutput>_file</computeroutput> — File path to the config file.</para>
+</listitem><listitem><para><computeroutput>_extension</computeroutput> — Required file extension (default as: <computeroutput>.varpar</computeroutput>).</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Behavior</bold></para>
+<para><itemizedlist>
+<listitem><para>Validates that <computeroutput>_file</computeroutput> exists.</para>
+</listitem><listitem><para>Confirms that <computeroutput>_file</computeroutput> has the required <computeroutput>_extension</computeroutput>.</para>
+</listitem><listitem><para>If any checks fail, the parser sets its internal error status and logs the issue to <computeroutput>std::cerr</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md8">
+<title><computeroutput>ParserReturn</computeroutput></title><para>Struct returned by the parser after execution.</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d3/d0a/namespacevp_1a7b57f4f0e8a0b3826aae9c210d9aff9e" kindref="member">ParserReturn</ref><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::string&gt;<sp/>config;<sp/><sp/></highlight><highlight class="comment">//<sp/>Parsed<sp/>key<sp/>value<sp/>pairs</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>output;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Raw<sp/>messages<sp/>and<sp/>errors</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>success;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parsing<sp/>result<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md10">
+<title><computeroutput>ParserStatus</computeroutput></title><para>Represents the parser’s internal construction status.</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d3/d0a/namespacevp_1a03bdbb3011959e2cb9b0256ae4931c3f" kindref="member">ParserStatus</ref><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>constructed;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Whether<sp/>parser<sp/>was<sp/>constructed<sp/>successfully</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>error;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Any<sp/>error<sp/>message<sp/>generated<sp/>during<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md12">
+<title>Public Methods</title><sect3 id="index_1autotoc_md13">
+<title><computeroutput>ParserReturn parse()</computeroutput></title><para>Executes parsing and returns a structured result. If successful, <computeroutput>ParserReturn::success</computeroutput> is <computeroutput>true</computeroutput> and <computeroutput>config</computeroutput> contains parsed pairs.</para>
+</sect3>
+<sect3 id="index_1autotoc_md14">
+<title><computeroutput>std::string getVal(const std::string&amp; _key) const</computeroutput></title><para>Retrieves a parsed value by key. Returns an empty string if the key is missing.</para>
+</sect3>
+<sect3 id="index_1autotoc_md15">
+<title><computeroutput>ParserStatus checkStatus() const</computeroutput></title><para>Returns the internal construction status for validation before parsing.</para>
+</sect3>
+<sect3 id="index_1autotoc_md16">
+<title><computeroutput>std::string getID() const</computeroutput></title><para>Returns the parser’s unique identifier.</para>
+<para><hruler/>
+</para>
+</sect3>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md18">
+<title>Parsing Rules</title><para><itemizedlist>
+<listitem><para>Lines starting with <computeroutput>;</computeroutput> or empty lines are ignored.</para>
+</listitem><listitem><para>Lines must follow the format: <programlisting><codeline><highlight class="normal">key<sp/>=<sp/>value</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>Whitespace around keys and values is trimmed automatically.</para>
+</listitem><listitem><para>Duplicate keys produce an immediate error, halting parsing.</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md20">
+<title>Example File (<computeroutput>config.varpar</computeroutput>)</title><para><programlisting filename=".ini"><codeline><highlight class="normal">;<sp/>Example<sp/>config<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">hello_world<sp/>=<sp/>&quot;Bye...&quot;</highlight></codeline>
+<codeline><highlight class="normal">random<sp/>=<sp/>&quot;aa&quot;</highlight></codeline>
+<codeline><highlight class="normal">randomText<sp/>=<sp/>&quot;aab&quot;</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md22">
+<title>Example Usage</title><para><programlisting filename=".cpp"><codeline><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;varparse/VP_Parse.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d69/classvp_1_1Parser" kindref="compound">vp::Parser</ref><sp/>parse(</highlight><highlight class="stringliteral">&quot;main-parse&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/path/to/file.varpar&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>parse.checkStatus()<sp/>;<sp/>!status.constructed)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>construct:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>parse.getID()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/>status.error<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::exit(1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Output:\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/d4d/structvp_1_1ParserReturn" kindref="compound">vp::ParserReturn</ref><sp/>parsed<sp/>=<sp/>parse.parse();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x<sp/>:<sp/>parsed.<ref refid="d7/d4d/structvp_1_1ParserReturn_1a267f1f83e2befc4d2c5504a7e64921ce" kindref="member">output</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/>x<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!parsed.<ref refid="d7/d4d/structvp_1_1ParserReturn_1af7053f12cfba17ae795d246fcb7f33d3" kindref="member">success</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;[<sp/>!<sp/>]<sp/>Exiting<sp/>due<sp/>to<sp/>an<sp/>error\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::exit(1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;[k,<sp/>v]<sp/>:<sp/>parsed.<ref refid="d7/d4d/structvp_1_1ParserReturn_1a5b16b9a13d4b625f74f04b39aa8cb5e7" kindref="member">config</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/>k<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>v<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Value<sp/>of<sp/>`hello_world`:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>parse.getVal(</highlight><highlight class="stringliteral">&quot;hello_world&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md24">
+<title>Error Example</title><para>Given this invalid input:</para>
+<para><programlisting filename=".ini"><codeline><highlight class="normal">hello_world<sp/>=<sp/>&quot;Bye...&quot;</highlight></codeline>
+<codeline><highlight class="normal">hello_world<sp/>=<sp/>&quot;Bye...a&quot;</highlight></codeline>
+</programlisting></para>
+<para>Output:</para>
+<para><programlisting><codeline><highlight class="normal">ERR:<sp/>LINE:<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">Duplicate<sp/>member<sp/>:<sp/>hello_world<sp/>=<sp/>&quot;Bye...a&quot;</highlight></codeline>
+</programlisting></para>
+<para>Due to the fact that there are two keys with the same name</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md26">
+<title>Supported Compilers</title><para><itemizedlist>
+<listitem><para>GCC &gt;= 7.0</para>
+</listitem><listitem><para>Clang &gt;= 6.0</para>
+</listitem><listitem><para>MSVC &gt;= 19.14 (Visual Studio 2017 15.7+)</para>
+</listitem></itemizedlist>
+</para>
+<para>Requires <bold>C++17</bold> or newer </para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

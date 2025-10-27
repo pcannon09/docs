@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_VPpredefines_8hpp" xml:lang="en-US">
+<title>inc/varparse.cpp/VPpredefines.hpp File Reference</title>
+<indexterm><primary>inc/varparse.cpp/VPpredefines.hpp</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_VPpredefines_8hpp_1a15dbb22bf5159c4980c6dd33c60ac822">VP_DEFAULT_CPP_STD</link>&#160;&#160;&#160;201703L</para>
+
+<para>VPpredefines.h - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1.0S NOTES: Renamed to <computeroutput><link linkend="_VPpredefines_8hpp">VPpredefines.hpp</link></computeroutput>. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_VPpredefines_8hpp_1a99240917d1d719ed5b348a0b9e45ec1a">VP_DEV</link>&#160;&#160;&#160;true</para>
+</listitem>
+            <listitem><para>#define <link linkend="_VPpredefines_8hpp_1a6741c6a947dfa9b4dd9c6cfbee6c3182">VP_STRINGIFY</link>(x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_VPpredefines_8hpp_1a8752acd8cfec08e8d3f76f9fcd6f0354">VP_TOSTRING</link>(x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_VPpredefines_8hpp_1ab6c7ba376b4202fd3238af9ae909c1e7">VP_VERSION</link>&#160;&#160;&#160;((<link linkend="_VPpredefines_8hpp_1a0d04e082465a6e340ebb6c5ada136014">VP_VERSION_MAJOR</link>&lt;&lt;16)|(<link linkend="_VPpredefines_8hpp_1a1019f18e2f8142ddb746e04c1e7c96d0">VP_VERSION_MINOR</link>&lt;&lt;8)|(<link linkend="_VPpredefines_8hpp_1add0085d50a19df118f761bd30ff31915">VP_VERSION_PATCH</link>)|(<link linkend="_VPpredefines_8hpp_1a3426791e9b2549b2ac97b36308bffac6">VP_VERSION_STATE</link> &lt;&lt; 24))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_VPpredefines_8hpp_1a8b7a6e9c413f7dbde2c61703af00b44c">VP_VERSION_CHECK</link>(<link linkend="_VPpredefines_8hpp_1a0d04e082465a6e340ebb6c5ada136014">VP_VERSION_MAJOR</link>,  <link linkend="_VPpredefines_8hpp_1a1019f18e2f8142ddb746e04c1e7c96d0">VP_VERSION_MINOR</link>,  <link linkend="_VPpredefines_8hpp_1add0085d50a19df118f761bd30ff31915">VP_VERSION_PATCH</link>,  <link linkend="_VPpredefines_8hpp_1a3426791e9b2549b2ac97b36308bffac6">VP_VERSION_STATE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_VPpredefines_8hpp_1a0d04e082465a6e340ebb6c5ada136014">VP_VERSION_MAJOR</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_VPpredefines_8hpp_1a1019f18e2f8142ddb746e04c1e7c96d0">VP_VERSION_MINOR</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_VPpredefines_8hpp_1add0085d50a19df118f761bd30ff31915">VP_VERSION_PATCH</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_VPpredefines_8hpp_1a3426791e9b2549b2ac97b36308bffac6">VP_VERSION_STATE</link>&#160;&#160;&#160;&quot;build&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_VPpredefines_8hpp_1adba9e3334a27d813053e1a2fdc8aa742">VP_VERSION_STD</link>&#160;&#160;&#160;20251027</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_VPpredefines_8hpp_1a15dbb22bf5159c4980c6dd33c60ac822"/><section>
+    <title>VP_DEFAULT_CPP_STD</title>
+<indexterm><primary>VP_DEFAULT_CPP_STD</primary><secondary>VPpredefines.hpp</secondary></indexterm>
+<indexterm><primary>VPpredefines.hpp</primary><secondary>VP_DEFAULT_CPP_STD</secondary></indexterm>
+<para><computeroutput>#define VP_DEFAULT_CPP_STD&#160;&#160;&#160;201703L</computeroutput></para><para>
+
+<para>VPpredefines.h - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1.0S NOTES: Renamed to <computeroutput><link linkend="_VPpredefines_8hpp">VPpredefines.hpp</link></computeroutput>. </para>
+</para>
+<para>
+Definition at line <link linkend="_VPpredefines_8hpp_source_1l00012">12</link> of file <link linkend="_VPpredefines_8hpp_source">VPpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_VPpredefines_8hpp_1a99240917d1d719ed5b348a0b9e45ec1a"/><section>
+    <title>VP_DEV</title>
+<indexterm><primary>VP_DEV</primary><secondary>VPpredefines.hpp</secondary></indexterm>
+<indexterm><primary>VPpredefines.hpp</primary><secondary>VP_DEV</secondary></indexterm>
+<para><computeroutput>#define VP_DEV&#160;&#160;&#160;true</computeroutput></para><para>
+Definition at line <link linkend="_VPpredefines_8hpp_source_1l00037">37</link> of file <link linkend="_VPpredefines_8hpp_source">VPpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_VPpredefines_8hpp_1a6741c6a947dfa9b4dd9c6cfbee6c3182"/><section>
+    <title>VP_STRINGIFY</title>
+<indexterm><primary>VP_STRINGIFY</primary><secondary>VPpredefines.hpp</secondary></indexterm>
+<indexterm><primary>VPpredefines.hpp</primary><secondary>VP_STRINGIFY</secondary></indexterm>
+<para><computeroutput>#define VP_STRINGIFY( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><emphasis role="preprocessor">#x</emphasis>
+</programlisting><para>
+Definition at line <link linkend="_VPpredefines_8hpp_source_1l00033">33</link> of file <link linkend="_VPpredefines_8hpp_source">VPpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_VPpredefines_8hpp_1a8752acd8cfec08e8d3f76f9fcd6f0354"/><section>
+    <title>VP_TOSTRING</title>
+<indexterm><primary>VP_TOSTRING</primary><secondary>VPpredefines.hpp</secondary></indexterm>
+<indexterm><primary>VPpredefines.hpp</primary><secondary>VP_TOSTRING</secondary></indexterm>
+<para><computeroutput>#define VP_TOSTRING( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><link linkend="_VPpredefines_8hpp_1a6741c6a947dfa9b4dd9c6cfbee6c3182">VP_STRINGIFY</link>(x)
+</programlisting><para>
+Definition at line <link linkend="_VPpredefines_8hpp_source_1l00034">34</link> of file <link linkend="_VPpredefines_8hpp_source">VPpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_VPpredefines_8hpp_1ab6c7ba376b4202fd3238af9ae909c1e7"/><section>
+    <title>VP_VERSION</title>
+<indexterm><primary>VP_VERSION</primary><secondary>VPpredefines.hpp</secondary></indexterm>
+<indexterm><primary>VPpredefines.hpp</primary><secondary>VP_VERSION</secondary></indexterm>
+<para><computeroutput>#define VP_VERSION&#160;&#160;&#160;((<link linkend="_VPpredefines_8hpp_1a0d04e082465a6e340ebb6c5ada136014">VP_VERSION_MAJOR</link>&lt;&lt;16)|(<link linkend="_VPpredefines_8hpp_1a1019f18e2f8142ddb746e04c1e7c96d0">VP_VERSION_MINOR</link>&lt;&lt;8)|(<link linkend="_VPpredefines_8hpp_1add0085d50a19df118f761bd30ff31915">VP_VERSION_PATCH</link>)|(<link linkend="_VPpredefines_8hpp_1a3426791e9b2549b2ac97b36308bffac6">VP_VERSION_STATE</link> &lt;&lt; 24))</computeroutput></para><para>
+Definition at line <link linkend="_VPpredefines_8hpp_source_1l00027">27</link> of file <link linkend="_VPpredefines_8hpp_source">VPpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_VPpredefines_8hpp_1a8b7a6e9c413f7dbde2c61703af00b44c"/><section>
+    <title>VP_VERSION_CHECK</title>
+<indexterm><primary>VP_VERSION_CHECK</primary><secondary>VPpredefines.hpp</secondary></indexterm>
+<indexterm><primary>VPpredefines.hpp</primary><secondary>VP_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define VP_VERSION_CHECK( <link linkend="_VPpredefines_8hpp_1a0d04e082465a6e340ebb6c5ada136014">VP_VERSION_MAJOR</link>,  <link linkend="_VPpredefines_8hpp_1a1019f18e2f8142ddb746e04c1e7c96d0">VP_VERSION_MINOR</link>,  <link linkend="_VPpredefines_8hpp_1add0085d50a19df118f761bd30ff31915">VP_VERSION_PATCH</link>,  <link linkend="_VPpredefines_8hpp_1a3426791e9b2549b2ac97b36308bffac6">VP_VERSION_STATE</link>)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;(((<link linkend="_VPpredefines_8hpp_1a0d04e082465a6e340ebb6c5ada136014">VP_VERSION_MAJOR</link>)&lt;&lt;16)|((<link linkend="_VPpredefines_8hpp_1a1019f18e2f8142ddb746e04c1e7c96d0">VP_VERSION_MINOR</link>)&lt;&lt;8)|(<link linkend="_VPpredefines_8hpp_1add0085d50a19df118f761bd30ff31915">VP_VERSION_PATCH</link>)|((<link linkend="_VPpredefines_8hpp_1a3426791e9b2549b2ac97b36308bffac6">VP_VERSION_STATE</link>)&#32;&lt;&lt;&#32;24))
+</programlisting><para>
+Definition at line <link linkend="_VPpredefines_8hpp_source_1l00029">29</link> of file <link linkend="_VPpredefines_8hpp_source">VPpredefines.hpp</link>.</para>
+<programlisting linenumbering="unnumbered">00029 <emphasis role="preprocessor">#define&#32;VP_VERSION_CHECK(VP_VERSION_MAJOR,&#32;VP_VERSION_MINOR,&#32;VP_VERSION_PATCH,&#32;VP_VERSION_STATE)&#32;\</emphasis>
+00030 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(((VP_VERSION_MAJOR)&lt;&lt;16)|((VP_VERSION_MINOR)&lt;&lt;8)|(VP_VERSION_PATCH)|((VP_VERSION_STATE)&#32;&lt;&lt;&#32;24))</emphasis>
+</programlisting></section>
+<anchor xml:id="_VPpredefines_8hpp_1a0d04e082465a6e340ebb6c5ada136014"/><section>
+    <title>VP_VERSION_MAJOR</title>
+<indexterm><primary>VP_VERSION_MAJOR</primary><secondary>VPpredefines.hpp</secondary></indexterm>
+<indexterm><primary>VPpredefines.hpp</primary><secondary>VP_VERSION_MAJOR</secondary></indexterm>
+<para><computeroutput>#define VP_VERSION_MAJOR&#160;&#160;&#160;1</computeroutput></para><para>
+Definition at line <link linkend="_VPpredefines_8hpp_source_1l00015">15</link> of file <link linkend="_VPpredefines_8hpp_source">VPpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_VPpredefines_8hpp_1a1019f18e2f8142ddb746e04c1e7c96d0"/><section>
+    <title>VP_VERSION_MINOR</title>
+<indexterm><primary>VP_VERSION_MINOR</primary><secondary>VPpredefines.hpp</secondary></indexterm>
+<indexterm><primary>VPpredefines.hpp</primary><secondary>VP_VERSION_MINOR</secondary></indexterm>
+<para><computeroutput>#define VP_VERSION_MINOR&#160;&#160;&#160;0</computeroutput></para><para>
+Definition at line <link linkend="_VPpredefines_8hpp_source_1l00016">16</link> of file <link linkend="_VPpredefines_8hpp_source">VPpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_VPpredefines_8hpp_1add0085d50a19df118f761bd30ff31915"/><section>
+    <title>VP_VERSION_PATCH</title>
+<indexterm><primary>VP_VERSION_PATCH</primary><secondary>VPpredefines.hpp</secondary></indexterm>
+<indexterm><primary>VPpredefines.hpp</primary><secondary>VP_VERSION_PATCH</secondary></indexterm>
+<para><computeroutput>#define VP_VERSION_PATCH&#160;&#160;&#160;0</computeroutput></para><para>
+Definition at line <link linkend="_VPpredefines_8hpp_source_1l00017">17</link> of file <link linkend="_VPpredefines_8hpp_source">VPpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_VPpredefines_8hpp_1a3426791e9b2549b2ac97b36308bffac6"/><section>
+    <title>VP_VERSION_STATE</title>
+<indexterm><primary>VP_VERSION_STATE</primary><secondary>VPpredefines.hpp</secondary></indexterm>
+<indexterm><primary>VPpredefines.hpp</primary><secondary>VP_VERSION_STATE</secondary></indexterm>
+<para><computeroutput>#define VP_VERSION_STATE&#160;&#160;&#160;&quot;build&quot;</computeroutput></para><para>
+Definition at line <link linkend="_VPpredefines_8hpp_source_1l00025">25</link> of file <link linkend="_VPpredefines_8hpp_source">VPpredefines.hpp</link>.</para>
+</section>
+<anchor xml:id="_VPpredefines_8hpp_1adba9e3334a27d813053e1a2fdc8aa742"/><section>
+    <title>VP_VERSION_STD</title>
+<indexterm><primary>VP_VERSION_STD</primary><secondary>VPpredefines.hpp</secondary></indexterm>
+<indexterm><primary>VPpredefines.hpp</primary><secondary>VP_VERSION_STD</secondary></indexterm>
+<para><computeroutput>#define VP_VERSION_STD&#160;&#160;&#160;20251027</computeroutput></para><para>
+Definition at line <link linkend="_VPpredefines_8hpp_source_1l00019">19</link> of file <link linkend="_VPpredefines_8hpp_source">VPpredefines.hpp</link>.</para>
+</section>
+</section>
+</section>

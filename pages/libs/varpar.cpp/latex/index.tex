@@ -1,0 +1,190 @@
+\chapter{Var\+Par -\/ Variable Parser }
+\hypertarget{index}{}\label{index}\index{VarPar -\/ Variable Parser@{VarPar -\/ Variable Parser}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+
+
+{\ttfamily Var\+Par} (Variable Parser) is a extremely lightweight {\bfseries{C++17+ configuration file parser}} that provides simple, strict key value parsing for flat text configuration files
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Features}{Features}}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item {\bfseries{Strict Parsing\+:}} Ensures each key is uniquely defined and every line contains a valid {\ttfamily key = value} pair
+\item {\bfseries{Automatic Validation\+:}} Checks file existence and verifies the correct file extension before parsing
+\item {\bfseries{Informative Error Handling\+:}} Reports precise error messages and line numbers for duplicate or malformed entries
+\item {\bfseries{Minimal Dependencies\+:}} Uses only standard C++17 libraries
+\item {\bfseries{Lightweight Runtime Status\+:}} Parser state (constructed / error) is tracked through {\ttfamily Parser\+Status} for safe checks
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Core Components}{Core Components}}\label{index_autotoc_md4}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{{\ttfamily vp\+::\+Parser}}{{\ttfamily vp\+::\+Parser}}}\label{index_autotoc_md5}
+Main parsing class responsible for reading and interpreting configuration files.\hypertarget{index_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Constructor}{Constructor}}\label{index_autotoc_md6}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classvp_1_1Parser}{vp::Parser}}(\textcolor{keyword}{const}\ std::string\&\ \_id,\ \textcolor{keyword}{const}\ std::string\&\ \_file,\ \textcolor{keyword}{const}\ std::string\&\ \_extension\ =\ \textcolor{stringliteral}{"{}.varpar"{}});}
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \+\_\+id} — Unique identifier string for this parser instance.
+\item {\ttfamily \+\_\+file} — File path to the config file.
+\item {\ttfamily \+\_\+extension} — Required file extension (default as\+: {\ttfamily .varpar}).
+\end{DoxyItemize}
+
+{\bfseries{Behavior}}
+
+
+\begin{DoxyItemize}
+\item Validates that {\ttfamily \+\_\+file} exists.
+\item Confirms that {\ttfamily \+\_\+file} has the required {\ttfamily \+\_\+extension}.
+\item If any checks fail, the parser sets its internal error status and logs the issue to {\ttfamily std\+::cerr}.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{{\ttfamily Parser\+Return}}{{\ttfamily Parser\+Return}}}\label{index_autotoc_md8}
+Struct returned by the parser after execution.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }\mbox{\hyperlink{namespacevp_a7b57f4f0e8a0b3826aae9c210d9aff9e}{ParserReturn}}\ \{}
+\DoxyCodeLine{\ \ \ \ std::map<std::string,\ std::string>\ config;\ \ \textcolor{comment}{//\ Parsed\ key\ value\ pairs}}
+\DoxyCodeLine{\ \ \ \ std::vector<std::string>\ output;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Raw\ messages\ and\ errors}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ success;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Parsing\ result\ flag}}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md10}{}\doxysubsection{\texorpdfstring{{\ttfamily Parser\+Status}}{{\ttfamily Parser\+Status}}}\label{index_autotoc_md10}
+Represents the parser’s internal construction status.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }\mbox{\hyperlink{namespacevp_a03bdbb3011959e2cb9b0256ae4931c3f}{ParserStatus}}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ constructed;\ \ \ \ \ \ \ \textcolor{comment}{//\ Whether\ parser\ was\ constructed\ successfully}}
+\DoxyCodeLine{\ \ \ \ std::string\ error;\ \ \ \ \ \ \textcolor{comment}{//\ Any\ error\ message\ generated\ during\ setup}}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md12}{}\doxysubsection{\texorpdfstring{Public Methods}{Public Methods}}\label{index_autotoc_md12}
+\hypertarget{index_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Parser\+Return parse()}}{{\ttfamily Parser\+Return parse()}}}\label{index_autotoc_md13}
+Executes parsing and returns a structured result. If successful, {\ttfamily Parser\+Return\+::success} is {\ttfamily true} and {\ttfamily config} contains parsed pairs.\hypertarget{index_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{{\ttfamily std\+::string get\+Val(const std\+::string\& \+\_\+key) const}}{{\ttfamily std\+::string get\+Val(const std\+::string\& \+\_\+key) const}}}\label{index_autotoc_md14}
+Retrieves a parsed value by key. Returns an empty string if the key is missing.\hypertarget{index_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Parser\+Status check\+Status() const}}{{\ttfamily Parser\+Status check\+Status() const}}}\label{index_autotoc_md15}
+Returns the internal construction status for validation before parsing.\hypertarget{index_autotoc_md16}{}\doxysubsubsection{\texorpdfstring{{\ttfamily std\+::string get\+ID() const}}{{\ttfamily std\+::string get\+ID() const}}}\label{index_autotoc_md16}
+Returns the parser’s unique identifier.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md18}{}\doxysection{\texorpdfstring{Parsing Rules}{Parsing Rules}}\label{index_autotoc_md18}
+
+\begin{DoxyItemize}
+\item Lines starting with {\ttfamily ;} or empty lines are ignored.
+\item Lines must follow the format\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{key\ =\ value}
+
+\end{DoxyCode}
+
+\item Whitespace around keys and values is trimmed automatically.
+\item Duplicate keys produce an immediate error, halting parsing.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md20}{}\doxysection{\texorpdfstring{Example File ({\ttfamily config.\+varpar})}{Example File ({\ttfamily config.\+varpar})}}\label{index_autotoc_md20}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{;\ Example\ config\ file}
+\DoxyCodeLine{hello\_world\ =\ "{}Bye..."{}}
+\DoxyCodeLine{random\ =\ "{}aa"{}}
+\DoxyCodeLine{randomText\ =\ "{}aab"{}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md22}{}\doxysection{\texorpdfstring{Example Usage}{Example Usage}}\label{index_autotoc_md22}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <varparse/VP\_Parse.hpp>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classvp_1_1Parser}{vp::Parser}}\ parse(\textcolor{stringliteral}{"{}main-\/parse"{}},\ \textcolor{stringliteral}{"{}/path/to/file.varpar"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}\ status\ =\ parse.checkStatus()\ ;\ !status.constructed)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ construct:\ "{}}\ <<\ parse.getID()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::cerr\ <<\ status.error\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::exit(1);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Output:\(\backslash\)n"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{structvp_1_1ParserReturn}{vp::ParserReturn}}\ parsed\ =\ parse.parse();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&x\ :\ parsed.\mbox{\hyperlink{structvp_1_1ParserReturn_a267f1f83e2befc4d2c5504a7e64921ce}{output}})}
+\DoxyCodeLine{\ \ \ \ \{\ std::cout\ <<\ x\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (!parsed.\mbox{\hyperlink{structvp_1_1ParserReturn_af7053f12cfba17ae795d246fcb7f33d3}{success}})}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}[\ !\ ]\ Exiting\ due\ to\ an\ error\(\backslash\)n"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::exit(1);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&[k,\ v]\ :\ parsed.\mbox{\hyperlink{structvp_1_1ParserReturn_a5b16b9a13d4b625f74f04b39aa8cb5e7}{config}})}
+\DoxyCodeLine{\ \ \ \ \{\ std::cout\ <<\ k\ <<\ \textcolor{stringliteral}{"{}\ =\ "{}}\ <<\ v\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Value\ of\ \`{}hello\_world`:\ "{}}\ <<\ parse.getVal(\textcolor{stringliteral}{"{}hello\_world"{}})\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md24}{}\doxysection{\texorpdfstring{Error Example}{Error Example}}\label{index_autotoc_md24}
+Given this invalid input\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{hello\_world\ =\ "{}Bye..."{}}
+\DoxyCodeLine{hello\_world\ =\ "{}Bye...a"{}}
+
+\end{DoxyCode}
+
+
+Output\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ERR:\ LINE:\ 2}
+\DoxyCodeLine{Duplicate\ member\ :\ hello\_world\ =\ "{}Bye...a"{}}
+
+\end{DoxyCode}
+
+
+Due to the fact that there are two keys with the same name
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md26}{}\doxysection{\texorpdfstring{Supported Compilers}{Supported Compilers}}\label{index_autotoc_md26}
+
+\begin{DoxyItemize}
+\item GCC \texorpdfstring{$>$}{>}= 7.\+0
+\item Clang \texorpdfstring{$>$}{>}= 6.\+0
+\item MSVC \texorpdfstring{$>$}{>}= 19.\+14 (Visual Studio 2017 15.\+7+)
+\end{DoxyItemize}
+
+Requires {\bfseries{C++17}} or newer 

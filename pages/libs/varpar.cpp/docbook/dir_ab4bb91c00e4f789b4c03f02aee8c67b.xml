@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_ab4bb91c00e4f789b4c03f02aee8c67b" xml:lang="en-US">
+<title>inc/varparse.cpp Directory Reference</title>
+<indexterm><primary>inc/varparse.cpp Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_VP__Parse_8hpp">VP_Parse.hpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_VPpredefines_8hpp">VPpredefines.hpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

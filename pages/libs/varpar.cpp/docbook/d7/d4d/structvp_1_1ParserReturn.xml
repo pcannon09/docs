@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structvp_1_1ParserReturn" xml:lang="en-US">
+<title>vp::ParserReturn Struct Reference</title>
+<indexterm><primary>vp::ParserReturn</primary></indexterm>
+<para>
+
+<para>Returned parser information This includes the configuration, output and success of the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;VP_Parse.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::map&lt; std::string, std::string &gt; <link linkend="_structvp_1_1ParserReturn_1a5b16b9a13d4b625f74f04b39aa8cb5e7">config</link></para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_structvp_1_1ParserReturn_1a267f1f83e2befc4d2c5504a7e64921ce">output</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structvp_1_1ParserReturn_1af7053f12cfba17ae795d246fcb7f33d3">success</link> = false</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Returned parser information This includes the configuration, output and success of the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput>. </para>
+<para>
+Definition at line <link linkend="_VP__Parse_8hpp_source_1l00026">26</link> of file <link linkend="_VP__Parse_8hpp_source">VP_Parse.hpp</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structvp_1_1ParserReturn_1a5b16b9a13d4b625f74f04b39aa8cb5e7"/><section>
+    <title>config</title>
+<indexterm><primary>config</primary><secondary>vp::ParserReturn</secondary></indexterm>
+<indexterm><primary>vp::ParserReturn</primary><secondary>config</secondary></indexterm>
+<para><computeroutput>std::map&lt;std::string, std::string&gt; vp::ParserReturn::config</computeroutput></para><para>
+Definition at line <link linkend="_VP__Parse_8hpp_source_1l00028">28</link> of file <link linkend="_VP__Parse_8hpp_source">VP_Parse.hpp</link>.</para>
+</section>
+<anchor xml:id="_structvp_1_1ParserReturn_1a267f1f83e2befc4d2c5504a7e64921ce"/><section>
+    <title>output</title>
+<indexterm><primary>output</primary><secondary>vp::ParserReturn</secondary></indexterm>
+<indexterm><primary>vp::ParserReturn</primary><secondary>output</secondary></indexterm>
+<para><computeroutput>std::vector&lt;std::string&gt; vp::ParserReturn::output</computeroutput></para><para>
+Definition at line <link linkend="_VP__Parse_8hpp_source_1l00030">30</link> of file <link linkend="_VP__Parse_8hpp_source">VP_Parse.hpp</link>.</para>
+</section>
+<anchor xml:id="_structvp_1_1ParserReturn_1af7053f12cfba17ae795d246fcb7f33d3"/><section>
+    <title>success</title>
+<indexterm><primary>success</primary><secondary>vp::ParserReturn</secondary></indexterm>
+<indexterm><primary>vp::ParserReturn</primary><secondary>success</secondary></indexterm>
+<para><computeroutput>bool vp::ParserReturn::success = false</computeroutput></para><para>
+Definition at line <link linkend="_VP__Parse_8hpp_source_1l00032">32</link> of file <link linkend="_VP__Parse_8hpp_source">VP_Parse.hpp</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/varparse.cpp/<link linkend="_VP__Parse_8hpp">VP_Parse.hpp</link></section>
+</section>

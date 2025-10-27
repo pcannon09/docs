@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.15.0" xml:lang="en-US">
+  <compound refid="de/d69/classvp_1_1Parser" kind="class"><name>vp::Parser</name>
+    <member refid="de/d69/classvp_1_1Parser_1a3a32b1c7ced72af69a654e2be9b05bab" kind="variable"><name>extension</name></member>
+    <member refid="de/d69/classvp_1_1Parser_1a0dba0d4012b3aa1ad16d58a89c1597ce" kind="variable"><name>fpath</name></member>
+    <member refid="de/d69/classvp_1_1Parser_1a984f4a6ce9f5578af0edd6878b1f583b" kind="variable"><name>id</name></member>
+    <member refid="de/d69/classvp_1_1Parser_1ab1ce18785fdc3d4014af72c8892a5456" kind="variable"><name>parseRet</name></member>
+    <member refid="de/d69/classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f" kind="variable"><name>status</name></member>
+    <member refid="de/d69/classvp_1_1Parser_1a73b347e24a79937ef18dcd8fb91e4583" kind="function"><name>__parse</name></member>
+    <member refid="de/d69/classvp_1_1Parser_1a46d7a7260cc6704bd09a757ad8015fbf" kind="function"><name>Parser</name></member>
+    <member refid="de/d69/classvp_1_1Parser_1a9973f22c277eea48e1e562c314968bd0" kind="function"><name>~Parser</name></member>
+    <member refid="de/d69/classvp_1_1Parser_1a27ffd0fb917c5adbefcfce4ebf001033" kind="function"><name>checkStatus</name></member>
+    <member refid="de/d69/classvp_1_1Parser_1ad5246aed9edc845750b0207198f851b1" kind="function"><name>getID</name></member>
+    <member refid="de/d69/classvp_1_1Parser_1a4dd4f68395787602c1536fb695081087" kind="function"><name>getVal</name></member>
+    <member refid="de/d69/classvp_1_1Parser_1a765a0d08947ed756cd3bb75f03fd2909" kind="function"><name>parse</name></member>
+  </compound>
+  <compound refid="d7/d4d/structvp_1_1ParserReturn" kind="struct"><name>vp::ParserReturn</name>
+    <member refid="d7/d4d/structvp_1_1ParserReturn_1a5b16b9a13d4b625f74f04b39aa8cb5e7" kind="variable"><name>config</name></member>
+    <member refid="d7/d4d/structvp_1_1ParserReturn_1a267f1f83e2befc4d2c5504a7e64921ce" kind="variable"><name>output</name></member>
+    <member refid="d7/d4d/structvp_1_1ParserReturn_1af7053f12cfba17ae795d246fcb7f33d3" kind="variable"><name>success</name></member>
+  </compound>
+  <compound refid="d9/d86/structvp_1_1ParserStatus" kind="struct"><name>vp::ParserStatus</name>
+    <member refid="d9/d86/structvp_1_1ParserStatus_1a6c74cdf7a1ba1706ea10f90f1c180195" kind="variable"><name>constructed</name></member>
+    <member refid="d9/d86/structvp_1_1ParserStatus_1a4fca833cc9bbee7722793c48961dfac3" kind="variable"><name>error</name></member>
+  </compound>
+  <compound refid="d8/dcc/namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="d3/d0a/namespacevp" kind="namespace"><name>vp</name>
+    <member refid="d3/d0a/namespacevp_1a7b57f4f0e8a0b3826aae9c210d9aff9e" kind="typedef"><name>ParserReturn</name></member>
+    <member refid="d3/d0a/namespacevp_1a03bdbb3011959e2cb9b0256ae4931c3f" kind="typedef"><name>ParserStatus</name></member>
+  </compound>
+  <compound refid="d9/d91/VP__Parse_8hpp" kind="file"><name>VP_Parse.hpp</name>
+  </compound>
+  <compound refid="db/d4c/VPpredefines_8hpp" kind="file"><name>VPpredefines.hpp</name>
+    <member refid="db/d4c/VPpredefines_8hpp_1a15dbb22bf5159c4980c6dd33c60ac822" kind="define"><name>VP_DEFAULT_CPP_STD</name></member>
+    <member refid="db/d4c/VPpredefines_8hpp_1a99240917d1d719ed5b348a0b9e45ec1a" kind="define"><name>VP_DEV</name></member>
+    <member refid="db/d4c/VPpredefines_8hpp_1a6741c6a947dfa9b4dd9c6cfbee6c3182" kind="define"><name>VP_STRINGIFY</name></member>
+    <member refid="db/d4c/VPpredefines_8hpp_1a8752acd8cfec08e8d3f76f9fcd6f0354" kind="define"><name>VP_TOSTRING</name></member>
+    <member refid="db/d4c/VPpredefines_8hpp_1ab6c7ba376b4202fd3238af9ae909c1e7" kind="define"><name>VP_VERSION</name></member>
+    <member refid="db/d4c/VPpredefines_8hpp_1a8b7a6e9c413f7dbde2c61703af00b44c" kind="define"><name>VP_VERSION_CHECK</name></member>
+    <member refid="db/d4c/VPpredefines_8hpp_1a0d04e082465a6e340ebb6c5ada136014" kind="define"><name>VP_VERSION_MAJOR</name></member>
+    <member refid="db/d4c/VPpredefines_8hpp_1a1019f18e2f8142ddb746e04c1e7c96d0" kind="define"><name>VP_VERSION_MINOR</name></member>
+    <member refid="db/d4c/VPpredefines_8hpp_1add0085d50a19df118f761bd30ff31915" kind="define"><name>VP_VERSION_PATCH</name></member>
+    <member refid="db/d4c/VPpredefines_8hpp_1a3426791e9b2549b2ac97b36308bffac6" kind="define"><name>VP_VERSION_STATE</name></member>
+    <member refid="db/d4c/VPpredefines_8hpp_1adba9e3334a27d813053e1a2fdc8aa742" kind="define"><name>VP_VERSION_STD</name></member>
+  </compound>
+  <compound refid="da/ddd/README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="db/de3/VP__Parse_8cpp" kind="file"><name>VP_Parse.cpp</name>
+    <member refid="db/de3/VP__Parse_8cpp_1adb99666973bac16ee2e3ae6bd5cfb242" kind="define"><name>__VP_ERROR_THROW_DEFAULT_MSG</name></member>
+  </compound>
+  <compound refid="dir_bfccd401955b95cf8c75461437045ac0" kind="dir"><name>inc</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_ab4bb91c00e4f789b4c03f02aee8c67b" kind="dir"><name>inc/varparse.cpp</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

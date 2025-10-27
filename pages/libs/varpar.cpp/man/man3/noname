@@ -1,0 +1,11 @@
+.TH "" 3 "Version v1.0.0-build" "varpar.cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc varparse\&.cpp VP_Parse\&.hpp VPpredefines\&.hpp 
+.PP
+src VP_Parse\&.cpp 
+.PP
+varparse\&.cpp VP_Parse\&.hpp VPpredefines\&.hpp 
+.PP
+

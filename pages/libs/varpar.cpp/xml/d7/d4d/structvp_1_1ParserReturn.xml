@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="d7/d4d/structvp_1_1ParserReturn" kind="struct" language="C++" prot="public">
+    <compoundname>vp::ParserReturn</compoundname>
+    <includes refid="d9/d91/VP__Parse_8hpp" local="no">VP_Parse.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d7/d4d/structvp_1_1ParserReturn_1a5b16b9a13d4b625f74f04b39aa8cb5e7" prot="public" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; vp::ParserReturn::config</definition>
+        <argsstring></argsstring>
+        <name>config</name>
+        <qualifiedname>vp::ParserReturn::config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="28" column="10" bodyfile="inc/varparse.cpp/VP_Parse.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d4d/structvp_1_1ParserReturn_1a267f1f83e2befc4d2c5504a7e64921ce" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; vp::ParserReturn::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <qualifiedname>vp::ParserReturn::output</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="30" column="13" bodyfile="inc/varparse.cpp/VP_Parse.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d4d/structvp_1_1ParserReturn_1af7053f12cfba17ae795d246fcb7f33d3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vp::ParserReturn::success</definition>
+        <argsstring></argsstring>
+        <name>success</name>
+        <qualifiedname>vp::ParserReturn::success</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="32" column="6" bodyfile="inc/varparse.cpp/VP_Parse.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Returned parser information This includes the configuration, output and success of the <computeroutput><ref refid="de/d69/classvp_1_1Parser" kindref="compound">Parser</ref></computeroutput>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::map&lt; std::string, std::string &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>elements</edgelabel>
+          <edgelabel>keys</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::string</label>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; std::string &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>vp::ParserReturn</label>
+        <link refid="d7/d4d/structvp_1_1ParserReturn"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>config</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="inc/varparse.cpp/VP_Parse.hpp" line="26" column="1" bodyfile="inc/varparse.cpp/VP_Parse.hpp" bodystart="27" bodyend="33"/>
+    <listofallmembers>
+      <member refid="d7/d4d/structvp_1_1ParserReturn_1a5b16b9a13d4b625f74f04b39aa8cb5e7" prot="public" virt="non-virtual"><scope>vp::ParserReturn</scope><name>config</name></member>
+      <member refid="d7/d4d/structvp_1_1ParserReturn_1a267f1f83e2befc4d2c5504a7e64921ce" prot="public" virt="non-virtual"><scope>vp::ParserReturn</scope><name>output</name></member>
+      <member refid="d7/d4d/structvp_1_1ParserReturn_1af7053f12cfba17ae795d246fcb7f33d3" prot="public" virt="non-virtual"><scope>vp::ParserReturn</scope><name>success</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

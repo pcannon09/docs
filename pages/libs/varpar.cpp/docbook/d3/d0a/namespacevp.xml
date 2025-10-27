@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacevp" xml:lang="en-US">
+<title>vp Namespace Reference</title>
+<indexterm><primary>vp</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classvp_1_1Parser">Parser</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structvp_1_1ParserReturn">ParserReturn</link></para>
+
+<para>Returned parser information This includes the configuration, output and success of the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput>. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structvp_1_1ParserStatus">ParserStatus</link></para>
+
+<para>Set the error and if the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput> class was constructed. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct vp::ParserReturn <link linkend="_namespacevp_1a7b57f4f0e8a0b3826aae9c210d9aff9e">ParserReturn</link></para>
+
+<para>Returned parser information This includes the configuration, output and success of the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput>. </para>
+</listitem>
+            <listitem><para>typedef struct vp::ParserStatus <link linkend="_namespacevp_1a03bdbb3011959e2cb9b0256ae4931c3f">ParserStatus</link></para>
+
+<para>Set the error and if the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput> class was constructed. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_namespacevp_1a7b57f4f0e8a0b3826aae9c210d9aff9e"/><section>
+    <title>ParserReturn</title>
+<indexterm><primary>ParserReturn</primary><secondary>vp</secondary></indexterm>
+<indexterm><primary>vp</primary><secondary>ParserReturn</secondary></indexterm>
+<para><computeroutput>typedef struct vp::ParserReturn vp::ParserReturn</computeroutput></para><para>
+
+<para>Returned parser information This includes the configuration, output and success of the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput>. </para>
+</para>
+</section>
+<anchor xml:id="_namespacevp_1a03bdbb3011959e2cb9b0256ae4931c3f"/><section>
+    <title>ParserStatus</title>
+<indexterm><primary>ParserStatus</primary><secondary>vp</secondary></indexterm>
+<indexterm><primary>vp</primary><secondary>ParserStatus</secondary></indexterm>
+<para><computeroutput>typedef struct vp::ParserStatus vp::ParserStatus</computeroutput></para><para>
+
+<para>Set the error and if the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput> class was constructed. </para>
+</para>
+</section>
+</section>
+</section>

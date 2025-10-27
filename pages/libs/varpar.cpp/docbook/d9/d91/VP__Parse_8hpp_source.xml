@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_VP__Parse_8hpp_source" xml:lang="en-US">
+<title>VP_Parse.hpp</title>
+<indexterm><primary>inc/varparse.cpp/VP_Parse.hpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_VP__Parse_8hpp_source_1l00001"/>00001 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00002"/>00002 
+<anchor xml:id="_VP__Parse_8hpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_VPpredefines_8hpp">VPpredefines.hpp</link>&quot;</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00004"/>00004 
+<anchor xml:id="_VP__Parse_8hpp_source_1l00005"/>00005 <emphasis role="preprocessor">#if&#32;VP_DEFAULT_CPP_STD&#32;&gt;=&#32;__cplusplus</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00009"/>00009 
+<anchor xml:id="_VP__Parse_8hpp_source_1l00010"/><link linkend="_namespacevp">00010</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacevp">vp</link>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00011"/>00011 {<emphasis role="comment"></emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00012"/>00012 <emphasis role="comment">&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00013"/>00013 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Set&#32;the&#32;error&#32;and&#32;if&#32;the&#32;`Parser`&#32;class&#32;was&#32;constructed</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00014"/>00014 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00015"/><link linkend="_structvp_1_1ParserStatus">00015</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structvp_1_1ParserStatus">ParserStatus</link>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_VP__Parse_8hpp_source_1l00017"/><link linkend="_structvp_1_1ParserStatus_1a4fca833cc9bbee7722793c48961dfac3">00017</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_structvp_1_1ParserStatus_1a4fca833cc9bbee7722793c48961dfac3">error</link>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00018"/>00018 
+<anchor xml:id="_VP__Parse_8hpp_source_1l00019"/><link linkend="_structvp_1_1ParserStatus_1a6c74cdf7a1ba1706ea10f90f1c180195">00019</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structvp_1_1ParserStatus_1a6c74cdf7a1ba1706ea10f90f1c180195">constructed</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00020"/><link linkend="_namespacevp_1a03bdbb3011959e2cb9b0256ae4931c3f">00020</link> &#32;&#32;&#32;&#32;}&#32;<link linkend="_namespacevp_1a03bdbb3011959e2cb9b0256ae4931c3f">ParserStatus</link>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00021"/>00021 <emphasis role="comment"></emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00022"/>00022 <emphasis role="comment">&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00023"/>00023 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Returned&#32;parser&#32;information</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00024"/>00024 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;This&#32;includes&#32;the&#32;configuration,&#32;output&#32;and&#32;success&#32;of&#32;the&#32;`Parser`</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00025"/>00025 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00026"/><link linkend="_structvp_1_1ParserReturn">00026</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structvp_1_1ParserReturn">ParserReturn</link>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_VP__Parse_8hpp_source_1l00028"/><link linkend="_structvp_1_1ParserReturn_1a5b16b9a13d4b625f74f04b39aa8cb5e7">00028</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;std::string,&#32;std::string&gt;&#32;<link linkend="_structvp_1_1ParserReturn_1a5b16b9a13d4b625f74f04b39aa8cb5e7">config</link>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00029"/>00029 
+<anchor xml:id="_VP__Parse_8hpp_source_1l00030"/><link linkend="_structvp_1_1ParserReturn_1a267f1f83e2befc4d2c5504a7e64921ce">00030</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;<link linkend="_structvp_1_1ParserReturn_1a267f1f83e2befc4d2c5504a7e64921ce">output</link>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00031"/>00031 
+<anchor xml:id="_VP__Parse_8hpp_source_1l00032"/><link linkend="_structvp_1_1ParserReturn_1af7053f12cfba17ae795d246fcb7f33d3">00032</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_structvp_1_1ParserReturn_1af7053f12cfba17ae795d246fcb7f33d3">success</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00033"/><link linkend="_namespacevp_1a7b57f4f0e8a0b3826aae9c210d9aff9e">00033</link> &#32;&#32;&#32;&#32;}&#32;<link linkend="_namespacevp_1a7b57f4f0e8a0b3826aae9c210d9aff9e">ParserReturn</link>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00034"/>00034 
+<anchor xml:id="_VP__Parse_8hpp_source_1l00035"/><link linkend="_classvp_1_1Parser">00035</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_classvp_1_1Parser_1a46d7a7260cc6704bd09a757ad8015fbf">Parser</link>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_VP__Parse_8hpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_VP__Parse_8hpp_source_1l00038"/><link linkend="_classvp_1_1Parser_1a984f4a6ce9f5578af0edd6878b1f583b">00038</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classvp_1_1Parser_1a984f4a6ce9f5578af0edd6878b1f583b">id</link>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00039"/><link linkend="_classvp_1_1Parser_1a0dba0d4012b3aa1ad16d58a89c1597ce">00039</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classvp_1_1Parser_1a0dba0d4012b3aa1ad16d58a89c1597ce">fpath</link>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00040"/>00040 
+<anchor xml:id="_VP__Parse_8hpp_source_1l00041"/><link linkend="_classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f">00041</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structvp_1_1ParserStatus">ParserStatus</link>&#32;<link linkend="_classvp_1_1Parser_1ada8181e33a36ab0da77b9c8785ca9c8f">status</link>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00042"/><link linkend="_classvp_1_1Parser_1ab1ce18785fdc3d4014af72c8892a5456">00042</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structvp_1_1ParserReturn">ParserReturn</link>&#32;<link linkend="_classvp_1_1Parser_1ab1ce18785fdc3d4014af72c8892a5456">parseRet</link>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00043"/>00043 
+<anchor xml:id="_VP__Parse_8hpp_source_1l00044"/><link linkend="_classvp_1_1Parser_1a3a32b1c7ced72af69a654e2be9b05bab">00044</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classvp_1_1Parser_1a3a32b1c7ced72af69a654e2be9b05bab">extension</link>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00045"/>00045 
+<anchor xml:id="_VP__Parse_8hpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<emphasis role="keyword">protected</emphasis>:<emphasis role="comment"></emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00047"/>00047 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00048"/>00048 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Private&#32;member&#32;of&#32;the&#32;parse&#32;function</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00049"/>00049 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;ParserReturn&#32;Parsed&#32;information</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00050"/>00050 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_structvp_1_1ParserReturn">ParserReturn</link>&#32;<link linkend="_classvp_1_1Parser_1a73b347e24a79937ef18dcd8fb91e4583">__parse</link>();
+<anchor xml:id="_VP__Parse_8hpp_source_1l00052"/>00052 
+<anchor xml:id="_VP__Parse_8hpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:<emphasis role="comment"></emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00054"/>00054 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00055"/>00055 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Create&#32;the&#32;object,&#32;set&#32;errors&#32;if&#32;there&#32;are&#32;and&#32;set&#32;some&#32;configuration&#32;from&#32;the&#32;parameters</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00056"/>00056 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;_id&#32;Set&#32;the&#32;ID&#32;of&#32;the&#32;object</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00057"/>00057 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;_file&#32;Set&#32;the&#32;path&#32;of&#32;the&#32;file</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00058"/>00058 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;_extension&#32;Set&#32;the&#32;file&#32;extension</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00059"/>00059 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classvp_1_1Parser_1a46d7a7260cc6704bd09a757ad8015fbf">Parser</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;_id,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;_file,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;_extension&#32;=&#32;<emphasis role="stringliteral">&quot;.varpar&quot;</emphasis>);
+<anchor xml:id="_VP__Parse_8hpp_source_1l00061"/>00061 <emphasis role="comment"></emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00062"/>00062 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00063"/>00063 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Deconstructor</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00064"/>00064 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00065"/><link linkend="_classvp_1_1Parser_1a9973f22c277eea48e1e562c314968bd0">00065</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classvp_1_1Parser_1a9973f22c277eea48e1e562c314968bd0">~Parser</link>();
+<anchor xml:id="_VP__Parse_8hpp_source_1l00066"/>00066 <emphasis role="comment"></emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00067"/>00067 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00068"/>00068 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Public&#32;API&#32;wrapper&#32;for&#32;`Parser::__parse()`&#32;function</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00069"/>00069 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;ParserReturn&#32;Parsed&#32;information</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00070"/>00070 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structvp_1_1ParserReturn">ParserReturn</link>&#32;<link linkend="_classvp_1_1Parser_1a765a0d08947ed756cd3bb75f03fd2909">parse</link>();
+<anchor xml:id="_VP__Parse_8hpp_source_1l00072"/>00072 <emphasis role="comment"></emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00073"/>00073 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00074"/>00074 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;value&#32;of&#32;_key</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00075"/>00075 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;_key&#32;Key&#32;value&#32;to&#32;find</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00076"/>00076 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;std::string&#32;Return&#32;the&#32;value</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00077"/>00077 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classvp_1_1Parser_1a4dd4f68395787602c1536fb695081087">getVal</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;_key)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00079"/>00079 <emphasis role="comment"></emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00080"/>00080 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00081"/>00081 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;the&#32;constructed&#32;starts</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00082"/>00082 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;ParserStatus</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00083"/>00083 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structvp_1_1ParserStatus">ParserStatus</link>&#32;<link linkend="_classvp_1_1Parser_1a27ffd0fb917c5adbefcfce4ebf001033">checkStatus</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00085"/>00085 <emphasis role="comment"></emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00086"/>00086 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00087"/>00087 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Get&#32;the&#32;current&#32;object&#32;ID</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00088"/>00088 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;std::string&#32;Current&#32;object&#32;ID</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00089"/>00089 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classvp_1_1Parser_1ad5246aed9edc845750b0207198f851b1">getID</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_VP__Parse_8hpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_VP__Parse_8hpp_source_1l00092"/>00092 }
+<anchor xml:id="_VP__Parse_8hpp_source_1l00093"/>00093 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00094"/>00094 <emphasis role="preprocessor">#&#32;&#32;&#32;error&#32;&quot;Use&#32;C++17&#32;as&#32;the&#32;minimum&#32;standard&quot;</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00095"/>00095 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;VP_DEFAULT_CPP_STD&#32;&gt;=&#32;__cplusplus</emphasis>
+<anchor xml:id="_VP__Parse_8hpp_source_1l00096"/>00096 
+</programlisting></section>

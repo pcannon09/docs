@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_VP__Parse_8cpp" xml:lang="en-US">
+<title>src/VP_Parse.cpp File Reference</title>
+<indexterm><primary>src/VP_Parse.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;filesystem&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;map&gt;<?linebreak?>#include &lt;fstream&gt;<?linebreak?>#include &lt;sstream&gt;<?linebreak?>#include &quot;../inc/varparse.cpp/VP_Parse.hpp&quot;<?linebreak?></programlisting><simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacevp">vp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_VP__Parse_8cpp_1adb99666973bac16ee2e3ae6bd5cfb242">__VP_ERROR_THROW_DEFAULT_MSG</link>&#160;&#160;&#160;    std::string(&quot;Parser(&quot; + this-&gt;id + &quot;): &quot;)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_VP__Parse_8cpp_1adb99666973bac16ee2e3ae6bd5cfb242"/><section>
+    <title>__VP_ERROR_THROW_DEFAULT_MSG</title>
+<indexterm><primary>__VP_ERROR_THROW_DEFAULT_MSG</primary><secondary>VP_Parse.cpp</secondary></indexterm>
+<indexterm><primary>VP_Parse.cpp</primary><secondary>__VP_ERROR_THROW_DEFAULT_MSG</secondary></indexterm>
+<para><computeroutput>#define __VP_ERROR_THROW_DEFAULT_MSG&#160;&#160;&#160;    std::string(&quot;Parser(&quot; + this-&gt;id + &quot;): &quot;)</computeroutput></para><para>
+Definition at line <link linkend="_VP__Parse_8cpp_source_1l00011">11</link> of file <link linkend="_VP__Parse_8cpp_source">VP_Parse.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00011 <emphasis role="preprocessor">#define&#32;__VP_ERROR_THROW_DEFAULT_MSG&#32;\</emphasis>
+00012 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;std::string(&quot;Parser(&quot;&#32;+&#32;this-&gt;id&#32;+&#32;&quot;):&#32;&quot;)</emphasis>
+</programlisting><para>
+Referenced by <link linkend="_VP__Parse_8cpp_source_1l00016">vp::Parser::Parser()</link>.</para>
+</section>
+</section>
+</section>

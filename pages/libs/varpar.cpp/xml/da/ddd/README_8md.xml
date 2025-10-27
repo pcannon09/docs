@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="da/ddd/README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>VarPar<sp/>-<sp/>Variable<sp/>Parser</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">`VarPar`<sp/>(Variable<sp/>Parser)<sp/>is<sp/>a<sp/>extremely<sp/>lightweight<sp/>**C++17+<sp/>configuration<sp/>file<sp/>parser**<sp/>that<sp/>provides<sp/>simple,<sp/>strict<sp/>key<sp/>value<sp/>parsing<sp/>for<sp/>flat<sp/>text<sp/>configuration<sp/>files</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Strict<sp/>Parsing:**<sp/>Ensures<sp/>each<sp/>key<sp/>is<sp/>uniquely<sp/>defined<sp/>and<sp/>every<sp/>line<sp/>contains<sp/>a<sp/>valid<sp/>`key<sp/>=<sp/>value`<sp/>pair</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Automatic<sp/>Validation:**<sp/>Checks<sp/>file<sp/>existence<sp/>and<sp/>verifies<sp/>the<sp/>correct<sp/>file<sp/>extension<sp/>before<sp/>parsing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Informative<sp/>Error<sp/>Handling:**<sp/>Reports<sp/>precise<sp/>error<sp/>messages<sp/>and<sp/>line<sp/>numbers<sp/>for<sp/>duplicate<sp/>or<sp/>malformed<sp/>entries</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Minimal<sp/>Dependencies:**<sp/>Uses<sp/>only<sp/>standard<sp/>C++17<sp/>libraries</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Lightweight<sp/>Runtime<sp/>Status:**<sp/>Parser<sp/>state<sp/>(constructed<sp/>/<sp/>error)<sp/>is<sp/>tracked<sp/>through<sp/>`ParserStatus`<sp/>for<sp/>safe<sp/>checks</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Core<sp/>Components</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`vp::Parser`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Main<sp/>parsing<sp/>class<sp/>responsible<sp/>for<sp/>reading<sp/>and<sp/>interpreting<sp/>configuration<sp/>files.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Constructor</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">vp::Parser(const<sp/>std::string&amp;<sp/>_id,<sp/>const<sp/>std::string&amp;<sp/>_file,<sp/>const<sp/>std::string&amp;<sp/>_extension<sp/>=<sp/>&quot;.varpar&quot;);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`_id`<sp/>—<sp/>Unique<sp/>identifier<sp/>string<sp/>for<sp/>this<sp/>parser<sp/>instance.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`_file`<sp/>—<sp/>File<sp/>path<sp/>to<sp/>the<sp/>config<sp/>file.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`_extension`<sp/>—<sp/>Required<sp/>file<sp/>extension<sp/>(default<sp/>as:<sp/>`.varpar`).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Behavior**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Validates<sp/>that<sp/>`_file`<sp/>exists.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Confirms<sp/>that<sp/>`_file`<sp/>has<sp/>the<sp/>required<sp/>`_extension`.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>If<sp/>any<sp/>checks<sp/>fail,<sp/>the<sp/>parser<sp/>sets<sp/>its<sp/>internal<sp/>error<sp/>status<sp/>and<sp/>logs<sp/>the<sp/>issue<sp/>to<sp/>`std::cerr`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`ParserReturn`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Struct<sp/>returned<sp/>by<sp/>the<sp/>parser<sp/>after<sp/>execution.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">struct<sp/>ParserReturn<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::string&gt;<sp/>config;<sp/><sp/>//<sp/>Parsed<sp/>key<sp/>value<sp/>pairs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>output;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Raw<sp/>messages<sp/>and<sp/>errors</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bool<sp/>success;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Parsing<sp/>result<sp/>flag</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`ParserStatus`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Represents<sp/>the<sp/>parser’s<sp/>internal<sp/>construction<sp/>status.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">struct<sp/>ParserStatus<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bool<sp/>constructed;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Whether<sp/>parser<sp/>was<sp/>constructed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>error;<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Any<sp/>error<sp/>message<sp/>generated<sp/>during<sp/>setup</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Public<sp/>Methods</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`ParserReturn<sp/>parse()`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Executes<sp/>parsing<sp/>and<sp/>returns<sp/>a<sp/>structured<sp/>result.</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>successful,<sp/>`ParserReturn::success`<sp/>is<sp/>`true`<sp/>and<sp/>`config`<sp/>contains<sp/>parsed<sp/>pairs.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`std::string<sp/>getVal(const<sp/>std::string&amp;<sp/>_key)<sp/>const`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Retrieves<sp/>a<sp/>parsed<sp/>value<sp/>by<sp/>key.</highlight></codeline>
+<codeline><highlight class="normal">Returns<sp/>an<sp/>empty<sp/>string<sp/>if<sp/>the<sp/>key<sp/>is<sp/>missing.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`ParserStatus<sp/>checkStatus()<sp/>const`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Returns<sp/>the<sp/>internal<sp/>construction<sp/>status<sp/>for<sp/>validation<sp/>before<sp/>parsing.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`std::string<sp/>getID()<sp/>const`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Returns<sp/>the<sp/>parser’s<sp/>unique<sp/>identifier.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Parsing<sp/>Rules</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Lines<sp/>starting<sp/>with<sp/>`;`<sp/>or<sp/>empty<sp/>lines<sp/>are<sp/>ignored.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Lines<sp/>must<sp/>follow<sp/>the<sp/>format:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">key<sp/>=<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Whitespace<sp/>around<sp/>keys<sp/>and<sp/>values<sp/>is<sp/>trimmed<sp/>automatically.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Duplicate<sp/>keys<sp/>produce<sp/>an<sp/>immediate<sp/>error,<sp/>halting<sp/>parsing.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Example<sp/>File<sp/>(`config.varpar`)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```ini</highlight></codeline>
+<codeline><highlight class="normal">;<sp/>Example<sp/>config<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">hello_world<sp/>=<sp/>&quot;Bye...&quot;</highlight></codeline>
+<codeline><highlight class="normal">random<sp/>=<sp/>&quot;aa&quot;</highlight></codeline>
+<codeline><highlight class="normal">randomText<sp/>=<sp/>&quot;aab&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Example<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;varparse/VP_Parse.hpp&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>vp::Parser<sp/>parse(&quot;main-parse&quot;,<sp/>&quot;/path/to/file.varpar&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(auto<sp/>status<sp/>=<sp/>parse.checkStatus()<sp/>;<sp/>!status.constructed)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/>&quot;Failed<sp/>to<sp/>construct:<sp/>&quot;<sp/>&lt;&lt;<sp/>parse.getID()<sp/>&lt;&lt;<sp/>&quot;\n&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/>status.error<sp/>&lt;&lt;<sp/>&quot;\n&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::exit(1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;Output:\n&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>vp::ParserReturn<sp/>parsed<sp/>=<sp/>parse.parse();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(const<sp/>auto<sp/>&amp;x<sp/>:<sp/>parsed.output)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/>x<sp/>&lt;&lt;<sp/>&quot;\n&quot;;<sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(!parsed.success)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/>&quot;[<sp/>!<sp/>]<sp/>Exiting<sp/>due<sp/>to<sp/>an<sp/>error\n&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::exit(1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(const<sp/>auto<sp/>&amp;[k,<sp/>v]<sp/>:<sp/>parsed.config)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/>k<sp/>&lt;&lt;<sp/>&quot;<sp/>=<sp/>&quot;<sp/>&lt;&lt;<sp/>v<sp/>&lt;&lt;<sp/>&quot;\n&quot;;<sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;Value<sp/>of<sp/>`hello_world`:<sp/>&quot;<sp/>&lt;&lt;<sp/>parse.getVal(&quot;hello_world&quot;)<sp/>&lt;&lt;<sp/>&quot;\n&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Error<sp/>Example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Given<sp/>this<sp/>invalid<sp/>input:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```ini</highlight></codeline>
+<codeline><highlight class="normal">hello_world<sp/>=<sp/>&quot;Bye...&quot;</highlight></codeline>
+<codeline><highlight class="normal">hello_world<sp/>=<sp/>&quot;Bye...a&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Output:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">ERR:<sp/>LINE:<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">Duplicate<sp/>member<sp/>:<sp/>hello_world<sp/>=<sp/>&quot;Bye...a&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Due<sp/>to<sp/>the<sp/>fact<sp/>that<sp/>there<sp/>are<sp/>two<sp/>keys<sp/>with<sp/>the<sp/>same<sp/>name</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Supported<sp/>Compilers</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>GCC<sp/>&gt;=<sp/>7.0</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Clang<sp/>&gt;=<sp/>6.0</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>MSVC<sp/>&gt;=<sp/>19.14<sp/>(Visual<sp/>Studio<sp/>2017<sp/>15.7+)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Requires<sp/>**C++17**<sp/>or<sp/>newer</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

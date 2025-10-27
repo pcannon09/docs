@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structvp_1_1ParserStatus" xml:lang="en-US">
+<title>vp::ParserStatus Struct Reference</title>
+<indexterm><primary>vp::ParserStatus</primary></indexterm>
+<para>
+
+<para>Set the error and if the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput> class was constructed. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;VP_Parse.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_structvp_1_1ParserStatus_1a6c74cdf7a1ba1706ea10f90f1c180195">constructed</link> = false</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structvp_1_1ParserStatus_1a4fca833cc9bbee7722793c48961dfac3">error</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Set the error and if the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput> class was constructed. </para>
+<para>
+Definition at line <link linkend="_VP__Parse_8hpp_source_1l00015">15</link> of file <link linkend="_VP__Parse_8hpp_source">VP_Parse.hpp</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structvp_1_1ParserStatus_1a6c74cdf7a1ba1706ea10f90f1c180195"/><section>
+    <title>constructed</title>
+<indexterm><primary>constructed</primary><secondary>vp::ParserStatus</secondary></indexterm>
+<indexterm><primary>vp::ParserStatus</primary><secondary>constructed</secondary></indexterm>
+<para><computeroutput>bool vp::ParserStatus::constructed = false</computeroutput></para><para>
+Definition at line <link linkend="_VP__Parse_8hpp_source_1l00019">19</link> of file <link linkend="_VP__Parse_8hpp_source">VP_Parse.hpp</link>.</para>
+</section>
+<anchor xml:id="_structvp_1_1ParserStatus_1a4fca833cc9bbee7722793c48961dfac3"/><section>
+    <title>error</title>
+<indexterm><primary>error</primary><secondary>vp::ParserStatus</secondary></indexterm>
+<indexterm><primary>vp::ParserStatus</primary><secondary>error</secondary></indexterm>
+<para><computeroutput>std::string vp::ParserStatus::error</computeroutput></para><para>
+Definition at line <link linkend="_VP__Parse_8hpp_source_1l00017">17</link> of file <link linkend="_VP__Parse_8hpp_source">VP_Parse.hpp</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/varparse.cpp/<link linkend="_VP__Parse_8hpp">VP_Parse.hpp</link></section>
+</section>

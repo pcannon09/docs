@@ -1,0 +1,52 @@
+.TH "src/VP_Parse.cpp" 3 "Version v1.0.0-build" "varpar.cpp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/VP_Parse.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <filesystem>\fP
+.br
+\fR#include <iostream>\fP
+.br
+\fR#include <map>\fP
+.br
+\fR#include <fstream>\fP
+.br
+\fR#include <sstream>\fP
+.br
+\fR#include '\&.\&./inc/varparse\&.cpp/VP_Parse\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBvp\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__VP_ERROR_THROW_DEFAULT_MSG\fP       std::string('Parser(' + this\->id + '): ')"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __VP_ERROR_THROW_DEFAULT_MSG       std::string('Parser(' + this\->id + '): ')"
+
+.PP
+Definition at line \fB11\fP of file \fBVP_Parse\&.cpp\fP\&.
+.nf
+11 #define __VP_ERROR_THROW_DEFAULT_MSG \\
+12     std::string("Parser(" + this\->id + "): ")
+.PP
+.fi
+
+.PP
+Referenced by \fBvp::Parser::Parser()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for varpar\&.cpp from the source code\&.

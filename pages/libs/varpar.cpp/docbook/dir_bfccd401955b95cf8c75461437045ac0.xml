@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_bfccd401955b95cf8c75461437045ac0" xml:lang="en-US">
+<title>inc Directory Reference</title>
+<indexterm><primary>inc Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_ab4bb91c00e4f789b4c03f02aee8c67b">varparse.cpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

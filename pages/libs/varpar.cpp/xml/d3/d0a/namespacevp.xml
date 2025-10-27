@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="d3/d0a/namespacevp" kind="namespace" language="C++">
+    <compoundname>vp</compoundname>
+    <innerclass refid="de/d69/classvp_1_1Parser" prot="public">vp::Parser</innerclass>
+    <innerclass refid="d7/d4d/structvp_1_1ParserReturn" prot="public">vp::ParserReturn</innerclass>
+    <innerclass refid="d9/d86/structvp_1_1ParserStatus" prot="public">vp::ParserStatus</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d3/d0a/namespacevp_1a7b57f4f0e8a0b3826aae9c210d9aff9e" prot="public" static="no">
+        <type>struct vp::ParserReturn</type>
+        <definition>typedef struct vp::ParserReturn vp::ParserReturn</definition>
+        <argsstring></argsstring>
+        <name>ParserReturn</name>
+        <qualifiedname>vp::ParserReturn</qualifiedname>
+        <briefdescription>
+<para>Returned parser information This includes the configuration, output and success of the <computeroutput><ref refid="de/d69/classvp_1_1Parser" kindref="compound">Parser</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="33" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/d0a/namespacevp_1a03bdbb3011959e2cb9b0256ae4931c3f" prot="public" static="no">
+        <type>struct vp::ParserStatus</type>
+        <definition>typedef struct vp::ParserStatus vp::ParserStatus</definition>
+        <argsstring></argsstring>
+        <name>ParserStatus</name>
+        <qualifiedname>vp::ParserStatus</qualifiedname>
+        <briefdescription>
+<para>Set the error and if the <computeroutput><ref refid="de/d69/classvp_1_1Parser" kindref="compound">Parser</ref></computeroutput> class was constructed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/varparse.cpp/VP_Parse.hpp" line="20" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/varparse.cpp/VP_Parse.hpp" line="10" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,57 @@
+\doxysection{VPpredefines.\+hpp}
+\hypertarget{VPpredefines_8hpp_source}{}\label{VPpredefines_8hpp_source}\index{inc/varparse.cpp/VPpredefines.hpp@{inc/varparse.cpp/VPpredefines.hpp}}
+\mbox{\hyperlink{VPpredefines_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00002}00002\ \textcolor{comment}{\ *\ VPpredefines.h\ -\/\ pcannonProjectStandards}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00003}00003\ \textcolor{comment}{\ *\ Predefines\ for\ C\ and\ C++\ projects}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00004}00004\ \textcolor{comment}{\ *\ STD\ Information:\ 20250723\ -\/\ 1.0S}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00005}00005\ \textcolor{comment}{\ *\ NOTES:}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00006}00006\ \textcolor{comment}{\ *\ \ Renamed\ to\ \`{}VPpredefines.hpp`}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00007}00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00011}00011\ \textcolor{comment}{//\ Project\ setup}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00012}\mbox{\hyperlink{VPpredefines_8hpp_a15dbb22bf5159c4980c6dd33c60ac822}{00012}}\ \textcolor{preprocessor}{\#define\ VP\_DEFAULT\_CPP\_STD\ \ \ \ \ \ \ \ \ \ 201703L}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00014}00014\ \textcolor{comment}{//\ Versioning}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00015}\mbox{\hyperlink{VPpredefines_8hpp_a0d04e082465a6e340ebb6c5ada136014}{00015}}\ \textcolor{preprocessor}{\#define\ VP\_VERSION\_MAJOR\ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00016}\mbox{\hyperlink{VPpredefines_8hpp_a1019f18e2f8142ddb746e04c1e7c96d0}{00016}}\ \textcolor{preprocessor}{\#define\ VP\_VERSION\_MINOR\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00017}\mbox{\hyperlink{VPpredefines_8hpp_add0085d50a19df118f761bd30ff31915}{00017}}\ \textcolor{preprocessor}{\#define\ VP\_VERSION\_PATCH\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00019}\mbox{\hyperlink{VPpredefines_8hpp_adba9e3334a27d813053e1a2fdc8aa742}{00019}}\ \textcolor{preprocessor}{\#define\ VP\_VERSION\_STD\ \ \ \ \ \ \ \ \ \ \ \ \ \ 20251027}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00021}00021\ \textcolor{comment}{//\ Version\ states:}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00022}00022\ \textcolor{comment}{//\ *\ dev}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00023}00023\ \textcolor{comment}{//\ *\ beta}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00024}00024\ \textcolor{comment}{//\ *\ build}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00025}\mbox{\hyperlink{VPpredefines_8hpp_a3426791e9b2549b2ac97b36308bffac6}{00025}}\ \textcolor{preprocessor}{\#define\ VP\_VERSION\_STATE\ \ \ \ \ \ \ \ \ \ "{}build"{}}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00027}\mbox{\hyperlink{VPpredefines_8hpp_ab6c7ba376b4202fd3238af9ae909c1e7}{00027}}\ \textcolor{preprocessor}{\#define\ VP\_VERSION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((VP\_VERSION\_MAJOR<<16)|(VP\_VERSION\_MINOR<<8)|(VP\_VERSION\_PATCH)|(VP\_VERSION\_STATE\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00029}\mbox{\hyperlink{VPpredefines_8hpp_a8b7a6e9c413f7dbde2c61703af00b44c}{00029}}\ \textcolor{preprocessor}{\#define\ VP\_VERSION\_CHECK(VP\_VERSION\_MAJOR,\ VP\_VERSION\_MINOR,\ VP\_VERSION\_PATCH,\ VP\_VERSION\_STATE)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00030}00030\ \textcolor{preprocessor}{\ \ \ \ (((VP\_VERSION\_MAJOR)<<16)|((VP\_VERSION\_MINOR)<<8)|(VP\_VERSION\_PATCH)|((VP\_VERSION\_STATE)\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00032}00032\ \textcolor{comment}{//\ Macro\ utils}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00033}\mbox{\hyperlink{VPpredefines_8hpp_a6741c6a947dfa9b4dd9c6cfbee6c3182}{00033}}\ \textcolor{preprocessor}{\#define\ VP\_STRINGIFY(x)\ \#x}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00034}\mbox{\hyperlink{VPpredefines_8hpp_a8752acd8cfec08e8d3f76f9fcd6f0354}{00034}}\ \textcolor{preprocessor}{\#define\ VP\_TOSTRING(x)\ VP\_STRINGIFY(x)}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00036}00036\ \textcolor{preprocessor}{\#ifndef\ VP\_DEV}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00037}\mbox{\hyperlink{VPpredefines_8hpp_a99240917d1d719ed5b348a0b9e45ec1a}{00037}}\ \textcolor{preprocessor}{\#\ \ \ define\ VP\_DEV\ true}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00038}00038\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00040}00040\ \textcolor{preprocessor}{\#ifdef\ WIN32}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00041}00041\ \textcolor{preprocessor}{\#\ \ \ define\ VP\_OS\_WIN32}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00042}00042\ \textcolor{preprocessor}{\#elif\ defined(\_\_APPLE\_\_)\ ||\ defined(\_\_MACH\_\_)\ ||\ defined(Macintosh)}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00043}00043\ \textcolor{preprocessor}{\#\ \ \ define\ VP\_OS\_MACOS}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00044}00044\ \textcolor{preprocessor}{\#elif\ defined(\_\_linux\_\_)\ ||\ defined(\_\_unix)\ ||\ defined(\_\_unix\_\_)}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00045}00045\ \textcolor{preprocessor}{\#\ \ \ define\ VP\_OS\_UNIX\_LINUX}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00046}00046\ \textcolor{preprocessor}{\#elif\ defined(\_\_FreeBSD\_\_)}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00047}00047\ \textcolor{preprocessor}{\#\ \ \ define\ VP\_OS\_FREEBSD}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00048}00048\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00049}00049\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Current\ platform\ is\ not\ supported"{}}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00050}00050\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ defined(WIN32)\ //\ Platform\ check}}
+\DoxyCodeLine{\Hypertarget{VPpredefines_8hpp_source_l00051}00051\ }
+
+\end{DoxyCode}

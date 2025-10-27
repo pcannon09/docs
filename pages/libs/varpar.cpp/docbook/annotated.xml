@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_classvp_1_1Parser">vp::Parser</link><link linkend="_structvp_1_1ParserReturn">vp::ParserReturn</link>
+<para>Returned parser information This includes the configuration, output and success of the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput> </para>
+<link linkend="_structvp_1_1ParserStatus">vp::ParserStatus</link>
+<para>Set the error and if the <computeroutput><link linkend="_classvp_1_1Parser">Parser</link></computeroutput> class was constructed </para>
+</section>
