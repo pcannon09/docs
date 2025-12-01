@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+<title>
+<para>CVEC </para>
+</title>
+<indexterm><primary>CVEC</primary></indexterm>
+
+<para><anchor xml:id="_index_1md_README"/></para>
+<section xml:id="_index_1autotoc_md1">
+<title>1.0.0</title><section xml:id="_index_1autotoc_md2">
+<title><emphasis>&quot;Functional C++ vector-like manipulation for C&quot;</emphasis></title>
+<para><computeroutput><link linkend="_structCVEC">CVEC</link></computeroutput> is a minimal and efficient C dynamic array library that offers type-agnostic vector behavior with optional capacity control and safe dynamic resizing. It provides an interface similar to <computeroutput>std::vector</computeroutput> in C++ but implemented in pure C with focus on simplicity, safety, and flexibility.</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md4">
+<title>Supported Compilers</title>
+<para><emphasis role="bold">GCC</emphasis> &gt;= 5.0 <emphasis role="bold">Clang</emphasis> &gt;= 3.5</para>
+
+<para>All compilers <emphasis role="bold">must support C99</emphasis> or higher.</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md6">
+<title>Features</title>
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Dynamic Capacity Management</emphasis> Initialize, resize, and grow vectors automatically, or lock capacity with <computeroutput>forceCap</computeroutput> for predictable memory limits.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Safe Element Operations</emphasis> Supports indexed push, insert, and removal without exposing raw pointer arithmetic.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Front, Back, and Indexed Insertion</emphasis> Add elements to the end, front, or any specific position via <computeroutput><link linkend="_cvec_8h_1ac1af20c5a1c528bc5651f379386cbd0c">__cvec_push()</link></computeroutput>, <computeroutput><link linkend="_cvec_8h_1aa150e437b43f307726e4063ce76b60e8">__cvec_pushFront()</link></computeroutput>, or <computeroutput><link linkend="_cvec_8h_1a65f0ba8829599270b50cdd2e63b2bc7b">__cvec_pushIndex()</link></computeroutput>.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Element Access and Queries</emphasis> Retrieve or validate indices safely with <computeroutput><link linkend="_cvec_8h_1a12eedad4150eeda5211fccc3817093ca">cvec_get()</link></computeroutput>, <computeroutput><link linkend="_cvec_8h_1aa6cb8d7b5f1186daf4b4a8def3dfbe06">cvec_at()</link></computeroutput>, and <computeroutput><link linkend="_cvec_8h_1ade25c4f7888a5555d6a78d1eabd38385">cvec_atCap()</link></computeroutput>.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Merging and Copying</emphasis> Combine vectors or duplicate existing ones using <computeroutput><link linkend="_cvec_8h_1a53ee0e61343e971ea758a475821e2b6a">cvec_merge()</link></computeroutput> and <computeroutput><link linkend="_cvec_8h_1a7a249c4709f3606bf78f6068a635972d">cvec_initCopy()</link></computeroutput>.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Deletion Utilities</emphasis> Delete by index, by element, or remove multiple matching elements through <computeroutput><link linkend="_cvec_8h_1a1f946d01c379b8973d0bf4c41e01826d">__cvec_delIndex()</link></computeroutput>, <computeroutput><link linkend="_cvec_8h_1a97ae4722dc7a75afe22b665abb6f1f52">__cvec_del()</link></computeroutput>, and <computeroutput><link linkend="_cvec_8h_1a10df95775694048fb7755e3ebf2be8e2">cvec_remove()</link></computeroutput>.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Reversal and Shrinking</emphasis> Reverse vector order or reduce capacity using <computeroutput><link linkend="_cvec_8h_1a0bc4975070bfe7dd941c1a383e9624f7">cvec_reverse()</link></computeroutput> and <computeroutput><link linkend="_cvec_8h_1ac5f029841417974e9b6f1238bd2b0dd0">cvec_shrink()</link></computeroutput>.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Optional Dynamic Capacity</emphasis> When <computeroutput>dynamicCap</computeroutput> is disabled, all operations must fit within the current capacity. This is useful for embedded or low-level systems.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md8">
+<title>Basic Usage</title>
+<para>Example: creating, pushing, and accessing integer elements.</para>
+
+<para><literallayout><computeroutput>#include&#32;&quot;cvec.h&quot;
+#include&#32;&lt;stdio.h&gt;
+
+int&#32;main(void)
+{
+&#32;&#32;&#32;&#32;CVEC&#32;v&#32;=&#32;cvec_init(4,&#32;sizeof(int));&#32;//&#32;Create&#32;a&#32;vector&#32;for&#32;ints&#32;with&#32;capacity&#32;of&#32;4
+
+&#32;&#32;&#32;&#32;for&#32;(int&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;10;&#32;i++)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__cvec_push(&amp;v,&#32;&amp;i);&#32;//&#32;Push&#32;elements,&#32;auto-resizing&#32;as&#32;needed
+
+&#32;&#32;&#32;&#32;for&#32;(int&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;v.size;&#32;i++)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(&quot;%d&#32;&quot;,&#32;*(int*)cvec_get(&amp;v,&#32;i));&#32;//&#32;Print&#32;each&#32;element
+
+&#32;&#32;&#32;&#32;cvec_destroy(&amp;v);&#32;//&#32;Free&#32;allocated&#32;memory
+}
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md10">
+<title>Error Handling</title>
+<para>Most functions return:</para>
+
+<para><itemizedlist>
+<listitem>
+<para><computeroutput>CVEC_SUCCESS</computeroutput> - operation succeeded</para>
+</listitem><listitem>
+<para><computeroutput>CVEC_FAIL</computeroutput> - invalid input or operation</para>
+</listitem><listitem>
+<para><computeroutput>CVEC_FAIL_ALLOCATION</computeroutput> — allocation or reallocation failed</para>
+</listitem><listitem>
+<para><computeroutput>CVEC_FORCECAP_FAIL</computeroutput> — capacity exceeded while <computeroutput>forceCap</computeroutput> is enabled</para>
+</listitem><listitem>
+<para><computeroutput>CVEC_OUT_BOUNDS</computeroutput> — invalid index access</para>
+</listitem><listitem>
+<para><computeroutput>CVEC_ELEM_NOT_FOUND</computeroutput> — target element not found</para>
+</listitem><listitem>
+<para><computeroutput>CVEC_NPOS</computeroutput> — element not found (for <computeroutput><link linkend="_cvec_8h_1a6ac659e2ca5f4b2322a6ddf11e01f22d">__cvec_find()</link></computeroutput>)</para>
+</listitem></itemizedlist>
+</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md12">
+<title>Internal Behavior</title>
+<para>Internal (private) functions use the <computeroutput>__cvec_</computeroutput> prefix, for example:</para>
+
+<para><itemizedlist>
+<listitem>
+<para><computeroutput><link linkend="_cvec_8h_1ac1af20c5a1c528bc5651f379386cbd0c">__cvec_push()</link></computeroutput> — push element to the end</para>
+</listitem><listitem>
+<para><computeroutput><link linkend="_cvec_8h_1aa150e437b43f307726e4063ce76b60e8">__cvec_pushFront()</link></computeroutput> — push element to the beginning</para>
+</listitem><listitem>
+<para><computeroutput><link linkend="_cvec_8h_1a65f0ba8829599270b50cdd2e63b2bc7b">__cvec_pushIndex()</link></computeroutput> — insert at a specific index</para>
+</listitem><listitem>
+<para><computeroutput><link linkend="_cvec_8h_1a1f946d01c379b8973d0bf4c41e01826d">__cvec_delIndex()</link></computeroutput> — delete element at or after a specific index</para>
+</listitem></itemizedlist>
+</para>
+
+<para>These functions are used internally by the main API but may also be called directly if low-level control is desired.</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md14">
+<title>Notes on Capacity</title>
+<para><itemizedlist>
+<listitem>
+<para>If <computeroutput>forceCap</computeroutput> is set to <computeroutput>true</computeroutput>, exceeding the capacity will <emphasis role="bold">not</emphasis> reallocate memory. The function instead returns <computeroutput>CVEC_FORCECAP_FAIL</computeroutput>.</para>
+</listitem><listitem>
+<para>If <computeroutput>dynamicCap</computeroutput> is <computeroutput>false</computeroutput>, the capacity remains fixed even if <computeroutput>forceCap</computeroutput> is disabled.</para>
+</listitem><listitem>
+<para>Default allocation growth is defined by <computeroutput>__CVEC_CAP_ADDITION</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md16">
+<title>Example: Merging Two Vectors</title>
+<para><literallayout><computeroutput>#include&#32;&quot;cvec.h&quot;
+#include&#32;&lt;stdio.h&gt;
+
+int&#32;main(void)
+{
+&#32;&#32;&#32;&#32;CVEC&#32;a&#32;=&#32;cvec_init(2,&#32;sizeof(int));
+&#32;&#32;&#32;&#32;CVEC&#32;b&#32;=&#32;cvec_init(2,&#32;sizeof(int));
+
+&#32;&#32;&#32;&#32;for&#32;(int&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;3;&#32;i++)&#32;__cvec_push(&amp;a,&#32;&amp;i);
+&#32;&#32;&#32;&#32;for&#32;(int&#32;i&#32;=&#32;3;&#32;i&#32;&lt;&#32;6;&#32;i++)&#32;__cvec_push(&amp;b,&#32;&amp;i);
+
+&#32;&#32;&#32;&#32;cvec_merge(&amp;a,&#32;&amp;b);&#32;//&#32;Merge&#32;`b`&#32;into&#32;`a`
+
+&#32;&#32;&#32;&#32;for&#32;(int&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;a.size;&#32;i++)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(&quot;%d&#32;&quot;,&#32;*(int*)cvec_get(&amp;a,&#32;i));
+
+&#32;&#32;&#32;&#32;cvec_destroy(&amp;a);
+&#32;&#32;&#32;&#32;cvec_destroy(&amp;b);
+}
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md18">
+<title>Internal Helpers</title>
+<para>Helper functions such as <computeroutput><link linkend="_cvec_8h_1a8f79c0b613222e2a14a3b6bd1faf226c">__cvec_hasEnoughCap()</link></computeroutput> and macros like <computeroutput>__CVEC_SET_NULL()</computeroutput> are used internally for safety and consistency. These are not part of the <emphasis role="bold">public API</emphasis> and should not be called directly in user code.</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md20">
+<title>Summary</title>
+<para><computeroutput><link linkend="_structCVEC">CVEC</link></computeroutput> simplifies handling generic dynamic arrays in C while remaining lightweight and dependency free. It’s ideal for embedded systems, lightweight applications, or any project needing a simple vector-like structure without C++ overhead. </para>
+</section>
+</chapter>

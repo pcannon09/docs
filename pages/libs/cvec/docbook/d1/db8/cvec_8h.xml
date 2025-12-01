@@ -1,0 +1,857 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cvec_8h" xml:lang="en-US">
+<title>inc/cvec/cvec.h File Reference</title>
+<indexterm><primary>inc/cvec/cvec.h</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structCVEC">CVEC</link></para>
+
+<para>Custom generic dynamic vector type. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_cvec_8h_1a97ae4722dc7a75afe22b665abb6f1f52">__cvec_del</link> (<link linkend="_structCVEC">CVEC</link> *_vec, void *_elem)</para>
+
+<para>Delete first occurrence of matching value. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1a1f946d01c379b8973d0bf4c41e01826d">__cvec_delIndex</link> (<link linkend="_structCVEC">CVEC</link> *_vec, void *_elem, const size_t start)</para>
+
+<para>Delete matching element starting search at index. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1ab21834546eb6e7d575cdaaccb0e82795">__cvec_destroySplit</link> (<link linkend="_structCVEC">CVEC</link> *_vec)</para>
+
+<para>Cleanup after split operations. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1a6ac659e2ca5f4b2322a6ddf11e01f22d">__cvec_find</link> (const <link linkend="_structCVEC">CVEC</link> *_vec, void *_find)</para>
+
+<para>Search for an element in the vector. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_cvec_8h_1a8f79c0b613222e2a14a3b6bd1faf226c">__cvec_hasEnoughCap</link> (const <link linkend="_structCVEC">CVEC</link> *_vec, const size_t _additions)</para>
+
+<para>Check whether capacity is sufficient for requested additions. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1ac1af20c5a1c528bc5651f379386cbd0c">__cvec_push</link> (<link linkend="_structCVEC">CVEC</link> *_vec, void *_elem)</para>
+
+<para>Insert at end of vector. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1aa150e437b43f307726e4063ce76b60e8">__cvec_pushFront</link> (<link linkend="_structCVEC">CVEC</link> *_vec, void *_elem)</para>
+
+<para>Insert new element at beginning. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1a65f0ba8829599270b50cdd2e63b2bc7b">__cvec_pushIndex</link> (<link linkend="_structCVEC">CVEC</link> *_vec, const size_t _index, void *_elem)</para>
+
+<para>Insert element at specific index, shifting elements as needed. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1a3f287ab92bb2f2a2b63c5db1e6396357">__cvec_set</link> (<link linkend="_structCVEC">CVEC</link> *_vec, const size_t _index, void *_set)</para>
+
+<para>Replace value at given index. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_cvec_8h_1aa6cb8d7b5f1186daf4b4a8def3dfbe06">cvec_at</link> (const <link linkend="_structCVEC">CVEC</link> *_vec, const size_t _index)</para>
+
+<para>Check whether element exists at index. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_cvec_8h_1ade25c4f7888a5555d6a78d1eabd38385">cvec_atCap</link> (const <link linkend="_structCVEC">CVEC</link> *_vec, const size_t _index)</para>
+
+<para>Check whether element exists within vector capacity. </para>
+</listitem>
+            <listitem><para>void <link linkend="_cvec_8h_1a6cca94bad4f8ea2ce68cb973f68f0ebe">cvec_clear</link> (<link linkend="_structCVEC">CVEC</link> *_vec)</para>
+
+<para>Clear vector contents but keep capacity unchanged. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1abb385731b26c20515b3707491cc5d641">cvec_destroy</link> (<link linkend="_structCVEC">CVEC</link> *_vec)</para>
+
+<para>Destroy a <link linkend="_structCVEC">CVEC</link>, freeing allocated memory and invalidating the structure. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1a94138b862886cc78cb31f4d978aa3ddb">cvec_emptyAll</link> (<link linkend="_structCVEC">CVEC</link> *_vec)</para>
+
+<para>Clear all elements and reset size to zero without freeing memory. </para>
+</listitem>
+            <listitem><para>void * <link linkend="_cvec_8h_1a12eedad4150eeda5211fccc3817093ca">cvec_get</link> (const <link linkend="_structCVEC">CVEC</link> *_vec, const size_t _index)</para>
+
+<para>Get a pointer to an element at specified index. </para>
+</listitem>
+            <listitem><para><link linkend="_structCVEC">CVEC</link> <link linkend="_cvec_8h_1a874a6704568d26f70517c82df84d7feb">cvec_init</link> (int _cap, size_t _elemSize)</para>
+
+<para>Initialize a new vector with requested capacity and element size. </para>
+</listitem>
+            <listitem><para><link linkend="_structCVEC">CVEC</link> <link linkend="_cvec_8h_1a7a249c4709f3606bf78f6068a635972d">cvec_initCopy</link> (const <link linkend="_structCVEC">CVEC</link> *_src)</para>
+
+<para>Create a deep copy of an existing <link linkend="_structCVEC">CVEC</link>. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1a53ee0e61343e971ea758a475821e2b6a">cvec_merge</link> (<link linkend="_structCVEC">CVEC</link> *_toMerge, const <link linkend="_structCVEC">CVEC</link> *_input)</para>
+
+<para>Merge contents of <computeroutput>_input</computeroutput> vector into <computeroutput>_toMerge</computeroutput>. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1adfdf6a2c9c486b1ff45f16477306426a">cvec_popBack</link> (<link linkend="_structCVEC">CVEC</link> *_vec)</para>
+
+<para>Remove the last element. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1a0de85956cadbfa8360190a7bc8940bae">cvec_popFront</link> (<link linkend="_structCVEC">CVEC</link> *_vec)</para>
+
+<para>Remove the first element, shifting all others left. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1a10df95775694048fb7755e3ebf2be8e2">cvec_remove</link> (<link linkend="_structCVEC">CVEC</link> *_vec, const size_t _index)</para>
+
+<para>Remove an element at a specific index. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1a0bc4975070bfe7dd941c1a383e9624f7">cvec_reverse</link> (<link linkend="_structCVEC">CVEC</link> *_vec)</para>
+
+<para>Reverse the order of elements in place. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1ac5f029841417974e9b6f1238bd2b0dd0">cvec_shrink</link> (<link linkend="_structCVEC">CVEC</link> *_vec)</para>
+
+<para>Shrink allocated memory to match current size. </para>
+</listitem>
+            <listitem><para>int <link linkend="_cvec_8h_1aeced9d211e8e88f791f5c225f7719504">cvec_split</link> (<link linkend="_structCVEC">CVEC</link> *_vec, char *_str, const char *_del)</para>
+
+<para>Split a string by delimiter and store parts inside <link linkend="_structCVEC">CVEC</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_cvec_8h_1a24d698eb1e7ae45db851b15c5d7ed590">cvec_swap</link> (<link linkend="_structCVEC">CVEC</link> *_a, <link linkend="_structCVEC">CVEC</link> *_b)</para>
+
+<para>Swap two <link linkend="_structCVEC">CVEC</link> instances. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_cvec_8h_1a97ae4722dc7a75afe22b665abb6f1f52"/><section>
+    <title>__cvec_del()</title>
+<indexterm><primary>__cvec_del</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>__cvec_del</secondary></indexterm>
+<para><computeroutput>int __cvec_del (<link linkend="_structCVEC">CVEC</link> * _vec, void * _elem)</computeroutput></para><para>
+
+<para>Delete first occurrence of matching value. </para>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a1f946d01c379b8973d0bf4c41e01826d"/><section>
+    <title>__cvec_delIndex()</title>
+<indexterm><primary>__cvec_delIndex</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>__cvec_delIndex</secondary></indexterm>
+<para><computeroutput>int __cvec_delIndex (<link linkend="_structCVEC">CVEC</link> * _vec, void * _elem, const size_t start)</computeroutput></para><para>
+
+<para>Delete matching element starting search at index. </para>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1ab21834546eb6e7d575cdaaccb0e82795"/><section>
+    <title>__cvec_destroySplit()</title>
+<indexterm><primary>__cvec_destroySplit</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>__cvec_destroySplit</secondary></indexterm>
+<para><computeroutput>int __cvec_destroySplit (<link linkend="_structCVEC">CVEC</link> * _vec)</computeroutput></para><para>
+
+<para>Cleanup after split operations. </para>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a6ac659e2ca5f4b2322a6ddf11e01f22d"/><section>
+    <title>__cvec_find()</title>
+<indexterm><primary>__cvec_find</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>__cvec_find</secondary></indexterm>
+<para><computeroutput>int __cvec_find (const <link linkend="_structCVEC">CVEC</link> * _vec, void * _find)</computeroutput></para><para>
+
+<para>Search for an element in the vector. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>index or CVEC_NPOS </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a8f79c0b613222e2a14a3b6bd1faf226c"/><section>
+    <title>__cvec_hasEnoughCap()</title>
+<indexterm><primary>__cvec_hasEnoughCap</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>__cvec_hasEnoughCap</secondary></indexterm>
+<para><computeroutput>bool __cvec_hasEnoughCap (const <link linkend="_structCVEC">CVEC</link> * _vec, const size_t _additions)</computeroutput></para><para>
+
+<para>Check whether capacity is sufficient for requested additions. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true if capacity allows, else false </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1ac1af20c5a1c528bc5651f379386cbd0c"/><section>
+    <title>__cvec_push()</title>
+<indexterm><primary>__cvec_push</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>__cvec_push</secondary></indexterm>
+<para><computeroutput>int __cvec_push (<link linkend="_structCVEC">CVEC</link> * _vec, void * _elem)</computeroutput></para><para>
+
+<para>Insert at end of vector. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_vec</entry><entry>
+<para>Vector </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_elem</entry><entry>
+<para>Pointer to element data to store </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CVEC_SUCCESS or an error code </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1aa150e437b43f307726e4063ce76b60e8"/><section>
+    <title>__cvec_pushFront()</title>
+<indexterm><primary>__cvec_pushFront</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>__cvec_pushFront</secondary></indexterm>
+<para><computeroutput>int __cvec_pushFront (<link linkend="_structCVEC">CVEC</link> * _vec, void * _elem)</computeroutput></para><para>
+
+<para>Insert new element at beginning. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>CVEC_SUCCESS or CVEC_NOT_ENOUGH_CAP </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a65f0ba8829599270b50cdd2e63b2bc7b"/><section>
+    <title>__cvec_pushIndex()</title>
+<indexterm><primary>__cvec_pushIndex</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>__cvec_pushIndex</secondary></indexterm>
+<para><computeroutput>int __cvec_pushIndex (<link linkend="_structCVEC">CVEC</link> * _vec, const size_t _index, void * _elem)</computeroutput></para><para>
+
+<para>Insert element at specific index, shifting elements as needed. </para>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a3f287ab92bb2f2a2b63c5db1e6396357"/><section>
+    <title>__cvec_set()</title>
+<indexterm><primary>__cvec_set</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>__cvec_set</secondary></indexterm>
+<para><computeroutput>int __cvec_set (<link linkend="_structCVEC">CVEC</link> * _vec, const size_t _index, void * _set)</computeroutput></para><para>
+
+<para>Replace value at given index. </para>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1aa6cb8d7b5f1186daf4b4a8def3dfbe06"/><section>
+    <title>cvec_at()</title>
+<indexterm><primary>cvec_at</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_at</secondary></indexterm>
+<para><computeroutput>bool cvec_at (const <link linkend="_structCVEC">CVEC</link> * _vec, const size_t _index)</computeroutput></para><para>
+
+<para>Check whether element exists at index. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_vec</entry><entry>
+<para>Vector to inspect </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_index</entry><entry>
+<para>Element index </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if valid index, false otherwise </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1ade25c4f7888a5555d6a78d1eabd38385"/><section>
+    <title>cvec_atCap()</title>
+<indexterm><primary>cvec_atCap</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_atCap</secondary></indexterm>
+<para><computeroutput>bool cvec_atCap (const <link linkend="_structCVEC">CVEC</link> * _vec, const size_t _index)</computeroutput></para><para>
+
+<para>Check whether element exists within vector capacity. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_vec</entry><entry>
+<para>Vector to inspect </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_index</entry><entry>
+<para>Index inside original allocated capacity </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if index &lt; capacity, else false </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a6cca94bad4f8ea2ce68cb973f68f0ebe"/><section>
+    <title>cvec_clear()</title>
+<indexterm><primary>cvec_clear</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_clear</secondary></indexterm>
+<para><computeroutput>void cvec_clear (<link linkend="_structCVEC">CVEC</link> * _vec)</computeroutput></para><para>
+
+<para>Clear vector contents but keep capacity unchanged. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_vec</entry><entry>
+<para>Pointer to vector </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_cvec_8h_1abb385731b26c20515b3707491cc5d641"/><section>
+    <title>cvec_destroy()</title>
+<indexterm><primary>cvec_destroy</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_destroy</secondary></indexterm>
+<para><computeroutput>int cvec_destroy (<link linkend="_structCVEC">CVEC</link> * _vec)</computeroutput></para><para>
+
+<para>Destroy a <link linkend="_structCVEC">CVEC</link>, freeing allocated memory and invalidating the structure. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_vec</entry><entry>
+<para>Pointer to the <link linkend="_structCVEC">CVEC</link> to destroy </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CVEC_SUCCESS on success, or CVEC_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a94138b862886cc78cb31f4d978aa3ddb"/><section>
+    <title>cvec_emptyAll()</title>
+<indexterm><primary>cvec_emptyAll</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_emptyAll</secondary></indexterm>
+<para><computeroutput>int cvec_emptyAll (<link linkend="_structCVEC">CVEC</link> * _vec)</computeroutput></para><para>
+
+<para>Clear all elements and reset size to zero without freeing memory. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_vec</entry><entry>
+<para>Pointer to the vector </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CVEC_SUCCESS on success, else CVEC_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a12eedad4150eeda5211fccc3817093ca"/><section>
+    <title>cvec_get()</title>
+<indexterm><primary>cvec_get</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_get</secondary></indexterm>
+<para><computeroutput>void * cvec_get (const <link linkend="_structCVEC">CVEC</link> * _vec, const size_t _index)</computeroutput></para><para>
+
+<para>Get a pointer to an element at specified index. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_vec</entry><entry>
+<para>Vector to inspect </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_index</entry><entry>
+<para>Position to access </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to element or NULL if invalid </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a874a6704568d26f70517c82df84d7feb"/><section>
+    <title>cvec_init()</title>
+<indexterm><primary>cvec_init</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_init</secondary></indexterm>
+<para><computeroutput><link linkend="_structCVEC">CVEC</link> cvec_init (int _cap, size_t _elemSize)</computeroutput></para><para>
+
+<para>Initialize a new vector with requested capacity and element size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_cap</entry><entry>
+<para>Initial capacity (number of elements, not bytes) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_elemSize</entry><entry>
+<para>Size in bytes of each element </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A fully initialized <link linkend="_structCVEC">CVEC</link> instance </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a7a249c4709f3606bf78f6068a635972d"/><section>
+    <title>cvec_initCopy()</title>
+<indexterm><primary>cvec_initCopy</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_initCopy</secondary></indexterm>
+<para><computeroutput><link linkend="_structCVEC">CVEC</link> cvec_initCopy (const <link linkend="_structCVEC">CVEC</link> * _src)</computeroutput></para><para>
+
+<para>Create a deep copy of an existing <link linkend="_structCVEC">CVEC</link>. </para>
+</para>
+
+<para>Copies memory, capacity, element properties, and flags.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_src</entry><entry>
+<para>Pointer to the original <link linkend="_structCVEC">CVEC</link> </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A new <link linkend="_structCVEC">CVEC</link> instance with copied data </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a53ee0e61343e971ea758a475821e2b6a"/><section>
+    <title>cvec_merge()</title>
+<indexterm><primary>cvec_merge</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_merge</secondary></indexterm>
+<para><computeroutput>int cvec_merge (<link linkend="_structCVEC">CVEC</link> * _toMerge, const <link linkend="_structCVEC">CVEC</link> * _input)</computeroutput></para><para>
+
+<para>Merge contents of <computeroutput>_input</computeroutput> vector into <computeroutput>_toMerge</computeroutput>. </para>
+</para>
+
+<para>Appends all items from <computeroutput>_input</computeroutput> to <computeroutput>_toMerge</computeroutput>, expanding capacity if allowed.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_toMerge</entry><entry>
+<para>Destination vector to merge into </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_input</entry><entry>
+<para>Vector to merge from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CVEC_SUCCESS or error code (CVEC_FAIL, CVEC_NOT_ENOUGH_CAP, ...) </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1adfdf6a2c9c486b1ff45f16477306426a"/><section>
+    <title>cvec_popBack()</title>
+<indexterm><primary>cvec_popBack</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_popBack</secondary></indexterm>
+<para><computeroutput>int cvec_popBack (<link linkend="_structCVEC">CVEC</link> * _vec)</computeroutput></para><para>
+
+<para>Remove the last element. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_vec</entry><entry>
+<para>Vector to modify </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CVEC_SUCCESS or CVEC_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a0de85956cadbfa8360190a7bc8940bae"/><section>
+    <title>cvec_popFront()</title>
+<indexterm><primary>cvec_popFront</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_popFront</secondary></indexterm>
+<para><computeroutput>int cvec_popFront (<link linkend="_structCVEC">CVEC</link> * _vec)</computeroutput></para><para>
+
+<para>Remove the first element, shifting all others left. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_vec</entry><entry>
+<para>Vector to modify </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CVEC_SUCCESS or CVEC_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a10df95775694048fb7755e3ebf2be8e2"/><section>
+    <title>cvec_remove()</title>
+<indexterm><primary>cvec_remove</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_remove</secondary></indexterm>
+<para><computeroutput>int cvec_remove (<link linkend="_structCVEC">CVEC</link> * _vec, const size_t _index)</computeroutput></para><para>
+
+<para>Remove an element at a specific index. </para>
+</para>
+
+<para>Shifts trailing elements left by one.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_vec</entry><entry>
+<para>Pointer to vector </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_index</entry><entry>
+<para>Index to remove </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CVEC_SUCCESS, CVEC_OUT_BOUNDS, or CVEC_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a0bc4975070bfe7dd941c1a383e9624f7"/><section>
+    <title>cvec_reverse()</title>
+<indexterm><primary>cvec_reverse</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_reverse</secondary></indexterm>
+<para><computeroutput>int cvec_reverse (<link linkend="_structCVEC">CVEC</link> * _vec)</computeroutput></para><para>
+
+<para>Reverse the order of elements in place. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_vec</entry><entry>
+<para>Pointer to <link linkend="_structCVEC">CVEC</link> </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CVEC_SUCCESS or CVEC_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1ac5f029841417974e9b6f1238bd2b0dd0"/><section>
+    <title>cvec_shrink()</title>
+<indexterm><primary>cvec_shrink</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_shrink</secondary></indexterm>
+<para><computeroutput>int cvec_shrink (<link linkend="_structCVEC">CVEC</link> * _vec)</computeroutput></para><para>
+
+<para>Shrink allocated memory to match current size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_vec</entry><entry>
+<para>Pointer to vector </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CVEC_SUCCESS or CVEC_FAIL_ALLOCATION </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1aeced9d211e8e88f791f5c225f7719504"/><section>
+    <title>cvec_split()</title>
+<indexterm><primary>cvec_split</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_split</secondary></indexterm>
+<para><computeroutput>int cvec_split (<link linkend="_structCVEC">CVEC</link> * _vec, char * _str, const char * _del)</computeroutput></para><para>
+
+<para>Split a string by delimiter and store parts inside <link linkend="_structCVEC">CVEC</link>. </para>
+</para>
+
+<para>Internal <computeroutput>__usedSplit</computeroutput> tracks cleanup ownership.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_vec</entry><entry>
+<para>Destination vector </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_str</entry><entry>
+<para>Input string to tokenize </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_del</entry><entry>
+<para>Delimiter string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CVEC_SUCCESS or CVEC_FAIL </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cvec_8h_1a24d698eb1e7ae45db851b15c5d7ed590"/><section>
+    <title>cvec_swap()</title>
+<indexterm><primary>cvec_swap</primary><secondary>cvec.h</secondary></indexterm>
+<indexterm><primary>cvec.h</primary><secondary>cvec_swap</secondary></indexterm>
+<para><computeroutput>void cvec_swap (<link linkend="_structCVEC">CVEC</link> * _a, <link linkend="_structCVEC">CVEC</link> * _b)</computeroutput></para><para>
+
+<para>Swap two <link linkend="_structCVEC">CVEC</link> instances. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_a</entry><entry>
+<para>First vector </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_b</entry><entry>
+<para>Second vector </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

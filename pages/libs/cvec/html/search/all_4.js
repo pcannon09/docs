@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['c_0',['&lt;em&gt;&quot;Functional C++ vector-like manipulation for C&quot;&lt;/em&gt;',['../index.html#autotoc_md2',1,'']]],
+  ['c_20vector_20like_20manipulation_20for_20c_1',['&lt;em&gt;&quot;Functional C++ vector-like manipulation for C&quot;&lt;/em&gt;',['../index.html#autotoc_md2',1,'']]],
+  ['cap_2',['cap',['../d7/da1/structCVEC.html#a15c46fb3be30ae84dab56350bce4676c',1,'CVEC']]],
+  ['capacity_3',['Notes on Capacity',['../index.html#autotoc_md14',1,'']]],
+  ['compilers_4',['Supported Compilers',['../index.html#autotoc_md4',1,'']]],
+  ['cvec_5',['CVEC',['../d7/da1/structCVEC.html',1,'CVEC'],['../index.html',1,'CVEC']]],
+  ['cvec_2eh_6',['cvec.h',['../d1/db8/cvec_8h.html',1,'']]],
+  ['cvec_5fat_7',['cvec_at',['../d1/db8/cvec_8h.html#aa6cb8d7b5f1186daf4b4a8def3dfbe06',1,'cvec.h']]],
+  ['cvec_5fatcap_8',['cvec_atCap',['../d1/db8/cvec_8h.html#ade25c4f7888a5555d6a78d1eabd38385',1,'cvec.h']]],
+  ['cvec_5fclear_9',['cvec_clear',['../d1/db8/cvec_8h.html#a6cca94bad4f8ea2ce68cb973f68f0ebe',1,'cvec.h']]],
+  ['cvec_5fdestroy_10',['cvec_destroy',['../d1/db8/cvec_8h.html#abb385731b26c20515b3707491cc5d641',1,'cvec.h']]],
+  ['cvec_5femptyall_11',['cvec_emptyAll',['../d1/db8/cvec_8h.html#a94138b862886cc78cb31f4d978aa3ddb',1,'cvec.h']]],
+  ['cvec_5fget_12',['cvec_get',['../d1/db8/cvec_8h.html#a12eedad4150eeda5211fccc3817093ca',1,'cvec.h']]],
+  ['cvec_5finit_13',['cvec_init',['../d1/db8/cvec_8h.html#a874a6704568d26f70517c82df84d7feb',1,'cvec.h']]],
+  ['cvec_5finitcopy_14',['cvec_initCopy',['../d1/db8/cvec_8h.html#a7a249c4709f3606bf78f6068a635972d',1,'cvec.h']]],
+  ['cvec_5fmerge_15',['cvec_merge',['../d1/db8/cvec_8h.html#a53ee0e61343e971ea758a475821e2b6a',1,'cvec.h']]],
+  ['cvec_5fpopback_16',['cvec_popBack',['../d1/db8/cvec_8h.html#adfdf6a2c9c486b1ff45f16477306426a',1,'cvec.h']]],
+  ['cvec_5fpopfront_17',['cvec_popFront',['../d1/db8/cvec_8h.html#a0de85956cadbfa8360190a7bc8940bae',1,'cvec.h']]],
+  ['cvec_5fremove_18',['cvec_remove',['../d1/db8/cvec_8h.html#a10df95775694048fb7755e3ebf2be8e2',1,'cvec.h']]],
+  ['cvec_5freverse_19',['cvec_reverse',['../d1/db8/cvec_8h.html#a0bc4975070bfe7dd941c1a383e9624f7',1,'cvec.h']]],
+  ['cvec_5fshrink_20',['cvec_shrink',['../d1/db8/cvec_8h.html#ac5f029841417974e9b6f1238bd2b0dd0',1,'cvec.h']]],
+  ['cvec_5fsplit_21',['cvec_split',['../d1/db8/cvec_8h.html#aeced9d211e8e88f791f5c225f7719504',1,'cvec.h']]],
+  ['cvec_5fswap_22',['cvec_swap',['../d1/db8/cvec_8h.html#a24d698eb1e7ae45db851b15c5d7ed590',1,'cvec.h']]],
+  ['cvecpredefines_2eh_23',['CVECpredefines.h',['../dd/da6/CVECpredefines_8h.html',1,'']]]
+];

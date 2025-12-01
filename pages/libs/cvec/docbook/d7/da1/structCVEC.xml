@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structCVEC" xml:lang="en-US">
+<title>CVEC Struct Reference</title>
+<indexterm><primary>CVEC</primary></indexterm>
+<para>
+
+<para>Custom generic dynamic vector type. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;cvec.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_structCVEC_1a7bd9467a6201deefdb89a9009e12ae4a">__usedSplit</link></para>
+
+<para>Internal flag used by split operations. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_structCVEC_1a15c46fb3be30ae84dab56350bce4676c">cap</link></para>
+
+<para>Allocated storage capacity. </para>
+</listitem>
+            <listitem><para>void * <link linkend="_structCVEC_1a2be76162dcff157eacc3044ec75c9ed9">data</link></para>
+
+<para>Pointer to contiguous allocated memory storing array elements. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_structCVEC_1a1766cdac622dd1329f40c3efb0c89231">dynamicCap</link></para>
+
+<para>Enables automatic capacity growth when true. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_structCVEC_1ad55b17d80dd2478c970fbee61dc99a34">elemLen</link></para>
+
+<para>Size in bytes of each element. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_structCVEC_1a4f0c174bb5c14f98689445aeb319c844">forceCap</link></para>
+
+<para>Prevents capacity expansion if true; insertion fails when full. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_structCVEC_1a54c31052c6a4d40b4e088299070dd9ea">initialized</link></para>
+
+<para>Tracks whether this <link linkend="_structCVEC">CVEC</link> has been properly initialized. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_structCVEC_1a7ac0bd7a628d28db3faee0849015350f">size</link></para>
+
+<para>Current number of stored items. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Custom generic dynamic vector type. </para>
+
+
+
+<para><link linkend="_structCVEC">CVEC</link> is a flexible container that stores a sequence of elements of uniform size. It behaves similarly to std::vector in C++, supporting dynamic resizing, insertion, deletion, merging, reversing, and splitting.</para>
+
+<para><note><title>Note</title>
+
+<para>Direct modification of structure fields should be avoided — prefer <link linkend="_structCVEC">CVEC</link> API usage. </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_cvec_8h_source_1l00054">54</link> of file <link linkend="_cvec_8h_source">cvec.h</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structCVEC_1a7bd9467a6201deefdb89a9009e12ae4a"/><section>
+    <title>__usedSplit</title>
+<indexterm><primary>__usedSplit</primary><secondary>CVEC</secondary></indexterm>
+<indexterm><primary>CVEC</primary><secondary>__usedSplit</secondary></indexterm>
+<para><computeroutput>bool CVEC::__usedSplit</computeroutput></para><para>
+
+<para>Internal flag used by split operations. </para>
+</para>
+<para>
+Definition at line <link linkend="_cvec_8h_source_1l00057">57</link> of file <link linkend="_cvec_8h_source">cvec.h</link>.</para>
+</section>
+<anchor xml:id="_structCVEC_1a15c46fb3be30ae84dab56350bce4676c"/><section>
+    <title>cap</title>
+<indexterm><primary>cap</primary><secondary>CVEC</secondary></indexterm>
+<indexterm><primary>CVEC</primary><secondary>cap</secondary></indexterm>
+<para><computeroutput>size_t CVEC::cap</computeroutput></para><para>
+
+<para>Allocated storage capacity. </para>
+</para>
+<para>
+Definition at line <link linkend="_cvec_8h_source_1l00062">62</link> of file <link linkend="_cvec_8h_source">cvec.h</link>.</para>
+</section>
+<anchor xml:id="_structCVEC_1a2be76162dcff157eacc3044ec75c9ed9"/><section>
+    <title>data</title>
+<indexterm><primary>data</primary><secondary>CVEC</secondary></indexterm>
+<indexterm><primary>CVEC</primary><secondary>data</secondary></indexterm>
+<para><computeroutput>void* CVEC::data</computeroutput></para><para>
+
+<para>Pointer to contiguous allocated memory storing array elements. </para>
+</para>
+<para>
+Definition at line <link linkend="_cvec_8h_source_1l00058">58</link> of file <link linkend="_cvec_8h_source">cvec.h</link>.</para>
+</section>
+<anchor xml:id="_structCVEC_1a1766cdac622dd1329f40c3efb0c89231"/><section>
+    <title>dynamicCap</title>
+<indexterm><primary>dynamicCap</primary><secondary>CVEC</secondary></indexterm>
+<indexterm><primary>CVEC</primary><secondary>dynamicCap</secondary></indexterm>
+<para><computeroutput>bool CVEC::dynamicCap</computeroutput></para><para>
+
+<para>Enables automatic capacity growth when true. </para>
+</para>
+<para>
+Definition at line <link linkend="_cvec_8h_source_1l00060">60</link> of file <link linkend="_cvec_8h_source">cvec.h</link>.</para>
+</section>
+<anchor xml:id="_structCVEC_1ad55b17d80dd2478c970fbee61dc99a34"/><section>
+    <title>elemLen</title>
+<indexterm><primary>elemLen</primary><secondary>CVEC</secondary></indexterm>
+<indexterm><primary>CVEC</primary><secondary>elemLen</secondary></indexterm>
+<para><computeroutput>size_t CVEC::elemLen</computeroutput></para><para>
+
+<para>Size in bytes of each element. </para>
+</para>
+<para>
+Definition at line <link linkend="_cvec_8h_source_1l00063">63</link> of file <link linkend="_cvec_8h_source">cvec.h</link>.</para>
+</section>
+<anchor xml:id="_structCVEC_1a4f0c174bb5c14f98689445aeb319c844"/><section>
+    <title>forceCap</title>
+<indexterm><primary>forceCap</primary><secondary>CVEC</secondary></indexterm>
+<indexterm><primary>CVEC</primary><secondary>forceCap</secondary></indexterm>
+<para><computeroutput>bool CVEC::forceCap</computeroutput></para><para>
+
+<para>Prevents capacity expansion if true; insertion fails when full. </para>
+</para>
+<para>
+Definition at line <link linkend="_cvec_8h_source_1l00059">59</link> of file <link linkend="_cvec_8h_source">cvec.h</link>.</para>
+</section>
+<anchor xml:id="_structCVEC_1a54c31052c6a4d40b4e088299070dd9ea"/><section>
+    <title>initialized</title>
+<indexterm><primary>initialized</primary><secondary>CVEC</secondary></indexterm>
+<indexterm><primary>CVEC</primary><secondary>initialized</secondary></indexterm>
+<para><computeroutput>bool CVEC::initialized</computeroutput></para><para>
+
+<para>Tracks whether this <link linkend="_structCVEC">CVEC</link> has been properly initialized. </para>
+</para>
+<para>
+Definition at line <link linkend="_cvec_8h_source_1l00056">56</link> of file <link linkend="_cvec_8h_source">cvec.h</link>.</para>
+</section>
+<anchor xml:id="_structCVEC_1a7ac0bd7a628d28db3faee0849015350f"/><section>
+    <title>size</title>
+<indexterm><primary>size</primary><secondary>CVEC</secondary></indexterm>
+<indexterm><primary>CVEC</primary><secondary>size</secondary></indexterm>
+<para><computeroutput>size_t CVEC::size</computeroutput></para><para>
+
+<para>Current number of stored items. </para>
+</para>
+<para>
+Definition at line <link linkend="_cvec_8h_source_1l00061">61</link> of file <link linkend="_cvec_8h_source">cvec.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/cvec/<link linkend="_cvec_8h">cvec.h</link></section>
+</section>

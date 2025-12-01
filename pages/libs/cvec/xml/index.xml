@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.15.0" xml:lang="en-US">
+  <compound refid="d7/da1/structCVEC" kind="struct"><name>CVEC</name>
+    <member refid="d7/da1/structCVEC_1a7bd9467a6201deefdb89a9009e12ae4a" kind="variable"><name>__usedSplit</name></member>
+    <member refid="d7/da1/structCVEC_1a15c46fb3be30ae84dab56350bce4676c" kind="variable"><name>cap</name></member>
+    <member refid="d7/da1/structCVEC_1a2be76162dcff157eacc3044ec75c9ed9" kind="variable"><name>data</name></member>
+    <member refid="d7/da1/structCVEC_1a1766cdac622dd1329f40c3efb0c89231" kind="variable"><name>dynamicCap</name></member>
+    <member refid="d7/da1/structCVEC_1ad55b17d80dd2478c970fbee61dc99a34" kind="variable"><name>elemLen</name></member>
+    <member refid="d7/da1/structCVEC_1a4f0c174bb5c14f98689445aeb319c844" kind="variable"><name>forceCap</name></member>
+    <member refid="d7/da1/structCVEC_1a54c31052c6a4d40b4e088299070dd9ea" kind="variable"><name>initialized</name></member>
+    <member refid="d7/da1/structCVEC_1a7ac0bd7a628d28db3faee0849015350f" kind="variable"><name>size</name></member>
+  </compound>
+  <compound refid="d8/dcc/namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="d1/db8/cvec_8h" kind="file"><name>cvec.h</name>
+    <member refid="d1/db8/cvec_8h_1a97ae4722dc7a75afe22b665abb6f1f52" kind="function"><name>__cvec_del</name></member>
+    <member refid="d1/db8/cvec_8h_1a1f946d01c379b8973d0bf4c41e01826d" kind="function"><name>__cvec_delIndex</name></member>
+    <member refid="d1/db8/cvec_8h_1ab21834546eb6e7d575cdaaccb0e82795" kind="function"><name>__cvec_destroySplit</name></member>
+    <member refid="d1/db8/cvec_8h_1a6ac659e2ca5f4b2322a6ddf11e01f22d" kind="function"><name>__cvec_find</name></member>
+    <member refid="d1/db8/cvec_8h_1a8f79c0b613222e2a14a3b6bd1faf226c" kind="function"><name>__cvec_hasEnoughCap</name></member>
+    <member refid="d1/db8/cvec_8h_1ac1af20c5a1c528bc5651f379386cbd0c" kind="function"><name>__cvec_push</name></member>
+    <member refid="d1/db8/cvec_8h_1aa150e437b43f307726e4063ce76b60e8" kind="function"><name>__cvec_pushFront</name></member>
+    <member refid="d1/db8/cvec_8h_1a65f0ba8829599270b50cdd2e63b2bc7b" kind="function"><name>__cvec_pushIndex</name></member>
+    <member refid="d1/db8/cvec_8h_1a3f287ab92bb2f2a2b63c5db1e6396357" kind="function"><name>__cvec_set</name></member>
+    <member refid="d1/db8/cvec_8h_1aa6cb8d7b5f1186daf4b4a8def3dfbe06" kind="function"><name>cvec_at</name></member>
+    <member refid="d1/db8/cvec_8h_1ade25c4f7888a5555d6a78d1eabd38385" kind="function"><name>cvec_atCap</name></member>
+    <member refid="d1/db8/cvec_8h_1a6cca94bad4f8ea2ce68cb973f68f0ebe" kind="function"><name>cvec_clear</name></member>
+    <member refid="d1/db8/cvec_8h_1abb385731b26c20515b3707491cc5d641" kind="function"><name>cvec_destroy</name></member>
+    <member refid="d1/db8/cvec_8h_1a94138b862886cc78cb31f4d978aa3ddb" kind="function"><name>cvec_emptyAll</name></member>
+    <member refid="d1/db8/cvec_8h_1a12eedad4150eeda5211fccc3817093ca" kind="function"><name>cvec_get</name></member>
+    <member refid="d1/db8/cvec_8h_1a874a6704568d26f70517c82df84d7feb" kind="function"><name>cvec_init</name></member>
+    <member refid="d1/db8/cvec_8h_1a7a249c4709f3606bf78f6068a635972d" kind="function"><name>cvec_initCopy</name></member>
+    <member refid="d1/db8/cvec_8h_1a53ee0e61343e971ea758a475821e2b6a" kind="function"><name>cvec_merge</name></member>
+    <member refid="d1/db8/cvec_8h_1adfdf6a2c9c486b1ff45f16477306426a" kind="function"><name>cvec_popBack</name></member>
+    <member refid="d1/db8/cvec_8h_1a0de85956cadbfa8360190a7bc8940bae" kind="function"><name>cvec_popFront</name></member>
+    <member refid="d1/db8/cvec_8h_1a10df95775694048fb7755e3ebf2be8e2" kind="function"><name>cvec_remove</name></member>
+    <member refid="d1/db8/cvec_8h_1a0bc4975070bfe7dd941c1a383e9624f7" kind="function"><name>cvec_reverse</name></member>
+    <member refid="d1/db8/cvec_8h_1ac5f029841417974e9b6f1238bd2b0dd0" kind="function"><name>cvec_shrink</name></member>
+    <member refid="d1/db8/cvec_8h_1aeced9d211e8e88f791f5c225f7719504" kind="function"><name>cvec_split</name></member>
+    <member refid="d1/db8/cvec_8h_1a24d698eb1e7ae45db851b15c5d7ed590" kind="function"><name>cvec_swap</name></member>
+  </compound>
+  <compound refid="dd/da6/CVECpredefines_8h" kind="file"><name>CVECpredefines.h</name>
+  </compound>
+  <compound refid="da/ddd/README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="dir_ae75c43036b9a4dfc0a10ccaa9aef60e" kind="dir"><name>inc/cvec</name>
+  </compound>
+  <compound refid="dir_bfccd401955b95cf8c75461437045ac0" kind="dir"><name>inc</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

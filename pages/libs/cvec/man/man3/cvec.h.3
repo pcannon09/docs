@@ -1,0 +1,464 @@
+.TH "inc/cvec/cvec.h" 3 "Version v1.0.0-build" "CVEC" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/cvec/cvec.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBCVEC\fP"
+.br
+.RI "Custom generic dynamic vector type\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fB__cvec_del\fP (\fBCVEC\fP *_vec, void *_elem)"
+.br
+.RI "Delete first occurrence of matching value\&. "
+.ti -1c
+.RI "int \fB__cvec_delIndex\fP (\fBCVEC\fP *_vec, void *_elem, const size_t start)"
+.br
+.RI "Delete matching element starting search at index\&. "
+.ti -1c
+.RI "int \fB__cvec_destroySplit\fP (\fBCVEC\fP *_vec)"
+.br
+.RI "Cleanup after split operations\&. "
+.ti -1c
+.RI "int \fB__cvec_find\fP (const \fBCVEC\fP *_vec, void *_find)"
+.br
+.RI "Search for an element in the vector\&. "
+.ti -1c
+.RI "bool \fB__cvec_hasEnoughCap\fP (const \fBCVEC\fP *_vec, const size_t _additions)"
+.br
+.RI "Check whether capacity is sufficient for requested additions\&. "
+.ti -1c
+.RI "int \fB__cvec_push\fP (\fBCVEC\fP *_vec, void *_elem)"
+.br
+.RI "Insert at end of vector\&. "
+.ti -1c
+.RI "int \fB__cvec_pushFront\fP (\fBCVEC\fP *_vec, void *_elem)"
+.br
+.RI "Insert new element at beginning\&. "
+.ti -1c
+.RI "int \fB__cvec_pushIndex\fP (\fBCVEC\fP *_vec, const size_t _index, void *_elem)"
+.br
+.RI "Insert element at specific index, shifting elements as needed\&. "
+.ti -1c
+.RI "int \fB__cvec_set\fP (\fBCVEC\fP *_vec, const size_t _index, void *_set)"
+.br
+.RI "Replace value at given index\&. "
+.ti -1c
+.RI "bool \fBcvec_at\fP (const \fBCVEC\fP *_vec, const size_t _index)"
+.br
+.RI "Check whether element exists at index\&. "
+.ti -1c
+.RI "bool \fBcvec_atCap\fP (const \fBCVEC\fP *_vec, const size_t _index)"
+.br
+.RI "Check whether element exists within vector capacity\&. "
+.ti -1c
+.RI "void \fBcvec_clear\fP (\fBCVEC\fP *_vec)"
+.br
+.RI "Clear vector contents but keep capacity unchanged\&. "
+.ti -1c
+.RI "int \fBcvec_destroy\fP (\fBCVEC\fP *_vec)"
+.br
+.RI "Destroy a \fBCVEC\fP, freeing allocated memory and invalidating the structure\&. "
+.ti -1c
+.RI "int \fBcvec_emptyAll\fP (\fBCVEC\fP *_vec)"
+.br
+.RI "Clear all elements and reset size to zero without freeing memory\&. "
+.ti -1c
+.RI "void * \fBcvec_get\fP (const \fBCVEC\fP *_vec, const size_t _index)"
+.br
+.RI "Get a pointer to an element at specified index\&. "
+.ti -1c
+.RI "\fBCVEC\fP \fBcvec_init\fP (int _cap, size_t _elemSize)"
+.br
+.RI "Initialize a new vector with requested capacity and element size\&. "
+.ti -1c
+.RI "\fBCVEC\fP \fBcvec_initCopy\fP (const \fBCVEC\fP *_src)"
+.br
+.RI "Create a deep copy of an existing \fBCVEC\fP\&. "
+.ti -1c
+.RI "int \fBcvec_merge\fP (\fBCVEC\fP *_toMerge, const \fBCVEC\fP *_input)"
+.br
+.RI "Merge contents of \fR_input\fP vector into \fR_toMerge\fP\&. "
+.ti -1c
+.RI "int \fBcvec_popBack\fP (\fBCVEC\fP *_vec)"
+.br
+.RI "Remove the last element\&. "
+.ti -1c
+.RI "int \fBcvec_popFront\fP (\fBCVEC\fP *_vec)"
+.br
+.RI "Remove the first element, shifting all others left\&. "
+.ti -1c
+.RI "int \fBcvec_remove\fP (\fBCVEC\fP *_vec, const size_t _index)"
+.br
+.RI "Remove an element at a specific index\&. "
+.ti -1c
+.RI "int \fBcvec_reverse\fP (\fBCVEC\fP *_vec)"
+.br
+.RI "Reverse the order of elements in place\&. "
+.ti -1c
+.RI "int \fBcvec_shrink\fP (\fBCVEC\fP *_vec)"
+.br
+.RI "Shrink allocated memory to match current size\&. "
+.ti -1c
+.RI "int \fBcvec_split\fP (\fBCVEC\fP *_vec, char *_str, const char *_del)"
+.br
+.RI "Split a string by delimiter and store parts inside \fBCVEC\fP\&. "
+.ti -1c
+.RI "void \fBcvec_swap\fP (\fBCVEC\fP *_a, \fBCVEC\fP *_b)"
+.br
+.RI "Swap two \fBCVEC\fP instances\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int __cvec_del (\fBCVEC\fP * _vec, void * _elem)"
+
+.PP
+Delete first occurrence of matching value\&. 
+.SS "int __cvec_delIndex (\fBCVEC\fP * _vec, void * _elem, const size_t start)"
+
+.PP
+Delete matching element starting search at index\&. 
+.SS "int __cvec_destroySplit (\fBCVEC\fP * _vec)"
+
+.PP
+Cleanup after split operations\&. 
+.SS "int __cvec_find (const \fBCVEC\fP * _vec, void * _find)"
+
+.PP
+Search for an element in the vector\&. 
+.PP
+\fBReturns\fP
+.RS 4
+index or CVEC_NPOS 
+.RE
+.PP
+
+.SS "bool __cvec_hasEnoughCap (const \fBCVEC\fP * _vec, const size_t _additions)"
+
+.PP
+Check whether capacity is sufficient for requested additions\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if capacity allows, else false 
+.RE
+.PP
+
+.SS "int __cvec_push (\fBCVEC\fP * _vec, void * _elem)"
+
+.PP
+Insert at end of vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_vec\fP Vector 
+.br
+\fI_elem\fP Pointer to element data to store 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CVEC_SUCCESS or an error code 
+.RE
+.PP
+
+.SS "int __cvec_pushFront (\fBCVEC\fP * _vec, void * _elem)"
+
+.PP
+Insert new element at beginning\&. 
+.PP
+\fBReturns\fP
+.RS 4
+CVEC_SUCCESS or CVEC_NOT_ENOUGH_CAP 
+.RE
+.PP
+
+.SS "int __cvec_pushIndex (\fBCVEC\fP * _vec, const size_t _index, void * _elem)"
+
+.PP
+Insert element at specific index, shifting elements as needed\&. 
+.SS "int __cvec_set (\fBCVEC\fP * _vec, const size_t _index, void * _set)"
+
+.PP
+Replace value at given index\&. 
+.SS "bool cvec_at (const \fBCVEC\fP * _vec, const size_t _index)"
+
+.PP
+Check whether element exists at index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_vec\fP Vector to inspect 
+.br
+\fI_index\fP Element index 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if valid index, false otherwise 
+.RE
+.PP
+
+.SS "bool cvec_atCap (const \fBCVEC\fP * _vec, const size_t _index)"
+
+.PP
+Check whether element exists within vector capacity\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_vec\fP Vector to inspect 
+.br
+\fI_index\fP Index inside original allocated capacity 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if index < capacity, else false 
+.RE
+.PP
+
+.SS "void cvec_clear (\fBCVEC\fP * _vec)"
+
+.PP
+Clear vector contents but keep capacity unchanged\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_vec\fP Pointer to vector 
+.RE
+.PP
+
+.SS "int cvec_destroy (\fBCVEC\fP * _vec)"
+
+.PP
+Destroy a \fBCVEC\fP, freeing allocated memory and invalidating the structure\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_vec\fP Pointer to the \fBCVEC\fP to destroy 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CVEC_SUCCESS on success, or CVEC_FAIL 
+.RE
+.PP
+
+.SS "int cvec_emptyAll (\fBCVEC\fP * _vec)"
+
+.PP
+Clear all elements and reset size to zero without freeing memory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_vec\fP Pointer to the vector 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CVEC_SUCCESS on success, else CVEC_FAIL 
+.RE
+.PP
+
+.SS "void * cvec_get (const \fBCVEC\fP * _vec, const size_t _index)"
+
+.PP
+Get a pointer to an element at specified index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_vec\fP Vector to inspect 
+.br
+\fI_index\fP Position to access 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to element or NULL if invalid 
+.RE
+.PP
+
+.SS "\fBCVEC\fP cvec_init (int _cap, size_t _elemSize)"
+
+.PP
+Initialize a new vector with requested capacity and element size\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_cap\fP Initial capacity (number of elements, not bytes) 
+.br
+\fI_elemSize\fP Size in bytes of each element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A fully initialized \fBCVEC\fP instance 
+.RE
+.PP
+
+.SS "\fBCVEC\fP cvec_initCopy (const \fBCVEC\fP * _src)"
+
+.PP
+Create a deep copy of an existing \fBCVEC\fP\&. Copies memory, capacity, element properties, and flags\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI_src\fP Pointer to the original \fBCVEC\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A new \fBCVEC\fP instance with copied data 
+.RE
+.PP
+
+.SS "int cvec_merge (\fBCVEC\fP * _toMerge, const \fBCVEC\fP * _input)"
+
+.PP
+Merge contents of \fR_input\fP vector into \fR_toMerge\fP\&. Appends all items from \fR_input\fP to \fR_toMerge\fP, expanding capacity if allowed\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI_toMerge\fP Destination vector to merge into 
+.br
+\fI_input\fP Vector to merge from 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CVEC_SUCCESS or error code (CVEC_FAIL, CVEC_NOT_ENOUGH_CAP, \&.\&.\&.) 
+.RE
+.PP
+
+.SS "int cvec_popBack (\fBCVEC\fP * _vec)"
+
+.PP
+Remove the last element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_vec\fP Vector to modify 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CVEC_SUCCESS or CVEC_FAIL 
+.RE
+.PP
+
+.SS "int cvec_popFront (\fBCVEC\fP * _vec)"
+
+.PP
+Remove the first element, shifting all others left\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_vec\fP Vector to modify 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CVEC_SUCCESS or CVEC_FAIL 
+.RE
+.PP
+
+.SS "int cvec_remove (\fBCVEC\fP * _vec, const size_t _index)"
+
+.PP
+Remove an element at a specific index\&. Shifts trailing elements left by one\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI_vec\fP Pointer to vector 
+.br
+\fI_index\fP Index to remove 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CVEC_SUCCESS, CVEC_OUT_BOUNDS, or CVEC_FAIL 
+.RE
+.PP
+
+.SS "int cvec_reverse (\fBCVEC\fP * _vec)"
+
+.PP
+Reverse the order of elements in place\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_vec\fP Pointer to \fBCVEC\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CVEC_SUCCESS or CVEC_FAIL 
+.RE
+.PP
+
+.SS "int cvec_shrink (\fBCVEC\fP * _vec)"
+
+.PP
+Shrink allocated memory to match current size\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_vec\fP Pointer to vector 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CVEC_SUCCESS or CVEC_FAIL_ALLOCATION 
+.RE
+.PP
+
+.SS "int cvec_split (\fBCVEC\fP * _vec, char * _str, const char * _del)"
+
+.PP
+Split a string by delimiter and store parts inside \fBCVEC\fP\&. Internal \fR__usedSplit\fP tracks cleanup ownership\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI_vec\fP Destination vector 
+.br
+\fI_str\fP Input string to tokenize 
+.br
+\fI_del\fP Delimiter string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CVEC_SUCCESS or CVEC_FAIL 
+.RE
+.PP
+
+.SS "void cvec_swap (\fBCVEC\fP * _a, \fBCVEC\fP * _b)"
+
+.PP
+Swap two \fBCVEC\fP instances\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_a\fP First vector 
+.br
+\fI_b\fP Second vector 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CVEC from the source code\&.

@@ -1,0 +1,116 @@
+.TH "CVEC" 3 "Version v1.0.0-build" "CVEC" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CVEC \- Custom generic dynamic vector type\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <cvec\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fB__usedSplit\fP"
+.br
+.RI "Internal flag used by split operations\&. "
+.ti -1c
+.RI "size_t \fBcap\fP"
+.br
+.RI "Allocated storage capacity\&. "
+.ti -1c
+.RI "void * \fBdata\fP"
+.br
+.RI "Pointer to contiguous allocated memory storing array elements\&. "
+.ti -1c
+.RI "bool \fBdynamicCap\fP"
+.br
+.RI "Enables automatic capacity growth when true\&. "
+.ti -1c
+.RI "size_t \fBelemLen\fP"
+.br
+.RI "Size in bytes of each element\&. "
+.ti -1c
+.RI "bool \fBforceCap\fP"
+.br
+.RI "Prevents capacity expansion if true; insertion fails when full\&. "
+.ti -1c
+.RI "bool \fBinitialized\fP"
+.br
+.RI "Tracks whether this \fBCVEC\fP has been properly initialized\&. "
+.ti -1c
+.RI "size_t \fBsize\fP"
+.br
+.RI "Current number of stored items\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Custom generic dynamic vector type\&. 
+
+\fBCVEC\fP is a flexible container that stores a sequence of elements of uniform size\&. It behaves similarly to std::vector in C++, supporting dynamic resizing, insertion, deletion, merging, reversing, and splitting\&.
+
+.PP
+\fBNote\fP
+.RS 4
+Direct modification of structure fields should be avoided — prefer \fBCVEC\fP API usage\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB54\fP of file \fBcvec\&.h\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool CVEC::__usedSplit"
+
+.PP
+Internal flag used by split operations\&. 
+.PP
+Definition at line \fB57\fP of file \fBcvec\&.h\fP\&.
+.SS "size_t CVEC::cap"
+
+.PP
+Allocated storage capacity\&. 
+.PP
+Definition at line \fB62\fP of file \fBcvec\&.h\fP\&.
+.SS "void* CVEC::data"
+
+.PP
+Pointer to contiguous allocated memory storing array elements\&. 
+.PP
+Definition at line \fB58\fP of file \fBcvec\&.h\fP\&.
+.SS "bool CVEC::dynamicCap"
+
+.PP
+Enables automatic capacity growth when true\&. 
+.PP
+Definition at line \fB60\fP of file \fBcvec\&.h\fP\&.
+.SS "size_t CVEC::elemLen"
+
+.PP
+Size in bytes of each element\&. 
+.PP
+Definition at line \fB63\fP of file \fBcvec\&.h\fP\&.
+.SS "bool CVEC::forceCap"
+
+.PP
+Prevents capacity expansion if true; insertion fails when full\&. 
+.PP
+Definition at line \fB59\fP of file \fBcvec\&.h\fP\&.
+.SS "bool CVEC::initialized"
+
+.PP
+Tracks whether this \fBCVEC\fP has been properly initialized\&. 
+.PP
+Definition at line \fB56\fP of file \fBcvec\&.h\fP\&.
+.SS "size_t CVEC::size"
+
+.PP
+Current number of stored items\&. 
+.PP
+Definition at line \fB61\fP of file \fBcvec\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CVEC from the source code\&.

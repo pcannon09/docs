@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="da/ddd/README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>CVEC</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>1.0.0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>_&quot;Functional<sp/>C++<sp/>vector-like<sp/>manipulation<sp/>for<sp/>C&quot;_</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">`CVEC`<sp/>is<sp/>a<sp/>minimal<sp/>and<sp/>efficient<sp/>C<sp/>dynamic<sp/>array<sp/>library<sp/>that<sp/>offers<sp/>type-agnostic<sp/>vector<sp/>behavior<sp/>with<sp/>optional<sp/>capacity<sp/>control<sp/>and<sp/>safe<sp/>dynamic<sp/>resizing.<sp/>It<sp/>provides<sp/>an<sp/>interface<sp/>similar<sp/>to<sp/>`std::vector`<sp/>in<sp/>C++<sp/>but<sp/>implemented<sp/>in<sp/>pure<sp/>C<sp/>with<sp/>focus<sp/>on<sp/>simplicity,<sp/>safety,<sp/>and<sp/>flexibility.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Supported<sp/>Compilers</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**GCC**<sp/>&gt;=<sp/>5.0</highlight></codeline>
+<codeline><highlight class="normal">**Clang**<sp/>&gt;=<sp/>3.5</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">All<sp/>compilers<sp/>**must<sp/>support<sp/>C99**<sp/>or<sp/>higher.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Dynamic<sp/>Capacity<sp/>Management**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Initialize,<sp/>resize,<sp/>and<sp/>grow<sp/>vectors<sp/>automatically,<sp/>or<sp/>lock<sp/>capacity<sp/>with<sp/>`forceCap`<sp/>for<sp/>predictable<sp/>memory<sp/>limits.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Safe<sp/>Element<sp/>Operations**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Supports<sp/>indexed<sp/>push,<sp/>insert,<sp/>and<sp/>removal<sp/>without<sp/>exposing<sp/>raw<sp/>pointer<sp/>arithmetic.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Front,<sp/>Back,<sp/>and<sp/>Indexed<sp/>Insertion**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Add<sp/>elements<sp/>to<sp/>the<sp/>end,<sp/>front,<sp/>or<sp/>any<sp/>specific<sp/>position<sp/>via<sp/>`__cvec_push()`,<sp/>`__cvec_pushFront()`,<sp/>or<sp/>`__cvec_pushIndex()`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Element<sp/>Access<sp/>and<sp/>Queries**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Retrieve<sp/>or<sp/>validate<sp/>indices<sp/>safely<sp/>with<sp/>`cvec_get()`,<sp/>`cvec_at()`,<sp/>and<sp/>`cvec_atCap()`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Merging<sp/>and<sp/>Copying**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Combine<sp/>vectors<sp/>or<sp/>duplicate<sp/>existing<sp/>ones<sp/>using<sp/>`cvec_merge()`<sp/>and<sp/>`cvec_initCopy()`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Deletion<sp/>Utilities**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Delete<sp/>by<sp/>index,<sp/>by<sp/>element,<sp/>or<sp/>remove<sp/>multiple<sp/>matching<sp/>elements<sp/>through<sp/>`__cvec_delIndex()`,<sp/>`__cvec_del()`,<sp/>and<sp/>`cvec_remove()`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Reversal<sp/>and<sp/>Shrinking**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Reverse<sp/>vector<sp/>order<sp/>or<sp/>reduce<sp/>capacity<sp/>using<sp/>`cvec_reverse()`<sp/>and<sp/>`cvec_shrink()`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Optional<sp/>Dynamic<sp/>Capacity**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>When<sp/>`dynamicCap`<sp/>is<sp/>disabled,<sp/>all<sp/>operations<sp/>must<sp/>fit<sp/>within<sp/>the<sp/>current<sp/>capacity.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>This<sp/>is<sp/>useful<sp/>for<sp/>embedded<sp/>or<sp/>low-level<sp/>systems.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Basic<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example:<sp/>creating,<sp/>pushing,<sp/>and<sp/>accessing<sp/>integer<sp/>elements.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;cvec.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;stdio.h&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main(void)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CVEC<sp/>v<sp/>=<sp/>cvec_init(4,<sp/>sizeof(int));<sp/>//<sp/>Create<sp/>a<sp/>vector<sp/>for<sp/>ints<sp/>with<sp/>capacity<sp/>of<sp/>4</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>10;<sp/>i++)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__cvec_push(&amp;v,<sp/>&amp;i);<sp/>//<sp/>Push<sp/>elements,<sp/>auto-resizing<sp/>as<sp/>needed</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>v.size;<sp/>i++)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;%d<sp/>&quot;,<sp/>*(int*)cvec_get(&amp;v,<sp/>i));<sp/>//<sp/>Print<sp/>each<sp/>element</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cvec_destroy(&amp;v);<sp/>//<sp/>Free<sp/>allocated<sp/>memory</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Error<sp/>Handling</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Most<sp/>functions<sp/>return:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`CVEC_SUCCESS`<sp/>-<sp/>operation<sp/>succeeded</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`CVEC_FAIL`<sp/>-<sp/>invalid<sp/>input<sp/>or<sp/>operation</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`CVEC_FAIL_ALLOCATION`<sp/>—<sp/>allocation<sp/>or<sp/>reallocation<sp/>failed</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`CVEC_FORCECAP_FAIL`<sp/>—<sp/>capacity<sp/>exceeded<sp/>while<sp/>`forceCap`<sp/>is<sp/>enabled</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`CVEC_OUT_BOUNDS`<sp/>—<sp/>invalid<sp/>index<sp/>access</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`CVEC_ELEM_NOT_FOUND`<sp/>—<sp/>target<sp/>element<sp/>not<sp/>found</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`CVEC_NPOS`<sp/>—<sp/>element<sp/>not<sp/>found<sp/>(for<sp/>`__cvec_find()`)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Internal<sp/>Behavior</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Internal<sp/>(private)<sp/>functions<sp/>use<sp/>the<sp/>`__cvec_`<sp/>prefix,<sp/>for<sp/>example:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`__cvec_push()`<sp/>—<sp/>push<sp/>element<sp/>to<sp/>the<sp/>end</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`__cvec_pushFront()`<sp/>—<sp/>push<sp/>element<sp/>to<sp/>the<sp/>beginning</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`__cvec_pushIndex()`<sp/>—<sp/>insert<sp/>at<sp/>a<sp/>specific<sp/>index</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`__cvec_delIndex()`<sp/>—<sp/>delete<sp/>element<sp/>at<sp/>or<sp/>after<sp/>a<sp/>specific<sp/>index</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">These<sp/>functions<sp/>are<sp/>used<sp/>internally<sp/>by<sp/>the<sp/>main<sp/>API<sp/>but<sp/>may<sp/>also<sp/>be<sp/>called<sp/>directly<sp/>if<sp/>low-level<sp/>control<sp/>is<sp/>desired.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Notes<sp/>on<sp/>Capacity</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>If<sp/>`forceCap`<sp/>is<sp/>set<sp/>to<sp/>`true`,<sp/>exceeding<sp/>the<sp/>capacity<sp/>will<sp/>**not**<sp/>reallocate<sp/>memory.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>The<sp/>function<sp/>instead<sp/>returns<sp/>`CVEC_FORCECAP_FAIL`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>If<sp/>`dynamicCap`<sp/>is<sp/>`false`,<sp/>the<sp/>capacity<sp/>remains<sp/>fixed<sp/>even<sp/>if<sp/>`forceCap`<sp/>is<sp/>disabled.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Default<sp/>allocation<sp/>growth<sp/>is<sp/>defined<sp/>by<sp/>`__CVEC_CAP_ADDITION`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Example:<sp/>Merging<sp/>Two<sp/>Vectors</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;cvec.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;stdio.h&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main(void)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CVEC<sp/>a<sp/>=<sp/>cvec_init(2,<sp/>sizeof(int));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CVEC<sp/>b<sp/>=<sp/>cvec_init(2,<sp/>sizeof(int));</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>3;<sp/>i++)<sp/>__cvec_push(&amp;a,<sp/>&amp;i);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>3;<sp/>i<sp/>&lt;<sp/>6;<sp/>i++)<sp/>__cvec_push(&amp;b,<sp/>&amp;i);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cvec_merge(&amp;a,<sp/>&amp;b);<sp/>//<sp/>Merge<sp/>`b`<sp/>into<sp/>`a`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>a.size;<sp/>i++)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;%d<sp/>&quot;,<sp/>*(int*)cvec_get(&amp;a,<sp/>i));</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cvec_destroy(&amp;a);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cvec_destroy(&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Internal<sp/>Helpers</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Helper<sp/>functions<sp/>such<sp/>as<sp/>`__cvec_hasEnoughCap()`<sp/>and<sp/>macros<sp/>like<sp/>`__CVEC_SET_NULL()`<sp/>are<sp/>used<sp/>internally<sp/>for<sp/>safety<sp/>and<sp/>consistency.</highlight></codeline>
+<codeline><highlight class="normal">These<sp/>are<sp/>not<sp/>part<sp/>of<sp/>the<sp/>**public<sp/>API**<sp/>and<sp/>should<sp/>not<sp/>be<sp/>called<sp/>directly<sp/>in<sp/>user<sp/>code.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Summary</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">`CVEC`<sp/>simplifies<sp/>handling<sp/>generic<sp/>dynamic<sp/>arrays<sp/>in<sp/>C<sp/>while<sp/>remaining<sp/>lightweight<sp/>and<sp/>dependency<sp/>free.</highlight></codeline>
+<codeline><highlight class="normal">It’s<sp/>ideal<sp/>for<sp/>embedded<sp/>systems,<sp/>lightweight<sp/>applications,<sp/>or<sp/>any<sp/>project<sp/>needing<sp/>a<sp/>simple<sp/>vector-like<sp/>structure<sp/>without<sp/>C++<sp/>overhead.</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,482 @@
+\doxysection{inc/cvec/cvec.h File Reference}
+\hypertarget{cvec_8h}{}\label{cvec_8h}\index{inc/cvec/cvec.h@{inc/cvec/cvec.h}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCVEC}{CVEC}}
+\begin{DoxyCompactList}\small\item\em Custom generic dynamic vector type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{cvec_8h_a97ae4722dc7a75afe22b665abb6f1f52}{\+\_\+\+\_\+cvec\+\_\+del}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec, void \texorpdfstring{$\ast$}{*}\+\_\+elem)
+\begin{DoxyCompactList}\small\item\em Delete first occurrence of matching value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_a1f946d01c379b8973d0bf4c41e01826d}{\+\_\+\+\_\+cvec\+\_\+del\+Index}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec, void \texorpdfstring{$\ast$}{*}\+\_\+elem, const size\+\_\+t start)
+\begin{DoxyCompactList}\small\item\em Delete matching element starting search at index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_ab21834546eb6e7d575cdaaccb0e82795}{\+\_\+\+\_\+cvec\+\_\+destroy\+Split}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Cleanup after split operations. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_a6ac659e2ca5f4b2322a6ddf11e01f22d}{\+\_\+\+\_\+cvec\+\_\+find}} (const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec, void \texorpdfstring{$\ast$}{*}\+\_\+find)
+\begin{DoxyCompactList}\small\item\em Search for an element in the vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{cvec_8h_a8f79c0b613222e2a14a3b6bd1faf226c}{\+\_\+\+\_\+cvec\+\_\+has\+Enough\+Cap}} (const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec, const size\+\_\+t \+\_\+additions)
+\begin{DoxyCompactList}\small\item\em Check whether capacity is sufficient for requested additions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_ac1af20c5a1c528bc5651f379386cbd0c}{\+\_\+\+\_\+cvec\+\_\+push}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec, void \texorpdfstring{$\ast$}{*}\+\_\+elem)
+\begin{DoxyCompactList}\small\item\em Insert at end of vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_aa150e437b43f307726e4063ce76b60e8}{\+\_\+\+\_\+cvec\+\_\+push\+Front}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec, void \texorpdfstring{$\ast$}{*}\+\_\+elem)
+\begin{DoxyCompactList}\small\item\em Insert new element at beginning. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_a65f0ba8829599270b50cdd2e63b2bc7b}{\+\_\+\+\_\+cvec\+\_\+push\+Index}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec, const size\+\_\+t \+\_\+index, void \texorpdfstring{$\ast$}{*}\+\_\+elem)
+\begin{DoxyCompactList}\small\item\em Insert element at specific index, shifting elements as needed. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_a3f287ab92bb2f2a2b63c5db1e6396357}{\+\_\+\+\_\+cvec\+\_\+set}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec, const size\+\_\+t \+\_\+index, void \texorpdfstring{$\ast$}{*}\+\_\+set)
+\begin{DoxyCompactList}\small\item\em Replace value at given index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{cvec_8h_aa6cb8d7b5f1186daf4b4a8def3dfbe06}{cvec\+\_\+at}} (const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec, const size\+\_\+t \+\_\+index)
+\begin{DoxyCompactList}\small\item\em Check whether element exists at index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{cvec_8h_ade25c4f7888a5555d6a78d1eabd38385}{cvec\+\_\+at\+Cap}} (const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec, const size\+\_\+t \+\_\+index)
+\begin{DoxyCompactList}\small\item\em Check whether element exists within vector capacity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cvec_8h_a6cca94bad4f8ea2ce68cb973f68f0ebe}{cvec\+\_\+clear}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Clear vector contents but keep capacity unchanged. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_abb385731b26c20515b3707491cc5d641}{cvec\+\_\+destroy}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Destroy a \doxylink{structCVEC}{CVEC}, freeing allocated memory and invalidating the structure. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_a94138b862886cc78cb31f4d978aa3ddb}{cvec\+\_\+empty\+All}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Clear all elements and reset size to zero without freeing memory. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cvec_8h_a12eedad4150eeda5211fccc3817093ca}{cvec\+\_\+get}} (const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec, const size\+\_\+t \+\_\+index)
+\begin{DoxyCompactList}\small\item\em Get a pointer to an element at specified index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCVEC}{CVEC}} \mbox{\hyperlink{cvec_8h_a874a6704568d26f70517c82df84d7feb}{cvec\+\_\+init}} (int \+\_\+cap, size\+\_\+t \+\_\+elem\+Size)
+\begin{DoxyCompactList}\small\item\em Initialize a new vector with requested capacity and element size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCVEC}{CVEC}} \mbox{\hyperlink{cvec_8h_a7a249c4709f3606bf78f6068a635972d}{cvec\+\_\+init\+Copy}} (const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+src)
+\begin{DoxyCompactList}\small\item\em Create a deep copy of an existing \doxylink{structCVEC}{CVEC}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_a53ee0e61343e971ea758a475821e2b6a}{cvec\+\_\+merge}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+to\+Merge, const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+input)
+\begin{DoxyCompactList}\small\item\em Merge contents of {\ttfamily \+\_\+input} vector into {\ttfamily \+\_\+to\+Merge}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_adfdf6a2c9c486b1ff45f16477306426a}{cvec\+\_\+pop\+Back}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Remove the last element. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_a0de85956cadbfa8360190a7bc8940bae}{cvec\+\_\+pop\+Front}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Remove the first element, shifting all others left. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_a10df95775694048fb7755e3ebf2be8e2}{cvec\+\_\+remove}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec, const size\+\_\+t \+\_\+index)
+\begin{DoxyCompactList}\small\item\em Remove an element at a specific index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_a0bc4975070bfe7dd941c1a383e9624f7}{cvec\+\_\+reverse}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Reverse the order of elements in place. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_ac5f029841417974e9b6f1238bd2b0dd0}{cvec\+\_\+shrink}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Shrink allocated memory to match current size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cvec_8h_aeced9d211e8e88f791f5c225f7719504}{cvec\+\_\+split}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+vec, char \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+del)
+\begin{DoxyCompactList}\small\item\em Split a string by delimiter and store parts inside \doxylink{structCVEC}{CVEC}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cvec_8h_a24d698eb1e7ae45db851b15c5d7ed590}{cvec\+\_\+swap}} (\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+a, \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}\+\_\+b)
+\begin{DoxyCompactList}\small\item\em Swap two \doxylink{structCVEC}{CVEC} instances. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{cvec_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{cvec_8h_a97ae4722dc7a75afe22b665abb6f1f52}\index{cvec.h@{cvec.h}!\_\_cvec\_del@{\_\_cvec\_del}}
+\index{\_\_cvec\_del@{\_\_cvec\_del}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{\_\_cvec\_del()}{\_\_cvec\_del()}}
+{\footnotesize\ttfamily \label{cvec_8h_a97ae4722dc7a75afe22b665abb6f1f52} 
+int \+\_\+\+\_\+cvec\+\_\+del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{\+\_\+elem}{}\end{DoxyParamCaption})}
+
+
+
+Delete first occurrence of matching value. 
+
+\Hypertarget{cvec_8h_a1f946d01c379b8973d0bf4c41e01826d}\index{cvec.h@{cvec.h}!\_\_cvec\_delIndex@{\_\_cvec\_delIndex}}
+\index{\_\_cvec\_delIndex@{\_\_cvec\_delIndex}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{\_\_cvec\_delIndex()}{\_\_cvec\_delIndex()}}
+{\footnotesize\ttfamily \label{cvec_8h_a1f946d01c379b8973d0bf4c41e01826d} 
+int \+\_\+\+\_\+cvec\+\_\+del\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{\+\_\+elem}{, }\item[{const size\+\_\+t}]{start}{}\end{DoxyParamCaption})}
+
+
+
+Delete matching element starting search at index. 
+
+\Hypertarget{cvec_8h_ab21834546eb6e7d575cdaaccb0e82795}\index{cvec.h@{cvec.h}!\_\_cvec\_destroySplit@{\_\_cvec\_destroySplit}}
+\index{\_\_cvec\_destroySplit@{\_\_cvec\_destroySplit}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{\_\_cvec\_destroySplit()}{\_\_cvec\_destroySplit()}}
+{\footnotesize\ttfamily \label{cvec_8h_ab21834546eb6e7d575cdaaccb0e82795} 
+int \+\_\+\+\_\+cvec\+\_\+destroy\+Split (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{}\end{DoxyParamCaption})}
+
+
+
+Cleanup after split operations. 
+
+\Hypertarget{cvec_8h_a6ac659e2ca5f4b2322a6ddf11e01f22d}\index{cvec.h@{cvec.h}!\_\_cvec\_find@{\_\_cvec\_find}}
+\index{\_\_cvec\_find@{\_\_cvec\_find}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{\_\_cvec\_find()}{\_\_cvec\_find()}}
+{\footnotesize\ttfamily \label{cvec_8h_a6ac659e2ca5f4b2322a6ddf11e01f22d} 
+int \+\_\+\+\_\+cvec\+\_\+find (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{\+\_\+find}{}\end{DoxyParamCaption})}
+
+
+
+Search for an element in the vector. 
+
+\begin{DoxyReturn}{Returns}
+index or CVEC\+\_\+\+NPOS 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_a8f79c0b613222e2a14a3b6bd1faf226c}\index{cvec.h@{cvec.h}!\_\_cvec\_hasEnoughCap@{\_\_cvec\_hasEnoughCap}}
+\index{\_\_cvec\_hasEnoughCap@{\_\_cvec\_hasEnoughCap}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{\_\_cvec\_hasEnoughCap()}{\_\_cvec\_hasEnoughCap()}}
+{\footnotesize\ttfamily \label{cvec_8h_a8f79c0b613222e2a14a3b6bd1faf226c} 
+bool \+\_\+\+\_\+cvec\+\_\+has\+Enough\+Cap (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{, }\item[{const size\+\_\+t}]{\+\_\+additions}{}\end{DoxyParamCaption})}
+
+
+
+Check whether capacity is sufficient for requested additions. 
+
+\begin{DoxyReturn}{Returns}
+true if capacity allows, else false 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_ac1af20c5a1c528bc5651f379386cbd0c}\index{cvec.h@{cvec.h}!\_\_cvec\_push@{\_\_cvec\_push}}
+\index{\_\_cvec\_push@{\_\_cvec\_push}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{\_\_cvec\_push()}{\_\_cvec\_push()}}
+{\footnotesize\ttfamily \label{cvec_8h_ac1af20c5a1c528bc5651f379386cbd0c} 
+int \+\_\+\+\_\+cvec\+\_\+push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{\+\_\+elem}{}\end{DoxyParamCaption})}
+
+
+
+Insert at end of vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vec} & Vector \\
+\hline
+{\em \+\_\+elem} & Pointer to element data to store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CVEC\+\_\+\+SUCCESS or an error code 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_aa150e437b43f307726e4063ce76b60e8}\index{cvec.h@{cvec.h}!\_\_cvec\_pushFront@{\_\_cvec\_pushFront}}
+\index{\_\_cvec\_pushFront@{\_\_cvec\_pushFront}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{\_\_cvec\_pushFront()}{\_\_cvec\_pushFront()}}
+{\footnotesize\ttfamily \label{cvec_8h_aa150e437b43f307726e4063ce76b60e8} 
+int \+\_\+\+\_\+cvec\+\_\+push\+Front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{\+\_\+elem}{}\end{DoxyParamCaption})}
+
+
+
+Insert new element at beginning. 
+
+\begin{DoxyReturn}{Returns}
+CVEC\+\_\+\+SUCCESS or CVEC\+\_\+\+NOT\+\_\+\+ENOUGH\+\_\+\+CAP 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_a65f0ba8829599270b50cdd2e63b2bc7b}\index{cvec.h@{cvec.h}!\_\_cvec\_pushIndex@{\_\_cvec\_pushIndex}}
+\index{\_\_cvec\_pushIndex@{\_\_cvec\_pushIndex}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{\_\_cvec\_pushIndex()}{\_\_cvec\_pushIndex()}}
+{\footnotesize\ttfamily \label{cvec_8h_a65f0ba8829599270b50cdd2e63b2bc7b} 
+int \+\_\+\+\_\+cvec\+\_\+push\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{, }\item[{const size\+\_\+t}]{\+\_\+index}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{\+\_\+elem}{}\end{DoxyParamCaption})}
+
+
+
+Insert element at specific index, shifting elements as needed. 
+
+\Hypertarget{cvec_8h_a3f287ab92bb2f2a2b63c5db1e6396357}\index{cvec.h@{cvec.h}!\_\_cvec\_set@{\_\_cvec\_set}}
+\index{\_\_cvec\_set@{\_\_cvec\_set}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{\_\_cvec\_set()}{\_\_cvec\_set()}}
+{\footnotesize\ttfamily \label{cvec_8h_a3f287ab92bb2f2a2b63c5db1e6396357} 
+int \+\_\+\+\_\+cvec\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{, }\item[{const size\+\_\+t}]{\+\_\+index}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{\+\_\+set}{}\end{DoxyParamCaption})}
+
+
+
+Replace value at given index. 
+
+\Hypertarget{cvec_8h_aa6cb8d7b5f1186daf4b4a8def3dfbe06}\index{cvec.h@{cvec.h}!cvec\_at@{cvec\_at}}
+\index{cvec\_at@{cvec\_at}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_at()}{cvec\_at()}}
+{\footnotesize\ttfamily \label{cvec_8h_aa6cb8d7b5f1186daf4b4a8def3dfbe06} 
+bool cvec\+\_\+at (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{, }\item[{const size\+\_\+t}]{\+\_\+index}{}\end{DoxyParamCaption})}
+
+
+
+Check whether element exists at index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vec} & Vector to inspect \\
+\hline
+{\em \+\_\+index} & Element index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if valid index, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_ade25c4f7888a5555d6a78d1eabd38385}\index{cvec.h@{cvec.h}!cvec\_atCap@{cvec\_atCap}}
+\index{cvec\_atCap@{cvec\_atCap}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_atCap()}{cvec\_atCap()}}
+{\footnotesize\ttfamily \label{cvec_8h_ade25c4f7888a5555d6a78d1eabd38385} 
+bool cvec\+\_\+at\+Cap (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{, }\item[{const size\+\_\+t}]{\+\_\+index}{}\end{DoxyParamCaption})}
+
+
+
+Check whether element exists within vector capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vec} & Vector to inspect \\
+\hline
+{\em \+\_\+index} & Index inside original allocated capacity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if index \texorpdfstring{$<$}{<} capacity, else false 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_a6cca94bad4f8ea2ce68cb973f68f0ebe}\index{cvec.h@{cvec.h}!cvec\_clear@{cvec\_clear}}
+\index{cvec\_clear@{cvec\_clear}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_clear()}{cvec\_clear()}}
+{\footnotesize\ttfamily \label{cvec_8h_a6cca94bad4f8ea2ce68cb973f68f0ebe} 
+void cvec\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{}\end{DoxyParamCaption})}
+
+
+
+Clear vector contents but keep capacity unchanged. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vec} & Pointer to vector \\
+\hline
+\end{DoxyParams}
+\Hypertarget{cvec_8h_abb385731b26c20515b3707491cc5d641}\index{cvec.h@{cvec.h}!cvec\_destroy@{cvec\_destroy}}
+\index{cvec\_destroy@{cvec\_destroy}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_destroy()}{cvec\_destroy()}}
+{\footnotesize\ttfamily \label{cvec_8h_abb385731b26c20515b3707491cc5d641} 
+int cvec\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{}\end{DoxyParamCaption})}
+
+
+
+Destroy a \doxylink{structCVEC}{CVEC}, freeing allocated memory and invalidating the structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vec} & Pointer to the \doxylink{structCVEC}{CVEC} to destroy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CVEC\+\_\+\+SUCCESS on success, or CVEC\+\_\+\+FAIL 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_a94138b862886cc78cb31f4d978aa3ddb}\index{cvec.h@{cvec.h}!cvec\_emptyAll@{cvec\_emptyAll}}
+\index{cvec\_emptyAll@{cvec\_emptyAll}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_emptyAll()}{cvec\_emptyAll()}}
+{\footnotesize\ttfamily \label{cvec_8h_a94138b862886cc78cb31f4d978aa3ddb} 
+int cvec\+\_\+empty\+All (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{}\end{DoxyParamCaption})}
+
+
+
+Clear all elements and reset size to zero without freeing memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vec} & Pointer to the vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CVEC\+\_\+\+SUCCESS on success, else CVEC\+\_\+\+FAIL 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_a12eedad4150eeda5211fccc3817093ca}\index{cvec.h@{cvec.h}!cvec\_get@{cvec\_get}}
+\index{cvec\_get@{cvec\_get}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_get()}{cvec\_get()}}
+{\footnotesize\ttfamily \label{cvec_8h_a12eedad4150eeda5211fccc3817093ca} 
+void \texorpdfstring{$\ast$}{*} cvec\+\_\+get (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{, }\item[{const size\+\_\+t}]{\+\_\+index}{}\end{DoxyParamCaption})}
+
+
+
+Get a pointer to an element at specified index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vec} & Vector to inspect \\
+\hline
+{\em \+\_\+index} & Position to access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to element or NULL if invalid 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_a874a6704568d26f70517c82df84d7feb}\index{cvec.h@{cvec.h}!cvec\_init@{cvec\_init}}
+\index{cvec\_init@{cvec\_init}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_init()}{cvec\_init()}}
+{\footnotesize\ttfamily \label{cvec_8h_a874a6704568d26f70517c82df84d7feb} 
+\mbox{\hyperlink{structCVEC}{CVEC}} cvec\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{\+\_\+cap}{, }\item[{size\+\_\+t}]{\+\_\+elem\+Size}{}\end{DoxyParamCaption})}
+
+
+
+Initialize a new vector with requested capacity and element size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+cap} & Initial capacity (number of elements, not bytes) \\
+\hline
+{\em \+\_\+elem\+Size} & Size in bytes of each element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A fully initialized \doxylink{structCVEC}{CVEC} instance 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_a7a249c4709f3606bf78f6068a635972d}\index{cvec.h@{cvec.h}!cvec\_initCopy@{cvec\_initCopy}}
+\index{cvec\_initCopy@{cvec\_initCopy}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_initCopy()}{cvec\_initCopy()}}
+{\footnotesize\ttfamily \label{cvec_8h_a7a249c4709f3606bf78f6068a635972d} 
+\mbox{\hyperlink{structCVEC}{CVEC}} cvec\+\_\+init\+Copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+src}{}\end{DoxyParamCaption})}
+
+
+
+Create a deep copy of an existing \doxylink{structCVEC}{CVEC}. 
+
+Copies memory, capacity, element properties, and flags.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+src} & Pointer to the original \doxylink{structCVEC}{CVEC} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{structCVEC}{CVEC} instance with copied data 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_a53ee0e61343e971ea758a475821e2b6a}\index{cvec.h@{cvec.h}!cvec\_merge@{cvec\_merge}}
+\index{cvec\_merge@{cvec\_merge}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_merge()}{cvec\_merge()}}
+{\footnotesize\ttfamily \label{cvec_8h_a53ee0e61343e971ea758a475821e2b6a} 
+int cvec\+\_\+merge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+to\+Merge}{, }\item[{const \mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+input}{}\end{DoxyParamCaption})}
+
+
+
+Merge contents of {\ttfamily \+\_\+input} vector into {\ttfamily \+\_\+to\+Merge}. 
+
+Appends all items from {\ttfamily \+\_\+input} to {\ttfamily \+\_\+to\+Merge}, expanding capacity if allowed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+to\+Merge} & Destination vector to merge into \\
+\hline
+{\em \+\_\+input} & Vector to merge from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CVEC\+\_\+\+SUCCESS or error code (CVEC\+\_\+\+FAIL, CVEC\+\_\+\+NOT\+\_\+\+ENOUGH\+\_\+\+CAP, ...) 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_adfdf6a2c9c486b1ff45f16477306426a}\index{cvec.h@{cvec.h}!cvec\_popBack@{cvec\_popBack}}
+\index{cvec\_popBack@{cvec\_popBack}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_popBack()}{cvec\_popBack()}}
+{\footnotesize\ttfamily \label{cvec_8h_adfdf6a2c9c486b1ff45f16477306426a} 
+int cvec\+\_\+pop\+Back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{}\end{DoxyParamCaption})}
+
+
+
+Remove the last element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vec} & Vector to modify \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CVEC\+\_\+\+SUCCESS or CVEC\+\_\+\+FAIL 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_a0de85956cadbfa8360190a7bc8940bae}\index{cvec.h@{cvec.h}!cvec\_popFront@{cvec\_popFront}}
+\index{cvec\_popFront@{cvec\_popFront}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_popFront()}{cvec\_popFront()}}
+{\footnotesize\ttfamily \label{cvec_8h_a0de85956cadbfa8360190a7bc8940bae} 
+int cvec\+\_\+pop\+Front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{}\end{DoxyParamCaption})}
+
+
+
+Remove the first element, shifting all others left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vec} & Vector to modify \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CVEC\+\_\+\+SUCCESS or CVEC\+\_\+\+FAIL 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_a10df95775694048fb7755e3ebf2be8e2}\index{cvec.h@{cvec.h}!cvec\_remove@{cvec\_remove}}
+\index{cvec\_remove@{cvec\_remove}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_remove()}{cvec\_remove()}}
+{\footnotesize\ttfamily \label{cvec_8h_a10df95775694048fb7755e3ebf2be8e2} 
+int cvec\+\_\+remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{, }\item[{const size\+\_\+t}]{\+\_\+index}{}\end{DoxyParamCaption})}
+
+
+
+Remove an element at a specific index. 
+
+Shifts trailing elements left by one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vec} & Pointer to vector \\
+\hline
+{\em \+\_\+index} & Index to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CVEC\+\_\+\+SUCCESS, CVEC\+\_\+\+OUT\+\_\+\+BOUNDS, or CVEC\+\_\+\+FAIL 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_a0bc4975070bfe7dd941c1a383e9624f7}\index{cvec.h@{cvec.h}!cvec\_reverse@{cvec\_reverse}}
+\index{cvec\_reverse@{cvec\_reverse}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_reverse()}{cvec\_reverse()}}
+{\footnotesize\ttfamily \label{cvec_8h_a0bc4975070bfe7dd941c1a383e9624f7} 
+int cvec\+\_\+reverse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{}\end{DoxyParamCaption})}
+
+
+
+Reverse the order of elements in place. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vec} & Pointer to \doxylink{structCVEC}{CVEC} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CVEC\+\_\+\+SUCCESS or CVEC\+\_\+\+FAIL 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_ac5f029841417974e9b6f1238bd2b0dd0}\index{cvec.h@{cvec.h}!cvec\_shrink@{cvec\_shrink}}
+\index{cvec\_shrink@{cvec\_shrink}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_shrink()}{cvec\_shrink()}}
+{\footnotesize\ttfamily \label{cvec_8h_ac5f029841417974e9b6f1238bd2b0dd0} 
+int cvec\+\_\+shrink (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{}\end{DoxyParamCaption})}
+
+
+
+Shrink allocated memory to match current size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vec} & Pointer to vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CVEC\+\_\+\+SUCCESS or CVEC\+\_\+\+FAIL\+\_\+\+ALLOCATION 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_aeced9d211e8e88f791f5c225f7719504}\index{cvec.h@{cvec.h}!cvec\_split@{cvec\_split}}
+\index{cvec\_split@{cvec\_split}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_split()}{cvec\_split()}}
+{\footnotesize\ttfamily \label{cvec_8h_aeced9d211e8e88f791f5c225f7719504} 
+int cvec\+\_\+split (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+vec}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+del}{}\end{DoxyParamCaption})}
+
+
+
+Split a string by delimiter and store parts inside \doxylink{structCVEC}{CVEC}. 
+
+Internal {\ttfamily \+\_\+\+\_\+used\+Split} tracks cleanup ownership.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+vec} & Destination vector \\
+\hline
+{\em \+\_\+str} & Input string to tokenize \\
+\hline
+{\em \+\_\+del} & Delimiter string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CVEC\+\_\+\+SUCCESS or CVEC\+\_\+\+FAIL 
+\end{DoxyReturn}
+\Hypertarget{cvec_8h_a24d698eb1e7ae45db851b15c5d7ed590}\index{cvec.h@{cvec.h}!cvec\_swap@{cvec\_swap}}
+\index{cvec\_swap@{cvec\_swap}!cvec.h@{cvec.h}}
+\doxysubsubsection{\texorpdfstring{cvec\_swap()}{cvec\_swap()}}
+{\footnotesize\ttfamily \label{cvec_8h_a24d698eb1e7ae45db851b15c5d7ed590} 
+void cvec\+\_\+swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+a}{, }\item[{\mbox{\hyperlink{structCVEC}{CVEC}} \texorpdfstring{$\ast$}{*}}]{\+\_\+b}{}\end{DoxyParamCaption})}
+
+
+
+Swap two \doxylink{structCVEC}{CVEC} instances. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+a} & First vector \\
+\hline
+{\em \+\_\+b} & Second vector \\
+\hline
+\end{DoxyParams}

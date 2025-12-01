@@ -1,0 +1,9 @@
+.TH "" 3 "Version v1.0.0-build" "CVEC" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cvec cvec\&.h CVECpredefines\&.h 
+.PP
+inc cvec cvec\&.h CVECpredefines\&.h 
+.PP
+

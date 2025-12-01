@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="d7/da1/structCVEC" kind="struct" language="C++" prot="public">
+    <compoundname>CVEC</compoundname>
+    <includes refid="d1/db8/cvec_8h" local="no">cvec.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d7/da1/structCVEC_1a7bd9467a6201deefdb89a9009e12ae4a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CVEC::__usedSplit</definition>
+        <argsstring></argsstring>
+        <name>__usedSplit</name>
+        <qualifiedname>CVEC::__usedSplit</qualifiedname>
+        <briefdescription>
+<para>Internal flag used by split operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cvec/cvec.h" line="57" column="10" bodyfile="inc/cvec/cvec.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da1/structCVEC_1a15c46fb3be30ae84dab56350bce4676c" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t CVEC::cap</definition>
+        <argsstring></argsstring>
+        <name>cap</name>
+        <qualifiedname>CVEC::cap</qualifiedname>
+        <briefdescription>
+<para>Allocated storage capacity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cvec/cvec.h" line="62" column="12" bodyfile="inc/cvec/cvec.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da1/structCVEC_1a2be76162dcff157eacc3044ec75c9ed9" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* CVEC::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>CVEC::data</qualifiedname>
+        <briefdescription>
+<para>Pointer to contiguous allocated memory storing array elements. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cvec/cvec.h" line="58" column="10" bodyfile="inc/cvec/cvec.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da1/structCVEC_1a1766cdac622dd1329f40c3efb0c89231" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CVEC::dynamicCap</definition>
+        <argsstring></argsstring>
+        <name>dynamicCap</name>
+        <qualifiedname>CVEC::dynamicCap</qualifiedname>
+        <briefdescription>
+<para>Enables automatic capacity growth when true. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cvec/cvec.h" line="60" column="10" bodyfile="inc/cvec/cvec.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da1/structCVEC_1ad55b17d80dd2478c970fbee61dc99a34" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t CVEC::elemLen</definition>
+        <argsstring></argsstring>
+        <name>elemLen</name>
+        <qualifiedname>CVEC::elemLen</qualifiedname>
+        <briefdescription>
+<para>Size in bytes of each element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cvec/cvec.h" line="63" column="12" bodyfile="inc/cvec/cvec.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da1/structCVEC_1a4f0c174bb5c14f98689445aeb319c844" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CVEC::forceCap</definition>
+        <argsstring></argsstring>
+        <name>forceCap</name>
+        <qualifiedname>CVEC::forceCap</qualifiedname>
+        <briefdescription>
+<para>Prevents capacity expansion if true; insertion fails when full. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cvec/cvec.h" line="59" column="10" bodyfile="inc/cvec/cvec.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da1/structCVEC_1a54c31052c6a4d40b4e088299070dd9ea" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CVEC::initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <qualifiedname>CVEC::initialized</qualifiedname>
+        <briefdescription>
+<para>Tracks whether this <ref refid="d7/da1/structCVEC" kindref="compound">CVEC</ref> has been properly initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cvec/cvec.h" line="56" column="10" bodyfile="inc/cvec/cvec.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da1/structCVEC_1a7ac0bd7a628d28db3faee0849015350f" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t CVEC::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>CVEC::size</qualifiedname>
+        <briefdescription>
+<para>Current number of stored items. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cvec/cvec.h" line="61" column="12" bodyfile="inc/cvec/cvec.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Custom generic dynamic vector type. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="d7/da1/structCVEC" kindref="compound">CVEC</ref> is a flexible container that stores a sequence of elements of uniform size. It behaves similarly to std::vector in C++, supporting dynamic resizing, insertion, deletion, merging, reversing, and splitting.</para>
+<para><simplesect kind="note"><para>Direct modification of structure fields should be avoided — prefer <ref refid="d7/da1/structCVEC" kindref="compound">CVEC</ref> API usage. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="inc/cvec/cvec.h" line="54" column="1" bodyfile="inc/cvec/cvec.h" bodystart="55" bodyend="64"/>
+    <listofallmembers>
+      <member refid="d7/da1/structCVEC_1a7bd9467a6201deefdb89a9009e12ae4a" prot="public" virt="non-virtual"><scope>CVEC</scope><name>__usedSplit</name></member>
+      <member refid="d7/da1/structCVEC_1a15c46fb3be30ae84dab56350bce4676c" prot="public" virt="non-virtual"><scope>CVEC</scope><name>cap</name></member>
+      <member refid="d7/da1/structCVEC_1a2be76162dcff157eacc3044ec75c9ed9" prot="public" virt="non-virtual"><scope>CVEC</scope><name>data</name></member>
+      <member refid="d7/da1/structCVEC_1a1766cdac622dd1329f40c3efb0c89231" prot="public" virt="non-virtual"><scope>CVEC</scope><name>dynamicCap</name></member>
+      <member refid="d7/da1/structCVEC_1ad55b17d80dd2478c970fbee61dc99a34" prot="public" virt="non-virtual"><scope>CVEC</scope><name>elemLen</name></member>
+      <member refid="d7/da1/structCVEC_1a4f0c174bb5c14f98689445aeb319c844" prot="public" virt="non-virtual"><scope>CVEC</scope><name>forceCap</name></member>
+      <member refid="d7/da1/structCVEC_1a54c31052c6a4d40b4e088299070dd9ea" prot="public" virt="non-virtual"><scope>CVEC</scope><name>initialized</name></member>
+      <member refid="d7/da1/structCVEC_1a7ac0bd7a628d28db3faee0849015350f" prot="public" virt="non-virtual"><scope>CVEC</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

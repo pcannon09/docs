@@ -1,0 +1,125 @@
+\chapter{CVEC }
+\hypertarget{index}{}\label{index}\index{CVEC@{CVEC}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{1.\+0.\+0}{1.\+0.\+0}}\label{index_autotoc_md1}
+\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{{\itshape "{}\+Functional C++ vector-\/like manipulation for C"{}}}{{\itshape "{}\+Functional C++ vector-\/like manipulation for C"{}}}}\label{index_autotoc_md2}
+{\ttfamily \doxylink{structCVEC}{CVEC}} is a minimal and efficient C dynamic array library that offers type-\/agnostic vector behavior with optional capacity control and safe dynamic resizing. It provides an interface similar to {\ttfamily std\+::vector} in C++ but implemented in pure C with focus on simplicity, safety, and flexibility.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Supported Compilers}{Supported Compilers}}\label{index_autotoc_md4}
+{\bfseries{GCC}} \texorpdfstring{$>$}{>}= 5.\+0 {\bfseries{Clang}} \texorpdfstring{$>$}{>}= 3.\+5
+
+All compilers {\bfseries{must support C99}} or higher.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{Features}{Features}}\label{index_autotoc_md6}
+
+\begin{DoxyItemize}
+\item {\bfseries{Dynamic Capacity Management}} Initialize, resize, and grow vectors automatically, or lock capacity with {\ttfamily force\+Cap} for predictable memory limits.
+\item {\bfseries{Safe Element Operations}} Supports indexed push, insert, and removal without exposing raw pointer arithmetic.
+\item {\bfseries{Front, Back, and Indexed Insertion}} Add elements to the end, front, or any specific position via {\ttfamily \doxylink{cvec_8h_ac1af20c5a1c528bc5651f379386cbd0c}{\+\_\+\+\_\+cvec\+\_\+push()}}, {\ttfamily \doxylink{cvec_8h_aa150e437b43f307726e4063ce76b60e8}{\+\_\+\+\_\+cvec\+\_\+push\+Front()}}, or {\ttfamily \doxylink{cvec_8h_a65f0ba8829599270b50cdd2e63b2bc7b}{\+\_\+\+\_\+cvec\+\_\+push\+Index()}}.
+\item {\bfseries{Element Access and Queries}} Retrieve or validate indices safely with {\ttfamily \doxylink{cvec_8h_a12eedad4150eeda5211fccc3817093ca}{cvec\+\_\+get()}}, {\ttfamily \doxylink{cvec_8h_aa6cb8d7b5f1186daf4b4a8def3dfbe06}{cvec\+\_\+at()}}, and {\ttfamily \doxylink{cvec_8h_ade25c4f7888a5555d6a78d1eabd38385}{cvec\+\_\+at\+Cap()}}.
+\item {\bfseries{Merging and Copying}} Combine vectors or duplicate existing ones using {\ttfamily \doxylink{cvec_8h_a53ee0e61343e971ea758a475821e2b6a}{cvec\+\_\+merge()}} and {\ttfamily \doxylink{cvec_8h_a7a249c4709f3606bf78f6068a635972d}{cvec\+\_\+init\+Copy()}}.
+\item {\bfseries{Deletion Utilities}} Delete by index, by element, or remove multiple matching elements through {\ttfamily \doxylink{cvec_8h_a1f946d01c379b8973d0bf4c41e01826d}{\+\_\+\+\_\+cvec\+\_\+del\+Index()}}, {\ttfamily \doxylink{cvec_8h_a97ae4722dc7a75afe22b665abb6f1f52}{\+\_\+\+\_\+cvec\+\_\+del()}}, and {\ttfamily \doxylink{cvec_8h_a10df95775694048fb7755e3ebf2be8e2}{cvec\+\_\+remove()}}.
+\item {\bfseries{Reversal and Shrinking}} Reverse vector order or reduce capacity using {\ttfamily \doxylink{cvec_8h_a0bc4975070bfe7dd941c1a383e9624f7}{cvec\+\_\+reverse()}} and {\ttfamily \doxylink{cvec_8h_ac5f029841417974e9b6f1238bd2b0dd0}{cvec\+\_\+shrink()}}.
+\item {\bfseries{Optional Dynamic Capacity}} When {\ttfamily dynamic\+Cap} is disabled, all operations must fit within the current capacity. This is useful for embedded or low-\/level systems.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{Basic Usage}{Basic Usage}}\label{index_autotoc_md8}
+Example\+: creating, pushing, and accessing integer elements.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cvec_8h}{cvec.h}}"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{structCVEC}{CVEC}}\ v\ =\ \mbox{\hyperlink{cvec_8h_a874a6704568d26f70517c82df84d7feb}{cvec\_init}}(4,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));\ \textcolor{comment}{//\ Create\ a\ vector\ for\ ints\ with\ capacity\ of\ 4}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 10;\ i++)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{cvec_8h_ac1af20c5a1c528bc5651f379386cbd0c}{\_\_cvec\_push}}(\&v,\ \&i);\ \textcolor{comment}{//\ Push\ elements,\ auto-\/resizing\ as\ needed}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ v.\mbox{\hyperlink{structCVEC_a7ac0bd7a628d28db3faee0849015350f}{size}};\ i++)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ *(\textcolor{keywordtype}{int}*)\mbox{\hyperlink{cvec_8h_a12eedad4150eeda5211fccc3817093ca}{cvec\_get}}(\&v,\ i));\ \textcolor{comment}{//\ Print\ each\ element}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{cvec_8h_abb385731b26c20515b3707491cc5d641}{cvec\_destroy}}(\&v);\ \textcolor{comment}{//\ Free\ allocated\ memory}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md10}{}\doxysection{\texorpdfstring{Error Handling}{Error Handling}}\label{index_autotoc_md10}
+Most functions return\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily CVEC\+\_\+\+SUCCESS} -\/ operation succeeded
+\item {\ttfamily CVEC\+\_\+\+FAIL} -\/ invalid input or operation
+\item {\ttfamily CVEC\+\_\+\+FAIL\+\_\+\+ALLOCATION} — allocation or reallocation failed
+\item {\ttfamily CVEC\+\_\+\+FORCECAP\+\_\+\+FAIL} — capacity exceeded while {\ttfamily force\+Cap} is enabled
+\item {\ttfamily CVEC\+\_\+\+OUT\+\_\+\+BOUNDS} — invalid index access
+\item {\ttfamily CVEC\+\_\+\+ELEM\+\_\+\+NOT\+\_\+\+FOUND} — target element not found
+\item {\ttfamily CVEC\+\_\+\+NPOS} — element not found (for {\ttfamily \doxylink{cvec_8h_a6ac659e2ca5f4b2322a6ddf11e01f22d}{\+\_\+\+\_\+cvec\+\_\+find()}})
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md12}{}\doxysection{\texorpdfstring{Internal Behavior}{Internal Behavior}}\label{index_autotoc_md12}
+Internal (private) functions use the {\ttfamily \+\_\+\+\_\+cvec\+\_\+} prefix, for example\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{cvec_8h_ac1af20c5a1c528bc5651f379386cbd0c}{\+\_\+\+\_\+cvec\+\_\+push()}} — push element to the end
+\item {\ttfamily \doxylink{cvec_8h_aa150e437b43f307726e4063ce76b60e8}{\+\_\+\+\_\+cvec\+\_\+push\+Front()}} — push element to the beginning
+\item {\ttfamily \doxylink{cvec_8h_a65f0ba8829599270b50cdd2e63b2bc7b}{\+\_\+\+\_\+cvec\+\_\+push\+Index()}} — insert at a specific index
+\item {\ttfamily \doxylink{cvec_8h_a1f946d01c379b8973d0bf4c41e01826d}{\+\_\+\+\_\+cvec\+\_\+del\+Index()}} — delete element at or after a specific index
+\end{DoxyItemize}
+
+These functions are used internally by the main API but may also be called directly if low-\/level control is desired.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md14}{}\doxysection{\texorpdfstring{Notes on Capacity}{Notes on Capacity}}\label{index_autotoc_md14}
+
+\begin{DoxyItemize}
+\item If {\ttfamily force\+Cap} is set to {\ttfamily true}, exceeding the capacity will {\bfseries{not}} reallocate memory. The function instead returns {\ttfamily CVEC\+\_\+\+FORCECAP\+\_\+\+FAIL}.
+\item If {\ttfamily dynamic\+Cap} is {\ttfamily false}, the capacity remains fixed even if {\ttfamily force\+Cap} is disabled.
+\item Default allocation growth is defined by {\ttfamily \+\_\+\+\_\+\+CVEC\+\_\+\+CAP\+\_\+\+ADDITION}.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md16}{}\doxysection{\texorpdfstring{Example\+: Merging Two Vectors}{Example\+: Merging Two Vectors}}\label{index_autotoc_md16}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cvec_8h}{cvec.h}}"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{structCVEC}{CVEC}}\ a\ =\ \mbox{\hyperlink{cvec_8h_a874a6704568d26f70517c82df84d7feb}{cvec\_init}}(2,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{structCVEC}{CVEC}}\ b\ =\ \mbox{\hyperlink{cvec_8h_a874a6704568d26f70517c82df84d7feb}{cvec\_init}}(2,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3;\ i++)\ \mbox{\hyperlink{cvec_8h_ac1af20c5a1c528bc5651f379386cbd0c}{\_\_cvec\_push}}(\&a,\ \&i);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 3;\ i\ <\ 6;\ i++)\ \mbox{\hyperlink{cvec_8h_ac1af20c5a1c528bc5651f379386cbd0c}{\_\_cvec\_push}}(\&b,\ \&i);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{cvec_8h_a53ee0e61343e971ea758a475821e2b6a}{cvec\_merge}}(\&a,\ \&b);\ \textcolor{comment}{//\ Merge\ \`{}b`\ into\ \`{}a`}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ a.\mbox{\hyperlink{structCVEC_a7ac0bd7a628d28db3faee0849015350f}{size}};\ i++)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ *(\textcolor{keywordtype}{int}*)\mbox{\hyperlink{cvec_8h_a12eedad4150eeda5211fccc3817093ca}{cvec\_get}}(\&a,\ i));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{cvec_8h_abb385731b26c20515b3707491cc5d641}{cvec\_destroy}}(\&a);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{cvec_8h_abb385731b26c20515b3707491cc5d641}{cvec\_destroy}}(\&b);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md18}{}\doxysection{\texorpdfstring{Internal Helpers}{Internal Helpers}}\label{index_autotoc_md18}
+Helper functions such as {\ttfamily \doxylink{cvec_8h_a8f79c0b613222e2a14a3b6bd1faf226c}{\+\_\+\+\_\+cvec\+\_\+has\+Enough\+Cap()}} and macros like {\ttfamily \+\_\+\+\_\+\+CVEC\+\_\+\+SET\+\_\+\+NULL()} are used internally for safety and consistency. These are not part of the {\bfseries{public API}} and should not be called directly in user code.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md20}{}\doxysection{\texorpdfstring{Summary}{Summary}}\label{index_autotoc_md20}
+{\ttfamily \doxylink{structCVEC}{CVEC}} simplifies handling generic dynamic arrays in C while remaining lightweight and dependency free. It’s ideal for embedded systems, lightweight applications, or any project needing a simple vector-\/like structure without C++ overhead. 

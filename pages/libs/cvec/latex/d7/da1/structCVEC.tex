@@ -1,0 +1,166 @@
+\doxysection{CVEC Struct Reference}
+\hypertarget{structCVEC}{}\label{structCVEC}\index{CVEC@{CVEC}}
+
+
+Custom generic dynamic vector type.  
+
+
+
+
+{\ttfamily \#include $<$cvec.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structCVEC_a7bd9467a6201deefdb89a9009e12ae4a}{\+\_\+\+\_\+used\+Split}}
+\begin{DoxyCompactList}\small\item\em Internal flag used by split operations. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{structCVEC_a15c46fb3be30ae84dab56350bce4676c}{cap}}
+\begin{DoxyCompactList}\small\item\em Allocated storage capacity. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structCVEC_a2be76162dcff157eacc3044ec75c9ed9}{data}}
+\begin{DoxyCompactList}\small\item\em Pointer to contiguous allocated memory storing array elements. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structCVEC_a1766cdac622dd1329f40c3efb0c89231}{dynamic\+Cap}}
+\begin{DoxyCompactList}\small\item\em Enables automatic capacity growth when true. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{structCVEC_ad55b17d80dd2478c970fbee61dc99a34}{elem\+Len}}
+\begin{DoxyCompactList}\small\item\em Size in bytes of each element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structCVEC_a4f0c174bb5c14f98689445aeb319c844}{force\+Cap}}
+\begin{DoxyCompactList}\small\item\em Prevents capacity expansion if true; insertion fails when full. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structCVEC_a54c31052c6a4d40b4e088299070dd9ea}{initialized}}
+\begin{DoxyCompactList}\small\item\em Tracks whether this \doxylink{structCVEC}{CVEC} has been properly initialized. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{structCVEC_a7ac0bd7a628d28db3faee0849015350f}{size}}
+\begin{DoxyCompactList}\small\item\em Current number of stored items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Custom generic dynamic vector type. 
+
+\doxylink{structCVEC}{CVEC} is a flexible container that stores a sequence of elements of uniform size. It behaves similarly to std\+::vector in C++, supporting dynamic resizing, insertion, deletion, merging, reversing, and splitting.
+
+\begin{DoxyNote}{Note}
+Direct modification of structure fields should be avoided — prefer \doxylink{structCVEC}{CVEC} API usage. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{cvec_8h_source_l00054}{54}} of file \mbox{\hyperlink{cvec_8h_source}{cvec.\+h}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{structCVEC_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structCVEC_a7bd9467a6201deefdb89a9009e12ae4a}\index{CVEC@{CVEC}!\_\_usedSplit@{\_\_usedSplit}}
+\index{\_\_usedSplit@{\_\_usedSplit}!CVEC@{CVEC}}
+\doxysubsubsection{\texorpdfstring{\_\_usedSplit}{\_\_usedSplit}}
+{\footnotesize\ttfamily \label{structCVEC_a7bd9467a6201deefdb89a9009e12ae4a} 
+bool CVEC\+::\+\_\+\+\_\+used\+Split}
+
+
+
+Internal flag used by split operations. 
+
+
+
+Definition at line \mbox{\hyperlink{cvec_8h_source_l00057}{57}} of file \mbox{\hyperlink{cvec_8h_source}{cvec.\+h}}.
+
+\Hypertarget{structCVEC_a15c46fb3be30ae84dab56350bce4676c}\index{CVEC@{CVEC}!cap@{cap}}
+\index{cap@{cap}!CVEC@{CVEC}}
+\doxysubsubsection{\texorpdfstring{cap}{cap}}
+{\footnotesize\ttfamily \label{structCVEC_a15c46fb3be30ae84dab56350bce4676c} 
+size\+\_\+t CVEC\+::cap}
+
+
+
+Allocated storage capacity. 
+
+
+
+Definition at line \mbox{\hyperlink{cvec_8h_source_l00062}{62}} of file \mbox{\hyperlink{cvec_8h_source}{cvec.\+h}}.
+
+\Hypertarget{structCVEC_a2be76162dcff157eacc3044ec75c9ed9}\index{CVEC@{CVEC}!data@{data}}
+\index{data@{data}!CVEC@{CVEC}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \label{structCVEC_a2be76162dcff157eacc3044ec75c9ed9} 
+void\texorpdfstring{$\ast$}{*} CVEC\+::data}
+
+
+
+Pointer to contiguous allocated memory storing array elements. 
+
+
+
+Definition at line \mbox{\hyperlink{cvec_8h_source_l00058}{58}} of file \mbox{\hyperlink{cvec_8h_source}{cvec.\+h}}.
+
+\Hypertarget{structCVEC_a1766cdac622dd1329f40c3efb0c89231}\index{CVEC@{CVEC}!dynamicCap@{dynamicCap}}
+\index{dynamicCap@{dynamicCap}!CVEC@{CVEC}}
+\doxysubsubsection{\texorpdfstring{dynamicCap}{dynamicCap}}
+{\footnotesize\ttfamily \label{structCVEC_a1766cdac622dd1329f40c3efb0c89231} 
+bool CVEC\+::dynamic\+Cap}
+
+
+
+Enables automatic capacity growth when true. 
+
+
+
+Definition at line \mbox{\hyperlink{cvec_8h_source_l00060}{60}} of file \mbox{\hyperlink{cvec_8h_source}{cvec.\+h}}.
+
+\Hypertarget{structCVEC_ad55b17d80dd2478c970fbee61dc99a34}\index{CVEC@{CVEC}!elemLen@{elemLen}}
+\index{elemLen@{elemLen}!CVEC@{CVEC}}
+\doxysubsubsection{\texorpdfstring{elemLen}{elemLen}}
+{\footnotesize\ttfamily \label{structCVEC_ad55b17d80dd2478c970fbee61dc99a34} 
+size\+\_\+t CVEC\+::elem\+Len}
+
+
+
+Size in bytes of each element. 
+
+
+
+Definition at line \mbox{\hyperlink{cvec_8h_source_l00063}{63}} of file \mbox{\hyperlink{cvec_8h_source}{cvec.\+h}}.
+
+\Hypertarget{structCVEC_a4f0c174bb5c14f98689445aeb319c844}\index{CVEC@{CVEC}!forceCap@{forceCap}}
+\index{forceCap@{forceCap}!CVEC@{CVEC}}
+\doxysubsubsection{\texorpdfstring{forceCap}{forceCap}}
+{\footnotesize\ttfamily \label{structCVEC_a4f0c174bb5c14f98689445aeb319c844} 
+bool CVEC\+::force\+Cap}
+
+
+
+Prevents capacity expansion if true; insertion fails when full. 
+
+
+
+Definition at line \mbox{\hyperlink{cvec_8h_source_l00059}{59}} of file \mbox{\hyperlink{cvec_8h_source}{cvec.\+h}}.
+
+\Hypertarget{structCVEC_a54c31052c6a4d40b4e088299070dd9ea}\index{CVEC@{CVEC}!initialized@{initialized}}
+\index{initialized@{initialized}!CVEC@{CVEC}}
+\doxysubsubsection{\texorpdfstring{initialized}{initialized}}
+{\footnotesize\ttfamily \label{structCVEC_a54c31052c6a4d40b4e088299070dd9ea} 
+bool CVEC\+::initialized}
+
+
+
+Tracks whether this \doxylink{structCVEC}{CVEC} has been properly initialized. 
+
+
+
+Definition at line \mbox{\hyperlink{cvec_8h_source_l00056}{56}} of file \mbox{\hyperlink{cvec_8h_source}{cvec.\+h}}.
+
+\Hypertarget{structCVEC_a7ac0bd7a628d28db3faee0849015350f}\index{CVEC@{CVEC}!size@{size}}
+\index{size@{size}!CVEC@{CVEC}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \label{structCVEC_a7ac0bd7a628d28db3faee0849015350f} 
+size\+\_\+t CVEC\+::size}
+
+
+
+Current number of stored items. 
+
+
+
+Definition at line \mbox{\hyperlink{cvec_8h_source_l00061}{61}} of file \mbox{\hyperlink{cvec_8h_source}{cvec.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/cvec/\mbox{\hyperlink{cvec_8h}{cvec.\+h}}\end{DoxyCompactItemize}

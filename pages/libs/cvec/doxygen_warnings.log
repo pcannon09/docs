@@ -1,0 +1,1 @@
+/home/pcannon/repo/programming/c/global-os-executor/vendor/cvec/inc/cvec/CVECpredefines.h:10: warning: found documented #define CVEC_DEFAULT_C_STD but ignoring it because ENABLE_PREPROCESSING is NO.
