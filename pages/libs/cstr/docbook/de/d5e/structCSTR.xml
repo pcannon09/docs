@@ -15,7 +15,7 @@
         <itemizedlist>
             <listitem><para>size_t <link linkend="_structCSTR_1ab232b3d18c8c47775417d3ea87bb8624">cap</link></para>
 
-<para>Total allocated capacity (including NULL terminator) </para>
+<para>Total allocated capacity (including NULL terminator). </para>
 </listitem>
             <listitem><para>char * <link linkend="_structCSTR_1adc16bec3dee2fe6501a372918d1766c7">data</link></para>
 
@@ -31,7 +31,7 @@
 </listitem>
             <listitem><para>size_t <link linkend="_structCSTR_1a4d4fd3c90e98dd67542e65b6b388980b">len</link></para>
 
-<para>Current string length (not counting the NULL terminator) </para>
+<para>Current string length (not counting the NULL terminator). </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -44,7 +44,7 @@
 
 <para>The fields should typically be managed only through the cstr_* API Directly modifying them can lead to undefined behavior unless explicitly intended </para>
 <para>
-Definition at line <link linkend="_cstr_8h_source_1l00040">40</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
+Definition at line <link linkend="_cstr_8h_source_1l00056">56</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
 </section>
 <section>
 <title>Member Data Documentation</title>
@@ -54,10 +54,10 @@ Definition at line <link linkend="_cstr_8h_source_1l00040">40</link> of file <li
 <indexterm><primary>CSTR</primary><secondary>cap</secondary></indexterm>
 <para><computeroutput>size_t CSTR::cap</computeroutput></para><para>
 
-<para>Total allocated capacity (including NULL terminator) </para>
+<para>Total allocated capacity (including NULL terminator). </para>
 </para>
 <para>
-Definition at line <link linkend="_cstr_8h_source_1l00068">68</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
+Definition at line <link linkend="_cstr_8h_source_1l00084">84</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
 </section>
 <anchor xml:id="_structCSTR_1adc16bec3dee2fe6501a372918d1766c7"/><section>
     <title>data</title>
@@ -68,7 +68,7 @@ Definition at line <link linkend="_cstr_8h_source_1l00068">68</link> of file <li
 <para>Pointer to the character buffer Always NULL terminated if properly managed through the API. </para>
 </para>
 <para>
-Definition at line <link linkend="_cstr_8h_source_1l00052">52</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
+Definition at line <link linkend="_cstr_8h_source_1l00068">68</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
 </section>
 <anchor xml:id="_structCSTR_1af96673309f99797d1c8a393d0f21323f"/><section>
     <title>forceCap</title>
@@ -79,7 +79,7 @@ Definition at line <link linkend="_cstr_8h_source_1l00052">52</link> of file <li
 <para>If true, capacity is fixed and operations that exceed it return an error instead of reallocating the size. </para>
 </para>
 <para>
-Definition at line <link linkend="_cstr_8h_source_1l00058">58</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
+Definition at line <link linkend="_cstr_8h_source_1l00074">74</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
 </section>
 <anchor xml:id="_structCSTR_1a3e40b8f4e913a6e2d49df1f8e16bd323"/><section>
     <title>initialized</title>
@@ -96,7 +96,7 @@ Definition at line <link linkend="_cstr_8h_source_1l00058">58</link> of file <li
 </note>
 </para>
 <para>
-Definition at line <link linkend="_cstr_8h_source_1l00046">46</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
+Definition at line <link linkend="_cstr_8h_source_1l00062">62</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
 </section>
 <anchor xml:id="_structCSTR_1a4d4fd3c90e98dd67542e65b6b388980b"/><section>
     <title>len</title>
@@ -104,10 +104,10 @@ Definition at line <link linkend="_cstr_8h_source_1l00046">46</link> of file <li
 <indexterm><primary>CSTR</primary><secondary>len</secondary></indexterm>
 <para><computeroutput>size_t CSTR::len</computeroutput></para><para>
 
-<para>Current string length (not counting the NULL terminator) </para>
+<para>Current string length (not counting the NULL terminator). </para>
 </para>
 <para>
-Definition at line <link linkend="_cstr_8h_source_1l00063">63</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
+Definition at line <link linkend="_cstr_8h_source_1l00079">79</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

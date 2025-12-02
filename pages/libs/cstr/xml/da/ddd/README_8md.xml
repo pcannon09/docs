@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="da/ddd/README_8md" kind="file" language="Markdown">
     <compoundname>README.md</compoundname>
     <briefdescription>
@@ -8,7 +8,7 @@
     </detaileddescription>
     <programlisting>
 <codeline><highlight class="normal">#<sp/>CSTR</highlight></codeline>
-<codeline><highlight class="normal">##<sp/>1.0.0</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>1.1.0</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">`CSTR`<sp/>is<sp/>a<sp/>lightweight<sp/>C<sp/>string<sp/>utility<sp/>library<sp/>that<sp/>provides<sp/>a<sp/>safer<sp/>and<sp/>more<sp/>flexible<sp/>alternative<sp/>to<sp/>raw<sp/>C-style<sp/>strings.<sp/>It<sp/>wraps<sp/>dynamic<sp/>allocation,<sp/>formatting,<sp/>substring<sp/>manipulation,<sp/>and<sp/>replacement<sp/>in<sp/>a<sp/>consistent<sp/>API<sp/>without<sp/>pulling<sp/>in<sp/>heavy<sp/>dependencies.</highlight></codeline>
 <codeline></codeline>

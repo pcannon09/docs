@@ -1,4 +1,4 @@
-.TH "inc/cstr/cstr.h" 3 "Version v1.0.0-build" "CSTR" \" -*- nroff -*-
+.TH "inc/cstr/cstr.h" 3 "Version v1.1.0-build" "CSTR" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -41,6 +41,14 @@ inc/cstr/cstr.h
 .RI "bool \fBcstr_comp\fP (const \fBCSTR\fP _s1, const \fBCSTR\fP _s2)"
 .br
 .RI "Compare two \fBCSTR\fP instances for equality\&. "
+.ti -1c
+.RI "size_t \fBcstr_count\fP (const \fBCSTR\fP *_str, const char *ch)"
+.br
+.RI "Count occurrences of a substring within a \fBCSTR\fP\&. "
+.ti -1c
+.RI "size_t \fBcstr_countChar\fP (const \fBCSTR\fP *_str, const char ch)"
+.br
+.RI "Count occurrences of a single character within a \fBCSTR\fP\&. "
 .ti -1c
 .RI "int \fBcstr_destroy\fP (\fBCSTR\fP *_str)"
 .br
@@ -116,7 +124,7 @@ inc/cstr/cstr.h
 .ti -1c
 .RI "int \fBcstr_set\fP (\fBCSTR\fP *_str, const char *_data)"
 .br
-.RI "Set the content of a \fBCSTR\fP to a new C-string in \fR\&.data\fP "
+.RI "Set the content of a \fBCSTR\fP to a new C-string in \fR\&.data\fP\&. "
 .ti -1c
 .RI "int \fBcstr_shrink\fP (\fBCSTR\fP *_str, const size_t _len)"
 .br
@@ -249,6 +257,49 @@ Compare two \fBCSTR\fP instances for equality\&.
 \fBReturns\fP
 .RS 4
 true if equal, false otherwise 
+.RE
+.PP
+
+.SS "size_t cstr_count (const \fBCSTR\fP * _str, const char * ch)"
+
+.PP
+Count occurrences of a substring within a \fBCSTR\fP\&. Searches for non-overlapping occurrences of a null-terminated substring inside the CSTR’s \fR\&.data\fP buffer using strstr\&. Each found instance advances the scan position by the length of the substring, preventing overlapping matches\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to inspect 
+.br
+\fIch\fP Null-terminated substring to count
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Number of non-overlapping occurrences found Returns 0 if parameters are invalid (\fR_str\fP, \fR\&.data\fP, \fRch\fP, or \fR*ch\fP) 
+.RE
+.PP
+
+.SS "size_t cstr_countChar (const \fBCSTR\fP * _str, const char ch)"
+
+.PP
+Count occurrences of a single character within a \fBCSTR\fP\&. Iterates through the string and counts how many times the specified character appears in the \fR\&.data\fP buffer\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to inspect 
+.br
+\fIch\fP Character to count
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Number of occurrences of \fRch\fP in the string Returns 0 if \fR_str\fP is NULL or not initialized
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function performs a linear scan across all characters\&. 
 .RE
 .PP
 
@@ -499,7 +550,7 @@ CSTR_SUCCESS or CSTR_FAIL
 .SS "int cstr_set (\fBCSTR\fP * _str, const char * _data)"
 
 .PP
-Set the content of a \fBCSTR\fP to a new C-string in \fR\&.data\fP 
+Set the content of a \fBCSTR\fP to a new C-string in \fR\&.data\fP\&. 
 .PP
 \fBParameters\fP
 .RS 4

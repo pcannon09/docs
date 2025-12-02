@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.15.0" xml:lang="en-US">
   <compound refid="de/d5e/structCSTR" kind="struct"><name>CSTR</name>
     <member refid="de/d5e/structCSTR_1ab232b3d18c8c47775417d3ea87bb8624" kind="variable"><name>cap</name></member>
     <member refid="de/d5e/structCSTR_1adc16bec3dee2fe6501a372918d1766c7" kind="variable"><name>data</name></member>
@@ -16,6 +16,8 @@
     <member refid="da/d9a/cstr_8h_1acf036d9c3a58a17c081904e6c79d5317" kind="function"><name>cstr_bool</name></member>
     <member refid="da/d9a/cstr_8h_1af89d1a993ff85c0be3926ff1541d8c57" kind="function"><name>cstr_clear</name></member>
     <member refid="da/d9a/cstr_8h_1a19f903d2ed994c92fea4c65903c3b552" kind="function"><name>cstr_comp</name></member>
+    <member refid="da/d9a/cstr_8h_1ae07aeae717d83af2b1bcd181221527a7" kind="function"><name>cstr_count</name></member>
+    <member refid="da/d9a/cstr_8h_1ad1500bd3765251407dc2769755c6e0f6" kind="function"><name>cstr_countChar</name></member>
     <member refid="da/d9a/cstr_8h_1a409ae3278ea2df20ece65251e829075a" kind="function"><name>cstr_destroy</name></member>
     <member refid="da/d9a/cstr_8h_1aac10925de8ce0961faa123541f9e3bab" kind="function"><name>cstr_empty</name></member>
     <member refid="da/d9a/cstr_8h_1afa6b390abaebf90c0ffe07c92662bdcc" kind="function"><name>cstr_endsWith</name></member>

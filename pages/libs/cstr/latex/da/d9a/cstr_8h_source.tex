@@ -14,355 +14,402 @@
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00010}00010\ }
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00011}00011\ \textcolor{preprocessor}{\#if\ \_\_STDC\_VERSION\_\_\ >=\ CSTR\_DEFAULT\_C\_STD}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00016}00016\ \textcolor{preprocessor}{\#define\ CSTR\_NPOS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/1}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00017}00017\ \textcolor{preprocessor}{\#define\ CSTR\_SUCCESS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00018}00018\ \textcolor{preprocessor}{\#define\ CSTR\_FAIL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00019}00019\ \textcolor{preprocessor}{\#define\ CSTR\_FORCECAP\_LIMIT\ \ \ \ \ \ \ \ \ 2}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00021}00021\ \textcolor{comment}{//\ NOTE:\ Dear\ developer,\ check\ all\ the\ available\ macros\ here}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00022}00022\ \textcolor{preprocessor}{\#ifdef\ CSTR\_RECOMMENDED}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00023}00023\ \textcolor{preprocessor}{\#\ \ \ define\ CSTR\_DYNAMIC\_CAPACITY}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00024}00024\ \textcolor{preprocessor}{\#\ \ \ define\ CSTR\_ENABLE\_GET\_RETURN}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00025}00025\ \textcolor{preprocessor}{\#\ \ \ define\ CSTR\_ENABLE\_GET\_CONST\_RETURN}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00026}00026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CSTR\_RECOMMENDED}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00028}00028\ \textcolor{comment}{//\ NOTE:}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00029}00029\ \textcolor{comment}{//\ Other\ macros\ that\ are\ not\ recommended\ but\ available\ for\ flexibility\ are:}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00030}00030\ \textcolor{comment}{//\ CSTR\_DEFINE\_INTERNAL\ \ \ \ \ :\ \ \ \ \ \ \ Define\ the\ internal\ files\ inside\ of\ the\ header\ file\ (cstr.h)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00031}00031\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Check\ the\ definitions\ below\ the\ definition\ of\ the\ CSTR\ struct}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00032}00032\ \textcolor{comment}{//\ CSTR\_RECOMMENDED\ \ \ \ \ \ \ \ \ :\ \ \ \ \ \ \ Enable\ recommended\ macros,\ such\ as\ CSTR\_DYNAMIC\_CAPACITY,\ CSTR\_ENABLE\_GET\_RETURN,\ ...}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00033}00033\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00034}00034\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00035}00035\ \textcolor{comment}{\ *\ @brief\ Custom\ dynamic\ string\ type}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00036}00036\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00037}00037\ \textcolor{comment}{\ *\ The\ fields\ should\ typically\ be\ managed\ only\ through\ the\ cstr\_*\ API}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00038}00038\ \textcolor{comment}{\ *\ Directly\ modifying\ them\ can\ lead\ to\ undefined\ behavior\ unless\ explicitly\ intended}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00039}00039\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00040}\mbox{\hyperlink{structCSTR}{00040}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00041}00041\ \{\textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00042}00042\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00043}00043\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Tracks\ whether\ this\ CSTR\ has\ been\ initialized}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00044}00044\ \textcolor{comment}{\ \ \ \ \ *\ @note\ Should\ only\ be\ set\ by\ internal\ or\ initialization\ functions}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00045}00045\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00046}\mbox{\hyperlink{structCSTR_a3e40b8f4e913a6e2d49df1f8e16bd323}{00046}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structCSTR_a3e40b8f4e913a6e2d49df1f8e16bd323}{initialized}};}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00047}00047\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00048}00048\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00049}00049\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Pointer\ to\ the\ character\ buffer}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00050}00050\ \textcolor{comment}{\ \ \ \ \ *\ Always\ NULL\ terminated\ if\ properly\ managed\ through\ the\ API}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00051}00051\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00052}\mbox{\hyperlink{structCSTR_adc16bec3dee2fe6501a372918d1766c7}{00052}}\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structCSTR_adc16bec3dee2fe6501a372918d1766c7}{data}};}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00053}00053\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00054}00054\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ If\ true,\ capacity\ is\ fixed\ and\ operations\ that\ exceed}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00056}00056\ \textcolor{comment}{\ \ \ \ \ *\ it\ return\ an\ error\ instead\ of\ reallocating\ the\ size}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00057}00057\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00058}\mbox{\hyperlink{structCSTR_af96673309f99797d1c8a393d0f21323f}{00058}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structCSTR_af96673309f99797d1c8a393d0f21323f}{forceCap}};}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00059}00059\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00060}00060\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Current\ string\ length\ (not\ counting\ the\ NULL\ terminator)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00063}\mbox{\hyperlink{structCSTR_a4d4fd3c90e98dd67542e65b6b388980b}{00063}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structCSTR_a4d4fd3c90e98dd67542e65b6b388980b}{len}};}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00064}00064\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00065}00065\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Total\ allocated\ capacity\ (including\ NULL\ terminator)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00013}00013\ \textcolor{preprocessor}{\#ifdef\ CSTR\_sys\_strdup}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00014}00014\ \textcolor{preprocessor}{\#\ \ \ undef\ CSTR\_sys\_strdup}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00015}00015\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00017}00017\ \textcolor{preprocessor}{\#if\ defined(CSTR\_OS\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00018}00018\ \textcolor{preprocessor}{\#\ \ \ include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00019}00019\ \textcolor{preprocessor}{\#\ \ \ define\ CSTR\_sys\_strdup\ \ \ \ \ \ \_strdup}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00020}00020\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00021}00021\ \textcolor{preprocessor}{\#\ \ \ ifdef\ \_POSIX\_C\_SOURCE\ }}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00022}00022\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ undef\ \_POSIX\_C\_SOURCE\ }}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00023}00023\ \textcolor{preprocessor}{\#\ \ \ endif}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00024}00024\ \textcolor{preprocessor}{\#\ \ \ define\ \_POSIX\_C\_SOURCE\ 200809L}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00025}00025\ \textcolor{preprocessor}{\#\ \ \ include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00026}00026\ \textcolor{preprocessor}{\#\ \ \ define\ CSTR\_sys\_strdup\ \ \ \ \ \ strdup}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00027}00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ defined(CSTR\_OS\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00029}00029\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00030}00030\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00032}00032\ \textcolor{preprocessor}{\#define\ CSTR\_NPOS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/1}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00033}00033\ \textcolor{preprocessor}{\#define\ CSTR\_SUCCESS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00034}00034\ \textcolor{preprocessor}{\#define\ CSTR\_FAIL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00035}00035\ \textcolor{preprocessor}{\#define\ CSTR\_FORCECAP\_LIMIT\ \ \ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00037}00037\ \textcolor{comment}{//\ NOTE:\ Dear\ developer,\ check\ all\ the\ available\ macros\ here}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00038}00038\ \textcolor{preprocessor}{\#ifdef\ CSTR\_RECOMMENDED}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00039}00039\ \textcolor{preprocessor}{\#\ \ \ define\ CSTR\_DYNAMIC\_CAPACITY}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00040}00040\ \textcolor{preprocessor}{\#\ \ \ define\ CSTR\_ENABLE\_GET\_RETURN}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00041}00041\ \textcolor{preprocessor}{\#\ \ \ define\ CSTR\_ENABLE\_GET\_CONST\_RETURN}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00042}00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CSTR\_RECOMMENDED}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00044}00044\ \textcolor{comment}{//\ NOTE:}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00045}00045\ \textcolor{comment}{//\ Other\ macros\ that\ are\ not\ recommended\ but\ available\ for\ flexibility\ are:}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00046}00046\ \textcolor{comment}{//\ CSTR\_DEFINE\_INTERNAL\ \ \ \ \ :\ \ \ \ \ \ \ Define\ the\ internal\ files\ inside\ of\ the\ header\ file\ (cstr.h)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00047}00047\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Check\ the\ definitions\ below\ the\ definition\ of\ the\ CSTR\ struct}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00048}00048\ \textcolor{comment}{//\ CSTR\_RECOMMENDED\ \ \ \ \ \ \ \ \ :\ \ \ \ \ \ \ Enable\ recommended\ macros,\ such\ as\ CSTR\_DYNAMIC\_CAPACITY,\ CSTR\_ENABLE\_GET\_RETURN,\ ...}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00049}00049\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00050}00050\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00051}00051\ \textcolor{comment}{\ *\ @brief\ Custom\ dynamic\ string\ type}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00052}00052\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00053}00053\ \textcolor{comment}{\ *\ The\ fields\ should\ typically\ be\ managed\ only\ through\ the\ cstr\_*\ API}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00054}00054\ \textcolor{comment}{\ *\ Directly\ modifying\ them\ can\ lead\ to\ undefined\ behavior\ unless\ explicitly\ intended}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00055}00055\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00056}\mbox{\hyperlink{structCSTR}{00056}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00057}00057\ \{\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00058}00058\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00059}00059\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Tracks\ whether\ this\ CSTR\ has\ been\ initialized}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00060}00060\ \textcolor{comment}{\ \ \ \ \ *\ @note\ Should\ only\ be\ set\ by\ internal\ or\ initialization\ functions}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00062}\mbox{\hyperlink{structCSTR_a3e40b8f4e913a6e2d49df1f8e16bd323}{00062}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structCSTR_a3e40b8f4e913a6e2d49df1f8e16bd323}{initialized}};}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00063}00063\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00064}00064\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00065}00065\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Pointer\ to\ the\ character\ buffer}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ *\ Always\ NULL\ terminated\ if\ properly\ managed\ through\ the\ API}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00068}\mbox{\hyperlink{structCSTR_ab232b3d18c8c47775417d3ea87bb8624}{00068}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structCSTR_ab232b3d18c8c47775417d3ea87bb8624}{cap}};}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00069}00069\ \}\ \mbox{\hyperlink{structCSTR}{CSTR}};}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00070}00070\ }
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00071}00071\ \textcolor{preprocessor}{\#ifdef\ CSTR\_DEFINE\_INTERNAL}\textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00072}00072\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00073}00073\ \textcolor{comment}{\ *\ @brief\ Update\ the\ capacity\ automatically}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00074}00074\ \textcolor{comment}{\ *\ IMPORTANT:}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00075}00075\ \textcolor{comment}{\ *\ \ \ \ \ \ This\ function\ won't\ do\ anything\ if\ macro\ \`{}CSTR\_DYNAMIC\_CAPACITY`\ is\ NOT\ defined}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00076}00076\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00077}00077\ \textcolor{comment}{\ *\ @return\ Return\ if\ fail\ or\ success}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00078}00078\ \textcolor{comment}{\ *\ @note\ Typically\ used\ in\ the\ other\ defined\ functions\ for\ CSTR\ inner\ API}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00079}00079\ \textcolor{comment}{\ */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00080}\mbox{\hyperlink{cstr_8h_aa64fd1fa39e95f059301cde622fe1895}{00080}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_aa64fd1fa39e95f059301cde622fe1895}{\_\_cstr\_updateCap}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00081}00081\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00082}00082\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00083}00083\ \textcolor{comment}{\ *\ @brief\ Internal\ helper\ to\ format\ and\ set\ the\ string\ content.}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00084}00084\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00085}00085\ \textcolor{comment}{\ *\ Uses\ a\ printf-\/style\ format\ string\ and\ variadic\ arguments\ to}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00086}00086\ \textcolor{comment}{\ *\ overwrite\ the\ content\ of\ a\ CSTR.\ The\ function\ computes\ the}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00087}00087\ \textcolor{comment}{\ *\ required\ buffer\ size,\ reallocates\ if\ needed\ (unless\ forceCap}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00088}00088\ \textcolor{comment}{\ *\ is\ active),\ formats\ the\ string,\ and\ updates\ length/capacity.}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00089}00089\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00090}00090\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify.}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00091}00091\ \textcolor{comment}{\ *\ @param\ \_fmt\ printf-\/style\ format\ string.}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00092}00092\ \textcolor{comment}{\ *\ @param\ ...\ \ Variadic\ arguments\ corresponding\ to\ the\ format.}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00093}00093\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00094}00094\ \textcolor{comment}{\ *\ @return}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00095}00095\ \textcolor{comment}{\ *\ \ -\/\ CSTR\_SUCCESS\ on\ success}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00096}00096\ \textcolor{comment}{\ *\ \ -\/\ CSTR\_FAIL\ if\ parameters\ are\ invalid,\ allocation\ fails,}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00097}00097\ \textcolor{comment}{\ *\ \ \ \ or\ vsnprintf\ reports\ an\ error}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00098}00098\ \textcolor{comment}{\ *\ \ -\/\ CSTR\_FORCECAP\_LIMIT\ if\ forceCap\ is\ enabled\ and\ the}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00099}00099\ \textcolor{comment}{\ *\ \ \ \ required\ size\ exceeds\ current\ capacity}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00068}\mbox{\hyperlink{structCSTR_adc16bec3dee2fe6501a372918d1766c7}{00068}}\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structCSTR_adc16bec3dee2fe6501a372918d1766c7}{data}};}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00069}00069\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00070}00070\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00071}00071\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ If\ true,\ capacity\ is\ fixed\ and\ operations\ that\ exceed}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00072}00072\ \textcolor{comment}{\ \ \ \ \ *\ it\ return\ an\ error\ instead\ of\ reallocating\ the\ size}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00074}\mbox{\hyperlink{structCSTR_af96673309f99797d1c8a393d0f21323f}{00074}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structCSTR_af96673309f99797d1c8a393d0f21323f}{forceCap}};}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00075}00075\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00076}00076\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00077}00077\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Current\ string\ length\ (not\ counting\ the\ NULL\ terminator)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00078}00078\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00079}\mbox{\hyperlink{structCSTR_a4d4fd3c90e98dd67542e65b6b388980b}{00079}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structCSTR_a4d4fd3c90e98dd67542e65b6b388980b}{len}};}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00080}00080\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00081}00081\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00082}00082\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Total\ allocated\ capacity\ (including\ NULL\ terminator)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00083}00083\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00084}\mbox{\hyperlink{structCSTR_ab232b3d18c8c47775417d3ea87bb8624}{00084}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structCSTR_ab232b3d18c8c47775417d3ea87bb8624}{cap}};}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00085}00085\ \}\ \mbox{\hyperlink{structCSTR}{CSTR}};}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00087}00087\ \textcolor{preprocessor}{\#ifdef\ CSTR\_DEFINE\_INTERNAL}\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00088}00088\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00089}00089\ \textcolor{comment}{\ *\ @brief\ Update\ the\ capacity\ automatically}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00090}00090\ \textcolor{comment}{\ *\ IMPORTANT:}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00091}00091\ \textcolor{comment}{\ *\ \ \ \ \ \ This\ function\ won't\ do\ anything\ if\ macro\ \`{}CSTR\_DYNAMIC\_CAPACITY`\ is\ NOT\ defined}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00092}00092\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00093}00093\ \textcolor{comment}{\ *\ @return\ Return\ if\ fail\ or\ success}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00094}00094\ \textcolor{comment}{\ *\ @note\ Typically\ used\ in\ the\ other\ defined\ functions\ for\ CSTR\ inner\ API}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00095}00095\ \textcolor{comment}{\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00096}\mbox{\hyperlink{cstr_8h_aa64fd1fa39e95f059301cde622fe1895}{00096}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_aa64fd1fa39e95f059301cde622fe1895}{\_\_cstr\_updateCap}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00097}00097\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00098}00098\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00099}00099\ \textcolor{comment}{\ *\ @brief\ Internal\ helper\ to\ format\ and\ set\ the\ string\ content.}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00100}00100\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00101}00101\ \textcolor{comment}{\ *\ @note\ Typically\ used\ in\ the\ other\ defined\ functions\ for\ CSTR\ inner\ API}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00102}00102\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00103}\mbox{\hyperlink{cstr_8h_aa36f129519da357efafe1e2fb11df576}{00103}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_aa36f129519da357efafe1e2fb11df576}{\_\_cstr\_setFormat}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_fmt,\ ...);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00104}00104\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ defined(CSTR\_DEFINE\_INTERNAL)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00105}00105\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00106}00106\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00107}00107\ \textcolor{comment}{\ *\ @brief\ Initialize\ a\ new\ empty\ CSTR}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00108}00108\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00109}00109\ \textcolor{comment}{\ *\ @return\ A\ new\ CSTR\ instance.\ Check\ \`{}.initialized`\ or\ if\ CSTR\ is\ not\ NULL\ to\ confirm\ success}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00110}00110\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00111}\mbox{\hyperlink{cstr_8h_ac6b2cbbf55bc53365030b1549166f7c8}{00111}}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ \mbox{\hyperlink{cstr_8h_ac6b2cbbf55bc53365030b1549166f7c8}{cstr\_init}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00112}00112\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00113}00113\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00114}00114\ \textcolor{comment}{\ *\ @brief\ Initialize\ a\ CSTR\ with\ a\ copy\ of\ an\ original\ C-\/string}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00115}00115\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00116}00116\ \textcolor{comment}{\ *\ @param\ \_dest\ Pointer\ to\ the\ destination\ CSTR}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00117}00117\ \textcolor{comment}{\ *\ @param\ \_src\ NULL\ terminated\ string\ to\ copy\ from}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00118}00118\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ on\ success,\ otherwise\ CSTR\_FAIL}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00119}00119\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00120}\mbox{\hyperlink{cstr_8h_a94a452fa90f6788aca985a9afaa6ba36}{00120}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a94a452fa90f6788aca985a9afaa6ba36}{cstr\_initCopy}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_dest,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_src);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00101}00101\ \textcolor{comment}{\ *\ Uses\ a\ printf-\/style\ format\ string\ and\ variadic\ arguments\ to}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00102}00102\ \textcolor{comment}{\ *\ overwrite\ the\ content\ of\ a\ CSTR.\ The\ function\ computes\ the}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00103}00103\ \textcolor{comment}{\ *\ required\ buffer\ size,\ reallocates\ if\ needed\ (unless\ forceCap}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00104}00104\ \textcolor{comment}{\ *\ is\ active),\ formats\ the\ string,\ and\ updates\ length/capacity.}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00105}00105\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00106}00106\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify.}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00107}00107\ \textcolor{comment}{\ *\ @param\ \_fmt\ printf-\/style\ format\ string.}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00108}00108\ \textcolor{comment}{\ *\ @param\ ...\ \ Variadic\ arguments\ corresponding\ to\ the\ format.}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00109}00109\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00110}00110\ \textcolor{comment}{\ *\ @return}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00111}00111\ \textcolor{comment}{\ *\ \ -\/\ CSTR\_SUCCESS\ on\ success}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00112}00112\ \textcolor{comment}{\ *\ \ -\/\ CSTR\_FAIL\ if\ parameters\ are\ invalid,\ allocation\ fails,}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00113}00113\ \textcolor{comment}{\ *\ \ \ \ or\ vsnprintf\ reports\ an\ error}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00114}00114\ \textcolor{comment}{\ *\ \ -\/\ CSTR\_FORCECAP\_LIMIT\ if\ forceCap\ is\ enabled\ and\ the}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00115}00115\ \textcolor{comment}{\ *\ \ \ \ required\ size\ exceeds\ current\ capacity}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00116}00116\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00117}00117\ \textcolor{comment}{\ *\ @note\ Typically\ used\ in\ the\ other\ defined\ functions\ for\ CSTR\ inner\ API}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00118}00118\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00119}\mbox{\hyperlink{cstr_8h_aa36f129519da357efafe1e2fb11df576}{00119}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_aa36f129519da357efafe1e2fb11df576}{\_\_cstr\_setFormat}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_fmt,\ ...);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00120}00120\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ defined(CSTR\_DEFINE\_INTERNAL)}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00121}00121\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00122}00122\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00123}00123\ \textcolor{comment}{\ *\ @brief\ Destroy\ and\ clean\ up\ a\ CSTR\ and\ its\ allocated\ objects}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00123}00123\ \textcolor{comment}{\ *\ @brief\ Initialize\ a\ new\ empty\ CSTR}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00124}00124\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00125}00125\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ destroy}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00126}00126\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ on\ success,\ otherwise\ CSTR\_FAIL}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00127}00127\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00128}\mbox{\hyperlink{cstr_8h_a409ae3278ea2df20ece65251e829075a}{00128}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a409ae3278ea2df20ece65251e829075a}{cstr\_destroy}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00129}00129\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00130}00130\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00131}00131\ \textcolor{comment}{\ *\ @brief\ Set\ the\ content\ of\ a\ CSTR\ to\ a\ new\ C-\/string\ in\ \`{}.data`}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00132}00132\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00133}00133\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00134}00134\ \textcolor{comment}{\ *\ @param\ \_data\ Null\ terminated\ string\ to\ set}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00135}00135\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS,\ CSTR\_FAIL,\ or\ CSTR\_FORCECAP\_LIMIT}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00136}00136\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00137}\mbox{\hyperlink{cstr_8h_a5869f4de55dbc9604a41377a98a5d8d1}{00137}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a5869f4de55dbc9604a41377a98a5d8d1}{cstr\_set}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_data);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00138}00138\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00139}00139\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00140}00140\ \textcolor{comment}{\ *\ @brief\ Append\ a\ suffix\ to\ the\ end\ of\ a\ CSTR}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00141}00141\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00142}00142\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00143}00143\ \textcolor{comment}{\ *\ @param\ \_suffix\ NULL\ terminated\ string\ to\ append}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00144}00144\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS,\ CSTR\_FAIL,\ or\ CSTR\_FORCECAP\_LIMIT}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00145}00145\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00146}\mbox{\hyperlink{cstr_8h_a7a74e1845b0b12ce83fee782b9106f13}{00146}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a7a74e1845b0b12ce83fee782b9106f13}{cstr\_add}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_suffix);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00147}00147\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00148}00148\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00149}00149\ \textcolor{comment}{\ *\ @brief\ Extract\ a\ substring\ in\ place\ from\ a\ CSTR}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00150}00150\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00151}00151\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00152}00152\ \textcolor{comment}{\ *\ @param\ \_start\ Starting\ index\ of\ the\ substring}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00153}00153\ \textcolor{comment}{\ *\ @param\ \_len\ Length\ of\ the\ substring}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00154}00154\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00155}00155\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00156}\mbox{\hyperlink{cstr_8h_a48a4112d753f753d4d8725fc3e7c5a33}{00156}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a48a4112d753f753d4d8725fc3e7c5a33}{cstr\_substr}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{size\_t}\ \_start,\ \textcolor{keywordtype}{size\_t}\ \_len);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00157}00157\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00158}00158\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00159}00159\ \textcolor{comment}{\ *\ @brief\ Clear\ a\ CSTR\ to\ an\ empty\ string\ without\ freeing\ memory}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00160}00160\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00161}00161\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ clear}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00162}00162\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00163}00163\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00164}\mbox{\hyperlink{cstr_8h_af89d1a993ff85c0be3926ff1541d8c57}{00164}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_af89d1a993ff85c0be3926ff1541d8c57}{cstr\_clear}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00165}00165\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00166}00166\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00167}00167\ \textcolor{comment}{\ *\ @brief\ Convert\ all\ characters\ in\ a\ CSTR\ to\ uppercase}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00168}00168\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00169}00169\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00125}00125\ \textcolor{comment}{\ *\ @return\ A\ new\ CSTR\ instance.\ Check\ \`{}.initialized`\ or\ if\ CSTR\ is\ not\ NULL\ to\ confirm\ success}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00126}00126\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00127}\mbox{\hyperlink{cstr_8h_ac6b2cbbf55bc53365030b1549166f7c8}{00127}}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ \mbox{\hyperlink{cstr_8h_ac6b2cbbf55bc53365030b1549166f7c8}{cstr\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00128}00128\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00129}00129\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00130}00130\ \textcolor{comment}{\ *\ @brief\ Initialize\ a\ CSTR\ with\ a\ copy\ of\ an\ original\ C-\/string}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00131}00131\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00132}00132\ \textcolor{comment}{\ *\ @param\ \_dest\ Pointer\ to\ the\ destination\ CSTR}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00133}00133\ \textcolor{comment}{\ *\ @param\ \_src\ NULL\ terminated\ string\ to\ copy\ from}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00134}00134\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ on\ success,\ otherwise\ CSTR\_FAIL}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00135}00135\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00136}\mbox{\hyperlink{cstr_8h_a94a452fa90f6788aca985a9afaa6ba36}{00136}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a94a452fa90f6788aca985a9afaa6ba36}{cstr\_initCopy}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_dest,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_src);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00137}00137\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00138}00138\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00139}00139\ \textcolor{comment}{\ *\ @brief\ Destroy\ and\ clean\ up\ a\ CSTR\ and\ its\ allocated\ objects}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00140}00140\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00141}00141\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ destroy}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00142}00142\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ on\ success,\ otherwise\ CSTR\_FAIL}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00143}00143\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00144}\mbox{\hyperlink{cstr_8h_a409ae3278ea2df20ece65251e829075a}{00144}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a409ae3278ea2df20ece65251e829075a}{cstr\_destroy}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00145}00145\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00146}00146\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00147}00147\ \textcolor{comment}{\ *\ @brief\ Set\ the\ content\ of\ a\ CSTR\ to\ a\ new\ C-\/string\ in\ \`{}.data`}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00148}00148\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00149}00149\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00150}00150\ \textcolor{comment}{\ *\ @param\ \_data\ Null\ terminated\ string\ to\ set}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00151}00151\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS,\ CSTR\_FAIL,\ or\ CSTR\_FORCECAP\_LIMIT}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00152}00152\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00153}\mbox{\hyperlink{cstr_8h_a5869f4de55dbc9604a41377a98a5d8d1}{00153}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a5869f4de55dbc9604a41377a98a5d8d1}{cstr\_set}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_data);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00154}00154\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00155}00155\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00156}00156\ \textcolor{comment}{\ *\ @brief\ Append\ a\ suffix\ to\ the\ end\ of\ a\ CSTR}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00157}00157\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00158}00158\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00159}00159\ \textcolor{comment}{\ *\ @param\ \_suffix\ NULL\ terminated\ string\ to\ append}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00160}00160\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS,\ CSTR\_FAIL,\ or\ CSTR\_FORCECAP\_LIMIT}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00161}00161\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00162}\mbox{\hyperlink{cstr_8h_a7a74e1845b0b12ce83fee782b9106f13}{00162}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a7a74e1845b0b12ce83fee782b9106f13}{cstr\_add}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_suffix);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00163}00163\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00164}00164\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00165}00165\ \textcolor{comment}{\ *\ @brief\ Extract\ a\ substring\ in\ place\ from\ a\ CSTR}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00166}00166\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00167}00167\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00168}00168\ \textcolor{comment}{\ *\ @param\ \_start\ Starting\ index\ of\ the\ substring}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00169}00169\ \textcolor{comment}{\ *\ @param\ \_len\ Length\ of\ the\ substring}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00170}00170\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00171}00171\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00172}\mbox{\hyperlink{cstr_8h_a9a33ebbb1989f05327b1b5464de45b31}{00172}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a9a33ebbb1989f05327b1b5464de45b31}{cstr\_upper}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00172}\mbox{\hyperlink{cstr_8h_a48a4112d753f753d4d8725fc3e7c5a33}{00172}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a48a4112d753f753d4d8725fc3e7c5a33}{cstr\_substr}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{size\_t}\ \_start,\ \textcolor{keywordtype}{size\_t}\ \_len);}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00173}00173\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00174}00174\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00175}00175\ \textcolor{comment}{\ *\ @brief\ Convert\ all\ characters\ in\ a\ CSTR\ to\ lowercase}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00175}00175\ \textcolor{comment}{\ *\ @brief\ Clear\ a\ CSTR\ to\ an\ empty\ string\ without\ freeing\ memory}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00176}00176\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00177}00177\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00177}00177\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ clear}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00178}00178\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00179}00179\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00180}\mbox{\hyperlink{cstr_8h_a1dba58127f74ebaa9244dc9bff79b065}{00180}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a1dba58127f74ebaa9244dc9bff79b065}{cstr\_lower}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00180}\mbox{\hyperlink{cstr_8h_af89d1a993ff85c0be3926ff1541d8c57}{00180}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_af89d1a993ff85c0be3926ff1541d8c57}{cstr\_clear}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00181}00181\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00182}00182\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00183}00183\ \textcolor{comment}{\ *\ @brief\ Insert\ a\ string\ at\ a\ specific\ position\ in\ a\ CSTR}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00183}00183\ \textcolor{comment}{\ *\ @brief\ Convert\ all\ characters\ in\ a\ CSTR\ to\ uppercase}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00184}00184\ \textcolor{comment}{\ *}}
 \DoxyCodeLine{\Hypertarget{cstr_8h_source_l00185}00185\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00186}00186\ \textcolor{comment}{\ *\ @param\ \_data\ NULL\ terminated\ string\ to\ insert}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00187}00187\ \textcolor{comment}{\ *\ @param\ \_pos\ Position\ at\ which\ to\ insert,\ 0-\/based}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00188}00188\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS,\ CSTR\_FAIL,\ or\ CSTR\_FORCECAP\_LIMIT}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00189}00189\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00190}\mbox{\hyperlink{cstr_8h_a0ba51ccc14c1f17db5b453aa857c92eb}{00190}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a0ba51ccc14c1f17db5b453aa857c92eb}{cstr\_insert}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_data,\ \textcolor{keywordtype}{size\_t}\ \_pos);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00191}00191\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00192}00192\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00193}00193\ \textcolor{comment}{\ *\ @brief\ Reverse\ the\ content\ of\ a\ CSTR\ in\ place}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00194}00194\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00195}00195\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00196}00196\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00197}00197\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00198}\mbox{\hyperlink{cstr_8h_a184ac1e789dc883dbb3b61c2ab3155d8}{00198}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a184ac1e789dc883dbb3b61c2ab3155d8}{cstr\_reverse}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00199}00199\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00200}00200\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00201}00201\ \textcolor{comment}{\ *\ @brief\ Clear\ the\ content\ of\ a\ CSTR\ and\ optionally\ shrink\ capacity}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00202}00202\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00203}00203\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ shrink}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00204}00204\ \textcolor{comment}{\ *\ @param\ \_len\ New\ length\ (characters\ to\ keep)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00205}00205\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00206}00206\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00207}\mbox{\hyperlink{cstr_8h_a3f8f5540a61c0814d0518cd2bad72eb8}{00207}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a3f8f5540a61c0814d0518cd2bad72eb8}{cstr\_shrink}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \_len);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00208}00208\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00209}00209\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00210}00210\ \textcolor{comment}{\ *\ @brief\ Create\ a\ numeric\ string\ from\ an\ integer}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00211}00211\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00212}\mbox{\hyperlink{cstr_8h_a536dc346ad93e3750e1842ea43bb4450}{00212}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a536dc346ad93e3750e1842ea43bb4450}{cstr\_fromInt}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{int}\ \_val);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00213}00213\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00214}00214\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00215}00215\ \textcolor{comment}{\ *\ @brief\ Create\ a\ numeric\ string\ from\ a\ long}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00216}00216\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00217}\mbox{\hyperlink{cstr_8h_ab5087cdbf0f78126f767966a4fd61cb2}{00217}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_ab5087cdbf0f78126f767966a4fd61cb2}{cstr\_fromLong}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{long}\ \_val);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00218}00218\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00219}00219\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00220}00220\ \textcolor{comment}{\ *\ @brief\ Create\ a\ numeric\ string\ from\ a\ float}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00221}00221\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00222}\mbox{\hyperlink{cstr_8h_a37ba4068bdf1af73b0781ffe9ea7f8b8}{00222}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a37ba4068bdf1af73b0781ffe9ea7f8b8}{cstr\_fromFloat}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{float}\ \_val);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00223}00223\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00224}00224\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00225}00225\ \textcolor{comment}{\ *\ @brief\ Create\ a\ numeric\ string\ from\ a\ double}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00226}00226\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00227}\mbox{\hyperlink{cstr_8h_a5e208d26ff6fcc88a7ddb77fd332bbe7}{00227}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a5e208d26ff6fcc88a7ddb77fd332bbe7}{cstr\_fromDouble}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{double}\ \_val);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00228}00228\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00229}00229\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00230}00230\ \textcolor{comment}{\ *\ @brief\ Create\ a\ hexadecimal\ string\ from\ an\ unsigned\ integer}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00231}00231\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00232}\mbox{\hyperlink{cstr_8h_a3afbc750e95934020262efc1a0a4d11a}{00232}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a3afbc750e95934020262efc1a0a4d11a}{cstr\_fromHex}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_val);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00233}00233\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00234}00234\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00235}00235\ \textcolor{comment}{\ *\ @brief\ Replace\ only\ the\ first\ occurrence\ of\ a\ substring}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00236}00236\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00237}00237\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00238}00238\ \textcolor{comment}{\ *\ @param\ \_old\ Substring\ to\ locate}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00239}00239\ \textcolor{comment}{\ *\ @param\ \_new\ Replacement\ string}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00240}00240\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ an\ error\ code\ (CSTR\_FAIL,\ ...)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00241}00241\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00242}\mbox{\hyperlink{cstr_8h_ad5ffa3660e5c00c93763589cb4d55ea8}{00242}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_ad5ffa3660e5c00c93763589cb4d55ea8}{cstr\_replace}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_old,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_new);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00243}00243\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00244}00244\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00245}00245\ \textcolor{comment}{\ *\ @brief\ Replace\ all\ occurrences\ of\ a\ substring}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00246}00246\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00247}00247\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00248}00248\ \textcolor{comment}{\ *\ @param\ \_old\ Substring\ to\ locate}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00249}00249\ \textcolor{comment}{\ *\ @param\ \_new\ Replacement\ string}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00250}00250\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00251}00251\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00252}\mbox{\hyperlink{cstr_8h_a260c899e712785b5e45f07c6b4d6a934}{00252}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a260c899e712785b5e45f07c6b4d6a934}{cstr\_replaceAll}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_old,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_new);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00253}00253\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00254}00254\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00255}00255\ \textcolor{comment}{\ *\ @brief\ Erase\ a\ portion\ of\ the\ string}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00256}00256\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00257}00257\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00258}00258\ \textcolor{comment}{\ *\ @param\ \_pos\ Starting\ position}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00259}00259\ \textcolor{comment}{\ *\ @param\ \_len\ Number\ of\ characters\ to\ remove}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00260}00260\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00261}00261\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00262}\mbox{\hyperlink{cstr_8h_a629281b6e3cecf239e0c1d05cd242b35}{00262}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a629281b6e3cecf239e0c1d05cd242b35}{cstr\_erase}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{int}\ \_pos,\ \textcolor{keywordtype}{size\_t}\ \_len);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00263}00263\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00264}00264\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00265}00265\ \textcolor{comment}{\ *\ @brief\ Find\ the\ first\ occurrence\ of\ a\ substring}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00266}00266\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00267}00267\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ search}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00268}00268\ \textcolor{comment}{\ *\ @param\ \_find\ Substring\ to\ locate}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00269}00269\ \textcolor{comment}{\ *\ @return\ Index\ of\ first\ match,\ or\ CSTR\_NPOS\ if\ not\ found}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00270}00270\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00271}\mbox{\hyperlink{cstr_8h_ababe5de017b72cf0fbc1c1f74bc22337}{00271}}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{cstr_8h_ababe5de017b72cf0fbc1c1f74bc22337}{cstr\_find}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_find);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00272}00272\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00273}00273\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00274}00274\ \textcolor{comment}{\ *\ @brief\ Find\ a\ substring\ starting\ from\ a\ specific\ index}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00275}00275\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00276}00276\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ search}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00277}00277\ \textcolor{comment}{\ *\ @param\ \_find\ Substring\ to\ locate}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00278}00278\ \textcolor{comment}{\ *\ @param\ pos\ Starting\ index}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00279}00279\ \textcolor{comment}{\ *\ @return\ Index\ of\ match,\ or\ CSTR\_NPOS\ if\ not\ found}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00280}00280\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00281}\mbox{\hyperlink{cstr_8h_af211d3b88dcfbfa8d8e467c819017e5d}{00281}}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{cstr_8h_af211d3b88dcfbfa8d8e467c819017e5d}{cstr\_findFrom}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_find,\ \textcolor{keywordtype}{size\_t}\ pos);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00282}00282\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00283}00283\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00284}00284\ \textcolor{comment}{\ *\ @brief\ Check\ if\ a\ CSTR\ begins\ with\ the\ given\ prefix}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00285}00285\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00286}00286\ \textcolor{comment}{\ *\ @param\ \_str\ The\ CSTR\ to\ check\ by\ value}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00287}00287\ \textcolor{comment}{\ *\ @param\ \_prefix\ The\ prefix\ string}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00288}00288\ \textcolor{comment}{\ *\ @return\ true\ if\ it\ starts\ with\ prefix,\ else\ return\ false}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00289}00289\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00290}\mbox{\hyperlink{cstr_8h_a5d7d68335475e3e92ad7af71c1436f01}{00290}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{cstr_8h_a5d7d68335475e3e92ad7af71c1436f01}{cstr\_startsWith}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ \_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_prefix);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00291}00291\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00292}00292\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00293}00293\ \textcolor{comment}{\ *\ @brief\ Check\ if\ a\ CSTR\ ends\ with\ the\ given\ suffix}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00294}00294\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00295}00295\ \textcolor{comment}{\ *\ @param\ \_str\ The\ CSTR\ to\ check\ (by\ value)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00296}00296\ \textcolor{comment}{\ *\ @param\ \_suffix\ The\ suffix\ string}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00297}00297\ \textcolor{comment}{\ *\ @return\ true\ if\ it\ ends\ with\ suffix,\ false\ otherwise}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00298}00298\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00299}\mbox{\hyperlink{cstr_8h_afa6b390abaebf90c0ffe07c92662bdcc}{00299}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{cstr_8h_afa6b390abaebf90c0ffe07c92662bdcc}{cstr\_endsWith}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ \_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_suffix);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00300}00300\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00301}00301\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00302}00302\ \textcolor{comment}{\ *\ @brief\ Compare\ two\ CSTR\ instances\ for\ equality}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00303}00303\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00304}00304\ \textcolor{comment}{\ *\ @param\ \_s1\ First\ CSTR\ (by\ value)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00305}00305\ \textcolor{comment}{\ *\ @param\ \_s2\ Second\ CSTR\ (by\ value)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00306}00306\ \textcolor{comment}{\ *\ @return\ true\ if\ equal,\ false\ otherwise}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00307}00307\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00308}\mbox{\hyperlink{cstr_8h_a19f903d2ed994c92fea4c65903c3b552}{00308}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{cstr_8h_a19f903d2ed994c92fea4c65903c3b552}{cstr\_comp}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ \_s1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ \_s2);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00309}00309\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00310}00310\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00311}00311\ \textcolor{comment}{\ *\ @brief\ Return\ "{}true"{}\ or\ "{}false"{}\ based\ on\ a\ boolean\ value}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00312}00312\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00313}00313\ \textcolor{comment}{\ *\ @param\ \_bool\ Boolean\ value}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00314}00314\ \textcolor{comment}{\ *\ @return\ "{}true"{}\ if\ \_bool\ is\ true,\ otherwise\ "{}false"{}.}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00315}00315\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00316}\mbox{\hyperlink{cstr_8h_acf036d9c3a58a17c081904e6c79d5317}{00316}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{cstr_8h_acf036d9c3a58a17c081904e6c79d5317}{cstr\_bool}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \_bool);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00317}00317\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00318}00318\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00319}00319\ \textcolor{comment}{\ *\ @brief\ Get\ if\ the\ string\ is\ empty\ }}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00320}00320\ \textcolor{comment}{\ *\ Return\ true\ if:}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00321}00321\ \textcolor{comment}{\ *\ \`{}.len`\ smaller\ or\ equal\ to\ 0}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00322}00322\ \textcolor{comment}{\ *\ \`{}.data`\ is\ empty\ ("{}"{})}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00323}00323\ \textcolor{comment}{\ *\ \`{}.initialized`\ is\ false}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00324}00324\ \textcolor{comment}{\ *\ \`{}\_str`\ is\ NULL}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00325}00325\ \textcolor{comment}{\ *\ If\ none\ of\ the\ requirements\ are\ met,\ means\ that\ it's\ not\ empty,\ hence,\ return\ false}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00326}00326\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00327}00327\ \textcolor{comment}{\ *\ @return\ Is\ the\ string\ empty?\ Yes\ (true),\ No\ (false)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00328}00328\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00329}\mbox{\hyperlink{cstr_8h_aac10925de8ce0961faa123541f9e3bab}{00329}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{cstr_8h_aac10925de8ce0961faa123541f9e3bab}{cstr\_empty}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00330}00330\ }
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00331}00331\ \textcolor{preprocessor}{\#define\ \_\_CSTR\_OK}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00332}00332\ }
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00333}00333\ \textcolor{preprocessor}{\#ifdef\ \_\_CSTR\_OK}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00334}00334\ \textcolor{preprocessor}{\#\ \ \ ifdef\ CSTR\_ENABLE\_GET\_RETURN}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00335}00335\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ define\ CSTR\_GET\_RETURN(\_cstr,\ \_call,\ ...)\ ((\_call(\&\_cstr,\ \ \_\_VA\_ARGS\_\_)),\ \_cstr)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00336}00336\ \textcolor{preprocessor}{\#\ \ \ else}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00337}00337\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ define\ CSTR\_GET\_RETURN(\_cstr,\ \_call,\ ...)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00338}00338\ \textcolor{preprocessor}{\#\ \ \ endif\ }\textcolor{comment}{//\ defined(CSTR\_ENABLE\_GET\_RETURN)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00339}00339\ }
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00340}00340\ \textcolor{preprocessor}{\#\ \ \ ifdef\ CSTR\_CONST\_RETURN\_USE\_PTR\_METHOD}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00341}00341\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ define\ CSTR\_CONST\_RETURN\_PTR\_METHOD\ -\/>}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00342}00342\ \textcolor{preprocessor}{\#\ \ \ else}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00343}00343\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ define\ CSTR\_CONST\_RETURN\_PTR\_METHOD\ .}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00344}00344\ \textcolor{preprocessor}{\#\ \ \ endif}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00345}00345\ }
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00346}00346\ \textcolor{preprocessor}{\#\ \ \ ifdef\ CSTR\_ENABLE\_GET\_CONST\_RETURN}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00347}00347\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ define\ CSTR\_GET\_CONST\_RETURN(\_str,\ \_call,\ ...)\ \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00348}00348\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ (\{\ \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00349}00349\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ CSTR\ tmpS;\ \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00350}00350\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ cstr\_initCopy(\&tmpS,\ \_str\ CSTR\_CONST\_RETURN\_PTR\_METHOD\ data);\ \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00351}00351\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_call(\&tmpS,\ \_\_VA\_ARGS\_\_);\ \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00352}00352\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ tmpS;\ \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00353}00353\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \})}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00354}00354\ \textcolor{preprocessor}{\#\ \ \ else}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00355}00355\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ define\ CSTR\_GET\_CONST\_RETURN(\_str,\ \_call,\ ...)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00356}00356\ \textcolor{preprocessor}{\#\ \ \ endif\ }\textcolor{comment}{//\ defined(CSTR\_ENABLE\_GET\_CONST\_RETURN)}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00357}00357\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_CSTR\_OK}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00358}00358\ }
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00359}00359\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00360}00360\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Must\ use\ C11\ as\ the\ minimum\ standard"{}}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00361}00361\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_STDC\_VERSION\_\_}}
-\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00362}00362\ }
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00186}00186\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00187}00187\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00188}\mbox{\hyperlink{cstr_8h_a9a33ebbb1989f05327b1b5464de45b31}{00188}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a9a33ebbb1989f05327b1b5464de45b31}{cstr\_upper}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00189}00189\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00190}00190\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00191}00191\ \textcolor{comment}{\ *\ @brief\ Convert\ all\ characters\ in\ a\ CSTR\ to\ lowercase}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00192}00192\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00193}00193\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00194}00194\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00195}00195\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00196}\mbox{\hyperlink{cstr_8h_a1dba58127f74ebaa9244dc9bff79b065}{00196}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a1dba58127f74ebaa9244dc9bff79b065}{cstr\_lower}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00197}00197\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00198}00198\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00199}00199\ \textcolor{comment}{\ *\ @brief\ Insert\ a\ string\ at\ a\ specific\ position\ in\ a\ CSTR}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00200}00200\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00201}00201\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00202}00202\ \textcolor{comment}{\ *\ @param\ \_data\ NULL\ terminated\ string\ to\ insert}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00203}00203\ \textcolor{comment}{\ *\ @param\ \_pos\ Position\ at\ which\ to\ insert,\ 0-\/based}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00204}00204\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS,\ CSTR\_FAIL,\ or\ CSTR\_FORCECAP\_LIMIT}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00205}00205\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00206}\mbox{\hyperlink{cstr_8h_a0ba51ccc14c1f17db5b453aa857c92eb}{00206}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a0ba51ccc14c1f17db5b453aa857c92eb}{cstr\_insert}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_data,\ \textcolor{keywordtype}{size\_t}\ \_pos);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00207}00207\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00208}00208\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00209}00209\ \textcolor{comment}{\ *\ @brief\ Reverse\ the\ content\ of\ a\ CSTR\ in\ place}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00210}00210\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00211}00211\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ modify}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00212}00212\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00213}00213\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00214}\mbox{\hyperlink{cstr_8h_a184ac1e789dc883dbb3b61c2ab3155d8}{00214}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a184ac1e789dc883dbb3b61c2ab3155d8}{cstr\_reverse}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00215}00215\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00216}00216\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00217}00217\ \textcolor{comment}{\ *\ @brief\ Clear\ the\ content\ of\ a\ CSTR\ and\ optionally\ shrink\ capacity}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00218}00218\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00219}00219\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ shrink}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00220}00220\ \textcolor{comment}{\ *\ @param\ \_len\ New\ length\ (characters\ to\ keep)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00221}00221\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00222}00222\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00223}\mbox{\hyperlink{cstr_8h_a3f8f5540a61c0814d0518cd2bad72eb8}{00223}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a3f8f5540a61c0814d0518cd2bad72eb8}{cstr\_shrink}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \_len);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00224}00224\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00225}00225\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00226}00226\ \textcolor{comment}{\ *\ @brief\ Create\ a\ numeric\ string\ from\ an\ integer}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00227}00227\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00228}\mbox{\hyperlink{cstr_8h_a536dc346ad93e3750e1842ea43bb4450}{00228}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a536dc346ad93e3750e1842ea43bb4450}{cstr\_fromInt}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{int}\ \_val);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00229}00229\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00230}00230\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00231}00231\ \textcolor{comment}{\ *\ @brief\ Create\ a\ numeric\ string\ from\ a\ long}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00232}00232\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00233}\mbox{\hyperlink{cstr_8h_ab5087cdbf0f78126f767966a4fd61cb2}{00233}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_ab5087cdbf0f78126f767966a4fd61cb2}{cstr\_fromLong}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{long}\ \_val);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00234}00234\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00235}00235\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00236}00236\ \textcolor{comment}{\ *\ @brief\ Create\ a\ numeric\ string\ from\ a\ float}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00237}00237\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00238}\mbox{\hyperlink{cstr_8h_a37ba4068bdf1af73b0781ffe9ea7f8b8}{00238}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a37ba4068bdf1af73b0781ffe9ea7f8b8}{cstr\_fromFloat}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{float}\ \_val);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00239}00239\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00240}00240\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00241}00241\ \textcolor{comment}{\ *\ @brief\ Create\ a\ numeric\ string\ from\ a\ double}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00242}00242\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00243}\mbox{\hyperlink{cstr_8h_a5e208d26ff6fcc88a7ddb77fd332bbe7}{00243}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a5e208d26ff6fcc88a7ddb77fd332bbe7}{cstr\_fromDouble}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{double}\ \_val);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00244}00244\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00245}00245\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00246}00246\ \textcolor{comment}{\ *\ @brief\ Create\ a\ hexadecimal\ string\ from\ an\ unsigned\ integer}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00247}00247\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00248}\mbox{\hyperlink{cstr_8h_a3afbc750e95934020262efc1a0a4d11a}{00248}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a3afbc750e95934020262efc1a0a4d11a}{cstr\_fromHex}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_val);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00249}00249\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00250}00250\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00251}00251\ \textcolor{comment}{\ *\ @brief\ Replace\ only\ the\ first\ occurrence\ of\ a\ substring}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00252}00252\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00253}00253\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00254}00254\ \textcolor{comment}{\ *\ @param\ \_old\ Substring\ to\ locate}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00255}00255\ \textcolor{comment}{\ *\ @param\ \_new\ Replacement\ string}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00256}00256\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ an\ error\ code\ (CSTR\_FAIL,\ ...)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00257}00257\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00258}\mbox{\hyperlink{cstr_8h_ad5ffa3660e5c00c93763589cb4d55ea8}{00258}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_ad5ffa3660e5c00c93763589cb4d55ea8}{cstr\_replace}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_old,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_new);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00259}00259\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00260}00260\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00261}00261\ \textcolor{comment}{\ *\ @brief\ Replace\ all\ occurrences\ of\ a\ substring}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00262}00262\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00263}00263\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00264}00264\ \textcolor{comment}{\ *\ @param\ \_old\ Substring\ to\ locate}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00265}00265\ \textcolor{comment}{\ *\ @param\ \_new\ Replacement\ string}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00266}00266\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00267}00267\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00268}\mbox{\hyperlink{cstr_8h_a260c899e712785b5e45f07c6b4d6a934}{00268}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a260c899e712785b5e45f07c6b4d6a934}{cstr\_replaceAll}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_old,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_new);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00269}00269\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00270}00270\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00271}00271\ \textcolor{comment}{\ *\ @brief\ Erase\ a\ portion\ of\ the\ string}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00272}00272\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00273}00273\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00274}00274\ \textcolor{comment}{\ *\ @param\ \_pos\ Starting\ position}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00275}00275\ \textcolor{comment}{\ *\ @param\ \_len\ Number\ of\ characters\ to\ remove}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00276}00276\ \textcolor{comment}{\ *\ @return\ CSTR\_SUCCESS\ or\ CSTR\_FAIL}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00277}00277\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00278}\mbox{\hyperlink{cstr_8h_a629281b6e3cecf239e0c1d05cd242b35}{00278}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cstr_8h_a629281b6e3cecf239e0c1d05cd242b35}{cstr\_erase}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keywordtype}{int}\ \_pos,\ \textcolor{keywordtype}{size\_t}\ \_len);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00279}00279\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00280}00280\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00281}00281\ \textcolor{comment}{\ *\ @brief\ Find\ the\ first\ occurrence\ of\ a\ substring}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00282}00282\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00283}00283\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ search}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00284}00284\ \textcolor{comment}{\ *\ @param\ \_find\ Substring\ to\ locate}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00285}00285\ \textcolor{comment}{\ *\ @return\ Index\ of\ first\ match,\ or\ CSTR\_NPOS\ if\ not\ found}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00286}00286\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00287}\mbox{\hyperlink{cstr_8h_ababe5de017b72cf0fbc1c1f74bc22337}{00287}}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{cstr_8h_ababe5de017b72cf0fbc1c1f74bc22337}{cstr\_find}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_find);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00288}00288\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00289}00289\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00290}00290\ \textcolor{comment}{\ *\ @brief\ Find\ a\ substring\ starting\ from\ a\ specific\ index}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00291}00291\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00292}00292\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ search}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00293}00293\ \textcolor{comment}{\ *\ @param\ \_find\ Substring\ to\ locate}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00294}00294\ \textcolor{comment}{\ *\ @param\ pos\ Starting\ index}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00295}00295\ \textcolor{comment}{\ *\ @return\ Index\ of\ match,\ or\ CSTR\_NPOS\ if\ not\ found}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00296}00296\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00297}\mbox{\hyperlink{cstr_8h_af211d3b88dcfbfa8d8e467c819017e5d}{00297}}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{cstr_8h_af211d3b88dcfbfa8d8e467c819017e5d}{cstr\_findFrom}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_find,\ \textcolor{keywordtype}{size\_t}\ pos);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00298}00298\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00299}00299\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00300}00300\ \textcolor{comment}{\ *\ @brief\ Count\ occurrences\ of\ a\ single\ character\ within\ a\ CSTR}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00301}00301\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00302}00302\ \textcolor{comment}{\ *\ Iterates\ through\ the\ string\ and\ counts\ how\ many\ times\ the\ specified}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00303}00303\ \textcolor{comment}{\ *\ character\ appears\ in\ the\ \`{}.data`\ buffer.}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00304}00304\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00305}00305\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ inspect}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00306}00306\ \textcolor{comment}{\ *\ @param\ ch\ Character\ to\ count}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00307}00307\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00308}00308\ \textcolor{comment}{\ *\ @return\ Number\ of\ occurrences\ of\ \`{}ch`\ in\ the\ string}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00309}00309\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ Returns\ 0\ if\ \`{}\_str`\ is\ NULL\ or\ not\ initialized}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00310}00310\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00311}00311\ \textcolor{comment}{\ *\ @note\ This\ function\ performs\ a\ linear\ scan\ across\ all\ characters.}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00312}00312\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00313}\mbox{\hyperlink{cstr_8h_ad1500bd3765251407dc2769755c6e0f6}{00313}}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{cstr_8h_ad1500bd3765251407dc2769755c6e0f6}{cstr\_countChar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ ch);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00314}00314\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00315}00315\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00316}00316\ \textcolor{comment}{\ *\ @brief\ Count\ occurrences\ of\ a\ substring\ within\ a\ CSTR}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00317}00317\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00318}00318\ \textcolor{comment}{\ *\ Searches\ for\ non-\/overlapping\ occurrences\ of\ a\ null-\/terminated\ substring}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00319}00319\ \textcolor{comment}{\ *\ inside\ the\ CSTR’s\ \`{}.data`\ buffer\ using\ strstr.\ Each\ found\ instance\ advances}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00320}00320\ \textcolor{comment}{\ *\ the\ scan\ position\ by\ the\ length\ of\ the\ substring,\ preventing\ overlapping\ matches.}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00321}00321\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00322}00322\ \textcolor{comment}{\ *\ @param\ \_str\ Pointer\ to\ the\ CSTR\ to\ inspect}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00323}00323\ \textcolor{comment}{\ *\ @param\ ch\ \ \ Null-\/terminated\ substring\ to\ count}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00324}00324\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00325}00325\ \textcolor{comment}{\ *\ @return\ Number\ of\ non-\/overlapping\ occurrences\ found}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00326}00326\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ Returns\ 0\ if\ parameters\ are\ invalid\ (`\_str`,\ \`{}.data`,\ \`{}ch`,\ or\ \`{}*ch`)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00327}00327\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00328}\mbox{\hyperlink{cstr_8h_ae07aeae717d83af2b1bcd181221527a7}{00328}}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{cstr_8h_ae07aeae717d83af2b1bcd181221527a7}{cstr\_count}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *ch);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00329}00329\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00330}00330\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00331}00331\ \textcolor{comment}{\ *\ @brief\ Check\ if\ a\ CSTR\ begins\ with\ the\ given\ prefix}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00332}00332\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00333}00333\ \textcolor{comment}{\ *\ @param\ \_str\ The\ CSTR\ to\ check\ by\ value}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00334}00334\ \textcolor{comment}{\ *\ @param\ \_prefix\ The\ prefix\ string}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00335}00335\ \textcolor{comment}{\ *\ @return\ true\ if\ it\ starts\ with\ prefix,\ else\ return\ false}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00336}00336\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00337}\mbox{\hyperlink{cstr_8h_a5d7d68335475e3e92ad7af71c1436f01}{00337}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{cstr_8h_a5d7d68335475e3e92ad7af71c1436f01}{cstr\_startsWith}}(\mbox{\hyperlink{structCSTR}{CSTR}}\ \_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_prefix);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00338}00338\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00339}00339\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00340}00340\ \textcolor{comment}{\ *\ @brief\ Check\ if\ a\ CSTR\ ends\ with\ the\ given\ suffix}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00341}00341\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00342}00342\ \textcolor{comment}{\ *\ @param\ \_str\ The\ CSTR\ to\ check\ (by\ value)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00343}00343\ \textcolor{comment}{\ *\ @param\ \_suffix\ The\ suffix\ string}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00344}00344\ \textcolor{comment}{\ *\ @return\ true\ if\ it\ ends\ with\ suffix,\ false\ otherwise}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00345}00345\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00346}\mbox{\hyperlink{cstr_8h_afa6b390abaebf90c0ffe07c92662bdcc}{00346}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{cstr_8h_afa6b390abaebf90c0ffe07c92662bdcc}{cstr\_endsWith}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ \_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_suffix);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00347}00347\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00348}00348\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00349}00349\ \textcolor{comment}{\ *\ @brief\ Compare\ two\ CSTR\ instances\ for\ equality}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00350}00350\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00351}00351\ \textcolor{comment}{\ *\ @param\ \_s1\ First\ CSTR\ (by\ value)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00352}00352\ \textcolor{comment}{\ *\ @param\ \_s2\ Second\ CSTR\ (by\ value)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00353}00353\ \textcolor{comment}{\ *\ @return\ true\ if\ equal,\ false\ otherwise}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00354}00354\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00355}\mbox{\hyperlink{cstr_8h_a19f903d2ed994c92fea4c65903c3b552}{00355}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{cstr_8h_a19f903d2ed994c92fea4c65903c3b552}{cstr\_comp}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ \_s1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ \_s2);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00356}00356\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00357}00357\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00358}00358\ \textcolor{comment}{\ *\ @brief\ Return\ "{}true"{}\ or\ "{}false"{}\ based\ on\ a\ boolean\ value}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00359}00359\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00360}00360\ \textcolor{comment}{\ *\ @param\ \_bool\ Boolean\ value}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00361}00361\ \textcolor{comment}{\ *\ @return\ "{}true"{}\ if\ \_bool\ is\ true,\ otherwise\ "{}false"{}.}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00362}00362\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00363}\mbox{\hyperlink{cstr_8h_acf036d9c3a58a17c081904e6c79d5317}{00363}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{cstr_8h_acf036d9c3a58a17c081904e6c79d5317}{cstr\_bool}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \_bool);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00364}00364\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00365}00365\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00366}00366\ \textcolor{comment}{\ *\ @brief\ Get\ if\ the\ string\ is\ empty\ }}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00367}00367\ \textcolor{comment}{\ *\ Return\ true\ if:}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00368}00368\ \textcolor{comment}{\ *\ \`{}.len`\ smaller\ or\ equal\ to\ 0}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00369}00369\ \textcolor{comment}{\ *\ \`{}.data`\ is\ empty\ ("{}"{})}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00370}00370\ \textcolor{comment}{\ *\ \`{}.initialized`\ is\ false}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00371}00371\ \textcolor{comment}{\ *\ \`{}\_str`\ is\ NULL}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00372}00372\ \textcolor{comment}{\ *\ If\ none\ of\ the\ requirements\ are\ met,\ means\ that\ it's\ not\ empty,\ hence,\ return\ false}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00373}00373\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00374}00374\ \textcolor{comment}{\ *\ @return\ Is\ the\ string\ empty?\ Yes\ (true),\ No\ (false)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00375}00375\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00376}\mbox{\hyperlink{cstr_8h_aac10925de8ce0961faa123541f9e3bab}{00376}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{cstr_8h_aac10925de8ce0961faa123541f9e3bab}{cstr\_empty}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCSTR}{CSTR}}\ *\_str);}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00377}00377\ }
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00378}00378\ \textcolor{preprocessor}{\#define\ \_\_CSTR\_OK}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00379}00379\ }
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00380}00380\ \textcolor{preprocessor}{\#ifdef\ \_\_CSTR\_OK}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00381}00381\ \textcolor{preprocessor}{\#\ \ \ ifdef\ CSTR\_ENABLE\_GET\_RETURN}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00382}00382\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ define\ CSTR\_GET\_RETURN(\_cstr,\ \_call,\ ...)\ ((\_call(\&\_cstr,\ \ \_\_VA\_ARGS\_\_)),\ \_cstr)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00383}00383\ \textcolor{preprocessor}{\#\ \ \ else}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00384}00384\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ define\ CSTR\_GET\_RETURN(\_cstr,\ \_call,\ ...)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00385}00385\ \textcolor{preprocessor}{\#\ \ \ endif\ }\textcolor{comment}{//\ defined(CSTR\_ENABLE\_GET\_RETURN)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00386}00386\ }
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00387}00387\ \textcolor{preprocessor}{\#\ \ \ ifdef\ CSTR\_CONST\_RETURN\_USE\_PTR\_METHOD}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00388}00388\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ define\ CSTR\_CONST\_RETURN\_PTR\_METHOD\ -\/>}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00389}00389\ \textcolor{preprocessor}{\#\ \ \ else}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00390}00390\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ define\ CSTR\_CONST\_RETURN\_PTR\_METHOD\ .}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00391}00391\ \textcolor{preprocessor}{\#\ \ \ endif}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00392}00392\ }
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00393}00393\ \textcolor{preprocessor}{\#\ \ \ ifdef\ CSTR\_ENABLE\_GET\_CONST\_RETURN}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00394}00394\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ define\ CSTR\_GET\_CONST\_RETURN(\_str,\ \_call,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00395}00395\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ (\{\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00396}00396\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ CSTR\ tmpS;\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00397}00397\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ cstr\_initCopy(\&tmpS,\ \_str\ CSTR\_CONST\_RETURN\_PTR\_METHOD\ data);\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00398}00398\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_call(\&tmpS,\ \_\_VA\_ARGS\_\_);\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00399}00399\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ tmpS;\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00400}00400\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \})}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00401}00401\ \textcolor{preprocessor}{\#\ \ \ else}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00402}00402\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ define\ CSTR\_GET\_CONST\_RETURN(\_str,\ \_call,\ ...)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00403}00403\ \textcolor{preprocessor}{\#\ \ \ endif\ }\textcolor{comment}{//\ defined(CSTR\_ENABLE\_GET\_CONST\_RETURN)}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00404}00404\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_CSTR\_OK}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00405}00405\ }
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00406}00406\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00407}00407\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Must\ use\ C11\ as\ the\ minimum\ standard"{}}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00408}00408\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_STDC\_VERSION\_\_}}
+\DoxyCodeLine{\Hypertarget{cstr_8h_source_l00409}00409\ }
 
 \end{DoxyCode}

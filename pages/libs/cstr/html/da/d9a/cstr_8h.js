@@ -7,6 +7,8 @@ var cstr_8h =
     [ "cstr_bool", "da/d9a/cstr_8h.html#acf036d9c3a58a17c081904e6c79d5317", null ],
     [ "cstr_clear", "da/d9a/cstr_8h.html#af89d1a993ff85c0be3926ff1541d8c57", null ],
     [ "cstr_comp", "da/d9a/cstr_8h.html#a19f903d2ed994c92fea4c65903c3b552", null ],
+    [ "cstr_count", "da/d9a/cstr_8h.html#ae07aeae717d83af2b1bcd181221527a7", null ],
+    [ "cstr_countChar", "da/d9a/cstr_8h.html#ad1500bd3765251407dc2769755c6e0f6", null ],
     [ "cstr_destroy", "da/d9a/cstr_8h.html#a409ae3278ea2df20ece65251e829075a", null ],
     [ "cstr_empty", "da/d9a/cstr_8h.html#aac10925de8ce0961faa123541f9e3bab", null ],
     [ "cstr_endsWith", "da/d9a/cstr_8h.html#afa6b390abaebf90c0ffe07c92662bdcc", null ],

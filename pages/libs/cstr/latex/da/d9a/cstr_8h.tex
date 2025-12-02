@@ -20,6 +20,10 @@ int \mbox{\hyperlink{cstr_8h_af89d1a993ff85c0be3926ff1541d8c57}{cstr\+\_\+clear}
 \begin{DoxyCompactList}\small\item\em Clear a \doxylink{structCSTR}{CSTR} to an empty string without freeing memory. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{cstr_8h_a19f903d2ed994c92fea4c65903c3b552}{cstr\+\_\+comp}} (const \mbox{\hyperlink{structCSTR}{CSTR}} \+\_\+s1, const \mbox{\hyperlink{structCSTR}{CSTR}} \+\_\+s2)
 \begin{DoxyCompactList}\small\item\em Compare two \doxylink{structCSTR}{CSTR} instances for equality. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{cstr_8h_ae07aeae717d83af2b1bcd181221527a7}{cstr\+\_\+count}} (const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}ch)
+\begin{DoxyCompactList}\small\item\em Count occurrences of a substring within a \doxylink{structCSTR}{CSTR}. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{cstr_8h_ad1500bd3765251407dc2769755c6e0f6}{cstr\+\_\+count\+Char}} (const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char ch)
+\begin{DoxyCompactList}\small\item\em Count occurrences of a single character within a \doxylink{structCSTR}{CSTR}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{cstr_8h_a409ae3278ea2df20ece65251e829075a}{cstr\+\_\+destroy}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
 \begin{DoxyCompactList}\small\item\em Destroy and clean up a \doxylink{structCSTR}{CSTR} and its allocated objects. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{cstr_8h_aac10925de8ce0961faa123541f9e3bab}{cstr\+\_\+empty}} (const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
@@ -57,7 +61,7 @@ int \mbox{\hyperlink{cstr_8h_a260c899e712785b5e45f07c6b4d6a934}{cstr\+\_\+replac
 int \mbox{\hyperlink{cstr_8h_a184ac1e789dc883dbb3b61c2ab3155d8}{cstr\+\_\+reverse}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
 \begin{DoxyCompactList}\small\item\em Reverse the content of a \doxylink{structCSTR}{CSTR} in place. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{cstr_8h_a5869f4de55dbc9604a41377a98a5d8d1}{cstr\+\_\+set}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+data)
-\begin{DoxyCompactList}\small\item\em Set the content of a \doxylink{structCSTR}{CSTR} to a new C-\/string in {\ttfamily .data} \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Set the content of a \doxylink{structCSTR}{CSTR} to a new C-\/string in {\ttfamily .data}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{cstr_8h_a3f8f5540a61c0814d0518cd2bad72eb8}{cstr\+\_\+shrink}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const size\+\_\+t \+\_\+len)
 \begin{DoxyCompactList}\small\item\em Clear the content of a \doxylink{structCSTR}{CSTR} and optionally shrink capacity. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{cstr_8h_a5d7d68335475e3e92ad7af71c1436f01}{cstr\+\_\+starts\+With}} (\mbox{\hyperlink{structCSTR}{CSTR}} \+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+prefix)
@@ -195,6 +199,53 @@ Compare two \doxylink{structCSTR}{CSTR} instances for equality.
 \begin{DoxyReturn}{Returns}
 true if equal, false otherwise 
 \end{DoxyReturn}
+\Hypertarget{cstr_8h_ae07aeae717d83af2b1bcd181221527a7}\index{cstr.h@{cstr.h}!cstr\_count@{cstr\_count}}
+\index{cstr\_count@{cstr\_count}!cstr.h@{cstr.h}}
+\doxysubsubsection{\texorpdfstring{cstr\_count()}{cstr\_count()}}
+{\footnotesize\ttfamily \label{cstr_8h_ae07aeae717d83af2b1bcd181221527a7} 
+size\+\_\+t cstr\+\_\+count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{ch}{}\end{DoxyParamCaption})}
+
+
+
+Count occurrences of a substring within a \doxylink{structCSTR}{CSTR}. 
+
+Searches for non-\/overlapping occurrences of a null-\/terminated substring inside the CSTR’s {\ttfamily .data} buffer using strstr. Each found instance advances the scan position by the length of the substring, preventing overlapping matches.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+str} & Pointer to the \doxylink{structCSTR}{CSTR} to inspect \\
+\hline
+{\em ch} & Null-\/terminated substring to count\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of non-\/overlapping occurrences found Returns 0 if parameters are invalid ({\ttfamily \+\_\+str}, {\ttfamily .data}, {\ttfamily ch}, or {\ttfamily \texorpdfstring{$\ast$}{*}ch}) 
+\end{DoxyReturn}
+\Hypertarget{cstr_8h_ad1500bd3765251407dc2769755c6e0f6}\index{cstr.h@{cstr.h}!cstr\_countChar@{cstr\_countChar}}
+\index{cstr\_countChar@{cstr\_countChar}!cstr.h@{cstr.h}}
+\doxysubsubsection{\texorpdfstring{cstr\_countChar()}{cstr\_countChar()}}
+{\footnotesize\ttfamily \label{cstr_8h_ad1500bd3765251407dc2769755c6e0f6} 
+size\+\_\+t cstr\+\_\+count\+Char (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char}]{ch}{}\end{DoxyParamCaption})}
+
+
+
+Count occurrences of a single character within a \doxylink{structCSTR}{CSTR}. 
+
+Iterates through the string and counts how many times the specified character appears in the {\ttfamily .data} buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+str} & Pointer to the \doxylink{structCSTR}{CSTR} to inspect \\
+\hline
+{\em ch} & Character to count\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of occurrences of {\ttfamily ch} in the string Returns 0 if {\ttfamily \+\_\+str} is NULL or not initialized
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function performs a linear scan across all characters. 
+\end{DoxyNote}
 \Hypertarget{cstr_8h_a409ae3278ea2df20ece65251e829075a}\index{cstr.h@{cstr.h}!cstr\_destroy@{cstr\_destroy}}
 \index{cstr\_destroy@{cstr\_destroy}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_destroy()}{cstr\_destroy()}}
@@ -503,7 +554,7 @@ int cstr\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{C
 
 
 
-Set the content of a \doxylink{structCSTR}{CSTR} to a new C-\/string in {\ttfamily .data} 
+Set the content of a \doxylink{structCSTR}{CSTR} to a new C-\/string in {\ttfamily .data}. 
 
 
 \begin{DoxyParams}{Parameters}

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="indexpage" kind="page">
     <compoundname>index</compoundname>
     <title>CSTR</title>
@@ -8,7 +8,7 @@
     <detaileddescription>
 <para><anchor id="index_1md_README"/></para>
 <sect1 id="index_1autotoc_md1">
-<title>1.0.0</title><para><computeroutput><ref refid="de/d5e/structCSTR" kindref="compound">CSTR</ref></computeroutput> is a lightweight C string utility library that provides a safer and more flexible alternative to raw C-style strings. It wraps dynamic allocation, formatting, substring manipulation, and replacement in a consistent API without pulling in heavy dependencies.</para>
+<title>1.1.0</title><para><computeroutput><ref refid="de/d5e/structCSTR" kindref="compound">CSTR</ref></computeroutput> is a lightweight C string utility library that provides a safer and more flexible alternative to raw C-style strings. It wraps dynamic allocation, formatting, substring manipulation, and replacement in a consistent API without pulling in heavy dependencies.</para>
 <para><hruler/>
 </para>
 </sect1>

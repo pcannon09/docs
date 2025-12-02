@@ -5,6 +5,11 @@
     </info>
     <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 <chapter>
+    <title>Directory Documentation</title>
+    <xi:include href="dir_b62ae530609d100b5fc25986854b7f94.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_bfccd401955b95cf8c75461437045ac0.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
     <title>Class Documentation</title>
     <xi:include href="de/d5e/structCSTR.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </chapter>

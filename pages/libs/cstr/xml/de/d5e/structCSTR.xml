@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="de/d5e/structCSTR" kind="struct" language="C++" prot="public">
     <compoundname>CSTR</compoundname>
     <includes refid="da/d9a/cstr_8h" local="no">cstr.h</includes>
@@ -11,13 +11,13 @@
         <name>cap</name>
         <qualifiedname>CSTR::cap</qualifiedname>
         <briefdescription>
-<para>Total allocated capacity (including NULL terminator) </para>
+<para>Total allocated capacity (including NULL terminator). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/cstr/cstr.h" line="68" column="12" bodyfile="inc/cstr/cstr.h" bodystart="68" bodyend="-1"/>
+        <location file="inc/cstr/cstr.h" line="84" column="12" bodyfile="inc/cstr/cstr.h" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="de/d5e/structCSTR_1adc16bec3dee2fe6501a372918d1766c7" prot="public" static="no" mutable="no">
         <type>char *</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/cstr/cstr.h" line="52" column="10" bodyfile="inc/cstr/cstr.h" bodystart="52" bodyend="-1"/>
+        <location file="inc/cstr/cstr.h" line="68" column="10" bodyfile="inc/cstr/cstr.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="de/d5e/structCSTR_1af96673309f99797d1c8a393d0f21323f" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/cstr/cstr.h" line="58" column="10" bodyfile="inc/cstr/cstr.h" bodystart="58" bodyend="-1"/>
+        <location file="inc/cstr/cstr.h" line="74" column="10" bodyfile="inc/cstr/cstr.h" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="de/d5e/structCSTR_1a3e40b8f4e913a6e2d49df1f8e16bd323" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/cstr/cstr.h" line="46" column="10" bodyfile="inc/cstr/cstr.h" bodystart="46" bodyend="-1"/>
+        <location file="inc/cstr/cstr.h" line="62" column="10" bodyfile="inc/cstr/cstr.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="de/d5e/structCSTR_1a4d4fd3c90e98dd67542e65b6b388980b" prot="public" static="no" mutable="no">
         <type>size_t</type>
@@ -74,13 +74,13 @@
         <name>len</name>
         <qualifiedname>CSTR::len</qualifiedname>
         <briefdescription>
-<para>Current string length (not counting the NULL terminator) </para>
+<para>Current string length (not counting the NULL terminator). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/cstr/cstr.h" line="63" column="12" bodyfile="inc/cstr/cstr.h" bodystart="63" bodyend="-1"/>
+        <location file="inc/cstr/cstr.h" line="79" column="12" bodyfile="inc/cstr/cstr.h" bodystart="79" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -89,7 +89,7 @@
     <detaileddescription>
 <para>The fields should typically be managed only through the cstr_* API Directly modifying them can lead to undefined behavior unless explicitly intended </para>
     </detaileddescription>
-    <location file="inc/cstr/cstr.h" line="40" column="1" bodyfile="inc/cstr/cstr.h" bodystart="41" bodyend="69"/>
+    <location file="inc/cstr/cstr.h" line="56" column="1" bodyfile="inc/cstr/cstr.h" bodystart="57" bodyend="85"/>
     <listofallmembers>
       <member refid="de/d5e/structCSTR_1ab232b3d18c8c47775417d3ea87bb8624" prot="public" virt="non-virtual"><scope>CSTR</scope><name>cap</name></member>
       <member refid="de/d5e/structCSTR_1adc16bec3dee2fe6501a372918d1766c7" prot="public" virt="non-virtual"><scope>CSTR</scope><name>data</name></member>

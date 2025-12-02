@@ -38,6 +38,14 @@
 
 <para>Compare two <link linkend="_structCSTR">CSTR</link> instances for equality. </para>
 </listitem>
+            <listitem><para>size_t <link linkend="_cstr_8h_1ae07aeae717d83af2b1bcd181221527a7">cstr_count</link> (const <link linkend="_structCSTR">CSTR</link> *_str, const char *ch)</para>
+
+<para>Count occurrences of a substring within a <link linkend="_structCSTR">CSTR</link>. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_cstr_8h_1ad1500bd3765251407dc2769755c6e0f6">cstr_countChar</link> (const <link linkend="_structCSTR">CSTR</link> *_str, const char ch)</para>
+
+<para>Count occurrences of a single character within a <link linkend="_structCSTR">CSTR</link>. </para>
+</listitem>
             <listitem><para>int <link linkend="_cstr_8h_1a409ae3278ea2df20ece65251e829075a">cstr_destroy</link> (<link linkend="_structCSTR">CSTR</link> *_str)</para>
 
 <para>Destroy and clean up a <link linkend="_structCSTR">CSTR</link> and its allocated objects. </para>
@@ -112,7 +120,7 @@
 </listitem>
             <listitem><para>int <link linkend="_cstr_8h_1a5869f4de55dbc9604a41377a98a5d8d1">cstr_set</link> (<link linkend="_structCSTR">CSTR</link> *_str, const char *_data)</para>
 
-<para>Set the content of a <link linkend="_structCSTR">CSTR</link> to a new C-string in <computeroutput>.data</computeroutput> </para>
+<para>Set the content of a <link linkend="_structCSTR">CSTR</link> to a new C-string in <computeroutput>.data</computeroutput>. </para>
 </listitem>
             <listitem><para>int <link linkend="_cstr_8h_1a3f8f5540a61c0814d0518cd2bad72eb8">cstr_shrink</link> (<link linkend="_structCSTR">CSTR</link> *_str, const size_t _len)</para>
 
@@ -360,6 +368,94 @@ Parameters</title>
 
 <para>true if equal, false otherwise </para>
 </formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1ae07aeae717d83af2b1bcd181221527a7"/><section>
+    <title>cstr_count()</title>
+<indexterm><primary>cstr_count</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_count</secondary></indexterm>
+<para><computeroutput>size_t cstr_count (const <link linkend="_structCSTR">CSTR</link> * _str, const char * ch)</computeroutput></para><para>
+
+<para>Count occurrences of a substring within a <link linkend="_structCSTR">CSTR</link>. </para>
+</para>
+
+<para>Searches for non-overlapping occurrences of a null-terminated substring inside the CSTR’s <computeroutput>.data</computeroutput> buffer using strstr. Each found instance advances the scan position by the length of the substring, preventing overlapping matches.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to inspect </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ch</entry><entry>
+<para>Null-terminated substring to count</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Number of non-overlapping occurrences found Returns 0 if parameters are invalid (<computeroutput>_str</computeroutput>, <computeroutput>.data</computeroutput>, <computeroutput>ch</computeroutput>, or <computeroutput>*ch</computeroutput>) </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_cstr_8h_1ad1500bd3765251407dc2769755c6e0f6"/><section>
+    <title>cstr_countChar()</title>
+<indexterm><primary>cstr_countChar</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>cstr_countChar</secondary></indexterm>
+<para><computeroutput>size_t cstr_countChar (const <link linkend="_structCSTR">CSTR</link> * _str, const char ch)</computeroutput></para><para>
+
+<para>Count occurrences of a single character within a <link linkend="_structCSTR">CSTR</link>. </para>
+</para>
+
+<para>Iterates through the string and counts how many times the specified character appears in the <computeroutput>.data</computeroutput> buffer.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to inspect </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ch</entry><entry>
+<para>Character to count</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Number of occurrences of <computeroutput>ch</computeroutput> in the string Returns 0 if <computeroutput>_str</computeroutput> is NULL or not initialized</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function performs a linear scan across all characters. </para>
+</note>
 </para>
 </section>
 <anchor xml:id="_cstr_8h_1a409ae3278ea2df20ece65251e829075a"/><section>
@@ -893,7 +989,7 @@ Parameters</title>
 <indexterm><primary>cstr.h</primary><secondary>cstr_set</secondary></indexterm>
 <para><computeroutput>int cstr_set (<link linkend="_structCSTR">CSTR</link> * _str, const char * _data)</computeroutput></para><para>
 
-<para>Set the content of a <link linkend="_structCSTR">CSTR</link> to a new C-string in <computeroutput>.data</computeroutput> </para>
+<para>Set the content of a <link linkend="_structCSTR">CSTR</link> to a new C-string in <computeroutput>.data</computeroutput>. </para>
 </para>
 
 <para>

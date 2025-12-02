@@ -7,7 +7,7 @@
 
 <para><anchor xml:id="_index_1md_README"/></para>
 <section xml:id="_index_1autotoc_md1">
-<title>1.0.0</title>
+<title>1.1.0</title>
 <para><computeroutput><link linkend="_structCSTR">CSTR</link></computeroutput> is a lightweight C string utility library that provides a safer and more flexible alternative to raw C-style strings. It wraps dynamic allocation, formatting, substring manipulation, and replacement in a consistent API without pulling in heavy dependencies.</para>
 
 <para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>

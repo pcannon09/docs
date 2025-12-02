@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.14.0">
+<tagfile doxygen_version="1.15.0">
   <compound kind="file">
     <name>cstr.h</name>
     <path>inc/cstr/</path>
@@ -46,6 +46,20 @@
       <anchorfile>da/d9a/cstr_8h.html</anchorfile>
       <anchor>a19f903d2ed994c92fea4c65903c3b552</anchor>
       <arglist>(const CSTR _s1, const CSTR _s2)</arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>cstr_count</name>
+      <anchorfile>da/d9a/cstr_8h.html</anchorfile>
+      <anchor>ae07aeae717d83af2b1bcd181221527a7</anchor>
+      <arglist>(const CSTR *_str, const char *ch)</arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>cstr_countChar</name>
+      <anchorfile>da/d9a/cstr_8h.html</anchorfile>
+      <anchor>ad1500bd3765251407dc2769755c6e0f6</anchor>
+      <arglist>(const CSTR *_str, const char ch)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -257,6 +271,19 @@
       <anchor>a4d4fd3c90e98dd67542e65b6b388980b</anchor>
       <arglist></arglist>
     </member>
+  </compound>
+  <compound kind="dir">
+    <name>inc/cstr</name>
+    <path>inc/cstr/</path>
+    <filename>dir_b62ae530609d100b5fc25986854b7f94.html</filename>
+    <file>cstr.h</file>
+    <file>CSTRpredefines.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>inc</name>
+    <path>inc/</path>
+    <filename>dir_bfccd401955b95cf8c75461437045ac0.html</filename>
+    <dir>inc/cstr</dir>
   </compound>
   <compound kind="page">
     <name>index</name>

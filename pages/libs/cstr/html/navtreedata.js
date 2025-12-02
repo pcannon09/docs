@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "CSTR", "index.html", [
-    [ "1.0.0", "index.html#autotoc_md1", null ],
+    [ "1.1.0", "index.html#autotoc_md1", null ],
     [ "Requirements", "index.html#autotoc_md3", [
       [ "Supported Compilers", "index.html#autotoc_md4", null ]
     ] ],

@@ -1,0 +1,9 @@
+.TH "" 3 "Version v1.1.0-build" "CSTR" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cstr cstr\&.h CSTRpredefines\&.h 
+.PP
+inc cstr cstr\&.h CSTRpredefines\&.h 
+.PP
+
