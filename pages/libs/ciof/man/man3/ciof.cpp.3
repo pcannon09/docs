@@ -1,4 +1,4 @@
-.TH "src/ciof.cpp" 3 "Version v1.0.0-build" "CIOF" \" -*- nroff -*-
+.TH "src/ciof.cpp" 3 "Version v1.2.0-build" "CIOF" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,6 +22,10 @@ src/ciof.cpp
 
 .in +1c
 .ti -1c
+.RI "void \fBciof::clear\fP ()"
+.br
+.RI "Clear the contents of the terminal NOTE: In Windows; enable ANSI by doing \fR\fBciof::initANSI()\fP\fP\&. "
+.ti -1c
 .RI "std::string \fBciof::colorSet\fP (int _color)"
 .br
 .RI "Set the colors from the default color palette from the terminal\&. "
@@ -38,13 +42,25 @@ src/ciof.cpp
 .br
 .RI "Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER\&. "
 .ti -1c
+.RI "void \fBciof::input\fP ()"
+.br
+.RI "Empty \fBinput()\fP function; Do not save any input to a variable, just leave it as a blank input\&. "
+.ti -1c
 .RI "void \fBciof::print\fP ()"
 .br
 .RI "Print a new line\&. "
 .ti -1c
+.RI "std::string \fBciof::rgbBgSet\fP (unsigned int r, unsigned int g, unsigned int b)"
+.br
+.RI "Set the RGB color for background in the terminal\&. "
+.ti -1c
 .RI "std::string \fBciof::rgbSet\fP (unsigned int r, unsigned int g, unsigned int b)"
 .br
 .RI "Set the RGB color in the terminal\&. "
+.ti -1c
+.RI "void \fBciof::showCursor\fP (const bool &show)"
+.br
+.RI "Show or hide the cursor from the terminal NOTE: In Windows; enable ANSI by doing \fR\fBciof::initANSI()\fP\fP\&. "
 .ti -1c
 .RI "std::string \fBciof::styleReset\fP ()"
 .br

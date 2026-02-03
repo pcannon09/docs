@@ -12,62 +12,86 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_ciof_8cpp_source_1l00008"/>00008 
 <anchor xml:id="_ciof_8cpp_source_1l00009"/>00009 <emphasis role="preprocessor">#ifdef&#32;CIOF_OS_WIN32</emphasis>
 <anchor xml:id="_ciof_8cpp_source_1l00010"/>00010 <emphasis role="preprocessor">#&#32;&#32;&#32;include&#32;&lt;windows.h&gt;</emphasis>
-<anchor xml:id="_ciof_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#endif</emphasis>
-<anchor xml:id="_ciof_8cpp_source_1l00012"/>00012 
-<anchor xml:id="_ciof_8cpp_source_1l00013"/>00013 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespaceciof">ciof</link>
-<anchor xml:id="_ciof_8cpp_source_1l00014"/>00014 {
-<anchor xml:id="_ciof_8cpp_source_1l00015"/><link linkend="_namespaceciof_1a835007e60a4807051d32c3352e867119">00015</link> &#32;&#32;&#32;&#32;<link linkend="_structciof_1_1CIOFOutputConfig">CIOFOutputConfig</link>&#32;<link linkend="_namespaceciof_1a835007e60a4807051d32c3352e867119">outputConf</link>;
-<anchor xml:id="_ciof_8cpp_source_1l00016"/>00016 
-<anchor xml:id="_ciof_8cpp_source_1l00017"/><link linkend="_namespaceciof_1a8c277d3a2caa58aed09e9bb8982d8ff3">00017</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespaceciof_1a8c277d3a2caa58aed09e9bb8982d8ff3">print</link>()
-<anchor xml:id="_ciof_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;{&#32;std::cout&#32;&lt;&lt;&#32;std::endl;&#32;}
-<anchor xml:id="_ciof_8cpp_source_1l00019"/>00019 
-<anchor xml:id="_ciof_8cpp_source_1l00020"/><link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">00020</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos</link>(<emphasis role="keywordtype">int</emphasis>&#32;_row,&#32;<emphasis role="keywordtype">int</emphasis>&#32;_col)
-<anchor xml:id="_ciof_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;std::string(<emphasis role="stringliteral">&quot;\033[&quot;</emphasis>&#32;+&#32;std::to_string(_row)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>&#32;+&#32;std::to_string(_col)&#32;+&#32;<emphasis role="stringliteral">&quot;H&quot;</emphasis>);&#32;}
-<anchor xml:id="_ciof_8cpp_source_1l00022"/>00022 
-<anchor xml:id="_ciof_8cpp_source_1l00023"/><link linkend="_namespaceciof_1a21412a124eb62a7aeedb4d4885600947">00023</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespaceciof_1a21412a124eb62a7aeedb4d4885600947">cursorPos</link>(<emphasis role="keywordtype">int</emphasis>&#32;_row,&#32;<emphasis role="keywordtype">int</emphasis>&#32;_col)
-<anchor xml:id="_ciof_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;{&#32;std::cout&#32;&lt;&lt;&#32;<link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos</link>(_row,&#32;_col)&#32;&lt;&lt;&#32;std::flush;&#32;}
-<anchor xml:id="_ciof_8cpp_source_1l00025"/>00025 
-<anchor xml:id="_ciof_8cpp_source_1l00026"/><link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">00026</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">initANSI</link>()
-<anchor xml:id="_ciof_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
-<anchor xml:id="_ciof_8cpp_source_1l00028"/>00028 <emphasis role="preprocessor">#&#32;&#32;&#32;ifdef&#32;CIOF_OS_WIN32</emphasis>
-<anchor xml:id="_ciof_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;NOTE:</emphasis>
-<anchor xml:id="_ciof_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;This&#32;must&#32;ONLY&#32;be&#32;used&#32;in&#32;Windows&#32;10&#32;or&#32;newer</emphasis>
-<anchor xml:id="_ciof_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!IsWindows10OrGreater())&#32;<emphasis role="keywordflow">return</emphasis>;
-<anchor xml:id="_ciof_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
-<anchor xml:id="_ciof_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HANDLE&#32;hOut&#32;=&#32;GetStdHandle(STD_OUTPUT_HANDLE);
-<anchor xml:id="_ciof_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DWORD&#32;dwMode&#32;=&#32;0;
-<anchor xml:id="_ciof_8cpp_source_1l00035"/>00035 
-<anchor xml:id="_ciof_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetConsoleMode(hOut,&#32;&amp;dwMode);
-<anchor xml:id="_ciof_8cpp_source_1l00037"/>00037 
-<anchor xml:id="_ciof_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dwMode&#32;|=&#32;ENABLE_VIRTUAL_PROCESSING
-<anchor xml:id="_ciof_8cpp_source_1l00039"/>00039 
-<anchor xml:id="_ciof_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetConsoleMode(hOut,&#32;dwMode)
-<anchor xml:id="_ciof_8cpp_source_1l00041"/>00041 <emphasis role="preprocessor">#&#32;&#32;&#32;endif</emphasis>
-<anchor xml:id="_ciof_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;}
-<anchor xml:id="_ciof_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;
-<anchor xml:id="_ciof_8cpp_source_1l00044"/><link linkend="_namespaceciof_1a8ff4eb89ed64bb300da3ddf91cad7e4f">00044</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_namespaceciof_1a8ff4eb89ed64bb300da3ddf91cad7e4f">styleSet</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686b">OutputStyle</link>&#32;&amp;_style)
-<anchor xml:id="_ciof_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;{
-<anchor xml:id="_ciof_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(_style)
-<anchor xml:id="_ciof_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="_ciof_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246">ciof::OutputStyle::Bold</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[1m&quot;</emphasis>;&#32;
-<anchor xml:id="_ciof_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c">ciof::OutputStyle::Italic</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[3m&quot;</emphasis>;&#32;
-<anchor xml:id="_ciof_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439">ciof::OutputStyle::Underline</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[4m&quot;</emphasis>;&#32;
-<anchor xml:id="_ciof_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb">ciof::OutputStyle::Strikethrough</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[9m&quot;</emphasis>;&#32;
-<anchor xml:id="_ciof_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
-<anchor xml:id="_ciof_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="_ciof_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;}
-<anchor xml:id="_ciof_8cpp_source_1l00055"/>00055 
-<anchor xml:id="_ciof_8cpp_source_1l00056"/><link linkend="_namespaceciof_1a25987420300a8bf1380cebe37f6c082f">00056</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_namespaceciof_1a25987420300a8bf1380cebe37f6c082f">styleReset</link>()
-<anchor xml:id="_ciof_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[0m&quot;</emphasis>;&#32;}
-<anchor xml:id="_ciof_8cpp_source_1l00058"/>00058 
-<anchor xml:id="_ciof_8cpp_source_1l00059"/><link linkend="_namespaceciof_1aefd966015567bb62676f13ef217d3b79">00059</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_namespaceciof_1aefd966015567bb62676f13ef217d3b79">colorSet</link>(<emphasis role="keywordtype">int</emphasis>&#32;_color)
-<anchor xml:id="_ciof_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[&quot;</emphasis>&#32;+&#32;std::to_string(_color)&#32;+&#32;<emphasis role="stringliteral">&quot;m&quot;</emphasis>;&#32;}
-<anchor xml:id="_ciof_8cpp_source_1l00061"/>00061 
-<anchor xml:id="_ciof_8cpp_source_1l00062"/><link linkend="_namespaceciof_1a34c4a83a2f7c4321fb3cd308ad2162bc">00062</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_namespaceciof_1a34c4a83a2f7c4321fb3cd308ad2162bc">rgbSet</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;r,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;g,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;b)
-<anchor xml:id="_ciof_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;{
-<anchor xml:id="_ciof_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[38;2;&quot;</emphasis>&#32;+&#32;std::to_string(r)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>
-<anchor xml:id="_ciof_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;std::to_string(g)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>
-<anchor xml:id="_ciof_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;std::to_string(b)&#32;+&#32;<emphasis role="stringliteral">&quot;m&quot;</emphasis>;
-<anchor xml:id="_ciof_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;}
-<anchor xml:id="_ciof_8cpp_source_1l00068"/>00068 }
+<anchor xml:id="_ciof_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#&#32;&#32;&#32;include&#32;&lt;VersionHelpers.h&gt;</emphasis>
+<anchor xml:id="_ciof_8cpp_source_1l00012"/>00012 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_ciof_8cpp_source_1l00013"/>00013 
+<anchor xml:id="_ciof_8cpp_source_1l00014"/>00014 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespaceciof">ciof</link>
+<anchor xml:id="_ciof_8cpp_source_1l00015"/>00015 {
+<anchor xml:id="_ciof_8cpp_source_1l00016"/><link linkend="_namespaceciof_1a835007e60a4807051d32c3352e867119">00016</link> &#32;&#32;&#32;&#32;<link linkend="_structciof_1_1CIOFOutputConfig">CIOFOutputConfig</link>&#32;<link linkend="_namespaceciof_1a835007e60a4807051d32c3352e867119">outputConf</link>;
+<anchor xml:id="_ciof_8cpp_source_1l00017"/>00017 
+<anchor xml:id="_ciof_8cpp_source_1l00018"/><link linkend="_namespaceciof_1a8c277d3a2caa58aed09e9bb8982d8ff3">00018</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespaceciof_1a8c277d3a2caa58aed09e9bb8982d8ff3">print</link>()
+<anchor xml:id="_ciof_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;{&#32;std::cout&#32;&lt;&lt;&#32;std::endl;&#32;}
+<anchor xml:id="_ciof_8cpp_source_1l00020"/>00020 
+<anchor xml:id="_ciof_8cpp_source_1l00021"/><link linkend="_namespaceciof_1a7675764d8694165a202f0d05f15d923e">00021</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespaceciof_1a7675764d8694165a202f0d05f15d923e">input</link>()
+<anchor xml:id="_ciof_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_ciof_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;empty;
+<anchor xml:id="_ciof_8cpp_source_1l00024"/>00024 
+<anchor xml:id="_ciof_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespaceciof_1a7675764d8694165a202f0d05f15d923e">ciof::input</link>(&amp;empty);
+<anchor xml:id="_ciof_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_ciof_8cpp_source_1l00027"/>00027 
+<anchor xml:id="_ciof_8cpp_source_1l00028"/><link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">00028</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos</link>(<emphasis role="keywordtype">int</emphasis>&#32;_row,&#32;<emphasis role="keywordtype">int</emphasis>&#32;_col)
+<anchor xml:id="_ciof_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;std::string(<emphasis role="stringliteral">&quot;\033[&quot;</emphasis>&#32;+&#32;std::to_string(_row)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>&#32;+&#32;std::to_string(_col)&#32;+&#32;<emphasis role="stringliteral">&quot;H&quot;</emphasis>);&#32;}
+<anchor xml:id="_ciof_8cpp_source_1l00030"/>00030 
+<anchor xml:id="_ciof_8cpp_source_1l00031"/><link linkend="_namespaceciof_1a21412a124eb62a7aeedb4d4885600947">00031</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespaceciof_1a21412a124eb62a7aeedb4d4885600947">cursorPos</link>(<emphasis role="keywordtype">int</emphasis>&#32;_row,&#32;<emphasis role="keywordtype">int</emphasis>&#32;_col)
+<anchor xml:id="_ciof_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;{&#32;std::cout&#32;&lt;&lt;&#32;<link linkend="_namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e">getCursorPos</link>(_row,&#32;_col)&#32;&lt;&lt;&#32;std::flush;&#32;}
+<anchor xml:id="_ciof_8cpp_source_1l00033"/>00033 
+<anchor xml:id="_ciof_8cpp_source_1l00034"/><link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">00034</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">initANSI</link>()
+<anchor xml:id="_ciof_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_ciof_8cpp_source_1l00036"/>00036 <emphasis role="preprocessor">#&#32;&#32;&#32;ifdef&#32;CIOF_OS_WIN32</emphasis>
+<anchor xml:id="_ciof_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;NOTE:</emphasis>
+<anchor xml:id="_ciof_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;This&#32;must&#32;ONLY&#32;be&#32;used&#32;in&#32;Windows&#32;10&#32;or&#32;newer</emphasis>
+<anchor xml:id="_ciof_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!IsWindows10OrGreater())&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_ciof_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_ciof_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HANDLE&#32;hOut&#32;=&#32;GetStdHandle(STD_OUTPUT_HANDLE);
+<anchor xml:id="_ciof_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DWORD&#32;dwMode&#32;=&#32;0;
+<anchor xml:id="_ciof_8cpp_source_1l00043"/>00043 
+<anchor xml:id="_ciof_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetConsoleMode(hOut,&#32;&amp;dwMode);
+<anchor xml:id="_ciof_8cpp_source_1l00045"/>00045 
+<anchor xml:id="_ciof_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dwMode&#32;|=&#32;ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+<anchor xml:id="_ciof_8cpp_source_1l00047"/>00047 
+<anchor xml:id="_ciof_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetConsoleMode(hOut,&#32;dwMode);
+<anchor xml:id="_ciof_8cpp_source_1l00049"/>00049 <emphasis role="preprocessor">#&#32;&#32;&#32;endif</emphasis>
+<anchor xml:id="_ciof_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_ciof_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;
+<anchor xml:id="_ciof_8cpp_source_1l00052"/><link linkend="_namespaceciof_1a8ff4eb89ed64bb300da3ddf91cad7e4f">00052</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_namespaceciof_1a8ff4eb89ed64bb300da3ddf91cad7e4f">styleSet</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686b">OutputStyle</link>&#32;&amp;_style)
+<anchor xml:id="_ciof_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_ciof_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(_style)
+<anchor xml:id="_ciof_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_ciof_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246">ciof::OutputStyle::Bold</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[1m&quot;</emphasis>;&#32;
+<anchor xml:id="_ciof_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c">ciof::OutputStyle::Italic</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[3m&quot;</emphasis>;&#32;
+<anchor xml:id="_ciof_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439">ciof::OutputStyle::Underline</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[4m&quot;</emphasis>;&#32;
+<anchor xml:id="_ciof_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb">ciof::OutputStyle::Strikethrough</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[9m&quot;</emphasis>;&#32;
+<anchor xml:id="_ciof_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+<anchor xml:id="_ciof_8cpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_ciof_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_ciof_8cpp_source_1l00063"/>00063 
+<anchor xml:id="_ciof_8cpp_source_1l00064"/><link linkend="_namespaceciof_1ab08e5e2faef0d1a122b5d213410f8d48">00064</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespaceciof_1ab08e5e2faef0d1a122b5d213410f8d48">clear</link>()
+<anchor xml:id="_ciof_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;{&#32;<link linkend="_namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c">ciof::echo</link>(<emphasis role="stringliteral">&quot;\033[2J\033[H&quot;</emphasis>);&#32;}
+<anchor xml:id="_ciof_8cpp_source_1l00066"/>00066 
+<anchor xml:id="_ciof_8cpp_source_1l00067"/><link linkend="_namespaceciof_1a1fa325860b9abbd9edfecb6bd9d3bd70">00067</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespaceciof_1a1fa325860b9abbd9edfecb6bd9d3bd70">showCursor</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;show)
+<anchor xml:id="_ciof_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_ciof_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(show)&#32;<link linkend="_namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c">ciof::echo</link>(<emphasis role="stringliteral">&quot;\033[?25h&quot;</emphasis>);
+<anchor xml:id="_ciof_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<link linkend="_namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c">ciof::echo</link>(<emphasis role="stringliteral">&quot;\033[?25l&quot;</emphasis>);
+<anchor xml:id="_ciof_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_ciof_8cpp_source_1l00072"/>00072 
+<anchor xml:id="_ciof_8cpp_source_1l00073"/><link linkend="_namespaceciof_1a25987420300a8bf1380cebe37f6c082f">00073</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_namespaceciof_1a25987420300a8bf1380cebe37f6c082f">styleReset</link>()
+<anchor xml:id="_ciof_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[0m&quot;</emphasis>;&#32;}
+<anchor xml:id="_ciof_8cpp_source_1l00075"/>00075 
+<anchor xml:id="_ciof_8cpp_source_1l00076"/><link linkend="_namespaceciof_1aefd966015567bb62676f13ef217d3b79">00076</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_namespaceciof_1aefd966015567bb62676f13ef217d3b79">colorSet</link>(<emphasis role="keywordtype">int</emphasis>&#32;_color)
+<anchor xml:id="_ciof_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[&quot;</emphasis>&#32;+&#32;std::to_string(_color)&#32;+&#32;<emphasis role="stringliteral">&quot;m&quot;</emphasis>;&#32;}
+<anchor xml:id="_ciof_8cpp_source_1l00078"/>00078 
+<anchor xml:id="_ciof_8cpp_source_1l00079"/><link linkend="_namespaceciof_1a34c4a83a2f7c4321fb3cd308ad2162bc">00079</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_namespaceciof_1a34c4a83a2f7c4321fb3cd308ad2162bc">rgbSet</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;r,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;g,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;b)
+<anchor xml:id="_ciof_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_ciof_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[38;2;&quot;</emphasis>&#32;+&#32;std::to_string(r)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>
+<anchor xml:id="_ciof_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;std::to_string(g)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>
+<anchor xml:id="_ciof_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;std::to_string(b)&#32;+&#32;<emphasis role="stringliteral">&quot;m&quot;</emphasis>;
+<anchor xml:id="_ciof_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_ciof_8cpp_source_1l00085"/>00085 
+<anchor xml:id="_ciof_8cpp_source_1l00086"/><link linkend="_namespaceciof_1a1b7a260ec316466e45ab04c45f9bf206">00086</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_namespaceciof_1a1b7a260ec316466e45ab04c45f9bf206">rgbBgSet</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;r,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;g,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;b)
+<anchor xml:id="_ciof_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_ciof_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[48;2;&quot;</emphasis>&#32;+&#32;std::to_string(r)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>
+<anchor xml:id="_ciof_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;std::to_string(g)&#32;+&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>
+<anchor xml:id="_ciof_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;+&#32;std::to_string(b)&#32;+&#32;<emphasis role="stringliteral">&quot;m&quot;</emphasis>;
+<anchor xml:id="_ciof_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_ciof_8cpp_source_1l00092"/>00092 }
 </programlisting></section>

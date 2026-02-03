@@ -1,4 +1,4 @@
-\doxysection{ciof\+::impl Namespace Reference}
+\doxysection{ciof::\+impl Namespace Reference}
 \hypertarget{namespaceciof_1_1impl}{}\label{namespaceciof_1_1impl}\index{ciof::impl@{ciof::impl}}
 
 
@@ -8,13 +8,13 @@ Implementation functions.
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespaceciof_1_1impl_abd44015c794d66d0403c1c740374c73f}{\+\_\+\+\_\+out}} (const \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{Output\+Type}} \&\+\_\+out\+Type, T \+\_\+t)
-\begin{DoxyCompactList}\small\item\em Output the with its corresponding type either to\+: \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T, typename ... Args$>$ }\\void \mbox{\hyperlink{namespaceciof_1_1impl_a1891ea20ceaf9eb463765c53d4a0d007}{\+\_\+\+\_\+out}} (const \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{Output\+Type}} \&\+\_\+out\+Type, T \+\_\+t, Args ... \+\_\+args)
-\begin{DoxyCompactList}\small\item\em Output the with its corresponding type either to\+: \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T, typename ... Args$>$ }\\std\+::string \mbox{\hyperlink{namespaceciof_1_1impl_a3c0a39bb238468e7e6843e0a4e920b0b}{parse}} (T \+\_\+fmt, Args ... \+\_\+args)
+{\footnotesize template$<$typename T$>$ }\\void \doxymbox{\hyperlink{namespaceciof_1_1impl_abd44015c794d66d0403c1c740374c73f}{\+\_\+\+\_\+out}} (const \doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{Output\+Type}} \&\+\_\+out\+Type, T \+\_\+t)
+\begin{DoxyCompactList}\small\item\em Output the with its corresponding type either to:\+ \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename ... Args$>$ }\\void \doxymbox{\hyperlink{namespaceciof_1_1impl_a1891ea20ceaf9eb463765c53d4a0d007}{\+\_\+\+\_\+out}} (const \doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{Output\+Type}} \&\+\_\+out\+Type, T \+\_\+t, Args ... \+\_\+args)
+\begin{DoxyCompactList}\small\item\em Output the with its corresponding type either to:\+ \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename ... Args$>$ }\\std::\+string \doxymbox{\hyperlink{namespaceciof_1_1impl_a3c0a39bb238468e7e6843e0a4e920b0b}{parse}} (T \+\_\+fmt, Args ... \+\_\+args)
 \begin{DoxyCompactList}\small\item\em Parse the params for printing and echoing. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T$>$ }\\std\+::string \mbox{\hyperlink{namespaceciof_1_1impl_ae1e6ee7cf401df4c08b650fa0ebde5ee}{to\+String}} (const T \&\+\_\+val)
+{\footnotesize template$<$typename T$>$ }\\std::\+string \doxymbox{\hyperlink{namespaceciof_1_1impl_ae1e6ee7cf401df4c08b650fa0ebde5ee}{to\+String}} (const T \&\+\_\+val)
 \begin{DoxyCompactList}\small\item\em Convert to string safely. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -29,17 +29,17 @@ Implementation functions.
 \doxysubsubsection{\texorpdfstring{\_\_out()}{\_\_out()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{namespaceciof_1_1impl_abd44015c794d66d0403c1c740374c73f} 
 template$<$typename T$>$ \\
-void ciof\+::impl\+::\+\_\+\+\_\+out (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{Output\+Type}} \&}]{\+\_\+out\+Type}{, }\item[{T}]{\+\_\+t}{}\end{DoxyParamCaption})}
+void ciof::\+impl::\+\+\_\+\+\_\+out (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{Output\+Type}} \&}]{\+\_\+out\+Type}{, }\item[{T}]{\+\_\+t}{}\end{DoxyParamCaption})}
 
 
 
-Output the with its corresponding type either to\+: 
+Output the with its corresponding type either to:\+ 
 
 
 \begin{DoxyItemize}
 \item Standard output
 \item Standard error
-\item Standard log (AKA\+: Error but unbuffered) 
+\item Standard log (AKA:\+ Error but unbuffered) 
 \begin{DoxyParams}{Parameters}
 {\em \+\_\+out\+Type} & Type for OUT, ERR or LOG \\
 \hline
@@ -52,17 +52,17 @@ Output the with its corresponding type either to\+:
 \doxysubsubsection{\texorpdfstring{\_\_out()}{\_\_out()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \label{namespaceciof_1_1impl_a1891ea20ceaf9eb463765c53d4a0d007} 
 template$<$typename T, typename ... Args$>$ \\
-void ciof\+::impl\+::\+\_\+\+\_\+out (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{Output\+Type}} \&}]{\+\_\+out\+Type}{, }\item[{T}]{\+\_\+t}{, }\item[{Args ...}]{\+\_\+args}{}\end{DoxyParamCaption})}
+void ciof::\+impl::\+\+\_\+\+\_\+out (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{Output\+Type}} \&}]{\+\_\+out\+Type}{, }\item[{T}]{\+\_\+t}{, }\item[{Args ...}]{\+\_\+args}{}\end{DoxyParamCaption})}
 
 
 
-Output the with its corresponding type either to\+: 
+Output the with its corresponding type either to:\+ 
 
 
 \begin{DoxyItemize}
 \item Standard output
 \item Standard error
-\item Standard log (AKA\+: Error but unbuffered) 
+\item Standard log (AKA:\+ Error but unbuffered) 
 \begin{DoxyParams}{Parameters}
 {\em \+\_\+out\+Type} & Type for OUT, ERR or LOG \\
 \hline
@@ -77,7 +77,7 @@ Output the with its corresponding type either to\+:
 \doxysubsubsection{\texorpdfstring{parse()}{parse()}}
 {\footnotesize\ttfamily \label{namespaceciof_1_1impl_a3c0a39bb238468e7e6843e0a4e920b0b} 
 template$<$typename T, typename ... Args$>$ \\
-std\+::string ciof\+::impl\+::parse (\begin{DoxyParamCaption}\item[{T}]{\+\_\+fmt}{, }\item[{Args ...}]{\+\_\+args}{}\end{DoxyParamCaption})}
+std::\+string ciof::\+impl::\+parse (\begin{DoxyParamCaption}\item[{T}]{\+\_\+fmt}{, }\item[{Args ...}]{\+\_\+args}{}\end{DoxyParamCaption})}
 
 
 
@@ -88,14 +88,14 @@ Parse the params for printing and echoing.
 
 \+\_\+args parameter 2 to the last one to parse 
 
-std\+::string Total parsed 
+std::\+string Total parsed 
 \end{DoxyReturn}
 \Hypertarget{namespaceciof_1_1impl_ae1e6ee7cf401df4c08b650fa0ebde5ee}\index{ciof::impl@{ciof::impl}!toString@{toString}}
 \index{toString@{toString}!ciof::impl@{ciof::impl}}
 \doxysubsubsection{\texorpdfstring{toString()}{toString()}}
 {\footnotesize\ttfamily \label{namespaceciof_1_1impl_ae1e6ee7cf401df4c08b650fa0ebde5ee} 
 template$<$typename T$>$ \\
-std\+::string ciof\+::impl\+::to\+String (\begin{DoxyParamCaption}\item[{const T \&}]{\+\_\+val}{}\end{DoxyParamCaption})}
+std::\+string ciof::\+impl::\+to\+String (\begin{DoxyParamCaption}\item[{const T \&}]{\+\_\+val}{}\end{DoxyParamCaption})}
 
 
 
@@ -107,5 +107,5 @@ Convert to string safely.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::string total converted strig 
+std::\+string total converted strig 
 \end{DoxyReturn}

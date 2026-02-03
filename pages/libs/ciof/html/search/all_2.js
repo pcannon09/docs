@@ -18,11 +18,12 @@ var searchData=
   ['ciof_5fversion_5fstd_15',['CIOF_VERSION_STD',['../dc/dcc/CIOFpredefines_8hpp.html#afe87ed04a50605abe9a99b2aef3fe153',1,'CIOFpredefines.hpp']]],
   ['ciofoutputconfig_16',['CIOFOutputConfig',['../d6/d74/structciof_1_1CIOFOutputConfig.html',1,'ciof::CIOFOutputConfig'],['../dc/d0e/namespaceciof.html#a11dfa6fc0d7cf783cd52dfe0dbf63de1',1,'ciof::CIOFOutputConfig']]],
   ['ciofpredefines_2ehpp_17',['CIOFpredefines.hpp',['../dc/dcc/CIOFpredefines_8hpp.html',1,'']]],
-  ['cmake_20example_18',['MINIMAL CMAKE EXAMPLE',['../index.html#autotoc_md9',1,'']]],
-  ['code_20example_19',['MINIMAL CODE EXAMPLE',['../index.html#autotoc_md10',1,'']]],
-  ['colorset_20',['colorSet',['../dc/d0e/namespaceciof.html#aefd966015567bb62676f13ef217d3b79',1,'ciof']]],
-  ['compilers_21',['Supported Compilers',['../index.html#autotoc_md6',1,'']]],
-  ['configuration_22',['Configuration',['../index.html#autotoc_md4',1,'']]],
-  ['cursorpos_23',['cursorPos',['../dc/d0e/namespaceciof.html#a21412a124eb62a7aeedb4d4885600947',1,'ciof']]],
-  ['custom_20input_20output_20format_24',['CIOF - Custom Input Output Format',['../index.html',1,'']]]
+  ['clear_18',['clear',['../dc/d0e/namespaceciof.html#ab08e5e2faef0d1a122b5d213410f8d48',1,'ciof']]],
+  ['cmake_20example_19',['MINIMAL CMAKE EXAMPLE',['../index.html#autotoc_md9',1,'']]],
+  ['code_20example_20',['MINIMAL CODE EXAMPLE',['../index.html#autotoc_md10',1,'']]],
+  ['colorset_21',['colorSet',['../dc/d0e/namespaceciof.html#aefd966015567bb62676f13ef217d3b79',1,'ciof']]],
+  ['compilers_22',['Supported Compilers',['../index.html#autotoc_md6',1,'']]],
+  ['configuration_23',['Configuration',['../index.html#autotoc_md4',1,'']]],
+  ['cursorpos_24',['cursorPos',['../dc/d0e/namespaceciof.html#a21412a124eb62a7aeedb4d4885600947',1,'ciof']]],
+  ['custom_20input_20output_20format_25',['CIOF - Custom Input Output Format',['../index.html',1,'']]]
 ];

@@ -1,0 +1,11 @@
+.TH "" 3 "Version v1.2.0-build" "CIOF" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ciof ciof\&.hpp CIOFpredefines\&.hpp 
+.PP
+inc ciof ciof\&.hpp CIOFpredefines\&.hpp 
+.PP
+src ciof\&.cpp 
+.PP
+

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.16.1" xml:lang="en-US">
   <compound refid="d6/d74/structciof_1_1CIOFOutputConfig" kind="struct"><name>ciof::CIOFOutputConfig</name>
     <member refid="d6/d74/structciof_1_1CIOFOutputConfig_1aeb9bf813d089448e9ebedb3858d77f74" kind="variable"><name>ignoreAllFormating</name></member>
     <member refid="d6/d74/structciof_1_1CIOFOutputConfig_1ad15d1fdd800eb4da46896e369646298f" kind="variable"><name>processing</name></member>
@@ -18,6 +18,7 @@
     <member refid="dc/d0e/namespaceciof_1a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b" kind="enumvalue"><name>Log</name></member>
     <member refid="dc/d0e/namespaceciof_1a11dfa6fc0d7cf783cd52dfe0dbf63de1" kind="typedef"><name>CIOFOutputConfig</name></member>
     <member refid="dc/d0e/namespaceciof_1a835007e60a4807051d32c3352e867119" kind="variable"><name>outputConf</name></member>
+    <member refid="dc/d0e/namespaceciof_1ab08e5e2faef0d1a122b5d213410f8d48" kind="function"><name>clear</name></member>
     <member refid="dc/d0e/namespaceciof_1aefd966015567bb62676f13ef217d3b79" kind="function"><name>colorSet</name></member>
     <member refid="dc/d0e/namespaceciof_1a21412a124eb62a7aeedb4d4885600947" kind="function"><name>cursorPos</name></member>
     <member refid="dc/d0e/namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c" kind="function"><name>echo</name></member>
@@ -29,6 +30,7 @@
     <member refid="dc/d0e/namespaceciof_1a42851a9df059ee00504d50b5331ed963" kind="function"><name>format</name></member>
     <member refid="dc/d0e/namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e" kind="function"><name>getCursorPos</name></member>
     <member refid="dc/d0e/namespaceciof_1a0d6add06e42bf2afe40d5e45db195218" kind="function"><name>initANSI</name></member>
+    <member refid="dc/d0e/namespaceciof_1a7675764d8694165a202f0d05f15d923e" kind="function"><name>input</name></member>
     <member refid="dc/d0e/namespaceciof_1a890c785dd53fa8333c95e8b9594b55e7" kind="function"><name>input</name></member>
     <member refid="dc/d0e/namespaceciof_1a6d046aa36f6f80976075523e2ba0974a" kind="function"><name>input</name></member>
     <member refid="dc/d0e/namespaceciof_1a8c277d3a2caa58aed09e9bb8982d8ff3" kind="function"><name>print</name></member>
@@ -38,7 +40,9 @@
     <member refid="dc/d0e/namespaceciof_1a2b535b59d1fdbf6fdd654296b421f7ce" kind="function"><name>printError</name></member>
     <member refid="dc/d0e/namespaceciof_1a4e228d060caae991e1093a7bcd30aa57" kind="function"><name>printLog</name></member>
     <member refid="dc/d0e/namespaceciof_1af2ec490460503a2868462739ca9499cc" kind="function"><name>printLog</name></member>
+    <member refid="dc/d0e/namespaceciof_1a1b7a260ec316466e45ab04c45f9bf206" kind="function"><name>rgbBgSet</name></member>
     <member refid="dc/d0e/namespaceciof_1a34c4a83a2f7c4321fb3cd308ad2162bc" kind="function"><name>rgbSet</name></member>
+    <member refid="dc/d0e/namespaceciof_1a1fa325860b9abbd9edfecb6bd9d3bd70" kind="function"><name>showCursor</name></member>
     <member refid="dc/d0e/namespaceciof_1a25987420300a8bf1380cebe37f6c082f" kind="function"><name>styleReset</name></member>
     <member refid="dc/d0e/namespaceciof_1a8ff4eb89ed64bb300da3ddf91cad7e4f" kind="function"><name>styleSet</name></member>
   </compound>
@@ -54,6 +58,7 @@
     <member refid="d8/d42/ciof_8hpp_1aee9afcb99f41a55dc39da48b35554819" kind="define"><name>__CIOF_OK</name></member>
   </compound>
   <compound refid="dc/dcc/CIOFpredefines_8hpp" kind="file"><name>CIOFpredefines.hpp</name>
+    <member refid="dc/dcc/CIOFpredefines_8hpp_1ae21588822c90ad823013de7de9d6fac7" kind="define"><name>__CIOF_CPLUSPLUS</name></member>
     <member refid="dc/dcc/CIOFpredefines_8hpp_1a3d70bd8048f0ef311e9d8005ad06d56e" kind="define"><name>CIOF_DEFAULT_CPP_STD</name></member>
     <member refid="dc/dcc/CIOFpredefines_8hpp_1a41d16094878c667d41faa2acbe80a0b8" kind="define"><name>CIOF_DEV</name></member>
     <member refid="dc/dcc/CIOFpredefines_8hpp_1a3f843eb51ab1a7370f82941eeb1d7646" kind="define"><name>CIOF_STRINGIFY</name></member>

@@ -1,300 +1,333 @@
 \doxysection{ciof.\+hpp}
 \hypertarget{ciof_8hpp_source}{}\label{ciof_8hpp_source}\index{inc/ciof/ciof.hpp@{inc/ciof/ciof.hpp}}
-\mbox{\hyperlink{ciof_8hpp}{Go to the documentation of this file.}}
+\doxymbox{\hyperlink{ciof_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CIOFpredefines_8hpp}{CIOFpredefines.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{CIOFpredefines_8hpp}{CIOFpredefines.hpp}}"{}}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00004}00004\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ CIOF\_DEFAULT\_CPP\_STD}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#if\ \_\_CIOF\_CPLUSPLUS\ >=\ CIOF\_DEFAULT\_CPP\_STD}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00007}\mbox{\hyperlink{ciof_8hpp_aee9afcb99f41a55dc39da48b35554819}{00007}}\ \textcolor{preprocessor}{\#define\ \_\_CIOF\_OK}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00007}\doxymbox{\hyperlink{ciof_8hpp_aee9afcb99f41a55dc39da48b35554819}{00007}}\ \textcolor{preprocessor}{\#define\ \_\_CIOF\_OK}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00008}00008\ }
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00011}\mbox{\hyperlink{namespaceciof}{00011}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceciof}{ciof}}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00012}00012\ \{\textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00013}00013\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00014}00014\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ output\ configuration\ for\ ciof::impl::\_\_out()\ function\ and\ its\ wrappers}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00015}00015\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00016}\mbox{\hyperlink{structciof_1_1CIOFOutputConfig}{00016}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structciof_1_1CIOFOutputConfig}{CIOFOutputConfig}}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00017}00017\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ a\ space\ between\ parameter\ automaticalliy}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00019}\mbox{\hyperlink{structciof_1_1CIOFOutputConfig_a6c554213c7a2c40c2e98795b53c62cc8}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structciof_1_1CIOFOutputConfig_a6c554213c7a2c40c2e98795b53c62cc8}{spacing}}\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00020}00020\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ignore\ custom\ and\ predefined\ formatting\ keywords}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00022}\mbox{\hyperlink{structciof_1_1CIOFOutputConfig_aeb9bf813d089448e9ebedb3858d77f74}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structciof_1_1CIOFOutputConfig_aeb9bf813d089448e9ebedb3858d77f74}{ignoreAllFormating}}\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Process\ config}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00025}\mbox{\hyperlink{structciof_1_1CIOFOutputConfig_ad15d1fdd800eb4da46896e369646298f}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structciof_1_1CIOFOutputConfig_ad15d1fdd800eb4da46896e369646298f}{processing}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ delimiter\ for\ spacing}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00028}\mbox{\hyperlink{structciof_1_1CIOFOutputConfig_a4e97b336cd4468de3d275c8377514c73}{00028}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{structciof_1_1CIOFOutputConfig_a4e97b336cd4468de3d275c8377514c73}{spacingDelimeter}}\ =\ \textcolor{stringliteral}{"{}\ "{}};}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00029}\mbox{\hyperlink{namespaceciof_a11dfa6fc0d7cf783cd52dfe0dbf63de1}{00029}}\ \ \ \ \ \}\ \mbox{\hyperlink{namespaceciof_a11dfa6fc0d7cf783cd52dfe0dbf63de1}{CIOFOutputConfig}};}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00030}00030\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00031}00031\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00032}00032\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ output\ type\ for\ ciof::impl::\_\_out()\ function\ and\ its\ helper\ functions}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00033}00033\ \textcolor{comment}{\ \ \ \ \ *\ Out\ :\ To\ Standard\ Output}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00034}00034\ \textcolor{comment}{\ \ \ \ \ *\ Err\ :\ To\ Standard\ Error}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00035}00035\ \textcolor{comment}{\ \ \ \ \ *\ Log\ :\ To\ Standard\ Log\ (Error,\ unbuffered)}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00036}00036\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00037}\mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{00037}}\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{OutputType}}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00038}00038\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00039}\mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747a7c147cda9e49590f6abe83d118b7353b}{00039}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747a7c147cda9e49590f6abe83d118b7353b}{Out}},\ \textcolor{comment}{//\ std::cout}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00040}\mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747ab47f6a6092c5d7e4bffec12dff309c3b}{00040}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747ab47f6a6092c5d7e4bffec12dff309c3b}{Err}},\ \textcolor{comment}{//\ std::cerr}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00041}\mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b}{00041}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b}{Log}},\ \textcolor{comment}{//\ std::clog}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00042}00042\ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00043}00043\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00044}00044\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00045}00045\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ output\ style:}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00046}00046\ \textcolor{comment}{\ \ \ \ \ *\ Bold}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00047}00047\ \textcolor{comment}{\ \ \ \ \ *\ Italic}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00048}00048\ \textcolor{comment}{\ \ \ \ \ *\ Underline}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00049}00049\ \textcolor{comment}{\ \ \ \ \ *\ Strikethrough}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00050}00050\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00051}\mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686b}{00051}}\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686b}{OutputStyle}}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00052}00052\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00053}\mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246}{00053}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246}{Bold}},}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00054}\mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c}{00054}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c}{Italic}},}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00055}\mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439}{00055}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439}{Underline}},}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00056}\mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb}{00056}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb}{Strikethrough}}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00057}00057\ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00058}00058\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00059}00059\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00060}00060\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ default\ output\ configuration}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00062}00062\ \ \ \ \ \textcolor{keyword}{extern}\ \mbox{\hyperlink{namespaceciof_a11dfa6fc0d7cf783cd52dfe0dbf63de1}{CIOFOutputConfig}}\ \mbox{\hyperlink{namespaceciof_a835007e60a4807051d32c3352e867119}{outputConf}};}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00063}00063\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00064}00064\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00065}00065\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Implementation\ functions}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00067}\mbox{\hyperlink{namespaceciof_1_1impl}{00067}}\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceciof_1_1impl}{impl}}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00068}00068\ \ \ \ \ \{\textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00069}00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00070}00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Convert\ to\ string\ safely}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00071}00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_val\ any\ convertable\ type\ to\ string}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00072}00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::string\ total\ converted\ strig}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00075}\mbox{\hyperlink{namespaceciof_1_1impl_ae1e6ee7cf401df4c08b650fa0ebde5ee}{00075}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceciof_1_1impl_ae1e6ee7cf401df4c08b650fa0ebde5ee}{toString}}(\textcolor{keyword}{const}\ T\ \&\_val);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00076}00076\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00077}00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00078}00078\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Parse\ the\ params\ for\ printing\ and\ echoing}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00079}00079\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ \_fmt\ parameter\ 1\ to\ parse}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00080}00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ \_args\ parameter\ 2\ to\ the\ last\ one\ to\ parse}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00081}00081\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::string\ Total\ parsed}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00082}00082\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00084}\mbox{\hyperlink{namespaceciof_1_1impl_a3c0a39bb238468e7e6843e0a4e920b0b}{00084}}\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceciof_1_1impl_a3c0a39bb238468e7e6843e0a4e920b0b}{parse}}(T\ \_fmt,\ Args\ ...\ \_args);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00085}00085\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00086}00086\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00087}00087\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Output\ the\ with\ its\ corresponding\ type\ either\ to:}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00088}00088\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ -\/\ Standard\ output}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00089}00089\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ -\/\ Standard\ error}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00090}00090\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ -\/\ Standard\ log\ (AKA:\ Error\ but\ unbuffered)}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00091}00091\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_outType\ Type\ for\ OUT,\ ERR\ or\ LOG}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00092}00092\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_t\ Text\ to\ add}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00093}00093\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00095}\mbox{\hyperlink{namespaceciof_1_1impl_abd44015c794d66d0403c1c740374c73f}{00095}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_1_1impl_abd44015c794d66d0403c1c740374c73f}{\_\_out}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{OutputType}}\ \&\_outType,\ T\ \_t);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00096}00096\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00097}00097\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00098}00098\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Output\ the\ with\ its\ corresponding\ type\ either\ to:}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00099}00099\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ -\/\ Standard\ output}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00100}00100\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ -\/\ Standard\ error}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00101}00101\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ -\/\ Standard\ log\ (AKA:\ Error\ but\ unbuffered)}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00102}00102\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_outType\ Type\ for\ OUT,\ ERR\ or\ LOG}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00103}00103\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_t\ Text\ to\ add}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00104}00104\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_args\ More\ text\ to\ add}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00105}00105\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00107}\mbox{\hyperlink{namespaceciof_1_1impl_a1891ea20ceaf9eb463765c53d4a0d007}{00107}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_1_1impl_abd44015c794d66d0403c1c740374c73f}{\_\_out}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{OutputType}}\ \&\_outType,\ T\ \_t,\ Args\ ...\ \_args);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00108}00108\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00109}00109\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00110}00110\ \ \ \ \ \textcolor{comment}{//\ NOTE:\ OUTPUT}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00111}00111\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00112}00112\ \ \ \ \ \textcolor{comment}{//\ PRINT}\textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00113}00113\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00114}00114\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Print\ a\ new\ line}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00115}00115\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00116}00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_a8c277d3a2caa58aed09e9bb8982d8ff3}{print}}();}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00117}00117\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00118}00118\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00119}00119\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Print\ to\ the\ standard\ output\ for\ \`{}\_t`}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00120}00120\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00121}00121\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00122}00122\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00123}\mbox{\hyperlink{namespaceciof_a89082a2cf2da077c0d3dae3ab99eede2}{00123}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_a8c277d3a2caa58aed09e9bb8982d8ff3}{print}}(T\ \_t);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00011}00011\ \textcolor{comment}{//\ This\ must\ be\ after\ all\ }}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#ifdef\ CIOF\_OS\_WIN32}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#\ \ \ ifdef\ \_\_out}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ undef\ \_\_out}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#\ \ \ endif}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00018}\doxymbox{\hyperlink{namespaceciof}{00018}}\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespaceciof}{ciof}}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00019}00019\ \{\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00020}00020\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00021}00021\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ output\ configuration\ for\ ciof::impl::\_\_out()\ function\ and\ its\ wrappers}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00022}00022\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00023}\doxymbox{\hyperlink{structciof_1_1CIOFOutputConfig}{00023}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structciof_1_1CIOFOutputConfig}{CIOFOutputConfig}}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00024}00024\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ a\ space\ between\ parameter\ automaticalliy}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00026}\doxymbox{\hyperlink{structciof_1_1CIOFOutputConfig_a6c554213c7a2c40c2e98795b53c62cc8}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structciof_1_1CIOFOutputConfig_a6c554213c7a2c40c2e98795b53c62cc8}{spacing}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ignore\ custom\ and\ predefined\ formatting\ keywords}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00029}\doxymbox{\hyperlink{structciof_1_1CIOFOutputConfig_aeb9bf813d089448e9ebedb3858d77f74}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structciof_1_1CIOFOutputConfig_aeb9bf813d089448e9ebedb3858d77f74}{ignoreAllFormating}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Process\ config}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00032}\doxymbox{\hyperlink{structciof_1_1CIOFOutputConfig_ad15d1fdd800eb4da46896e369646298f}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structciof_1_1CIOFOutputConfig_ad15d1fdd800eb4da46896e369646298f}{processing}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ delimiter\ for\ spacing}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00035}\doxymbox{\hyperlink{structciof_1_1CIOFOutputConfig_a4e97b336cd4468de3d275c8377514c73}{00035}}\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{structciof_1_1CIOFOutputConfig_a4e97b336cd4468de3d275c8377514c73}{spacingDelimeter}}\ =\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00036}\doxymbox{\hyperlink{namespaceciof_a11dfa6fc0d7cf783cd52dfe0dbf63de1}{00036}}\ \ \ \ \ \}\ \doxymbox{\hyperlink{namespaceciof_a11dfa6fc0d7cf783cd52dfe0dbf63de1}{CIOFOutputConfig}};}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00037}00037\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00038}00038\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00039}00039\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ output\ type\ for\ ciof::impl::\_\_out()\ function\ and\ its\ helper\ functions}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00040}00040\ \textcolor{comment}{\ \ \ \ \ *\ Out\ :\ To\ Standard\ Output}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00041}00041\ \textcolor{comment}{\ \ \ \ \ *\ Err\ :\ To\ Standard\ Error}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00042}00042\ \textcolor{comment}{\ \ \ \ \ *\ Log\ :\ To\ Standard\ Log\ (Error,\ unbuffered)}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00043}00043\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00044}\doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{00044}}\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{OutputType}}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00045}00045\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00046}\doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747a7c147cda9e49590f6abe83d118b7353b}{00046}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747a7c147cda9e49590f6abe83d118b7353b}{Out}},\ \textcolor{comment}{//\ std::cout}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00047}\doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747ab47f6a6092c5d7e4bffec12dff309c3b}{00047}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747ab47f6a6092c5d7e4bffec12dff309c3b}{Err}},\ \textcolor{comment}{//\ std::cerr}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00048}\doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b}{00048}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b}{Log}},\ \textcolor{comment}{//\ std::clog}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00049}00049\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00050}00050\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00051}00051\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00052}00052\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ output\ style:}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00053}00053\ \textcolor{comment}{\ \ \ \ \ *\ Bold}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00054}00054\ \textcolor{comment}{\ \ \ \ \ *\ Italic}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ *\ Underline}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00056}00056\ \textcolor{comment}{\ \ \ \ \ *\ Strikethrough}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00057}00057\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00058}\doxymbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686b}{00058}}\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686b}{OutputStyle}}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00059}00059\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00060}\doxymbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246}{00060}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246}{Bold}},}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00061}\doxymbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c}{00061}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c}{Italic}},}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00062}\doxymbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439}{00062}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439}{Underline}},}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00063}\doxymbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb}{00063}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb}{Strikethrough}}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00064}00064\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00065}00065\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00066}00066\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ default\ output\ configuration}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00068}00068\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00069}00069\ \ \ \ \ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{namespaceciof_a11dfa6fc0d7cf783cd52dfe0dbf63de1}{CIOFOutputConfig}}\ \doxymbox{\hyperlink{namespaceciof_a835007e60a4807051d32c3352e867119}{outputConf}};}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00070}00070\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00071}00071\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00072}00072\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Implementation\ functions}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00074}\doxymbox{\hyperlink{namespaceciof_1_1impl}{00074}}\ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespaceciof_1_1impl}{impl}}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00075}00075\ \ \ \ \ \{\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00076}00076\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00077}00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Convert\ to\ string\ safely}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00078}00078\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_val\ any\ convertable\ type\ to\ string}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00079}00079\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::string\ total\ converted\ strig}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00080}00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00082}\doxymbox{\hyperlink{namespaceciof_1_1impl_ae1e6ee7cf401df4c08b650fa0ebde5ee}{00082}}\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespaceciof_1_1impl_ae1e6ee7cf401df4c08b650fa0ebde5ee}{toString}}(\textcolor{keyword}{const}\ T\ \&\_val);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00083}00083\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00084}00084\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00085}00085\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Parse\ the\ params\ for\ printing\ and\ echoing}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00086}00086\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ \_fmt\ parameter\ 1\ to\ parse}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00087}00087\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ \_args\ parameter\ 2\ to\ the\ last\ one\ to\ parse}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00088}00088\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ std::string\ Total\ parsed}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00089}00089\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00091}\doxymbox{\hyperlink{namespaceciof_1_1impl_a3c0a39bb238468e7e6843e0a4e920b0b}{00091}}\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespaceciof_1_1impl_a3c0a39bb238468e7e6843e0a4e920b0b}{parse}}(T\ \_fmt,\ Args\ ...\ \_args);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00092}00092\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00093}00093\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00094}00094\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Output\ the\ with\ its\ corresponding\ type\ either\ to:}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00095}00095\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ -\/\ Standard\ output}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00096}00096\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ -\/\ Standard\ error}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00097}00097\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ -\/\ Standard\ log\ (AKA:\ Error\ but\ unbuffered)}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00098}00098\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_outType\ Type\ for\ OUT,\ ERR\ or\ LOG}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00099}00099\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_t\ Text\ to\ add}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00100}00100\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00102}\doxymbox{\hyperlink{namespaceciof_1_1impl_abd44015c794d66d0403c1c740374c73f}{00102}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_1_1impl_abd44015c794d66d0403c1c740374c73f}{\_\_out}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{OutputType}}\ \&\_outType,\ T\ \_t);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00103}00103\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00104}00104\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00105}00105\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Output\ the\ with\ its\ corresponding\ type\ either\ to:}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00106}00106\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ -\/\ Standard\ output}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00107}00107\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ -\/\ Standard\ error}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00108}00108\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ -\/\ Standard\ log\ (AKA:\ Error\ but\ unbuffered)}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00109}00109\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_outType\ Type\ for\ OUT,\ ERR\ or\ LOG}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00110}00110\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_t\ Text\ to\ add}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00111}00111\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ \_args\ More\ text\ to\ add}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00112}00112\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00114}\doxymbox{\hyperlink{namespaceciof_1_1impl_a1891ea20ceaf9eb463765c53d4a0d007}{00114}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_1_1impl_abd44015c794d66d0403c1c740374c73f}{\_\_out}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespaceciof_a255b49fbd04393ba7532b832b580e747}{OutputType}}\ \&\_outType,\ T\ \_t,\ Args\ ...\ \_args);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00117}00117\ \ \ \ \ \textcolor{comment}{//\ NOTE:\ OUTPUT}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00118}00118\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00119}00119\ \ \ \ \ \textcolor{comment}{//\ PRINT}\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00120}00120\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00121}00121\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Print\ a\ new\ line}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00122}00122\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00123}00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_a8c277d3a2caa58aed09e9bb8982d8ff3}{print}}();}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00124}00124\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00125}00125\ \textcolor{comment}{\ \ \ \ /**}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00126}00126\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Print\ to\ the\ standard\ output\ for\ \`{}\_t`}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00127}00127\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00128}00128\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ More\ messages\ to\ add}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00129}00129\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00130}00130\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00131}\mbox{\hyperlink{namespaceciof_af9fb176a7cdcb9944ebf0521df004696}{00131}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_a8c277d3a2caa58aed09e9bb8982d8ff3}{print}}(T\ \_t,\ Args\ ...\ \_args);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00132}00132\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00133}00133\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00134}00134\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Print\ to\ the\ standard\ log\ for\ \`{}\_t`}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00135}00135\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00128}00128\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00129}00129\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00130}\doxymbox{\hyperlink{namespaceciof_a89082a2cf2da077c0d3dae3ab99eede2}{00130}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_a8c277d3a2caa58aed09e9bb8982d8ff3}{print}}(T\ \_t);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00131}00131\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00132}00132\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00133}00133\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Print\ to\ the\ standard\ output\ for\ \`{}\_t`}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00134}00134\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00135}00135\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ More\ messages\ to\ add}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00136}00136\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00137}00137\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00138}\mbox{\hyperlink{namespaceciof_a4e228d060caae991e1093a7bcd30aa57}{00138}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_a4e228d060caae991e1093a7bcd30aa57}{printLog}}(T\ \_t);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00137}00137\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00138}\doxymbox{\hyperlink{namespaceciof_af9fb176a7cdcb9944ebf0521df004696}{00138}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_a8c277d3a2caa58aed09e9bb8982d8ff3}{print}}(T\ \_t,\ Args\ ...\ \_args);}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00139}00139\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00140}00140\ \textcolor{comment}{\ \ \ \ /**}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00141}00141\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Print\ to\ the\ standard\ log\ for\ \`{}\_t`}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00142}00142\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00143}00143\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ More\ messages\ to\ add}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00144}00144\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00145}00145\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00146}\mbox{\hyperlink{namespaceciof_af2ec490460503a2868462739ca9499cc}{00146}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_a4e228d060caae991e1093a7bcd30aa57}{printLog}}(T\ \_t,\ Args\ ...\ \_args);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00147}00147\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00148}00148\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00149}00149\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Print\ to\ the\ standard\ error\ for\ \`{}\_t`}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00150}00150\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00143}00143\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00144}00144\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00145}\doxymbox{\hyperlink{namespaceciof_a4e228d060caae991e1093a7bcd30aa57}{00145}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_a4e228d060caae991e1093a7bcd30aa57}{printLog}}(T\ \_t);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00146}00146\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00147}00147\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00148}00148\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Print\ to\ the\ standard\ log\ for\ \`{}\_t`}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00149}00149\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00150}00150\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ More\ messages\ to\ add}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00151}00151\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00152}00152\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00153}\mbox{\hyperlink{namespaceciof_a83792b27f8f1ffb969e4e69c5808cb91}{00153}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_a83792b27f8f1ffb969e4e69c5808cb91}{printError}}(T\ \_t);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00152}00152\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00153}\doxymbox{\hyperlink{namespaceciof_af2ec490460503a2868462739ca9499cc}{00153}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_a4e228d060caae991e1093a7bcd30aa57}{printLog}}(T\ \_t,\ Args\ ...\ \_args);}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00154}00154\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00155}00155\ \textcolor{comment}{\ \ \ \ /**}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00156}00156\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Print\ to\ the\ standard\ error\ for\ \`{}\_t`}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00157}00157\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00158}00158\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ More\ messages\ to\ add}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00159}00159\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00160}00160\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00161}\mbox{\hyperlink{namespaceciof_a2b535b59d1fdbf6fdd654296b421f7ce}{00161}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_a83792b27f8f1ffb969e4e69c5808cb91}{printError}}(T\ \_t,\ Args\ ...\ \_args);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00162}00162\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00163}00163\ \ \ \ \ \textcolor{comment}{//\ ECHO}\textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00164}00164\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00165}00165\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Echo\ to\ the\ standard\ output\ for\ \`{}\_t`}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00166}00166\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00167}00167\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00168}00168\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00169}\mbox{\hyperlink{namespaceciof_ae2f933bf22e4842d7aca72ead108f28c}{00169}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_ae2f933bf22e4842d7aca72ead108f28c}{echo}}(T\ \_t);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00170}00170\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00158}00158\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00159}00159\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00160}\doxymbox{\hyperlink{namespaceciof_a83792b27f8f1ffb969e4e69c5808cb91}{00160}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_a83792b27f8f1ffb969e4e69c5808cb91}{printError}}(T\ \_t);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00161}00161\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00162}00162\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00163}00163\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Print\ to\ the\ standard\ error\ for\ \`{}\_t`}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00164}00164\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00165}00165\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ More\ messages\ to\ add}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00166}00166\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00167}00167\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00168}\doxymbox{\hyperlink{namespaceciof_a2b535b59d1fdbf6fdd654296b421f7ce}{00168}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_a83792b27f8f1ffb969e4e69c5808cb91}{printError}}(T\ \_t,\ Args\ ...\ \_args);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00170}00170\ \ \ \ \ \textcolor{comment}{//\ ECHO}\textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00171}00171\ \textcolor{comment}{\ \ \ \ /**}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00172}00172\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Echo\ to\ the\ standard\ output\ for\ \`{}\_t`}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00173}00173\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00174}00174\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ More\ messages\ to\ add}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00175}00175\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00176}00176\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00177}\mbox{\hyperlink{namespaceciof_a7cbb15b2dae1555e9c53992b01405e80}{00177}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_ae2f933bf22e4842d7aca72ead108f28c}{echo}}(T\ \_t,\ Args\ ...\ \_args);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00178}00178\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00179}00179\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00180}00180\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Echo\ to\ the\ standard\ log\ for\ \`{}\_t`}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00181}00181\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00174}00174\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00175}00175\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00176}\doxymbox{\hyperlink{namespaceciof_ae2f933bf22e4842d7aca72ead108f28c}{00176}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_ae2f933bf22e4842d7aca72ead108f28c}{echo}}(T\ \_t);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00177}00177\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00178}00178\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00179}00179\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Echo\ to\ the\ standard\ output\ for\ \`{}\_t`}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00180}00180\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00181}00181\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ More\ messages\ to\ add}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00182}00182\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00183}00183\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00184}\mbox{\hyperlink{namespaceciof_af11fbdee1a0cc6113e58b31bcbfde05e}{00184}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_af11fbdee1a0cc6113e58b31bcbfde05e}{echoLog}}(T\ \_t);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00183}00183\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00184}\doxymbox{\hyperlink{namespaceciof_a7cbb15b2dae1555e9c53992b01405e80}{00184}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_ae2f933bf22e4842d7aca72ead108f28c}{echo}}(T\ \_t,\ Args\ ...\ \_args);}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00185}00185\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00186}00186\ \textcolor{comment}{\ \ \ \ /**}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00187}00187\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Echo\ to\ the\ standard\ log\ for\ \`{}\_t`}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00188}00188\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00189}00189\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ More\ messages\ to\ add}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00190}00190\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00191}00191\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00192}\mbox{\hyperlink{namespaceciof_a66c51251b714b7bdedb8f628113311d4}{00192}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_af11fbdee1a0cc6113e58b31bcbfde05e}{echoLog}}(T\ \_t,\ Args\ ...\ \_args);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00193}00193\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00194}00194\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00195}00195\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Echo\ to\ the\ standard\ error\ for\ \`{}\_t`}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00196}00196\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00189}00189\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00190}00190\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00191}\doxymbox{\hyperlink{namespaceciof_af11fbdee1a0cc6113e58b31bcbfde05e}{00191}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_af11fbdee1a0cc6113e58b31bcbfde05e}{echoLog}}(T\ \_t);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00192}00192\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00193}00193\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00194}00194\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Echo\ to\ the\ standard\ log\ for\ \`{}\_t`}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00195}00195\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00196}00196\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ More\ messages\ to\ add}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00197}00197\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00198}00198\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00199}\mbox{\hyperlink{namespaceciof_af084498aae5fae4efa5f82b1bd0cb442}{00199}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_af084498aae5fae4efa5f82b1bd0cb442}{echoError}}(T\ \_t);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00198}00198\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00199}\doxymbox{\hyperlink{namespaceciof_a66c51251b714b7bdedb8f628113311d4}{00199}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_af11fbdee1a0cc6113e58b31bcbfde05e}{echoLog}}(T\ \_t,\ Args\ ...\ \_args);}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00200}00200\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00201}00201\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00202}00202\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Echo\ to\ the\ standard\ log\ for\ \`{}\_t`}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00202}00202\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Echo\ to\ the\ standard\ error\ for\ \`{}\_t`}}
 \DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00203}00203\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00204}00204\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ More\ messages\ to\ add}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00205}00205\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00206}00206\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00207}\mbox{\hyperlink{namespaceciof_ab5a04c0ff1d0a664db701e70042d2a44}{00207}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_af084498aae5fae4efa5f82b1bd0cb442}{echoError}}(T\ \_t,\ Args\ ...\ \_args);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00208}00208\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00209}00209\ \ \ \ \ \textcolor{comment}{//\ NOTE:\ INPUT}\textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00210}00210\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00211}00211\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ full\ input\ from\ the\ user\ with\ a\ prompt}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00212}00212\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_prompt\ Prompt\ to\ user}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00213}00213\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_var\ Variable\ to\ store\ the\ value}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00214}00214\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00215}00215\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00216}\mbox{\hyperlink{namespaceciof_a890c785dd53fa8333c95e8b9594b55e7}{00216}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_a890c785dd53fa8333c95e8b9594b55e7}{input}}(\textcolor{keyword}{const}\ std::string\ \&\_prompt,\ T\ *\_var);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00217}00217\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00218}00218\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00219}00219\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ full\ input\ from\ the\ user}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00220}00220\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_prompt\ Prompt\ to\ user}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00221}00221\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_var\ Variable\ to\ store\ the\ value}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00222}00222\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00223}00223\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00224}\mbox{\hyperlink{namespaceciof_a6d046aa36f6f80976075523e2ba0974a}{00224}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_a890c785dd53fa8333c95e8b9594b55e7}{input}}(T\ *\_var);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00225}00225\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00226}00226\ \ \ \ \ \textcolor{comment}{//\ NOTE:\ UTILS}\textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00227}00227\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00228}00228\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ everything\ as\ a\ string\ format}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00229}00229\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ First\ param\ of\ the\ string}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00230}00230\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ Rest\ of\ the\ params\ of\ the\ string}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00231}00231\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Return\ the\ formatted\ string}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00232}00232\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00233}00233\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00234}\mbox{\hyperlink{namespaceciof_a42851a9df059ee00504d50b5331ed963}{00234}}\ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceciof_a42851a9df059ee00504d50b5331ed963}{format}}(T\ \_t,\ Args\ ...\ \_args);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00235}00235\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00236}00236\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00237}00237\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ the\ styles\ according\ to\ the\ \`{}OutputStyle`\ type}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00238}00238\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_style\ Set\ the\ style\ (Bold,\ Italics,\ Underline,\ ...)}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00239}00239\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Escape\ code\ according\ to\ the\ style}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00240}00240\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00241}00241\ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceciof_a8ff4eb89ed64bb300da3ddf91cad7e4f}{styleSet}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686b}{OutputStyle}}\ \&\_style);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00242}00242\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00243}00243\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00244}00244\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Reset\ all\ the\ styles\ and\ colors\ in\ the\ terminal}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00245}00245\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Escape\ code\ to\ ereset\ colors\ and\ styles\ from\ terminal}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00246}00246\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00247}00247\ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceciof_a25987420300a8bf1380cebe37f6c082f}{styleReset}}();}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00248}00248\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00249}00249\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00250}00250\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ the\ colors\ from\ the\ default\ color\ palette\ from\ the\ terminal}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00251}00251\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_color\ Integer\ for\ color}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00252}00252\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Escape\ code\ to\ set\ the\ code}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00253}00253\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00254}00254\ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceciof_aefd966015567bb62676f13ef217d3b79}{colorSet}}(\textcolor{keywordtype}{int}\ \_color);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00255}00255\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00256}00256\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00257}00257\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ the\ RGB\ color\ in\ the\ terminal}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00258}00258\ \textcolor{comment}{\ \ \ \ \ *\ @param\ r\ Red\ color}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00259}00259\ \textcolor{comment}{\ \ \ \ \ *\ @param\ g\ Green\ color}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00260}00260\ \textcolor{comment}{\ \ \ \ \ *\ @param\ b\ Blue\ color}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00261}00261\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Color\ escape\ sequence\ for\ RGB\ colors}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00262}00262\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00263}00263\ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceciof_a34c4a83a2f7c4321fb3cd308ad2162bc}{rgbSet}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ g,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00264}00264\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00265}00265\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00266}00266\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Initialize\ ANSI\ text\ option\ in\ Windows\ 10\ or\ later}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00267}00267\ \textcolor{comment}{\ \ \ \ \ *\ NOTE:\ ONLY\ WORKS\ IN\ WINDOWS\ 10\ OR\ LATER}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00268}00268\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00269}00269\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_a0d6add06e42bf2afe40d5e45db195218}{initANSI}}();}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00270}00270\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00271}00271\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00272}00272\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ the\ set\ cursor\ position\ using\ \_row\ and\ \_col}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00273}00273\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_row\ Row\ to\ set\ (X)}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00274}00274\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_col\ Column\ to\ set\ (Y)}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00275}00275\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Return\ the\ string\ to\ set\ the\ position\ using\ ANSI}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00276}00276\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00277}00277\ \ \ \ \ std::string\ \mbox{\hyperlink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{getCursorPos}}(\textcolor{keywordtype}{int}\ \_row,\ \textcolor{keywordtype}{int}\ \_col);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00278}00278\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00279}00279\ \textcolor{comment}{\ \ \ \ /**}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00280}00280\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ the\ set\ cursor\ position\ using\ \_row\ and\ \_col}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00281}00281\ \textcolor{comment}{\ \ \ \ \ *\ Essentially\ calls\ the\ \`{}getCursorPos()`\ function\ and\ then\ sets\ the\ row\ and\ col\ according\ to\ the\ \`{}getCursorPos()`\ function}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00282}00282\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_row\ Row\ to\ set\ (X)}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00283}00283\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_col\ Column\ to\ set\ (Y)}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00284}00284\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00285}00285\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceciof_a21412a124eb62a7aeedb4d4885600947}{cursorPos}}(\textcolor{keywordtype}{int}\ \_row,\ \textcolor{keywordtype}{int}\ \_col);}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00286}00286\ \}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00287}00287\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00288}00288\ \textcolor{preprocessor}{\#include\ "{}ciof.ipp"{}}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00289}00289\ }
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00290}00290\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00291}00291\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Cannot\ compile\ with\ the\ current\ C++\ standard"{}}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00292}00292\ \textcolor{preprocessor}{\#\ \ \ pragma\ message("{}Use\ C++\ "{}\ CIOF\_TOSTRING(CIOF\_DEFAULT\_CPP\_STD)\ "{}\ or\ higer\ instead\ of\ "{}\ CIOF\_TOSTRING(\_\_cplusplus))}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00293}00293\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
-\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00204}00204\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00205}00205\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00206}\doxymbox{\hyperlink{namespaceciof_af084498aae5fae4efa5f82b1bd0cb442}{00206}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_af084498aae5fae4efa5f82b1bd0cb442}{echoError}}(T\ \_t);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00207}00207\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00208}00208\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00209}00209\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Echo\ to\ the\ standard\ log\ for\ \`{}\_t`}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00210}00210\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ Message\ to\ print}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00211}00211\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ More\ messages\ to\ add}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00212}00212\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00213}00213\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00214}\doxymbox{\hyperlink{namespaceciof_ab5a04c0ff1d0a664db701e70042d2a44}{00214}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_af084498aae5fae4efa5f82b1bd0cb442}{echoError}}(T\ \_t,\ Args\ ...\ \_args);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00216}00216\ \ \ \ \ \textcolor{comment}{//\ NOTE:\ INPUT}\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00217}00217\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00218}00218\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ full\ input\ from\ the\ user\ with\ a\ prompt}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00219}00219\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_prompt\ Prompt\ to\ user}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00220}00220\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_var\ Variable\ to\ store\ the\ value}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00221}00221\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00222}00222\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00223}\doxymbox{\hyperlink{namespaceciof_a890c785dd53fa8333c95e8b9594b55e7}{00223}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_a7675764d8694165a202f0d05f15d923e}{input}}(\textcolor{keyword}{const}\ std::string\ \&\_prompt,\ T\ *\_var);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00224}00224\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00225}00225\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00226}00226\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ full\ input\ from\ the\ user}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00227}00227\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_prompt\ Prompt\ to\ user}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00228}00228\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_var\ Variable\ to\ store\ the\ value}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00229}00229\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00230}00230\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00231}\doxymbox{\hyperlink{namespaceciof_a6d046aa36f6f80976075523e2ba0974a}{00231}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_a7675764d8694165a202f0d05f15d923e}{input}}(T\ *\_var);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00232}00232\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00233}00233\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00234}00234\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Empty\ input()\ function;\ Do\ not\ save\ any\ input\ to\ a\ variable,\ just\ leave\ it\ as\ a\ blank\ input}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00235}00235\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00236}00236\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_a7675764d8694165a202f0d05f15d923e}{input}}();}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00238}00238\ \ \ \ \ \textcolor{comment}{//\ NOTE:\ UTILS}\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00239}00239\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00240}00240\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ everything\ as\ a\ string\ format}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00241}00241\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_t\ First\ param\ of\ the\ string}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00242}00242\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_args\ Rest\ of\ the\ params\ of\ the\ string}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00243}00243\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Return\ the\ formatted\ string}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00244}00244\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00245}00245\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ ...\ Args>}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00246}\doxymbox{\hyperlink{namespaceciof_a42851a9df059ee00504d50b5331ed963}{00246}}\ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespaceciof_a42851a9df059ee00504d50b5331ed963}{format}}(T\ \_t,\ Args\ ...\ \_args);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00247}00247\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00248}00248\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00249}00249\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ the\ styles\ according\ to\ the\ \`{}OutputStyle`\ type}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00250}00250\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_style\ Set\ the\ style\ (Bold,\ Italics,\ Underline,\ ...)}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00251}00251\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Escape\ code\ according\ to\ the\ style}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00252}00252\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00253}00253\ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespaceciof_a8ff4eb89ed64bb300da3ddf91cad7e4f}{styleSet}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686b}{OutputStyle}}\ \&\_style);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00254}00254\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00255}00255\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00256}00256\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Reset\ all\ the\ styles\ and\ colors\ in\ the\ terminal}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00257}00257\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Escape\ code\ to\ ereset\ colors\ and\ styles\ from\ terminal}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00258}00258\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00259}00259\ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespaceciof_a25987420300a8bf1380cebe37f6c082f}{styleReset}}();}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00260}00260\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00261}00261\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00262}00262\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ the\ colors\ from\ the\ default\ color\ palette\ from\ the\ terminal}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00263}00263\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_color\ Integer\ for\ color}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00264}00264\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Escape\ code\ to\ set\ the\ code}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00265}00265\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00266}00266\ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespaceciof_aefd966015567bb62676f13ef217d3b79}{colorSet}}(\textcolor{keywordtype}{int}\ \_color);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00267}00267\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00268}00268\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00269}00269\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ the\ RGB\ color\ in\ the\ terminal}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00270}00270\ \textcolor{comment}{\ \ \ \ \ *\ @param\ r\ Red\ color}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00271}00271\ \textcolor{comment}{\ \ \ \ \ *\ @param\ g\ Green\ color}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00272}00272\ \textcolor{comment}{\ \ \ \ \ *\ @param\ b\ Blue\ color}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00273}00273\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Color\ escape\ sequence\ for\ RGB\ colors}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00274}00274\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00275}00275\ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespaceciof_a34c4a83a2f7c4321fb3cd308ad2162bc}{rgbSet}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ g,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00276}00276\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00277}00277\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00278}00278\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Set\ the\ RGB\ color\ for\ background\ in\ the\ terminal}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00279}00279\ \textcolor{comment}{\ \ \ \ \ *\ @param\ r\ Red\ color}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00280}00280\ \textcolor{comment}{\ \ \ \ \ *\ @param\ g\ Green\ color}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00281}00281\ \textcolor{comment}{\ \ \ \ \ *\ @param\ b\ Blue\ color}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00282}00282\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Color\ escape\ sequence\ for\ RGB\ colors}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00283}00283\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00284}00284\ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespaceciof_a1b7a260ec316466e45ab04c45f9bf206}{rgbBgSet}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ g,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ b);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00285}00285\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00286}00286\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00287}00287\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Initialize\ ANSI\ text\ option\ in\ Windows\ 10\ or\ later}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00288}00288\ \textcolor{comment}{\ \ \ \ \ *\ NOTE:\ ONLY\ WORKS\ IN\ WINDOWS\ 10\ OR\ LATER}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00289}00289\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00290}00290\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_a0d6add06e42bf2afe40d5e45db195218}{initANSI}}();}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00291}00291\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00292}00292\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00293}00293\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ the\ set\ cursor\ position\ using\ \_row\ and\ \_col}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00294}00294\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_row\ Row\ to\ set\ (X)}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00295}00295\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_col\ Column\ to\ set\ (Y)}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00296}00296\ \textcolor{comment}{\ \ \ \ \ *\ @return\ std::string\ Return\ the\ string\ to\ set\ the\ position\ using\ ANSI}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00297}00297\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00298}00298\ \ \ \ \ std::string\ \doxymbox{\hyperlink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{getCursorPos}}(\textcolor{keywordtype}{int}\ \_row,\ \textcolor{keywordtype}{int}\ \_col);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00299}00299\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00300}00300\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00301}00301\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Get\ the\ set\ cursor\ position\ using\ \_row\ and\ \_col}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00302}00302\ \textcolor{comment}{\ \ \ \ \ *\ Essentially\ calls\ the\ \`{}getCursorPos()`\ function\ and\ then\ sets\ the\ row\ and\ col\ according\ to\ the\ \`{}getCursorPos()`\ function}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00303}00303\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_row\ Row\ to\ set\ (X)}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00304}00304\ \textcolor{comment}{\ \ \ \ \ *\ @param\ \_col\ Column\ to\ set\ (Y)}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00305}00305\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00306}00306\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_a21412a124eb62a7aeedb4d4885600947}{cursorPos}}(\textcolor{keywordtype}{int}\ \_row,\ \textcolor{keywordtype}{int}\ \_col);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00307}00307\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00308}00308\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00309}00309\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Clear\ the\ contents\ of\ the\ terminal}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00310}00310\ \textcolor{comment}{\ \ \ \ \ *\ NOTE:\ In\ Windows;\ enable\ ANSI\ by\ doing\ \`{}ciof::initANSI()`}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00311}00311\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00312}00312\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_ab08e5e2faef0d1a122b5d213410f8d48}{clear}}();}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00313}00313\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00314}00314\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00315}00315\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Show\ or\ hide\ the\ cursor\ from\ the\ terminal}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00316}00316\ \textcolor{comment}{\ \ \ \ \ *\ NOTE:\ In\ Windows;\ enable\ ANSI\ by\ doing\ \`{}ciof::initANSI()`}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00317}00317\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00318}00318\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{namespaceciof_a1fa325860b9abbd9edfecb6bd9d3bd70}{showCursor}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \&show);}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00319}00319\ \}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00320}00320\ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00321}00321\ \textcolor{preprocessor}{\#include\ "{}ciof.ipp"{}}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00322}00322\ }
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00323}00323\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00324}00324\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Cannot\ compile\ with\ the\ current\ C++\ standard"{}}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00325}00325\ \textcolor{preprocessor}{\#\ \ \ pragma\ message("{}Use\ C++\ "{}\ CIOF\_TOSTRING(CIOF\_DEFAULT\_CPP\_STD)\ "{}\ or\ higer\ instead\ of\ "{}\ CIOF\_TOSTRING(\_\_cplusplus))}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00326}00326\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{ciof_8hpp_source_l00327}00327\ }
 
 \end{DoxyCode}

@@ -1,4 +1,4 @@
-.TH "inc/ciof/CIOFpredefines.hpp" 3 "Version v1.0.0-build" "CIOF" \" -*- nroff -*-
+.TH "inc/ciof/CIOFpredefines.hpp" 3 "Version v1.2.0-build" "CIOF" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,6 +9,9 @@ inc/ciof/CIOFpredefines.hpp
 .SS "Macros"
 
 .in +1c
+.ti -1c
+.RI "#define \fB__CIOF_CPLUSPLUS\fP   __cplusplus"
+.br
 .ti -1c
 .RI "#define \fBCIOF_DEFAULT_CPP_STD\fP   201703L"
 .br
@@ -46,6 +49,10 @@ inc/ciof/CIOFpredefines.hpp
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
+.SS "#define __CIOF_CPLUSPLUS   __cplusplus"
+
+.PP
+Definition at line \fB18\fP of file \fBCIOFpredefines\&.hpp\fP\&.
 .SS "#define CIOF_DEFAULT_CPP_STD   201703L"
 
 .PP
@@ -61,7 +68,7 @@ Definition at line \fB13\fP of file \fBCIOFpredefines\&.hpp\fP\&.
 .SS "#define CIOF_DEV   true"
 
 .PP
-Definition at line \fB39\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+Definition at line \fB45\fP of file \fBCIOFpredefines\&.hpp\fP\&.
 .SS "#define CIOF_STRINGIFY( x)"
 \fBValue:\fP
 .nf
@@ -70,7 +77,7 @@ Definition at line \fB39\fP of file \fBCIOFpredefines\&.hpp\fP\&.
 .fi
 
 .PP
-Definition at line \fB35\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+Definition at line \fB41\fP of file \fBCIOFpredefines\&.hpp\fP\&.
 .SS "#define CIOF_TOSTRING( x)"
 \fBValue:\fP
 .nf
@@ -79,46 +86,46 @@ CIOF_STRINGIFY(x)
 .fi
 
 .PP
-Definition at line \fB36\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+Definition at line \fB42\fP of file \fBCIOFpredefines\&.hpp\fP\&.
 .SS "#define CIOF_VERSION   ((\fBCIOF_VERSION_MAJOR\fP<<16)|(\fBCIOF_VERSION_MINOR\fP<<8)|(\fBCIOF_VERSION_PATCH\fP)|(\fBCIOF_VERSION_STATE\fP << 24))"
 
 .PP
-Definition at line \fB29\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+Definition at line \fB35\fP of file \fBCIOFpredefines\&.hpp\fP\&.
 .SS "#define CIOF_VERSION_CHECK( \fBCIOF_VERSION_MAJOR\fP,  \fBCIOF_VERSION_MINOR\fP,  \fBCIOF_VERSION_PATCH\fP,  \fBCIOF_VERSION_STATE\fP)"
 \fBValue:\fP
 .nf
-    (((CIOF_VERSION_MAJOR)<<16)|((CIOF_VERSION_MINOR)<<8)|(CIOF_VERSION_PATCH)|((CIOF_VERSION_STATE) << 24))
+(((CIOF_VERSION_MAJOR)<<16)|((CIOF_VERSION_MINOR)<<8)|(CIOF_VERSION_PATCH)|((CIOF_VERSION_STATE) << 24))
 .PP
 .fi
 
 .PP
-Definition at line \fB31\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+Definition at line \fB37\fP of file \fBCIOFpredefines\&.hpp\fP\&.
 .nf
-31 #define CIOF_VERSION_CHECK(CIOF_VERSION_MAJOR, CIOF_VERSION_MINOR, CIOF_VERSION_PATCH, CIOF_VERSION_STATE) \\
-32     (((CIOF_VERSION_MAJOR)<<16)|((CIOF_VERSION_MINOR)<<8)|(CIOF_VERSION_PATCH)|((CIOF_VERSION_STATE) << 24))
+37 #define CIOF_VERSION_CHECK(CIOF_VERSION_MAJOR, CIOF_VERSION_MINOR, CIOF_VERSION_PATCH, CIOF_VERSION_STATE) \\
+38     (((CIOF_VERSION_MAJOR)<<16)|((CIOF_VERSION_MINOR)<<8)|(CIOF_VERSION_PATCH)|((CIOF_VERSION_STATE) << 24))
 .PP
 .fi
 
 .SS "#define CIOF_VERSION_MAJOR   1"
 
 .PP
-Definition at line \fB16\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+Definition at line \fB22\fP of file \fBCIOFpredefines\&.hpp\fP\&.
 .SS "#define CIOF_VERSION_MINOR   1"
 
 .PP
-Definition at line \fB17\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+Definition at line \fB23\fP of file \fBCIOFpredefines\&.hpp\fP\&.
 .SS "#define CIOF_VERSION_PATCH   0"
 
 .PP
-Definition at line \fB18\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+Definition at line \fB24\fP of file \fBCIOFpredefines\&.hpp\fP\&.
 .SS "#define CIOF_VERSION_STATE   'build'"
 
 .PP
-Definition at line \fB27\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+Definition at line \fB33\fP of file \fBCIOFpredefines\&.hpp\fP\&.
 .SS "#define CIOF_VERSION_STD   20251013"
 
 .PP
-Definition at line \fB20\fP of file \fBCIOFpredefines\&.hpp\fP\&.
+Definition at line \fB26\fP of file \fBCIOFpredefines\&.hpp\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for CIOF from the source code\&.

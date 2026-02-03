@@ -1,4 +1,4 @@
-.TH "inc/ciof/ciof.hpp" 3 "Version v1.0.0-build" "CIOF" \" -*- nroff -*-
+.TH "inc/ciof/ciof.hpp" 3 "Version v1.2.0-build" "CIOF" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -57,7 +57,7 @@ inc/ciof/ciof.hpp
 .ti -1c
 .RI "enum class \fBciof::OutputType\fP { \fBciof::Out\fP, \fBciof::Err\fP, \fBciof::Log\fP }"
 .br
-.RI "Set output type for \fBciof::impl::__out()\fP function and its helper functions Out : To Standard Output Err : To Standard Error Log : To Standard Log (Error, unbuffered) "
+.RI "Set output type for \fBciof::impl::__out()\fP function and its helper functions Out : To Standard Output Err : To Standard Error Log : To Standard Log (Error, unbuffered)\&. "
 .in -1c
 .SS "Functions"
 
@@ -71,6 +71,10 @@ inc/ciof/ciof.hpp
 .br
 .RI "Output the with its corresponding type either to: "
 .ti -1c
+.RI "void \fBciof::clear\fP ()"
+.br
+.RI "Clear the contents of the terminal NOTE: In Windows; enable ANSI by doing \fR\fBciof::initANSI()\fP\fP\&. "
+.ti -1c
 .RI "std::string \fBciof::colorSet\fP (int _color)"
 .br
 .RI "Set the colors from the default color palette from the terminal\&. "
@@ -81,27 +85,27 @@ inc/ciof/ciof.hpp
 .ti -1c
 .RI "template<typename T> void \fBciof::echo\fP (T _t)"
 .br
-.RI "Echo to the standard output for \fR_t\fP "
+.RI "Echo to the standard output for \fR_t\fP\&. "
 .ti -1c
 .RI "template<typename T, typename \&.\&.\&. Args> void \fBciof::echo\fP (T _t, Args \&.\&.\&. _args)"
 .br
-.RI "Echo to the standard output for \fR_t\fP "
+.RI "Echo to the standard output for \fR_t\fP\&. "
 .ti -1c
 .RI "template<typename T> void \fBciof::echoError\fP (T _t)"
 .br
-.RI "Echo to the standard error for \fR_t\fP "
+.RI "Echo to the standard error for \fR_t\fP\&. "
 .ti -1c
 .RI "template<typename T, typename \&.\&.\&. Args> void \fBciof::echoError\fP (T _t, Args \&.\&.\&. _args)"
 .br
-.RI "Echo to the standard log for \fR_t\fP "
+.RI "Echo to the standard log for \fR_t\fP\&. "
 .ti -1c
 .RI "template<typename T> void \fBciof::echoLog\fP (T _t)"
 .br
-.RI "Echo to the standard log for \fR_t\fP "
+.RI "Echo to the standard log for \fR_t\fP\&. "
 .ti -1c
 .RI "template<typename T, typename \&.\&.\&. Args> void \fBciof::echoLog\fP (T _t, Args \&.\&.\&. _args)"
 .br
-.RI "Echo to the standard log for \fR_t\fP "
+.RI "Echo to the standard log for \fR_t\fP\&. "
 .ti -1c
 .RI "template<typename T, typename \&.\&.\&. Args> std::string \fBciof::format\fP (T _t, Args \&.\&.\&. _args)"
 .br
@@ -114,6 +118,10 @@ inc/ciof/ciof.hpp
 .RI "void \fBciof::initANSI\fP ()"
 .br
 .RI "Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER\&. "
+.ti -1c
+.RI "void \fBciof::input\fP ()"
+.br
+.RI "Empty \fBinput()\fP function; Do not save any input to a variable, just leave it as a blank input\&. "
 .ti -1c
 .RI "template<typename T> void \fBciof::input\fP (const std::string &_prompt, T *_var)"
 .br
@@ -133,31 +141,39 @@ inc/ciof/ciof.hpp
 .ti -1c
 .RI "template<typename T> void \fBciof::print\fP (T _t)"
 .br
-.RI "Print to the standard output for \fR_t\fP "
+.RI "Print to the standard output for \fR_t\fP\&. "
 .ti -1c
 .RI "template<typename T, typename \&.\&.\&. Args> void \fBciof::print\fP (T _t, Args \&.\&.\&. _args)"
 .br
-.RI "Print to the standard output for \fR_t\fP "
+.RI "Print to the standard output for \fR_t\fP\&. "
 .ti -1c
 .RI "template<typename T> void \fBciof::printError\fP (T _t)"
 .br
-.RI "Print to the standard error for \fR_t\fP "
+.RI "Print to the standard error for \fR_t\fP\&. "
 .ti -1c
 .RI "template<typename T, typename \&.\&.\&. Args> void \fBciof::printError\fP (T _t, Args \&.\&.\&. _args)"
 .br
-.RI "Print to the standard error for \fR_t\fP "
+.RI "Print to the standard error for \fR_t\fP\&. "
 .ti -1c
 .RI "template<typename T> void \fBciof::printLog\fP (T _t)"
 .br
-.RI "Print to the standard log for \fR_t\fP "
+.RI "Print to the standard log for \fR_t\fP\&. "
 .ti -1c
 .RI "template<typename T, typename \&.\&.\&. Args> void \fBciof::printLog\fP (T _t, Args \&.\&.\&. _args)"
 .br
-.RI "Print to the standard log for \fR_t\fP "
+.RI "Print to the standard log for \fR_t\fP\&. "
+.ti -1c
+.RI "std::string \fBciof::rgbBgSet\fP (unsigned int r, unsigned int g, unsigned int b)"
+.br
+.RI "Set the RGB color for background in the terminal\&. "
 .ti -1c
 .RI "std::string \fBciof::rgbSet\fP (unsigned int r, unsigned int g, unsigned int b)"
 .br
 .RI "Set the RGB color in the terminal\&. "
+.ti -1c
+.RI "void \fBciof::showCursor\fP (const bool &show)"
+.br
+.RI "Show or hide the cursor from the terminal NOTE: In Windows; enable ANSI by doing \fR\fBciof::initANSI()\fP\fP\&. "
 .ti -1c
 .RI "std::string \fBciof::styleReset\fP ()"
 .br

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.14.0">
+<tagfile doxygen_version="1.16.1">
   <compound kind="file">
     <name>ciof.hpp</name>
     <path>inc/ciof/</path>
@@ -20,6 +20,13 @@
     <name>CIOFpredefines.hpp</name>
     <path>inc/ciof/</path>
     <filename>dc/dcc/CIOFpredefines_8hpp.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>__CIOF_CPLUSPLUS</name>
+      <anchorfile>dc/dcc/CIOFpredefines_8hpp.html</anchorfile>
+      <anchor>ae21588822c90ad823013de7de9d6fac7</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="define">
       <type>#define</type>
       <name>CIOF_DEFAULT_CPP_STD</name>
@@ -176,6 +183,13 @@
       <enumvalue file="dc/d0e/namespaceciof.html" anchor="a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b">Log</enumvalue>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>clear</name>
+      <anchorfile>dc/d0e/namespaceciof.html</anchorfile>
+      <anchor>ab08e5e2faef0d1a122b5d213410f8d48</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>std::string</type>
       <name>colorSet</name>
       <anchorfile>dc/d0e/namespaceciof.html</anchorfile>
@@ -256,6 +270,13 @@
       <type>void</type>
       <name>input</name>
       <anchorfile>dc/d0e/namespaceciof.html</anchorfile>
+      <anchor>a7675764d8694165a202f0d05f15d923e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>input</name>
+      <anchorfile>dc/d0e/namespaceciof.html</anchorfile>
       <anchor>a890c785dd53fa8333c95e8b9594b55e7</anchor>
       <arglist>(const std::string &amp;_prompt, T *_var)</arglist>
     </member>
@@ -317,10 +338,24 @@
     </member>
     <member kind="function">
       <type>std::string</type>
+      <name>rgbBgSet</name>
+      <anchorfile>dc/d0e/namespaceciof.html</anchorfile>
+      <anchor>a1b7a260ec316466e45ab04c45f9bf206</anchor>
+      <arglist>(unsigned int r, unsigned int g, unsigned int b)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
       <name>rgbSet</name>
       <anchorfile>dc/d0e/namespaceciof.html</anchorfile>
       <anchor>a34c4a83a2f7c4321fb3cd308ad2162bc</anchor>
       <arglist>(unsigned int r, unsigned int g, unsigned int b)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>showCursor</name>
+      <anchorfile>dc/d0e/namespaceciof.html</anchorfile>
+      <anchor>a1fa325860b9abbd9edfecb6bd9d3bd70</anchor>
+      <arglist>(const bool &amp;show)</arglist>
     </member>
     <member kind="function">
       <type>std::string</type>
@@ -375,6 +410,25 @@
       <anchor>ae1e6ee7cf401df4c08b650fa0ebde5ee</anchor>
       <arglist>(const T &amp;_val)</arglist>
     </member>
+  </compound>
+  <compound kind="dir">
+    <name>inc/ciof</name>
+    <path>inc/ciof/</path>
+    <filename>dir_1924d7fdc7a72c14ec019757945dfd3b.html</filename>
+    <file>ciof.hpp</file>
+    <file>CIOFpredefines.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>inc</name>
+    <path>inc/</path>
+    <filename>dir_bfccd401955b95cf8c75461437045ac0.html</filename>
+    <dir>inc/ciof</dir>
+  </compound>
+  <compound kind="dir">
+    <name>src</name>
+    <path>src/</path>
+    <filename>dir_68267d1309a1af8e8297ef4c3efbcdba.html</filename>
+    <file>ciof.cpp</file>
   </compound>
   <compound kind="page">
     <name>index</name>

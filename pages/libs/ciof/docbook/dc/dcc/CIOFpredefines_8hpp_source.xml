@@ -16,50 +16,56 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_CIOFpredefines_8hpp_source_1l00012"/>00012 <emphasis role="comment">//&#32;Project&#32;setup</emphasis>
 <anchor xml:id="_CIOFpredefines_8hpp_source_1l00013"/><link linkend="_CIOFpredefines_8hpp_1a3d70bd8048f0ef311e9d8005ad06d56e">00013</link> <emphasis role="preprocessor">#define&#32;CIOF_DEFAULT_CPP_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;201703L</emphasis>
 <anchor xml:id="_CIOFpredefines_8hpp_source_1l00014"/>00014 
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00015"/>00015 <emphasis role="comment">//&#32;Versioning</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00016"/><link linkend="_CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149">00016</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_MAJOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00017"/><link linkend="_CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f">00017</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_MINOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00018"/><link linkend="_CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce">00018</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_PATCH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00019"/>00019 
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00020"/><link linkend="_CIOFpredefines_8hpp_1afe87ed04a50605abe9a99b2aef3fe153">00020</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;20251013</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00021"/>00021 
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00022"/>00022 <emphasis role="comment">//&#32;Version&#32;states:</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00023"/>00023 <emphasis role="comment">//&#32;*&#32;dev</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00024"/>00024 <emphasis role="comment">//&#32;*&#32;alpha</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00025"/>00025 <emphasis role="comment">//&#32;*&#32;beta</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00026"/>00026 <emphasis role="comment">//&#32;*&#32;build</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00027"/><link linkend="_CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9">00027</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_STATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;build&quot;</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00028"/>00028 
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00029"/><link linkend="_CIOFpredefines_8hpp_1a811af67809723e33dacf49cf06f82847">00029</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((CIOF_VERSION_MAJOR&lt;&lt;16)|(CIOF_VERSION_MINOR&lt;&lt;8)|(CIOF_VERSION_PATCH)|(CIOF_VERSION_STATE&#32;&lt;&lt;&#32;24))</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00030"/>00030 
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00031"/><link linkend="_CIOFpredefines_8hpp_1a257cdf0dd35c0e2e8eb9ea0010a1ea26">00031</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_CHECK(CIOF_VERSION_MAJOR,&#32;CIOF_VERSION_MINOR,&#32;CIOF_VERSION_PATCH,&#32;CIOF_VERSION_STATE)&#32;\</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00032"/>00032 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(((CIOF_VERSION_MAJOR)&lt;&lt;16)|((CIOF_VERSION_MINOR)&lt;&lt;8)|(CIOF_VERSION_PATCH)|((CIOF_VERSION_STATE)&#32;&lt;&lt;&#32;24))</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00033"/>00033 
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00034"/>00034 <emphasis role="comment">//&#32;Macro&#32;utils</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00035"/><link linkend="_CIOFpredefines_8hpp_1a3f843eb51ab1a7370f82941eeb1d7646">00035</link> <emphasis role="preprocessor">#define&#32;CIOF_STRINGIFY(x)&#32;#x</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00036"/><link linkend="_CIOFpredefines_8hpp_1a4fd4bdb95be2dd94e5df20f30998b405">00036</link> <emphasis role="preprocessor">#define&#32;CIOF_TOSTRING(x)&#32;CIOF_STRINGIFY(x)</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00037"/>00037 
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00038"/>00038 <emphasis role="preprocessor">#ifndef&#32;CIOF_DEV</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00039"/><link linkend="_CIOFpredefines_8hpp_1a41d16094878c667d41faa2acbe80a0b8">00039</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CIOF_DEV&#32;true</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00040"/>00040 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;!defined(CIOF_DEV)</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00041"/>00041 
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00042"/>00042 <emphasis role="comment">//&#32;OS&#32;Checks</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00043"/>00043 <emphasis role="preprocessor">#ifdef&#32;WIN32</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00044"/>00044 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CIOF_OS_WIN32</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00045"/>00045 <emphasis role="preprocessor">#&#32;&#32;&#32;if&#32;!defined(WIN32_ANSI_SUPPORT)</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00046"/>00046 <emphasis role="preprocessor">#&#32;&#32;&#32;&#32;&#32;&#32;&#32;define&#32;WIN32_ANSI_SUPPORT&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00047"/>00047 <emphasis role="preprocessor">#&#32;&#32;&#32;endif</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00048"/>00048 <emphasis role="preprocessor">#&#32;&#32;&#32;if&#32;WIN32_ANSI_SUPPORT&#32;==&#32;1</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00049"/>00049 <emphasis role="preprocessor">#&#32;&#32;&#32;&#32;&#32;&#32;&#32;warning&#32;&quot;ANSI&#32;Support&#32;for&#32;Windows&#32;is&#32;supported&#32;from&#32;Windows&#32;10&#32;or&#32;newer&quot;</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00050"/>00050 <emphasis role="preprocessor">#&#32;&#32;&#32;endif</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00051"/>00051 <emphasis role="preprocessor">#elif&#32;defined(__APPLE__)&#32;||&#32;defined(__MACH__)&#32;||&#32;defined(Macintosh)</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00052"/>00052 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CIOF_OS_MACOS</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00053"/>00053 <emphasis role="preprocessor">#elif&#32;defined(__linux__)&#32;||&#32;defined(__unix)&#32;||&#32;defined(__unix__)</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00054"/>00054 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CIOF_OS_UNIX_LINUX</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00055"/>00055 <emphasis role="preprocessor">#elif&#32;defined(__FreeBSD__)</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00056"/>00056 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CIOF_OS_FREEBSD</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00057"/>00057 <emphasis role="preprocessor">#else</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00058"/>00058 <emphasis role="preprocessor">#&#32;&#32;&#32;warning&#32;&quot;Current&#32;platform&#32;might&#32;not&#32;supported&quot;</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00059"/>00059 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;defined(WIN32)&#32;//&#32;Platform&#32;check</emphasis>
-<anchor xml:id="_CIOFpredefines_8hpp_source_1l00060"/>00060 
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00015"/>00015 <emphasis role="preprocessor">#if&#32;defined(_MSC_VER)</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00016"/>00016 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__CIOF_CPLUSPLUS&#32;&#32;&#32;&#32;&#32;_MSVC_LANG</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00017"/>00017 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00018"/><link linkend="_CIOFpredefines_8hpp_1ae21588822c90ad823013de7de9d6fac7">00018</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__CIOF_CPLUSPLUS&#32;&#32;&#32;&#32;&#32;__cplusplus</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00019"/>00019 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00020"/>00020 
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00021"/>00021 <emphasis role="comment">//&#32;Versioning</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00022"/><link linkend="_CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149">00022</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_MAJOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00023"/><link linkend="_CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f">00023</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_MINOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00024"/><link linkend="_CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce">00024</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_PATCH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00025"/>00025 
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00026"/><link linkend="_CIOFpredefines_8hpp_1afe87ed04a50605abe9a99b2aef3fe153">00026</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;20251013</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00027"/>00027 
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00028"/>00028 <emphasis role="comment">//&#32;Version&#32;states:</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00029"/>00029 <emphasis role="comment">//&#32;*&#32;dev</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00030"/>00030 <emphasis role="comment">//&#32;*&#32;alpha</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00031"/>00031 <emphasis role="comment">//&#32;*&#32;beta</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00032"/>00032 <emphasis role="comment">//&#32;*&#32;build</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00033"/><link linkend="_CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9">00033</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_STATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;build&quot;</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00034"/>00034 
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00035"/><link linkend="_CIOFpredefines_8hpp_1a811af67809723e33dacf49cf06f82847">00035</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((CIOF_VERSION_MAJOR&lt;&lt;16)|(CIOF_VERSION_MINOR&lt;&lt;8)|(CIOF_VERSION_PATCH)|(CIOF_VERSION_STATE&#32;&lt;&lt;&#32;24))</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00036"/>00036 
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00037"/><link linkend="_CIOFpredefines_8hpp_1a257cdf0dd35c0e2e8eb9ea0010a1ea26">00037</link> <emphasis role="preprocessor">#define&#32;CIOF_VERSION_CHECK(CIOF_VERSION_MAJOR,&#32;CIOF_VERSION_MINOR,&#32;CIOF_VERSION_PATCH,&#32;CIOF_VERSION_STATE)&#32;\</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00038"/>00038 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(((CIOF_VERSION_MAJOR)&lt;&lt;16)|((CIOF_VERSION_MINOR)&lt;&lt;8)|(CIOF_VERSION_PATCH)|((CIOF_VERSION_STATE)&#32;&lt;&lt;&#32;24))</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00039"/>00039 
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00040"/>00040 <emphasis role="comment">//&#32;Macro&#32;utils</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00041"/><link linkend="_CIOFpredefines_8hpp_1a3f843eb51ab1a7370f82941eeb1d7646">00041</link> <emphasis role="preprocessor">#define&#32;CIOF_STRINGIFY(x)&#32;#x</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00042"/><link linkend="_CIOFpredefines_8hpp_1a4fd4bdb95be2dd94e5df20f30998b405">00042</link> <emphasis role="preprocessor">#define&#32;CIOF_TOSTRING(x)&#32;CIOF_STRINGIFY(x)</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00043"/>00043 
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00044"/>00044 <emphasis role="preprocessor">#ifndef&#32;CIOF_DEV</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00045"/><link linkend="_CIOFpredefines_8hpp_1a41d16094878c667d41faa2acbe80a0b8">00045</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CIOF_DEV&#32;true</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00046"/>00046 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;!defined(CIOF_DEV)</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00047"/>00047 
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00048"/>00048 <emphasis role="comment">//&#32;OS&#32;Checks</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00049"/>00049 <emphasis role="preprocessor">#ifdef&#32;_WIN32</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00050"/>00050 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CIOF_OS_WIN32</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00051"/>00051 <emphasis role="preprocessor">#&#32;&#32;&#32;if&#32;!defined(WIN32_ANSI_SUPPORT)</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00052"/>00052 <emphasis role="preprocessor">#&#32;&#32;&#32;&#32;&#32;&#32;&#32;define&#32;WIN32_ANSI_SUPPORT&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00053"/>00053 <emphasis role="preprocessor">#&#32;&#32;&#32;endif</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00054"/>00054 <emphasis role="preprocessor">#&#32;&#32;&#32;if&#32;WIN32_ANSI_SUPPORT&#32;==&#32;1</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00055"/>00055 <emphasis role="preprocessor">#&#32;&#32;&#32;&#32;&#32;&#32;&#32;warning&#32;&quot;ANSI&#32;Support&#32;for&#32;Windows&#32;is&#32;supported&#32;from&#32;Windows&#32;10&#32;or&#32;newer&quot;</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00056"/>00056 <emphasis role="preprocessor">#&#32;&#32;&#32;endif</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00057"/>00057 <emphasis role="preprocessor">#elif&#32;defined(__APPLE__)&#32;||&#32;defined(__MACH__)&#32;||&#32;defined(Macintosh)</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00058"/>00058 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CIOF_OS_MACOS</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00059"/>00059 <emphasis role="preprocessor">#elif&#32;defined(__linux__)&#32;||&#32;defined(__unix)&#32;||&#32;defined(__unix__)</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00060"/>00060 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CIOF_OS_UNIX_LINUX</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00061"/>00061 <emphasis role="preprocessor">#elif&#32;defined(__FreeBSD__)</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00062"/>00062 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;CIOF_OS_FREEBSD</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00063"/>00063 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00064"/>00064 <emphasis role="preprocessor">#&#32;&#32;&#32;warning&#32;&quot;Current&#32;platform&#32;might&#32;not&#32;supported&quot;</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00065"/>00065 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;defined(WIN32)&#32;//&#32;Platform&#32;check</emphasis>
+<anchor xml:id="_CIOFpredefines_8hpp_source_1l00066"/>00066 
 </programlisting></section>

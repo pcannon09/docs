@@ -1,5 +1,6 @@
 var CIOFpredefines_8hpp =
 [
+    [ "__CIOF_CPLUSPLUS", "dc/dcc/CIOFpredefines_8hpp.html#ae21588822c90ad823013de7de9d6fac7", null ],
     [ "CIOF_DEFAULT_CPP_STD", "dc/dcc/CIOFpredefines_8hpp.html#a3d70bd8048f0ef311e9d8005ad06d56e", null ],
     [ "CIOF_DEV", "dc/dcc/CIOFpredefines_8hpp.html#a41d16094878c667d41faa2acbe80a0b8", null ],
     [ "CIOF_STRINGIFY", "dc/dcc/CIOFpredefines_8hpp.html#a3f843eb51ab1a7370f82941eeb1d7646", null ],

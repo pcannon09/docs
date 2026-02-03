@@ -1,28 +1,36 @@
-\doxysection{src/ciof.cpp File Reference}
+\doxysection{src/\+ciof.cpp File Reference}
 \hypertarget{ciof_8cpp}{}\label{ciof_8cpp}\index{src/ciof.cpp@{src/ciof.cpp}}
-{\ttfamily \#include $<$iostream$>$}\newline
-{\ttfamily \#include "{}../inc/ciof/ciof.\+hpp"{}}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include "{}../\+inc/\+ciof/\+ciof.\+hpp"{}}\newline
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-namespace \mbox{\hyperlink{namespaceciof}{ciof}}
+namespace \doxymbox{\hyperlink{namespaceciof}{ciof}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-std\+::string \mbox{\hyperlink{namespaceciof_aefd966015567bb62676f13ef217d3b79}{ciof\+::color\+Set}} (int \+\_\+color)
+void \doxymbox{\hyperlink{namespaceciof_ab08e5e2faef0d1a122b5d213410f8d48}{ciof::\+clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear the contents of the terminal NOTE:\+ In Windows; enable ANSI by doing {\ttfamily \doxylink{namespaceciof_a0d6add06e42bf2afe40d5e45db195218}{ciof::\+init\+ANSI()}}. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{namespaceciof_aefd966015567bb62676f13ef217d3b79}{ciof::\+color\+Set}} (int \+\_\+color)
 \begin{DoxyCompactList}\small\item\em Set the colors from the default color palette from the terminal. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceciof_a21412a124eb62a7aeedb4d4885600947}{ciof\+::cursor\+Pos}} (int \+\_\+row, int \+\_\+col)
+void \doxymbox{\hyperlink{namespaceciof_a21412a124eb62a7aeedb4d4885600947}{ciof::\+cursor\+Pos}} (int \+\_\+row, int \+\_\+col)
 \begin{DoxyCompactList}\small\item\em Get the set cursor position using \+\_\+row and \+\_\+col Essentially calls the {\ttfamily \doxylink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{get\+Cursor\+Pos()}} function and then sets the row and col according to the {\ttfamily \doxylink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{get\+Cursor\+Pos()}} function. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{ciof\+::get\+Cursor\+Pos}} (int \+\_\+row, int \+\_\+col)
+std::\+string \doxymbox{\hyperlink{namespaceciof_a23e6d40b211eeebdc7ac2c5b9edefe5e}{ciof::\+get\+Cursor\+Pos}} (int \+\_\+row, int \+\_\+col)
 \begin{DoxyCompactList}\small\item\em Get the set cursor position using \+\_\+row and \+\_\+col. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceciof_a0d6add06e42bf2afe40d5e45db195218}{ciof\+::init\+ANSI}} ()
-\begin{DoxyCompactList}\small\item\em Initialize ANSI text option in Windows 10 or later NOTE\+: ONLY WORKS IN WINDOWS 10 OR LATER. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceciof_a8c277d3a2caa58aed09e9bb8982d8ff3}{ciof\+::print}} ()
+void \doxymbox{\hyperlink{namespaceciof_a0d6add06e42bf2afe40d5e45db195218}{ciof::\+init\+ANSI}} ()
+\begin{DoxyCompactList}\small\item\em Initialize ANSI text option in Windows 10 or later NOTE:\+ ONLY WORKS IN WINDOWS 10 OR LATER. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{namespaceciof_a7675764d8694165a202f0d05f15d923e}{ciof::\+input}} ()
+\begin{DoxyCompactList}\small\item\em Empty \doxylink{namespaceciof_a7675764d8694165a202f0d05f15d923e}{input()} function; Do not save any input to a variable, just leave it as a blank input. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{namespaceciof_a8c277d3a2caa58aed09e9bb8982d8ff3}{ciof::\+print}} ()
 \begin{DoxyCompactList}\small\item\em Print a new line. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{namespaceciof_a34c4a83a2f7c4321fb3cd308ad2162bc}{ciof\+::rgb\+Set}} (unsigned int r, unsigned int g, unsigned int b)
+std::\+string \doxymbox{\hyperlink{namespaceciof_a1b7a260ec316466e45ab04c45f9bf206}{ciof::\+rgb\+Bg\+Set}} (unsigned int r, unsigned int g, unsigned int b)
+\begin{DoxyCompactList}\small\item\em Set the RGB color for background in the terminal. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{namespaceciof_a34c4a83a2f7c4321fb3cd308ad2162bc}{ciof::\+rgb\+Set}} (unsigned int r, unsigned int g, unsigned int b)
 \begin{DoxyCompactList}\small\item\em Set the RGB color in the terminal. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{namespaceciof_a25987420300a8bf1380cebe37f6c082f}{ciof\+::style\+Reset}} ()
+void \doxymbox{\hyperlink{namespaceciof_a1fa325860b9abbd9edfecb6bd9d3bd70}{ciof::\+show\+Cursor}} (const bool \&show)
+\begin{DoxyCompactList}\small\item\em Show or hide the cursor from the terminal NOTE:\+ In Windows; enable ANSI by doing {\ttfamily \doxylink{namespaceciof_a0d6add06e42bf2afe40d5e45db195218}{ciof::\+init\+ANSI()}}. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{namespaceciof_a25987420300a8bf1380cebe37f6c082f}{ciof::\+style\+Reset}} ()
 \begin{DoxyCompactList}\small\item\em Reset all the styles and colors in the terminal. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{namespaceciof_a8ff4eb89ed64bb300da3ddf91cad7e4f}{ciof\+::style\+Set}} (const \mbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686b}{Output\+Style}} \&\+\_\+style)
+std::\+string \doxymbox{\hyperlink{namespaceciof_a8ff4eb89ed64bb300da3ddf91cad7e4f}{ciof::\+style\+Set}} (const \doxymbox{\hyperlink{namespaceciof_a611be4fce5f7300347625ba4b708686b}{Output\+Style}} \&\+\_\+style)
 \begin{DoxyCompactList}\small\item\em Set the styles according to the {\ttfamily \doxylink{namespaceciof_a611be4fce5f7300347625ba4b708686b}{Output\+Style}} type. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -5,9 +5,15 @@
     </info>
     <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 <chapter>
+    <title>Directory Documentation</title>
+    <xi:include href="dir_1924d7fdc7a72c14ec019757945dfd3b.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_bfccd401955b95cf8c75461437045ac0.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_68267d1309a1af8e8297ef4c3efbcdba.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
     <title>Namespace Documentation</title>
-<xi:include href="dc/d0e/namespaceciof.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-<xi:include href="d7/d5a/namespaceciof_1_1impl.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dc/d0e/namespaceciof.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d7/d5a/namespaceciof_1_1impl.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </chapter>
 <chapter>
     <title>Class Documentation</title>

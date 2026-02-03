@@ -12,6 +12,10 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
+            <listitem><para>void <link linkend="_namespaceciof_1ab08e5e2faef0d1a122b5d213410f8d48">ciof::clear</link> ()</para>
+
+<para>Clear the contents of the terminal NOTE: In Windows; enable ANSI by doing <computeroutput><link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">ciof::initANSI()</link></computeroutput>. </para>
+</listitem>
             <listitem><para>std::string <link linkend="_namespaceciof_1aefd966015567bb62676f13ef217d3b79">ciof::colorSet</link> (int _color)</para>
 
 <para>Set the colors from the default color palette from the terminal. </para>
@@ -28,13 +32,25 @@
 
 <para>Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER. </para>
 </listitem>
+            <listitem><para>void <link linkend="_namespaceciof_1a7675764d8694165a202f0d05f15d923e">ciof::input</link> ()</para>
+
+<para>Empty <link linkend="_namespaceciof_1a7675764d8694165a202f0d05f15d923e">input()</link> function; Do not save any input to a variable, just leave it as a blank input. </para>
+</listitem>
             <listitem><para>void <link linkend="_namespaceciof_1a8c277d3a2caa58aed09e9bb8982d8ff3">ciof::print</link> ()</para>
 
 <para>Print a new line. </para>
 </listitem>
+            <listitem><para>std::string <link linkend="_namespaceciof_1a1b7a260ec316466e45ab04c45f9bf206">ciof::rgbBgSet</link> (unsigned int r, unsigned int g, unsigned int b)</para>
+
+<para>Set the RGB color for background in the terminal. </para>
+</listitem>
             <listitem><para>std::string <link linkend="_namespaceciof_1a34c4a83a2f7c4321fb3cd308ad2162bc">ciof::rgbSet</link> (unsigned int r, unsigned int g, unsigned int b)</para>
 
 <para>Set the RGB color in the terminal. </para>
+</listitem>
+            <listitem><para>void <link linkend="_namespaceciof_1a1fa325860b9abbd9edfecb6bd9d3bd70">ciof::showCursor</link> (const bool &amp;show)</para>
+
+<para>Show or hide the cursor from the terminal NOTE: In Windows; enable ANSI by doing <computeroutput><link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">ciof::initANSI()</link></computeroutput>. </para>
 </listitem>
             <listitem><para>std::string <link linkend="_namespaceciof_1a25987420300a8bf1380cebe37f6c082f">ciof::styleReset</link> ()</para>
 

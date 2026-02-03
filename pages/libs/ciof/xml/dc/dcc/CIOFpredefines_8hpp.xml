@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="dc/dcc/CIOFpredefines_8hpp" kind="file" language="C++">
     <compoundname>CIOFpredefines.hpp</compoundname>
     <includedby refid="d8/d42/ciof_8hpp" local="yes">inc/ciof/ciof.hpp</includedby>
@@ -22,6 +22,17 @@
       </node>
     </invincdepgraph>
     <sectiondef kind="define">
+      <memberdef kind="define" id="dc/dcc/CIOFpredefines_8hpp_1ae21588822c90ad823013de7de9d6fac7" prot="public" static="no">
+        <name>__CIOF_CPLUSPLUS</name>
+        <initializer>__cplusplus</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/ciof/CIOFpredefines.hpp" line="18" column="13" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="define" id="dc/dcc/CIOFpredefines_8hpp_1a3d70bd8048f0ef311e9d8005ad06d56e" prot="public" static="no">
         <name>CIOF_DEFAULT_CPP_STD</name>
         <initializer>201703L</initializer>
@@ -48,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/CIOFpredefines.hpp" line="39" column="12" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="39" bodyend="-1"/>
+        <location file="inc/ciof/CIOFpredefines.hpp" line="45" column="12" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dc/dcc/CIOFpredefines_8hpp_1a3f843eb51ab1a7370f82941eeb1d7646" prot="public" static="no">
         <name>CIOF_STRINGIFY</name>
@@ -60,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/CIOFpredefines.hpp" line="35" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="35" bodyend="-1"/>
+        <location file="inc/ciof/CIOFpredefines.hpp" line="41" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dc/dcc/CIOFpredefines_8hpp_1a4fd4bdb95be2dd94e5df20f30998b405" prot="public" static="no">
         <name>CIOF_TOSTRING</name>
@@ -72,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/CIOFpredefines.hpp" line="36" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="36" bodyend="-1"/>
+        <location file="inc/ciof/CIOFpredefines.hpp" line="42" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dc/dcc/CIOFpredefines_8hpp_1a811af67809723e33dacf49cf06f82847" prot="public" static="no">
         <name>CIOF_VERSION</name>
@@ -83,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/CIOFpredefines.hpp" line="29" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="29" bodyend="-1"/>
+        <location file="inc/ciof/CIOFpredefines.hpp" line="35" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dc/dcc/CIOFpredefines_8hpp_1a257cdf0dd35c0e2e8eb9ea0010a1ea26" prot="public" static="no">
         <name>CIOF_VERSION_CHECK</name>
@@ -91,14 +102,14 @@
         <param><defname>CIOF_VERSION_MINOR</defname></param>
         <param><defname>CIOF_VERSION_PATCH</defname></param>
         <param><defname>CIOF_VERSION_STATE</defname></param>
-        <initializer>    (((<ref refid="dc/dcc/CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149" kindref="member">CIOF_VERSION_MAJOR</ref>)&lt;&lt;16)|((<ref refid="dc/dcc/CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f" kindref="member">CIOF_VERSION_MINOR</ref>)&lt;&lt;8)|(<ref refid="dc/dcc/CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce" kindref="member">CIOF_VERSION_PATCH</ref>)|((<ref refid="dc/dcc/CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9" kindref="member">CIOF_VERSION_STATE</ref>) &lt;&lt; 24))</initializer>
+        <initializer>(((<ref refid="dc/dcc/CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149" kindref="member">CIOF_VERSION_MAJOR</ref>)&lt;&lt;16)|((<ref refid="dc/dcc/CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f" kindref="member">CIOF_VERSION_MINOR</ref>)&lt;&lt;8)|(<ref refid="dc/dcc/CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce" kindref="member">CIOF_VERSION_PATCH</ref>)|((<ref refid="dc/dcc/CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9" kindref="member">CIOF_VERSION_STATE</ref>) &lt;&lt; 24))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/CIOFpredefines.hpp" line="31" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="31" bodyend="32"/>
+        <location file="inc/ciof/CIOFpredefines.hpp" line="37" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="37" bodyend="38"/>
       </memberdef>
       <memberdef kind="define" id="dc/dcc/CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149" prot="public" static="no">
         <name>CIOF_VERSION_MAJOR</name>
@@ -109,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/CIOFpredefines.hpp" line="16" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="16" bodyend="-1"/>
+        <location file="inc/ciof/CIOFpredefines.hpp" line="22" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dc/dcc/CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f" prot="public" static="no">
         <name>CIOF_VERSION_MINOR</name>
@@ -120,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/CIOFpredefines.hpp" line="17" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="17" bodyend="-1"/>
+        <location file="inc/ciof/CIOFpredefines.hpp" line="23" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dc/dcc/CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce" prot="public" static="no">
         <name>CIOF_VERSION_PATCH</name>
@@ -131,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/CIOFpredefines.hpp" line="18" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="18" bodyend="-1"/>
+        <location file="inc/ciof/CIOFpredefines.hpp" line="24" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dc/dcc/CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9" prot="public" static="no">
         <name>CIOF_VERSION_STATE</name>
@@ -142,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/CIOFpredefines.hpp" line="27" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="27" bodyend="-1"/>
+        <location file="inc/ciof/CIOFpredefines.hpp" line="33" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dc/dcc/CIOFpredefines_8hpp_1afe87ed04a50605abe9a99b2aef3fe153" prot="public" static="no">
         <name>CIOF_VERSION_STD</name>
@@ -153,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/CIOFpredefines.hpp" line="20" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="20" bodyend="-1"/>
+        <location file="inc/ciof/CIOFpredefines.hpp" line="26" column="9" bodyfile="inc/ciof/CIOFpredefines.hpp" bodystart="26" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -175,52 +186,58 @@
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Project<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13" refid="dc/dcc/CIOFpredefines_8hpp_1a3d70bd8048f0ef311e9d8005ad06d56e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_DEFAULT_CPP_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>201703L</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Versioning</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="dc/dcc/CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_MAJOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17" refid="dc/dcc/CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_MINOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="dc/dcc/CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_PATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="dc/dcc/CIOFpredefines_8hpp_1afe87ed04a50605abe9a99b2aef3fe153" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20251013</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>states:</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>dev</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>alpha</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>beta</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>build</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="dc/dcc/CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;build&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="dc/dcc/CIOFpredefines_8hpp_1a811af67809723e33dacf49cf06f82847" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((CIOF_VERSION_MAJOR&lt;&lt;16)|(CIOF_VERSION_MINOR&lt;&lt;8)|(CIOF_VERSION_PATCH)|(CIOF_VERSION_STATE<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="dc/dcc/CIOFpredefines_8hpp_1a257cdf0dd35c0e2e8eb9ea0010a1ea26" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_CHECK(CIOF_VERSION_MAJOR,<sp/>CIOF_VERSION_MINOR,<sp/>CIOF_VERSION_PATCH,<sp/>CIOF_VERSION_STATE)<sp/>\</highlight></codeline>
-<codeline lineno="32"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(((CIOF_VERSION_MAJOR)&lt;&lt;16)|((CIOF_VERSION_MINOR)&lt;&lt;8)|(CIOF_VERSION_PATCH)|((CIOF_VERSION_STATE)<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Macro<sp/>utils</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="dc/dcc/CIOFpredefines_8hpp_1a3f843eb51ab1a7370f82941eeb1d7646" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_STRINGIFY(x)<sp/>#x</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="dc/dcc/CIOFpredefines_8hpp_1a4fd4bdb95be2dd94e5df20f30998b405" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_TOSTRING(x)<sp/>CIOF_STRINGIFY(x)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CIOF_DEV</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="dc/dcc/CIOFpredefines_8hpp_1a41d16094878c667d41faa2acbe80a0b8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOF_DEV<sp/>true</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!defined(CIOF_DEV)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OS<sp/>Checks</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOF_OS_WIN32</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>if<sp/>!defined(WIN32_ANSI_SUPPORT)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>WIN32_ANSI_SUPPORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>if<sp/>WIN32_ANSI_SUPPORT<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>warning<sp/>&quot;ANSI<sp/>Support<sp/>for<sp/>Windows<sp/>is<sp/>supported<sp/>from<sp/>Windows<sp/>10<sp/>or<sp/>newer&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__APPLE__)<sp/>||<sp/>defined(__MACH__)<sp/>||<sp/>defined(Macintosh)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOF_OS_MACOS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__linux__)<sp/>||<sp/>defined(__unix)<sp/>||<sp/>defined(__unix__)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOF_OS_UNIX_LINUX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__FreeBSD__)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOF_OS_FREEBSD</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>warning<sp/>&quot;Current<sp/>platform<sp/>might<sp/>not<sp/>supported&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>defined(WIN32)<sp/>//<sp/>Platform<sp/>check</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__CIOF_CPLUSPLUS<sp/><sp/><sp/><sp/><sp/>_MSVC_LANG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="dc/dcc/CIOFpredefines_8hpp_1ae21588822c90ad823013de7de9d6fac7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__CIOF_CPLUSPLUS<sp/><sp/><sp/><sp/><sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Versioning</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="dc/dcc/CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_MAJOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="dc/dcc/CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_MINOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="dc/dcc/CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_PATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="dc/dcc/CIOFpredefines_8hpp_1afe87ed04a50605abe9a99b2aef3fe153" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20251013</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>states:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>alpha</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>beta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>build</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="dc/dcc/CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;build&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="dc/dcc/CIOFpredefines_8hpp_1a811af67809723e33dacf49cf06f82847" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((CIOF_VERSION_MAJOR&lt;&lt;16)|(CIOF_VERSION_MINOR&lt;&lt;8)|(CIOF_VERSION_PATCH)|(CIOF_VERSION_STATE<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="dc/dcc/CIOFpredefines_8hpp_1a257cdf0dd35c0e2e8eb9ea0010a1ea26" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_VERSION_CHECK(CIOF_VERSION_MAJOR,<sp/>CIOF_VERSION_MINOR,<sp/>CIOF_VERSION_PATCH,<sp/>CIOF_VERSION_STATE)<sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(((CIOF_VERSION_MAJOR)&lt;&lt;16)|((CIOF_VERSION_MINOR)&lt;&lt;8)|(CIOF_VERSION_PATCH)|((CIOF_VERSION_STATE)<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Macro<sp/>utils</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="dc/dcc/CIOFpredefines_8hpp_1a3f843eb51ab1a7370f82941eeb1d7646" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_STRINGIFY(x)<sp/>#x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="dc/dcc/CIOFpredefines_8hpp_1a4fd4bdb95be2dd94e5df20f30998b405" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIOF_TOSTRING(x)<sp/>CIOF_STRINGIFY(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CIOF_DEV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="dc/dcc/CIOFpredefines_8hpp_1a41d16094878c667d41faa2acbe80a0b8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOF_DEV<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!defined(CIOF_DEV)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OS<sp/>Checks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOF_OS_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>if<sp/>!defined(WIN32_ANSI_SUPPORT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>WIN32_ANSI_SUPPORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>if<sp/>WIN32_ANSI_SUPPORT<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>warning<sp/>&quot;ANSI<sp/>Support<sp/>for<sp/>Windows<sp/>is<sp/>supported<sp/>from<sp/>Windows<sp/>10<sp/>or<sp/>newer&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__APPLE__)<sp/>||<sp/>defined(__MACH__)<sp/>||<sp/>defined(Macintosh)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOF_OS_MACOS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__linux__)<sp/>||<sp/>defined(__unix)<sp/>||<sp/>defined(__unix__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOF_OS_UNIX_LINUX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__FreeBSD__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CIOF_OS_FREEBSD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>warning<sp/>&quot;Current<sp/>platform<sp/>might<sp/>not<sp/>supported&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>defined(WIN32)<sp/>//<sp/>Platform<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="inc/ciof/CIOFpredefines.hpp"/>
   </compounddef>

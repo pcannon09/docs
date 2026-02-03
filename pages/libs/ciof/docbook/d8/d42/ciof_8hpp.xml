@@ -54,7 +54,7 @@
 , <link linkend="_namespaceciof_1a255b49fbd04393ba7532b832b580e747ace0be71e33226e4c1db2bcea5959f16b">ciof::Log</link>
  }</para>
 
-<para>Set output type for <link linkend="_namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f">ciof::impl::__out()</link> function and its helper functions Out : To Standard Output Err : To Standard Error Log : To Standard Log (Error, unbuffered) </para>
+<para>Set output type for <link linkend="_namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f">ciof::impl::__out()</link> function and its helper functions Out : To Standard Output Err : To Standard Error Log : To Standard Log (Error, unbuffered). </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -69,6 +69,10 @@
 
 <para>Output the with its corresponding type either to: </para>
 </listitem>
+            <listitem><para>void <link linkend="_namespaceciof_1ab08e5e2faef0d1a122b5d213410f8d48">ciof::clear</link> ()</para>
+
+<para>Clear the contents of the terminal NOTE: In Windows; enable ANSI by doing <computeroutput><link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">ciof::initANSI()</link></computeroutput>. </para>
+</listitem>
             <listitem><para>std::string <link linkend="_namespaceciof_1aefd966015567bb62676f13ef217d3b79">ciof::colorSet</link> (int _color)</para>
 
 <para>Set the colors from the default color palette from the terminal. </para>
@@ -79,27 +83,27 @@
 </listitem>
             <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c">ciof::echo</link> (T _t)</para>
 
-<para>Echo to the standard output for <computeroutput>_t</computeroutput> </para>
+<para>Echo to the standard output for <computeroutput>_t</computeroutput>. </para>
 </listitem>
             <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>void <link linkend="_namespaceciof_1a7cbb15b2dae1555e9c53992b01405e80">ciof::echo</link> (T _t, Args ... _args)</para>
 
-<para>Echo to the standard output for <computeroutput>_t</computeroutput> </para>
+<para>Echo to the standard output for <computeroutput>_t</computeroutput>. </para>
 </listitem>
             <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1af084498aae5fae4efa5f82b1bd0cb442">ciof::echoError</link> (T _t)</para>
 
-<para>Echo to the standard error for <computeroutput>_t</computeroutput> </para>
+<para>Echo to the standard error for <computeroutput>_t</computeroutput>. </para>
 </listitem>
             <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>void <link linkend="_namespaceciof_1ab5a04c0ff1d0a664db701e70042d2a44">ciof::echoError</link> (T _t, Args ... _args)</para>
 
-<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+<para>Echo to the standard log for <computeroutput>_t</computeroutput>. </para>
 </listitem>
             <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1af11fbdee1a0cc6113e58b31bcbfde05e">ciof::echoLog</link> (T _t)</para>
 
-<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+<para>Echo to the standard log for <computeroutput>_t</computeroutput>. </para>
 </listitem>
             <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>void <link linkend="_namespaceciof_1a66c51251b714b7bdedb8f628113311d4">ciof::echoLog</link> (T _t, Args ... _args)</para>
 
-<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+<para>Echo to the standard log for <computeroutput>_t</computeroutput>. </para>
 </listitem>
             <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>std::string <link linkend="_namespaceciof_1a42851a9df059ee00504d50b5331ed963">ciof::format</link> (T _t, Args ... _args)</para>
 
@@ -112,6 +116,10 @@
             <listitem><para>void <link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">ciof::initANSI</link> ()</para>
 
 <para>Initialize ANSI text option in Windows 10 or later NOTE: ONLY WORKS IN WINDOWS 10 OR LATER. </para>
+</listitem>
+            <listitem><para>void <link linkend="_namespaceciof_1a7675764d8694165a202f0d05f15d923e">ciof::input</link> ()</para>
+
+<para>Empty <link linkend="_namespaceciof_1a7675764d8694165a202f0d05f15d923e">input()</link> function; Do not save any input to a variable, just leave it as a blank input. </para>
 </listitem>
             <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1a890c785dd53fa8333c95e8b9594b55e7">ciof::input</link> (const std::string &amp;_prompt, T *_var)</para>
 
@@ -131,31 +139,39 @@
 </listitem>
             <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1a89082a2cf2da077c0d3dae3ab99eede2">ciof::print</link> (T _t)</para>
 
-<para>Print to the standard output for <computeroutput>_t</computeroutput> </para>
+<para>Print to the standard output for <computeroutput>_t</computeroutput>. </para>
 </listitem>
             <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>void <link linkend="_namespaceciof_1af9fb176a7cdcb9944ebf0521df004696">ciof::print</link> (T _t, Args ... _args)</para>
 
-<para>Print to the standard output for <computeroutput>_t</computeroutput> </para>
+<para>Print to the standard output for <computeroutput>_t</computeroutput>. </para>
 </listitem>
             <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1a83792b27f8f1ffb969e4e69c5808cb91">ciof::printError</link> (T _t)</para>
 
-<para>Print to the standard error for <computeroutput>_t</computeroutput> </para>
+<para>Print to the standard error for <computeroutput>_t</computeroutput>. </para>
 </listitem>
             <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>void <link linkend="_namespaceciof_1a2b535b59d1fdbf6fdd654296b421f7ce">ciof::printError</link> (T _t, Args ... _args)</para>
 
-<para>Print to the standard error for <computeroutput>_t</computeroutput> </para>
+<para>Print to the standard error for <computeroutput>_t</computeroutput>. </para>
 </listitem>
             <listitem><para>template&lt;typename T&gt; </para><para>void <link linkend="_namespaceciof_1a4e228d060caae991e1093a7bcd30aa57">ciof::printLog</link> (T _t)</para>
 
-<para>Print to the standard log for <computeroutput>_t</computeroutput> </para>
+<para>Print to the standard log for <computeroutput>_t</computeroutput>. </para>
 </listitem>
             <listitem><para>template&lt;typename T, typename ... Args&gt; </para><para>void <link linkend="_namespaceciof_1af2ec490460503a2868462739ca9499cc">ciof::printLog</link> (T _t, Args ... _args)</para>
 
-<para>Print to the standard log for <computeroutput>_t</computeroutput> </para>
+<para>Print to the standard log for <computeroutput>_t</computeroutput>. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_namespaceciof_1a1b7a260ec316466e45ab04c45f9bf206">ciof::rgbBgSet</link> (unsigned int r, unsigned int g, unsigned int b)</para>
+
+<para>Set the RGB color for background in the terminal. </para>
 </listitem>
             <listitem><para>std::string <link linkend="_namespaceciof_1a34c4a83a2f7c4321fb3cd308ad2162bc">ciof::rgbSet</link> (unsigned int r, unsigned int g, unsigned int b)</para>
 
 <para>Set the RGB color in the terminal. </para>
+</listitem>
+            <listitem><para>void <link linkend="_namespaceciof_1a1fa325860b9abbd9edfecb6bd9d3bd70">ciof::showCursor</link> (const bool &amp;show)</para>
+
+<para>Show or hide the cursor from the terminal NOTE: In Windows; enable ANSI by doing <computeroutput><link linkend="_namespaceciof_1a0d6add06e42bf2afe40d5e45db195218">ciof::initANSI()</link></computeroutput>. </para>
 </listitem>
             <listitem><para>std::string <link linkend="_namespaceciof_1a25987420300a8bf1380cebe37f6c082f">ciof::styleReset</link> ()</para>
 

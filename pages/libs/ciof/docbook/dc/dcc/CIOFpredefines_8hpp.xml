@@ -5,6 +5,8 @@
 <simplesect>
     <title>Macros    </title>
         <itemizedlist>
+            <listitem><para>#define <link linkend="_CIOFpredefines_8hpp_1ae21588822c90ad823013de7de9d6fac7">__CIOF_CPLUSPLUS</link>&#160;&#160;&#160;__cplusplus</para>
+</listitem>
             <listitem><para>#define <link linkend="_CIOFpredefines_8hpp_1a3d70bd8048f0ef311e9d8005ad06d56e">CIOF_DEFAULT_CPP_STD</link>&#160;&#160;&#160;201703L</para>
 
 <para>EXAMPLEpredefines.h - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1.0S NOTICE: </para>
@@ -33,6 +35,13 @@
 </simplesect>
 <section>
 <title>Macro Definition Documentation</title>
+<anchor xml:id="_CIOFpredefines_8hpp_1ae21588822c90ad823013de7de9d6fac7"/><section>
+    <title>__CIOF_CPLUSPLUS</title>
+<indexterm><primary>__CIOF_CPLUSPLUS</primary><secondary>CIOFpredefines.hpp</secondary></indexterm>
+<indexterm><primary>CIOFpredefines.hpp</primary><secondary>__CIOF_CPLUSPLUS</secondary></indexterm>
+<para><computeroutput>#define __CIOF_CPLUSPLUS&#160;&#160;&#160;__cplusplus</computeroutput></para><para>
+Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00018">18</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
+</section>
 <anchor xml:id="_CIOFpredefines_8hpp_1a3d70bd8048f0ef311e9d8005ad06d56e"/><section>
     <title>CIOF_DEFAULT_CPP_STD</title>
 <indexterm><primary>CIOF_DEFAULT_CPP_STD</primary><secondary>CIOFpredefines.hpp</secondary></indexterm>
@@ -57,7 +66,7 @@ Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00013">13</link>
 <indexterm><primary>CIOF_DEV</primary><secondary>CIOFpredefines.hpp</secondary></indexterm>
 <indexterm><primary>CIOFpredefines.hpp</primary><secondary>CIOF_DEV</secondary></indexterm>
 <para><computeroutput>#define CIOF_DEV&#160;&#160;&#160;true</computeroutput></para><para>
-Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00039">39</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
+Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00045">45</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
 </section>
 <anchor xml:id="_CIOFpredefines_8hpp_1a3f843eb51ab1a7370f82941eeb1d7646"/><section>
     <title>CIOF_STRINGIFY</title>
@@ -65,7 +74,7 @@ Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00039">39</link>
 <indexterm><primary>CIOFpredefines.hpp</primary><secondary>CIOF_STRINGIFY</secondary></indexterm>
 <para><computeroutput>#define CIOF_STRINGIFY( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><emphasis role="preprocessor">#x</emphasis>
 </programlisting><para>
-Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00035">35</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
+Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00041">41</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
 </section>
 <anchor xml:id="_CIOFpredefines_8hpp_1a4fd4bdb95be2dd94e5df20f30998b405"/><section>
     <title>CIOF_TOSTRING</title>
@@ -73,59 +82,59 @@ Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00035">35</link>
 <indexterm><primary>CIOFpredefines.hpp</primary><secondary>CIOF_TOSTRING</secondary></indexterm>
 <para><computeroutput>#define CIOF_TOSTRING( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><link linkend="_CIOFpredefines_8hpp_1a3f843eb51ab1a7370f82941eeb1d7646">CIOF_STRINGIFY</link>(x)
 </programlisting><para>
-Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00036">36</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
+Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00042">42</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
 </section>
 <anchor xml:id="_CIOFpredefines_8hpp_1a811af67809723e33dacf49cf06f82847"/><section>
     <title>CIOF_VERSION</title>
 <indexterm><primary>CIOF_VERSION</primary><secondary>CIOFpredefines.hpp</secondary></indexterm>
 <indexterm><primary>CIOFpredefines.hpp</primary><secondary>CIOF_VERSION</secondary></indexterm>
 <para><computeroutput>#define CIOF_VERSION&#160;&#160;&#160;((<link linkend="_CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149">CIOF_VERSION_MAJOR</link>&lt;&lt;16)|(<link linkend="_CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f">CIOF_VERSION_MINOR</link>&lt;&lt;8)|(<link linkend="_CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce">CIOF_VERSION_PATCH</link>)|(<link linkend="_CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9">CIOF_VERSION_STATE</link> &lt;&lt; 24))</computeroutput></para><para>
-Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00029">29</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
+Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00035">35</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
 </section>
 <anchor xml:id="_CIOFpredefines_8hpp_1a257cdf0dd35c0e2e8eb9ea0010a1ea26"/><section>
     <title>CIOF_VERSION_CHECK</title>
 <indexterm><primary>CIOF_VERSION_CHECK</primary><secondary>CIOFpredefines.hpp</secondary></indexterm>
 <indexterm><primary>CIOFpredefines.hpp</primary><secondary>CIOF_VERSION_CHECK</secondary></indexterm>
-<para><computeroutput>#define CIOF_VERSION_CHECK( <link linkend="_CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149">CIOF_VERSION_MAJOR</link>,  <link linkend="_CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f">CIOF_VERSION_MINOR</link>,  <link linkend="_CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce">CIOF_VERSION_PATCH</link>,  <link linkend="_CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9">CIOF_VERSION_STATE</link>)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;(((<link linkend="_CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149">CIOF_VERSION_MAJOR</link>)&lt;&lt;16)|((<link linkend="_CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f">CIOF_VERSION_MINOR</link>)&lt;&lt;8)|(<link linkend="_CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce">CIOF_VERSION_PATCH</link>)|((<link linkend="_CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9">CIOF_VERSION_STATE</link>)&#32;&lt;&lt;&#32;24))
+<para><computeroutput>#define CIOF_VERSION_CHECK( <link linkend="_CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149">CIOF_VERSION_MAJOR</link>,  <link linkend="_CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f">CIOF_VERSION_MINOR</link>,  <link linkend="_CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce">CIOF_VERSION_PATCH</link>,  <link linkend="_CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9">CIOF_VERSION_STATE</link>)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((<link linkend="_CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149">CIOF_VERSION_MAJOR</link>)&lt;&lt;16)|((<link linkend="_CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f">CIOF_VERSION_MINOR</link>)&lt;&lt;8)|(<link linkend="_CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce">CIOF_VERSION_PATCH</link>)|((<link linkend="_CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9">CIOF_VERSION_STATE</link>)&#32;&lt;&lt;&#32;24))
 </programlisting><para>
-Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00031">31</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
-<programlisting linenumbering="unnumbered">00031 <emphasis role="preprocessor">#define&#32;CIOF_VERSION_CHECK(CIOF_VERSION_MAJOR,&#32;CIOF_VERSION_MINOR,&#32;CIOF_VERSION_PATCH,&#32;CIOF_VERSION_STATE)&#32;\</emphasis>
-00032 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(((CIOF_VERSION_MAJOR)&lt;&lt;16)|((CIOF_VERSION_MINOR)&lt;&lt;8)|(CIOF_VERSION_PATCH)|((CIOF_VERSION_STATE)&#32;&lt;&lt;&#32;24))</emphasis>
+Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00037">37</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
+<programlisting linenumbering="unnumbered">00037 <emphasis role="preprocessor">#define&#32;CIOF_VERSION_CHECK(CIOF_VERSION_MAJOR,&#32;CIOF_VERSION_MINOR,&#32;CIOF_VERSION_PATCH,&#32;CIOF_VERSION_STATE)&#32;\</emphasis>
+00038 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(((CIOF_VERSION_MAJOR)&lt;&lt;16)|((CIOF_VERSION_MINOR)&lt;&lt;8)|(CIOF_VERSION_PATCH)|((CIOF_VERSION_STATE)&#32;&lt;&lt;&#32;24))</emphasis>
 </programlisting></section>
 <anchor xml:id="_CIOFpredefines_8hpp_1ae837d6691677a6f2f6adf7d006bc2149"/><section>
     <title>CIOF_VERSION_MAJOR</title>
 <indexterm><primary>CIOF_VERSION_MAJOR</primary><secondary>CIOFpredefines.hpp</secondary></indexterm>
 <indexterm><primary>CIOFpredefines.hpp</primary><secondary>CIOF_VERSION_MAJOR</secondary></indexterm>
 <para><computeroutput>#define CIOF_VERSION_MAJOR&#160;&#160;&#160;1</computeroutput></para><para>
-Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00016">16</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
+Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00022">22</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
 </section>
 <anchor xml:id="_CIOFpredefines_8hpp_1a37d9da50efb5bc5ac2b63ca3b72de10f"/><section>
     <title>CIOF_VERSION_MINOR</title>
 <indexterm><primary>CIOF_VERSION_MINOR</primary><secondary>CIOFpredefines.hpp</secondary></indexterm>
 <indexterm><primary>CIOFpredefines.hpp</primary><secondary>CIOF_VERSION_MINOR</secondary></indexterm>
 <para><computeroutput>#define CIOF_VERSION_MINOR&#160;&#160;&#160;1</computeroutput></para><para>
-Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00017">17</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
+Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00023">23</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
 </section>
 <anchor xml:id="_CIOFpredefines_8hpp_1aebcfd1c825546c9cf869fc0852f859ce"/><section>
     <title>CIOF_VERSION_PATCH</title>
 <indexterm><primary>CIOF_VERSION_PATCH</primary><secondary>CIOFpredefines.hpp</secondary></indexterm>
 <indexterm><primary>CIOFpredefines.hpp</primary><secondary>CIOF_VERSION_PATCH</secondary></indexterm>
 <para><computeroutput>#define CIOF_VERSION_PATCH&#160;&#160;&#160;0</computeroutput></para><para>
-Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00018">18</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
+Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00024">24</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
 </section>
 <anchor xml:id="_CIOFpredefines_8hpp_1a367c2c910bb88fb15e9a5d7e4cf579c9"/><section>
     <title>CIOF_VERSION_STATE</title>
 <indexterm><primary>CIOF_VERSION_STATE</primary><secondary>CIOFpredefines.hpp</secondary></indexterm>
 <indexterm><primary>CIOFpredefines.hpp</primary><secondary>CIOF_VERSION_STATE</secondary></indexterm>
 <para><computeroutput>#define CIOF_VERSION_STATE&#160;&#160;&#160;&quot;build&quot;</computeroutput></para><para>
-Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00027">27</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
+Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00033">33</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
 </section>
 <anchor xml:id="_CIOFpredefines_8hpp_1afe87ed04a50605abe9a99b2aef3fe153"/><section>
     <title>CIOF_VERSION_STD</title>
 <indexterm><primary>CIOF_VERSION_STD</primary><secondary>CIOFpredefines.hpp</secondary></indexterm>
 <indexterm><primary>CIOFpredefines.hpp</primary><secondary>CIOF_VERSION_STD</secondary></indexterm>
 <para><computeroutput>#define CIOF_VERSION_STD&#160;&#160;&#160;20251013</computeroutput></para><para>
-Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00020">20</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
+Definition at line <link linkend="_CIOFpredefines_8hpp_source_1l00026">26</link> of file <link linkend="_CIOFpredefines_8hpp_source">CIOFpredefines.hpp</link>.</para>
 </section>
 </section>
 </section>

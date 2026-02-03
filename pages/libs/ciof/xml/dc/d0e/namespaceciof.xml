@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="dc/d0e/namespaceciof" kind="namespace" language="C++">
     <compoundname>ciof</compoundname>
     <innerclass refid="d6/d74/structciof_1_1CIOFOutputConfig" prot="public">ciof::CIOFOutputConfig</innerclass>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="51" column="1" bodyfile="inc/ciof/ciof.hpp" bodystart="52" bodyend="57"/>
+        <location file="inc/ciof/ciof.hpp" line="58" column="1" bodyfile="inc/ciof/ciof.hpp" bodystart="59" bodyend="64"/>
       </memberdef>
       <memberdef kind="enum" id="dc/d0e/namespaceciof_1a255b49fbd04393ba7532b832b580e747" prot="public" static="no" strong="yes">
         <type></type>
@@ -72,13 +72,13 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
-<para>Set output type for <ref refid="d7/d5a/namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f" kindref="member">ciof::impl::__out()</ref> function and its helper functions Out : To Standard Output Err : To Standard Error Log : To Standard Log (Error, unbuffered) </para>
+<para>Set output type for <ref refid="d7/d5a/namespaceciof_1_1impl_1abd44015c794d66d0403c1c740374c73f" kindref="member">ciof::impl::__out()</ref> function and its helper functions Out : To Standard Output Err : To Standard Error Log : To Standard Log (Error, unbuffered). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="37" column="1" bodyfile="inc/ciof/ciof.hpp" bodystart="38" bodyend="42"/>
+        <location file="inc/ciof/ciof.hpp" line="44" column="1" bodyfile="inc/ciof/ciof.hpp" bodystart="45" bodyend="49"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="29" column="18"/>
+        <location file="inc/ciof/ciof.hpp" line="36" column="18"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="var">
@@ -112,10 +112,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="15" column="18" bodyfile="src/ciof.cpp" bodystart="15" bodyend="-1" declfile="inc/ciof/ciof.hpp" declline="62" declcolumn="25"/>
+        <location file="src/ciof.cpp" line="16" column="18" bodyfile="src/ciof.cpp" bodystart="16" bodyend="-1" declfile="inc/ciof/ciof.hpp" declline="69" declcolumn="25"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1ab08e5e2faef0d1a122b5d213410f8d48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ciof::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>ciof::clear</qualifiedname>
+        <briefdescription>
+<para>Clear the contents of the terminal NOTE: In Windows; enable ANSI by doing <computeroutput><ref refid="dc/d0e/namespaceciof_1a0d6add06e42bf2afe40d5e45db195218" kindref="member">ciof::initANSI()</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ciof.cpp" line="64" column="6" bodyfile="src/ciof.cpp" bodystart="64" bodyend="65" declfile="inc/ciof/ciof.hpp" declline="312" declcolumn="6"/>
+        <references refid="dc/d0e/namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c">echo</references>
+      </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1aefd966015567bb62676f13ef217d3b79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
         <definition>std::string ciof::colorSet</definition>
@@ -145,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="59" column="13" bodyfile="src/ciof.cpp" bodystart="59" bodyend="60" declfile="inc/ciof/ciof.hpp" declline="254" declcolumn="13"/>
+        <location file="src/ciof.cpp" line="76" column="13" bodyfile="src/ciof.cpp" bodystart="76" bodyend="77" declfile="inc/ciof/ciof.hpp" declline="266" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a21412a124eb62a7aeedb4d4885600947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -186,8 +202,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="23" column="6" bodyfile="src/ciof.cpp" bodystart="23" bodyend="24" declfile="inc/ciof/ciof.hpp" declline="285" declcolumn="6"/>
-        <references refid="dc/d0e/namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e" compoundref="d0/d04/ciof_8cpp" startline="20" endline="21">getCursorPos</references>
+        <location file="src/ciof.cpp" line="31" column="6" bodyfile="src/ciof.cpp" bodystart="31" bodyend="32" declfile="inc/ciof/ciof.hpp" declline="306" declcolumn="6"/>
+        <references refid="dc/d0e/namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e" compoundref="d0/d04/ciof_8cpp" startline="28" endline="29">getCursorPos</references>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -205,7 +221,7 @@
           <declname>_t</declname>
         </param>
         <briefdescription>
-<para>Echo to the standard output for <computeroutput>_t</computeroutput> </para>
+<para>Echo to the standard output for <computeroutput>_t</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -221,7 +237,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="169" column="6" declfile="inc/ciof/ciof.hpp" declline="169" declcolumn="6"/>
+        <location file="inc/ciof/ciof.hpp" line="176" column="6" declfile="inc/ciof/ciof.hpp" declline="176" declcolumn="6"/>
+        <referencedby refid="dc/d0e/namespaceciof_1ab08e5e2faef0d1a122b5d213410f8d48" compoundref="d0/d04/ciof_8cpp" startline="64" endline="65">clear</referencedby>
+        <referencedby refid="dc/d0e/namespaceciof_1a1fa325860b9abbd9edfecb6bd9d3bd70" compoundref="d0/d04/ciof_8cpp" startline="67" endline="71">showCursor</referencedby>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a7cbb15b2dae1555e9c53992b01405e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -248,7 +266,7 @@
           <declname>_args</declname>
         </param>
         <briefdescription>
-<para>Echo to the standard output for <computeroutput>_t</computeroutput> </para>
+<para>Echo to the standard output for <computeroutput>_t</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -272,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="177" column="6" declfile="inc/ciof/ciof.hpp" declline="177" declcolumn="6"/>
+        <location file="inc/ciof/ciof.hpp" line="184" column="6" declfile="inc/ciof/ciof.hpp" declline="184" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1af084498aae5fae4efa5f82b1bd0cb442" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -290,7 +308,7 @@
           <declname>_t</declname>
         </param>
         <briefdescription>
-<para>Echo to the standard error for <computeroutput>_t</computeroutput> </para>
+<para>Echo to the standard error for <computeroutput>_t</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -306,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="199" column="10" declfile="inc/ciof/ciof.hpp" declline="199" declcolumn="10"/>
+        <location file="inc/ciof/ciof.hpp" line="206" column="10" declfile="inc/ciof/ciof.hpp" declline="206" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1ab5a04c0ff1d0a664db701e70042d2a44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -333,7 +351,7 @@
           <declname>_args</declname>
         </param>
         <briefdescription>
-<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+<para>Echo to the standard log for <computeroutput>_t</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -357,7 +375,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="207" column="10" declfile="inc/ciof/ciof.hpp" declline="207" declcolumn="10"/>
+        <location file="inc/ciof/ciof.hpp" line="214" column="10" declfile="inc/ciof/ciof.hpp" declline="214" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1af11fbdee1a0cc6113e58b31bcbfde05e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -375,7 +393,7 @@
           <declname>_t</declname>
         </param>
         <briefdescription>
-<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+<para>Echo to the standard log for <computeroutput>_t</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -391,7 +409,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="184" column="10" declfile="inc/ciof/ciof.hpp" declline="184" declcolumn="10"/>
+        <location file="inc/ciof/ciof.hpp" line="191" column="10" declfile="inc/ciof/ciof.hpp" declline="191" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a66c51251b714b7bdedb8f628113311d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -418,7 +436,7 @@
           <declname>_args</declname>
         </param>
         <briefdescription>
-<para>Echo to the standard log for <computeroutput>_t</computeroutput> </para>
+<para>Echo to the standard log for <computeroutput>_t</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -442,7 +460,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="192" column="10" declfile="inc/ciof/ciof.hpp" declline="192" declcolumn="10"/>
+        <location file="inc/ciof/ciof.hpp" line="199" column="10" declfile="inc/ciof/ciof.hpp" declline="199" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a42851a9df059ee00504d50b5331ed963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -495,7 +513,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="234" column="13" declfile="inc/ciof/ciof.hpp" declline="234" declcolumn="13"/>
+        <location file="inc/ciof/ciof.hpp" line="246" column="13" declfile="inc/ciof/ciof.hpp" declline="246" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a23e6d40b211eeebdc7ac2c5b9edefe5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -538,8 +556,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="20" column="13" bodyfile="src/ciof.cpp" bodystart="20" bodyend="21" declfile="inc/ciof/ciof.hpp" declline="277" declcolumn="13"/>
-        <referencedby refid="dc/d0e/namespaceciof_1a21412a124eb62a7aeedb4d4885600947" compoundref="d0/d04/ciof_8cpp" startline="23" endline="24">cursorPos</referencedby>
+        <location file="src/ciof.cpp" line="28" column="13" bodyfile="src/ciof.cpp" bodystart="28" bodyend="29" declfile="inc/ciof/ciof.hpp" declline="298" declcolumn="13"/>
+        <referencedby refid="dc/d0e/namespaceciof_1a21412a124eb62a7aeedb4d4885600947" compoundref="d0/d04/ciof_8cpp" startline="31" endline="32">cursorPos</referencedby>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a0d6add06e42bf2afe40d5e45db195218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -554,7 +572,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="26" column="6" bodyfile="src/ciof.cpp" bodystart="26" bodyend="42" declfile="inc/ciof/ciof.hpp" declline="269" declcolumn="6"/>
+        <location file="src/ciof.cpp" line="34" column="6" bodyfile="src/ciof.cpp" bodystart="34" bodyend="50" declfile="inc/ciof/ciof.hpp" declline="290" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a7675764d8694165a202f0d05f15d923e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ciof::input</definition>
+        <argsstring>()</argsstring>
+        <name>input</name>
+        <qualifiedname>ciof::input</qualifiedname>
+        <briefdescription>
+<para>Empty <ref refid="dc/d0e/namespaceciof_1a7675764d8694165a202f0d05f15d923e" kindref="member">input()</ref> function; Do not save any input to a variable, just leave it as a blank input. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ciof.cpp" line="21" column="6" bodyfile="src/ciof.cpp" bodystart="21" bodyend="26" declfile="inc/ciof/ciof.hpp" declline="236" declcolumn="6"/>
+        <references refid="dc/d0e/namespaceciof_1a7675764d8694165a202f0d05f15d923e" compoundref="d0/d04/ciof_8cpp" startline="21" endline="26">input</references>
+        <referencedby refid="dc/d0e/namespaceciof_1a7675764d8694165a202f0d05f15d923e" compoundref="d0/d04/ciof_8cpp" startline="21" endline="26">input</referencedby>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a890c785dd53fa8333c95e8b9594b55e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -600,7 +635,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="216" column="6" declfile="inc/ciof/ciof.hpp" declline="216" declcolumn="6"/>
+        <location file="inc/ciof/ciof.hpp" line="223" column="6" declfile="inc/ciof/ciof.hpp" declline="223" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a6d046aa36f6f80976075523e2ba0974a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -642,7 +677,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="224" column="6" declfile="inc/ciof/ciof.hpp" declline="224" declcolumn="6"/>
+        <location file="inc/ciof/ciof.hpp" line="231" column="6" declfile="inc/ciof/ciof.hpp" declline="231" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a8c277d3a2caa58aed09e9bb8982d8ff3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -657,7 +692,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="17" column="6" bodyfile="src/ciof.cpp" bodystart="17" bodyend="18" declfile="inc/ciof/ciof.hpp" declline="116" declcolumn="6"/>
+        <location file="src/ciof.cpp" line="18" column="6" bodyfile="src/ciof.cpp" bodystart="18" bodyend="19" declfile="inc/ciof/ciof.hpp" declline="123" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a89082a2cf2da077c0d3dae3ab99eede2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -675,7 +710,7 @@
           <declname>_t</declname>
         </param>
         <briefdescription>
-<para>Print to the standard output for <computeroutput>_t</computeroutput> </para>
+<para>Print to the standard output for <computeroutput>_t</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -691,7 +726,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="123" column="6" declfile="inc/ciof/ciof.hpp" declline="123" declcolumn="6"/>
+        <location file="inc/ciof/ciof.hpp" line="130" column="6" declfile="inc/ciof/ciof.hpp" declline="130" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1af9fb176a7cdcb9944ebf0521df004696" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -718,7 +753,7 @@
           <declname>_args</declname>
         </param>
         <briefdescription>
-<para>Print to the standard output for <computeroutput>_t</computeroutput> </para>
+<para>Print to the standard output for <computeroutput>_t</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -742,7 +777,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="131" column="6" declfile="inc/ciof/ciof.hpp" declline="131" declcolumn="6"/>
+        <location file="inc/ciof/ciof.hpp" line="138" column="6" declfile="inc/ciof/ciof.hpp" declline="138" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a83792b27f8f1ffb969e4e69c5808cb91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -760,7 +795,7 @@
           <declname>_t</declname>
         </param>
         <briefdescription>
-<para>Print to the standard error for <computeroutput>_t</computeroutput> </para>
+<para>Print to the standard error for <computeroutput>_t</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -776,7 +811,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="153" column="6" declfile="inc/ciof/ciof.hpp" declline="153" declcolumn="6"/>
+        <location file="inc/ciof/ciof.hpp" line="160" column="6" declfile="inc/ciof/ciof.hpp" declline="160" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a2b535b59d1fdbf6fdd654296b421f7ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -803,7 +838,7 @@
           <declname>_args</declname>
         </param>
         <briefdescription>
-<para>Print to the standard error for <computeroutput>_t</computeroutput> </para>
+<para>Print to the standard error for <computeroutput>_t</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -827,7 +862,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="161" column="6" declfile="inc/ciof/ciof.hpp" declline="161" declcolumn="6"/>
+        <location file="inc/ciof/ciof.hpp" line="168" column="6" declfile="inc/ciof/ciof.hpp" declline="168" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a4e228d060caae991e1093a7bcd30aa57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -845,7 +880,7 @@
           <declname>_t</declname>
         </param>
         <briefdescription>
-<para>Print to the standard log for <computeroutput>_t</computeroutput> </para>
+<para>Print to the standard log for <computeroutput>_t</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -861,7 +896,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="138" column="6" declfile="inc/ciof/ciof.hpp" declline="138" declcolumn="6"/>
+        <location file="inc/ciof/ciof.hpp" line="145" column="6" declfile="inc/ciof/ciof.hpp" declline="145" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1af2ec490460503a2868462739ca9499cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -888,7 +923,7 @@
           <declname>_args</declname>
         </param>
         <briefdescription>
-<para>Print to the standard log for <computeroutput>_t</computeroutput> </para>
+<para>Print to the standard log for <computeroutput>_t</computeroutput>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -912,7 +947,62 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/ciof/ciof.hpp" line="146" column="6" declfile="inc/ciof/ciof.hpp" declline="146" declcolumn="6"/>
+        <location file="inc/ciof/ciof.hpp" line="153" column="6" declfile="inc/ciof/ciof.hpp" declline="153" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a1b7a260ec316466e45ab04c45f9bf206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ciof::rgbBgSet</definition>
+        <argsstring>(unsigned int r, unsigned int g, unsigned int b)</argsstring>
+        <name>rgbBgSet</name>
+        <qualifiedname>ciof::rgbBgSet</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Set the RGB color for background in the terminal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Red color </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Green color </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blue color </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string Color escape sequence for RGB colors </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ciof.cpp" line="86" column="13" bodyfile="src/ciof.cpp" bodystart="86" bodyend="91" declfile="inc/ciof/ciof.hpp" declline="284" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a34c4a83a2f7c4321fb3cd308ad2162bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -967,7 +1057,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="62" column="13" bodyfile="src/ciof.cpp" bodystart="62" bodyend="67" declfile="inc/ciof/ciof.hpp" declline="263" declcolumn="13"/>
+        <location file="src/ciof.cpp" line="79" column="13" bodyfile="src/ciof.cpp" bodystart="79" bodyend="84" declfile="inc/ciof/ciof.hpp" declline="275" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/namespaceciof_1a1fa325860b9abbd9edfecb6bd9d3bd70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ciof::showCursor</definition>
+        <argsstring>(const bool &amp;show)</argsstring>
+        <name>showCursor</name>
+        <qualifiedname>ciof::showCursor</qualifiedname>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>show</declname>
+        </param>
+        <briefdescription>
+<para>Show or hide the cursor from the terminal NOTE: In Windows; enable ANSI by doing <computeroutput><ref refid="dc/d0e/namespaceciof_1a0d6add06e42bf2afe40d5e45db195218" kindref="member">ciof::initANSI()</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ciof.cpp" line="67" column="6" bodyfile="src/ciof.cpp" bodystart="67" bodyend="71" declfile="inc/ciof/ciof.hpp" declline="318" declcolumn="6"/>
+        <references refid="dc/d0e/namespaceciof_1ae2f933bf22e4842d7aca72ead108f28c">echo</references>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a25987420300a8bf1380cebe37f6c082f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -985,7 +1095,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="56" column="13" bodyfile="src/ciof.cpp" bodystart="56" bodyend="57" declfile="inc/ciof/ciof.hpp" declline="247" declcolumn="13"/>
+        <location file="src/ciof.cpp" line="73" column="13" bodyfile="src/ciof.cpp" bodystart="73" bodyend="74" declfile="inc/ciof/ciof.hpp" declline="259" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="dc/d0e/namespaceciof_1a8ff4eb89ed64bb300da3ddf91cad7e4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -1016,17 +1126,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/ciof.cpp" line="44" column="13" bodyfile="src/ciof.cpp" bodystart="44" bodyend="54" declfile="inc/ciof/ciof.hpp" declline="241" declcolumn="13"/>
-        <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246" compoundref="d8/d42/ciof_8hpp" startline="53">Bold</references>
-        <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c" compoundref="d8/d42/ciof_8hpp" startline="54">Italic</references>
-        <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb" compoundref="d8/d42/ciof_8hpp" startline="56">Strikethrough</references>
-        <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439" compoundref="d8/d42/ciof_8hpp" startline="55">Underline</references>
+        <location file="src/ciof.cpp" line="52" column="13" bodyfile="src/ciof.cpp" bodystart="52" bodyend="62" declfile="inc/ciof/ciof.hpp" declline="253" declcolumn="13"/>
+        <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba114c3050111d8b8ddd830b99ccebd246" compoundref="d8/d42/ciof_8hpp" startline="60">Bold</references>
+        <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba1d874710ccdcd46b95397049d2e7500c" compoundref="d8/d42/ciof_8hpp" startline="61">Italic</references>
+        <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba926a51baad949d12035107e5d06e2fdb" compoundref="d8/d42/ciof_8hpp" startline="63">Strikethrough</references>
+        <references refid="dc/d0e/namespaceciof_1a611be4fce5f7300347625ba4b708686ba852721aa5fc738dfedff2945d71da439" compoundref="d8/d42/ciof_8hpp" startline="62">Underline</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="inc/ciof/ciof.hpp" line="11" column="1"/>
+    <location file="inc/ciof/ciof.hpp" line="18" column="1"/>
   </compounddef>
 </doxygen>
