@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_structFSI__DirData">FSI_DirData</link><link linkend="_structFSI__DirData__POSIX">FSI_DirData_POSIX</link><link linkend="_structFSI__EntryData">FSI_EntryData</link><link linkend="_classfsi_1_1Indexer">fsi::Indexer</link><link linkend="_structfsi_1_1IndexerError">fsi::IndexerError</link><link linkend="_structfsi_1_1IndexerFoundInfo">fsi::IndexerFoundInfo</link><link linkend="_structfsi_1_1IndexerInfo">fsi::IndexerInfo</link><link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">fsi::utils::TimeUtils_DateTime</link></section>

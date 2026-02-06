@@ -1,0 +1,764 @@
+\doxysection{fsi::\+Indexer Class Reference}
+\hypertarget{classfsi_1_1Indexer}{}\label{classfsi_1_1Indexer}\index{fsi::Indexer@{fsi::Indexer}}
+
+
+{\ttfamily \+\#include $<$FSI\+\_\+\+Indexer.\+hpp$>$}
+
+
+
+Collaboration diagram for fsi::\+Indexer:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{dd/d77/classfsi_1_1Indexer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classfsi_1_1Indexer_a098bb0a974616eb40e6a08111c192868}{Indexer}} (const std::\+string \&\doxymbox{\hyperlink{classfsi_1_1Indexer_aed611d6ab66da2b9683c9c7cfc6c01c9}{id}})
+\item 
+\doxymbox{\hyperlink{classfsi_1_1Indexer_a6b4728ec2c6e51adae5f5465b919ead0}{\texorpdfstring{$\sim$}{\string~}\+Indexer}} ()
+\item 
+\doxymbox{\hyperlink{structfsi_1_1IndexerError}{Indexer\+Error}} \doxymbox{\hyperlink{classfsi_1_1Indexer_aa99e1614c02288ffc1f5b62ecf2e602d}{add\+Extended\+Info}} (const \doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{Indexer\+Info}} \&info)
+\begin{DoxyCompactList}\small\item\em Add the exact path and the sub-\/paths to have the info from. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structfsi_1_1IndexerError}{Indexer\+Error}} \doxymbox{\hyperlink{classfsi_1_1Indexer_a4a17eef7e041ea4b1cfe67796fe39bf8}{add\+Info}} (const \doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{Indexer\+Info}} \&info)
+\begin{DoxyCompactList}\small\item\em Add the exact path to have the info from. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{Indexer\+Info}} \doxymbox{\hyperlink{classfsi_1_1Indexer_a25d6b1b0f03419e825b9a8c45c9125e8}{find\+Index}} (const std::\+string \&to\+Find)
+\begin{DoxyCompactList}\small\item\em Find the index from the vector database from the indexer. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime}{utils::\+\+Time\+Utils\+\_\+\+Date\+Time}} \doxymbox{\hyperlink{classfsi_1_1Indexer_a536321b24430696e730bc71f35c9ed0a}{get\+File\+DTInfo}} (const std::\+string \&path)
+\begin{DoxyCompactList}\small\item\em Get when the file, dir or symlink was last modified. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{classfsi_1_1Indexer_a9c25a27ee35467915d8ca45100ae4716}{get\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Get this object\textquotesingle{}s ID. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{Indexer\+Info}} $>$ \doxymbox{\hyperlink{classfsi_1_1Indexer_ac277ab3386ab90f04ae1495b4db6bee3}{get\+Indexer\+Info}} () const
+\begin{DoxyCompactList}\small\item\em Return indexer information from this object. \end{DoxyCompactList}\item 
+std::\+vector$<$ std::\+string $>$ \doxymbox{\hyperlink{classfsi_1_1Indexer_a7cc91da352e5eeac9c672be8eb6ff452}{get\+Index\+Paths}} () const
+\begin{DoxyCompactList}\small\item\em Get all the indexed paths from the vector indexes. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structfsi_1_1IndexerError}{Indexer\+Error}} \doxymbox{\hyperlink{classfsi_1_1Indexer_a4fe004107c4cd63ebd99c31f3e199a9a}{remove\+Info}} (const std::\+string \&searcher)
+\begin{DoxyCompactList}\small\item\em Remove information from its ID or full path. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{classfsi_1_1Indexer_a7d989963a7a874e5d03e441b383e0b61}{search\+Exact\+Matching}} (const std::\+string \&find)
+\begin{DoxyCompactList}\small\item\em Search for an exact matching path or ID;. \end{DoxyCompactList}\item 
+std::\+vector$<$ std::\+string $>$ \doxymbox{\hyperlink{classfsi_1_1Indexer_a5c7f5cec792676647ac1f40fc69ecec3}{search\+Matching}} (const std::\+string \&path)
+\begin{DoxyCompactList}\small\item\em Search all matching path or ID that contains {\ttfamily path}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30}{Indexer\+Path\+Type}} \doxymbox{\hyperlink{classfsi_1_1Indexer_a2237929b6d3b94b3255ec187888caa7a}{\+\_\+\+\_\+get\+Path\+Type}} (const std::\+string \&path) const
+\begin{DoxyCompactList}\small\item\em Get if path from function param is a:\+ \end{DoxyCompactList}\item 
+virtual std::\+vector$<$ std::\+string $>$ \doxymbox{\hyperlink{classfsi_1_1Indexer_acebe67327f029b3a2e32a05d16610607}{\+\_\+\+\_\+iterate\+Path}} (const std::\+string \&path)
+\begin{DoxyCompactList}\small\item\em Iterate all the files and directories (symlinks too) from {\ttfamily path}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{classfsi_1_1Indexer_aed611d6ab66da2b9683c9c7cfc6c01c9}{id}}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{Indexer\+Info}} $>$ \doxymbox{\hyperlink{classfsi_1_1Indexer_a29e402b90c8232798f546ef1fdc48cc6}{indexer\+Info}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00059}{59}} of file \doxymbox{\hyperlink{FSI__Indexer_8hpp_source}{FSI\+\_\+\+Indexer.\+hpp}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classfsi_1_1Indexer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classfsi_1_1Indexer_a098bb0a974616eb40e6a08111c192868}\index{fsi::Indexer@{fsi::Indexer}!Indexer@{Indexer}}
+\index{Indexer@{Indexer}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{Indexer()}{Indexer()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_a098bb0a974616eb40e6a08111c192868} 
+fsi::\+\+Indexer::\+\+Indexer (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00054}{54}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{classfsi_1_1Indexer_aed611d6ab66da2b9683c9c7cfc6c01c9}{id}}(\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00056\ \ \ \ \ \{\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00062}{id}}.
+
+\Hypertarget{classfsi_1_1Indexer_a6b4728ec2c6e51adae5f5465b919ead0}\index{fsi::Indexer@{fsi::Indexer}!````~Indexer@{\texorpdfstring{$\sim$}{\string~}Indexer}}
+\index{````~Indexer@{\texorpdfstring{$\sim$}{\string~}Indexer}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Indexer()}{\string~Indexer()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_a6b4728ec2c6e51adae5f5465b919ead0} 
+fsi::\+\+Indexer::\+\texorpdfstring{$\sim$}{\string~}\+Indexer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00059}{59}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \ \ \ \ \{\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{classfsi_1_1Indexer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classfsi_1_1Indexer_a2237929b6d3b94b3255ec187888caa7a}\index{fsi::Indexer@{fsi::Indexer}!\_\_getPathType@{\_\_getPathType}}
+\index{\_\_getPathType@{\_\_getPathType}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{\_\_getPathType()}{\_\_getPathType()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_a2237929b6d3b94b3255ec187888caa7a} 
+\doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30}{Indexer\+Path\+Type}} fsi::\+\+Indexer::\+\+\_\+\+\_\+get\+Path\+Type (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{path}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Get if path from function param is a:\+ 
+
+
+\begin{DoxyItemize}
+\item File
+\item Dir
+\item Sym\+Link
+\item Others 
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to get the type from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30}{Indexer\+Path\+Type} The type of the function param 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00018}{18}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fs::is\_directory(path))\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494}{IndexerPathType::Directory}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (fs::is\_symlink(path))\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0}{IndexerPathType::SymLink}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e}{IndexerPathType::File}};}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00025}{fsi::\+\+Directory}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00026}{fsi::\+\+File}}, and \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00027}{fsi::\+\+Sym\+Link}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00062}{add\+Extended\+Info()}}, and \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00107}{add\+Info()}}.
+
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d3b/classfsi_1_1Indexer_a2237929b6d3b94b3255ec187888caa7a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classfsi_1_1Indexer_acebe67327f029b3a2e32a05d16610607}\index{fsi::Indexer@{fsi::Indexer}!\_\_iteratePath@{\_\_iteratePath}}
+\index{\_\_iteratePath@{\_\_iteratePath}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{\_\_iteratePath()}{\_\_iteratePath()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_acebe67327f029b3a2e32a05d16610607} 
+std::\+vector$<$ std::\+string $>$ fsi::\+\+Indexer::\+\+\_\+\+\_\+iterate\+Path (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Iterate all the files and directories (symlinks too) from {\ttfamily path}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to iterate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tree of full path in a vector of strings 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00026}{26}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::vector<std::string>\ paths;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ CVEC\ tmpPathsVec\ =\ cvec\_init(-\/1,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946}{fsi\_walk}}(\&tmpPathsVec,\ path.c\_str());}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ tmpPathsVec.size;\ ++i)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}*\ p\ =\ *(\textcolor{keywordtype}{char}**)cvec\_get(\&tmpPathsVec,\ i);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (p)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ paths.emplace\_back(p);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{FSIpredefines_8h_a62bdb0773dcdb91d52bb8e4eca4c03d9}{FSI\_FREE}}(p);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ cvec\_destroy(\&tmpPathsVec);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ paths;}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSIpredefines_8h_source_l00045}{FSI\+\_\+\+FREE}}, and \doxymbox{\hyperlink{FSI__dirUtils_8c_source_l00012}{fsi\+\_\+walk()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00062}{add\+Extended\+Info()}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d3b/classfsi_1_1Indexer_acebe67327f029b3a2e32a05d16610607_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d3b/classfsi_1_1Indexer_acebe67327f029b3a2e32a05d16610607_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classfsi_1_1Indexer_aa99e1614c02288ffc1f5b62ecf2e602d}\index{fsi::Indexer@{fsi::Indexer}!addExtendedInfo@{addExtendedInfo}}
+\index{addExtendedInfo@{addExtendedInfo}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{addExtendedInfo()}{addExtendedInfo()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_aa99e1614c02288ffc1f5b62ecf2e602d} 
+\doxymbox{\hyperlink{structfsi_1_1IndexerError}{Indexer\+Error}} fsi::\+\+Indexer::\+add\+Extended\+Info (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{Indexer\+Info}} \&}]{info}{}\end{DoxyParamCaption})}
+
+
+
+Add the exact path and the sub-\/paths to have the info from. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & Get the information from the exact path and deeper \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structfsi_1_1IndexerError}{Indexer\+Error} Return error or success from {\ttfamily \doxylink{structfsi_1_1IndexerError}{Indexer\+Error}} type 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00062}{62}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespacefsi_ac4f8a22716e600e7e92d5a700255d081}{IndexerError}}\ error\ =\ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_a4a17eef7e041ea4b1cfe67796fe39bf8}{addInfo}}(info);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespacefsi_ac37e1b86ed295241cce0bbc399f023da}{IndexerInfo}}\ totalInfo\ =\ info;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{FSI__Indexer_8hpp_a5f1510074e5b49e79ce5ccd97d927c53}{\_\_FSI\_INDEXERERR\_CHECK}}(error))}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ error;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\ iteratedPaths\ =\ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_acebe67327f029b3a2e32a05d16610607}{\_\_iteratePath}}(info.path);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&x\ :\ iteratedPaths)}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ totalInfo.pathType\ =\ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_a2237929b6d3b94b3255ec187888caa7a}{\_\_getPathType}}(totalInfo.path);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ totalInfo.path\ =\ x;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_a29e402b90c8232798f546ef1fdc48cc6}{indexerInfo}}.emplace\_back(totalInfo);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ error;}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00010}{\+\_\+\+\_\+\+FSI\+\_\+\+INDEXERERR\+\_\+\+CHECK}}, \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00018}{\+\_\+\+\_\+get\+Path\+Type()}}, \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00026}{\+\_\+\+\_\+iterate\+Path()}}, \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00107}{add\+Info()}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00063}{indexer\+Info}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00043}{fsi::\+\+Indexer\+Info::\+path}}, and \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00046}{fsi::\+\+Indexer\+Info::\+path\+Type}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{main_8cpp_source_l00020}{main()}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d3b/classfsi_1_1Indexer_aa99e1614c02288ffc1f5b62ecf2e602d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{d0/d3b/classfsi_1_1Indexer_aa99e1614c02288ffc1f5b62ecf2e602d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classfsi_1_1Indexer_a4a17eef7e041ea4b1cfe67796fe39bf8}\index{fsi::Indexer@{fsi::Indexer}!addInfo@{addInfo}}
+\index{addInfo@{addInfo}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{addInfo()}{addInfo()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_a4a17eef7e041ea4b1cfe67796fe39bf8} 
+\doxymbox{\hyperlink{structfsi_1_1IndexerError}{Indexer\+Error}} fsi::\+\+Indexer::\+add\+Info (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{Indexer\+Info}} \&}]{info}{}\end{DoxyParamCaption})}
+
+
+
+Add the exact path to have the info from. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & Get the information from the exact path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structfsi_1_1IndexerError}{Indexer\+Error} Return error or success from {\ttfamily \doxylink{structfsi_1_1IndexerError}{Indexer\+Error}} type 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00107}{107}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00108\ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespacefsi_ac4f8a22716e600e7e92d5a700255d081}{IndexerError}}\ error;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespacefsi_ac37e1b86ed295241cce0bbc399f023da}{IndexerInfo}}\ totalInfo\ =\ info;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Do\ checks\ before\ adding}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (totalInfo.path.empty())}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ error.code\ =\ \doxymbox{\hyperlink{namespacefsi_1_1codes_a141522bb6ab01bdab1888f51984bb08b}{fsi::codes::ERROR\_ADDITION\_FAIL}};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ error.message\ =\ \textcolor{stringliteral}{"{}Path\ is\ empty"{}};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ error.fatal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ error.raise\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ error;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fs::exists(totalInfo.path))}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ error.code\ =\ \doxymbox{\hyperlink{namespacefsi_1_1codes_a88198637504cbb63a06c76d7d0b7a1a7}{fsi::codes::ERROR\_INVALID\_PATH}};}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ error.message\ =\ ciof::format(\textcolor{stringliteral}{"{}Unknown\ path\ \`{}\%1`;\ No\ such\ file\ or\ directory\ exists"{}},\ totalInfo.path);}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ error.fatal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ error;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ path\ type}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ totalInfo.\doxymbox{\hyperlink{structfsi_1_1IndexerInfo_ad3eb8adcbd97fd15894e43a715ad2958}{pathType}}\ =\ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_a2237929b6d3b94b3255ec187888caa7a}{\_\_getPathType}}(totalInfo.path);}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ final\ information}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_a29e402b90c8232798f546ef1fdc48cc6}{indexerInfo}}.emplace\_back(totalInfo);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ error;}
+\DoxyCodeLine{00141\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00018}{\+\_\+\+\_\+get\+Path\+Type()}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00053}{fsi::\+\+Indexer\+Error::\+code}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00017}{fsi::\+codes::\+\+ERROR\+\_\+\+ADDITION\+\_\+\+FAIL}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00019}{fsi::\+codes::\+\+ERROR\+\_\+\+INVALID\+\_\+\+PATH}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00055}{fsi::\+\+Indexer\+Error::\+fatal}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00063}{indexer\+Info}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00051}{fsi::\+\+Indexer\+Error::\+message}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00043}{fsi::\+\+Indexer\+Info::\+path}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00046}{fsi::\+\+Indexer\+Info::\+path\+Type}}, and \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00056}{fsi::\+\+Indexer\+Error::\+raise}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00062}{add\+Extended\+Info()}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d3b/classfsi_1_1Indexer_a4a17eef7e041ea4b1cfe67796fe39bf8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d3b/classfsi_1_1Indexer_a4a17eef7e041ea4b1cfe67796fe39bf8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classfsi_1_1Indexer_a25d6b1b0f03419e825b9a8c45c9125e8}\index{fsi::Indexer@{fsi::Indexer}!findIndex@{findIndex}}
+\index{findIndex@{findIndex}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{findIndex()}{findIndex()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_a25d6b1b0f03419e825b9a8c45c9125e8} 
+\doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{Indexer\+Info}} fsi::\+\+Indexer::\+find\+Index (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{to\+Find}{}\end{DoxyParamCaption})}
+
+
+
+Find the index from the vector database from the indexer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+Find} & Search for the path or ID and remove them from the indexer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structfsi_1_1IndexerInfo}{Indexer\+Info} Find the indexed info from the indexer "{}data base"{} 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00143}{143}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00144\ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&x\ :\ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_a29e402b90c8232798f546ef1fdc48cc6}{indexerInfo}})}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x.path\ ==\ toFind\ ||\ x.id\ ==\ toFind)}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ x;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\ \};}
+\DoxyCodeLine{00152\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00063}{indexer\+Info}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{main_8cpp_source_l00020}{main()}}, and \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00083}{search\+Exact\+Matching()}}.
+
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d3b/classfsi_1_1Indexer_a25d6b1b0f03419e825b9a8c45c9125e8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classfsi_1_1Indexer_a536321b24430696e730bc71f35c9ed0a}\index{fsi::Indexer@{fsi::Indexer}!getFileDTInfo@{getFileDTInfo}}
+\index{getFileDTInfo@{getFileDTInfo}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{getFileDTInfo()}{getFileDTInfo()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_a536321b24430696e730bc71f35c9ed0a} 
+\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime}{utils::\+\+Time\+Utils\+\_\+\+Date\+Time}} fsi::\+\+Indexer::\+get\+File\+DTInfo (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Get when the file, dir or symlink was last modified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to get date time information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Date time info 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00184}{184}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00185\ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ fs::file\_time\_type\ \&lastWriteTime\ =\ fs::last\_write\_time(path);}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespacefsi_1_1utils_ae0fd58fdf5e153ce89499a2bad2a8974}{utils::fsClockDataToDT}}(lastWriteTime);}
+\DoxyCodeLine{00189\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__timeUtils_8cpp_source_l00008}{fsi::\+utils::\+fs\+Clock\+Data\+To\+DT()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{main_8cpp_source_l00020}{main()}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d3b/classfsi_1_1Indexer_a536321b24430696e730bc71f35c9ed0a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{d0/d3b/classfsi_1_1Indexer_a536321b24430696e730bc71f35c9ed0a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classfsi_1_1Indexer_a9c25a27ee35467915d8ca45100ae4716}\index{fsi::Indexer@{fsi::Indexer}!getID@{getID}}
+\index{getID@{getID}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_a9c25a27ee35467915d8ca45100ae4716} 
+std::\+string fsi::\+\+Indexer::\+get\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get this object\textquotesingle{}s ID. 
+
+\begin{DoxyReturn}{Returns}
+Object ID 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00204}{204}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00205\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_aed611d6ab66da2b9683c9c7cfc6c01c9}{id}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00062}{id}}.
+
+\Hypertarget{classfsi_1_1Indexer_ac277ab3386ab90f04ae1495b4db6bee3}\index{fsi::Indexer@{fsi::Indexer}!getIndexerInfo@{getIndexerInfo}}
+\index{getIndexerInfo@{getIndexerInfo}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{getIndexerInfo()}{getIndexerInfo()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_ac277ab3386ab90f04ae1495b4db6bee3} 
+std::\+vector$<$ \doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{Indexer\+Info}} $>$ fsi::\+\+Indexer::\+get\+Indexer\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Return indexer information from this object. 
+
+\begin{DoxyReturn}{Returns}
+Get all the indexed information that was added 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00191}{191}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00192\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_a29e402b90c8232798f546ef1fdc48cc6}{indexerInfo}};\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00063}{indexer\+Info}}.
+
+\Hypertarget{classfsi_1_1Indexer_a7cc91da352e5eeac9c672be8eb6ff452}\index{fsi::Indexer@{fsi::Indexer}!getIndexPaths@{getIndexPaths}}
+\index{getIndexPaths@{getIndexPaths}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{getIndexPaths()}{getIndexPaths()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_a7cc91da352e5eeac9c672be8eb6ff452} 
+std::\+vector$<$ std::\+string $>$ fsi::\+\+Indexer::\+get\+Index\+Paths (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get all the indexed paths from the vector indexes. 
+
+\begin{DoxyReturn}{Returns}
+All the indexed paths in a vector 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00194}{194}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00195\ \ \ \ \ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ std::vector<std::string>\ additions;}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&x\ :\ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_a29e402b90c8232798f546ef1fdc48cc6}{indexerInfo}})}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \{\ additions.emplace\_back(x.path);\ \}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ additions;}
+\DoxyCodeLine{00202\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00063}{indexer\+Info}}.
+
+\Hypertarget{classfsi_1_1Indexer_a4fe004107c4cd63ebd99c31f3e199a9a}\index{fsi::Indexer@{fsi::Indexer}!removeInfo@{removeInfo}}
+\index{removeInfo@{removeInfo}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{removeInfo()}{removeInfo()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_a4fe004107c4cd63ebd99c31f3e199a9a} 
+\doxymbox{\hyperlink{structfsi_1_1IndexerError}{Indexer\+Error}} fsi::\+\+Indexer::\+remove\+Info (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{searcher}{}\end{DoxyParamCaption})}
+
+
+
+Remove information from its ID or full path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em searcher} & Search for the path or ID and remove them from the indexer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structfsi_1_1IndexerError}{Indexer\+Error} Return error or success from {\ttfamily \doxylink{structfsi_1_1IndexerError}{Indexer\+Error}} type 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00154}{154}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00155\ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespacefsi_ac4f8a22716e600e7e92d5a700255d081}{IndexerError}}\ error;}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Do\ checks}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (searcher.empty())}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ error.code\ =\ \doxymbox{\hyperlink{namespacefsi_1_1codes_ac2ba68f515a46e02eae9671750056860}{fsi::codes::ERROR\_EMPTY\_VALUE}};}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ error.message\ =\ \textcolor{stringliteral}{"{}Empty\ value\ to\ remove\ from\ the\ Indexer\ Information\ list"{}};}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ error.fatal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ error.raise\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ error;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Erase\ the\ found\ object\ (IndexerInfo)\ value\ by\ ID\ or\ Path}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_a29e402b90c8232798f546ef1fdc48cc6}{indexerInfo}}.erase(}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::remove\_if(}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_a29e402b90c8232798f546ef1fdc48cc6}{indexerInfo}}.begin(),}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>indexerInfo.end(),}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\&](\textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespacefsi_ac37e1b86ed295241cce0bbc399f023da}{IndexerInfo}}\ \&info)\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ (info.id\ ==\ searcher\ ||\ info.path\ ==\ searcher);}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}),}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>indexerInfo.end()}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ error;}
+\DoxyCodeLine{00182\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00053}{fsi::\+\+Indexer\+Error::\+code}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00020}{fsi::\+codes::\+\+ERROR\+\_\+\+EMPTY\+\_\+\+VALUE}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00055}{fsi::\+\+Indexer\+Error::\+fatal}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00063}{indexer\+Info}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00051}{fsi::\+\+Indexer\+Error::\+message}}, and \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00056}{fsi::\+\+Indexer\+Error::\+raise}}.
+
+\Hypertarget{classfsi_1_1Indexer_a7d989963a7a874e5d03e441b383e0b61}\index{fsi::Indexer@{fsi::Indexer}!searchExactMatching@{searchExactMatching}}
+\index{searchExactMatching@{searchExactMatching}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{searchExactMatching()}{searchExactMatching()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_a7d989963a7a874e5d03e441b383e0b61} 
+std::\+string fsi::\+\+Indexer::\+search\+Exact\+Matching (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{find}{}\end{DoxyParamCaption})}
+
+
+
+Search for an exact matching path or ID;. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em find} & Get the ID or path to find \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The first match found 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00083}{83}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (find.empty())}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_a25d6b1b0f03419e825b9a8c45c9125e8}{findIndex}}(find).\doxymbox{\hyperlink{structfsi_1_1IndexerInfo_a92c8f13432f387e693961996fac5963b}{path}};}
+\DoxyCodeLine{00089\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00143}{find\+Index()}}, and \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00043}{fsi::\+\+Indexer\+Info::\+path}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d3b/classfsi_1_1Indexer_a7d989963a7a874e5d03e441b383e0b61_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classfsi_1_1Indexer_a5c7f5cec792676647ac1f40fc69ecec3}\index{fsi::Indexer@{fsi::Indexer}!searchMatching@{searchMatching}}
+\index{searchMatching@{searchMatching}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{searchMatching()}{searchMatching()}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_a5c7f5cec792676647ac1f40fc69ecec3} 
+std::\+vector$<$ std::\+string $>$ fsi::\+\+Indexer::\+search\+Matching (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Search all matching path or ID that contains {\ttfamily path}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path or ID to search \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of all the found {\ttfamily path}s 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00091}{91}} of file \doxymbox{\hyperlink{FSI__Indexer_8cpp_source}{FSI\+\_\+\+Indexer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092\ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (find.empty())}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ std::vector<std::string>\ vec;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&x\ :\ this-\/>\doxymbox{\hyperlink{classfsi_1_1Indexer_a29e402b90c8232798f546ef1fdc48cc6}{indexerInfo}})}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x.path.find(find)\ !=\ std::string::npos)}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vec.emplace\_back(x.path);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ vec;}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00063}{indexer\+Info}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{main_8cpp_source_l00020}{main()}}.
+
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{d0/d3b/classfsi_1_1Indexer_a5c7f5cec792676647ac1f40fc69ecec3_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classfsi_1_1Indexer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classfsi_1_1Indexer_aed611d6ab66da2b9683c9c7cfc6c01c9}\index{fsi::Indexer@{fsi::Indexer}!id@{id}}
+\index{id@{id}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_aed611d6ab66da2b9683c9c7cfc6c01c9} 
+std::\+string fsi::\+\+Indexer::\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00062}{62}} of file \doxymbox{\hyperlink{FSI__Indexer_8hpp_source}{FSI\+\_\+\+Indexer.\+hpp}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00054}{Indexer()}}, and \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00204}{get\+ID()}}.
+
+\Hypertarget{classfsi_1_1Indexer_a29e402b90c8232798f546ef1fdc48cc6}\index{fsi::Indexer@{fsi::Indexer}!indexerInfo@{indexerInfo}}
+\index{indexerInfo@{indexerInfo}!fsi::Indexer@{fsi::Indexer}}
+\doxysubsubsection{\texorpdfstring{indexerInfo}{indexerInfo}}
+{\footnotesize\ttfamily \label{classfsi_1_1Indexer_a29e402b90c8232798f546ef1fdc48cc6} 
+std::\+vector$<$\doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{Indexer\+Info}}$>$ fsi::\+\+Indexer::\+indexer\+Info\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00063}{63}} of file \doxymbox{\hyperlink{FSI__Indexer_8hpp_source}{FSI\+\_\+\+Indexer.\+hpp}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00062}{add\+Extended\+Info()}}, \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00107}{add\+Info()}}, \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00143}{find\+Index()}}, \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00191}{get\+Indexer\+Info()}}, \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00194}{get\+Index\+Paths()}}, \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00154}{remove\+Info()}}, and \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00091}{search\+Matching()}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+inc/\+fsi/\+lib/\+\doxymbox{\hyperlink{FSI__Indexer_8hpp}{FSI\+\_\+\+Indexer.\+hpp}}\item 
+src/\+lib/\+\doxymbox{\hyperlink{FSI__Indexer_8cpp}{FSI\+\_\+\+Indexer.\+cpp}}\end{DoxyCompactItemize}

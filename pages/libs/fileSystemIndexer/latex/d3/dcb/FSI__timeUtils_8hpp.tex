@@ -1,0 +1,68 @@
+\doxysection{inc/\+fsi/\+core/\+\+FSI\+\_\+time\+Utils.hpp File Reference}
+\hypertarget{FSI__timeUtils_8hpp}{}\label{FSI__timeUtils_8hpp}\index{inc/fsi/core/FSI\_timeUtils.hpp@{inc/fsi/core/FSI\_timeUtils.hpp}}
+{\ttfamily \+\#include $<$filesystem$>$}\newline
+Include dependency graph for FSI\+\_\+time\+Utils.\+hpp:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{d7/d2c/FSI__timeUtils_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d61/FSI__timeUtils_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime}{fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespacefsi}{fsi}}
+\item 
+namespace \doxymbox{\hyperlink{namespacefsi_1_1utils}{fsi::\+utils}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{FSI__timeUtils_8hpp_ab5d97f02701e4d2a93fdea536534621e}{\+\_\+\+\_\+\+FSI\+\_\+\+LOCALTIME}}(\+\_\+tt,  \+\_\+tm)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time \doxymbox{\hyperlink{namespacefsi_1_1utils_a49d908b3b85451a5bf2faa44272c72c0}{fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime}{Time\+Utils\+\_\+\+Date\+Time}} \doxymbox{\hyperlink{namespacefsi_1_1utils_ae0fd58fdf5e153ce89499a2bad2a8974}{fsi::\+utils::\+fs\+Clock\+Data\+To\+DT}} (const fs::\+file\+\_\+time\+\_\+type \&time)
+\begin{DoxyCompactList}\small\item\em Set std::\+filesystem clock data to an actual usable Date and Time format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{FSI__timeUtils_8hpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{FSI__timeUtils_8hpp_ab5d97f02701e4d2a93fdea536534621e}\index{FSI\_timeUtils.hpp@{FSI\_timeUtils.hpp}!\_\_FSI\_LOCALTIME@{\_\_FSI\_LOCALTIME}}
+\index{\_\_FSI\_LOCALTIME@{\_\_FSI\_LOCALTIME}!FSI\_timeUtils.hpp@{FSI\_timeUtils.hpp}}
+\doxysubsubsection{\texorpdfstring{\_\_FSI\_LOCALTIME}{\_\_FSI\_LOCALTIME}}
+{\footnotesize\ttfamily \label{FSI__timeUtils_8hpp_ab5d97f02701e4d2a93fdea536534621e} 
+\+\#define \+\_\+\+\_\+\+FSI\+\_\+\+LOCALTIME(\begin{DoxyParamCaption}\item[{}]{\+\_\+tt}{, }\item[{}]{\+\_\+tm}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{localtime\_r(\_tt,\ \_tm)}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__timeUtils_8hpp_source_l00011}{11}} of file \doxymbox{\hyperlink{FSI__timeUtils_8hpp_source}{FSI\+\_\+time\+Utils.\+hpp}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{FSI__timeUtils_8cpp_source_l00008}{fsi::\+utils::\+fs\+Clock\+Data\+To\+DT()}}.
+

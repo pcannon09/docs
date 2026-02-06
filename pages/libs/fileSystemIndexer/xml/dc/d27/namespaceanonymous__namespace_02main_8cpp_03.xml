@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dc/d27/namespaceanonymous__namespace_02main_8cpp_03" kind="namespace" language="C++">
+    <compoundname>anonymous_namespace{main.cpp}</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d27/namespaceanonymous__namespace_02main_8cpp_03_1ab4857c620ed555971c741512e920a0ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string anonymous_namespace{main.cpp}::__timeToStr</definition>
+        <argsstring>(const fsi::utils::TimeUtils_DateTime &amp;time)</argsstring>
+        <name>__timeToStr</name>
+        <qualifiedname>anonymous_namespace{main.cpp}::__timeToStr</qualifiedname>
+        <param>
+          <type>const <ref refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime" kindref="compound">fsi::utils::TimeUtils_DateTime</ref> &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main.cpp" line="11" column="13" bodyfile="src/main.cpp" bodystart="11" bodyend="17"/>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a340cd86b315b94e24ba58f047a05d977" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="25">fsi::utils::TimeUtils_DateTime::day</references>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a8135eb12c7d645962892d79939767f2b" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="18">fsi::utils::TimeUtils_DateTime::hour</references>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a224f4265be90b19828d9e999ceba56e4" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="19">fsi::utils::TimeUtils_DateTime::min</references>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a4c79e8bac795772430a0c7624e01f3c8" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="24">fsi::utils::TimeUtils_DateTime::month</references>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a773404a9ff6e5c0a13eded6429ff26dd" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="21">fsi::utils::TimeUtils_DateTime::ms</references>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a53f747e0ef76ed43ec51c4bdc844fd43" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="20">fsi::utils::TimeUtils_DateTime::sec</references>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a9169ed2e239eac50365d363b9365b704" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="23">fsi::utils::TimeUtils_DateTime::year</references>
+        <referencedby refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="df/d0a/main_8cpp" startline="20" endline="43">main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main.cpp" line="9" column="1"/>
+  </compounddef>
+</doxygen>

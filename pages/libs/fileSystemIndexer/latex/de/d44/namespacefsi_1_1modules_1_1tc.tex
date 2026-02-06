@@ -1,0 +1,94 @@
+\doxysection{fsi::\+modules::\+tc Namespace Reference}
+\hypertarget{namespacefsi_1_1modules_1_1tc}{}\label{namespacefsi_1_1modules_1_1tc}\index{fsi::modules::tc@{fsi::modules::tc}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{namespacefsi_1_1modules_1_1tc_a37c21a89ea28cc2a16ad463cb908e604}{convert\+From}} (const std::\+string \&to, const double \&from)
+\begin{DoxyCompactList}\small\item\em Wrapper for {\ttfamily \doxylink{FSI__temperatureConverter_8h_a39b05ae287af83bc12cb5c8442cbdee1}{FSI\+\_\+temperature\+Convert\+Cel\+From()}} function. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{namespacefsi_1_1modules_1_1tc_abbdea450d8dae5c95298bdd261a12da1}{convert\+To}} (const std::\+string \&from, const double \&to)
+\begin{DoxyCompactList}\small\item\em Wrapper for {\ttfamily \doxylink{FSI__temperatureConverter_8h_aafde95eb428450f7515b36decef7b59d}{FSI\+\_\+temperature\+Convert\+Cel\+To()}} function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacefsi_1_1modules_1_1tc_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacefsi_1_1modules_1_1tc_a37c21a89ea28cc2a16ad463cb908e604}\index{fsi::modules::tc@{fsi::modules::tc}!convertFrom@{convertFrom}}
+\index{convertFrom@{convertFrom}!fsi::modules::tc@{fsi::modules::tc}}
+\doxysubsubsection{\texorpdfstring{convertFrom()}{convertFrom()}}
+{\footnotesize\ttfamily \label{namespacefsi_1_1modules_1_1tc_a37c21a89ea28cc2a16ad463cb908e604} 
+double fsi::\+modules::\+tc::\+convert\+From (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{to}{, }\item[{const double \&}]{from}{}\end{DoxyParamCaption})}
+
+
+
+Wrapper for {\ttfamily \doxylink{FSI__temperatureConverter_8h_a39b05ae287af83bc12cb5c8442cbdee1}{FSI\+\_\+temperature\+Convert\+Cel\+From()}} function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The value of the temperature \\
+\hline
+{\em to} & From Celcius to the temperature \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The exact temperature 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__temperature_8cpp_source_l00009}{9}} of file \doxymbox{\hyperlink{FSI__temperature_8cpp_source}{FSI\+\_\+temperature.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__temperatureConverter_8h_a39b05ae287af83bc12cb5c8442cbdee1}{FSI\_temperatureConvertCelFrom}}(to.c\_str(),\ from);\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__temperatureConverter_8c_source_l00005}{FSI\+\_\+temperature\+Convert\+Cel\+From()}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/namespacefsi_1_1modules_1_1tc_a37c21a89ea28cc2a16ad463cb908e604_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacefsi_1_1modules_1_1tc_abbdea450d8dae5c95298bdd261a12da1}\index{fsi::modules::tc@{fsi::modules::tc}!convertTo@{convertTo}}
+\index{convertTo@{convertTo}!fsi::modules::tc@{fsi::modules::tc}}
+\doxysubsubsection{\texorpdfstring{convertTo()}{convertTo()}}
+{\footnotesize\ttfamily \label{namespacefsi_1_1modules_1_1tc_abbdea450d8dae5c95298bdd261a12da1} 
+double fsi::\+modules::\+tc::\+convert\+To (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{from}{, }\item[{const double \&}]{to}{}\end{DoxyParamCaption})}
+
+
+
+Wrapper for {\ttfamily \doxylink{FSI__temperatureConverter_8h_aafde95eb428450f7515b36decef7b59d}{FSI\+\_\+temperature\+Convert\+Cel\+To()}} function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Convert to from Celcius \\
+\hline
+{\em to} & The value of the temperature \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The exact temperature 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__temperature_8cpp_source_l00006}{6}} of file \doxymbox{\hyperlink{FSI__temperature_8cpp_source}{FSI\+\_\+temperature.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__temperatureConverter_8h_aafde95eb428450f7515b36decef7b59d}{FSI\_temperatureConvertCelTo}}(from.c\_str(),\ to);\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__temperatureConverter_8c_source_l00031}{FSI\+\_\+temperature\+Convert\+Cel\+To()}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/namespacefsi_1_1modules_1_1tc_abbdea450d8dae5c95298bdd261a12da1_cgraph}
+\end{center}
+\end{figure}

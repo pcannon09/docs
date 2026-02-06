@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8cpp" xml:lang="en-US">
+<title>src/main.cpp File Reference</title>
+<indexterm><primary>src/main.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fsi/lib/FSI_Indexer.hpp&quot;<?linebreak?>#include &quot;../inc/fsi/core/interfaces/FSI_dirUtils_posix.h&quot;<?linebreak?>#include &quot;../inc/fsi/modules/temperature/FSI_temperatureConverter.h&quot;<?linebreak?>#include &quot;ciof/ciof.hpp&quot;<?linebreak?></programlisting>Include dependency graph for main.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/dce/main_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceanonymous__namespace_02main_8cpp_03">anonymous_namespace{main.cpp}</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_namespaceanonymous__namespace_02main_8cpp_03_1ab4857c620ed555971c741512e920a0ac">anonymous_namespace{main.cpp}::__timeToStr</link> (const <link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">fsi::utils::TimeUtils_DateTime</link> &amp;time)</para>
+</listitem>
+            <listitem><para>int <link linkend="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para><para>
+Definition at line <link linkend="_main_8cpp_source_1l00020">20</link> of file <link linkend="_main_8cpp_source">main.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00021 {
+00022 &#32;&#32;&#32;&#32;ciof::print(<link linkend="_FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d">FSI_temperatureConvertCelTo</link>(<emphasis role="stringliteral">&quot;f&quot;</emphasis>,&#32;33));
+00023 &#32;&#32;&#32;&#32;ciof::print(<link linkend="_FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1">FSI_temperatureConvertCelFrom</link>(<emphasis role="stringliteral">&quot;f&quot;</emphasis>,&#32;33));
+00024 
+00025 &#32;&#32;&#32;&#32;<link linkend="_classfsi_1_1Indexer">fsi::Indexer</link>&#32;indexer(<emphasis role="stringliteral">&quot;main-indexer&quot;</emphasis>);
+00026 
+00027 &#32;&#32;&#32;&#32;{
+00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerInfo">fsi::IndexerInfo</link>&#32;info;
+00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>&#32;=&#32;<emphasis role="stringliteral">&quot;.&quot;</emphasis>;
+00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structfsi_1_1IndexerInfo_1a9ed84fe71c39594a0ab6c487a165f06c">id</link>&#32;=&#32;<emphasis role="stringliteral">&quot;current-dir&quot;</emphasis>;
+00031 
+00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;indexer.addExtendedInfo(info);
+00033 &#32;&#32;&#32;&#32;}
+00034 
+00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;indexer.searchMatching(<emphasis role="stringliteral">&quot;cpp&quot;</emphasis>))
+00036 &#32;&#32;&#32;&#32;{
+00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ciof::print(<emphasis role="stringliteral">&quot;FILE&#32;NAME:&#32;%1&#32;--&#32;%2&quot;</emphasis>,&#32;x,&#32;<link linkend="_namespaceanonymous__namespace_02main_8cpp_03_1ab4857c620ed555971c741512e920a0ac">__timeToStr</link>(indexer.getFileDTInfo(x)));
+00038 &#32;&#32;&#32;&#32;}
+00039 
+00040 &#32;&#32;&#32;&#32;ciof::print(<emphasis role="stringliteral">&quot;ID&#32;`current-dir`&#32;has&#32;path:&#32;%1&quot;</emphasis>,&#32;indexer.findIndex(<emphasis role="stringliteral">&quot;current-dir&quot;</emphasis>).path);
+00041 
+00042 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+00043 }
+</programlisting><para>
+References <link linkend="_main_8cpp_source_1l00011">anonymous_namespace{main.cpp}::__timeToStr()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00062">fsi::Indexer::addExtendedInfo()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00143">fsi::Indexer::findIndex()</link>, <link linkend="_FSI__temperatureConverter_8c_source_1l00005">FSI_temperatureConvertCelFrom()</link>, <link linkend="_FSI__temperatureConverter_8c_source_1l00031">FSI_temperatureConvertCelTo()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00184">fsi::Indexer::getFileDTInfo()</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00042">fsi::IndexerInfo::id</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00043">fsi::IndexerInfo::path</link>, and <link linkend="_FSI__Indexer_8cpp_source_1l00091">fsi::Indexer::searchMatching()</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../df/d0a/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

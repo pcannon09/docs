@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_ddb4d7e95cc2d6c8e1ade10a20d7247d" kind="dir">
+    <compoundname>src/modules</compoundname>
+    <innerdir refid="dir_6527052777b6e0447b512f4c4c250761">src/modules/temperature</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/modules/"/>
+  </compounddef>
+</doxygen>

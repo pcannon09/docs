@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dirs" xml:lang="en-US">
+<title>Directories</title>
+
+<para>core </para>
+
+<para>interfaces </para>
+
+<para>FSI_dirUtils_posix.h </para>
+
+<para>FSI_dirUtils_windows.h </para>
+
+<para>FSI_dirUtils.h </para>
+
+<para>FSI_timeUtils.hpp </para>
+
+<para>core </para>
+
+<para>interfaces </para>
+
+<para>FSI_dirUtils_posix.c </para>
+
+<para>FSI_dirUtils_windows.c </para>
+
+<para>FSI_dirUtils.c </para>
+
+<para>FSI_timeUtils.cpp </para>
+
+<para>fsi </para>
+
+<para>core </para>
+
+<para>interfaces </para>
+
+<para>FSI_dirUtils_posix.h </para>
+
+<para>FSI_dirUtils_windows.h </para>
+
+<para>FSI_dirUtils.h </para>
+
+<para>FSI_timeUtils.hpp </para>
+
+<para>lib </para>
+
+<para>FSI_Indexer.hpp </para>
+
+<para>modules </para>
+
+<para>temperature </para>
+
+<para>FSI_temperature.hpp </para>
+
+<para>FSI_temperatureConverter.h </para>
+
+<para>FSIpredefines.h </para>
+
+<para>inc </para>
+
+<para>fsi </para>
+
+<para>core </para>
+
+<para>interfaces </para>
+
+<para>FSI_dirUtils_posix.h </para>
+
+<para>FSI_dirUtils_windows.h </para>
+
+<para>FSI_dirUtils.h </para>
+
+<para>FSI_timeUtils.hpp </para>
+
+<para>lib </para>
+
+<para>FSI_Indexer.hpp </para>
+
+<para>modules </para>
+
+<para>temperature </para>
+
+<para>FSI_temperature.hpp </para>
+
+<para>FSI_temperatureConverter.h </para>
+
+<para>FSIpredefines.h </para>
+
+<para>interfaces </para>
+
+<para>FSI_dirUtils_posix.h </para>
+
+<para>FSI_dirUtils_windows.h </para>
+
+<para>interfaces </para>
+
+<para>FSI_dirUtils_posix.c </para>
+
+<para>FSI_dirUtils_windows.c </para>
+
+<para>lib </para>
+
+<para>FSI_Indexer.hpp </para>
+
+<para>lib </para>
+
+<para>FSI_Indexer.cpp </para>
+
+<para>modules </para>
+
+<para>temperature </para>
+
+<para>FSI_temperature.hpp </para>
+
+<para>FSI_temperatureConverter.h </para>
+
+<para>modules </para>
+
+<para>temperature </para>
+
+<para>FSI_temperature.cpp </para>
+
+<para>FSI_temperatureConverter.c </para>
+
+<para>src </para>
+
+<para>core </para>
+
+<para>interfaces </para>
+
+<para>FSI_dirUtils_posix.c </para>
+
+<para>FSI_dirUtils_windows.c </para>
+
+<para>FSI_dirUtils.c </para>
+
+<para>FSI_timeUtils.cpp </para>
+
+<para>lib </para>
+
+<para>FSI_Indexer.cpp </para>
+
+<para>modules </para>
+
+<para>temperature </para>
+
+<para>FSI_temperature.cpp </para>
+
+<para>FSI_temperatureConverter.c </para>
+
+<para>main.cpp </para>
+
+<para>temperature </para>
+
+<para>FSI_temperature.hpp </para>
+
+<para>FSI_temperatureConverter.h </para>
+
+<para>temperature </para>
+
+<para>FSI_temperature.cpp </para>
+
+<para>FSI_temperatureConverter.c </para>
+</section>

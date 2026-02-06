@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>FileSystemIndexer</title>
+    </info>
+    <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<chapter>
+    <title>Directory Documentation</title>
+    <xi:include href="dir_be008c0ff192e9e32b338edefd7da0a9.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_aebb8dcc11953d78e620bbef0b9e2183.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_851c9bd9db9dafce19def83f93a91fd5.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_bfccd401955b95cf8c75461437045ac0.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_28457243c22b19873fbfdd7793362da5.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_5192f319a10d5e2b71e0c908bbe9b6ae.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_eaec1fe2057bff26f2484a73ab02fa8b.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_c85d3e3c5052e9ad9ce18c6863244a25.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_177d67048c27b1cc13d9211eccefee7f.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_ddb4d7e95cc2d6c8e1ade10a20d7247d.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_68267d1309a1af8e8297ef4c3efbcdba.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_8a7b6c0d9fba7d90aa8201b601216c3f.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_6527052777b6e0447b512f4c4c250761.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Namespace Documentation</title>
+    <xi:include href="dc/d27/namespaceanonymous__namespace_02main_8cpp_03.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="da/d46/namespacefsi.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d9/dd2/namespacefsi_1_1codes.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d2/de8/namespacefsi_1_1modules.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="de/d44/namespacefsi_1_1modules_1_1tc.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="da/df3/namespacefsi_1_1utils.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="d5/d63/structFSI__DirData.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d5/d16/structFSI__DirData__POSIX.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d1/d62/structFSI__EntryData.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d0/d3b/classfsi_1_1Indexer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d1/dea/structfsi_1_1IndexerError.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="db/da6/structfsi_1_1IndexerFoundInfo.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d8/dd6/structfsi_1_1IndexerInfo.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="dc/d84/FSI__dirUtils_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dc/d84/FSI__dirUtils_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d3/dcb/FSI__timeUtils_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d3/dcb/FSI__timeUtils_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d5/d64/FSI__dirUtils__posix_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d5/d64/FSI__dirUtils__posix_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d5/def/FSI__dirUtils__windows_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d5/def/FSI__dirUtils__windows_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d8/db8/FSIpredefines_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d8/db8/FSIpredefines_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d8/d6f/FSI__Indexer_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d8/d6f/FSI__Indexer_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="db/dc0/FSI__temperature_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="db/dc0/FSI__temperature_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="db/d19/FSI__temperatureConverter_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="db/d19/FSI__temperatureConverter_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="da/ddd/README_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d6/d8a/FSI__dirUtils_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d6/d8a/FSI__dirUtils_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d9/df4/FSI__timeUtils_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d9/df4/FSI__timeUtils_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="da/d97/FSI__dirUtils__posix_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="da/d97/FSI__dirUtils__posix_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d0/dc6/FSI__dirUtils__windows_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d0/dc6/FSI__dirUtils__windows_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d3/d0f/FSI__Indexer_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d3/d0f/FSI__Indexer_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="df/d0a/main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="df/d0a/main_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="db/d8b/FSI__temperature_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="db/d8b/FSI__temperature_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d7/d2d/FSI__temperatureConverter_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d7/d2d/FSI__temperatureConverter_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

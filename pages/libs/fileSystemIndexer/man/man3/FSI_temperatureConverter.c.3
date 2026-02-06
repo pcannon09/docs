@@ -1,0 +1,128 @@
+.TH "src/modules/temperature/FSI_temperatureConverter.c" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/modules/temperature/FSI_temperatureConverter.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <string\&.h>\fP
+.br
+\fR#include '\&.\&./\&.\&./\&.\&./inc/fsi/modules/temperature/FSI_temperatureConverter\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBFSI_temperatureConvertCelFrom\fP (const char *to, const double from)"
+.br
+.RI "Convert from \fRfrom\fP to Celcius as a double\&. "
+.ti -1c
+.RI "double \fBFSI_temperatureConvertCelTo\fP (const char *from, const double to)"
+.br
+.RI "Convert Celcius to \fRfrom\fP as a double\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "double FSI_temperatureConvertCelFrom (const char * to, const double from)"
+
+.PP
+Convert from \fRfrom\fP to Celcius as a double\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfrom\fP The value of the temperature 
+.br
+\fIto\fP From celcius to the temperature 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The exact converted temperature 
+.RE
+.PP
+
+.PP
+Definition at line \fB5\fP of file \fBFSI_temperatureConverter\&.c\fP\&.
+.nf
+9 {
+10     if (strlen(to) >= 0 || strlen(to) >= 1)
+11     {
+12         if (to[0] == 'c')
+13             return __FSI_TC_CEL_FROM_C(from);
+14 
+15         else if (to[0] == 'f')
+16             return __FSI_TC_CEL_FROM_F(from);
+17 
+18         else if (to[0] == 'k')
+19             return __FSI_TC_CEL_FROM_K(from);
+20 
+21         else if (to[0] == 'r' && to[1] == 'e')
+22             return __FSI_TC_CEL_FROM_RE(from);
+23 
+24         else if (to[0] == 'r' && to[1] == 'a')
+25             return __FSI_TC_CEL_FROM_RA(from);
+26     }
+27 
+28     return 0;
+29 }
+.PP
+.fi
+
+.PP
+References \fB__FSI_TC_CEL_FROM_C\fP, \fB__FSI_TC_CEL_FROM_F\fP, \fB__FSI_TC_CEL_FROM_K\fP, \fB__FSI_TC_CEL_FROM_RA\fP, and \fB__FSI_TC_CEL_FROM_RE\fP\&.
+.PP
+Referenced by \fBfsi::modules::tc::convertFrom()\fP, and \fBmain()\fP\&.
+.SS "double FSI_temperatureConvertCelTo (const char * from, const double to)"
+
+.PP
+Convert Celcius to \fRfrom\fP as a double\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfrom\fP Convert to from celcius 
+.br
+\fIto\fP The value of the temperature 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The exact converted temperature 
+.RE
+.PP
+
+.PP
+Definition at line \fB31\fP of file \fBFSI_temperatureConverter\&.c\fP\&.
+.nf
+35 {
+36     if (strlen(from) >= 0 || strlen(from) >= 1)
+37     {
+38         if (from[0] == 'c')
+39             return __FSI_TC_CEL_TO_C(to);
+40 
+41         else if (from[0] == 'f')
+42             return __FSI_TC_CEL_TO_F(to);
+43 
+44         else if (from[0] == 'k')
+45             return __FSI_TC_CEL_TO_K(to);
+46 
+47         else if (from[0] == 'r' && from[1] == 'e')
+48             return __FSI_TC_CEL_TO_RE(to);
+49 
+50         else if (from[0] == 'r' && from[1] == 'a')
+51             return __FSI_TC_CEL_TO_RA(to);
+52     }
+53 
+54     return 0;
+55 }
+.PP
+.fi
+
+.PP
+References \fB__FSI_TC_CEL_TO_C\fP, \fB__FSI_TC_CEL_TO_F\fP, \fB__FSI_TC_CEL_TO_K\fP, \fB__FSI_TC_CEL_TO_RA\fP, and \fB__FSI_TC_CEL_TO_RE\fP\&.
+.PP
+Referenced by \fBfsi::modules::tc::convertTo()\fP, and \fBmain()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

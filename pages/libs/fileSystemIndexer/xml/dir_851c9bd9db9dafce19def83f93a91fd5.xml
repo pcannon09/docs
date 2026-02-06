@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_851c9bd9db9dafce19def83f93a91fd5" kind="dir">
+    <compoundname>inc/fsi</compoundname>
+    <innerdir refid="dir_be008c0ff192e9e32b338edefd7da0a9">inc/fsi/core</innerdir>
+    <innerdir refid="dir_eaec1fe2057bff26f2484a73ab02fa8b">inc/fsi/lib</innerdir>
+    <innerdir refid="dir_177d67048c27b1cc13d9211eccefee7f">inc/fsi/modules</innerdir>
+    <innerfile refid="d8/db8/FSIpredefines_8h">FSIpredefines.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/fsi/"/>
+  </compounddef>
+</doxygen>

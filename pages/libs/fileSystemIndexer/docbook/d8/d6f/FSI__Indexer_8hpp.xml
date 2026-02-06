@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSI__Indexer_8hpp" xml:lang="en-US">
+<title>inc/fsi/lib/FSI_Indexer.hpp File Reference</title>
+<indexterm><primary>inc/fsi/lib/FSI_Indexer.hpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &quot;../core/FSI_timeUtils.hpp&quot;<?linebreak?></programlisting>Include dependency graph for FSI_Indexer.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d5/d0d/FSI__Indexer_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../de/d52/FSI__Indexer_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classfsi_1_1Indexer">fsi::Indexer</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structfsi_1_1IndexerError">fsi::IndexerError</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structfsi_1_1IndexerFoundInfo">fsi::IndexerFoundInfo</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structfsi_1_1IndexerInfo">fsi::IndexerInfo</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacefsi">fsi</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacefsi_1_1codes">fsi::codes</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_FSI__Indexer_8hpp_1a5f1510074e5b49e79ce5ccd97d927c53">__FSI_INDEXERERR_CHECK</link>(e)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSI__Indexer_8hpp_1a3ac8f32fbd100d7ab4f9ab08af2f846a">__FSI_SUCCESS</link>&#160;&#160;&#160;0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct fsi::IndexerError <link linkend="_namespacefsi_1ac4f8a22716e600e7e92d5a700255d081">fsi::IndexerError</link></para>
+</listitem>
+            <listitem><para>typedef struct fsi::IndexerFoundInfo <link linkend="_namespacefsi_1a863274d842a7a1996114f2b0f4424251">fsi::IndexerFoundInfo</link></para>
+</listitem>
+            <listitem><para>typedef struct fsi::IndexerInfo <link linkend="_namespacefsi_1ac37e1b86ed295241cce0bbc399f023da">fsi::IndexerInfo</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum class <link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30">fsi::IndexerPathType</link> { <link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494">fsi::Directory</link>
+, <link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e">fsi::File</link>
+, <link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0">fsi::SymLink</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>constexpr int <link linkend="_namespacefsi_1_1codes_1a141522bb6ab01bdab1888f51984bb08b">fsi::codes::ERROR_ADDITION_FAIL</link> = 1</para>
+</listitem>
+            <listitem><para>constexpr int <link linkend="_namespacefsi_1_1codes_1ac2ba68f515a46e02eae9671750056860">fsi::codes::ERROR_EMPTY_VALUE</link> = 4</para>
+</listitem>
+            <listitem><para>constexpr int <link linkend="_namespacefsi_1_1codes_1a94f1ddf1a0dccd865341cdc258614b91">fsi::codes::ERROR_ERASE_FAIL</link> = 2</para>
+</listitem>
+            <listitem><para>constexpr int <link linkend="_namespacefsi_1_1codes_1a88198637504cbb63a06c76d7d0b7a1a7">fsi::codes::ERROR_INVALID_PATH</link> = 3</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_FSI__Indexer_8hpp_1a5f1510074e5b49e79ce5ccd97d927c53"/><section>
+    <title>__FSI_INDEXERERR_CHECK</title>
+<indexterm><primary>__FSI_INDEXERERR_CHECK</primary><secondary>FSI_Indexer.hpp</secondary></indexterm>
+<indexterm><primary>FSI_Indexer.hpp</primary><secondary>__FSI_INDEXERERR_CHECK</secondary></indexterm>
+<para><computeroutput>#define __FSI_INDEXERERR_CHECK( e)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(e.raise&#32;||&#32;e.fatal)&#32;&amp;&amp;&#32;e.code&#32;!=&#32;<link linkend="_FSI__Indexer_8hpp_1a3ac8f32fbd100d7ab4f9ab08af2f846a">__FSI_SUCCESS</link>
+</programlisting><para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00010">10</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+<programlisting linenumbering="unnumbered">00010 <emphasis role="preprocessor">#define&#32;__FSI_INDEXERERR_CHECK(e)&#32;\</emphasis>
+00011 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(e.raise&#32;||&#32;e.fatal)&#32;&amp;&amp;&#32;e.code&#32;!=&#32;__FSI_SUCCESS</emphasis>
+</programlisting><para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00062">fsi::Indexer::addExtendedInfo()</link>.</para>
+</section>
+<anchor xml:id="_FSI__Indexer_8hpp_1a3ac8f32fbd100d7ab4f9ab08af2f846a"/><section>
+    <title>__FSI_SUCCESS</title>
+<indexterm><primary>__FSI_SUCCESS</primary><secondary>FSI_Indexer.hpp</secondary></indexterm>
+<indexterm><primary>FSI_Indexer.hpp</primary><secondary>__FSI_SUCCESS</secondary></indexterm>
+<para><computeroutput>#define __FSI_SUCCESS&#160;&#160;&#160;0</computeroutput></para><para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00009">9</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+</section>
+</section>
+</section>

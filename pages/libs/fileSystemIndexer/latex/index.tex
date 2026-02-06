@@ -1,0 +1,154 @@
+\chapter{File System Indexer }
+\hypertarget{index}{}\label{index}\index{File System Indexer@{File System Indexer}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Last version updated:\+ v0.\+1.\+0-\/beta}{Last version updated:\+ v0.\+1.\+0-\/beta}}\label{index_autotoc_md1}
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Support information}{Support information}}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item FSI Currently does not support Windows
+\item Currently Linux and mac\+OS\texorpdfstring{$\ast$}{*} with other POSIX /\+ UNIX systems
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{What is FSI?}{What is FSI?}}\label{index_autotoc_md4}
+File System Indexer or FSI is a C++ library that it can be used to index files quickly with an extendible and easy to use API
+
+There is also an API for C which is just for {\itshape speed-\/first} use cases such as indexing or other usages\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Requirements}{Requirements}}\label{index_autotoc_md5}
+To compile this program, you will need the following dependencies
+
+
+\begin{DoxyEnumerate}
+\item C11+ /\+ C++17+ compiler
+\item jq
+\item Bash
+\item Ninja /\+ Make (Ninja is prefered)
+\item CMake
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{How to Compile}{How to Compile}}\label{index_autotoc_md6}
+\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{Setting up}{Setting up}}\label{index_autotoc_md7}
+The developer can compile the code with the following snippet 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./gen.sh\ \#\ Generate\ all\ the\ required\ files\ and\ docs}
+\DoxyCodeLine{./compile.sh\ settings\ \#\ Developer\ will\ be\ prompted\ for\ config;\ If\ doxygen\ is\ not\ installed,\ it\ will\ still\ work}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{Developer Mode}{Developer Mode}}\label{index_autotoc_md8}
+With developer mode, you can get more information about unexpected crashes, have ASAN /\+ LSAN support, debug support, ...
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./compile.sh\ setup}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{Production Mode}{Production Mode}}\label{index_autotoc_md9}
+Do not use dev mode here, just compile as prod; No information about crashes, no debug or ASAN /\+ LSAN support
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./compile.sh\ setup\ ndev}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md10}{}\doxysubsection{\texorpdfstring{Compile the sources}{Compile the sources}}\label{index_autotoc_md10}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./compile.sh}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md11}{}\doxysubsection{\texorpdfstring{Run the Tests}{Run the Tests}}\label{index_autotoc_md11}
+There is a basic bash script with some utilities that you can execute the executable directly
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./run.sh}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md12}{}\doxysection{\texorpdfstring{Basic usage}{Basic usage}}\label{index_autotoc_md12}
+In this example you can directly add a specific directory without its parents 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{fsi::IndexerInfo}}\ info;\ \textcolor{comment}{//\ Create\ object}}
+\DoxyCodeLine{info.\doxymbox{\hyperlink{structfsi_1_1IndexerInfo_a92c8f13432f387e693961996fac5963b}{path}}\ =\ \textcolor{stringliteral}{"{}/path/to/fileOrDir"{}};\ \textcolor{comment}{//\ Set\ the\ path}}
+\DoxyCodeLine{info.\doxymbox{\hyperlink{structfsi_1_1IndexerInfo_a9ed84fe71c39594a0ab6c487a165f06c}{id}}\ =\ \textcolor{stringliteral}{"{}optional-\/id"{}};\ \textcolor{comment}{//\ Recommended\ to\ set\ an\ ID}}
+\DoxyCodeLine{}
+\DoxyCodeLine{indexer.addInfo(info);\ \textcolor{comment}{//\ Add\ indexer\ info}}
+
+\end{DoxyCode}
+
+
+Recursively index a specific dir 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{fsi::IndexerInfo}}\ info;}
+\DoxyCodeLine{info.\doxymbox{\hyperlink{structfsi_1_1IndexerInfo_a92c8f13432f387e693961996fac5963b}{path}}\ =\ \textcolor{stringliteral}{"{}/path/to/directory"{}};}
+\DoxyCodeLine{info.\doxymbox{\hyperlink{structfsi_1_1IndexerInfo_a9ed84fe71c39594a0ab6c487a165f06c}{id}}\ =\ \textcolor{stringliteral}{"{}optional-\/id"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{indexer.addExtendedInfo(info);\ \textcolor{comment}{//\ Add\ all\ its\ subdirs\ starting\ from\ \`{}info.path`}}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md13}{}\doxysection{\texorpdfstring{Search and manipulate indexed info}{Search and manipulate indexed info}}\label{index_autotoc_md13}
+This following example will search everything in the registry and output the matching In this case, everything that includes {\ttfamily txt} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<std::string>\ results\ =\ indexer.searchMatching(\textcolor{stringliteral}{"{}txt"{}});}
+
+\end{DoxyCode}
+
+
+Get all the indexed paths directly in a vector 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<std::string>\ allPaths\ =\ indexer.getIndexPaths();}
+
+\end{DoxyCode}
+
+
+Get specific indexed info from the vector registry 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{fsi::IndexerInfo}}\ info\ =\ indexer.findIndex(\textcolor{stringliteral}{"{}/path/to/path"{}});}
+\DoxyCodeLine{\doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{fsi::IndexerInfo}}\ info\ =\ indexer.findIndex(\textcolor{stringliteral}{"{}id-\/path"{}});\ \textcolor{comment}{//\ Or\ search\ via\ ID}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{indexer.removeInfo(\textcolor{stringliteral}{"{}current-\/dir"{}});}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md14}{}\doxysection{\texorpdfstring{How to handle errors automatically}{How to handle errors automatically}}\label{index_autotoc_md14}
+Replace {\ttfamily error\+Variable} to a variable that has a type of {\ttfamily Indexer\+Error} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{FSI__Indexer_8hpp_a5f1510074e5b49e79ce5ccd97d927c53}{\_\_FSI\_INDEXERERR\_CHECK}}(errorVariable))\ \ }
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ here}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Print\ message\ by\ accessing:}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ errorVariable.message}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md15}{}\doxysection{\texorpdfstring{Example usage}{Example usage}}\label{index_autotoc_md15}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}/path/to/FSI\_Indexer.hpp"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{classfsi_1_1Indexer}{fsi::Indexer}}\ indexer(\textcolor{stringliteral}{"{}main-\/indexer"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{fsi::IndexerInfo}}\ info;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ info.\doxymbox{\hyperlink{structfsi_1_1IndexerInfo_a92c8f13432f387e693961996fac5963b}{path}}\ =\ \textcolor{stringliteral}{"{}/path/to/dir"{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ info.\doxymbox{\hyperlink{structfsi_1_1IndexerInfo_a9ed84fe71c39594a0ab6c487a165f06c}{id}}\ =\ \textcolor{stringliteral}{"{}current-\/dir"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ indexer.addExtendedInfo(info);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&x\ :\ indexer.searchMatching(\textcolor{stringliteral}{"{}cpp"{}}))}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::cout\ <<\ x\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}ID\ \`{}current-\/dir`\ has\ path:"{}}\ <<\ indexer.findIndex(\textcolor{stringliteral}{"{}current-\/dir"{}}).path\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

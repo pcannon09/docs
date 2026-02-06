@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structfsi_1_1utils_1_1TimeUtils__DateTime" xml:lang="en-US">
+<title>fsi::utils::TimeUtils_DateTime Struct Reference</title>
+<indexterm><primary>fsi::utils::TimeUtils_DateTime</primary></indexterm>
+<para>
+<computeroutput>#include &lt;FSI_timeUtils.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>unsigned int <link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a340cd86b315b94e24ba58f047a05d977">day</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a8135eb12c7d645962892d79939767f2b">hour</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a224f4265be90b19828d9e999ceba56e4">min</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a4c79e8bac795772430a0c7624e01f3c8">month</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a773404a9ff6e5c0a13eded6429ff26dd">ms</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a53f747e0ef76ed43ec51c4bdc844fd43">sec</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a9169ed2e239eac50365d363b9365b704">year</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_FSI__timeUtils_8hpp_source_1l00016">16</link> of file <link linkend="_FSI__timeUtils_8hpp_source">FSI_timeUtils.hpp</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a340cd86b315b94e24ba58f047a05d977"/><section>
+    <title>day</title>
+<indexterm><primary>day</primary><secondary>fsi::utils::TimeUtils_DateTime</secondary></indexterm>
+<indexterm><primary>fsi::utils::TimeUtils_DateTime</primary><secondary>day</secondary></indexterm>
+<para><computeroutput>unsigned int fsi::utils::TimeUtils_DateTime::day</computeroutput></para><para>
+Definition at line <link linkend="_FSI__timeUtils_8hpp_source_1l00025">25</link> of file <link linkend="_FSI__timeUtils_8hpp_source">FSI_timeUtils.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_main_8cpp_source_1l00011">anonymous_namespace{main.cpp}::__timeToStr()</link>, and <link linkend="_FSI__timeUtils_8cpp_source_1l00008">fsi::utils::fsClockDataToDT()</link>.</para>
+</section>
+<anchor xml:id="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a8135eb12c7d645962892d79939767f2b"/><section>
+    <title>hour</title>
+<indexterm><primary>hour</primary><secondary>fsi::utils::TimeUtils_DateTime</secondary></indexterm>
+<indexterm><primary>fsi::utils::TimeUtils_DateTime</primary><secondary>hour</secondary></indexterm>
+<para><computeroutput>unsigned int fsi::utils::TimeUtils_DateTime::hour</computeroutput></para><para>
+Definition at line <link linkend="_FSI__timeUtils_8hpp_source_1l00018">18</link> of file <link linkend="_FSI__timeUtils_8hpp_source">FSI_timeUtils.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_main_8cpp_source_1l00011">anonymous_namespace{main.cpp}::__timeToStr()</link>, and <link linkend="_FSI__timeUtils_8cpp_source_1l00008">fsi::utils::fsClockDataToDT()</link>.</para>
+</section>
+<anchor xml:id="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a224f4265be90b19828d9e999ceba56e4"/><section>
+    <title>min</title>
+<indexterm><primary>min</primary><secondary>fsi::utils::TimeUtils_DateTime</secondary></indexterm>
+<indexterm><primary>fsi::utils::TimeUtils_DateTime</primary><secondary>min</secondary></indexterm>
+<para><computeroutput>unsigned int fsi::utils::TimeUtils_DateTime::min</computeroutput></para><para>
+Definition at line <link linkend="_FSI__timeUtils_8hpp_source_1l00019">19</link> of file <link linkend="_FSI__timeUtils_8hpp_source">FSI_timeUtils.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_main_8cpp_source_1l00011">anonymous_namespace{main.cpp}::__timeToStr()</link>, and <link linkend="_FSI__timeUtils_8cpp_source_1l00008">fsi::utils::fsClockDataToDT()</link>.</para>
+</section>
+<anchor xml:id="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a4c79e8bac795772430a0c7624e01f3c8"/><section>
+    <title>month</title>
+<indexterm><primary>month</primary><secondary>fsi::utils::TimeUtils_DateTime</secondary></indexterm>
+<indexterm><primary>fsi::utils::TimeUtils_DateTime</primary><secondary>month</secondary></indexterm>
+<para><computeroutput>unsigned int fsi::utils::TimeUtils_DateTime::month</computeroutput></para><para>
+Definition at line <link linkend="_FSI__timeUtils_8hpp_source_1l00024">24</link> of file <link linkend="_FSI__timeUtils_8hpp_source">FSI_timeUtils.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_main_8cpp_source_1l00011">anonymous_namespace{main.cpp}::__timeToStr()</link>, and <link linkend="_FSI__timeUtils_8cpp_source_1l00008">fsi::utils::fsClockDataToDT()</link>.</para>
+</section>
+<anchor xml:id="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a773404a9ff6e5c0a13eded6429ff26dd"/><section>
+    <title>ms</title>
+<indexterm><primary>ms</primary><secondary>fsi::utils::TimeUtils_DateTime</secondary></indexterm>
+<indexterm><primary>fsi::utils::TimeUtils_DateTime</primary><secondary>ms</secondary></indexterm>
+<para><computeroutput>unsigned int fsi::utils::TimeUtils_DateTime::ms</computeroutput></para><para>
+Definition at line <link linkend="_FSI__timeUtils_8hpp_source_1l00021">21</link> of file <link linkend="_FSI__timeUtils_8hpp_source">FSI_timeUtils.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_main_8cpp_source_1l00011">anonymous_namespace{main.cpp}::__timeToStr()</link>, and <link linkend="_FSI__timeUtils_8cpp_source_1l00008">fsi::utils::fsClockDataToDT()</link>.</para>
+</section>
+<anchor xml:id="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a53f747e0ef76ed43ec51c4bdc844fd43"/><section>
+    <title>sec</title>
+<indexterm><primary>sec</primary><secondary>fsi::utils::TimeUtils_DateTime</secondary></indexterm>
+<indexterm><primary>fsi::utils::TimeUtils_DateTime</primary><secondary>sec</secondary></indexterm>
+<para><computeroutput>unsigned int fsi::utils::TimeUtils_DateTime::sec</computeroutput></para><para>
+Definition at line <link linkend="_FSI__timeUtils_8hpp_source_1l00020">20</link> of file <link linkend="_FSI__timeUtils_8hpp_source">FSI_timeUtils.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_main_8cpp_source_1l00011">anonymous_namespace{main.cpp}::__timeToStr()</link>, and <link linkend="_FSI__timeUtils_8cpp_source_1l00008">fsi::utils::fsClockDataToDT()</link>.</para>
+</section>
+<anchor xml:id="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a9169ed2e239eac50365d363b9365b704"/><section>
+    <title>year</title>
+<indexterm><primary>year</primary><secondary>fsi::utils::TimeUtils_DateTime</secondary></indexterm>
+<indexterm><primary>fsi::utils::TimeUtils_DateTime</primary><secondary>year</secondary></indexterm>
+<para><computeroutput>unsigned int fsi::utils::TimeUtils_DateTime::year</computeroutput></para><para>
+Definition at line <link linkend="_FSI__timeUtils_8hpp_source_1l00023">23</link> of file <link linkend="_FSI__timeUtils_8hpp_source">FSI_timeUtils.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_main_8cpp_source_1l00011">anonymous_namespace{main.cpp}::__timeToStr()</link>, and <link linkend="_FSI__timeUtils_8cpp_source_1l00008">fsi::utils::fsClockDataToDT()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/fsi/core/<link linkend="_FSI__timeUtils_8hpp">FSI_timeUtils.hpp</link></section>
+</section>

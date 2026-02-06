@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSI__dirUtils__windows_8h" xml:lang="en-US">
+<title>inc/fsi/core/interfaces/FSI_dirUtils_windows.h File Reference</title>
+<indexterm><primary>inc/fsi/core/interfaces/FSI_dirUtils_windows.h</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_FSI__dirUtils__windows_8h_1a7a1e5c1f77073fd9606e1eefae29bb7f">__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</link>&#160;&#160;&#160;}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSI__dirUtils__windows_8h_1a3cb98626af17e298ce16235844075656">__FSI_DIRUTILS_WINDOWS_CPP_OPEN</link>&#160;&#160;&#160;extern &quot;C&quot; {</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_FSI__dirUtils__windows_8h_1a7a1e5c1f77073fd9606e1eefae29bb7f"/><section>
+    <title>__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</title>
+<indexterm><primary>__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</primary><secondary>FSI_dirUtils_windows.h</secondary></indexterm>
+<indexterm><primary>FSI_dirUtils_windows.h</primary><secondary>__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</secondary></indexterm>
+<para><computeroutput>#define __FSI_DIRUTILS_WINDOWS_CPP_CLOSE&#160;&#160;&#160;}</computeroutput></para><para>
+Definition at line <link linkend="_FSI__dirUtils__windows_8h_source_1l00006">6</link> of file <link linkend="_FSI__dirUtils__windows_8h_source">FSI_dirUtils_windows.h</link>.</para>
+</section>
+<anchor xml:id="_FSI__dirUtils__windows_8h_1a3cb98626af17e298ce16235844075656"/><section>
+    <title>__FSI_DIRUTILS_WINDOWS_CPP_OPEN</title>
+<indexterm><primary>__FSI_DIRUTILS_WINDOWS_CPP_OPEN</primary><secondary>FSI_dirUtils_windows.h</secondary></indexterm>
+<indexterm><primary>FSI_dirUtils_windows.h</primary><secondary>__FSI_DIRUTILS_WINDOWS_CPP_OPEN</secondary></indexterm>
+<para><computeroutput>#define __FSI_DIRUTILS_WINDOWS_CPP_OPEN&#160;&#160;&#160;extern &quot;C&quot; {</computeroutput></para><para>
+Definition at line <link linkend="_FSI__dirUtils__windows_8h_source_1l00005">5</link> of file <link linkend="_FSI__dirUtils__windows_8h_source">FSI_dirUtils_windows.h</link>.</para>
+</section>
+</section>
+</section>

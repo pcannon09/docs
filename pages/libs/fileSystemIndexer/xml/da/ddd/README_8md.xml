@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="da/ddd/README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>File<sp/>System<sp/>Indexer</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Last<sp/>version<sp/>updated:<sp/>v0.1.0-beta</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Support<sp/>information</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>FSI<sp/>Currently<sp/>does<sp/>not<sp/>support<sp/>Windows</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Currently<sp/>Linux<sp/>and<sp/>macOS*<sp/>with<sp/>other<sp/>POSIX<sp/>/<sp/>UNIX<sp/>systems</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>What<sp/>is<sp/>FSI?</highlight></codeline>
+<codeline><highlight class="normal">File<sp/>System<sp/>Indexer<sp/>or<sp/>FSI<sp/>is<sp/>a<sp/>C++<sp/>library<sp/>that<sp/>it<sp/>can<sp/>be<sp/>used<sp/>to<sp/>index<sp/>files<sp/>quickly<sp/>with<sp/>an<sp/>extendible<sp/>and<sp/>easy<sp/>to<sp/>use<sp/>API</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">There<sp/>is<sp/>also<sp/>an<sp/>API<sp/>for<sp/>C<sp/>which<sp/>is<sp/>just<sp/>for<sp/>*speed-first*<sp/>use<sp/>cases<sp/>such<sp/>as<sp/>indexing<sp/>or<sp/>other<sp/>usages</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Requirements</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>compile<sp/>this<sp/>program,<sp/>you<sp/>will<sp/>need<sp/>the<sp/>following<sp/>dependencies</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>C11+<sp/>/<sp/>C++17+<sp/>compiler</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>jq</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Bash</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Ninja<sp/>/<sp/>Make<sp/>(Ninja<sp/>is<sp/>prefered)</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>CMake</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>How<sp/>to<sp/>Compile</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Setting<sp/>up</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>developer<sp/>can<sp/>compile<sp/>the<sp/>code<sp/>with<sp/>the<sp/>following<sp/>snippet</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">./gen.sh<sp/>#<sp/>Generate<sp/>all<sp/>the<sp/>required<sp/>files<sp/>and<sp/>docs</highlight></codeline>
+<codeline><highlight class="normal">./compile.sh<sp/>settings<sp/>#<sp/>Developer<sp/>will<sp/>be<sp/>prompted<sp/>for<sp/>config;<sp/>If<sp/>doxygen<sp/>is<sp/>not<sp/>installed,<sp/>it<sp/>will<sp/>still<sp/>work</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Developer<sp/>Mode</highlight></codeline>
+<codeline><highlight class="normal">With<sp/>developer<sp/>mode,<sp/>you<sp/>can<sp/>get<sp/>more<sp/>information<sp/>about<sp/>unexpected<sp/>crashes,<sp/>have<sp/>ASAN<sp/>/<sp/>LSAN<sp/>support,<sp/>debug<sp/>support,<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">./compile.sh<sp/>setup</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Production<sp/>Mode</highlight></codeline>
+<codeline><highlight class="normal">Do<sp/>not<sp/>use<sp/>dev<sp/>mode<sp/>here,<sp/>just<sp/>compile<sp/>as<sp/>prod;<sp/>No<sp/>information<sp/>about<sp/>crashes,<sp/>no<sp/>debug<sp/>or<sp/>ASAN<sp/>/<sp/>LSAN<sp/>support</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">./compile.sh<sp/>setup<sp/>ndev</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Compile<sp/>the<sp/>sources</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">./compile.sh</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Run<sp/>the<sp/>Tests</highlight></codeline>
+<codeline><highlight class="normal">There<sp/>is<sp/>a<sp/>basic<sp/>bash<sp/>script<sp/>with<sp/>some<sp/>utilities<sp/>that<sp/>you<sp/>can<sp/>execute<sp/>the<sp/>executable<sp/>directly</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">./run.sh</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Basic<sp/>usage</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>this<sp/>example<sp/>you<sp/>can<sp/>directly<sp/>add<sp/>a<sp/>specific<sp/>directory<sp/>without<sp/>its<sp/>parents</highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">fsi::IndexerInfo<sp/>info;<sp/>//<sp/>Create<sp/>object</highlight></codeline>
+<codeline><highlight class="normal">info.path<sp/>=<sp/>&quot;/path/to/fileOrDir&quot;;<sp/>//<sp/>Set<sp/>the<sp/>path</highlight></codeline>
+<codeline><highlight class="normal">info.id<sp/>=<sp/>&quot;optional-id&quot;;<sp/>//<sp/>Recommended<sp/>to<sp/>set<sp/>an<sp/>ID</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">indexer.addInfo(info);<sp/>//<sp/>Add<sp/>indexer<sp/>info</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Recursively<sp/>index<sp/>a<sp/>specific<sp/>dir</highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">fsi::IndexerInfo<sp/>info;</highlight></codeline>
+<codeline><highlight class="normal">info.path<sp/>=<sp/>&quot;/path/to/directory&quot;;</highlight></codeline>
+<codeline><highlight class="normal">info.id<sp/>=<sp/>&quot;optional-id&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">indexer.addExtendedInfo(info);<sp/>//<sp/>Add<sp/>all<sp/>its<sp/>subdirs<sp/>starting<sp/>from<sp/>`info.path`</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Search<sp/>and<sp/>manipulate<sp/>indexed<sp/>info</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>following<sp/>example<sp/>will<sp/>search<sp/>everything<sp/>in<sp/>the<sp/>registry<sp/>and<sp/>output<sp/>the<sp/>matching</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>this<sp/>case,<sp/>everything<sp/>that<sp/>includes<sp/>`txt`</highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">std::vector&lt;std::string&gt;<sp/>results<sp/>=<sp/>indexer.searchMatching(&quot;txt&quot;);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Get<sp/>all<sp/>the<sp/>indexed<sp/>paths<sp/>directly<sp/>in<sp/>a<sp/>vector</highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">std::vector&lt;std::string&gt;<sp/>allPaths<sp/>=<sp/>indexer.getIndexPaths();</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Get<sp/>specific<sp/>indexed<sp/>info<sp/>from<sp/>the<sp/>vector<sp/>registry</highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">fsi::IndexerInfo<sp/>info<sp/>=<sp/>indexer.findIndex(&quot;/path/to/path&quot;);</highlight></codeline>
+<codeline><highlight class="normal">fsi::IndexerInfo<sp/>info<sp/>=<sp/>indexer.findIndex(&quot;id-path&quot;);<sp/>//<sp/>Or<sp/>search<sp/>via<sp/>ID</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">indexer.removeInfo(&quot;current-dir&quot;);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>How<sp/>to<sp/>handle<sp/>errors<sp/>automatically</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Replace<sp/>`errorVariable`<sp/>to<sp/>a<sp/>variable<sp/>that<sp/>has<sp/>a<sp/>type<sp/>of<sp/>`IndexerError`</highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(__FSI_INDEXERERR_CHECK(errorVariable))<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>here</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Print<sp/>message<sp/>by<sp/>accessing:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>errorVariable.message</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Example<sp/>usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;/path/to/FSI_Indexer.hpp&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>fsi::Indexer<sp/>indexer(&quot;main-indexer&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fsi::IndexerInfo<sp/>info;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.path<sp/>=<sp/>&quot;/path/to/dir&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.id<sp/>=<sp/>&quot;current-dir&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>indexer.addExtendedInfo(info);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(const<sp/>auto<sp/>&amp;x<sp/>:<sp/>indexer.searchMatching(&quot;cpp&quot;))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>x<sp/>&lt;&lt;<sp/>&quot;\n&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;ID<sp/>`current-dir`<sp/>has<sp/>path:&quot;<sp/>&lt;&lt;<sp/>indexer.findIndex(&quot;current-dir&quot;).path<sp/>&lt;&lt;<sp/>&quot;\n&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

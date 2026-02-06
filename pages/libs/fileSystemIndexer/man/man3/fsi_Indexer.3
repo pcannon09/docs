@@ -1,0 +1,579 @@
+.TH "fsi::Indexer" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fsi::Indexer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <FSI_Indexer\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIndexer\fP (const std::string &\fBid\fP)"
+.br
+.ti -1c
+.RI "\fB~Indexer\fP ()"
+.br
+.ti -1c
+.RI "\fBIndexerError\fP \fBaddExtendedInfo\fP (const \fBIndexerInfo\fP &info)"
+.br
+.RI "Add the exact path and the sub-paths to have the info from\&. "
+.ti -1c
+.RI "\fBIndexerError\fP \fBaddInfo\fP (const \fBIndexerInfo\fP &info)"
+.br
+.RI "Add the exact path to have the info from\&. "
+.ti -1c
+.RI "\fBIndexerInfo\fP \fBfindIndex\fP (const std::string &toFind)"
+.br
+.RI "Find the index from the vector database from the indexer\&. "
+.ti -1c
+.RI "\fButils::TimeUtils_DateTime\fP \fBgetFileDTInfo\fP (const std::string &path)"
+.br
+.RI "Get when the file, dir or symlink was last modified\&. "
+.ti -1c
+.RI "std::string \fBgetID\fP () const"
+.br
+.RI "Get this object's ID\&. "
+.ti -1c
+.RI "std::vector< \fBIndexerInfo\fP > \fBgetIndexerInfo\fP () const"
+.br
+.RI "Return indexer information from this object\&. "
+.ti -1c
+.RI "std::vector< std::string > \fBgetIndexPaths\fP () const"
+.br
+.RI "Get all the indexed paths from the vector indexes\&. "
+.ti -1c
+.RI "\fBIndexerError\fP \fBremoveInfo\fP (const std::string &searcher)"
+.br
+.RI "Remove information from its ID or full path\&. "
+.ti -1c
+.RI "std::string \fBsearchExactMatching\fP (const std::string &find)"
+.br
+.RI "Search for an exact matching path or ID;\&. "
+.ti -1c
+.RI "std::vector< std::string > \fBsearchMatching\fP (const std::string &path)"
+.br
+.RI "Search all matching path or ID that contains \fRpath\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBIndexerPathType\fP \fB__getPathType\fP (const std::string &path) const"
+.br
+.RI "Get if path from function param is a: "
+.ti -1c
+.RI "virtual std::vector< std::string > \fB__iteratePath\fP (const std::string &path)"
+.br
+.RI "Iterate all the files and directories (symlinks too) from \fRpath\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBid\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBIndexerInfo\fP > \fBindexerInfo\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB59\fP of file \fBFSI_Indexer\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "fsi::Indexer::Indexer (const std::string & id)"
+
+.PP
+Definition at line \fB54\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+55         : id(id)
+56     { }
+.PP
+.fi
+
+.PP
+References \fBid\fP\&.
+.SS "fsi::Indexer::~Indexer ()"
+
+.PP
+Definition at line \fB59\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+60     { }
+.PP
+.fi
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBIndexerPathType\fP fsi::Indexer::__getPathType (const std::string & path) const\fR [protected]\fP, \fR [virtual]\fP"
+
+.PP
+Get if path from function param is a: 
+.IP "\(bu" 2
+File
+.IP "\(bu" 2
+Dir
+.IP "\(bu" 2
+SymLink
+.IP "\(bu" 2
+Others 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path to get the type from 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBIndexerPathType\fP The type of the function param 
+.RE
+.PP
+
+.PP
+
+.PP
+Definition at line \fB18\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+19     {
+20         if (fs::is_directory(path)) return IndexerPathType::Directory;
+21         else if (fs::is_symlink(path)) return IndexerPathType::SymLink;
+22 
+23         return IndexerPathType::File;
+24     }
+.PP
+.fi
+
+.PP
+References \fBfsi::Directory\fP, \fBfsi::File\fP, and \fBfsi::SymLink\fP\&.
+.PP
+Referenced by \fBaddExtendedInfo()\fP, and \fBaddInfo()\fP\&.
+.SS "std::vector< std::string > fsi::Indexer::__iteratePath (const std::string & path)\fR [protected]\fP, \fR [virtual]\fP"
+
+.PP
+Iterate all the files and directories (symlinks too) from \fRpath\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path to iterate 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A tree of full path in a vector of strings 
+.RE
+.PP
+
+.PP
+Definition at line \fB26\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+27     {
+28         std::vector<std::string> paths;
+29 
+30         CVEC tmpPathsVec = cvec_init(\-1, sizeof(char*));
+31 
+32         fsi_walk(&tmpPathsVec, path\&.c_str());
+33 
+34         for (size_t i = 0; i < tmpPathsVec\&.size; ++i)
+35         {
+36             char* p = *(char**)cvec_get(&tmpPathsVec, i);
+37 
+38             if (p)
+39             {
+40                 paths\&.emplace_back(p);
+41 
+42                 FSI_FREE(p);
+43             }
+44         }
+45 
+46         cvec_destroy(&tmpPathsVec);
+47 
+48         return paths;
+49     }
+.PP
+.fi
+
+.PP
+References \fBFSI_FREE\fP, and \fBfsi_walk()\fP\&.
+.PP
+Referenced by \fBaddExtendedInfo()\fP\&.
+.SS "\fBIndexerError\fP fsi::Indexer::addExtendedInfo (const \fBIndexerInfo\fP & info)"
+
+.PP
+Add the exact path and the sub-paths to have the info from\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinfo\fP Get the information from the exact path and deeper 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBIndexerError\fP Return error or success from \fR\fBIndexerError\fP\fP type 
+.RE
+.PP
+
+.PP
+Definition at line \fB62\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+63     {
+64         IndexerError error = this\->addInfo(info);
+65         IndexerInfo totalInfo = info;
+66 
+67         if (__FSI_INDEXERERR_CHECK(error))
+68             return error;
+69 
+70         const std::vector<std::string> iteratedPaths = this\->__iteratePath(info\&.path);
+71 
+72         for (const auto &x : iteratedPaths)
+73         {
+74             totalInfo\&.pathType = this\->__getPathType(totalInfo\&.path);
+75             totalInfo\&.path = x;
+76 
+77             this\->indexerInfo\&.emplace_back(totalInfo);
+78         }
+79 
+80         return error;
+81     }
+.PP
+.fi
+
+.PP
+References \fB__FSI_INDEXERERR_CHECK\fP, \fB__getPathType()\fP, \fB__iteratePath()\fP, \fBaddInfo()\fP, \fBindexerInfo\fP, \fBfsi::IndexerInfo::path\fP, and \fBfsi::IndexerInfo::pathType\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SS "\fBIndexerError\fP fsi::Indexer::addInfo (const \fBIndexerInfo\fP & info)"
+
+.PP
+Add the exact path to have the info from\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinfo\fP Get the information from the exact path 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBIndexerError\fP Return error or success from \fR\fBIndexerError\fP\fP type 
+.RE
+.PP
+
+.PP
+Definition at line \fB107\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+108     {
+109         IndexerError error;
+110         IndexerInfo totalInfo = info;
+111 
+112         // Do checks before adding
+113         if (totalInfo\&.path\&.empty())
+114         {
+115             error\&.code = fsi::codes::ERROR_ADDITION_FAIL;
+116             error\&.message = "Path is empty";
+117             error\&.fatal = false;
+118             error\&.raise = false;
+119 
+120             return error;
+121         }
+122 
+123         if (!fs::exists(totalInfo\&.path))
+124         {
+125             error\&.code = fsi::codes::ERROR_INVALID_PATH;
+126             error\&.message = ciof::format("Unknown path `%1`; No such file or directory exists", totalInfo\&.path);
+127             error\&.fatal = true;
+128 
+129             return error;
+130         }
+131 
+132         
+133         // Set path type
+134         totalInfo\&.pathType = this\->__getPathType(totalInfo\&.path);
+135 
+136         // Add final information
+137 
+138         this\->indexerInfo\&.emplace_back(totalInfo);
+139 
+140         return error;
+141     }
+.PP
+.fi
+
+.PP
+References \fB__getPathType()\fP, \fBfsi::IndexerError::code\fP, \fBfsi::codes::ERROR_ADDITION_FAIL\fP, \fBfsi::codes::ERROR_INVALID_PATH\fP, \fBfsi::IndexerError::fatal\fP, \fBindexerInfo\fP, \fBfsi::IndexerError::message\fP, \fBfsi::IndexerInfo::path\fP, \fBfsi::IndexerInfo::pathType\fP, and \fBfsi::IndexerError::raise\fP\&.
+.PP
+Referenced by \fBaddExtendedInfo()\fP\&.
+.SS "\fBIndexerInfo\fP fsi::Indexer::findIndex (const std::string & toFind)"
+
+.PP
+Find the index from the vector database from the indexer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItoFind\fP Search for the path or ID and remove them from the indexer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBIndexerInfo\fP Find the indexed info from the indexer "data base" 
+.RE
+.PP
+
+.PP
+Definition at line \fB143\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+144     {
+145         for (const auto &x : this\->indexerInfo)
+146         {
+147             if (x\&.path == toFind || x\&.id == toFind)
+148                 return x;
+149         }
+150 
+151         return { };
+152     }
+.PP
+.fi
+
+.PP
+References \fBindexerInfo\fP\&.
+.PP
+Referenced by \fBmain()\fP, and \fBsearchExactMatching()\fP\&.
+.SS "\fButils::TimeUtils_DateTime\fP fsi::Indexer::getFileDTInfo (const std::string & path)"
+
+.PP
+Get when the file, dir or symlink was last modified\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path to get date time information 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Date time info 
+.RE
+.PP
+
+.PP
+Definition at line \fB184\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+185     {
+186         const fs::file_time_type &lastWriteTime = fs::last_write_time(path);
+187 
+188         return utils::fsClockDataToDT(lastWriteTime);
+189     }
+.PP
+.fi
+
+.PP
+References \fBfsi::utils::fsClockDataToDT()\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SS "std::string fsi::Indexer::getID () const"
+
+.PP
+Get this object's ID\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Object ID 
+.RE
+.PP
+
+.PP
+Definition at line \fB204\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+205     { return this\->id; }
+.PP
+.fi
+
+.PP
+References \fBid\fP\&.
+.SS "std::vector< \fBIndexerInfo\fP > fsi::Indexer::getIndexerInfo () const"
+
+.PP
+Return indexer information from this object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Get all the indexed information that was added 
+.RE
+.PP
+
+.PP
+Definition at line \fB191\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+192     { return this\->indexerInfo; }
+.PP
+.fi
+
+.PP
+References \fBindexerInfo\fP\&.
+.SS "std::vector< std::string > fsi::Indexer::getIndexPaths () const"
+
+.PP
+Get all the indexed paths from the vector indexes\&. 
+.PP
+\fBReturns\fP
+.RS 4
+All the indexed paths in a vector 
+.RE
+.PP
+
+.PP
+Definition at line \fB194\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+195     {
+196         std::vector<std::string> additions;
+197 
+198         for (const auto &x : this\->indexerInfo)
+199         { additions\&.emplace_back(x\&.path); }
+200 
+201         return additions;
+202     }
+.PP
+.fi
+
+.PP
+References \fBindexerInfo\fP\&.
+.SS "\fBIndexerError\fP fsi::Indexer::removeInfo (const std::string & searcher)"
+
+.PP
+Remove information from its ID or full path\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsearcher\fP Search for the path or ID and remove them from the indexer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBIndexerError\fP Return error or success from \fR\fBIndexerError\fP\fP type 
+.RE
+.PP
+
+.PP
+Definition at line \fB154\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+155     {
+156         IndexerError error;
+157 
+158         // Do checks
+159 
+160         if (searcher\&.empty())
+161         {
+162             error\&.code = fsi::codes::ERROR_EMPTY_VALUE;
+163             error\&.message = "Empty value to remove from the Indexer Information list";
+164             error\&.fatal = false;
+165             error\&.raise = false;
+166 
+167             return error;
+168         }
+169 
+170         // Erase the found object (IndexerInfo) value by ID or Path
+171         this\->indexerInfo\&.erase(
+172                 std::remove_if(
+173                     this\->indexerInfo\&.begin(),
+174                     this\->indexerInfo\&.end(),
+175                     [&](const IndexerInfo &info) {
+176                         return (info\&.id == searcher || info\&.path == searcher);
+177                     }),
+178                 this\->indexerInfo\&.end()
+179         );
+180 
+181         return error;
+182     }
+.PP
+.fi
+
+.PP
+References \fBfsi::IndexerError::code\fP, \fBfsi::codes::ERROR_EMPTY_VALUE\fP, \fBfsi::IndexerError::fatal\fP, \fBindexerInfo\fP, \fBfsi::IndexerError::message\fP, and \fBfsi::IndexerError::raise\fP\&.
+.SS "std::string fsi::Indexer::searchExactMatching (const std::string & find)"
+
+.PP
+Search for an exact matching path or ID;\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfind\fP Get the ID or path to find 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The first match found 
+.RE
+.PP
+
+.PP
+Definition at line \fB83\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+84     {
+85         if (find\&.empty())
+86             return "";
+87 
+88         return this\->findIndex(find)\&.path;
+89     }
+.PP
+.fi
+
+.PP
+References \fBfindIndex()\fP, and \fBfsi::IndexerInfo::path\fP\&.
+.SS "std::vector< std::string > fsi::Indexer::searchMatching (const std::string & path)"
+
+.PP
+Search all matching path or ID that contains \fRpath\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path or ID to search 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A vector of all the found \fRpath\fPs 
+.RE
+.PP
+
+.PP
+Definition at line \fB91\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+92     {
+93         if (find\&.empty())
+94             return {};
+95 
+96         std::vector<std::string> vec;
+97 
+98         for (const auto &x : this\->indexerInfo)
+99         {
+100             if (x\&.path\&.find(find) != std::string::npos)
+101                 vec\&.emplace_back(x\&.path);
+102         }
+103 
+104         return vec;
+105     }
+.PP
+.fi
+
+.PP
+References \fBindexerInfo\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::string fsi::Indexer::id\fR [private]\fP"
+
+.PP
+Definition at line \fB62\fP of file \fBFSI_Indexer\&.hpp\fP\&.
+.PP
+Referenced by \fBIndexer()\fP, and \fBgetID()\fP\&.
+.SS "std::vector<\fBIndexerInfo\fP> fsi::Indexer::indexerInfo\fR [private]\fP"
+
+.PP
+Definition at line \fB63\fP of file \fBFSI_Indexer\&.hpp\fP\&.
+.PP
+Referenced by \fBaddExtendedInfo()\fP, \fBaddInfo()\fP, \fBfindIndex()\fP, \fBgetIndexerInfo()\fP, \fBgetIndexPaths()\fP, \fBremoveInfo()\fP, and \fBsearchMatching()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

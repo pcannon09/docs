@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir">
+    <compoundname>src/core</compoundname>
+    <innerdir refid="dir_5192f319a10d5e2b71e0c908bbe9b6ae">src/core/interfaces</innerdir>
+    <innerfile refid="d6/d8a/FSI__dirUtils_8c">FSI_dirUtils.c</innerfile>
+    <innerfile refid="d9/df4/FSI__timeUtils_8cpp">FSI_timeUtils.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/core/"/>
+  </compounddef>
+</doxygen>

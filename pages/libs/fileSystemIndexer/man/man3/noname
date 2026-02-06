@@ -1,0 +1,59 @@
+.TH "" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+core interfaces FSI_dirUtils_posix\&.h FSI_dirUtils_windows\&.h 
+.PP
+FSI_dirUtils\&.h FSI_timeUtils\&.hpp 
+.PP
+core interfaces FSI_dirUtils_posix\&.c FSI_dirUtils_windows\&.c 
+.PP
+FSI_dirUtils\&.c FSI_timeUtils\&.cpp 
+.PP
+fsi core interfaces FSI_dirUtils_posix\&.h FSI_dirUtils_windows\&.h 
+.PP
+FSI_dirUtils\&.h FSI_timeUtils\&.hpp 
+.PP
+lib FSI_Indexer\&.hpp 
+.PP
+modules temperature FSI_temperature\&.hpp FSI_temperatureConverter\&.h 
+.PP
+FSIpredefines\&.h 
+.PP
+inc fsi core interfaces FSI_dirUtils_posix\&.h FSI_dirUtils_windows\&.h 
+.PP
+FSI_dirUtils\&.h FSI_timeUtils\&.hpp 
+.PP
+lib FSI_Indexer\&.hpp 
+.PP
+modules temperature FSI_temperature\&.hpp FSI_temperatureConverter\&.h 
+.PP
+FSIpredefines\&.h 
+.PP
+interfaces FSI_dirUtils_posix\&.h FSI_dirUtils_windows\&.h 
+.PP
+interfaces FSI_dirUtils_posix\&.c FSI_dirUtils_windows\&.c 
+.PP
+lib FSI_Indexer\&.hpp 
+.PP
+lib FSI_Indexer\&.cpp 
+.PP
+modules temperature FSI_temperature\&.hpp FSI_temperatureConverter\&.h 
+.PP
+modules temperature FSI_temperature\&.cpp FSI_temperatureConverter\&.c 
+.PP
+src core interfaces FSI_dirUtils_posix\&.c FSI_dirUtils_windows\&.c 
+.PP
+FSI_dirUtils\&.c FSI_timeUtils\&.cpp 
+.PP
+lib FSI_Indexer\&.cpp 
+.PP
+modules temperature FSI_temperature\&.cpp FSI_temperatureConverter\&.c 
+.PP
+main\&.cpp 
+.PP
+temperature FSI_temperature\&.hpp FSI_temperatureConverter\&.h 
+.PP
+temperature FSI_temperature\&.cpp FSI_temperatureConverter\&.c 
+.PP
+

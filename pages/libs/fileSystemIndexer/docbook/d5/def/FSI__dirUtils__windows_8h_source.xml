@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSI__dirUtils__windows_8h_source" xml:lang="en-US">
+<title>FSI_dirUtils_windows.h</title>
+<indexterm><primary>inc/fsi/core/interfaces/FSI_dirUtils_windows.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;INCLUDE_INTERFACES_FSI_DIRUTILS_WINDOWS_H_</emphasis>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;INCLUDE_INTERFACES_FSI_DIRUTILS_WINDOWS_H_</emphasis>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00003"/>00003 
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00005"/><link linkend="_FSI__dirUtils__windows_8h_1a3cb98626af17e298ce16235844075656">00005</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__FSI_DIRUTILS_WINDOWS_CPP_OPEN&#32;&#32;&#32;&#32;&#32;&#32;extern&#32;&quot;C&quot;&#32;{</emphasis>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00006"/><link linkend="_FSI__dirUtils__windows_8h_1a7a1e5c1f77073fd9606e1eefae29bb7f">00006</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__FSI_DIRUTILS_WINDOWS_CPP_CLOSE&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__FSI_DIRUTILS_WINDOWS_CPP_OPEN</emphasis>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</emphasis>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;__cplusplus</emphasis>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00011"/>00011 
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00012"/>00012 <link linkend="_FSI__dirUtils__windows_8h_1a3cb98626af17e298ce16235844075656">__FSI_DIRUTILS_WINDOWS_CPP_OPEN</link>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00013"/>00013 
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00014"/>00014 <emphasis role="comment">//&#32;TODO:</emphasis>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00015"/>00015 <emphasis role="comment">//&#32;WINDOWS&#32;IMPLEMENTATION&#32;OF&#32;DIR&#32;UTILS&#32;(&#32;POSIX&#32;)</emphasis>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00016"/>00016 
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00017"/>00017 <link linkend="_FSI__dirUtils__windows_8h_1a7a1e5c1f77073fd9606e1eefae29bb7f">__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</link>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00018"/>00018 
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00019"/>00019 <emphasis role="preprocessor">#undef&#32;__FSI_DIRUTILS_WINDOWS_CPP_OPEN</emphasis>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00020"/>00020 <emphasis role="preprocessor">#undef&#32;__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</emphasis>
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00021"/>00021 
+<anchor xml:id="_FSI__dirUtils__windows_8h_source_1l00022"/>00022 <emphasis role="preprocessor">#endif&#32;&#32;</emphasis><emphasis role="comment">//&#32;INCLUDE_INTERFACES_FSI_DIRUTILS_WINDOWS_H_</emphasis>
+</programlisting></section>

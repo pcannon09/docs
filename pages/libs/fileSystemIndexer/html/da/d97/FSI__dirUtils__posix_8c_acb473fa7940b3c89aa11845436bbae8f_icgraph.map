@@ -1,0 +1,12 @@
+<map id="fsi_readDir" name="fsi_readDir">
+<area shape="rect" id="Node000001" title="Read directory from reading the FSI_DirData information." alt="" coords="680,29,764,56"/>
+<area shape="rect" id="Node000002" href="$d6/d8a/FSI__dirUtils_8c.html#a3bc7da82fe7b1e798ee4b6d018534946" title="Walk to every directory and file and set vec to a CVEC value." alt="" coords="562,29,632,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="661,43,632,45,632,40,667,43"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="617,13,610,10,597,8,585,10,578,14,576,20,579,30,575,27,571,21,574,11,583,5,597,3,613,5,622,15"/>
+<area shape="rect" id="Node000003" href="$d0/d3b/classfsi_1_1Indexer.html#acebe67327f029b3a2e32a05d16610607" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="343,29,514,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="544,43,515,45,515,40,549,43"/>
+<area shape="rect" id="Node000004" href="$d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d" title="Add the exact path and the sub&#45;paths to have the info from." alt="" coords="103,29,295,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="325,43,296,45,295,40,330,43"/>
+<area shape="rect" id="Node000005" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="85,44,55,45,55,40,90,42"/>
+</map>

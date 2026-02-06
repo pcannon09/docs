@@ -1,0 +1,19 @@
+<map id="fsi::Indexer::addExtendedInfo" name="fsi::Indexer::addExtendedInfo">
+<area shape="rect" id="Node000001" title="Add the exact path and the sub&#45;paths to have the info from." alt="" coords="5,43,198,69"/>
+<area shape="rect" id="Node000002" href="$d0/d3b/classfsi_1_1Indexer.html#a2237929b6d3b94b3255ec187888caa7a" title="Get if path from function param is a:" alt="" coords="465,5,646,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,39,245,28,350,20,452,18,447,20,351,25,246,33,171,45"/>
+<area shape="rect" id="Node000003" href="$d0/d3b/classfsi_1_1Indexer.html#acebe67327f029b3a2e32a05d16610607" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="246,93,417,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,67,255,88,250,90,165,73"/>
+<area shape="rect" id="Node000008" href="$d0/d3b/classfsi_1_1Indexer.html#a4a17eef7e041ea4b1cfe67796fe39bf8" title="Add the exact path to have the info from." alt="" coords="263,43,400,69"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="197,53,250,55,245,57,198,59"/>
+<area shape="rect" id="Node000004" href="$d6/d8a/FSI__dirUtils_8c.html#a3bc7da82fe7b1e798ee4b6d018534946" title="Walk to every directory and file and set vec to a CVEC value." alt="" coords="521,93,590,120"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="417,104,508,106,503,107,417,109"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="524,92,519,85,522,75,535,69,556,67,578,69,591,79,586,78,576,74,556,72,537,74,526,79,524,84,529,94"/>
+<area shape="rect" id="Node000005" href="$da/d97/FSI__dirUtils__posix_8c.html#a07bb8fc8aa9e6ea91c2f2e65425e03e1" title="Get the directory data to deallocate memory." alt="" coords="694,43,785,69"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="590,95,676,73,682,72,591,100"/>
+<area shape="rect" id="Node000006" href="$da/d97/FSI__dirUtils__posix_8c.html#a1c15e434435c62f17b15a34877bd60bd" title="Open directory as read only." alt="" coords="696,93,783,120"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="591,104,683,106,678,107,591,109"/>
+<area shape="rect" id="Node000007" href="$da/d97/FSI__dirUtils__posix_8c.html#acb473fa7940b3c89aa11845436bbae8f" title="Read directory from reading the FSI_DirData information." alt="" coords="697,144,782,171"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="591,113,685,142,680,142,590,119"/>
+<area shape="poly" id="edge9_Node000008_Node000002" title=" " alt="" coords="400,42,459,35,454,36,401,47"/>
+</map>

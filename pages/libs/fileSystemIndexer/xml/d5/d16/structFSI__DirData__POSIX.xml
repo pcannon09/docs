@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="d5/d16/structFSI__DirData__POSIX" kind="struct" language="C++" prot="public">
+    <compoundname>FSI_DirData_POSIX</compoundname>
+    <includes refid="d5/d64/FSI__dirUtils__posix_8h" local="no">FSI_dirUtils_posix.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d5/d16/structFSI__DirData__POSIX_1a78670985b16d169b902cfda51881f02c" prot="public" static="no" mutable="no">
+        <type>DIR *</type>
+        <definition>DIR* FSI_DirData_POSIX::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <qualifiedname>FSI_DirData_POSIX::dir</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/interfaces/FSI_dirUtils_posix.h" line="26" column="5" bodyfile="inc/fsi/core/interfaces/FSI_dirUtils_posix.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="75" endline="84">fsi_closeDir</referencedby>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="14" endline="42">fsi_openDir</referencedby>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="44" endline="73">fsi_readDir</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d16/structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e" prot="public" static="no" mutable="no">
+        <type>CSTR</type>
+        <definition>CSTR FSI_DirData_POSIX::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <qualifiedname>FSI_DirData_POSIX::path</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/interfaces/FSI_dirUtils_posix.h" line="27" column="6" bodyfile="inc/fsi/core/interfaces/FSI_dirUtils_posix.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="75" endline="84">fsi_closeDir</referencedby>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="14" endline="42">fsi_openDir</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/fsi/core/interfaces/FSI_dirUtils_posix.h" line="24" column="1" bodyfile="inc/fsi/core/interfaces/FSI_dirUtils_posix.h" bodystart="25" bodyend="28"/>
+    <listofallmembers>
+      <member refid="d5/d16/structFSI__DirData__POSIX_1a78670985b16d169b902cfda51881f02c" prot="public" virt="non-virtual"><scope>FSI_DirData_POSIX</scope><name>dir</name></member>
+      <member refid="d5/d16/structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e" prot="public" virt="non-virtual"><scope>FSI_DirData_POSIX</scope><name>path</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

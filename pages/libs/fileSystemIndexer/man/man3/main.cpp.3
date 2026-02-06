@@ -1,0 +1,72 @@
+.TH "src/main.cpp" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/main.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include '\&.\&./inc/fsi/lib/FSI_Indexer\&.hpp'\fP
+.br
+\fR#include '\&.\&./inc/fsi/core/interfaces/FSI_dirUtils_posix\&.h'\fP
+.br
+\fR#include '\&.\&./inc/fsi/modules/temperature/FSI_temperatureConverter\&.h'\fP
+.br
+\fR#include 'ciof/ciof\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBanonymous_namespace{main\&.cpp}\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBanonymous_namespace{main\&.cpp}::__timeToStr\fP (const \fBfsi::utils::TimeUtils_DateTime\fP &time)"
+.br
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main ()"
+
+.PP
+Definition at line \fB20\fP of file \fBmain\&.cpp\fP\&.
+.nf
+21 {
+22     ciof::print(FSI_temperatureConvertCelTo("f", 33));
+23     ciof::print(FSI_temperatureConvertCelFrom("f", 33));
+24 
+25     fsi::Indexer indexer("main\-indexer");
+26 
+27     {
+28         fsi::IndexerInfo info;
+29         info\&.path = "\&.";
+30         info\&.id = "current\-dir";
+31 
+32         indexer\&.addExtendedInfo(info);
+33     }
+34 
+35     for (const auto &x : indexer\&.searchMatching("cpp"))
+36     {
+37         ciof::print("FILE NAME: %1 \-\- %2", x, __timeToStr(indexer\&.getFileDTInfo(x)));
+38     }
+39 
+40     ciof::print("ID `current\-dir` has path: %1", indexer\&.findIndex("current\-dir")\&.path);
+41 
+42     return 0;
+43 }
+.PP
+.fi
+
+.PP
+References \fBanonymous_namespace{main\&.cpp}::__timeToStr()\fP, \fBfsi::Indexer::addExtendedInfo()\fP, \fBfsi::Indexer::findIndex()\fP, \fBFSI_temperatureConvertCelFrom()\fP, \fBFSI_temperatureConvertCelTo()\fP, \fBfsi::Indexer::getFileDTInfo()\fP, \fBfsi::IndexerInfo::id\fP, \fBfsi::IndexerInfo::path\fP, and \fBfsi::Indexer::searchMatching()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

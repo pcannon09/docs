@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacefsi_1_1modules" xml:lang="en-US">
+<title>fsi::modules Namespace Reference</title>
+<indexterm><primary>fsi::modules</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacefsi_1_1modules_1_1tc">tc</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

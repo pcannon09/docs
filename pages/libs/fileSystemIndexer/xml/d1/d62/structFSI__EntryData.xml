@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="d1/d62/structFSI__EntryData" kind="struct" language="C++" prot="public">
+    <compoundname>FSI_EntryData</compoundname>
+    <includes refid="dc/d84/FSI__dirUtils_8h" local="no">FSI_dirUtils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/d62/structFSI__EntryData_1ad540a33418e7055d0cd7a582146aed10" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* FSI_EntryData::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>FSI_EntryData::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/FSI_dirUtils.h" line="35" column="12" bodyfile="inc/fsi/core/FSI_dirUtils.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="44" endline="73">fsi_readDir</referencedby>
+        <referencedby refid="dc/d84/FSI__dirUtils_8h_1a3bc7da82fe7b1e798ee4b6d018534946" compoundref="d6/d8a/FSI__dirUtils_8c" startline="12" endline="37">fsi_walk</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d62/structFSI__EntryData_1aae303e170665a972cc52c708470a2b27" prot="public" static="no" mutable="no">
+        <type><ref refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0" kindref="member">FSI_Type</ref></type>
+        <definition>FSI_Type FSI_EntryData::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>FSI_EntryData::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/FSI_dirUtils.h" line="37" column="10" bodyfile="inc/fsi/core/FSI_dirUtils.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="44" endline="73">fsi_readDir</referencedby>
+        <referencedby refid="dc/d84/FSI__dirUtils_8h_1a3bc7da82fe7b1e798ee4b6d018534946" compoundref="d6/d8a/FSI__dirUtils_8c" startline="12" endline="37">fsi_walk</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/fsi/core/FSI_dirUtils.h" line="33" column="1" bodyfile="inc/fsi/core/FSI_dirUtils.h" bodystart="34" bodyend="38"/>
+    <listofallmembers>
+      <member refid="d1/d62/structFSI__EntryData_1ad540a33418e7055d0cd7a582146aed10" prot="public" virt="non-virtual"><scope>FSI_EntryData</scope><name>name</name></member>
+      <member refid="d1/d62/structFSI__EntryData_1aae303e170665a972cc52c708470a2b27" prot="public" virt="non-virtual"><scope>FSI_EntryData</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

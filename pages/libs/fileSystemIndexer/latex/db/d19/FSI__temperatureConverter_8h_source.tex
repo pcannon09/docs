@@ -1,0 +1,58 @@
+\doxysection{FSI\+\_\+temperature\+Converter.\+h}
+\hypertarget{FSI__temperatureConverter_8h_source}{}\label{FSI__temperatureConverter_8h_source}\index{inc/fsi/modules/temperature/FSI\_temperatureConverter.h@{inc/fsi/modules/temperature/FSI\_temperatureConverter.h}}
+\doxymbox{\hyperlink{FSI__temperatureConverter_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ INCLUDE\_TEMPERATURE\_FSI\_TEMPERATURECONVERTER\_H\_}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ INCLUDE\_TEMPERATURE\_FSI\_TEMPERATURECONVERTER\_H\_}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00004}00004\ \textcolor{comment}{//\ NOTES:}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00005}00005\ \textcolor{comment}{//\ TC;\ In\ this\ context\ it\ means\ ("{}Temperature\ Converter"{})}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00007}00007\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00008}\doxymbox{\hyperlink{FSI__temperatureConverter_8h_abe24e40b38c356759f83d93f8e89840b}{00008}}\ \textcolor{preprocessor}{\#\ \ \ define\ \_\_FSI\_DIRUTILS\_TC\_CPP\_OPEN\ \ \ \ \ \ \ extern\ "{}C"{}\ \{}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00009}\doxymbox{\hyperlink{FSI__temperatureConverter_8h_aeec1c9abf519c96d40ccf05811fd33ef}{00009}}\ \textcolor{preprocessor}{\#\ \ \ define\ \_\_FSI\_DIRUTILS\_TC\_CPP\_CLOSE\ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00010}00010\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00011}00011\ \textcolor{preprocessor}{\#\ \ \ define\ \_\_FSI\_DIRUTILS\_TC\_CPP\_OPEN}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00012}00012\ \textcolor{preprocessor}{\#\ \ \ define\ \_\_FSI\_DIRUTILS\_TC\_CPP\_CLOSE}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00013}00013\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00015}00015\ \doxymbox{\hyperlink{FSI__temperatureConverter_8h_abe24e40b38c356759f83d93f8e89840b}{\_\_FSI\_DIRUTILS\_TC\_CPP\_OPEN}}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00019}00019\ \textcolor{comment}{//\ Celcius\ to\ others}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00020}\doxymbox{\hyperlink{FSI__temperatureConverter_8h_afeadea79f323e1fa506ef564778ba0ca}{00020}}\ \textcolor{preprocessor}{\#define\ \_\_FSI\_TC\_CEL\_TO\_C(value)\ \ \ \ \ \ (value)}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00021}\doxymbox{\hyperlink{FSI__temperatureConverter_8h_acd61e380f61f77ef0d5d2ff8da6362fd}{00021}}\ \textcolor{preprocessor}{\#define\ \_\_FSI\_TC\_CEL\_TO\_F(value)\ \ \ \ \ \ ((value)\ *\ 9.0\ /\ 5.0\ +\ 32.0)}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00022}\doxymbox{\hyperlink{FSI__temperatureConverter_8h_af451dbedd0aea3ff1e584c4766eedbb5}{00022}}\ \textcolor{preprocessor}{\#define\ \_\_FSI\_TC\_CEL\_TO\_K(value)\ \ \ \ \ \ ((value)\ +\ 273.15)}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00023}\doxymbox{\hyperlink{FSI__temperatureConverter_8h_a051d6a203331a736d5e5f328b1a69f4b}{00023}}\ \textcolor{preprocessor}{\#define\ \_\_FSI\_TC\_CEL\_TO\_RE(value)\ \ \ \ \ ((value)\ *\ 4.0\ /\ 5.0)}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00024}\doxymbox{\hyperlink{FSI__temperatureConverter_8h_a4d45c2cd654fc2c106349e7d8b6b0e7c}{00024}}\ \textcolor{preprocessor}{\#define\ \_\_FSI\_TC\_CEL\_TO\_RA(value)\ \ \ \ \ (((value)\ +\ 273.15)\ *\ 9.0\ /\ 5.0)}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00026}00026\ \textcolor{comment}{//\ Others\ to\ Celcius}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00027}\doxymbox{\hyperlink{FSI__temperatureConverter_8h_af3c95b6196f59322328be76f69c59951}{00027}}\ \textcolor{preprocessor}{\#define\ \_\_FSI\_TC\_CEL\_FROM\_C(value)\ \ \ \ (value)}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00028}\doxymbox{\hyperlink{FSI__temperatureConverter_8h_ab6545bfd018f75702e35f396d8d5e770}{00028}}\ \textcolor{preprocessor}{\#define\ \_\_FSI\_TC\_CEL\_FROM\_F(value)\ \ \ \ (((value)\ -\/\ 32.0)\ *\ 5.0\ /\ 9.0)}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00029}\doxymbox{\hyperlink{FSI__temperatureConverter_8h_a67ef9c32ed33d539a95d811049fdda3a}{00029}}\ \textcolor{preprocessor}{\#define\ \_\_FSI\_TC\_CEL\_FROM\_K(value)\ \ \ \ ((value)\ -\/\ 273.15)}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00030}\doxymbox{\hyperlink{FSI__temperatureConverter_8h_a6dcd96eb8642f4466614b1dc212d9bf9}{00030}}\ \textcolor{preprocessor}{\#define\ \_\_FSI\_TC\_CEL\_FROM\_RE(value)\ \ \ ((value)\ *\ 5.0\ /\ 4.0)}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00031}\doxymbox{\hyperlink{FSI__temperatureConverter_8h_af73b75586b7bdb2579ab6e9c7f71ecf6}{00031}}\ \textcolor{preprocessor}{\#define\ \_\_FSI\_TC\_CEL\_FROM\_RA(value)\ \ \ (((value)\ -\/\ 491.67)\ *\ 5.0\ /\ 9.0)}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00032}00032\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00033}00033\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00034}00034\ \textcolor{comment}{\ *\ @brief\ Convert\ Celcius\ to\ \`{}from`\ as\ a\ double}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00035}00035\ \textcolor{comment}{\ *\ @param\ from\ Convert\ to\ from\ celcius}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00036}00036\ \textcolor{comment}{\ *\ @param\ to\ The\ value\ of\ the\ temperature}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00037}00037\ \textcolor{comment}{\ *\ @return\ The\ exact\ converted\ temperature}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00038}00038\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00039}00039\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{FSI__temperatureConverter_8h_aafde95eb428450f7515b36decef7b59d}{FSI\_temperatureConvertCelTo}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *from,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ to);}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00040}00040\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00041}00041\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00042}00042\ \textcolor{comment}{\ *\ @brief\ Convert\ from\ \`{}from`\ to\ Celcius\ as\ a\ double}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00043}00043\ \textcolor{comment}{\ *\ @param\ from\ The\ value\ of\ the\ temperature}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00044}00044\ \textcolor{comment}{\ *\ @param\ to\ From\ celcius\ to\ the\ temperature}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00045}00045\ \textcolor{comment}{\ *\ @return\ The\ exact\ converted\ temperature}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00046}00046\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00047}00047\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{FSI__temperatureConverter_8h_a39b05ae287af83bc12cb5c8442cbdee1}{FSI\_temperatureConvertCelFrom}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *to,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ from);}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00049}00049\ \doxymbox{\hyperlink{FSI__temperatureConverter_8h_aeec1c9abf519c96d40ccf05811fd33ef}{\_\_FSI\_DIRUTILS\_TC\_CPP\_CLOSE}}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00051}00051\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ INCLUDE\_TEMPERATURE\_FSI\_TEMPERATURECONVERTER\_H\_}}
+\DoxyCodeLine{\Hypertarget{FSI__temperatureConverter_8h_source_l00052}00052\ }
+
+\end{DoxyCode}

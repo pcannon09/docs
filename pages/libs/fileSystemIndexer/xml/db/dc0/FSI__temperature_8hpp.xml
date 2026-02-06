@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="db/dc0/FSI__temperature_8hpp" kind="file" language="C++">
+    <compoundname>FSI_temperature.hpp</compoundname>
+    <includes local="no">string</includes>
+    <includedby refid="db/d8b/FSI__temperature_8cpp" local="yes">src/modules/temperature/FSI_temperature.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>inc/fsi/modules/temperature/FSI_temperature.hpp</label>
+        <link refid="db/dc0/FSI__temperature_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>inc/fsi/modules/temperature/FSI_temperature.hpp</label>
+        <link refid="db/dc0/FSI__temperature_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/modules/temperature/FSI_temperature.cpp</label>
+        <link refid="db/d8b/FSI__temperature_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="da/d46/namespacefsi">fsi</innernamespace>
+    <innernamespace refid="d2/de8/namespacefsi_1_1modules">fsi::modules</innernamespace>
+    <innernamespace refid="de/d44/namespacefsi_1_1modules_1_1tc">fsi::modules::tc</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>INCLUDE_TEMPERATURE_FSI_TEMPERATURE_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_TEMPERATURE_FSI_TEMPERATURE_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d2/de8/namespacefsi_1_1modules" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="de/d44/namespacefsi_1_1modules_1_1tc" kindref="compound">fsi::modules::tc</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Wrapper<sp/>for<sp/>`FSI_temperatureConvertCelTo()`<sp/>function</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>from<sp/>Convert<sp/>to<sp/>from<sp/>Celcius</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>to<sp/>The<sp/>value<sp/>of<sp/>the<sp/>temperature</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>The<sp/>exact<sp/>temperature</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="de/d44/namespacefsi_1_1modules_1_1tc_1abbdea450d8dae5c95298bdd261a12da1" kindref="member">convertTo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;from,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;to);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Wrapper<sp/>for<sp/>`FSI_temperatureConvertCelFrom()`<sp/>function</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>from<sp/>The<sp/>value<sp/>of<sp/>the<sp/>temperature</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>to<sp/>From<sp/>Celcius<sp/>to<sp/>the<sp/>temperature</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@return<sp/>The<sp/>exact<sp/>temperature</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="de/d44/namespacefsi_1_1modules_1_1tc_1a37c21a89ea28cc2a16ad463cb908e604" kindref="member">convertFrom</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;to,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;from);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>INCLUDE_TEMPERATURE_FSI_TEMPERATURE_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/fsi/modules/temperature/FSI_temperature.hpp"/>
+  </compounddef>
+</doxygen>

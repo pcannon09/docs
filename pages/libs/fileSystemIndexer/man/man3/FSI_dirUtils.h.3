@@ -1,0 +1,161 @@
+.TH "inc/fsi/core/FSI_dirUtils.h" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/fsi/core/FSI_dirUtils.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include '\&.\&./FSIpredefines\&.h'\fP
+.br
+\fR#include <string\&.h>\fP
+.br
+\fR#include 'cvec/cvec\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBFSI_DirData\fP"
+.br
+.ti -1c
+.RI "struct \fBFSI_EntryData\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__FSI_DIRUTILS_CPP_CLOSE\fP   }"
+.br
+.ti -1c
+.RI "#define \fB__FSI_DIRUTILS_CPP_OPEN\fP   extern 'C' {"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct FSI_DirData \fBFSI_DirData\fP"
+.br
+.ti -1c
+.RI "typedef struct FSI_EntryData \fBFSI_EntryData\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBFSI_Type\fP \fBFSI_Type\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBFSI_Type\fP { \fBFSI_FILE\fP, \fBFSI_DIR\fP, \fBFSI_SYMLINK\fP, \fBFSI_OTHER\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfsi_walk\fP (CVEC *vec, const char *path)"
+.br
+.RI "Walk to every directory and file and set \fRvec\fP to a CVEC value\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __FSI_DIRUTILS_CPP_CLOSE   }"
+
+.PP
+Definition at line \fB6\fP of file \fBFSI_dirUtils\&.h\fP\&.
+.SS "#define __FSI_DIRUTILS_CPP_OPEN   extern 'C' {"
+
+.PP
+Definition at line \fB5\fP of file \fBFSI_dirUtils\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct FSI_DirData FSI_DirData"
+
+.SS "typedef struct FSI_EntryData FSI_EntryData"
+
+.SS "typedef enum \fBFSI_Type\fP \fBFSI_Type\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBFSI_Type\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIFSI_FILE \fP
+.TP
+\f(BIFSI_DIR \fP
+.TP
+\f(BIFSI_SYMLINK \fP
+.TP
+\f(BIFSI_OTHER \fP
+.PP
+Definition at line \fB20\fP of file \fBFSI_dirUtils\&.h\fP\&.
+.nf
+21 {
+22     FSI_FILE,
+23     FSI_DIR,
+24     FSI_SYMLINK,
+25     FSI_OTHER
+26 } FSI_Type;
+.PP
+.fi
+
+.SH "Function Documentation"
+.PP 
+.SS "void fsi_walk (CVEC * vec, const char * path)"
+
+.PP
+Walk to every directory and file and set \fRvec\fP to a CVEC value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP The vector to set data to 
+.br
+\fIpath\fP Path to walk to all its sub-dirs 
+.RE
+.PP
+
+.PP
+Definition at line \fB12\fP of file \fBFSI_dirUtils\&.c\fP\&.
+.nf
+13 {
+14     FSI_DirData dir;
+15     FSI_EntryData entry;
+16 
+17     if (!fsi_openDir(&dir, path))
+18         return;
+19 
+20     CSTR tmpPath = cstr_init();
+21 
+22     while (fsi_readDir(&dir, &entry))
+23     {
+24         cstr_set(&tmpPath, path);
+25         cstr_add(&tmpPath, "/");
+26         cstr_add(&tmpPath, entry\&.name);
+27 
+28         cvec_push(vec, const char*, CVEC_sys_strdup(tmpPath\&.data));
+29 
+30         if (entry\&.type == FSI_DIR)
+31             fsi_walk(vec, tmpPath\&.data);
+32     }
+33 
+34     cstr_destroy(&tmpPath);
+35 
+36     fsi_closeDir(&dir);
+37 }
+.PP
+.fi
+
+.PP
+References \fBfsi_closeDir()\fP, \fBFSI_DIR\fP, \fBfsi_openDir()\fP, \fBfsi_readDir()\fP, \fBfsi_walk()\fP, \fBFSI_EntryData::name\fP, and \fBFSI_EntryData::type\fP\&.
+.PP
+Referenced by \fBfsi::Indexer::__iteratePath()\fP, and \fBfsi_walk()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

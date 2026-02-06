@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_851c9bd9db9dafce19def83f93a91fd5" xml:lang="en-US">
+<title>inc/fsi Directory Reference</title>
+<indexterm><primary>inc/fsi Directory Reference</primary></indexterm>
+Directory dependency graph for fsi:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_851c9bd9db9dafce19def83f93a91fd5_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_be008c0ff192e9e32b338edefd7da0a9">core</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_eaec1fe2057bff26f2484a73ab02fa8b">lib</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_177d67048c27b1cc13d9211eccefee7f">modules</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_FSIpredefines_8h">FSIpredefines.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

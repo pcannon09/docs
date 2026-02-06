@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSI__temperatureConverter_8h_source" xml:lang="en-US">
+<title>FSI_temperatureConverter.h</title>
+<indexterm><primary>inc/fsi/modules/temperature/FSI_temperatureConverter.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_FSI__temperatureConverter_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;INCLUDE_TEMPERATURE_FSI_TEMPERATURECONVERTER_H_</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;INCLUDE_TEMPERATURE_FSI_TEMPERATURECONVERTER_H_</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00003"/>00003 
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00004"/>00004 <emphasis role="comment">//&#32;NOTES:</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00005"/>00005 <emphasis role="comment">//&#32;TC;&#32;In&#32;this&#32;context&#32;it&#32;means&#32;(&quot;Temperature&#32;Converter&quot;)</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00006"/>00006 
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00008"/><link linkend="_FSI__temperatureConverter_8h_1abe24e40b38c356759f83d93f8e89840b">00008</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__FSI_DIRUTILS_TC_CPP_OPEN&#32;&#32;&#32;&#32;&#32;&#32;&#32;extern&#32;&quot;C&quot;&#32;{</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00009"/><link linkend="_FSI__temperatureConverter_8h_1aeec1c9abf519c96d40ccf05811fd33ef">00009</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__FSI_DIRUTILS_TC_CPP_CLOSE&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__FSI_DIRUTILS_TC_CPP_OPEN</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__FSI_DIRUTILS_TC_CPP_CLOSE</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;__cplusplus</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00014"/>00014 
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00015"/>00015 <link linkend="_FSI__temperatureConverter_8h_1abe24e40b38c356759f83d93f8e89840b">__FSI_DIRUTILS_TC_CPP_OPEN</link>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00016"/>00016 
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00018"/>00018 
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00019"/>00019 <emphasis role="comment">//&#32;Celcius&#32;to&#32;others</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00020"/><link linkend="_FSI__temperatureConverter_8h_1afeadea79f323e1fa506ef564778ba0ca">00020</link> <emphasis role="preprocessor">#define&#32;__FSI_TC_CEL_TO_C(value)&#32;&#32;&#32;&#32;&#32;&#32;(value)</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00021"/><link linkend="_FSI__temperatureConverter_8h_1acd61e380f61f77ef0d5d2ff8da6362fd">00021</link> <emphasis role="preprocessor">#define&#32;__FSI_TC_CEL_TO_F(value)&#32;&#32;&#32;&#32;&#32;&#32;((value)&#32;*&#32;9.0&#32;/&#32;5.0&#32;+&#32;32.0)</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00022"/><link linkend="_FSI__temperatureConverter_8h_1af451dbedd0aea3ff1e584c4766eedbb5">00022</link> <emphasis role="preprocessor">#define&#32;__FSI_TC_CEL_TO_K(value)&#32;&#32;&#32;&#32;&#32;&#32;((value)&#32;+&#32;273.15)</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00023"/><link linkend="_FSI__temperatureConverter_8h_1a051d6a203331a736d5e5f328b1a69f4b">00023</link> <emphasis role="preprocessor">#define&#32;__FSI_TC_CEL_TO_RE(value)&#32;&#32;&#32;&#32;&#32;((value)&#32;*&#32;4.0&#32;/&#32;5.0)</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00024"/><link linkend="_FSI__temperatureConverter_8h_1a4d45c2cd654fc2c106349e7d8b6b0e7c">00024</link> <emphasis role="preprocessor">#define&#32;__FSI_TC_CEL_TO_RA(value)&#32;&#32;&#32;&#32;&#32;(((value)&#32;+&#32;273.15)&#32;*&#32;9.0&#32;/&#32;5.0)</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00025"/>00025 
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00026"/>00026 <emphasis role="comment">//&#32;Others&#32;to&#32;Celcius</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00027"/><link linkend="_FSI__temperatureConverter_8h_1af3c95b6196f59322328be76f69c59951">00027</link> <emphasis role="preprocessor">#define&#32;__FSI_TC_CEL_FROM_C(value)&#32;&#32;&#32;&#32;(value)</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00028"/><link linkend="_FSI__temperatureConverter_8h_1ab6545bfd018f75702e35f396d8d5e770">00028</link> <emphasis role="preprocessor">#define&#32;__FSI_TC_CEL_FROM_F(value)&#32;&#32;&#32;&#32;(((value)&#32;-&#32;32.0)&#32;*&#32;5.0&#32;/&#32;9.0)</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00029"/><link linkend="_FSI__temperatureConverter_8h_1a67ef9c32ed33d539a95d811049fdda3a">00029</link> <emphasis role="preprocessor">#define&#32;__FSI_TC_CEL_FROM_K(value)&#32;&#32;&#32;&#32;((value)&#32;-&#32;273.15)</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00030"/><link linkend="_FSI__temperatureConverter_8h_1a6dcd96eb8642f4466614b1dc212d9bf9">00030</link> <emphasis role="preprocessor">#define&#32;__FSI_TC_CEL_FROM_RE(value)&#32;&#32;&#32;((value)&#32;*&#32;5.0&#32;/&#32;4.0)</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00031"/><link linkend="_FSI__temperatureConverter_8h_1af73b75586b7bdb2579ab6e9c7f71ecf6">00031</link> <emphasis role="preprocessor">#define&#32;__FSI_TC_CEL_FROM_RA(value)&#32;&#32;&#32;(((value)&#32;-&#32;491.67)&#32;*&#32;5.0&#32;/&#32;9.0)</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00032"/>00032 <emphasis role="comment"></emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00033"/>00033 <emphasis role="comment">/**</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00034"/>00034 <emphasis role="comment">&#32;*&#32;@brief&#32;Convert&#32;Celcius&#32;to&#32;`from`&#32;as&#32;a&#32;double</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00035"/>00035 <emphasis role="comment">&#32;*&#32;@param&#32;from&#32;Convert&#32;to&#32;from&#32;celcius</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00036"/>00036 <emphasis role="comment">&#32;*&#32;@param&#32;to&#32;The&#32;value&#32;of&#32;the&#32;temperature</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00037"/>00037 <emphasis role="comment">&#32;*&#32;@return&#32;The&#32;exact&#32;converted&#32;temperature</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00038"/>00038 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00039"/>00039 <emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d">FSI_temperatureConvertCelTo</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*from,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;to);
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00040"/>00040 <emphasis role="comment"></emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00041"/>00041 <emphasis role="comment">/**</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00042"/>00042 <emphasis role="comment">&#32;*&#32;@brief&#32;Convert&#32;from&#32;`from`&#32;to&#32;Celcius&#32;as&#32;a&#32;double</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00043"/>00043 <emphasis role="comment">&#32;*&#32;@param&#32;from&#32;The&#32;value&#32;of&#32;the&#32;temperature</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00044"/>00044 <emphasis role="comment">&#32;*&#32;@param&#32;to&#32;From&#32;celcius&#32;to&#32;the&#32;temperature</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00045"/>00045 <emphasis role="comment">&#32;*&#32;@return&#32;The&#32;exact&#32;converted&#32;temperature</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00046"/>00046 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00047"/>00047 <emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1">FSI_temperatureConvertCelFrom</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*to,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;from);
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00048"/>00048 
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00049"/>00049 <link linkend="_FSI__temperatureConverter_8h_1aeec1c9abf519c96d40ccf05811fd33ef">__FSI_DIRUTILS_TC_CPP_CLOSE</link>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00050"/>00050 
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00051"/>00051 <emphasis role="preprocessor">#endif&#32;&#32;</emphasis><emphasis role="comment">//&#32;INCLUDE_TEMPERATURE_FSI_TEMPERATURECONVERTER_H_</emphasis>
+<anchor xml:id="_FSI__temperatureConverter_8h_source_1l00052"/>00052 
+</programlisting></section>

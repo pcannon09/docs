@@ -1,0 +1,79 @@
+.TH "fsi::modules::tc" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fsi::modules::tc
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBconvertFrom\fP (const std::string &to, const double &from)"
+.br
+.RI "Wrapper for \fR\fBFSI_temperatureConvertCelFrom()\fP\fP function\&. "
+.ti -1c
+.RI "double \fBconvertTo\fP (const std::string &from, const double &to)"
+.br
+.RI "Wrapper for \fR\fBFSI_temperatureConvertCelTo()\fP\fP function\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "double fsi::modules::tc::convertFrom (const std::string & to, const double & from)"
+
+.PP
+Wrapper for \fR\fBFSI_temperatureConvertCelFrom()\fP\fP function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfrom\fP The value of the temperature 
+.br
+\fIto\fP From Celcius to the temperature 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The exact temperature 
+.RE
+.PP
+
+.PP
+Definition at line \fB9\fP of file \fBFSI_temperature\&.cpp\fP\&.
+.nf
+10     { return FSI_temperatureConvertCelFrom(to\&.c_str(), from); }
+.PP
+.fi
+
+.PP
+References \fBFSI_temperatureConvertCelFrom()\fP\&.
+.SS "double fsi::modules::tc::convertTo (const std::string & from, const double & to)"
+
+.PP
+Wrapper for \fR\fBFSI_temperatureConvertCelTo()\fP\fP function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfrom\fP Convert to from Celcius 
+.br
+\fIto\fP The value of the temperature 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The exact temperature 
+.RE
+.PP
+
+.PP
+Definition at line \fB6\fP of file \fBFSI_temperature\&.cpp\fP\&.
+.nf
+7     { return FSI_temperatureConvertCelTo(from\&.c_str(), to); }
+.PP
+.fi
+
+.PP
+References \fBFSI_temperatureConvertCelTo()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

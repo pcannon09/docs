@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacefsi_1_1codes" xml:lang="en-US">
+<title>fsi::codes Namespace Reference</title>
+<indexterm><primary>fsi::codes</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>constexpr int <link linkend="_namespacefsi_1_1codes_1a141522bb6ab01bdab1888f51984bb08b">ERROR_ADDITION_FAIL</link> = 1</para>
+</listitem>
+            <listitem><para>constexpr int <link linkend="_namespacefsi_1_1codes_1ac2ba68f515a46e02eae9671750056860">ERROR_EMPTY_VALUE</link> = 4</para>
+</listitem>
+            <listitem><para>constexpr int <link linkend="_namespacefsi_1_1codes_1a94f1ddf1a0dccd865341cdc258614b91">ERROR_ERASE_FAIL</link> = 2</para>
+</listitem>
+            <listitem><para>constexpr int <link linkend="_namespacefsi_1_1codes_1a88198637504cbb63a06c76d7d0b7a1a7">ERROR_INVALID_PATH</link> = 3</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacefsi_1_1codes_1a141522bb6ab01bdab1888f51984bb08b"/><section>
+    <title>ERROR_ADDITION_FAIL</title>
+<indexterm><primary>ERROR_ADDITION_FAIL</primary><secondary>fsi::codes</secondary></indexterm>
+<indexterm><primary>fsi::codes</primary><secondary>ERROR_ADDITION_FAIL</secondary></indexterm>
+<para><computeroutput>int fsi::codes::ERROR_ADDITION_FAIL = 1<computeroutput>[constexpr]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00017">17</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00107">fsi::Indexer::addInfo()</link>.</para>
+</section>
+<anchor xml:id="_namespacefsi_1_1codes_1ac2ba68f515a46e02eae9671750056860"/><section>
+    <title>ERROR_EMPTY_VALUE</title>
+<indexterm><primary>ERROR_EMPTY_VALUE</primary><secondary>fsi::codes</secondary></indexterm>
+<indexterm><primary>fsi::codes</primary><secondary>ERROR_EMPTY_VALUE</secondary></indexterm>
+<para><computeroutput>int fsi::codes::ERROR_EMPTY_VALUE = 4<computeroutput>[constexpr]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00020">20</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00154">fsi::Indexer::removeInfo()</link>.</para>
+</section>
+<anchor xml:id="_namespacefsi_1_1codes_1a94f1ddf1a0dccd865341cdc258614b91"/><section>
+    <title>ERROR_ERASE_FAIL</title>
+<indexterm><primary>ERROR_ERASE_FAIL</primary><secondary>fsi::codes</secondary></indexterm>
+<indexterm><primary>fsi::codes</primary><secondary>ERROR_ERASE_FAIL</secondary></indexterm>
+<para><computeroutput>int fsi::codes::ERROR_ERASE_FAIL = 2<computeroutput>[constexpr]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00018">18</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+</section>
+<anchor xml:id="_namespacefsi_1_1codes_1a88198637504cbb63a06c76d7d0b7a1a7"/><section>
+    <title>ERROR_INVALID_PATH</title>
+<indexterm><primary>ERROR_INVALID_PATH</primary><secondary>fsi::codes</secondary></indexterm>
+<indexterm><primary>fsi::codes</primary><secondary>ERROR_INVALID_PATH</secondary></indexterm>
+<para><computeroutput>int fsi::codes::ERROR_INVALID_PATH = 3<computeroutput>[constexpr]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00019">19</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00107">fsi::Indexer::addInfo()</link>.</para>
+</section>
+</section>
+</section>

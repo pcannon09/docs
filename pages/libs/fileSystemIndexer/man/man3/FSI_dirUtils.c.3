@@ -1,0 +1,78 @@
+.TH "src/core/FSI_dirUtils.c" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/core/FSI_dirUtils.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'cstr/cstr\&.h'\fP
+.br
+\fR#include '\&.\&./\&.\&./inc/fsi/FSIpredefines\&.h'\fP
+.br
+\fR#include '\&.\&./\&.\&./inc/fsi/core/FSI_dirUtils\&.h'\fP
+.br
+\fR#include '\&.\&./\&.\&./inc/fsi/core/interfaces/FSI_dirUtils_posix\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfsi_walk\fP (CVEC *vec, const char *path)"
+.br
+.RI "Walk to every directory and file and set \fRvec\fP to a CVEC value\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void fsi_walk (CVEC * vec, const char * path)"
+
+.PP
+Walk to every directory and file and set \fRvec\fP to a CVEC value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP The vector to set data to 
+.br
+\fIpath\fP Path to walk to all its sub-dirs 
+.RE
+.PP
+
+.PP
+Definition at line \fB12\fP of file \fBFSI_dirUtils\&.c\fP\&.
+.nf
+13 {
+14     FSI_DirData dir;
+15     FSI_EntryData entry;
+16 
+17     if (!fsi_openDir(&dir, path))
+18         return;
+19 
+20     CSTR tmpPath = cstr_init();
+21 
+22     while (fsi_readDir(&dir, &entry))
+23     {
+24         cstr_set(&tmpPath, path);
+25         cstr_add(&tmpPath, "/");
+26         cstr_add(&tmpPath, entry\&.name);
+27 
+28         cvec_push(vec, const char*, CVEC_sys_strdup(tmpPath\&.data));
+29 
+30         if (entry\&.type == FSI_DIR)
+31             fsi_walk(vec, tmpPath\&.data);
+32     }
+33 
+34     cstr_destroy(&tmpPath);
+35 
+36     fsi_closeDir(&dir);
+37 }
+.PP
+.fi
+
+.PP
+References \fBfsi_closeDir()\fP, \fBFSI_DIR\fP, \fBfsi_openDir()\fP, \fBfsi_readDir()\fP, \fBfsi_walk()\fP, \fBFSI_EntryData::name\fP, and \fBFSI_EntryData::type\fP\&.
+.PP
+Referenced by \fBfsi::Indexer::__iteratePath()\fP, and \fBfsi_walk()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

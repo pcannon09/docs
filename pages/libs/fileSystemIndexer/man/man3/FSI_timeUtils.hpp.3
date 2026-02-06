@@ -1,0 +1,66 @@
+.TH "inc/fsi/core/FSI_timeUtils.hpp" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/fsi/core/FSI_timeUtils.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <filesystem>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBfsi::utils::TimeUtils_DateTime\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBfsi\fP"
+.br
+.ti -1c
+.RI "namespace \fBfsi::utils\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__FSI_LOCALTIME\fP(_tt,  _tm)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct fsi::utils::TimeUtils_DateTime \fBfsi::utils::TimeUtils_DateTime\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTimeUtils_DateTime\fP \fBfsi::utils::fsClockDataToDT\fP (const fs::file_time_type &time)"
+.br
+.RI "Set std::filesystem clock data to an actual usable Date and Time format\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __FSI_LOCALTIME( _tt,  _tm)"
+\fBValue:\fP
+.nf
+localtime_r(_tt, _tm)
+.PP
+.fi
+
+.PP
+Definition at line \fB11\fP of file \fBFSI_timeUtils\&.hpp\fP\&.
+.PP
+Referenced by \fBfsi::utils::fsClockDataToDT()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

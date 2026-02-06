@@ -1,0 +1,113 @@
+.TH "inc/fsi/lib/FSI_Indexer.hpp" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/fsi/lib/FSI_Indexer.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <string>\fP
+.br
+\fR#include <vector>\fP
+.br
+\fR#include '\&.\&./core/FSI_timeUtils\&.hpp'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBfsi::Indexer\fP"
+.br
+.ti -1c
+.RI "struct \fBfsi::IndexerError\fP"
+.br
+.ti -1c
+.RI "struct \fBfsi::IndexerFoundInfo\fP"
+.br
+.ti -1c
+.RI "struct \fBfsi::IndexerInfo\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBfsi\fP"
+.br
+.ti -1c
+.RI "namespace \fBfsi::codes\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__FSI_INDEXERERR_CHECK\fP(e)"
+.br
+.ti -1c
+.RI "#define \fB__FSI_SUCCESS\fP   0"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct fsi::IndexerError \fBfsi::IndexerError\fP"
+.br
+.ti -1c
+.RI "typedef struct fsi::IndexerFoundInfo \fBfsi::IndexerFoundInfo\fP"
+.br
+.ti -1c
+.RI "typedef struct fsi::IndexerInfo \fBfsi::IndexerInfo\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum class \fBfsi::IndexerPathType\fP { \fBfsi::Directory\fP, \fBfsi::File\fP, \fBfsi::SymLink\fP }"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "constexpr int \fBfsi::codes::ERROR_ADDITION_FAIL\fP = 1"
+.br
+.ti -1c
+.RI "constexpr int \fBfsi::codes::ERROR_EMPTY_VALUE\fP = 4"
+.br
+.ti -1c
+.RI "constexpr int \fBfsi::codes::ERROR_ERASE_FAIL\fP = 2"
+.br
+.ti -1c
+.RI "constexpr int \fBfsi::codes::ERROR_INVALID_PATH\fP = 3"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __FSI_INDEXERERR_CHECK( e)"
+\fBValue:\fP
+.nf
+(e\&.raise || e\&.fatal) && e\&.code != __FSI_SUCCESS
+.PP
+.fi
+
+.PP
+Definition at line \fB10\fP of file \fBFSI_Indexer\&.hpp\fP\&.
+.nf
+10 #define __FSI_INDEXERERR_CHECK(e) \\
+11     (e\&.raise || e\&.fatal) && e\&.code != __FSI_SUCCESS
+.PP
+.fi
+
+.PP
+Referenced by \fBfsi::Indexer::addExtendedInfo()\fP\&.
+.SS "#define __FSI_SUCCESS   0"
+
+.PP
+Definition at line \fB9\fP of file \fBFSI_Indexer\&.hpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

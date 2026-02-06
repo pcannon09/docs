@@ -1,0 +1,96 @@
+\doxysection{src/\+core/\+\+FSI\+\_\+dir\+Utils.c File Reference}
+\hypertarget{FSI__dirUtils_8c}{}\label{FSI__dirUtils_8c}\index{src/core/FSI\_dirUtils.c@{src/core/FSI\_dirUtils.c}}
+{\ttfamily \+\#include "{}cstr/\+cstr.\+h"{}}\newline
+{\ttfamily \+\#include "{}../\+../\+inc/\+fsi/\+\+FSIpredefines.\+h"{}}\newline
+{\ttfamily \+\#include "{}../\+../\+inc/\+fsi/\+core/\+\+FSI\+\_\+dir\+Utils.\+h"{}}\newline
+{\ttfamily \+\#include "{}../\+../\+inc/\+fsi/\+core/\+interfaces/\+\+FSI\+\_\+dir\+Utils\+\_\+posix.\+h"{}}\newline
+Include dependency graph for FSI\+\_\+dir\+Utils.\+c:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/dba/FSI__dirUtils_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{FSI__dirUtils_8c_a3bc7da82fe7b1e798ee4b6d018534946}{fsi\+\_\+walk}} (CVEC \texorpdfstring{$\ast$}{*}vec, const char \texorpdfstring{$\ast$}{*}path)
+\begin{DoxyCompactList}\small\item\em Walk to every directory and file and set {\ttfamily vec} to a CVEC value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{FSI__dirUtils_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{FSI__dirUtils_8c_a3bc7da82fe7b1e798ee4b6d018534946}\index{FSI\_dirUtils.c@{FSI\_dirUtils.c}!fsi\_walk@{fsi\_walk}}
+\index{fsi\_walk@{fsi\_walk}!FSI\_dirUtils.c@{FSI\_dirUtils.c}}
+\doxysubsubsection{\texorpdfstring{fsi\_walk()}{fsi\_walk()}}
+{\footnotesize\ttfamily \label{FSI__dirUtils_8c_a3bc7da82fe7b1e798ee4b6d018534946} 
+void fsi\+\_\+walk (\begin{DoxyParamCaption}\item[{CVEC \texorpdfstring{$\ast$}{*}}]{vec}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Walk to every directory and file and set {\ttfamily vec} to a CVEC value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The vector to set data to \\
+\hline
+{\em path} & Path to walk to all its sub-\/dirs \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__dirUtils_8c_source_l00012}{12}} of file \doxymbox{\hyperlink{FSI__dirUtils_8c_source}{FSI\+\_\+dir\+Utils.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \doxymbox{\hyperlink{structFSI__DirData}{FSI\_DirData}}\ dir;}
+\DoxyCodeLine{00015\ \ \ \ \ \doxymbox{\hyperlink{structFSI__EntryData}{FSI\_EntryData}}\ entry;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a1c15e434435c62f17b15a34877bd60bd}{fsi\_openDir}}(\&dir,\ path))}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ CSTR\ tmpPath\ =\ cstr\_init();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{while}\ (\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_acb473fa7940b3c89aa11845436bbae8f}{fsi\_readDir}}(\&dir,\ \&entry))}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ cstr\_set(\&tmpPath,\ path);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ cstr\_add(\&tmpPath,\ \textcolor{stringliteral}{"{}/"{}});}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ cstr\_add(\&tmpPath,\ entry.\doxymbox{\hyperlink{structFSI__EntryData_ad540a33418e7055d0cd7a582146aed10}{name}});}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ cvec\_push(vec,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\ CVEC\_sys\_strdup(tmpPath.data));}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entry.\doxymbox{\hyperlink{structFSI__EntryData_aae303e170665a972cc52c708470a2b27}{type}}\ ==\ \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}})}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{FSI__dirUtils_8c_a3bc7da82fe7b1e798ee4b6d018534946}{fsi\_walk}}(vec,\ tmpPath.data);}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ cstr\_destroy(\&tmpPath);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a07bb8fc8aa9e6ea91c2f2e65425e03e1}{fsi\_closeDir}}(\&dir);}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source_l00075}{fsi\+\_\+close\+Dir()}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00023}{FSI\+\_\+\+DIR}}, \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source_l00014}{fsi\+\_\+open\+Dir()}}, \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source_l00044}{fsi\+\_\+read\+Dir()}}, \doxymbox{\hyperlink{FSI__dirUtils_8c_source_l00012}{fsi\+\_\+walk()}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00035}{FSI\+\_\+\+Entry\+Data::\+name}}, and \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00037}{FSI\+\_\+\+Entry\+Data::\+type}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00026}{fsi::\+\+Indexer::\+\+\_\+\+\_\+iterate\+Path()}}, and \doxymbox{\hyperlink{FSI__dirUtils_8c_source_l00012}{fsi\+\_\+walk()}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{d6/d8a/FSI__dirUtils_8c_a3bc7da82fe7b1e798ee4b6d018534946_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d8a/FSI__dirUtils_8c_a3bc7da82fe7b1e798ee4b6d018534946_icgraph}
+\end{center}
+\end{figure}

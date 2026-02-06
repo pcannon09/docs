@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="db/da6/structfsi_1_1IndexerFoundInfo" kind="struct" language="C++" prot="public">
+    <compoundname>fsi::IndexerFoundInfo</compoundname>
+    <includes refid="d8/d6f/FSI__Indexer_8hpp" local="no">FSI_Indexer.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="db/da6/structfsi_1_1IndexerFoundInfo_1a3477c11915ceb9f099a7fc84e37913f1" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string fsi::IndexerFoundInfo::extension</definition>
+        <argsstring></argsstring>
+        <name>extension</name>
+        <qualifiedname>fsi::IndexerFoundInfo::extension</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="34" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/da6/structfsi_1_1IndexerFoundInfo_1a689841b7cae9a7dc1dbd0a0f0afc10c0" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string fsi::IndexerFoundInfo::extType</definition>
+        <argsstring></argsstring>
+        <name>extType</name>
+        <qualifiedname>fsi::IndexerFoundInfo::extType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="35" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/da6/structfsi_1_1IndexerFoundInfo_1a12d34a2de8d49b37707745903e5f7382" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime" kindref="compound">utils::TimeUtils_DateTime</ref></type>
+        <definition>utils::TimeUtils_DateTime fsi::IndexerFoundInfo::lastModDT</definition>
+        <argsstring></argsstring>
+        <name>lastModDT</name>
+        <qualifiedname>fsi::IndexerFoundInfo::lastModDT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="37" column="27" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/da6/structfsi_1_1IndexerFoundInfo_1a16ff738a7eaa12857f3c9fea4c551187" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string fsi::IndexerFoundInfo::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>fsi::IndexerFoundInfo::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="33" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/da6/structfsi_1_1IndexerFoundInfo_1a7ef33d4ef2854d39adf0963f5e8c3c53" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string fsi::IndexerFoundInfo::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <qualifiedname>fsi::IndexerFoundInfo::path</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="32" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>fsi::IndexerFoundInfo</label>
+        <link refid="db/da6/structfsi_1_1IndexerFoundInfo"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>extType</edgelabel>
+          <edgelabel>extension</edgelabel>
+          <edgelabel>name</edgelabel>
+          <edgelabel>path</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>lastModDT</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>fsi::utils::TimeUtils_DateTime</label>
+        <link refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime"/>
+      </node>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="inc/fsi/lib/FSI_Indexer.hpp" line="30" column="1" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="31" bodyend="38"/>
+    <listofallmembers>
+      <member refid="db/da6/structfsi_1_1IndexerFoundInfo_1a3477c11915ceb9f099a7fc84e37913f1" prot="public" virt="non-virtual"><scope>fsi::IndexerFoundInfo</scope><name>extension</name></member>
+      <member refid="db/da6/structfsi_1_1IndexerFoundInfo_1a689841b7cae9a7dc1dbd0a0f0afc10c0" prot="public" virt="non-virtual"><scope>fsi::IndexerFoundInfo</scope><name>extType</name></member>
+      <member refid="db/da6/structfsi_1_1IndexerFoundInfo_1a12d34a2de8d49b37707745903e5f7382" prot="public" virt="non-virtual"><scope>fsi::IndexerFoundInfo</scope><name>lastModDT</name></member>
+      <member refid="db/da6/structfsi_1_1IndexerFoundInfo_1a16ff738a7eaa12857f3c9fea4c551187" prot="public" virt="non-virtual"><scope>fsi::IndexerFoundInfo</scope><name>name</name></member>
+      <member refid="db/da6/structfsi_1_1IndexerFoundInfo_1a7ef33d4ef2854d39adf0963f5e8c3c53" prot="public" virt="non-virtual"><scope>fsi::IndexerFoundInfo</scope><name>path</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

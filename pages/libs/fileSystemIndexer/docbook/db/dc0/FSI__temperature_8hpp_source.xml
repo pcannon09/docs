@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSI__temperature_8hpp_source" xml:lang="en-US">
+<title>FSI_temperature.hpp</title>
+<indexterm><primary>inc/fsi/modules/temperature/FSI_temperature.hpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_FSI__temperature_8hpp_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;INCLUDE_TEMPERATURE_FSI_TEMPERATURE_HPP_</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;INCLUDE_TEMPERATURE_FSI_TEMPERATURE_HPP_</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00003"/>00003 
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00005"/>00005 
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00006"/><link linkend="_namespacefsi_1_1modules">00006</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacefsi_1_1modules_1_1tc">fsi::modules::tc</link>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00007"/>00007 {<emphasis role="comment"></emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00008"/>00008 <emphasis role="comment">&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00009"/>00009 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Wrapper&#32;for&#32;`FSI_temperatureConvertCelTo()`&#32;function</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00010"/>00010 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;from&#32;Convert&#32;to&#32;from&#32;Celcius</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00011"/>00011 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;to&#32;The&#32;value&#32;of&#32;the&#32;temperature</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00012"/>00012 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;The&#32;exact&#32;temperature</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00013"/>00013 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_namespacefsi_1_1modules_1_1tc_1abbdea450d8dae5c95298bdd261a12da1">convertTo</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;from,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;&amp;to);
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00015"/>00015 <emphasis role="comment"></emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00016"/>00016 <emphasis role="comment">&#32;&#32;&#32;&#32;/**</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00017"/>00017 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Wrapper&#32;for&#32;`FSI_temperatureConvertCelFrom()`&#32;function</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00018"/>00018 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;from&#32;The&#32;value&#32;of&#32;the&#32;temperature</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00019"/>00019 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;to&#32;From&#32;Celcius&#32;to&#32;the&#32;temperature</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00020"/>00020 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;The&#32;exact&#32;temperature</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00021"/>00021 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_namespacefsi_1_1modules_1_1tc_1a37c21a89ea28cc2a16ad463cb908e604">convertFrom</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;to,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;&amp;from);
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00023"/>00023 }
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00024"/>00024 
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00025"/>00025 <emphasis role="preprocessor">#endif&#32;&#32;</emphasis><emphasis role="comment">//&#32;INCLUDE_TEMPERATURE_FSI_TEMPERATURE_HPP_</emphasis>
+<anchor xml:id="_FSI__temperature_8hpp_source_1l00026"/>00026 
+</programlisting></section>

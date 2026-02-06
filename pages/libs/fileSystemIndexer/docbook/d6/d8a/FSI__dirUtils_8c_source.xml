@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSI__dirUtils_8c_source" xml:lang="en-US">
+<title>FSI_dirUtils.c</title>
+<indexterm><primary>src/core/FSI_dirUtils.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_FSI__dirUtils_8c_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;cstr/cstr.h&quot;</emphasis>
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00002"/>00002 
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_FSIpredefines_8h">../../inc/fsi/FSIpredefines.h</link>&quot;</emphasis>
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_FSI__dirUtils_8h">../../inc/fsi/core/FSI_dirUtils.h</link>&quot;</emphasis>
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00005"/>00005 
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00006"/>00006 <emphasis role="preprocessor">#ifdef&#32;__FSI_OS_WIN32</emphasis>
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00007"/>00007 <emphasis role="preprocessor">#&#32;&#32;&#32;include&#32;&quot;<link linkend="_FSI__dirUtils__windows_8h">../../inc/fsi/core/interfaces/FSI_dirUtils_windows.h</link>&quot;</emphasis>
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00008"/>00008 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00009"/>00009 <emphasis role="preprocessor">#&#32;&#32;&#32;include&#32;&quot;<link linkend="_FSI__dirUtils__posix_8h">../../inc/fsi/core/interfaces/FSI_dirUtils_posix.h</link>&quot;</emphasis>
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00010"/>00010 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;__FSI_OS_WIN32</emphasis>
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00011"/>00011 
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00012"/><link linkend="_FSI__dirUtils_8h_1a3bc7da82fe7b1e798ee4b6d018534946">00012</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_FSI__dirUtils_8c_1a3bc7da82fe7b1e798ee4b6d018534946">fsi_walk</link>(CVEC&#32;*vec,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*path)
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00013"/>00013 {
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<link linkend="_structFSI__DirData">FSI_DirData</link>&#32;dir;
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<link linkend="_structFSI__EntryData">FSI_EntryData</link>&#32;entry;
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00016"/>00016 
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd">fsi_openDir</link>(&amp;dir,&#32;path))
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00019"/>00019 
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00020"/>00020 &#32;&#32;&#32;&#32;CSTR&#32;tmpPath&#32;=&#32;cstr_init();
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00021"/>00021 
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(<link linkend="_FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f">fsi_readDir</link>(&amp;dir,&#32;&amp;entry))
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00023"/>00023 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_set(&amp;tmpPath,&#32;path);
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpPath,&#32;<emphasis role="stringliteral">&quot;/&quot;</emphasis>);
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpPath,&#32;entry.<link linkend="_structFSI__EntryData_1ad540a33418e7055d0cd7a582146aed10">name</link>);
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00027"/>00027 
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cvec_push(vec,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*,&#32;CVEC_sys_strdup(tmpPath.data));
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00029"/>00029 
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(entry.<link linkend="_structFSI__EntryData_1aae303e170665a972cc52c708470a2b27">type</link>&#32;==&#32;<link linkend="_FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</link>)
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_FSI__dirUtils_8c_1a3bc7da82fe7b1e798ee4b6d018534946">fsi_walk</link>(vec,&#32;tmpPath.data);
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00032"/>00032 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00033"/>00033 
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00034"/>00034 &#32;&#32;&#32;&#32;cstr_destroy(&amp;tmpPath);
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00035"/>00035 
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<link linkend="_FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1">fsi_closeDir</link>(&amp;dir);
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00037"/>00037 }
+<anchor xml:id="_FSI__dirUtils_8c_source_1l00038"/>00038 
+</programlisting></section>

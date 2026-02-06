@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="da/df3/namespacefsi_1_1utils" kind="namespace" language="C++">
+    <compoundname>fsi::utils</compoundname>
+    <innerclass refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime" prot="public">fsi::utils::TimeUtils_DateTime</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="da/df3/namespacefsi_1_1utils_1a49d908b3b85451a5bf2faa44272c72c0" prot="public" static="no">
+        <type>struct fsi::utils::TimeUtils_DateTime</type>
+        <definition>typedef struct fsi::utils::TimeUtils_DateTime fsi::utils::TimeUtils_DateTime</definition>
+        <argsstring></argsstring>
+        <name>TimeUtils_DateTime</name>
+        <qualifiedname>fsi::utils::TimeUtils_DateTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/FSI_timeUtils.hpp" line="26" column="20"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="da/df3/namespacefsi_1_1utils_1ae0fd58fdf5e153ce89499a2bad2a8974" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime" kindref="compound">TimeUtils_DateTime</ref></type>
+        <definition>TimeUtils_DateTime fsi::utils::fsClockDataToDT</definition>
+        <argsstring>(const fs::file_time_type &amp;time)</argsstring>
+        <name>fsClockDataToDT</name>
+        <qualifiedname>fsi::utils::fsClockDataToDT</qualifiedname>
+        <param>
+          <type>const fs::file_time_type &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Set std::filesystem clock data to an actual usable Date and Time format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get <computeroutput>std::filesystem::file_time_type</computeroutput> that is to be converted to a usuable time format </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Date-Time object to be used </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/FSI_timeUtils.cpp" line="8" column="20" bodyfile="src/core/FSI_timeUtils.cpp" bodystart="8" bodyend="36" declfile="inc/fsi/core/FSI_timeUtils.hpp" declline="33" declcolumn="20"/>
+        <references refid="d3/dcb/FSI__timeUtils_8hpp_1ab5d97f02701e4d2a93fdea536534621e" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="11">__FSI_LOCALTIME</references>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a340cd86b315b94e24ba58f047a05d977" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="25">fsi::utils::TimeUtils_DateTime::day</references>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a8135eb12c7d645962892d79939767f2b" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="18">fsi::utils::TimeUtils_DateTime::hour</references>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a224f4265be90b19828d9e999ceba56e4" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="19">fsi::utils::TimeUtils_DateTime::min</references>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a4c79e8bac795772430a0c7624e01f3c8" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="24">fsi::utils::TimeUtils_DateTime::month</references>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a773404a9ff6e5c0a13eded6429ff26dd" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="21">fsi::utils::TimeUtils_DateTime::ms</references>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a53f747e0ef76ed43ec51c4bdc844fd43" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="20">fsi::utils::TimeUtils_DateTime::sec</references>
+        <references refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a9169ed2e239eac50365d363b9365b704" compoundref="d3/dcb/FSI__timeUtils_8hpp" startline="23">fsi::utils::TimeUtils_DateTime::year</references>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a536321b24430696e730bc71f35c9ed0a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="184" endline="189">fsi::Indexer::getFileDTInfo</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/fsi/core/FSI_timeUtils.hpp" line="14" column="1"/>
+  </compounddef>
+</doxygen>

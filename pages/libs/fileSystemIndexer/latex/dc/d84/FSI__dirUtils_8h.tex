@@ -1,0 +1,233 @@
+\doxysection{inc/\+fsi/\+core/\+\+FSI\+\_\+dir\+Utils.h File Reference}
+\hypertarget{FSI__dirUtils_8h}{}\label{FSI__dirUtils_8h}\index{inc/fsi/core/FSI\_dirUtils.h@{inc/fsi/core/FSI\_dirUtils.h}}
+{\ttfamily \+\#include "{}../\+\+FSIpredefines.\+h"{}}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include "{}cvec/\+cvec.\+h"{}}\newline
+Include dependency graph for FSI\+\_\+dir\+Utils.\+h:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{dd/dbc/FSI__dirUtils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d64/FSI__dirUtils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structFSI__DirData}{FSI\+\_\+\+Dir\+Data}}
+\item 
+struct \doxymbox{\hyperlink{structFSI__EntryData}{FSI\+\_\+\+Entry\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{FSI__dirUtils_8h_a25f893df9ebe7ec475499f28f3673918}{\+\_\+\+\_\+\+FSI\+\_\+\+DIRUTILS\+\_\+\+CPP\+\_\+\+CLOSE}}~\}
+\item 
+\+\#define \doxymbox{\hyperlink{FSI__dirUtils_8h_a80b32c6ce26d659377a18ad665438b2a}{\+\_\+\+\_\+\+FSI\+\_\+\+DIRUTILS\+\_\+\+CPP\+\_\+\+OPEN}}~extern "{}C"{} \{
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct FSI\+\_\+\+Dir\+Data \doxymbox{\hyperlink{FSI__dirUtils_8h_ad39412d571379a5f201181f21dcd0313}{FSI\+\_\+\+Dir\+Data}}
+\item 
+typedef struct FSI\+\_\+\+Entry\+Data \doxymbox{\hyperlink{FSI__dirUtils_8h_aad5302271e8d3cc39f711397abe5b957}{FSI\+\_\+\+Entry\+Data}}
+\item 
+typedef enum \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0}{FSI\+\_\+\+Type}} \doxymbox{\hyperlink{FSI__dirUtils_8h_af91db6d6c004b3548000fa4f76a94cf9}{FSI\+\_\+\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0}{FSI\+\_\+\+Type}} \{ \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1}{FSI\+\_\+\+FILE}}
+, \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552}{FSI\+\_\+\+DIR}}
+, \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e}{FSI\+\_\+\+SYMLINK}}
+, \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede}{FSI\+\_\+\+OTHER}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946}{fsi\+\_\+walk}} (CVEC \texorpdfstring{$\ast$}{*}vec, const char \texorpdfstring{$\ast$}{*}path)
+\begin{DoxyCompactList}\small\item\em Walk to every directory and file and set {\ttfamily vec} to a CVEC value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{FSI__dirUtils_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{FSI__dirUtils_8h_a25f893df9ebe7ec475499f28f3673918}\index{FSI\_dirUtils.h@{FSI\_dirUtils.h}!\_\_FSI\_DIRUTILS\_CPP\_CLOSE@{\_\_FSI\_DIRUTILS\_CPP\_CLOSE}}
+\index{\_\_FSI\_DIRUTILS\_CPP\_CLOSE@{\_\_FSI\_DIRUTILS\_CPP\_CLOSE}!FSI\_dirUtils.h@{FSI\_dirUtils.h}}
+\doxysubsubsection{\texorpdfstring{\_\_FSI\_DIRUTILS\_CPP\_CLOSE}{\_\_FSI\_DIRUTILS\_CPP\_CLOSE}}
+{\footnotesize\ttfamily \label{FSI__dirUtils_8h_a25f893df9ebe7ec475499f28f3673918} 
+\+\#define \+\_\+\+\_\+\+FSI\+\_\+\+DIRUTILS\+\_\+\+CPP\+\_\+\+CLOSE~\}}
+
+
+
+Definition at line \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00006}{6}} of file \doxymbox{\hyperlink{FSI__dirUtils_8h_source}{FSI\+\_\+dir\+Utils.\+h}}.
+
+\Hypertarget{FSI__dirUtils_8h_a80b32c6ce26d659377a18ad665438b2a}\index{FSI\_dirUtils.h@{FSI\_dirUtils.h}!\_\_FSI\_DIRUTILS\_CPP\_OPEN@{\_\_FSI\_DIRUTILS\_CPP\_OPEN}}
+\index{\_\_FSI\_DIRUTILS\_CPP\_OPEN@{\_\_FSI\_DIRUTILS\_CPP\_OPEN}!FSI\_dirUtils.h@{FSI\_dirUtils.h}}
+\doxysubsubsection{\texorpdfstring{\_\_FSI\_DIRUTILS\_CPP\_OPEN}{\_\_FSI\_DIRUTILS\_CPP\_OPEN}}
+{\footnotesize\ttfamily \label{FSI__dirUtils_8h_a80b32c6ce26d659377a18ad665438b2a} 
+\+\#define \+\_\+\+\_\+\+FSI\+\_\+\+DIRUTILS\+\_\+\+CPP\+\_\+\+OPEN~extern "{}C"{} \{}
+
+
+
+Definition at line \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00005}{5}} of file \doxymbox{\hyperlink{FSI__dirUtils_8h_source}{FSI\+\_\+dir\+Utils.\+h}}.
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{FSI__dirUtils_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{FSI__dirUtils_8h_ad39412d571379a5f201181f21dcd0313}\index{FSI\_dirUtils.h@{FSI\_dirUtils.h}!FSI\_DirData@{FSI\_DirData}}
+\index{FSI\_DirData@{FSI\_DirData}!FSI\_dirUtils.h@{FSI\_dirUtils.h}}
+\doxysubsubsection{\texorpdfstring{FSI\_DirData}{FSI\_DirData}}
+{\footnotesize\ttfamily \label{FSI__dirUtils_8h_ad39412d571379a5f201181f21dcd0313} 
+typedef struct FSI\+\_\+\+Dir\+Data FSI\+\_\+\+Dir\+Data}
+
+\Hypertarget{FSI__dirUtils_8h_aad5302271e8d3cc39f711397abe5b957}\index{FSI\_dirUtils.h@{FSI\_dirUtils.h}!FSI\_EntryData@{FSI\_EntryData}}
+\index{FSI\_EntryData@{FSI\_EntryData}!FSI\_dirUtils.h@{FSI\_dirUtils.h}}
+\doxysubsubsection{\texorpdfstring{FSI\_EntryData}{FSI\_EntryData}}
+{\footnotesize\ttfamily \label{FSI__dirUtils_8h_aad5302271e8d3cc39f711397abe5b957} 
+typedef struct FSI\+\_\+\+Entry\+Data FSI\+\_\+\+Entry\+Data}
+
+\Hypertarget{FSI__dirUtils_8h_af91db6d6c004b3548000fa4f76a94cf9}\index{FSI\_dirUtils.h@{FSI\_dirUtils.h}!FSI\_Type@{FSI\_Type}}
+\index{FSI\_Type@{FSI\_Type}!FSI\_dirUtils.h@{FSI\_dirUtils.h}}
+\doxysubsubsection{\texorpdfstring{FSI\_Type}{FSI\_Type}}
+{\footnotesize\ttfamily \label{FSI__dirUtils_8h_af91db6d6c004b3548000fa4f76a94cf9} 
+typedef enum \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0}{FSI\+\_\+\+Type}} \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0}{FSI\+\_\+\+Type}}}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{FSI__dirUtils_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0}\index{FSI\_dirUtils.h@{FSI\_dirUtils.h}!FSI\_Type@{FSI\_Type}}
+\index{FSI\_Type@{FSI\_Type}!FSI\_dirUtils.h@{FSI\_dirUtils.h}}
+\doxysubsubsection{\texorpdfstring{FSI\_Type}{FSI\_Type}}
+{\footnotesize\ttfamily \label{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0} 
+enum \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0}{FSI\+\_\+\+Type}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FSI\_FILE@{FSI\_FILE}!FSI\_dirUtils.h@{FSI\_dirUtils.h}}
+\index{FSI\_dirUtils.h@{FSI\_dirUtils.h}!FSI\_FILE@{FSI\_FILE}}
+}\Hypertarget{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1}\label{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1} 
+FSI\+\_\+\+FILE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FSI\_DIR@{FSI\_DIR}!FSI\_dirUtils.h@{FSI\_dirUtils.h}}
+\index{FSI\_dirUtils.h@{FSI\_dirUtils.h}!FSI\_DIR@{FSI\_DIR}}
+}\Hypertarget{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552}\label{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552} 
+FSI\+\_\+\+DIR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FSI\_SYMLINK@{FSI\_SYMLINK}!FSI\_dirUtils.h@{FSI\_dirUtils.h}}
+\index{FSI\_dirUtils.h@{FSI\_dirUtils.h}!FSI\_SYMLINK@{FSI\_SYMLINK}}
+}\Hypertarget{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e}\label{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e} 
+FSI\+\_\+\+SYMLINK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FSI\_OTHER@{FSI\_OTHER}!FSI\_dirUtils.h@{FSI\_dirUtils.h}}
+\index{FSI\_dirUtils.h@{FSI\_dirUtils.h}!FSI\_OTHER@{FSI\_OTHER}}
+}\Hypertarget{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede}\label{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede} 
+FSI\+\_\+\+OTHER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00020}{20}} of file \doxymbox{\hyperlink{FSI__dirUtils_8h_source}{FSI\+\_\+dir\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1}{FSI\_FILE}},}
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}},}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e}{FSI\_SYMLINK}},}
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede}{FSI\_OTHER}}}
+\DoxyCodeLine{00026\ \}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0}{FSI\_Type}};}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{FSI__dirUtils_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946}\index{FSI\_dirUtils.h@{FSI\_dirUtils.h}!fsi\_walk@{fsi\_walk}}
+\index{fsi\_walk@{fsi\_walk}!FSI\_dirUtils.h@{FSI\_dirUtils.h}}
+\doxysubsubsection{\texorpdfstring{fsi\_walk()}{fsi\_walk()}}
+{\footnotesize\ttfamily \label{FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946} 
+void fsi\+\_\+walk (\begin{DoxyParamCaption}\item[{CVEC \texorpdfstring{$\ast$}{*}}]{vec}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Walk to every directory and file and set {\ttfamily vec} to a CVEC value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The vector to set data to \\
+\hline
+{\em path} & Path to walk to all its sub-\/dirs \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__dirUtils_8c_source_l00012}{12}} of file \doxymbox{\hyperlink{FSI__dirUtils_8c_source}{FSI\+\_\+dir\+Utils.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \doxymbox{\hyperlink{structFSI__DirData}{FSI\_DirData}}\ dir;}
+\DoxyCodeLine{00015\ \ \ \ \ \doxymbox{\hyperlink{structFSI__EntryData}{FSI\_EntryData}}\ entry;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a1c15e434435c62f17b15a34877bd60bd}{fsi\_openDir}}(\&dir,\ path))}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ CSTR\ tmpPath\ =\ cstr\_init();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{while}\ (\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_acb473fa7940b3c89aa11845436bbae8f}{fsi\_readDir}}(\&dir,\ \&entry))}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ cstr\_set(\&tmpPath,\ path);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ cstr\_add(\&tmpPath,\ \textcolor{stringliteral}{"{}/"{}});}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ cstr\_add(\&tmpPath,\ entry.\doxymbox{\hyperlink{structFSI__EntryData_ad540a33418e7055d0cd7a582146aed10}{name}});}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ cvec\_push(vec,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\ CVEC\_sys\_strdup(tmpPath.data));}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entry.\doxymbox{\hyperlink{structFSI__EntryData_aae303e170665a972cc52c708470a2b27}{type}}\ ==\ \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}})}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{FSI__dirUtils_8c_a3bc7da82fe7b1e798ee4b6d018534946}{fsi\_walk}}(vec,\ tmpPath.data);}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ cstr\_destroy(\&tmpPath);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a07bb8fc8aa9e6ea91c2f2e65425e03e1}{fsi\_closeDir}}(\&dir);}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source_l00075}{fsi\+\_\+close\+Dir()}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00023}{FSI\+\_\+\+DIR}}, \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source_l00014}{fsi\+\_\+open\+Dir()}}, \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source_l00044}{fsi\+\_\+read\+Dir()}}, \doxymbox{\hyperlink{FSI__dirUtils_8c_source_l00012}{fsi\+\_\+walk()}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00035}{FSI\+\_\+\+Entry\+Data::\+name}}, and \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00037}{FSI\+\_\+\+Entry\+Data::\+type}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00026}{fsi::\+\+Indexer::\+\+\_\+\+\_\+iterate\+Path()}}, and \doxymbox{\hyperlink{FSI__dirUtils_8c_source_l00012}{fsi\+\_\+walk()}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{dc/d84/FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d84/FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946_icgraph}
+\end{center}
+\end{figure}

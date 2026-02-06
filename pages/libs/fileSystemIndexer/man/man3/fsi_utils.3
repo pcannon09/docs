@@ -1,0 +1,93 @@
+.TH "fsi::utils" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fsi::utils
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBTimeUtils_DateTime\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct fsi::utils::TimeUtils_DateTime \fBTimeUtils_DateTime\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTimeUtils_DateTime\fP \fBfsClockDataToDT\fP (const fs::file_time_type &time)"
+.br
+.RI "Set std::filesystem clock data to an actual usable Date and Time format\&. "
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct fsi::utils::TimeUtils_DateTime fsi::utils::TimeUtils_DateTime"
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBTimeUtils_DateTime\fP fsi::utils::fsClockDataToDT (const fs::file_time_type & time)"
+
+.PP
+Set std::filesystem clock data to an actual usable Date and Time format\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItime\fP Get \fRstd::filesystem::file_time_type\fP that is to be converted to a usuable time format 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Date-Time object to be used 
+.RE
+.PP
+
+.PP
+Definition at line \fB8\fP of file \fBFSI_timeUtils\&.cpp\fP\&.
+.nf
+9     {
+10         TimeUtils_DateTime dt{0};
+11 
+12         const auto &sctp = std::chrono::time_point_cast<std::chrono::system_clock::duration>(
+13                 time \- fs::file_time_type::clock::now() + std::chrono::system_clock::now()
+14         );
+15 
+16         auto epochSec = std::chrono::time_point_cast<std::chrono::seconds>(sctp);
+17         auto epochMs = std::chrono::duration_cast<std::chrono::microseconds>(sctp \- epochSec)\&.count();
+18 
+19         std::time_t timeInfo = std::chrono::system_clock::to_time_t(epochSec);
+20         std::tm tm{};
+21 
+22         __FSI_LOCALTIME(&timeInfo, &tm);
+23 
+24         // Time
+25         dt\&.hour = tm\&.tm_hour;
+26         dt\&.min = tm\&.tm_min;
+27         dt\&.sec = tm\&.tm_sec;
+28         dt\&.ms = (unsigned int)(epochMs);
+29 
+30         // Date
+31         dt\&.year = tm\&.tm_year + 1900;
+32         dt\&.month = tm\&.tm_mon + 1;
+33         dt\&.day = tm\&.tm_mday;
+34 
+35         return dt;
+36     }
+.PP
+.fi
+
+.PP
+References \fB__FSI_LOCALTIME\fP, \fBfsi::utils::TimeUtils_DateTime::day\fP, \fBfsi::utils::TimeUtils_DateTime::hour\fP, \fBfsi::utils::TimeUtils_DateTime::min\fP, \fBfsi::utils::TimeUtils_DateTime::month\fP, \fBfsi::utils::TimeUtils_DateTime::ms\fP, \fBfsi::utils::TimeUtils_DateTime::sec\fP, and \fBfsi::utils::TimeUtils_DateTime::year\fP\&.
+.PP
+Referenced by \fBfsi::Indexer::getFileDTInfo()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

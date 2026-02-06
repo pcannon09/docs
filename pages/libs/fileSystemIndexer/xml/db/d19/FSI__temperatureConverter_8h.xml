@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="db/d19/FSI__temperatureConverter_8h" kind="file" language="C++">
+    <compoundname>FSI_temperatureConverter.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includedby refid="df/d0a/main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="db/d8b/FSI__temperature_8cpp" local="yes">src/modules/temperature/FSI_temperature.cpp</includedby>
+    <includedby refid="d7/d2d/FSI__temperatureConverter_8c" local="yes">src/modules/temperature/FSI_temperatureConverter.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>inc/fsi/modules/temperature/FSI_temperatureConverter.h</label>
+        <link refid="db/d19/FSI__temperatureConverter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>inc/fsi/modules/temperature/FSI_temperatureConverter.h</label>
+        <link refid="db/d19/FSI__temperatureConverter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/main.cpp</label>
+        <link refid="df/d0a/main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/modules/temperature/FSI_temperature.cpp</label>
+        <link refid="db/d8b/FSI__temperature_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/modules/temperature/FSI_temperatureConverter.c</label>
+        <link refid="d7/d2d/FSI__temperatureConverter_8c"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="db/d19/FSI__temperatureConverter_8h_1aeec1c9abf519c96d40ccf05811fd33ef" prot="public" static="no">
+        <name>__FSI_DIRUTILS_TC_CPP_CLOSE</name>
+        <initializer>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="9" column="11" bodyfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d19/FSI__temperatureConverter_8h_1abe24e40b38c356759f83d93f8e89840b" prot="public" static="no">
+        <name>__FSI_DIRUTILS_TC_CPP_OPEN</name>
+        <initializer>extern &quot;C&quot; {</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="8" column="11" bodyfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d19/FSI__temperatureConverter_8h_1af3c95b6196f59322328be76f69c59951" prot="public" static="no">
+        <name>__FSI_TC_CEL_FROM_C</name>
+        <param><defname>value</defname></param>
+        <initializer>(value)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="27" column="9" bodyfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="db/d19/FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1" compoundref="d7/d2d/FSI__temperatureConverter_8c" startline="5" endline="29">FSI_temperatureConvertCelFrom</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="db/d19/FSI__temperatureConverter_8h_1ab6545bfd018f75702e35f396d8d5e770" prot="public" static="no">
+        <name>__FSI_TC_CEL_FROM_F</name>
+        <param><defname>value</defname></param>
+        <initializer>(((value) - 32.0) * 5.0 / 9.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="28" column="9" bodyfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="db/d19/FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1" compoundref="d7/d2d/FSI__temperatureConverter_8c" startline="5" endline="29">FSI_temperatureConvertCelFrom</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="db/d19/FSI__temperatureConverter_8h_1a67ef9c32ed33d539a95d811049fdda3a" prot="public" static="no">
+        <name>__FSI_TC_CEL_FROM_K</name>
+        <param><defname>value</defname></param>
+        <initializer>((value) - 273.15)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="29" column="9" bodyfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="db/d19/FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1" compoundref="d7/d2d/FSI__temperatureConverter_8c" startline="5" endline="29">FSI_temperatureConvertCelFrom</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="db/d19/FSI__temperatureConverter_8h_1af73b75586b7bdb2579ab6e9c7f71ecf6" prot="public" static="no">
+        <name>__FSI_TC_CEL_FROM_RA</name>
+        <param><defname>value</defname></param>
+        <initializer>(((value) - 491.67) * 5.0 / 9.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="31" column="9" bodyfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="db/d19/FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1" compoundref="d7/d2d/FSI__temperatureConverter_8c" startline="5" endline="29">FSI_temperatureConvertCelFrom</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="db/d19/FSI__temperatureConverter_8h_1a6dcd96eb8642f4466614b1dc212d9bf9" prot="public" static="no">
+        <name>__FSI_TC_CEL_FROM_RE</name>
+        <param><defname>value</defname></param>
+        <initializer>((value) * 5.0 / 4.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="30" column="9" bodyfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="db/d19/FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1" compoundref="d7/d2d/FSI__temperatureConverter_8c" startline="5" endline="29">FSI_temperatureConvertCelFrom</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="db/d19/FSI__temperatureConverter_8h_1afeadea79f323e1fa506ef564778ba0ca" prot="public" static="no">
+        <name>__FSI_TC_CEL_TO_C</name>
+        <param><defname>value</defname></param>
+        <initializer>(value)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="20" column="9" bodyfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="db/d19/FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d" compoundref="d7/d2d/FSI__temperatureConverter_8c" startline="31" endline="55">FSI_temperatureConvertCelTo</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="db/d19/FSI__temperatureConverter_8h_1acd61e380f61f77ef0d5d2ff8da6362fd" prot="public" static="no">
+        <name>__FSI_TC_CEL_TO_F</name>
+        <param><defname>value</defname></param>
+        <initializer>((value) * 9.0 / 5.0 + 32.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="21" column="9" bodyfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="db/d19/FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d" compoundref="d7/d2d/FSI__temperatureConverter_8c" startline="31" endline="55">FSI_temperatureConvertCelTo</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="db/d19/FSI__temperatureConverter_8h_1af451dbedd0aea3ff1e584c4766eedbb5" prot="public" static="no">
+        <name>__FSI_TC_CEL_TO_K</name>
+        <param><defname>value</defname></param>
+        <initializer>((value) + 273.15)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="22" column="9" bodyfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="db/d19/FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d" compoundref="d7/d2d/FSI__temperatureConverter_8c" startline="31" endline="55">FSI_temperatureConvertCelTo</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="db/d19/FSI__temperatureConverter_8h_1a4d45c2cd654fc2c106349e7d8b6b0e7c" prot="public" static="no">
+        <name>__FSI_TC_CEL_TO_RA</name>
+        <param><defname>value</defname></param>
+        <initializer>(((value) + 273.15) * 9.0 / 5.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="24" column="9" bodyfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="db/d19/FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d" compoundref="d7/d2d/FSI__temperatureConverter_8c" startline="31" endline="55">FSI_temperatureConvertCelTo</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="db/d19/FSI__temperatureConverter_8h_1a051d6a203331a736d5e5f328b1a69f4b" prot="public" static="no">
+        <name>__FSI_TC_CEL_TO_RE</name>
+        <param><defname>value</defname></param>
+        <initializer>((value) * 4.0 / 5.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="23" column="9" bodyfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="db/d19/FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d" compoundref="d7/d2d/FSI__temperatureConverter_8c" startline="31" endline="55">FSI_temperatureConvertCelTo</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="db/d19/FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double FSI_temperatureConvertCelFrom</definition>
+        <argsstring>(const char *to, const double from)</argsstring>
+        <name>FSI_temperatureConvertCelFrom</name>
+        <param>
+          <type>const char *</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+<para>Convert from <computeroutput>from</computeroutput> to Celcius as a double. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the temperature </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>From celcius to the temperature </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The exact converted temperature </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="47" column="8" bodyfile="src/modules/temperature/FSI_temperatureConverter.c" bodystart="5" bodyend="29" declfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" declline="47" declcolumn="8"/>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1af3c95b6196f59322328be76f69c59951" compoundref="db/d19/FSI__temperatureConverter_8h" startline="27">__FSI_TC_CEL_FROM_C</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1ab6545bfd018f75702e35f396d8d5e770" compoundref="db/d19/FSI__temperatureConverter_8h" startline="28">__FSI_TC_CEL_FROM_F</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1a67ef9c32ed33d539a95d811049fdda3a" compoundref="db/d19/FSI__temperatureConverter_8h" startline="29">__FSI_TC_CEL_FROM_K</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1af73b75586b7bdb2579ab6e9c7f71ecf6" compoundref="db/d19/FSI__temperatureConverter_8h" startline="31">__FSI_TC_CEL_FROM_RA</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1a6dcd96eb8642f4466614b1dc212d9bf9" compoundref="db/d19/FSI__temperatureConverter_8h" startline="30">__FSI_TC_CEL_FROM_RE</references>
+        <referencedby refid="de/d44/namespacefsi_1_1modules_1_1tc_1a37c21a89ea28cc2a16ad463cb908e604" compoundref="db/d8b/FSI__temperature_8cpp" startline="9" endline="10">fsi::modules::tc::convertFrom</referencedby>
+        <referencedby refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="df/d0a/main_8cpp" startline="20" endline="43">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="db/d19/FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double FSI_temperatureConvertCelTo</definition>
+        <argsstring>(const char *from, const double to)</argsstring>
+        <name>FSI_temperatureConvertCelTo</name>
+        <param>
+          <type>const char *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+<para>Convert Celcius to <computeroutput>from</computeroutput> as a double. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Convert to from celcius </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the temperature </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The exact converted temperature </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h" line="39" column="8" bodyfile="src/modules/temperature/FSI_temperatureConverter.c" bodystart="31" bodyend="55" declfile="inc/fsi/modules/temperature/FSI_temperatureConverter.h" declline="39" declcolumn="8"/>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1afeadea79f323e1fa506ef564778ba0ca" compoundref="db/d19/FSI__temperatureConverter_8h" startline="20">__FSI_TC_CEL_TO_C</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1acd61e380f61f77ef0d5d2ff8da6362fd" compoundref="db/d19/FSI__temperatureConverter_8h" startline="21">__FSI_TC_CEL_TO_F</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1af451dbedd0aea3ff1e584c4766eedbb5" compoundref="db/d19/FSI__temperatureConverter_8h" startline="22">__FSI_TC_CEL_TO_K</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1a4d45c2cd654fc2c106349e7d8b6b0e7c" compoundref="db/d19/FSI__temperatureConverter_8h" startline="24">__FSI_TC_CEL_TO_RA</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1a051d6a203331a736d5e5f328b1a69f4b" compoundref="db/d19/FSI__temperatureConverter_8h" startline="23">__FSI_TC_CEL_TO_RE</references>
+        <referencedby refid="de/d44/namespacefsi_1_1modules_1_1tc_1abbdea450d8dae5c95298bdd261a12da1" compoundref="db/d8b/FSI__temperature_8cpp" startline="6" endline="7">fsi::modules::tc::convertTo</referencedby>
+        <referencedby refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="df/d0a/main_8cpp" startline="20" endline="43">main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>INCLUDE_TEMPERATURE_FSI_TEMPERATURECONVERTER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_TEMPERATURE_FSI_TEMPERATURECONVERTER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NOTES:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TC;<sp/>In<sp/>this<sp/>context<sp/>it<sp/>means<sp/>(&quot;Temperature<sp/>Converter&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="db/d19/FSI__temperatureConverter_8h_1abe24e40b38c356759f83d93f8e89840b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_TC_CPP_OPEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/>extern<sp/>&quot;C&quot;<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="db/d19/FSI__temperatureConverter_8h_1aeec1c9abf519c96d40ccf05811fd33ef" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_TC_CPP_CLOSE<sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_TC_CPP_OPEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_TC_CPP_CLOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="db/d19/FSI__temperatureConverter_8h_1abe24e40b38c356759f83d93f8e89840b" kindref="member">__FSI_DIRUTILS_TC_CPP_OPEN</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Celcius<sp/>to<sp/>others</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="db/d19/FSI__temperatureConverter_8h_1afeadea79f323e1fa506ef564778ba0ca" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FSI_TC_CEL_TO_C(value)<sp/><sp/><sp/><sp/><sp/><sp/>(value)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="db/d19/FSI__temperatureConverter_8h_1acd61e380f61f77ef0d5d2ff8da6362fd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FSI_TC_CEL_TO_F(value)<sp/><sp/><sp/><sp/><sp/><sp/>((value)<sp/>*<sp/>9.0<sp/>/<sp/>5.0<sp/>+<sp/>32.0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="db/d19/FSI__temperatureConverter_8h_1af451dbedd0aea3ff1e584c4766eedbb5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FSI_TC_CEL_TO_K(value)<sp/><sp/><sp/><sp/><sp/><sp/>((value)<sp/>+<sp/>273.15)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="db/d19/FSI__temperatureConverter_8h_1a051d6a203331a736d5e5f328b1a69f4b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FSI_TC_CEL_TO_RE(value)<sp/><sp/><sp/><sp/><sp/>((value)<sp/>*<sp/>4.0<sp/>/<sp/>5.0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="db/d19/FSI__temperatureConverter_8h_1a4d45c2cd654fc2c106349e7d8b6b0e7c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FSI_TC_CEL_TO_RA(value)<sp/><sp/><sp/><sp/><sp/>(((value)<sp/>+<sp/>273.15)<sp/>*<sp/>9.0<sp/>/<sp/>5.0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Others<sp/>to<sp/>Celcius</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="db/d19/FSI__temperatureConverter_8h_1af3c95b6196f59322328be76f69c59951" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FSI_TC_CEL_FROM_C(value)<sp/><sp/><sp/><sp/>(value)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="db/d19/FSI__temperatureConverter_8h_1ab6545bfd018f75702e35f396d8d5e770" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FSI_TC_CEL_FROM_F(value)<sp/><sp/><sp/><sp/>(((value)<sp/>-<sp/>32.0)<sp/>*<sp/>5.0<sp/>/<sp/>9.0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="db/d19/FSI__temperatureConverter_8h_1a67ef9c32ed33d539a95d811049fdda3a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FSI_TC_CEL_FROM_K(value)<sp/><sp/><sp/><sp/>((value)<sp/>-<sp/>273.15)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="db/d19/FSI__temperatureConverter_8h_1a6dcd96eb8642f4466614b1dc212d9bf9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FSI_TC_CEL_FROM_RE(value)<sp/><sp/><sp/>((value)<sp/>*<sp/>5.0<sp/>/<sp/>4.0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="db/d19/FSI__temperatureConverter_8h_1af73b75586b7bdb2579ab6e9c7f71ecf6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FSI_TC_CEL_FROM_RA(value)<sp/><sp/><sp/>(((value)<sp/>-<sp/>491.67)<sp/>*<sp/>5.0<sp/>/<sp/>9.0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="33"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Convert<sp/>Celcius<sp/>to<sp/>`from`<sp/>as<sp/>a<sp/>double</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>@param<sp/>from<sp/>Convert<sp/>to<sp/>from<sp/>celcius</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>@param<sp/>to<sp/>The<sp/>value<sp/>of<sp/>the<sp/>temperature</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>@return<sp/>The<sp/>exact<sp/>converted<sp/>temperature</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d" kindref="member">FSI_temperatureConvertCelTo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*from,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>to);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="41"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Convert<sp/>from<sp/>`from`<sp/>to<sp/>Celcius<sp/>as<sp/>a<sp/>double</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/>@param<sp/>from<sp/>The<sp/>value<sp/>of<sp/>the<sp/>temperature</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>@param<sp/>to<sp/>From<sp/>celcius<sp/>to<sp/>the<sp/>temperature</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>@return<sp/>The<sp/>exact<sp/>converted<sp/>temperature</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1" kindref="member">FSI_temperatureConvertCelFrom</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*to,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>from);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><ref refid="db/d19/FSI__temperatureConverter_8h_1aeec1c9abf519c96d40ccf05811fd33ef" kindref="member">__FSI_DIRUTILS_TC_CPP_CLOSE</ref></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>INCLUDE_TEMPERATURE_FSI_TEMPERATURECONVERTER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/fsi/modules/temperature/FSI_temperatureConverter.h"/>
+  </compounddef>
+</doxygen>

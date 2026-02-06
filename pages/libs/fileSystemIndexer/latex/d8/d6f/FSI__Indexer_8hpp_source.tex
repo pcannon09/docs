@@ -1,0 +1,163 @@
+\doxysection{FSI\+\_\+\+Indexer.\+hpp}
+\hypertarget{FSI__Indexer_8hpp_source}{}\label{FSI__Indexer_8hpp_source}\index{inc/fsi/lib/FSI\_Indexer.hpp@{inc/fsi/lib/FSI\_Indexer.hpp}}
+\doxymbox{\hyperlink{FSI__Indexer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ INCLUDE\_LIB\_FSI\_INDEXER\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ INCLUDE\_LIB\_FSI\_INDEXER\_HPP\_}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{FSI__timeUtils_8hpp}{../core/FSI\_timeUtils.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00009}\doxymbox{\hyperlink{FSI__Indexer_8hpp_a3ac8f32fbd100d7ab4f9ab08af2f846a}{00009}}\ \textcolor{preprocessor}{\#define\ \_\_FSI\_SUCCESS\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00010}\doxymbox{\hyperlink{FSI__Indexer_8hpp_a5f1510074e5b49e79ce5ccd97d927c53}{00010}}\ \textcolor{preprocessor}{\#define\ \_\_FSI\_INDEXERERR\_CHECK(e)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\ \ \ \ (e.raise\ ||\ e.fatal)\ \&\&\ e.code\ !=\ \_\_FSI\_SUCCESS}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00013}00013\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespacefsi}{fsi}}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00015}\doxymbox{\hyperlink{namespacefsi_1_1codes}{00015}}\ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespacefsi_1_1codes}{codes}}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00017}\doxymbox{\hyperlink{namespacefsi_1_1codes_a141522bb6ab01bdab1888f51984bb08b}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{namespacefsi_1_1codes_a141522bb6ab01bdab1888f51984bb08b}{ERROR\_ADDITION\_FAIL}}\ \ \ \ \ \ \ =\ 1;}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00018}\doxymbox{\hyperlink{namespacefsi_1_1codes_a94f1ddf1a0dccd865341cdc258614b91}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{namespacefsi_1_1codes_a94f1ddf1a0dccd865341cdc258614b91}{ERROR\_ERASE\_FAIL}}\ \ \ \ \ \ \ \ \ \ =\ 2;}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00019}\doxymbox{\hyperlink{namespacefsi_1_1codes_a88198637504cbb63a06c76d7d0b7a1a7}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{namespacefsi_1_1codes_a88198637504cbb63a06c76d7d0b7a1a7}{ERROR\_INVALID\_PATH}}\ \ \ \ \ \ \ \ =\ 3;}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00020}\doxymbox{\hyperlink{namespacefsi_1_1codes_ac2ba68f515a46e02eae9671750056860}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{namespacefsi_1_1codes_ac2ba68f515a46e02eae9671750056860}{ERROR\_EMPTY\_VALUE}}\ \ \ \ \ \ \ \ \ =\ 4;}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00023}\doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30}{00023}}\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30}{IndexerPathType}}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00024}00024\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00025}\doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494}{00025}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494}{Directory}},}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00026}\doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e}{00026}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e}{File}},}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00027}\doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0}{00027}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0}{SymLink}}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00028}00028\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00030}\doxymbox{\hyperlink{structfsi_1_1IndexerFoundInfo}{00030}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structfsi_1_1IndexerFoundInfo}{IndexerFoundInfo}}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00031}00031\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00032}\doxymbox{\hyperlink{structfsi_1_1IndexerFoundInfo_a7ef33d4ef2854d39adf0963f5e8c3c53}{00032}}\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{structfsi_1_1IndexerFoundInfo_a7ef33d4ef2854d39adf0963f5e8c3c53}{path}};\ \textcolor{comment}{//\ /home/user/projects,\ ...}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00033}\doxymbox{\hyperlink{structfsi_1_1IndexerFoundInfo_a16ff738a7eaa12857f3c9fea4c551187}{00033}}\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{structfsi_1_1IndexerFoundInfo_a16ff738a7eaa12857f3c9fea4c551187}{name}};\ \textcolor{comment}{//\ main,\ ...}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00034}\doxymbox{\hyperlink{structfsi_1_1IndexerFoundInfo_a3477c11915ceb9f099a7fc84e37913f1}{00034}}\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{structfsi_1_1IndexerFoundInfo_a3477c11915ceb9f099a7fc84e37913f1}{extension}};\ \textcolor{comment}{//\ .txt,\ .png,\ .cpp,\ ...}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00035}\doxymbox{\hyperlink{structfsi_1_1IndexerFoundInfo_a689841b7cae9a7dc1dbd0a0f0afc10c0}{00035}}\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{structfsi_1_1IndexerFoundInfo_a689841b7cae9a7dc1dbd0a0f0afc10c0}{extType}};\ \textcolor{comment}{//\ Audio,\ Image,\ Text,\ Code,\ Other,\ ...}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00037}\doxymbox{\hyperlink{structfsi_1_1IndexerFoundInfo_a12d34a2de8d49b37707745903e5f7382}{00037}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime}{utils::TimeUtils\_DateTime}}\ \doxymbox{\hyperlink{structfsi_1_1IndexerFoundInfo_a12d34a2de8d49b37707745903e5f7382}{lastModDT}};\ \textcolor{comment}{//\ Last\ modified\ path}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00038}\doxymbox{\hyperlink{namespacefsi_a863274d842a7a1996114f2b0f4424251}{00038}}\ \ \ \ \ \}\ \doxymbox{\hyperlink{namespacefsi_a863274d842a7a1996114f2b0f4424251}{IndexerFoundInfo}};}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00040}\doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{00040}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{IndexerInfo}}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00041}00041\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00042}\doxymbox{\hyperlink{structfsi_1_1IndexerInfo_a9ed84fe71c39594a0ab6c487a165f06c}{00042}}\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{structfsi_1_1IndexerInfo_a9ed84fe71c39594a0ab6c487a165f06c}{id}};\ \textcolor{comment}{//\ Optional}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00043}\doxymbox{\hyperlink{structfsi_1_1IndexerInfo_a92c8f13432f387e693961996fac5963b}{00043}}\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{structfsi_1_1IndexerInfo_a92c8f13432f387e693961996fac5963b}{path}};\ \textcolor{comment}{//\ Dir\ to\ add;\ (Indexer::addInfo())}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ OR\ dir\ to\ start\ adding;\ (Indexer::addExtendedInfo())}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00046}\doxymbox{\hyperlink{structfsi_1_1IndexerInfo_ad3eb8adcbd97fd15894e43a715ad2958}{00046}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30}{IndexerPathType}}\ \doxymbox{\hyperlink{structfsi_1_1IndexerInfo_ad3eb8adcbd97fd15894e43a715ad2958}{pathType}};\ \textcolor{comment}{//\ Path\ type\ (Dir,\ File,\ SymLink,\ Others)}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00047}\doxymbox{\hyperlink{namespacefsi_ac37e1b86ed295241cce0bbc399f023da}{00047}}\ \ \ \ \ \}\ \doxymbox{\hyperlink{namespacefsi_ac37e1b86ed295241cce0bbc399f023da}{IndexerInfo}};}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00049}\doxymbox{\hyperlink{structfsi_1_1IndexerError}{00049}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structfsi_1_1IndexerError}{IndexerError}}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00050}00050\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00051}\doxymbox{\hyperlink{structfsi_1_1IndexerError_a16eb42d00430ff3bbe0e14ce67b857be}{00051}}\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{structfsi_1_1IndexerError_a16eb42d00430ff3bbe0e14ce67b857be}{message}};\ \textcolor{comment}{//\ Message\ of\ error}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00053}\doxymbox{\hyperlink{structfsi_1_1IndexerError_a9e0bda0195d038e4e133452e3347705a}{00053}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structfsi_1_1IndexerError_a9e0bda0195d038e4e133452e3347705a}{code}}\ =\ \doxymbox{\hyperlink{FSI__Indexer_8hpp_a3ac8f32fbd100d7ab4f9ab08af2f846a}{\_\_FSI\_SUCCESS}};\ \textcolor{comment}{//\ Return\ code\ (Default\ is\ \`{}\_\_FSI\_SUCCESS`\ or\ \`{}0`)}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00055}\doxymbox{\hyperlink{structfsi_1_1IndexerError_a7d9081b0d5752868ed7ccb5aff0b0354}{00055}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structfsi_1_1IndexerError_a7d9081b0d5752868ed7ccb5aff0b0354}{fatal}}\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Should\ it\ count\ as\ an\ important\ error?\ Controlled\ by\ the\ developer}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00056}\doxymbox{\hyperlink{structfsi_1_1IndexerError_a1eb3e813f7bb46dca644058737249e25}{00056}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structfsi_1_1IndexerError_a1eb3e813f7bb46dca644058737249e25}{raise}}\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ Should\ raise\ an\ exception?\ Controlled\ by\ the\ developer}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00057}\doxymbox{\hyperlink{namespacefsi_ac4f8a22716e600e7e92d5a700255d081}{00057}}\ \ \ \ \ \}\ \doxymbox{\hyperlink{namespacefsi_ac4f8a22716e600e7e92d5a700255d081}{IndexerError}};}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00059}\doxymbox{\hyperlink{classfsi_1_1Indexer}{00059}}\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classfsi_1_1Indexer_a098bb0a974616eb40e6a08111c192868}{Indexer}}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00060}00060\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00061}00061\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00062}\doxymbox{\hyperlink{classfsi_1_1Indexer_aed611d6ab66da2b9683c9c7cfc6c01c9}{00062}}\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{classfsi_1_1Indexer_aed611d6ab66da2b9683c9c7cfc6c01c9}{id}};}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00063}\doxymbox{\hyperlink{classfsi_1_1Indexer_a29e402b90c8232798f546ef1fdc48cc6}{00063}}\ \ \ \ \ \ \ \ \ std::vector<IndexerInfo>\ \doxymbox{\hyperlink{classfsi_1_1Indexer_a29e402b90c8232798f546ef1fdc48cc6}{indexerInfo}};}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00065}00065\ \ \ \ \ \textcolor{keyword}{protected}:\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ if\ path\ from\ function\ param\ is\ a:}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00068}00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ \ *\ File}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00069}00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ \ *\ Dir}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00070}00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ \ *\ SymLink}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00071}00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ \ *\ Others}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00072}00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ path\ Path\ to\ get\ the\ type\ from}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ IndexerPathType\ The\ type\ of\ the\ function\ param}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30}{IndexerPathType}}\ \doxymbox{\hyperlink{classfsi_1_1Indexer_a2237929b6d3b94b3255ec187888caa7a}{\_\_getPathType}}(\textcolor{keyword}{const}\ std::string\ \&path)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00076}00076\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00077}00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00078}00078\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Iterate\ all\ the\ files\ and\ directories\ (symlinks\ too)\ from\ \`{}path`}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00079}00079\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ path\ Path\ to\ iterate}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00080}00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ A\ tree\ of\ full\ path\ in\ a\ vector\ of\ strings}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00081}00081\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<std::string>\ \doxymbox{\hyperlink{classfsi_1_1Indexer_acebe67327f029b3a2e32a05d16610607}{\_\_iteratePath}}(\textcolor{keyword}{const}\ std::string\ \&path);}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00084}00084\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classfsi_1_1Indexer_a098bb0a974616eb40e6a08111c192868}{Indexer}}(\textcolor{keyword}{const}\ std::string\ \&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classfsi_1_1Indexer_a6b4728ec2c6e51adae5f5465b919ead0}{\string~Indexer}}();}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00087}00087\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00088}00088\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00089}00089\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Add\ the\ exact\ path\ to\ have\ the\ info\ from}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00090}00090\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ info\ Get\ the\ information\ from\ the\ exact\ path}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00091}00091\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ IndexerError\ Return\ error\ or\ success\ from\ \`{}IndexerError`\ type}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00092}00092\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structfsi_1_1IndexerError}{IndexerError}}\ \doxymbox{\hyperlink{classfsi_1_1Indexer_a4a17eef7e041ea4b1cfe67796fe39bf8}{addInfo}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{IndexerInfo}}\ \&info);}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00094}00094\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00095}00095\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00096}00096\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Add\ the\ exact\ path\ and\ the\ sub-\/paths\ to\ have\ the\ info\ from}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00097}00097\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ info\ Get\ the\ information\ from\ the\ exact\ path\ and\ deeper}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00098}00098\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ IndexerError\ Return\ error\ or\ success\ from\ \`{}IndexerError`\ type}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00099}00099\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structfsi_1_1IndexerError}{IndexerError}}\ \doxymbox{\hyperlink{classfsi_1_1Indexer_aa99e1614c02288ffc1f5b62ecf2e602d}{addExtendedInfo}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{IndexerInfo}}\ \&info);}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00101}00101\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00102}00102\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00103}00103\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Remove\ information\ from\ its\ ID\ or\ full\ path}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00104}00104\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ searcher\ Search\ for\ the\ path\ or\ ID\ and\ remove\ them\ from\ the\ indexer}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00105}00105\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ IndexerError\ Return\ error\ or\ success\ from\ \`{}IndexerError`\ type}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00106}00106\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structfsi_1_1IndexerError}{IndexerError}}\ \doxymbox{\hyperlink{classfsi_1_1Indexer_a4fe004107c4cd63ebd99c31f3e199a9a}{removeInfo}}(\textcolor{keyword}{const}\ std::string\ \&searcher);}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00108}00108\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00109}00109\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00110}00110\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Find\ the\ index\ from\ the\ vector\ database\ from\ the\ indexer}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00111}00111\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ toFind\ Search\ for\ the\ path\ or\ ID\ and\ remove\ them\ from\ the\ indexer}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00112}00112\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ IndexerInfo\ Find\ the\ indexed\ info\ from\ the\ indexer\ "{}data\ base"{}}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00113}00113\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{IndexerInfo}}\ \doxymbox{\hyperlink{classfsi_1_1Indexer_a25d6b1b0f03419e825b9a8c45c9125e8}{findIndex}}(\textcolor{keyword}{const}\ std::string\ \&toFind);}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00115}00115\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00116}00116\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00117}00117\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ when\ the\ file,\ dir\ or\ symlink\ was\ last\ modified}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00118}00118\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ path\ Path\ to\ get\ date\ time\ information}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00119}00119\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ Date\ time\ info}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00120}00120\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime}{utils::TimeUtils\_DateTime}}\ \doxymbox{\hyperlink{classfsi_1_1Indexer_a536321b24430696e730bc71f35c9ed0a}{getFileDTInfo}}(\textcolor{keyword}{const}\ std::string\ \&path);}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00122}00122\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00123}00123\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00124}00124\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Search\ for\ an\ exact\ matching\ path\ or\ ID;}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00125}00125\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ find\ Get\ the\ ID\ or\ path\ to\ find}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00126}00126\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ The\ first\ match\ found}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00127}00127\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00128}00128\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{classfsi_1_1Indexer_a7d989963a7a874e5d03e441b383e0b61}{searchExactMatching}}(\textcolor{keyword}{const}\ std::string\ \&find);}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00129}00129\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00130}00130\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00131}00131\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Search\ all\ matching\ path\ or\ ID\ that\ contains\ \`{}path`}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00132}00132\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @param\ path\ Path\ or\ ID\ to\ search}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00133}00133\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ A\ vector\ of\ all\ the\ found\ \`{}path`s}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00134}00134\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00135}00135\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \doxymbox{\hyperlink{classfsi_1_1Indexer_a5c7f5cec792676647ac1f40fc69ecec3}{searchMatching}}(\textcolor{keyword}{const}\ std::string\ \&path);}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00136}00136\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00137}00137\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00138}00138\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Return\ indexer\ information\ from\ this\ object}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00139}00139\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ Get\ all\ the\ indexed\ information\ that\ was\ added}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00140}00140\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00141}00141\ \ \ \ \ \ \ \ \ std::vector<IndexerInfo>\ \doxymbox{\hyperlink{classfsi_1_1Indexer_ac277ab3386ab90f04ae1495b4db6bee3}{getIndexerInfo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00142}00142\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00143}00143\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00144}00144\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ all\ the\ indexed\ paths\ from\ the\ vector\ indexes}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00145}00145\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ All\ the\ indexed\ paths\ in\ a\ vector}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00146}00146\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00147}00147\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \doxymbox{\hyperlink{classfsi_1_1Indexer_a7cc91da352e5eeac9c672be8eb6ff452}{getIndexPaths}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00148}00148\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00149}00149\ \textcolor{comment}{\ \ \ \ \ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00150}00150\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @brief\ Get\ this\ object's\ ID}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00151}00151\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ @return\ Object\ ID}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00152}00152\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00153}00153\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{classfsi_1_1Indexer_a9c25a27ee35467915d8ca45100ae4716}{getID}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00154}00154\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00155}00155\ \}}
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{FSI__Indexer_8hpp_source_l00157}00157\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ INCLUDE\_LIB\_FSI\_INDEXER\_HPP\_}}
+
+\end{DoxyCode}

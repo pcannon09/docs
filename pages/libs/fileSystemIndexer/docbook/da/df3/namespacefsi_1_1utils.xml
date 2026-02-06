@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacefsi_1_1utils" xml:lang="en-US">
+<title>fsi::utils Namespace Reference</title>
+<indexterm><primary>fsi::utils</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">TimeUtils_DateTime</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct fsi::utils::TimeUtils_DateTime <link linkend="_namespacefsi_1_1utils_1a49d908b3b85451a5bf2faa44272c72c0">TimeUtils_DateTime</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">TimeUtils_DateTime</link> <link linkend="_namespacefsi_1_1utils_1ae0fd58fdf5e153ce89499a2bad2a8974">fsClockDataToDT</link> (const fs::file_time_type &amp;time)</para>
+
+<para>Set std::filesystem clock data to an actual usable Date and Time format. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_namespacefsi_1_1utils_1a49d908b3b85451a5bf2faa44272c72c0"/><section>
+    <title>TimeUtils_DateTime</title>
+<indexterm><primary>TimeUtils_DateTime</primary><secondary>fsi::utils</secondary></indexterm>
+<indexterm><primary>fsi::utils</primary><secondary>TimeUtils_DateTime</secondary></indexterm>
+<para><computeroutput>typedef struct fsi::utils::TimeUtils_DateTime fsi::utils::TimeUtils_DateTime</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacefsi_1_1utils_1ae0fd58fdf5e153ce89499a2bad2a8974"/><section>
+    <title>fsClockDataToDT()</title>
+<indexterm><primary>fsClockDataToDT</primary><secondary>fsi::utils</secondary></indexterm>
+<indexterm><primary>fsi::utils</primary><secondary>fsClockDataToDT</secondary></indexterm>
+<para><computeroutput><link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">TimeUtils_DateTime</link> fsi::utils::fsClockDataToDT (const fs::file_time_type &amp; time)</computeroutput></para><para>
+
+<para>Set std::filesystem clock data to an actual usable Date and Time format. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>time</entry><entry>
+<para>Get <computeroutput>std::filesystem::file_time_type</computeroutput> that is to be converted to a usuable time format </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Date-Time object to be used </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__timeUtils_8cpp_source_1l00008">8</link> of file <link linkend="_FSI__timeUtils_8cpp_source">FSI_timeUtils.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00009 &#32;&#32;&#32;&#32;{
+00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">TimeUtils_DateTime</link>&#32;dt{0};
+00011 
+00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;sctp&#32;=&#32;std::chrono::time_point_cast&lt;std::chrono::system_clock::duration&gt;(
+00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time&#32;-&#32;fs::file_time_type::clock::now()&#32;+&#32;std::chrono::system_clock::now()
+00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+00015 
+00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;epochSec&#32;=&#32;std::chrono::time_point_cast&lt;std::chrono::seconds&gt;(sctp);
+00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;epochMs&#32;=&#32;std::chrono::duration_cast&lt;std::chrono::microseconds&gt;(sctp&#32;-&#32;epochSec).count();
+00018 
+00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::time_t&#32;timeInfo&#32;=&#32;std::chrono::system_clock::to_time_t(epochSec);
+00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::tm&#32;tm{};
+00021 
+00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_FSI__timeUtils_8hpp_1ab5d97f02701e4d2a93fdea536534621e">__FSI_LOCALTIME</link>(&amp;timeInfo,&#32;&amp;tm);
+00023 
+00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Time</emphasis>
+00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dt.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a8135eb12c7d645962892d79939767f2b">hour</link>&#32;=&#32;tm.tm_hour;
+00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dt.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a224f4265be90b19828d9e999ceba56e4">min</link>&#32;=&#32;tm.tm_min;
+00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dt.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a53f747e0ef76ed43ec51c4bdc844fd43">sec</link>&#32;=&#32;tm.tm_sec;
+00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dt.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a773404a9ff6e5c0a13eded6429ff26dd">ms</link>&#32;=&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;int)(epochMs);
+00029 
+00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Date</emphasis>
+00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dt.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a9169ed2e239eac50365d363b9365b704">year</link>&#32;=&#32;tm.tm_year&#32;+&#32;1900;
+00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dt.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a4c79e8bac795772430a0c7624e01f3c8">month</link>&#32;=&#32;tm.tm_mon&#32;+&#32;1;
+00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dt.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a340cd86b315b94e24ba58f047a05d977">day</link>&#32;=&#32;tm.tm_mday;
+00034 
+00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;dt;
+00036 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_FSI__timeUtils_8hpp_source_1l00011">__FSI_LOCALTIME</link>, <link linkend="_FSI__timeUtils_8hpp_source_1l00025">fsi::utils::TimeUtils_DateTime::day</link>, <link linkend="_FSI__timeUtils_8hpp_source_1l00018">fsi::utils::TimeUtils_DateTime::hour</link>, <link linkend="_FSI__timeUtils_8hpp_source_1l00019">fsi::utils::TimeUtils_DateTime::min</link>, <link linkend="_FSI__timeUtils_8hpp_source_1l00024">fsi::utils::TimeUtils_DateTime::month</link>, <link linkend="_FSI__timeUtils_8hpp_source_1l00021">fsi::utils::TimeUtils_DateTime::ms</link>, <link linkend="_FSI__timeUtils_8hpp_source_1l00020">fsi::utils::TimeUtils_DateTime::sec</link>, and <link linkend="_FSI__timeUtils_8hpp_source_1l00023">fsi::utils::TimeUtils_DateTime::year</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00184">fsi::Indexer::getFileDTInfo()</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/df3/namespacefsi_1_1utils_ae0fd58fdf5e153ce89499a2bad2a8974_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,38 @@
+.TH "anonymous_namespace{main.cpp}" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+anonymous_namespace{main.cpp}
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "std::string \fB__timeToStr\fP (const \fBfsi::utils::TimeUtils_DateTime\fP &time)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "std::string anonymous_namespace{main\&.cpp}::__timeToStr (const \fBfsi::utils::TimeUtils_DateTime\fP & time)"
+
+.PP
+Definition at line \fB11\fP of file \fBmain\&.cpp\fP\&.
+.nf
+12     {
+13         return ciof::format("%1/%2/%3 \- %4:%5:%6\&.%7",
+14                 time\&.year, time\&.month, time\&.day,
+15                 time\&.hour, time\&.min, time\&.sec, time\&.ms
+16         );
+17     }
+.PP
+.fi
+
+.PP
+References \fBfsi::utils::TimeUtils_DateTime::day\fP, \fBfsi::utils::TimeUtils_DateTime::hour\fP, \fBfsi::utils::TimeUtils_DateTime::min\fP, \fBfsi::utils::TimeUtils_DateTime::month\fP, \fBfsi::utils::TimeUtils_DateTime::ms\fP, \fBfsi::utils::TimeUtils_DateTime::sec\fP, and \fBfsi::utils::TimeUtils_DateTime::year\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

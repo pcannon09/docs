@@ -1,0 +1,79 @@
+\doxysection{src/\+main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \+\#include "{}../\+inc/\+fsi/\+lib/\+\+FSI\+\_\+\+Indexer.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}../\+inc/\+fsi/\+core/\+interfaces/\+\+FSI\+\_\+dir\+Utils\+\_\+posix.\+h"{}}\newline
+{\ttfamily \+\#include "{}../\+inc/\+fsi/\+modules/\+temperature/\+\+FSI\+\_\+temperature\+Converter.\+h"{}}\newline
+{\ttfamily \+\#include "{}ciof/\+ciof.\+hpp"{}}\newline
+Include dependency graph for main.\+cpp:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dce/main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespaceanonymous__namespace_02main_8cpp_03}{anonymous\+\_\+namespace\{main.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{namespaceanonymous__namespace_02main_8cpp_03_ab4857c620ed555971c741512e920a0ac}{anonymous\+\_\+namespace\{main.\+cpp\}::\+\+\_\+\+\_\+time\+To\+Str}} (const \doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime}{fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time}} \&time)
+\item 
+int \doxymbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{main_8cpp_source_l00020}{20}} of file \doxymbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ ciof::print(\doxymbox{\hyperlink{FSI__temperatureConverter_8h_aafde95eb428450f7515b36decef7b59d}{FSI\_temperatureConvertCelTo}}(\textcolor{stringliteral}{"{}f"{}},\ 33));}
+\DoxyCodeLine{00023\ \ \ \ \ ciof::print(\doxymbox{\hyperlink{FSI__temperatureConverter_8h_a39b05ae287af83bc12cb5c8442cbdee1}{FSI\_temperatureConvertCelFrom}}(\textcolor{stringliteral}{"{}f"{}},\ 33));}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{classfsi_1_1Indexer}{fsi::Indexer}}\ indexer(\textcolor{stringliteral}{"{}main-\/indexer"{}});}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{fsi::IndexerInfo}}\ info;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ info.\doxymbox{\hyperlink{structfsi_1_1IndexerInfo_a92c8f13432f387e693961996fac5963b}{path}}\ =\ \textcolor{stringliteral}{"{}."{}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ info.\doxymbox{\hyperlink{structfsi_1_1IndexerInfo_a9ed84fe71c39594a0ab6c487a165f06c}{id}}\ =\ \textcolor{stringliteral}{"{}current-\/dir"{}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ indexer.addExtendedInfo(info);}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&x\ :\ indexer.searchMatching(\textcolor{stringliteral}{"{}cpp"{}}))}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ ciof::print(\textcolor{stringliteral}{"{}FILE\ NAME:\ \%1\ -\/-\/\ \%2"{}},\ x,\ \doxymbox{\hyperlink{namespaceanonymous__namespace_02main_8cpp_03_ab4857c620ed555971c741512e920a0ac}{\_\_timeToStr}}(indexer.getFileDTInfo(x)));}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ ciof::print(\textcolor{stringliteral}{"{}ID\ \`{}current-\/dir`\ has\ path:\ \%1"{}},\ indexer.findIndex(\textcolor{stringliteral}{"{}current-\/dir"{}}).path);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{main_8cpp_source_l00011}{anonymous\+\_\+namespace\{main.\+cpp\}::\+\+\_\+\+\_\+time\+To\+Str()}}, \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00062}{fsi::\+\+Indexer::\+add\+Extended\+Info()}}, \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00143}{fsi::\+\+Indexer::\+find\+Index()}}, \doxymbox{\hyperlink{FSI__temperatureConverter_8c_source_l00005}{FSI\+\_\+temperature\+Convert\+Cel\+From()}}, \doxymbox{\hyperlink{FSI__temperatureConverter_8c_source_l00031}{FSI\+\_\+temperature\+Convert\+Cel\+To()}}, \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00184}{fsi::\+\+Indexer::\+get\+File\+DTInfo()}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00042}{fsi::\+\+Indexer\+Info::\+id}}, \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00043}{fsi::\+\+Indexer\+Info::\+path}}, and \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00091}{fsi::\+\+Indexer::\+search\+Matching()}}.
+
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0a/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}

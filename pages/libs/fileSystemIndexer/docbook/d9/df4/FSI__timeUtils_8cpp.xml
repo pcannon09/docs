@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSI__timeUtils_8cpp" xml:lang="en-US">
+<title>src/core/FSI_timeUtils.cpp File Reference</title>
+<indexterm><primary>src/core/FSI_timeUtils.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../../inc/fsi/core/FSI_timeUtils.hpp&quot;<?linebreak?>#include &lt;chrono&gt;<?linebreak?>#include &lt;ctime&gt;<?linebreak?></programlisting>Include dependency graph for FSI_timeUtils.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../dd/dfd/FSI__timeUtils_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacefsi">fsi</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacefsi_1_1utils">fsi::utils</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">TimeUtils_DateTime</link> <link linkend="_namespacefsi_1_1utils_1ae0fd58fdf5e153ce89499a2bad2a8974">fsi::utils::fsClockDataToDT</link> (const fs::file_time_type &amp;time)</para>
+
+<para>Set std::filesystem clock data to an actual usable Date and Time format. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

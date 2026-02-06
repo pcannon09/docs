@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacefsi" xml:lang="en-US">
+<title>fsi Namespace Reference</title>
+<indexterm><primary>fsi</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacefsi_1_1codes">codes</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacefsi_1_1modules">modules</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacefsi_1_1utils">utils</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classfsi_1_1Indexer">Indexer</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structfsi_1_1IndexerError">IndexerError</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structfsi_1_1IndexerFoundInfo">IndexerFoundInfo</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct fsi::IndexerError <link linkend="_namespacefsi_1ac4f8a22716e600e7e92d5a700255d081">IndexerError</link></para>
+</listitem>
+            <listitem><para>typedef struct fsi::IndexerFoundInfo <link linkend="_namespacefsi_1a863274d842a7a1996114f2b0f4424251">IndexerFoundInfo</link></para>
+</listitem>
+            <listitem><para>typedef struct fsi::IndexerInfo <link linkend="_namespacefsi_1ac37e1b86ed295241cce0bbc399f023da">IndexerInfo</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum class <link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30">IndexerPathType</link> { <link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494">Directory</link>
+, <link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e">File</link>
+, <link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0">SymLink</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_namespacefsi_1ac4f8a22716e600e7e92d5a700255d081"/><section>
+    <title>IndexerError</title>
+<indexterm><primary>IndexerError</primary><secondary>fsi</secondary></indexterm>
+<indexterm><primary>fsi</primary><secondary>IndexerError</secondary></indexterm>
+<para><computeroutput>typedef struct fsi::IndexerError fsi::IndexerError</computeroutput></para></section>
+<anchor xml:id="_namespacefsi_1a863274d842a7a1996114f2b0f4424251"/><section>
+    <title>IndexerFoundInfo</title>
+<indexterm><primary>IndexerFoundInfo</primary><secondary>fsi</secondary></indexterm>
+<indexterm><primary>fsi</primary><secondary>IndexerFoundInfo</secondary></indexterm>
+<para><computeroutput>typedef struct fsi::IndexerFoundInfo fsi::IndexerFoundInfo</computeroutput></para></section>
+<anchor xml:id="_namespacefsi_1ac37e1b86ed295241cce0bbc399f023da"/><section>
+    <title>IndexerInfo</title>
+<indexterm><primary>IndexerInfo</primary><secondary>fsi</secondary></indexterm>
+<indexterm><primary>fsi</primary><secondary>IndexerInfo</secondary></indexterm>
+<para><computeroutput>typedef struct fsi::IndexerInfo fsi::IndexerInfo</computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30"/><section>
+    <title>IndexerPathType</title>
+<indexterm><primary>IndexerPathType</primary><secondary>fsi</secondary></indexterm>
+<indexterm><primary>fsi</primary><secondary>IndexerPathType</secondary></indexterm>
+<para><computeroutput>enum class <link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30">fsi::IndexerPathType</link><computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Directory</primary><secondary>fsi</secondary></indexterm>
+<indexterm><primary>fsi</primary><secondary>Directory</secondary></indexterm>
+<anchor xml:id="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494"/>Directory</entry><entry></entry></row><row><entry><indexterm><primary>File</primary><secondary>fsi</secondary></indexterm>
+<indexterm><primary>fsi</primary><secondary>File</secondary></indexterm>
+<anchor xml:id="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e"/>File</entry><entry></entry></row><row><entry><indexterm><primary>SymLink</primary><secondary>fsi</secondary></indexterm>
+<indexterm><primary>fsi</primary><secondary>SymLink</secondary></indexterm>
+<anchor xml:id="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0"/>SymLink</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00023">23</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+<programlisting linenumbering="unnumbered">00024 &#32;&#32;&#32;&#32;{
+00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494">Directory</link>,
+00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e">File</link>,
+00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0">SymLink</link>
+00028 &#32;&#32;&#32;&#32;};
+</programlisting></section>
+</section>
+</section>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_177d67048c27b1cc13d9211eccefee7f" xml:lang="en-US">
+<title>inc/fsi/modules Directory Reference</title>
+<indexterm><primary>inc/fsi/modules Directory Reference</primary></indexterm>
+Directory dependency graph for modules:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_177d67048c27b1cc13d9211eccefee7f_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_8a7b6c0d9fba7d90aa8201b601216c3f">temperature</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

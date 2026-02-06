@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSIpredefines_8h_source" xml:lang="en-US">
+<title>FSIpredefines.h</title>
+<indexterm><primary>inc/fsi/FSIpredefines.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_FSIpredefines_8h_source_1l00001"/>00001 <emphasis role="comment">/**</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00002"/>00002 <emphasis role="comment">&#32;*&#32;FSIpredefines.h&#32;-&#32;pcannonProjectStandards</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00003"/>00003 <emphasis role="comment">&#32;*&#32;Predefines&#32;for&#32;C&#32;and&#32;C++&#32;projects</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00004"/>00004 <emphasis role="comment">&#32;*&#32;STD&#32;Information:&#32;20250723&#32;-&#32;1.0S</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00005"/>00005 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00006"/>00006 
+<anchor xml:id="_FSIpredefines_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#ifndef&#32;INCLUDE_FSI_FSIPREDEFINES_HPP_</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#define&#32;INCLUDE_FSI_FSIPREDEFINES_HPP_</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00009"/>00009 
+<anchor xml:id="_FSIpredefines_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00011"/><link linkend="_FSIpredefines_8h_1a295402e18de37cc2ce1ffc3d384bd07d">00011</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__FSI_DIRUTILS_PREDEF_CPP_OPEN&#32;&#32;&#32;&#32;&#32;&#32;&#32;extern&#32;&quot;C&quot;&#32;{</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00012"/><link linkend="_FSIpredefines_8h_1ac9cd5367b5a6b833467beec0c0f8ab30">00012</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__FSI_DIRUTILS_PREDEF_CPP_CLOSE&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__FSI_DIRUTILS_PREDEF_CPP_OPEN</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__FSI_DIRUTILS_PREDEF_CPP_CLOSE</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;__cplusplus</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00017"/>00017 
+<anchor xml:id="_FSIpredefines_8h_source_1l00018"/>00018 <link linkend="_FSIpredefines_8h_1a295402e18de37cc2ce1ffc3d384bd07d">__FSI_DIRUTILS_PREDEF_CPP_OPEN</link>
+<anchor xml:id="_FSIpredefines_8h_source_1l00019"/>00019 
+<anchor xml:id="_FSIpredefines_8h_source_1l00020"/>00020 <emphasis role="comment">//&#32;Project&#32;setup</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00021"/><link linkend="_FSIpredefines_8h_1ab2e1764830d9afa8aec2149f527024a4">00021</link> <emphasis role="preprocessor">#define&#32;FSI_DEFAULT_CPP_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;201703L</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00022"/>00022 
+<anchor xml:id="_FSIpredefines_8h_source_1l00023"/>00023 <emphasis role="comment">//&#32;Versioning</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00024"/><link linkend="_FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f">00024</link> <emphasis role="preprocessor">#define&#32;FSI_VERSION_MAJOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00025"/><link linkend="_FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a">00025</link> <emphasis role="preprocessor">#define&#32;FSI_VERSION_MINOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00026"/><link linkend="_FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7">00026</link> <emphasis role="preprocessor">#define&#32;FSI_VERSION_PATCH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00027"/>00027 
+<anchor xml:id="_FSIpredefines_8h_source_1l00028"/><link linkend="_FSIpredefines_8h_1a3cf97e4cc4c73ad21eb6b2881d430add">00028</link> <emphasis role="preprocessor">#define&#32;FSI_VERSION_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;20260205</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00029"/>00029 
+<anchor xml:id="_FSIpredefines_8h_source_1l00030"/>00030 <emphasis role="comment">//&#32;Version&#32;states:</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00031"/>00031 <emphasis role="comment">//&#32;*&#32;dev</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00032"/>00032 <emphasis role="comment">//&#32;*&#32;beta</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00033"/>00033 <emphasis role="comment">//&#32;*&#32;build</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00034"/><link linkend="_FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484">00034</link> <emphasis role="preprocessor">#define&#32;FSI_VERSION_STATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;beta&quot;</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00035"/>00035 
+<anchor xml:id="_FSIpredefines_8h_source_1l00036"/><link linkend="_FSIpredefines_8h_1a4558abf943c73a669f1df9213fdc5c91">00036</link> <emphasis role="preprocessor">#define&#32;FSI_VERSION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FSI_VERSION_MAJOR&lt;&lt;16)|(FSI_VERSION_MINOR&lt;&lt;8)|(FSI_VERSION_PATCH)|(FSI_VERSION_STATE&#32;&lt;&lt;&#32;24))</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00037"/>00037 
+<anchor xml:id="_FSIpredefines_8h_source_1l00038"/><link linkend="_FSIpredefines_8h_1a81f33c3a184d2904c827bf08ca6b20fe">00038</link> <emphasis role="preprocessor">#define&#32;FSI_VERSION_CHECK(FSI_VERSION_MAJOR,&#32;FSI_VERSION_MINOR,&#32;FSI_VERSION_PATCH,&#32;FSI_VERSION_STATE)&#32;\</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00039"/>00039 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(((FSI_VERSION_MAJOR)&lt;&lt;16)|((FSI_VERSION_MINOR)&lt;&lt;8)|(FSI_VERSION_PATCH)|((FSI_VERSION_STATE)&#32;&lt;&lt;&#32;24))</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00040"/>00040 
+<anchor xml:id="_FSIpredefines_8h_source_1l00041"/>00041 <emphasis role="comment">//&#32;Macro&#32;utils</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00042"/><link linkend="_FSIpredefines_8h_1aa86fcd3af2b1d06bfe51d040498e3eac">00042</link> <emphasis role="preprocessor">#define&#32;FSI_STRINGIFY(x)&#32;#x</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00043"/><link linkend="_FSIpredefines_8h_1a361ef337aed85177f332d71f04d3f3c5">00043</link> <emphasis role="preprocessor">#define&#32;FSI_TOSTRING(x)&#32;FSI_STRINGIFY(x)</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00044"/>00044 
+<anchor xml:id="_FSIpredefines_8h_source_1l00045"/><link linkend="_FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9">00045</link> <emphasis role="preprocessor">#define&#32;FSI_FREE(x)&#32;free(x);&#32;x&#32;=&#32;NULL;</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00046"/><link linkend="_FSIpredefines_8h_1a5bd97c6a004e9974d1da59b14d5a52cf">00046</link> <emphasis role="preprocessor">#define&#32;FSI_DEL(x)&#32;delete&#32;x;&#32;x&#32;=&#32;nullptr;</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00047"/>00047 
+<anchor xml:id="_FSIpredefines_8h_source_1l00048"/>00048 <emphasis role="preprocessor">#ifndef&#32;FSI_DEV</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00049"/><link linkend="_FSIpredefines_8h_1ab0a960f494d546badeba4fb8803aba45">00049</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;FSI_DEV&#32;true</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00050"/>00050 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00051"/>00051 
+<anchor xml:id="_FSIpredefines_8h_source_1l00052"/>00052 <emphasis role="preprocessor">#if&#32;defined(WIN32)&#32;||&#32;defined(_WIN32)</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00053"/>00053 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;FSI_OS_WIN32</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00054"/>00054 <emphasis role="preprocessor">#elif&#32;defined(__APPLE__)&#32;||&#32;defined(__MACH__)&#32;||&#32;defined(Macintosh)</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00055"/>00055 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;FSI_OS_MACOS</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00056"/>00056 <emphasis role="preprocessor">#elif&#32;defined(__linux__)&#32;||&#32;defined(__unix)&#32;||&#32;defined(__unix__)</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00057"/>00057 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;FSI_OS_UNIX_LINUX</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00058"/>00058 <emphasis role="preprocessor">#elif&#32;defined(__FreeBSD__)</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00059"/>00059 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;FSI_OS_FREEBSD</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00060"/>00060 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00061"/>00061 <emphasis role="preprocessor">#&#32;&#32;&#32;warning&#32;&quot;Current&#32;platform&#32;is&#32;not&#32;supported&quot;</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00062"/>00062 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;defined(WIN32)&#32;//&#32;Platform&#32;check</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00063"/>00063 
+<anchor xml:id="_FSIpredefines_8h_source_1l00064"/>00064 <link linkend="_FSIpredefines_8h_1ac9cd5367b5a6b833467beec0c0f8ab30">__FSI_DIRUTILS_PREDEF_CPP_CLOSE</link>
+<anchor xml:id="_FSIpredefines_8h_source_1l00065"/>00065 
+<anchor xml:id="_FSIpredefines_8h_source_1l00066"/>00066 <emphasis role="preprocessor">#endif&#32;&#32;</emphasis><emphasis role="comment">//&#32;INCLUDE_FSI_FSIPREDEFINES_HPP_</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00067"/>00067 
+</programlisting></section>

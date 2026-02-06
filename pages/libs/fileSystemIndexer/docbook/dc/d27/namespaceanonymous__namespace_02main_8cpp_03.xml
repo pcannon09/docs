@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceanonymous__namespace_02main_8cpp_03" xml:lang="en-US">
+<title>anonymous_namespace{main.cpp} Namespace Reference</title>
+<indexterm><primary>anonymous_namespace{main.cpp}</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_namespaceanonymous__namespace_02main_8cpp_03_1ab4857c620ed555971c741512e920a0ac">__timeToStr</link> (const <link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">fsi::utils::TimeUtils_DateTime</link> &amp;time)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespaceanonymous__namespace_02main_8cpp_03_1ab4857c620ed555971c741512e920a0ac"/><section>
+    <title>__timeToStr()</title>
+<indexterm><primary>__timeToStr</primary><secondary>anonymous_namespace{main.cpp}</secondary></indexterm>
+<indexterm><primary>anonymous_namespace{main.cpp}</primary><secondary>__timeToStr</secondary></indexterm>
+<para><computeroutput>std::string anonymous_namespace{main.cpp}::__timeToStr (const <link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">fsi::utils::TimeUtils_DateTime</link> &amp; time)</computeroutput></para><para>
+Definition at line <link linkend="_main_8cpp_source_1l00011">11</link> of file <link linkend="_main_8cpp_source">main.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00012 &#32;&#32;&#32;&#32;{
+00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ciof::format(<emphasis role="stringliteral">&quot;%1/%2/%3&#32;-&#32;%4:%5:%6.%7&quot;</emphasis>,
+00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a9169ed2e239eac50365d363b9365b704">year</link>,&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a4c79e8bac795772430a0c7624e01f3c8">month</link>,&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a340cd86b315b94e24ba58f047a05d977">day</link>,
+00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a8135eb12c7d645962892d79939767f2b">hour</link>,&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a224f4265be90b19828d9e999ceba56e4">min</link>,&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a53f747e0ef76ed43ec51c4bdc844fd43">sec</link>,&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a773404a9ff6e5c0a13eded6429ff26dd">ms</link>
+00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+00017 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_FSI__timeUtils_8hpp_source_1l00025">fsi::utils::TimeUtils_DateTime::day</link>, <link linkend="_FSI__timeUtils_8hpp_source_1l00018">fsi::utils::TimeUtils_DateTime::hour</link>, <link linkend="_FSI__timeUtils_8hpp_source_1l00019">fsi::utils::TimeUtils_DateTime::min</link>, <link linkend="_FSI__timeUtils_8hpp_source_1l00024">fsi::utils::TimeUtils_DateTime::month</link>, <link linkend="_FSI__timeUtils_8hpp_source_1l00021">fsi::utils::TimeUtils_DateTime::ms</link>, <link linkend="_FSI__timeUtils_8hpp_source_1l00020">fsi::utils::TimeUtils_DateTime::sec</link>, and <link linkend="_FSI__timeUtils_8hpp_source_1l00023">fsi::utils::TimeUtils_DateTime::year</link>.</para>
+<para>
+Referenced by <link linkend="_main_8cpp_source_1l00020">main()</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../dc/d27/namespaceanonymous__namespace_02main_8cpp_03_ab4857c620ed555971c741512e920a0ac_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

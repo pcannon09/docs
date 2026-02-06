@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>File System Indexer</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/></para>
+<sect1 id="index_1autotoc_md1">
+<title>Last version updated: v0.1.0-beta</title><para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md3">
+<title>Support information</title><para><itemizedlist>
+<listitem><para>FSI Currently does not support Windows</para>
+</listitem><listitem><para>Currently Linux and macOS* with other POSIX / UNIX systems</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md4">
+<title>What is FSI?</title><para>File System Indexer or FSI is a C++ library that it can be used to index files quickly with an extendible and easy to use API</para>
+<para>There is also an API for C which is just for <emphasis>speed-first</emphasis> use cases such as indexing or other usages</para>
+</sect1>
+<sect1 id="index_1autotoc_md5">
+<title>Requirements</title><para>To compile this program, you will need the following dependencies</para>
+<para><orderedlist>
+<listitem><para>C11+ / C++17+ compiler</para>
+</listitem><listitem><para>jq</para>
+</listitem><listitem><para>Bash</para>
+</listitem><listitem><para>Ninja / Make (Ninja is prefered)</para>
+</listitem><listitem><para>CMake</para>
+</listitem></orderedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md6">
+<title>How to Compile</title><sect2 id="index_1autotoc_md7">
+<title>Setting up</title><para>The developer can compile the code with the following snippet <programlisting filename=".bash"><codeline><highlight class="normal">./gen.sh<sp/>#<sp/>Generate<sp/>all<sp/>the<sp/>required<sp/>files<sp/>and<sp/>docs</highlight></codeline>
+<codeline><highlight class="normal">./compile.sh<sp/>settings<sp/>#<sp/>Developer<sp/>will<sp/>be<sp/>prompted<sp/>for<sp/>config;<sp/>If<sp/>doxygen<sp/>is<sp/>not<sp/>installed,<sp/>it<sp/>will<sp/>still<sp/>work</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="index_1autotoc_md8">
+<title>Developer Mode</title><para>With developer mode, you can get more information about unexpected crashes, have ASAN / LSAN support, debug support, ...</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">./compile.sh<sp/>setup</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="index_1autotoc_md9">
+<title>Production Mode</title><para>Do not use dev mode here, just compile as prod; No information about crashes, no debug or ASAN / LSAN support</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">./compile.sh<sp/>setup<sp/>ndev</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="index_1autotoc_md10">
+<title>Compile the sources</title><para><programlisting filename=".bash"><codeline><highlight class="normal">./compile.sh</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="index_1autotoc_md11">
+<title>Run the Tests</title><para>There is a basic bash script with some utilities that you can execute the executable directly</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">./run.sh</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md12">
+<title>Basic usage</title><para>In this example you can directly add a specific directory without its parents <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="d8/dd6/structfsi_1_1IndexerInfo" kindref="compound">fsi::IndexerInfo</ref><sp/>info;<sp/></highlight><highlight class="comment">//<sp/>Create<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">info.<ref refid="d8/dd6/structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b" kindref="member">path</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/path/to/fileOrDir&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>path</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">info.<ref refid="d8/dd6/structfsi_1_1IndexerInfo_1a9ed84fe71c39594a0ab6c487a165f06c" kindref="member">id</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;optional-id&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Recommended<sp/>to<sp/>set<sp/>an<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">indexer.addInfo(info);<sp/></highlight><highlight class="comment">//<sp/>Add<sp/>indexer<sp/>info</highlight></codeline>
+</programlisting></para>
+<para>Recursively index a specific dir <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="d8/dd6/structfsi_1_1IndexerInfo" kindref="compound">fsi::IndexerInfo</ref><sp/>info;</highlight></codeline>
+<codeline><highlight class="normal">info.<ref refid="d8/dd6/structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b" kindref="member">path</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/path/to/directory&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">info.<ref refid="d8/dd6/structfsi_1_1IndexerInfo_1a9ed84fe71c39594a0ab6c487a165f06c" kindref="member">id</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;optional-id&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">indexer.addExtendedInfo(info);<sp/></highlight><highlight class="comment">//<sp/>Add<sp/>all<sp/>its<sp/>subdirs<sp/>starting<sp/>from<sp/>`info.path`</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="index_1autotoc_md13">
+<title>Search and manipulate indexed info</title><para>This following example will search everything in the registry and output the matching In this case, everything that includes <computeroutput>txt</computeroutput> <programlisting filename=".cpp"><codeline><highlight class="normal">std::vector&lt;std::string&gt;<sp/>results<sp/>=<sp/>indexer.searchMatching(</highlight><highlight class="stringliteral">&quot;txt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para>Get all the indexed paths directly in a vector <programlisting filename=".cpp"><codeline><highlight class="normal">std::vector&lt;std::string&gt;<sp/>allPaths<sp/>=<sp/>indexer.getIndexPaths();</highlight></codeline>
+</programlisting></para>
+<para>Get specific indexed info from the vector registry <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="d8/dd6/structfsi_1_1IndexerInfo" kindref="compound">fsi::IndexerInfo</ref><sp/>info<sp/>=<sp/>indexer.findIndex(</highlight><highlight class="stringliteral">&quot;/path/to/path&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="d8/dd6/structfsi_1_1IndexerInfo" kindref="compound">fsi::IndexerInfo</ref><sp/>info<sp/>=<sp/>indexer.findIndex(</highlight><highlight class="stringliteral">&quot;id-path&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Or<sp/>search<sp/>via<sp/>ID</highlight></codeline>
+</programlisting></para>
+<para><programlisting filename=".cpp"><codeline><highlight class="normal">indexer.removeInfo(</highlight><highlight class="stringliteral">&quot;current-dir&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="index_1autotoc_md14">
+<title>How to handle errors automatically</title><para>Replace <computeroutput>errorVariable</computeroutput> to a variable that has a type of <computeroutput>IndexerError</computeroutput> <programlisting filename=".cpp"><codeline><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d8/d6f/FSI__Indexer_8hpp_1a5f1510074e5b49e79ce5ccd97d927c53" kindref="member">__FSI_INDEXERERR_CHECK</ref>(errorVariable))<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Error<sp/>handling<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>message<sp/>by<sp/>accessing:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>errorVariable.message</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="index_1autotoc_md15">
+<title>Example usage</title><para><programlisting filename=".cpp"><codeline><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;/path/to/FSI_Indexer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/d3b/classfsi_1_1Indexer" kindref="compound">fsi::Indexer</ref><sp/>indexer(</highlight><highlight class="stringliteral">&quot;main-indexer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/dd6/structfsi_1_1IndexerInfo" kindref="compound">fsi::IndexerInfo</ref><sp/>info;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="d8/dd6/structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b" kindref="member">path</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/path/to/dir&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="d8/dd6/structfsi_1_1IndexerInfo_1a9ed84fe71c39594a0ab6c487a165f06c" kindref="member">id</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;current-dir&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>indexer.addExtendedInfo(info);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x<sp/>:<sp/>indexer.searchMatching(</highlight><highlight class="stringliteral">&quot;cpp&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>x<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ID<sp/>`current-dir`<sp/>has<sp/>path:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>indexer.findIndex(</highlight><highlight class="stringliteral">&quot;current-dir&quot;</highlight><highlight class="normal">).path<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,835 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classfsi_1_1Indexer" xml:lang="en-US">
+<title>fsi::Indexer Class Reference</title>
+<indexterm><primary>fsi::Indexer</primary></indexterm>
+<para>
+<computeroutput>#include &lt;FSI_Indexer.hpp&gt;</computeroutput>
+</para>
+Collaboration diagram for fsi::Indexer:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../dd/d77/classfsi_1_1Indexer__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classfsi_1_1Indexer_1a098bb0a974616eb40e6a08111c192868">Indexer</link> (const std::string &amp;<link linkend="_classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9">id</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_classfsi_1_1Indexer_1a6b4728ec2c6e51adae5f5465b919ead0">~Indexer</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_structfsi_1_1IndexerError">IndexerError</link> <link linkend="_classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d">addExtendedInfo</link> (const <link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link> &amp;info)</para>
+
+<para>Add the exact path and the sub-paths to have the info from. </para>
+</listitem>
+            <listitem><para><link linkend="_structfsi_1_1IndexerError">IndexerError</link> <link linkend="_classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8">addInfo</link> (const <link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link> &amp;info)</para>
+
+<para>Add the exact path to have the info from. </para>
+</listitem>
+            <listitem><para><link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link> <link linkend="_classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8">findIndex</link> (const std::string &amp;toFind)</para>
+
+<para>Find the index from the vector database from the indexer. </para>
+</listitem>
+            <listitem><para><link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">utils::TimeUtils_DateTime</link> <link linkend="_classfsi_1_1Indexer_1a536321b24430696e730bc71f35c9ed0a">getFileDTInfo</link> (const std::string &amp;path)</para>
+
+<para>Get when the file, dir or symlink was last modified. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classfsi_1_1Indexer_1a9c25a27ee35467915d8ca45100ae4716">getID</link> () const</para>
+
+<para>Get this object&apos;s ID. </para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link> &gt; <link linkend="_classfsi_1_1Indexer_1ac277ab3386ab90f04ae1495b4db6bee3">getIndexerInfo</link> () const</para>
+
+<para>Return indexer information from this object. </para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_classfsi_1_1Indexer_1a7cc91da352e5eeac9c672be8eb6ff452">getIndexPaths</link> () const</para>
+
+<para>Get all the indexed paths from the vector indexes. </para>
+</listitem>
+            <listitem><para><link linkend="_structfsi_1_1IndexerError">IndexerError</link> <link linkend="_classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a">removeInfo</link> (const std::string &amp;searcher)</para>
+
+<para>Remove information from its ID or full path. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classfsi_1_1Indexer_1a7d989963a7a874e5d03e441b383e0b61">searchExactMatching</link> (const std::string &amp;find)</para>
+
+<para>Search for an exact matching path or ID;. </para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_classfsi_1_1Indexer_1a5c7f5cec792676647ac1f40fc69ecec3">searchMatching</link> (const std::string &amp;path)</para>
+
+<para>Search all matching path or ID that contains <computeroutput>path</computeroutput>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual <link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30">IndexerPathType</link> <link linkend="_classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a">__getPathType</link> (const std::string &amp;path) const</para>
+
+<para>Get if path from function param is a: </para>
+</listitem>
+            <listitem><para>virtual std::vector&lt; std::string &gt; <link linkend="_classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607">__iteratePath</link> (const std::string &amp;path)</para>
+
+<para>Iterate all the files and directories (symlinks too) from <computeroutput>path</computeroutput>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9">id</link></para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link> &gt; <link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00059">59</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classfsi_1_1Indexer_1a098bb0a974616eb40e6a08111c192868"/><section>
+    <title>Indexer()</title>
+<indexterm><primary>Indexer</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>Indexer</secondary></indexterm>
+<para><computeroutput>fsi::Indexer::Indexer (const std::string &amp; id)</computeroutput></para><para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00054">54</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<link linkend="_classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9">id</link>(<emphasis role="keywordtype">id</emphasis>)
+00056 &#32;&#32;&#32;&#32;{&#32;}
+</programlisting><para>
+References <link linkend="_FSI__Indexer_8hpp_source_1l00062">id</link>.</para>
+</section>
+<anchor xml:id="_classfsi_1_1Indexer_1a6b4728ec2c6e51adae5f5465b919ead0"/><section>
+    <title>~Indexer()</title>
+<indexterm><primary>~Indexer</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>~Indexer</secondary></indexterm>
+<para><computeroutput>fsi::Indexer::~Indexer ( )</computeroutput></para><para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00059">59</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00060 &#32;&#32;&#32;&#32;{&#32;}
+</programlisting></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a"/><section>
+    <title>__getPathType()</title>
+<indexterm><primary>__getPathType</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>__getPathType</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30">IndexerPathType</link> fsi::Indexer::__getPathType (const std::string &amp; path) const<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Get if path from function param is a: </para>
+</para>
+
+<para><itemizedlist>
+<listitem>
+<para>File</para>
+</listitem><listitem>
+<para>Dir</para>
+</listitem><listitem>
+<para>SymLink</para>
+</listitem><listitem>
+<para>Others 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>path</entry><entry>
+<para>Path to get the type from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30">IndexerPathType</link> The type of the function param </para>
+</formalpara>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00018">18</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00019 &#32;&#32;&#32;&#32;{
+00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fs::is_directory(path))&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494">IndexerPathType::Directory</link>;
+00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fs::is_symlink(path))&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0">IndexerPathType::SymLink</link>;
+00022 
+00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e">IndexerPathType::File</link>;
+00024 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_FSI__Indexer_8hpp_source_1l00025">fsi::Directory</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00026">fsi::File</link>, and <link linkend="_FSI__Indexer_8hpp_source_1l00027">fsi::SymLink</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00062">addExtendedInfo()</link>, and <link linkend="_FSI__Indexer_8cpp_source_1l00107">addInfo()</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3b/classfsi_1_1Indexer_a2237929b6d3b94b3255ec187888caa7a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607"/><section>
+    <title>__iteratePath()</title>
+<indexterm><primary>__iteratePath</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>__iteratePath</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; fsi::Indexer::__iteratePath (const std::string &amp; path)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Iterate all the files and directories (symlinks too) from <computeroutput>path</computeroutput>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>path</entry><entry>
+<para>Path to iterate </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A tree of full path in a vector of strings </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00026">26</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00027 &#32;&#32;&#32;&#32;{
+00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;paths;
+00029 
+00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CVEC&#32;tmpPathsVec&#32;=&#32;cvec_init(-1,&#32;<emphasis role="keyword">sizeof</emphasis>(<emphasis role="keywordtype">char</emphasis>*));
+00031 
+00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_FSI__dirUtils_8h_1a3bc7da82fe7b1e798ee4b6d018534946">fsi_walk</link>(&amp;tmpPathsVec,&#32;path.c_str());
+00033 
+00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;tmpPathsVec.size;&#32;++i)
+00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>*&#32;p&#32;=&#32;*(<emphasis role="keywordtype">char</emphasis>**)cvec_get(&amp;tmpPathsVec,&#32;i);
+00037 
+00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(p)
+00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paths.emplace_back(p);
+00041 
+00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9">FSI_FREE</link>(p);
+00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00045 
+00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cvec_destroy(&amp;tmpPathsVec);
+00047 
+00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;paths;
+00049 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_FSIpredefines_8h_source_1l00045">FSI_FREE</link>, and <link linkend="_FSI__dirUtils_8c_source_1l00012">fsi_walk()</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00062">addExtendedInfo()</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3b/classfsi_1_1Indexer_acebe67327f029b3a2e32a05d16610607_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3b/classfsi_1_1Indexer_acebe67327f029b3a2e32a05d16610607_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d"/><section>
+    <title>addExtendedInfo()</title>
+<indexterm><primary>addExtendedInfo</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>addExtendedInfo</secondary></indexterm>
+<para><computeroutput><link linkend="_structfsi_1_1IndexerError">IndexerError</link> fsi::Indexer::addExtendedInfo (const <link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link> &amp; info)</computeroutput></para><para>
+
+<para>Add the exact path and the sub-paths to have the info from. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>info</entry><entry>
+<para>Get the information from the exact path and deeper </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_structfsi_1_1IndexerError">IndexerError</link> Return error or success from <computeroutput><link linkend="_structfsi_1_1IndexerError">IndexerError</link></computeroutput> type </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00062">62</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00063 &#32;&#32;&#32;&#32;{
+00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ac4f8a22716e600e7e92d5a700255d081">IndexerError</link>&#32;error&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8">addInfo</link>(info);
+00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ac37e1b86ed295241cce0bbc399f023da">IndexerInfo</link>&#32;totalInfo&#32;=&#32;info;
+00066 
+00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_FSI__Indexer_8hpp_1a5f1510074e5b49e79ce5ccd97d927c53">__FSI_INDEXERERR_CHECK</link>(error))
+00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+00069 
+00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;std::string&gt;&#32;iteratedPaths&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607">__iteratePath</link>(info.path);
+00071 
+00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;iteratedPaths)
+00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalInfo.pathType&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a">__getPathType</link>(totalInfo.path);
+00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalInfo.path&#32;=&#32;x;
+00076 
+00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.emplace_back(totalInfo);
+00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00079 
+00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+00081 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_FSI__Indexer_8hpp_source_1l00010">__FSI_INDEXERERR_CHECK</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00018">__getPathType()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00026">__iteratePath()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00107">addInfo()</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00063">indexerInfo</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00043">fsi::IndexerInfo::path</link>, and <link linkend="_FSI__Indexer_8hpp_source_1l00046">fsi::IndexerInfo::pathType</link>.</para>
+<para>
+Referenced by <link linkend="_main_8cpp_source_1l00020">main()</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3b/classfsi_1_1Indexer_aa99e1614c02288ffc1f5b62ecf2e602d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3b/classfsi_1_1Indexer_aa99e1614c02288ffc1f5b62ecf2e602d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8"/><section>
+    <title>addInfo()</title>
+<indexterm><primary>addInfo</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>addInfo</secondary></indexterm>
+<para><computeroutput><link linkend="_structfsi_1_1IndexerError">IndexerError</link> fsi::Indexer::addInfo (const <link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link> &amp; info)</computeroutput></para><para>
+
+<para>Add the exact path to have the info from. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>info</entry><entry>
+<para>Get the information from the exact path </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_structfsi_1_1IndexerError">IndexerError</link> Return error or success from <computeroutput><link linkend="_structfsi_1_1IndexerError">IndexerError</link></computeroutput> type </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00107">107</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00108 &#32;&#32;&#32;&#32;{
+00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ac4f8a22716e600e7e92d5a700255d081">IndexerError</link>&#32;error;
+00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ac37e1b86ed295241cce0bbc399f023da">IndexerInfo</link>&#32;totalInfo&#32;=&#32;info;
+00111 
+00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Do&#32;checks&#32;before&#32;adding</emphasis>
+00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(totalInfo.path.empty())
+00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.code&#32;=&#32;<link linkend="_namespacefsi_1_1codes_1a141522bb6ab01bdab1888f51984bb08b">fsi::codes::ERROR_ADDITION_FAIL</link>;
+00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.message&#32;=&#32;<emphasis role="stringliteral">&quot;Path&#32;is&#32;empty&quot;</emphasis>;
+00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.fatal&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.raise&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00119 
+00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00122 
+00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!fs::exists(totalInfo.path))
+00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.code&#32;=&#32;<link linkend="_namespacefsi_1_1codes_1a88198637504cbb63a06c76d7d0b7a1a7">fsi::codes::ERROR_INVALID_PATH</link>;
+00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.message&#32;=&#32;ciof::format(<emphasis role="stringliteral">&quot;Unknown&#32;path&#32;`%1`;&#32;No&#32;such&#32;file&#32;or&#32;directory&#32;exists&quot;</emphasis>,&#32;totalInfo.path);
+00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.fatal&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+00128 
+00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00131 
+00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;path&#32;type</emphasis>
+00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1ad3eb8adcbd97fd15894e43a715ad2958">pathType</link>&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a">__getPathType</link>(totalInfo.path);
+00135 
+00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Add&#32;final&#32;information</emphasis>
+00137 
+00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.emplace_back(totalInfo);
+00139 
+00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+00141 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_FSI__Indexer_8cpp_source_1l00018">__getPathType()</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00053">fsi::IndexerError::code</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00017">fsi::codes::ERROR_ADDITION_FAIL</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00019">fsi::codes::ERROR_INVALID_PATH</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00055">fsi::IndexerError::fatal</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00063">indexerInfo</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00051">fsi::IndexerError::message</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00043">fsi::IndexerInfo::path</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00046">fsi::IndexerInfo::pathType</link>, and <link linkend="_FSI__Indexer_8hpp_source_1l00056">fsi::IndexerError::raise</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00062">addExtendedInfo()</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3b/classfsi_1_1Indexer_a4a17eef7e041ea4b1cfe67796fe39bf8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3b/classfsi_1_1Indexer_a4a17eef7e041ea4b1cfe67796fe39bf8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8"/><section>
+    <title>findIndex()</title>
+<indexterm><primary>findIndex</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>findIndex</secondary></indexterm>
+<para><computeroutput><link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link> fsi::Indexer::findIndex (const std::string &amp; toFind)</computeroutput></para><para>
+
+<para>Find the index from the vector database from the indexer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>toFind</entry><entry>
+<para>Search for the path or ID and remove them from the indexer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link> Find the indexed info from the indexer &quot;data base&quot; </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00143">143</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00144 &#32;&#32;&#32;&#32;{
+00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>)
+00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x.path&#32;==&#32;toFind&#32;||&#32;x.id&#32;==&#32;toFind)
+00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;x;
+00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00150 
+00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{&#32;};
+00152 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_FSI__Indexer_8hpp_source_1l00063">indexerInfo</link>.</para>
+<para>
+Referenced by <link linkend="_main_8cpp_source_1l00020">main()</link>, and <link linkend="_FSI__Indexer_8cpp_source_1l00083">searchExactMatching()</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3b/classfsi_1_1Indexer_a25d6b1b0f03419e825b9a8c45c9125e8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classfsi_1_1Indexer_1a536321b24430696e730bc71f35c9ed0a"/><section>
+    <title>getFileDTInfo()</title>
+<indexterm><primary>getFileDTInfo</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>getFileDTInfo</secondary></indexterm>
+<para><computeroutput><link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">utils::TimeUtils_DateTime</link> fsi::Indexer::getFileDTInfo (const std::string &amp; path)</computeroutput></para><para>
+
+<para>Get when the file, dir or symlink was last modified. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>path</entry><entry>
+<para>Path to get date time information </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Date time info </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00184">184</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00185 &#32;&#32;&#32;&#32;{
+00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;fs::file_time_type&#32;&amp;lastWriteTime&#32;=&#32;fs::last_write_time(path);
+00187 
+00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacefsi_1_1utils_1ae0fd58fdf5e153ce89499a2bad2a8974">utils::fsClockDataToDT</link>(lastWriteTime);
+00189 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_FSI__timeUtils_8cpp_source_1l00008">fsi::utils::fsClockDataToDT()</link>.</para>
+<para>
+Referenced by <link linkend="_main_8cpp_source_1l00020">main()</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3b/classfsi_1_1Indexer_a536321b24430696e730bc71f35c9ed0a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3b/classfsi_1_1Indexer_a536321b24430696e730bc71f35c9ed0a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classfsi_1_1Indexer_1a9c25a27ee35467915d8ca45100ae4716"/><section>
+    <title>getID()</title>
+<indexterm><primary>getID</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>getID</secondary></indexterm>
+<para><computeroutput>std::string fsi::Indexer::getID ( ) const</computeroutput></para><para>
+
+<para>Get this object&apos;s ID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Object ID </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00204">204</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00205 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9">id</link>;&#32;}
+</programlisting><para>
+References <link linkend="_FSI__Indexer_8hpp_source_1l00062">id</link>.</para>
+</section>
+<anchor xml:id="_classfsi_1_1Indexer_1ac277ab3386ab90f04ae1495b4db6bee3"/><section>
+    <title>getIndexerInfo()</title>
+<indexterm><primary>getIndexerInfo</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>getIndexerInfo</secondary></indexterm>
+<para><computeroutput>std::vector&lt; <link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link> &gt; fsi::Indexer::getIndexerInfo ( ) const</computeroutput></para><para>
+
+<para>Return indexer information from this object. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Get all the indexed information that was added </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00191">191</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00192 &#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>;&#32;}
+</programlisting><para>
+References <link linkend="_FSI__Indexer_8hpp_source_1l00063">indexerInfo</link>.</para>
+</section>
+<anchor xml:id="_classfsi_1_1Indexer_1a7cc91da352e5eeac9c672be8eb6ff452"/><section>
+    <title>getIndexPaths()</title>
+<indexterm><primary>getIndexPaths</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>getIndexPaths</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; fsi::Indexer::getIndexPaths ( ) const</computeroutput></para><para>
+
+<para>Get all the indexed paths from the vector indexes. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>All the indexed paths in a vector </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00194">194</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00195 &#32;&#32;&#32;&#32;{
+00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;additions;
+00197 
+00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>)
+00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;additions.emplace_back(x.path);&#32;}
+00200 
+00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;additions;
+00202 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_FSI__Indexer_8hpp_source_1l00063">indexerInfo</link>.</para>
+</section>
+<anchor xml:id="_classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a"/><section>
+    <title>removeInfo()</title>
+<indexterm><primary>removeInfo</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>removeInfo</secondary></indexterm>
+<para><computeroutput><link linkend="_structfsi_1_1IndexerError">IndexerError</link> fsi::Indexer::removeInfo (const std::string &amp; searcher)</computeroutput></para><para>
+
+<para>Remove information from its ID or full path. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>searcher</entry><entry>
+<para>Search for the path or ID and remove them from the indexer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_structfsi_1_1IndexerError">IndexerError</link> Return error or success from <computeroutput><link linkend="_structfsi_1_1IndexerError">IndexerError</link></computeroutput> type </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00154">154</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00155 &#32;&#32;&#32;&#32;{
+00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ac4f8a22716e600e7e92d5a700255d081">IndexerError</link>&#32;error;
+00157 
+00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Do&#32;checks</emphasis>
+00159 
+00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(searcher.empty())
+00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.code&#32;=&#32;<link linkend="_namespacefsi_1_1codes_1ac2ba68f515a46e02eae9671750056860">fsi::codes::ERROR_EMPTY_VALUE</link>;
+00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.message&#32;=&#32;<emphasis role="stringliteral">&quot;Empty&#32;value&#32;to&#32;remove&#32;from&#32;the&#32;Indexer&#32;Information&#32;list&quot;</emphasis>;
+00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.fatal&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.raise&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00166 
+00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00169 
+00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Erase&#32;the&#32;found&#32;object&#32;(IndexerInfo)&#32;value&#32;by&#32;ID&#32;or&#32;Path</emphasis>
+00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.erase(
+00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::remove_if(
+00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.begin(),
+00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;indexerInfo.end(),
+00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[&amp;](<emphasis role="keyword">const</emphasis>&#32;<link linkend="_namespacefsi_1ac37e1b86ed295241cce0bbc399f023da">IndexerInfo</link>&#32;&amp;info)&#32;{
+00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;(info.id&#32;==&#32;searcher&#32;||&#32;info.path&#32;==&#32;searcher);
+00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}),
+00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;indexerInfo.end()
+00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+00180 
+00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+00182 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_FSI__Indexer_8hpp_source_1l00053">fsi::IndexerError::code</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00020">fsi::codes::ERROR_EMPTY_VALUE</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00055">fsi::IndexerError::fatal</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00063">indexerInfo</link>, <link linkend="_FSI__Indexer_8hpp_source_1l00051">fsi::IndexerError::message</link>, and <link linkend="_FSI__Indexer_8hpp_source_1l00056">fsi::IndexerError::raise</link>.</para>
+</section>
+<anchor xml:id="_classfsi_1_1Indexer_1a7d989963a7a874e5d03e441b383e0b61"/><section>
+    <title>searchExactMatching()</title>
+<indexterm><primary>searchExactMatching</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>searchExactMatching</secondary></indexterm>
+<para><computeroutput>std::string fsi::Indexer::searchExactMatching (const std::string &amp; find)</computeroutput></para><para>
+
+<para>Search for an exact matching path or ID;. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>find</entry><entry>
+<para>Get the ID or path to find </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The first match found </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00083">83</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00084 &#32;&#32;&#32;&#32;{
+00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(find.empty())
+00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+00087 
+00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8">findIndex</link>(find).<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>;
+00089 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_FSI__Indexer_8cpp_source_1l00143">findIndex()</link>, and <link linkend="_FSI__Indexer_8hpp_source_1l00043">fsi::IndexerInfo::path</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3b/classfsi_1_1Indexer_a7d989963a7a874e5d03e441b383e0b61_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classfsi_1_1Indexer_1a5c7f5cec792676647ac1f40fc69ecec3"/><section>
+    <title>searchMatching()</title>
+<indexterm><primary>searchMatching</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>searchMatching</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; fsi::Indexer::searchMatching (const std::string &amp; path)</computeroutput></para><para>
+
+<para>Search all matching path or ID that contains <computeroutput>path</computeroutput>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>path</entry><entry>
+<para>Path or ID to search </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A vector of all the found <computeroutput>path</computeroutput>s </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__Indexer_8cpp_source_1l00091">91</link> of file <link linkend="_FSI__Indexer_8cpp_source">FSI_Indexer.cpp</link>.</para>
+<programlisting linenumbering="unnumbered">00092 &#32;&#32;&#32;&#32;{
+00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(find.empty())
+00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{};
+00095 
+00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;vec;
+00097 
+00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>)
+00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x.path.find(find)&#32;!=&#32;std::string::npos)
+00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vec.emplace_back(x.path);
+00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00103 
+00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;vec;
+00105 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References <link linkend="_FSI__Indexer_8hpp_source_1l00063">indexerInfo</link>.</para>
+<para>
+Referenced by <link linkend="_main_8cpp_source_1l00020">main()</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3b/classfsi_1_1Indexer_a5c7f5cec792676647ac1f40fc69ecec3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>std::string fsi::Indexer::id<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00062">62</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00054">Indexer()</link>, and <link linkend="_FSI__Indexer_8cpp_source_1l00204">getID()</link>.</para>
+</section>
+<anchor xml:id="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6"/><section>
+    <title>indexerInfo</title>
+<indexterm><primary>indexerInfo</primary><secondary>fsi::Indexer</secondary></indexterm>
+<indexterm><primary>fsi::Indexer</primary><secondary>indexerInfo</secondary></indexterm>
+<para><computeroutput>std::vector&lt;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&gt; fsi::Indexer::indexerInfo<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00063">63</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00062">addExtendedInfo()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00107">addInfo()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00143">findIndex()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00191">getIndexerInfo()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00194">getIndexPaths()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00154">removeInfo()</link>, and <link linkend="_FSI__Indexer_8cpp_source_1l00091">searchMatching()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+inc/fsi/lib/<link linkend="_FSI__Indexer_8hpp">FSI_Indexer.hpp</link>src/lib/<link linkend="_FSI__Indexer_8cpp">FSI_Indexer.cpp</link></section>
+</section>

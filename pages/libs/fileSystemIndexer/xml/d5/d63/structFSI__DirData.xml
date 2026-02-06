@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="d5/d63/structFSI__DirData" kind="struct" language="C++" prot="public">
+    <compoundname>FSI_DirData</compoundname>
+    <includes refid="dc/d84/FSI__dirUtils_8h" local="no">FSI_dirUtils.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d5/d63/structFSI__DirData_1ac8944367a6d007b8e0f6ba53be1ba1c0" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* FSI_DirData::impl</definition>
+        <argsstring></argsstring>
+        <name>impl</name>
+        <qualifiedname>FSI_DirData::impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/FSI_dirUtils.h" line="30" column="6" bodyfile="inc/fsi/core/FSI_dirUtils.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="75" endline="84">fsi_closeDir</referencedby>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="14" endline="42">fsi_openDir</referencedby>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="44" endline="73">fsi_readDir</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/fsi/core/FSI_dirUtils.h" line="28" column="1" bodyfile="inc/fsi/core/FSI_dirUtils.h" bodystart="29" bodyend="31"/>
+    <listofallmembers>
+      <member refid="d5/d63/structFSI__DirData_1ac8944367a6d007b8e0f6ba53be1ba1c0" prot="public" virt="non-virtual"><scope>FSI_DirData</scope><name>impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

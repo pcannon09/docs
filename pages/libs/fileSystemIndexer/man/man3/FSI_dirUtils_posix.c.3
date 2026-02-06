@@ -1,0 +1,198 @@
+.TH "src/core/interfaces/FSI_dirUtils_posix.c" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/core/interfaces/FSI_dirUtils_posix.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include '\&.\&./\&.\&./\&.\&./inc/fsi/FSIpredefines\&.h'\fP
+.br
+\fR#include '\&.\&./\&.\&./\&.\&./inc/fsi/core/interfaces/FSI_dirUtils_posix\&.h'\fP
+.br
+\fR#include <dirent\&.h>\fP
+.br
+\fR#include <sys/stat\&.h>\fP
+.br
+\fR#include <stdlib\&.h>\fP
+.br
+\fR#include <fcntl\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB_DEFAULT_SOURCE\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfsi_closeDir\fP (\fBFSI_DirData\fP *d)"
+.br
+.RI "Get the directory data to deallocate memory\&. "
+.ti -1c
+.RI "int \fBfsi_openDir\fP (\fBFSI_DirData\fP *d, const char *path)"
+.br
+.RI "Open directory as read only\&. "
+.ti -1c
+.RI "int \fBfsi_readDir\fP (\fBFSI_DirData\fP *d, \fBFSI_EntryData\fP *out)"
+.br
+.RI "Read directory from reading the \fR\fBFSI_DirData\fP\fP information\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define _DEFAULT_SOURCE"
+
+.PP
+Definition at line \fB1\fP of file \fBFSI_dirUtils_posix\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void fsi_closeDir (\fBFSI_DirData\fP * d)"
+
+.PP
+Get the directory data to deallocate memory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Object to deallocate 
+.RE
+.PP
+
+.PP
+Definition at line \fB75\fP of file \fBFSI_dirUtils_posix\&.c\fP\&.
+.nf
+76 {
+77     FSI_DirData_POSIX *p = d\->impl;
+78 
+79     cstr_destroy(&p\->path);
+80 
+81     closedir(p\->dir);
+82 
+83     FSI_FREE(p);
+84 }
+.PP
+.fi
+
+.PP
+References \fBFSI_DirData_POSIX::dir\fP, \fBFSI_FREE\fP, \fBFSI_DirData::impl\fP, and \fBFSI_DirData_POSIX::path\fP\&.
+.PP
+Referenced by \fBfsi_walk()\fP\&.
+.SS "int fsi_openDir (\fBFSI_DirData\fP * d, const char * path)"
+
+.PP
+Open directory as read only\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Directory data 
+.br
+\fIpath\fP Path to open dir 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Status (1 if worked, 0 if failed) 
+.RE
+.PP
+
+.PP
+Definition at line \fB14\fP of file \fBFSI_dirUtils_posix\&.c\fP\&.
+.nf
+15 {
+16     FSI_DirData_POSIX *p = malloc(sizeof(*p));
+17 
+18     if (!p) return 0;
+19 
+20     p\->path = cstr_init();
+21 
+22     {
+23         const int dirFD = open(path, O_RDONLY);
+24 
+25         p\->dir = fdopendir(dirFD);
+26     }
+27 
+28     if (!p\->dir)
+29     {
+30         cstr_destroy(&p\->path);
+31 
+32         FSI_FREE(p);
+33 
+34         return 0;
+35     }
+36 
+37     cstr_set(&p\->path, path);
+38 
+39     d\->impl = p;
+40 
+41     return 1;
+42 }
+.PP
+.fi
+
+.PP
+References \fBFSI_DirData_POSIX::dir\fP, \fBFSI_FREE\fP, \fBFSI_DirData::impl\fP, and \fBFSI_DirData_POSIX::path\fP\&.
+.PP
+Referenced by \fBfsi_walk()\fP\&.
+.SS "int fsi_readDir (\fBFSI_DirData\fP * d, \fBFSI_EntryData\fP * out)"
+
+.PP
+Read directory from reading the \fR\fBFSI_DirData\fP\fP information\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Directory data 
+.br
+\fIout\fP Entry data to set the information 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Status (1 if worked, 0 if failed) 
+.RE
+.PP
+
+.PP
+Definition at line \fB44\fP of file \fBFSI_dirUtils_posix\&.c\fP\&.
+.nf
+45 {
+46     FSI_DirData_POSIX *p = d\->impl;
+47     struct dirent *e;
+48 
+49     while ((e = readdir(p\->dir)))
+50     {
+51         if (e\->d_name[0] == '\&.' &&
+52            (!e\->d_name[1] ||
+53            (e\->d_name[1] == '\&.' && !e\->d_name[2])))
+54             continue;
+55 
+56         if (e\->d_type == DT_DIR)
+57             out\->type = FSI_DIR;
+58 
+59         else if (e\->d_type == DT_REG)
+60             out\->type = FSI_FILE;
+61 
+62         else if (e\->d_type == DT_LNK)
+63             out\->type = FSI_SYMLINK;
+64 
+65         else out\->type = FSI_OTHER;
+66 
+67         out\->name = e\->d_name;
+68 
+69         return 1;
+70     }
+71 
+72     return 0;
+73 }
+.PP
+.fi
+
+.PP
+References \fBFSI_DirData_POSIX::dir\fP, \fBFSI_DIR\fP, \fBFSI_FILE\fP, \fBFSI_OTHER\fP, \fBFSI_SYMLINK\fP, \fBFSI_DirData::impl\fP, \fBFSI_EntryData::name\fP, and \fBFSI_EntryData::type\fP\&.
+.PP
+Referenced by \fBfsi_walk()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dc/d84/FSI__dirUtils_8h" kind="file" language="C++">
+    <compoundname>FSI_dirUtils.h</compoundname>
+    <includes refid="d8/db8/FSIpredefines_8h" local="yes">../FSIpredefines.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="yes">cvec/cvec.h</includes>
+    <includedby refid="d5/d64/FSI__dirUtils__posix_8h" local="yes">inc/fsi/core/interfaces/FSI_dirUtils_posix.h</includedby>
+    <includedby refid="d6/d8a/FSI__dirUtils_8c" local="yes">src/core/FSI_dirUtils.c</includedby>
+    <includedby refid="d3/d0f/FSI__Indexer_8cpp" local="yes">src/lib/FSI_Indexer.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>../FSIpredefines.h</label>
+        <link refid="d8/db8/FSIpredefines_8h"/>
+      </node>
+      <node id="1">
+        <label>inc/fsi/core/FSI_dirUtils.h</label>
+        <link refid="dc/d84/FSI__dirUtils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cvec/cvec.h</label>
+      </node>
+      <node id="3">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>inc/fsi/core/FSI_dirUtils.h</label>
+        <link refid="dc/d84/FSI__dirUtils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>inc/fsi/core/interfaces/FSI_dirUtils_posix.h</label>
+        <link refid="d5/d64/FSI__dirUtils__posix_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/core/FSI_dirUtils.c</label>
+        <link refid="d6/d8a/FSI__dirUtils_8c"/>
+      </node>
+      <node id="4">
+        <label>src/core/interfaces/FSI_dirUtils_posix.c</label>
+        <link refid="da/d97/FSI__dirUtils__posix_8c"/>
+      </node>
+      <node id="6">
+        <label>src/lib/FSI_Indexer.cpp</label>
+        <link refid="d3/d0f/FSI__Indexer_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/main.cpp</label>
+        <link refid="df/d0a/main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d5/d63/structFSI__DirData" prot="public">FSI_DirData</innerclass>
+    <innerclass refid="d1/d62/structFSI__EntryData" prot="public">FSI_EntryData</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="dc/d84/FSI__dirUtils_8h_1a25f893df9ebe7ec475499f28f3673918" prot="public" static="no">
+        <name>__FSI_DIRUTILS_CPP_CLOSE</name>
+        <initializer>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/FSI_dirUtils.h" line="6" column="11" bodyfile="inc/fsi/core/FSI_dirUtils.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d84/FSI__dirUtils_8h_1a80b32c6ce26d659377a18ad665438b2a" prot="public" static="no">
+        <name>__FSI_DIRUTILS_CPP_OPEN</name>
+        <initializer>extern &quot;C&quot; {</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/FSI_dirUtils.h" line="5" column="11" bodyfile="inc/fsi/core/FSI_dirUtils.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0" prot="public" static="no" strong="no">
+        <type></type>
+        <name>FSI_Type</name>
+        <enumvalue id="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1" prot="public">
+          <name>FSI_FILE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552" prot="public">
+          <name>FSI_DIR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e" prot="public">
+          <name>FSI_SYMLINK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede" prot="public">
+          <name>FSI_OTHER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/FSI_dirUtils.h" line="20" column="1" bodyfile="inc/fsi/core/FSI_dirUtils.h" bodystart="21" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dc/d84/FSI__dirUtils_8h_1ad39412d571379a5f201181f21dcd0313" prot="public" static="no">
+        <type>struct FSI_DirData</type>
+        <definition>typedef struct FSI_DirData FSI_DirData</definition>
+        <argsstring></argsstring>
+        <name>FSI_DirData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/FSI_dirUtils.h" line="31" column="13"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dc/d84/FSI__dirUtils_8h_1aad5302271e8d3cc39f711397abe5b957" prot="public" static="no">
+        <type>struct FSI_EntryData</type>
+        <definition>typedef struct FSI_EntryData FSI_EntryData</definition>
+        <argsstring></argsstring>
+        <name>FSI_EntryData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/FSI_dirUtils.h" line="38" column="15"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dc/d84/FSI__dirUtils_8h_1af91db6d6c004b3548000fa4f76a94cf9" prot="public" static="no">
+        <type>enum <ref refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0" kindref="member">FSI_Type</ref></type>
+        <definition>typedef enum FSI_Type FSI_Type</definition>
+        <argsstring></argsstring>
+        <name>FSI_Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/FSI_dirUtils.h" line="26" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d84/FSI__dirUtils_8h_1a3bc7da82fe7b1e798ee4b6d018534946" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fsi_walk</definition>
+        <argsstring>(CVEC *vec, const char *path)</argsstring>
+        <name>fsi_walk</name>
+        <param>
+          <type>CVEC *</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Walk to every directory and file and set <computeroutput>vec</computeroutput> to a CVEC value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector to set data to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to walk to all its sub-dirs </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/FSI_dirUtils.h" line="45" column="6" bodyfile="src/core/FSI_dirUtils.c" bodystart="12" bodyend="37" declfile="inc/fsi/core/FSI_dirUtils.h" declline="45" declcolumn="6"/>
+        <references refid="d5/d64/FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="75" endline="84">fsi_closeDir</references>
+        <references refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552" compoundref="dc/d84/FSI__dirUtils_8h" startline="23">FSI_DIR</references>
+        <references refid="d5/d64/FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="14" endline="42">fsi_openDir</references>
+        <references refid="d5/d64/FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="44" endline="73">fsi_readDir</references>
+        <references refid="d6/d8a/FSI__dirUtils_8c_1a3bc7da82fe7b1e798ee4b6d018534946" compoundref="d6/d8a/FSI__dirUtils_8c" startline="12" endline="37">fsi_walk</references>
+        <references refid="d1/d62/structFSI__EntryData_1ad540a33418e7055d0cd7a582146aed10" compoundref="dc/d84/FSI__dirUtils_8h" startline="35">FSI_EntryData::name</references>
+        <references refid="d1/d62/structFSI__EntryData_1aae303e170665a972cc52c708470a2b27" compoundref="dc/d84/FSI__dirUtils_8h" startline="37">FSI_EntryData::type</references>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="26" endline="49">fsi::Indexer::__iteratePath</referencedby>
+        <referencedby refid="dc/d84/FSI__dirUtils_8h_1a3bc7da82fe7b1e798ee4b6d018534946" compoundref="d6/d8a/FSI__dirUtils_8c" startline="12" endline="37">fsi_walk</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>INCLUDE_CORE_FSI_DIRUTILS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_CORE_FSI_DIRUTILS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="dc/d84/FSI__dirUtils_8h_1a80b32c6ce26d659377a18ad665438b2a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_CPP_OPEN<sp/><sp/><sp/><sp/><sp/><sp/>extern<sp/>&quot;C&quot;<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="dc/d84/FSI__dirUtils_8h_1a25f893df9ebe7ec475499f28f3673918" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_CPP_CLOSE<sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_CPP_OPEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_CPP_CLOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="dc/d84/FSI__dirUtils_8h_1a80b32c6ce26d659377a18ad665438b2a" kindref="member">__FSI_DIRUTILS_CPP_OPEN</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d8/db8/FSIpredefines_8h" kindref="compound">../FSIpredefines.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cvec/cvec.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0" kindref="member">FSI_Type</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22" refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1" kindref="member">FSI_FILE</ref>,</highlight></codeline>
+<codeline lineno="23" refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552" kindref="member">FSI_DIR</ref>,</highlight></codeline>
+<codeline lineno="24" refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e" kindref="member">FSI_SYMLINK</ref>,</highlight></codeline>
+<codeline lineno="25" refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede" kindref="member">FSI_OTHER</ref></highlight></codeline>
+<codeline lineno="26" refid="dc/d84/FSI__dirUtils_8h_1af91db6d6c004b3548000fa4f76a94cf9" refkind="member"><highlight class="normal">}<sp/><ref refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0" kindref="member">FSI_Type</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="d5/d63/structFSI__DirData" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d5/d63/structFSI__DirData" kindref="compound">FSI_DirData</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30" refid="d5/d63/structFSI__DirData_1ac8944367a6d007b8e0f6ba53be1ba1c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="d5/d63/structFSI__DirData_1ac8944367a6d007b8e0f6ba53be1ba1c0" kindref="member">impl</ref>;</highlight></codeline>
+<codeline lineno="31" refid="dc/d84/FSI__dirUtils_8h_1ad39412d571379a5f201181f21dcd0313" refkind="member"><highlight class="normal">}<sp/><ref refid="d5/d63/structFSI__DirData" kindref="compound">FSI_DirData</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="d1/d62/structFSI__EntryData" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d1/d62/structFSI__EntryData" kindref="compound">FSI_EntryData</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35" refid="d1/d62/structFSI__EntryData_1ad540a33418e7055d0cd7a582146aed10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d1/d62/structFSI__EntryData_1ad540a33418e7055d0cd7a582146aed10" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="d1/d62/structFSI__EntryData_1aae303e170665a972cc52c708470a2b27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0" kindref="member">FSI_Type</ref><sp/><ref refid="d1/d62/structFSI__EntryData_1aae303e170665a972cc52c708470a2b27" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="38" refid="dc/d84/FSI__dirUtils_8h_1aad5302271e8d3cc39f711397abe5b957" refkind="member"><highlight class="normal">}<sp/><ref refid="d1/d62/structFSI__EntryData" kindref="compound">FSI_EntryData</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="40"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Walk<sp/>to<sp/>every<sp/>directory<sp/>and<sp/>file<sp/>and<sp/>set<sp/>`vec`<sp/>to<sp/>a<sp/>CVEC<sp/>value</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>@param<sp/>vec<sp/>The<sp/>vector<sp/>to<sp/>set<sp/>data<sp/>to</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/>@param<sp/>path<sp/>Path<sp/>to<sp/>walk<sp/>to<sp/>all<sp/>its<sp/>sub-dirs</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/d84/FSI__dirUtils_8h_1a3bc7da82fe7b1e798ee4b6d018534946" kindref="member">fsi_walk</ref>(CVEC<sp/>*vec,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><ref refid="dc/d84/FSI__dirUtils_8h_1a25f893df9ebe7ec475499f28f3673918" kindref="member">__FSI_DIRUTILS_CPP_CLOSE</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>INCLUDE_CORE_FSI_DIRUTILS_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/fsi/core/FSI_dirUtils.h"/>
+  </compounddef>
+</doxygen>

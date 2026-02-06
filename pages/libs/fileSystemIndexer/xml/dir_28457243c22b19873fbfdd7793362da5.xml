@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_28457243c22b19873fbfdd7793362da5" kind="dir">
+    <compoundname>inc/fsi/core/interfaces</compoundname>
+    <innerfile refid="d5/d64/FSI__dirUtils__posix_8h">FSI_dirUtils_posix.h</innerfile>
+    <innerfile refid="d5/def/FSI__dirUtils__windows_8h">FSI_dirUtils_windows.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/fsi/core/interfaces/"/>
+  </compounddef>
+</doxygen>

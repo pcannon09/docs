@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="d8/db8/FSIpredefines_8h" kind="file" language="C++">
+    <compoundname>FSIpredefines.h</compoundname>
+    <includedby refid="dc/d84/FSI__dirUtils_8h" local="yes">inc/fsi/core/FSI_dirUtils.h</includedby>
+    <includedby refid="d5/d64/FSI__dirUtils__posix_8h" local="yes">inc/fsi/core/interfaces/FSI_dirUtils_posix.h</includedby>
+    <includedby refid="d6/d8a/FSI__dirUtils_8c" local="yes">src/core/FSI_dirUtils.c</includedby>
+    <includedby refid="da/d97/FSI__dirUtils__posix_8c" local="yes">src/core/interfaces/FSI_dirUtils_posix.c</includedby>
+    <includedby refid="d3/d0f/FSI__Indexer_8cpp" local="yes">src/lib/FSI_Indexer.cpp</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>inc/fsi/FSIpredefines.h</label>
+        <link refid="d8/db8/FSIpredefines_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>inc/fsi/core/FSI_dirUtils.h</label>
+        <link refid="dc/d84/FSI__dirUtils_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>inc/fsi/core/interfaces/FSI_dirUtils_posix.h</label>
+        <link refid="d5/d64/FSI__dirUtils__posix_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/core/FSI_dirUtils.c</label>
+        <link refid="d6/d8a/FSI__dirUtils_8c"/>
+      </node>
+      <node id="5">
+        <label>src/core/interfaces/FSI_dirUtils_posix.c</label>
+        <link refid="da/d97/FSI__dirUtils__posix_8c"/>
+      </node>
+      <node id="7">
+        <label>src/lib/FSI_Indexer.cpp</label>
+        <link refid="d3/d0f/FSI__Indexer_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/main.cpp</label>
+        <link refid="df/d0a/main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1ac9cd5367b5a6b833467beec0c0f8ab30" prot="public" static="no">
+        <name>__FSI_DIRUTILS_PREDEF_CPP_CLOSE</name>
+        <initializer>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="12" column="11" bodyfile="inc/fsi/FSIpredefines.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1a295402e18de37cc2ce1ffc3d384bd07d" prot="public" static="no">
+        <name>__FSI_DIRUTILS_PREDEF_CPP_OPEN</name>
+        <initializer>extern &quot;C&quot; {</initializer>
+        <briefdescription>
+<para><ref refid="d8/db8/FSIpredefines_8h" kindref="compound">FSIpredefines.h</ref> - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1.0S. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="11" column="11" bodyfile="inc/fsi/FSIpredefines.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1ab2e1764830d9afa8aec2149f527024a4" prot="public" static="no">
+        <name>FSI_DEFAULT_CPP_STD</name>
+        <initializer>201703L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="21" column="9" bodyfile="inc/fsi/FSIpredefines.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1a5bd97c6a004e9974d1da59b14d5a52cf" prot="public" static="no">
+        <name>FSI_DEL</name>
+        <param><defname>x</defname></param>
+        <initializer>delete x; x = nullptr;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="46" column="9" bodyfile="inc/fsi/FSIpredefines.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1ab0a960f494d546badeba4fb8803aba45" prot="public" static="no">
+        <name>FSI_DEV</name>
+        <initializer>true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="49" column="12" bodyfile="inc/fsi/FSIpredefines.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9" prot="public" static="no">
+        <name>FSI_FREE</name>
+        <param><defname>x</defname></param>
+        <initializer>free(x); x = NULL;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="45" column="9" bodyfile="inc/fsi/FSIpredefines.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="26" endline="49">fsi::Indexer::__iteratePath</referencedby>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="75" endline="84">fsi_closeDir</referencedby>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="14" endline="42">fsi_openDir</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1aa86fcd3af2b1d06bfe51d040498e3eac" prot="public" static="no">
+        <name>FSI_STRINGIFY</name>
+        <param><defname>x</defname></param>
+        <initializer>#x</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="42" column="9" bodyfile="inc/fsi/FSIpredefines.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1a361ef337aed85177f332d71f04d3f3c5" prot="public" static="no">
+        <name>FSI_TOSTRING</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="d8/db8/FSIpredefines_8h_1aa86fcd3af2b1d06bfe51d040498e3eac" kindref="member">FSI_STRINGIFY</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="43" column="9" bodyfile="inc/fsi/FSIpredefines.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1a4558abf943c73a669f1df9213fdc5c91" prot="public" static="no">
+        <name>FSI_VERSION</name>
+        <initializer>((<ref refid="d8/db8/FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f" kindref="member">FSI_VERSION_MAJOR</ref>&lt;&lt;16)|(<ref refid="d8/db8/FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a" kindref="member">FSI_VERSION_MINOR</ref>&lt;&lt;8)|(<ref refid="d8/db8/FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7" kindref="member">FSI_VERSION_PATCH</ref>)|(<ref refid="d8/db8/FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484" kindref="member">FSI_VERSION_STATE</ref> &lt;&lt; 24))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="36" column="9" bodyfile="inc/fsi/FSIpredefines.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1a81f33c3a184d2904c827bf08ca6b20fe" prot="public" static="no">
+        <name>FSI_VERSION_CHECK</name>
+        <param><defname>FSI_VERSION_MAJOR</defname></param>
+        <param><defname>FSI_VERSION_MINOR</defname></param>
+        <param><defname>FSI_VERSION_PATCH</defname></param>
+        <param><defname>FSI_VERSION_STATE</defname></param>
+        <initializer>(((<ref refid="d8/db8/FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f" kindref="member">FSI_VERSION_MAJOR</ref>)&lt;&lt;16)|((<ref refid="d8/db8/FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a" kindref="member">FSI_VERSION_MINOR</ref>)&lt;&lt;8)|(<ref refid="d8/db8/FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7" kindref="member">FSI_VERSION_PATCH</ref>)|((<ref refid="d8/db8/FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484" kindref="member">FSI_VERSION_STATE</ref>) &lt;&lt; 24))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="38" column="9" bodyfile="inc/fsi/FSIpredefines.h" bodystart="38" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f" prot="public" static="no">
+        <name>FSI_VERSION_MAJOR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="24" column="9" bodyfile="inc/fsi/FSIpredefines.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a" prot="public" static="no">
+        <name>FSI_VERSION_MINOR</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="25" column="9" bodyfile="inc/fsi/FSIpredefines.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7" prot="public" static="no">
+        <name>FSI_VERSION_PATCH</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="26" column="9" bodyfile="inc/fsi/FSIpredefines.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484" prot="public" static="no">
+        <name>FSI_VERSION_STATE</name>
+        <initializer>&quot;beta&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="34" column="9" bodyfile="inc/fsi/FSIpredefines.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/db8/FSIpredefines_8h_1a3cf97e4cc4c73ad21eb6b2881d430add" prot="public" static="no">
+        <name>FSI_VERSION_STD</name>
+        <initializer>20260205</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/FSIpredefines.h" line="28" column="9" bodyfile="inc/fsi/FSIpredefines.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>FSIpredefines.h<sp/>-<sp/>pcannonProjectStandards</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Predefines<sp/>for<sp/>C<sp/>and<sp/>C++<sp/>projects</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>STD<sp/>Information:<sp/>20250723<sp/>-<sp/>1.0S</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDE_FSI_FSIPREDEFINES_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_FSI_FSIPREDEFINES_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="d8/db8/FSIpredefines_8h_1a295402e18de37cc2ce1ffc3d384bd07d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_PREDEF_CPP_OPEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/>extern<sp/>&quot;C&quot;<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="d8/db8/FSIpredefines_8h_1ac9cd5367b5a6b833467beec0c0f8ab30" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_PREDEF_CPP_CLOSE<sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_PREDEF_CPP_OPEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_PREDEF_CPP_CLOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="d8/db8/FSIpredefines_8h_1a295402e18de37cc2ce1ffc3d384bd07d" kindref="member">__FSI_DIRUTILS_PREDEF_CPP_OPEN</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Project<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="d8/db8/FSIpredefines_8h_1ab2e1764830d9afa8aec2149f527024a4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSI_DEFAULT_CPP_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>201703L</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Versioning</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="d8/db8/FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSI_VERSION_MAJOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="d8/db8/FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSI_VERSION_MINOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="d8/db8/FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSI_VERSION_PATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="d8/db8/FSIpredefines_8h_1a3cf97e4cc4c73ad21eb6b2881d430add" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSI_VERSION_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20260205</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>states:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>beta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>build</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="d8/db8/FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSI_VERSION_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;beta&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="d8/db8/FSIpredefines_8h_1a4558abf943c73a669f1df9213fdc5c91" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSI_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((FSI_VERSION_MAJOR&lt;&lt;16)|(FSI_VERSION_MINOR&lt;&lt;8)|(FSI_VERSION_PATCH)|(FSI_VERSION_STATE<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="d8/db8/FSIpredefines_8h_1a81f33c3a184d2904c827bf08ca6b20fe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSI_VERSION_CHECK(FSI_VERSION_MAJOR,<sp/>FSI_VERSION_MINOR,<sp/>FSI_VERSION_PATCH,<sp/>FSI_VERSION_STATE)<sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(((FSI_VERSION_MAJOR)&lt;&lt;16)|((FSI_VERSION_MINOR)&lt;&lt;8)|(FSI_VERSION_PATCH)|((FSI_VERSION_STATE)<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Macro<sp/>utils</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="d8/db8/FSIpredefines_8h_1aa86fcd3af2b1d06bfe51d040498e3eac" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSI_STRINGIFY(x)<sp/>#x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="d8/db8/FSIpredefines_8h_1a361ef337aed85177f332d71f04d3f3c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSI_TOSTRING(x)<sp/>FSI_STRINGIFY(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="d8/db8/FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSI_FREE(x)<sp/>free(x);<sp/>x<sp/>=<sp/>NULL;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="d8/db8/FSIpredefines_8h_1a5bd97c6a004e9974d1da59b14d5a52cf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSI_DEL(x)<sp/>delete<sp/>x;<sp/>x<sp/>=<sp/>nullptr;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FSI_DEV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="d8/db8/FSIpredefines_8h_1ab0a960f494d546badeba4fb8803aba45" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>FSI_DEV<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(WIN32)<sp/>||<sp/>defined(_WIN32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>FSI_OS_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__APPLE__)<sp/>||<sp/>defined(__MACH__)<sp/>||<sp/>defined(Macintosh)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>FSI_OS_MACOS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__linux__)<sp/>||<sp/>defined(__unix)<sp/>||<sp/>defined(__unix__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>FSI_OS_UNIX_LINUX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__FreeBSD__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>FSI_OS_FREEBSD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>warning<sp/>&quot;Current<sp/>platform<sp/>is<sp/>not<sp/>supported&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>defined(WIN32)<sp/>//<sp/>Platform<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="d8/db8/FSIpredefines_8h_1ac9cd5367b5a6b833467beec0c0f8ab30" kindref="member">__FSI_DIRUTILS_PREDEF_CPP_CLOSE</ref></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>INCLUDE_FSI_FSIPREDEFINES_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/fsi/FSIpredefines.h"/>
+  </compounddef>
+</doxygen>

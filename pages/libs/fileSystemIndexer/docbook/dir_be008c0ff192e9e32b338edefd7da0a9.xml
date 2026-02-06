@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_be008c0ff192e9e32b338edefd7da0a9" xml:lang="en-US">
+<title>inc/fsi/core Directory Reference</title>
+<indexterm><primary>inc/fsi/core Directory Reference</primary></indexterm>
+Directory dependency graph for core:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_be008c0ff192e9e32b338edefd7da0a9_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_28457243c22b19873fbfdd7793362da5">interfaces</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_FSI__dirUtils_8h">FSI_dirUtils.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_FSI__timeUtils_8hpp">FSI_timeUtils.hpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,12 @@
+<map id="fsi::Indexer" name="fsi::Indexer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="25,431,111,457"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="28,97,108,124"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,140,71,430,65,430,65,140"/>
+<area shape="rect" id="Node000005" href="$d8/dd6/structfsi_1_1IndexerInfo.html" title=" " alt="" coords="96,217,205,244"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="86,134,144,216,139,218,85,140"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,131,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="68,61,71,97,65,97,68,66"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="84,316,244,359"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="137,371,81,432,78,428,132,370"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="155,257,164,316,159,315,153,262"/>
+</map>

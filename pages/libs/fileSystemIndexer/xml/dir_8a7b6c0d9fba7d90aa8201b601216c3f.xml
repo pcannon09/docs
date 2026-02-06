@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_8a7b6c0d9fba7d90aa8201b601216c3f" kind="dir">
+    <compoundname>inc/fsi/modules/temperature</compoundname>
+    <innerfile refid="db/dc0/FSI__temperature_8hpp">FSI_temperature.hpp</innerfile>
+    <innerfile refid="db/d19/FSI__temperatureConverter_8h">FSI_temperatureConverter.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/fsi/modules/temperature/"/>
+  </compounddef>
+</doxygen>

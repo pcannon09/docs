@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_5192f319a10d5e2b71e0c908bbe9b6ae" xml:lang="en-US">
+<title>src/core/interfaces Directory Reference</title>
+<indexterm><primary>src/core/interfaces Directory Reference</primary></indexterm>
+Directory dependency graph for interfaces:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_5192f319a10d5e2b71e0c908bbe9b6ae_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_FSI__dirUtils__posix_8c">FSI_dirUtils_posix.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_FSI__dirUtils__windows_8c">FSI_dirUtils_windows.c</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

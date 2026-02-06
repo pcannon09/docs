@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="db/d8b/FSI__temperature_8cpp" kind="file" language="C++">
+    <compoundname>FSI_temperature.cpp</compoundname>
+    <includes refid="db/dc0/FSI__temperature_8hpp" local="yes">../../../inc/fsi/modules/temperature/FSI_temperature.hpp</includes>
+    <includes refid="db/d19/FSI__temperatureConverter_8h" local="yes">../../../inc/fsi/modules/temperature/FSI_temperatureConverter.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../../../inc/fsi/modules/temperature/FSI_temperature.hpp</label>
+        <link refid="db/dc0/FSI__temperature_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>../../../inc/fsi/modules/temperature/FSI_temperatureConverter.h</label>
+        <link refid="db/d19/FSI__temperatureConverter_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/modules/temperature/FSI_temperature.cpp</label>
+        <link refid="db/d8b/FSI__temperature_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="da/d46/namespacefsi">fsi</innernamespace>
+    <innernamespace refid="d2/de8/namespacefsi_1_1modules">fsi::modules</innernamespace>
+    <innernamespace refid="de/d44/namespacefsi_1_1modules_1_1tc">fsi::modules::tc</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="db/dc0/FSI__temperature_8hpp" kindref="compound">../../../inc/fsi/modules/temperature/FSI_temperature.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="db/d19/FSI__temperatureConverter_8h" kindref="compound">../../../inc/fsi/modules/temperature/FSI_temperatureConverter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="de/d44/namespacefsi_1_1modules_1_1tc" kindref="compound">fsi::modules::tc</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="de/d44/namespacefsi_1_1modules_1_1tc_1abbdea450d8dae5c95298bdd261a12da1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="de/d44/namespacefsi_1_1modules_1_1tc_1abbdea450d8dae5c95298bdd261a12da1" kindref="member">convertTo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;from,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;to)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d" kindref="member">FSI_temperatureConvertCelTo</ref>(from.c_str(),<sp/>to);<sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="de/d44/namespacefsi_1_1modules_1_1tc_1a37c21a89ea28cc2a16ad463cb908e604" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="de/d44/namespacefsi_1_1modules_1_1tc_1a37c21a89ea28cc2a16ad463cb908e604" kindref="member">convertFrom</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;to,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;from)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1" kindref="member">FSI_temperatureConvertCelFrom</ref>(to.c_str(),<sp/>from);<sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/modules/temperature/FSI_temperature.cpp"/>
+  </compounddef>
+</doxygen>

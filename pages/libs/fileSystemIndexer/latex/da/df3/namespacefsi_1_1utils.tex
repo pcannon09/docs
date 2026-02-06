@@ -1,0 +1,102 @@
+\doxysection{fsi::\+utils Namespace Reference}
+\hypertarget{namespacefsi_1_1utils}{}\label{namespacefsi_1_1utils}\index{fsi::utils@{fsi::utils}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime}{Time\+Utils\+\_\+\+Date\+Time}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time \doxymbox{\hyperlink{namespacefsi_1_1utils_a49d908b3b85451a5bf2faa44272c72c0}{Time\+Utils\+\_\+\+Date\+Time}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime}{Time\+Utils\+\_\+\+Date\+Time}} \doxymbox{\hyperlink{namespacefsi_1_1utils_ae0fd58fdf5e153ce89499a2bad2a8974}{fs\+Clock\+Data\+To\+DT}} (const fs::\+file\+\_\+time\+\_\+type \&time)
+\begin{DoxyCompactList}\small\item\em Set std::\+filesystem clock data to an actual usable Date and Time format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{namespacefsi_1_1utils_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespacefsi_1_1utils_a49d908b3b85451a5bf2faa44272c72c0}\index{fsi::utils@{fsi::utils}!TimeUtils\_DateTime@{TimeUtils\_DateTime}}
+\index{TimeUtils\_DateTime@{TimeUtils\_DateTime}!fsi::utils@{fsi::utils}}
+\doxysubsubsection{\texorpdfstring{TimeUtils\_DateTime}{TimeUtils\_DateTime}}
+{\footnotesize\ttfamily \label{namespacefsi_1_1utils_a49d908b3b85451a5bf2faa44272c72c0} 
+typedef struct fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time}
+
+
+
+\label{doc-func-members}
+\Hypertarget{namespacefsi_1_1utils_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacefsi_1_1utils_ae0fd58fdf5e153ce89499a2bad2a8974}\index{fsi::utils@{fsi::utils}!fsClockDataToDT@{fsClockDataToDT}}
+\index{fsClockDataToDT@{fsClockDataToDT}!fsi::utils@{fsi::utils}}
+\doxysubsubsection{\texorpdfstring{fsClockDataToDT()}{fsClockDataToDT()}}
+{\footnotesize\ttfamily \label{namespacefsi_1_1utils_ae0fd58fdf5e153ce89499a2bad2a8974} 
+\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime}{Time\+Utils\+\_\+\+Date\+Time}} fsi::\+utils::\+fs\+Clock\+Data\+To\+DT (\begin{DoxyParamCaption}\item[{const fs::\+file\+\_\+time\+\_\+type \&}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Set std::\+filesystem clock data to an actual usable Date and Time format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Get {\ttfamily std::\+filesystem::\+file\+\_\+time\+\_\+type} that is to be converted to a usuable time format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Date-\/\+Time object to be used 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__timeUtils_8cpp_source_l00008}{8}} of file \doxymbox{\hyperlink{FSI__timeUtils_8cpp_source}{FSI\+\_\+time\+Utils.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime}{TimeUtils\_DateTime}}\ dt\{0\};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&sctp\ =\ std::chrono::time\_point\_cast<std::chrono::system\_clock::duration>(}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ time\ -\/\ fs::file\_time\_type::clock::now()\ +\ std::chrono::system\_clock::now()}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ epochSec\ =\ std::chrono::time\_point\_cast<std::chrono::seconds>(sctp);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ epochMs\ =\ std::chrono::duration\_cast<std::chrono::microseconds>(sctp\ -\/\ epochSec).count();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::time\_t\ timeInfo\ =\ std::chrono::system\_clock::to\_time\_t(epochSec);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::tm\ tm\{\};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{FSI__timeUtils_8hpp_ab5d97f02701e4d2a93fdea536534621e}{\_\_FSI\_LOCALTIME}}(\&timeInfo,\ \&tm);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Time}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a8135eb12c7d645962892d79939767f2b}{hour}}\ =\ tm.tm\_hour;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a224f4265be90b19828d9e999ceba56e4}{min}}\ =\ tm.tm\_min;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a53f747e0ef76ed43ec51c4bdc844fd43}{sec}}\ =\ tm.tm\_sec;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a773404a9ff6e5c0a13eded6429ff26dd}{ms}}\ =\ (\textcolor{keywordtype}{unsigned}\ int)(epochMs);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Date}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a9169ed2e239eac50365d363b9365b704}{year}}\ =\ tm.tm\_year\ +\ 1900;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a4c79e8bac795772430a0c7624e01f3c8}{month}}\ =\ tm.tm\_mon\ +\ 1;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a340cd86b315b94e24ba58f047a05d977}{day}}\ =\ tm.tm\_mday;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dt;}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__timeUtils_8hpp_source_l00011}{\+\_\+\+\_\+\+FSI\+\_\+\+LOCALTIME}}, \doxymbox{\hyperlink{FSI__timeUtils_8hpp_source_l00025}{fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time::\+day}}, \doxymbox{\hyperlink{FSI__timeUtils_8hpp_source_l00018}{fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time::\+hour}}, \doxymbox{\hyperlink{FSI__timeUtils_8hpp_source_l00019}{fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time::\+min}}, \doxymbox{\hyperlink{FSI__timeUtils_8hpp_source_l00024}{fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time::\+month}}, \doxymbox{\hyperlink{FSI__timeUtils_8hpp_source_l00021}{fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time::\+ms}}, \doxymbox{\hyperlink{FSI__timeUtils_8hpp_source_l00020}{fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time::\+sec}}, and \doxymbox{\hyperlink{FSI__timeUtils_8hpp_source_l00023}{fsi::\+utils::\+\+Time\+Utils\+\_\+\+Date\+Time::\+year}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00184}{fsi::\+\+Indexer::\+get\+File\+DTInfo()}}.
+
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/df3/namespacefsi_1_1utils_ae0fd58fdf5e153ce89499a2bad2a8974_icgraph}
+\end{center}
+\end{figure}

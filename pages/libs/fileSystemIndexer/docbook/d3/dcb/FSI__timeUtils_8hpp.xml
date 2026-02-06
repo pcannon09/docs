@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSI__timeUtils_8hpp" xml:lang="en-US">
+<title>inc/fsi/core/FSI_timeUtils.hpp File Reference</title>
+<indexterm><primary>inc/fsi/core/FSI_timeUtils.hpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;filesystem&gt;<?linebreak?></programlisting>Include dependency graph for FSI_timeUtils.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d2c/FSI__timeUtils_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d4/d61/FSI__timeUtils_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">fsi::utils::TimeUtils_DateTime</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacefsi">fsi</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacefsi_1_1utils">fsi::utils</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_FSI__timeUtils_8hpp_1ab5d97f02701e4d2a93fdea536534621e">__FSI_LOCALTIME</link>(_tt,  _tm)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct fsi::utils::TimeUtils_DateTime <link linkend="_namespacefsi_1_1utils_1a49d908b3b85451a5bf2faa44272c72c0">fsi::utils::TimeUtils_DateTime</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">TimeUtils_DateTime</link> <link linkend="_namespacefsi_1_1utils_1ae0fd58fdf5e153ce89499a2bad2a8974">fsi::utils::fsClockDataToDT</link> (const fs::file_time_type &amp;time)</para>
+
+<para>Set std::filesystem clock data to an actual usable Date and Time format. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_FSI__timeUtils_8hpp_1ab5d97f02701e4d2a93fdea536534621e"/><section>
+    <title>__FSI_LOCALTIME</title>
+<indexterm><primary>__FSI_LOCALTIME</primary><secondary>FSI_timeUtils.hpp</secondary></indexterm>
+<indexterm><primary>FSI_timeUtils.hpp</primary><secondary>__FSI_LOCALTIME</secondary></indexterm>
+<para><computeroutput>#define __FSI_LOCALTIME( _tt,  _tm)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">localtime_r(_tt,&#32;_tm)
+</programlisting><para>
+Definition at line <link linkend="_FSI__timeUtils_8hpp_source_1l00011">11</link> of file <link linkend="_FSI__timeUtils_8hpp_source">FSI_timeUtils.hpp</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__timeUtils_8cpp_source_1l00008">fsi::utils::fsClockDataToDT()</link>.</para>
+</section>
+</section>
+</section>

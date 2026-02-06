@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.16.1" xml:lang="en-US">
+  <compound refid="d5/d63/structFSI__DirData" kind="struct"><name>FSI_DirData</name>
+    <member refid="d5/d63/structFSI__DirData_1ac8944367a6d007b8e0f6ba53be1ba1c0" kind="variable"><name>impl</name></member>
+  </compound>
+  <compound refid="d5/d16/structFSI__DirData__POSIX" kind="struct"><name>FSI_DirData_POSIX</name>
+    <member refid="d5/d16/structFSI__DirData__POSIX_1a78670985b16d169b902cfda51881f02c" kind="variable"><name>dir</name></member>
+    <member refid="d5/d16/structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e" kind="variable"><name>path</name></member>
+  </compound>
+  <compound refid="d1/d62/structFSI__EntryData" kind="struct"><name>FSI_EntryData</name>
+    <member refid="d1/d62/structFSI__EntryData_1ad540a33418e7055d0cd7a582146aed10" kind="variable"><name>name</name></member>
+    <member refid="d1/d62/structFSI__EntryData_1aae303e170665a972cc52c708470a2b27" kind="variable"><name>type</name></member>
+  </compound>
+  <compound refid="d0/d3b/classfsi_1_1Indexer" kind="class"><name>fsi::Indexer</name>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9" kind="variable"><name>id</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6" kind="variable"><name>indexerInfo</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a" kind="function"><name>__getPathType</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607" kind="function"><name>__iteratePath</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a098bb0a974616eb40e6a08111c192868" kind="function"><name>Indexer</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a6b4728ec2c6e51adae5f5465b919ead0" kind="function"><name>~Indexer</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" kind="function"><name>addExtendedInfo</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" kind="function"><name>addInfo</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8" kind="function"><name>findIndex</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a536321b24430696e730bc71f35c9ed0a" kind="function"><name>getFileDTInfo</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a9c25a27ee35467915d8ca45100ae4716" kind="function"><name>getID</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1ac277ab3386ab90f04ae1495b4db6bee3" kind="function"><name>getIndexerInfo</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a7cc91da352e5eeac9c672be8eb6ff452" kind="function"><name>getIndexPaths</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a" kind="function"><name>removeInfo</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a7d989963a7a874e5d03e441b383e0b61" kind="function"><name>searchExactMatching</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a5c7f5cec792676647ac1f40fc69ecec3" kind="function"><name>searchMatching</name></member>
+  </compound>
+  <compound refid="d1/dea/structfsi_1_1IndexerError" kind="struct"><name>fsi::IndexerError</name>
+    <member refid="d1/dea/structfsi_1_1IndexerError_1a9e0bda0195d038e4e133452e3347705a" kind="variable"><name>code</name></member>
+    <member refid="d1/dea/structfsi_1_1IndexerError_1a7d9081b0d5752868ed7ccb5aff0b0354" kind="variable"><name>fatal</name></member>
+    <member refid="d1/dea/structfsi_1_1IndexerError_1a16eb42d00430ff3bbe0e14ce67b857be" kind="variable"><name>message</name></member>
+    <member refid="d1/dea/structfsi_1_1IndexerError_1a1eb3e813f7bb46dca644058737249e25" kind="variable"><name>raise</name></member>
+  </compound>
+  <compound refid="db/da6/structfsi_1_1IndexerFoundInfo" kind="struct"><name>fsi::IndexerFoundInfo</name>
+    <member refid="db/da6/structfsi_1_1IndexerFoundInfo_1a3477c11915ceb9f099a7fc84e37913f1" kind="variable"><name>extension</name></member>
+    <member refid="db/da6/structfsi_1_1IndexerFoundInfo_1a689841b7cae9a7dc1dbd0a0f0afc10c0" kind="variable"><name>extType</name></member>
+    <member refid="db/da6/structfsi_1_1IndexerFoundInfo_1a12d34a2de8d49b37707745903e5f7382" kind="variable"><name>lastModDT</name></member>
+    <member refid="db/da6/structfsi_1_1IndexerFoundInfo_1a16ff738a7eaa12857f3c9fea4c551187" kind="variable"><name>name</name></member>
+    <member refid="db/da6/structfsi_1_1IndexerFoundInfo_1a7ef33d4ef2854d39adf0963f5e8c3c53" kind="variable"><name>path</name></member>
+  </compound>
+  <compound refid="d8/dd6/structfsi_1_1IndexerInfo" kind="struct"><name>fsi::IndexerInfo</name>
+    <member refid="d8/dd6/structfsi_1_1IndexerInfo_1a9ed84fe71c39594a0ab6c487a165f06c" kind="variable"><name>id</name></member>
+    <member refid="d8/dd6/structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b" kind="variable"><name>path</name></member>
+    <member refid="d8/dd6/structfsi_1_1IndexerInfo_1ad3eb8adcbd97fd15894e43a715ad2958" kind="variable"><name>pathType</name></member>
+  </compound>
+  <compound refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime" kind="struct"><name>fsi::utils::TimeUtils_DateTime</name>
+    <member refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a340cd86b315b94e24ba58f047a05d977" kind="variable"><name>day</name></member>
+    <member refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a8135eb12c7d645962892d79939767f2b" kind="variable"><name>hour</name></member>
+    <member refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a224f4265be90b19828d9e999ceba56e4" kind="variable"><name>min</name></member>
+    <member refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a4c79e8bac795772430a0c7624e01f3c8" kind="variable"><name>month</name></member>
+    <member refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a773404a9ff6e5c0a13eded6429ff26dd" kind="variable"><name>ms</name></member>
+    <member refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a53f747e0ef76ed43ec51c4bdc844fd43" kind="variable"><name>sec</name></member>
+    <member refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime_1a9169ed2e239eac50365d363b9365b704" kind="variable"><name>year</name></member>
+  </compound>
+  <compound refid="dc/d27/namespaceanonymous__namespace_02main_8cpp_03" kind="namespace"><name>anonymous_namespace{main.cpp}</name>
+    <member refid="dc/d27/namespaceanonymous__namespace_02main_8cpp_03_1ab4857c620ed555971c741512e920a0ac" kind="function"><name>__timeToStr</name></member>
+  </compound>
+  <compound refid="da/d46/namespacefsi" kind="namespace"><name>fsi</name>
+    <member refid="da/d46/namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30" kind="enum"><name>IndexerPathType</name></member>
+    <member refid="da/d46/namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494" kind="enumvalue"><name>Directory</name></member>
+    <member refid="da/d46/namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e" kind="enumvalue"><name>File</name></member>
+    <member refid="da/d46/namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0" kind="enumvalue"><name>SymLink</name></member>
+    <member refid="da/d46/namespacefsi_1ac4f8a22716e600e7e92d5a700255d081" kind="typedef"><name>IndexerError</name></member>
+    <member refid="da/d46/namespacefsi_1a863274d842a7a1996114f2b0f4424251" kind="typedef"><name>IndexerFoundInfo</name></member>
+    <member refid="da/d46/namespacefsi_1ac37e1b86ed295241cce0bbc399f023da" kind="typedef"><name>IndexerInfo</name></member>
+  </compound>
+  <compound refid="d9/dd2/namespacefsi_1_1codes" kind="namespace"><name>fsi::codes</name>
+    <member refid="d9/dd2/namespacefsi_1_1codes_1a141522bb6ab01bdab1888f51984bb08b" kind="variable"><name>ERROR_ADDITION_FAIL</name></member>
+    <member refid="d9/dd2/namespacefsi_1_1codes_1ac2ba68f515a46e02eae9671750056860" kind="variable"><name>ERROR_EMPTY_VALUE</name></member>
+    <member refid="d9/dd2/namespacefsi_1_1codes_1a94f1ddf1a0dccd865341cdc258614b91" kind="variable"><name>ERROR_ERASE_FAIL</name></member>
+    <member refid="d9/dd2/namespacefsi_1_1codes_1a88198637504cbb63a06c76d7d0b7a1a7" kind="variable"><name>ERROR_INVALID_PATH</name></member>
+  </compound>
+  <compound refid="d2/de8/namespacefsi_1_1modules" kind="namespace"><name>fsi::modules</name>
+  </compound>
+  <compound refid="de/d44/namespacefsi_1_1modules_1_1tc" kind="namespace"><name>fsi::modules::tc</name>
+    <member refid="de/d44/namespacefsi_1_1modules_1_1tc_1a37c21a89ea28cc2a16ad463cb908e604" kind="function"><name>convertFrom</name></member>
+    <member refid="de/d44/namespacefsi_1_1modules_1_1tc_1abbdea450d8dae5c95298bdd261a12da1" kind="function"><name>convertTo</name></member>
+  </compound>
+  <compound refid="da/df3/namespacefsi_1_1utils" kind="namespace"><name>fsi::utils</name>
+    <member refid="da/df3/namespacefsi_1_1utils_1a49d908b3b85451a5bf2faa44272c72c0" kind="typedef"><name>TimeUtils_DateTime</name></member>
+    <member refid="da/df3/namespacefsi_1_1utils_1ae0fd58fdf5e153ce89499a2bad2a8974" kind="function"><name>fsClockDataToDT</name></member>
+  </compound>
+  <compound refid="d8/dcc/namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="dc/d84/FSI__dirUtils_8h" kind="file"><name>FSI_dirUtils.h</name>
+    <member refid="dc/d84/FSI__dirUtils_8h_1a25f893df9ebe7ec475499f28f3673918" kind="define"><name>__FSI_DIRUTILS_CPP_CLOSE</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1a80b32c6ce26d659377a18ad665438b2a" kind="define"><name>__FSI_DIRUTILS_CPP_OPEN</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0" kind="enum"><name>FSI_Type</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1" kind="enumvalue"><name>FSI_FILE</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552" kind="enumvalue"><name>FSI_DIR</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e" kind="enumvalue"><name>FSI_SYMLINK</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede" kind="enumvalue"><name>FSI_OTHER</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1ad39412d571379a5f201181f21dcd0313" kind="typedef"><name>FSI_DirData</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1aad5302271e8d3cc39f711397abe5b957" kind="typedef"><name>FSI_EntryData</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1af91db6d6c004b3548000fa4f76a94cf9" kind="typedef"><name>FSI_Type</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1a3bc7da82fe7b1e798ee4b6d018534946" kind="function"><name>fsi_walk</name></member>
+  </compound>
+  <compound refid="d3/dcb/FSI__timeUtils_8hpp" kind="file"><name>FSI_timeUtils.hpp</name>
+    <member refid="d3/dcb/FSI__timeUtils_8hpp_1ab5d97f02701e4d2a93fdea536534621e" kind="define"><name>__FSI_LOCALTIME</name></member>
+  </compound>
+  <compound refid="d5/d64/FSI__dirUtils__posix_8h" kind="file"><name>FSI_dirUtils_posix.h</name>
+    <member refid="d5/d64/FSI__dirUtils__posix_8h_1a8c0b3d71cc0ffa34f54f11ef309ff965" kind="define"><name>__FSI_DIRUTILS_POSIX_CPP_CLOSE</name></member>
+    <member refid="d5/d64/FSI__dirUtils__posix_8h_1ae5d0abcc9e2ec0b0ec7b3c8f094a1862" kind="define"><name>__FSI_DIRUTILS_POSIX_CPP_OPEN</name></member>
+    <member refid="d5/d64/FSI__dirUtils__posix_8h_1a9e656c74e3e41518c2759918f0527719" kind="typedef"><name>FSI_DirData_POSIX</name></member>
+    <member refid="d5/d64/FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1" kind="function"><name>fsi_closeDir</name></member>
+    <member refid="d5/d64/FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd" kind="function"><name>fsi_openDir</name></member>
+    <member refid="d5/d64/FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f" kind="function"><name>fsi_readDir</name></member>
+  </compound>
+  <compound refid="d5/def/FSI__dirUtils__windows_8h" kind="file"><name>FSI_dirUtils_windows.h</name>
+    <member refid="d5/def/FSI__dirUtils__windows_8h_1a7a1e5c1f77073fd9606e1eefae29bb7f" kind="define"><name>__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</name></member>
+    <member refid="d5/def/FSI__dirUtils__windows_8h_1a3cb98626af17e298ce16235844075656" kind="define"><name>__FSI_DIRUTILS_WINDOWS_CPP_OPEN</name></member>
+  </compound>
+  <compound refid="d8/db8/FSIpredefines_8h" kind="file"><name>FSIpredefines.h</name>
+    <member refid="d8/db8/FSIpredefines_8h_1ac9cd5367b5a6b833467beec0c0f8ab30" kind="define"><name>__FSI_DIRUTILS_PREDEF_CPP_CLOSE</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1a295402e18de37cc2ce1ffc3d384bd07d" kind="define"><name>__FSI_DIRUTILS_PREDEF_CPP_OPEN</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1ab2e1764830d9afa8aec2149f527024a4" kind="define"><name>FSI_DEFAULT_CPP_STD</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1a5bd97c6a004e9974d1da59b14d5a52cf" kind="define"><name>FSI_DEL</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1ab0a960f494d546badeba4fb8803aba45" kind="define"><name>FSI_DEV</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9" kind="define"><name>FSI_FREE</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1aa86fcd3af2b1d06bfe51d040498e3eac" kind="define"><name>FSI_STRINGIFY</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1a361ef337aed85177f332d71f04d3f3c5" kind="define"><name>FSI_TOSTRING</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1a4558abf943c73a669f1df9213fdc5c91" kind="define"><name>FSI_VERSION</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1a81f33c3a184d2904c827bf08ca6b20fe" kind="define"><name>FSI_VERSION_CHECK</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f" kind="define"><name>FSI_VERSION_MAJOR</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a" kind="define"><name>FSI_VERSION_MINOR</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7" kind="define"><name>FSI_VERSION_PATCH</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484" kind="define"><name>FSI_VERSION_STATE</name></member>
+    <member refid="d8/db8/FSIpredefines_8h_1a3cf97e4cc4c73ad21eb6b2881d430add" kind="define"><name>FSI_VERSION_STD</name></member>
+  </compound>
+  <compound refid="d8/d6f/FSI__Indexer_8hpp" kind="file"><name>FSI_Indexer.hpp</name>
+    <member refid="d8/d6f/FSI__Indexer_8hpp_1a5f1510074e5b49e79ce5ccd97d927c53" kind="define"><name>__FSI_INDEXERERR_CHECK</name></member>
+    <member refid="d8/d6f/FSI__Indexer_8hpp_1a3ac8f32fbd100d7ab4f9ab08af2f846a" kind="define"><name>__FSI_SUCCESS</name></member>
+  </compound>
+  <compound refid="db/dc0/FSI__temperature_8hpp" kind="file"><name>FSI_temperature.hpp</name>
+  </compound>
+  <compound refid="db/d19/FSI__temperatureConverter_8h" kind="file"><name>FSI_temperatureConverter.h</name>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1aeec1c9abf519c96d40ccf05811fd33ef" kind="define"><name>__FSI_DIRUTILS_TC_CPP_CLOSE</name></member>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1abe24e40b38c356759f83d93f8e89840b" kind="define"><name>__FSI_DIRUTILS_TC_CPP_OPEN</name></member>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1af3c95b6196f59322328be76f69c59951" kind="define"><name>__FSI_TC_CEL_FROM_C</name></member>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1ab6545bfd018f75702e35f396d8d5e770" kind="define"><name>__FSI_TC_CEL_FROM_F</name></member>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1a67ef9c32ed33d539a95d811049fdda3a" kind="define"><name>__FSI_TC_CEL_FROM_K</name></member>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1af73b75586b7bdb2579ab6e9c7f71ecf6" kind="define"><name>__FSI_TC_CEL_FROM_RA</name></member>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1a6dcd96eb8642f4466614b1dc212d9bf9" kind="define"><name>__FSI_TC_CEL_FROM_RE</name></member>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1afeadea79f323e1fa506ef564778ba0ca" kind="define"><name>__FSI_TC_CEL_TO_C</name></member>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1acd61e380f61f77ef0d5d2ff8da6362fd" kind="define"><name>__FSI_TC_CEL_TO_F</name></member>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1af451dbedd0aea3ff1e584c4766eedbb5" kind="define"><name>__FSI_TC_CEL_TO_K</name></member>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1a4d45c2cd654fc2c106349e7d8b6b0e7c" kind="define"><name>__FSI_TC_CEL_TO_RA</name></member>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1a051d6a203331a736d5e5f328b1a69f4b" kind="define"><name>__FSI_TC_CEL_TO_RE</name></member>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1" kind="function"><name>FSI_temperatureConvertCelFrom</name></member>
+    <member refid="db/d19/FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d" kind="function"><name>FSI_temperatureConvertCelTo</name></member>
+  </compound>
+  <compound refid="da/ddd/README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="d6/d8a/FSI__dirUtils_8c" kind="file"><name>FSI_dirUtils.c</name>
+    <member refid="d6/d8a/FSI__dirUtils_8c_1a3bc7da82fe7b1e798ee4b6d018534946" kind="function"><name>fsi_walk</name></member>
+  </compound>
+  <compound refid="d9/df4/FSI__timeUtils_8cpp" kind="file"><name>FSI_timeUtils.cpp</name>
+  </compound>
+  <compound refid="da/d97/FSI__dirUtils__posix_8c" kind="file"><name>FSI_dirUtils_posix.c</name>
+    <member refid="da/d97/FSI__dirUtils__posix_8c_1a8fb447618db946a9e2a596d9ea18763f" kind="define"><name>_DEFAULT_SOURCE</name></member>
+    <member refid="da/d97/FSI__dirUtils__posix_8c_1a07bb8fc8aa9e6ea91c2f2e65425e03e1" kind="function"><name>fsi_closeDir</name></member>
+    <member refid="da/d97/FSI__dirUtils__posix_8c_1a1c15e434435c62f17b15a34877bd60bd" kind="function"><name>fsi_openDir</name></member>
+    <member refid="da/d97/FSI__dirUtils__posix_8c_1acb473fa7940b3c89aa11845436bbae8f" kind="function"><name>fsi_readDir</name></member>
+  </compound>
+  <compound refid="d0/dc6/FSI__dirUtils__windows_8c" kind="file"><name>FSI_dirUtils_windows.c</name>
+  </compound>
+  <compound refid="d3/d0f/FSI__Indexer_8cpp" kind="file"><name>FSI_Indexer.cpp</name>
+  </compound>
+  <compound refid="df/d0a/main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="db/d8b/FSI__temperature_8cpp" kind="file"><name>FSI_temperature.cpp</name>
+  </compound>
+  <compound refid="d7/d2d/FSI__temperatureConverter_8c" kind="file"><name>FSI_temperatureConverter.c</name>
+    <member refid="d7/d2d/FSI__temperatureConverter_8c_1a39b05ae287af83bc12cb5c8442cbdee1" kind="function"><name>FSI_temperatureConvertCelFrom</name></member>
+    <member refid="d7/d2d/FSI__temperatureConverter_8c_1aafde95eb428450f7515b36decef7b59d" kind="function"><name>FSI_temperatureConvertCelTo</name></member>
+  </compound>
+  <compound refid="dir_be008c0ff192e9e32b338edefd7da0a9" kind="dir"><name>inc/fsi/core</name>
+  </compound>
+  <compound refid="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir"><name>src/core</name>
+  </compound>
+  <compound refid="dir_851c9bd9db9dafce19def83f93a91fd5" kind="dir"><name>inc/fsi</name>
+  </compound>
+  <compound refid="dir_bfccd401955b95cf8c75461437045ac0" kind="dir"><name>inc</name>
+  </compound>
+  <compound refid="dir_28457243c22b19873fbfdd7793362da5" kind="dir"><name>inc/fsi/core/interfaces</name>
+  </compound>
+  <compound refid="dir_5192f319a10d5e2b71e0c908bbe9b6ae" kind="dir"><name>src/core/interfaces</name>
+  </compound>
+  <compound refid="dir_eaec1fe2057bff26f2484a73ab02fa8b" kind="dir"><name>inc/fsi/lib</name>
+  </compound>
+  <compound refid="dir_c85d3e3c5052e9ad9ce18c6863244a25" kind="dir"><name>src/lib</name>
+  </compound>
+  <compound refid="dir_177d67048c27b1cc13d9211eccefee7f" kind="dir"><name>inc/fsi/modules</name>
+  </compound>
+  <compound refid="dir_ddb4d7e95cc2d6c8e1ade10a20d7247d" kind="dir"><name>src/modules</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_8a7b6c0d9fba7d90aa8201b601216c3f" kind="dir"><name>inc/fsi/modules/temperature</name>
+  </compound>
+  <compound refid="dir_6527052777b6e0447b512f4c4c250761" kind="dir"><name>src/modules/temperature</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

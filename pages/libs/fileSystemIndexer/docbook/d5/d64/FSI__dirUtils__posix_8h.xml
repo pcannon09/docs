@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSI__dirUtils__posix_8h" xml:lang="en-US">
+<title>inc/fsi/core/interfaces/FSI_dirUtils_posix.h File Reference</title>
+<indexterm><primary>inc/fsi/core/interfaces/FSI_dirUtils_posix.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../../FSIpredefines.h&quot;<?linebreak?>#include &quot;../FSI_dirUtils.h&quot;<?linebreak?>#include &quot;cstr/cstr.h&quot;<?linebreak?>#include &lt;dirent.h&gt;<?linebreak?></programlisting>Include dependency graph for FSI_dirUtils_posix.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d4/dca/FSI__dirUtils__posix_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/dbd/FSI__dirUtils__posix_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structFSI__DirData__POSIX">FSI_DirData_POSIX</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_FSI__dirUtils__posix_8h_1a8c0b3d71cc0ffa34f54f11ef309ff965">__FSI_DIRUTILS_POSIX_CPP_CLOSE</link>&#160;&#160;&#160;}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSI__dirUtils__posix_8h_1ae5d0abcc9e2ec0b0ec7b3c8f094a1862">__FSI_DIRUTILS_POSIX_CPP_OPEN</link>&#160;&#160;&#160;extern &quot;C&quot; {</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct FSI_DirData_POSIX <link linkend="_FSI__dirUtils__posix_8h_1a9e656c74e3e41518c2759918f0527719">FSI_DirData_POSIX</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1">fsi_closeDir</link> (<link linkend="_structFSI__DirData">FSI_DirData</link> *d)</para>
+
+<para>Get the directory data to deallocate memory. </para>
+</listitem>
+            <listitem><para>int <link linkend="_FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd">fsi_openDir</link> (<link linkend="_structFSI__DirData">FSI_DirData</link> *d, const char *path)</para>
+
+<para>Open directory as read only. </para>
+</listitem>
+            <listitem><para>int <link linkend="_FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f">fsi_readDir</link> (<link linkend="_structFSI__DirData">FSI_DirData</link> *d, <link linkend="_structFSI__EntryData">FSI_EntryData</link> *out)</para>
+
+<para>Read directory from reading the <computeroutput><link linkend="_structFSI__DirData">FSI_DirData</link></computeroutput> information. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_FSI__dirUtils__posix_8h_1a8c0b3d71cc0ffa34f54f11ef309ff965"/><section>
+    <title>__FSI_DIRUTILS_POSIX_CPP_CLOSE</title>
+<indexterm><primary>__FSI_DIRUTILS_POSIX_CPP_CLOSE</primary><secondary>FSI_dirUtils_posix.h</secondary></indexterm>
+<indexterm><primary>FSI_dirUtils_posix.h</primary><secondary>__FSI_DIRUTILS_POSIX_CPP_CLOSE</secondary></indexterm>
+<para><computeroutput>#define __FSI_DIRUTILS_POSIX_CPP_CLOSE&#160;&#160;&#160;}</computeroutput></para><para>
+Definition at line <link linkend="_FSI__dirUtils__posix_8h_source_1l00006">6</link> of file <link linkend="_FSI__dirUtils__posix_8h_source">FSI_dirUtils_posix.h</link>.</para>
+</section>
+<anchor xml:id="_FSI__dirUtils__posix_8h_1ae5d0abcc9e2ec0b0ec7b3c8f094a1862"/><section>
+    <title>__FSI_DIRUTILS_POSIX_CPP_OPEN</title>
+<indexterm><primary>__FSI_DIRUTILS_POSIX_CPP_OPEN</primary><secondary>FSI_dirUtils_posix.h</secondary></indexterm>
+<indexterm><primary>FSI_dirUtils_posix.h</primary><secondary>__FSI_DIRUTILS_POSIX_CPP_OPEN</secondary></indexterm>
+<para><computeroutput>#define __FSI_DIRUTILS_POSIX_CPP_OPEN&#160;&#160;&#160;extern &quot;C&quot; {</computeroutput></para><para>
+Definition at line <link linkend="_FSI__dirUtils__posix_8h_source_1l00005">5</link> of file <link linkend="_FSI__dirUtils__posix_8h_source">FSI_dirUtils_posix.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_FSI__dirUtils__posix_8h_1a9e656c74e3e41518c2759918f0527719"/><section>
+    <title>FSI_DirData_POSIX</title>
+<indexterm><primary>FSI_DirData_POSIX</primary><secondary>FSI_dirUtils_posix.h</secondary></indexterm>
+<indexterm><primary>FSI_dirUtils_posix.h</primary><secondary>FSI_DirData_POSIX</secondary></indexterm>
+<para><computeroutput>typedef struct FSI_DirData_POSIX FSI_DirData_POSIX</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1"/><section>
+    <title>fsi_closeDir()</title>
+<indexterm><primary>fsi_closeDir</primary><secondary>FSI_dirUtils_posix.h</secondary></indexterm>
+<indexterm><primary>FSI_dirUtils_posix.h</primary><secondary>fsi_closeDir</secondary></indexterm>
+<para><computeroutput>void fsi_closeDir (<link linkend="_structFSI__DirData">FSI_DirData</link> * d)</computeroutput></para><para>
+
+<para>Get the directory data to deallocate memory. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>d</entry><entry>
+<para>Object to deallocate </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_FSI__dirUtils__posix_8c_source_1l00075">75</link> of file <link linkend="_FSI__dirUtils__posix_8c_source">FSI_dirUtils_posix.c</link>.</para>
+<programlisting linenumbering="unnumbered">00076 {
+00077 &#32;&#32;&#32;&#32;<link linkend="_structFSI__DirData__POSIX">FSI_DirData_POSIX</link>&#32;*p&#32;=&#32;d-&gt;<link linkend="_structFSI__DirData_1ac8944367a6d007b8e0f6ba53be1ba1c0">impl</link>;
+00078 
+00079 &#32;&#32;&#32;&#32;cstr_destroy(&amp;p-&gt;<link linkend="_structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e">path</link>);
+00080 
+00081 &#32;&#32;&#32;&#32;closedir(p-&gt;<link linkend="_structFSI__DirData__POSIX_1a78670985b16d169b902cfda51881f02c">dir</link>);
+00082 
+00083 &#32;&#32;&#32;&#32;<link linkend="_FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9">FSI_FREE</link>(p);
+00084 }
+</programlisting><para>
+References <link linkend="_FSI__dirUtils__posix_8h_source_1l00026">FSI_DirData_POSIX::dir</link>, <link linkend="_FSIpredefines_8h_source_1l00045">FSI_FREE</link>, <link linkend="_FSI__dirUtils_8h_source_1l00030">FSI_DirData::impl</link>, and <link linkend="_FSI__dirUtils__posix_8h_source_1l00027">FSI_DirData_POSIX::path</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__dirUtils_8c_source_1l00012">fsi_walk()</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d5/d64/FSI__dirUtils__posix_8h_a07bb8fc8aa9e6ea91c2f2e65425e03e1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd"/><section>
+    <title>fsi_openDir()</title>
+<indexterm><primary>fsi_openDir</primary><secondary>FSI_dirUtils_posix.h</secondary></indexterm>
+<indexterm><primary>FSI_dirUtils_posix.h</primary><secondary>fsi_openDir</secondary></indexterm>
+<para><computeroutput>int fsi_openDir (<link linkend="_structFSI__DirData">FSI_DirData</link> * d, const char * path)</computeroutput></para><para>
+
+<para>Open directory as read only. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>d</entry><entry>
+<para>Directory data </para>
+</entry>
+                            </row>
+                            <row>
+<entry>path</entry><entry>
+<para>Path to open dir </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Status (1 if worked, 0 if failed) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__dirUtils__posix_8c_source_1l00014">14</link> of file <link linkend="_FSI__dirUtils__posix_8c_source">FSI_dirUtils_posix.c</link>.</para>
+<programlisting linenumbering="unnumbered">00015 {
+00016 &#32;&#32;&#32;&#32;<link linkend="_structFSI__DirData__POSIX">FSI_DirData_POSIX</link>&#32;*p&#32;=&#32;malloc(<emphasis role="keyword">sizeof</emphasis>(*p));
+00017 
+00018 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!p)&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+00019 
+00020 &#32;&#32;&#32;&#32;p-&gt;<link linkend="_structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e">path</link>&#32;=&#32;cstr_init();
+00021 
+00022 &#32;&#32;&#32;&#32;{
+00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;dirFD&#32;=&#32;open(path,&#32;O_RDONLY);
+00024 
+00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;p-&gt;<link linkend="_structFSI__DirData__POSIX_1a78670985b16d169b902cfda51881f02c">dir</link>&#32;=&#32;fdopendir(dirFD);
+00026 &#32;&#32;&#32;&#32;}
+00027 
+00028 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!p-&gt;<link linkend="_structFSI__DirData__POSIX_1a78670985b16d169b902cfda51881f02c">dir</link>)
+00029 &#32;&#32;&#32;&#32;{
+00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_destroy(&amp;p-&gt;<link linkend="_structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e">path</link>);
+00031 
+00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9">FSI_FREE</link>(p);
+00033 
+00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+00035 &#32;&#32;&#32;&#32;}
+00036 
+00037 &#32;&#32;&#32;&#32;cstr_set(&amp;p-&gt;<link linkend="_structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e">path</link>,&#32;path);
+00038 
+00039 &#32;&#32;&#32;&#32;d-&gt;<link linkend="_structFSI__DirData_1ac8944367a6d007b8e0f6ba53be1ba1c0">impl</link>&#32;=&#32;p;
+00040 
+00041 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;1;
+00042 }
+</programlisting><para>
+References <link linkend="_FSI__dirUtils__posix_8h_source_1l00026">FSI_DirData_POSIX::dir</link>, <link linkend="_FSIpredefines_8h_source_1l00045">FSI_FREE</link>, <link linkend="_FSI__dirUtils_8h_source_1l00030">FSI_DirData::impl</link>, and <link linkend="_FSI__dirUtils__posix_8h_source_1l00027">FSI_DirData_POSIX::path</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__dirUtils_8c_source_1l00012">fsi_walk()</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d5/d64/FSI__dirUtils__posix_8h_a1c15e434435c62f17b15a34877bd60bd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f"/><section>
+    <title>fsi_readDir()</title>
+<indexterm><primary>fsi_readDir</primary><secondary>FSI_dirUtils_posix.h</secondary></indexterm>
+<indexterm><primary>FSI_dirUtils_posix.h</primary><secondary>fsi_readDir</secondary></indexterm>
+<para><computeroutput>int fsi_readDir (<link linkend="_structFSI__DirData">FSI_DirData</link> * d, <link linkend="_structFSI__EntryData">FSI_EntryData</link> * out)</computeroutput></para><para>
+
+<para>Read directory from reading the <computeroutput><link linkend="_structFSI__DirData">FSI_DirData</link></computeroutput> information. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>d</entry><entry>
+<para>Directory data </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>
+<para>Entry data to set the information </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Status (1 if worked, 0 if failed) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_FSI__dirUtils__posix_8c_source_1l00044">44</link> of file <link linkend="_FSI__dirUtils__posix_8c_source">FSI_dirUtils_posix.c</link>.</para>
+<programlisting linenumbering="unnumbered">00045 {
+00046 &#32;&#32;&#32;&#32;<link linkend="_structFSI__DirData__POSIX">FSI_DirData_POSIX</link>&#32;*p&#32;=&#32;d-&gt;<link linkend="_structFSI__DirData_1ac8944367a6d007b8e0f6ba53be1ba1c0">impl</link>;
+00047 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis>dirent&#32;*e;
+00048 
+00049 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;((e&#32;=&#32;readdir(p-&gt;<link linkend="_structFSI__DirData__POSIX_1a78670985b16d169b902cfda51881f02c">dir</link>)))
+00050 &#32;&#32;&#32;&#32;{
+00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(e-&gt;d_name[0]&#32;==&#32;<emphasis role="charliteral">&apos;.&apos;</emphasis>&#32;&amp;&amp;
+00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(!e-&gt;d_name[1]&#32;||
+00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(e-&gt;d_name[1]&#32;==&#32;<emphasis role="charliteral">&apos;.&apos;</emphasis>&#32;&amp;&amp;&#32;!e-&gt;d_name[2])))
+00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+00055 
+00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(e-&gt;d_type&#32;==&#32;DT_DIR)
+00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out-&gt;<link linkend="_structFSI__EntryData_1aae303e170665a972cc52c708470a2b27">type</link>&#32;=&#32;<link linkend="_FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</link>;
+00058 
+00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(e-&gt;d_type&#32;==&#32;DT_REG)
+00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out-&gt;<link linkend="_structFSI__EntryData_1aae303e170665a972cc52c708470a2b27">type</link>&#32;=&#32;<link linkend="_FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1">FSI_FILE</link>;
+00061 
+00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(e-&gt;d_type&#32;==&#32;DT_LNK)
+00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out-&gt;<link linkend="_structFSI__EntryData_1aae303e170665a972cc52c708470a2b27">type</link>&#32;=&#32;<link linkend="_FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e">FSI_SYMLINK</link>;
+00064 
+00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;out-&gt;<link linkend="_structFSI__EntryData_1aae303e170665a972cc52c708470a2b27">type</link>&#32;=&#32;<link linkend="_FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede">FSI_OTHER</link>;
+00066 
+00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out-&gt;<link linkend="_structFSI__EntryData_1ad540a33418e7055d0cd7a582146aed10">name</link>&#32;=&#32;e-&gt;d_name;
+00068 
+00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;1;
+00070 &#32;&#32;&#32;&#32;}
+00071 
+00072 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+00073 }
+</programlisting><para>
+References <link linkend="_FSI__dirUtils__posix_8h_source_1l00026">FSI_DirData_POSIX::dir</link>, <link linkend="_FSI__dirUtils_8h_source_1l00023">FSI_DIR</link>, <link linkend="_FSI__dirUtils_8h_source_1l00022">FSI_FILE</link>, <link linkend="_FSI__dirUtils_8h_source_1l00025">FSI_OTHER</link>, <link linkend="_FSI__dirUtils_8h_source_1l00024">FSI_SYMLINK</link>, <link linkend="_FSI__dirUtils_8h_source_1l00030">FSI_DirData::impl</link>, <link linkend="_FSI__dirUtils_8h_source_1l00035">FSI_EntryData::name</link>, and <link linkend="_FSI__dirUtils_8h_source_1l00037">FSI_EntryData::type</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__dirUtils_8c_source_1l00012">fsi_walk()</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d5/d64/FSI__dirUtils__posix_8h_acb473fa7940b3c89aa11845436bbae8f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

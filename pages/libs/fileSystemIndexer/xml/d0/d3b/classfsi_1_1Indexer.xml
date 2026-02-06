@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="d0/d3b/classfsi_1_1Indexer" kind="class" language="C++" prot="public">
+    <compoundname>fsi::Indexer</compoundname>
+    <includes refid="d8/d6f/FSI__Indexer_8hpp" local="no">FSI_Indexer.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d0/d3b/classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string fsi::Indexer::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>fsi::Indexer::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="62" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="62" bodyend="-1"/>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a098bb0a974616eb40e6a08111c192868" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="54" endline="56">Indexer</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a9c25a27ee35467915d8ca45100ae4716" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="204" endline="205">getID</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d3b/classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="d8/dd6/structfsi_1_1IndexerInfo" kindref="compound">IndexerInfo</ref> &gt;</type>
+        <definition>std::vector&lt;IndexerInfo&gt; fsi::Indexer::indexerInfo</definition>
+        <argsstring></argsstring>
+        <name>indexerInfo</name>
+        <qualifiedname>fsi::Indexer::indexerInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="63" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="63" bodyend="-1"/>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="62" endline="81">addExtendedInfo</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="107" endline="141">addInfo</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="143" endline="152">findIndex</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1ac277ab3386ab90f04ae1495b4db6bee3" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="191" endline="192">getIndexerInfo</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a7cc91da352e5eeac9c672be8eb6ff452" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="194" endline="202">getIndexPaths</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="154" endline="182">removeInfo</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a5c7f5cec792676647ac1f40fc69ecec3" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="91" endline="105">searchMatching</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="da/d46/namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30" kindref="member">IndexerPathType</ref></type>
+        <definition>IndexerPathType fsi::Indexer::__getPathType</definition>
+        <argsstring>(const std::string &amp;path) const</argsstring>
+        <name>__getPathType</name>
+        <qualifiedname>fsi::Indexer::__getPathType</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Get if path from function param is a: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>File</para>
+</listitem><listitem><para>Dir</para>
+</listitem><listitem><para>SymLink</para>
+</listitem><listitem><para>Others <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to get the type from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="da/d46/namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30" kindref="member">IndexerPathType</ref> The type of the function param </para>
+</simplesect>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="75" column="25" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="18" bodyend="24"/>
+        <references refid="da/d46/namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="25">fsi::Directory</references>
+        <references refid="da/d46/namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="26">fsi::File</references>
+        <references refid="da/d46/namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="27">fsi::SymLink</references>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="62" endline="81">addExtendedInfo</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="107" endline="141">addInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; fsi::Indexer::__iteratePath</definition>
+        <argsstring>(const std::string &amp;path)</argsstring>
+        <name>__iteratePath</name>
+        <qualifiedname>fsi::Indexer::__iteratePath</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Iterate all the files and directories (symlinks too) from <computeroutput>path</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to iterate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A tree of full path in a vector of strings </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="82" column="21" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="26" bodyend="49"/>
+        <references refid="d8/db8/FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9" compoundref="d8/db8/FSIpredefines_8h" startline="45">FSI_FREE</references>
+        <references refid="dc/d84/FSI__dirUtils_8h_1a3bc7da82fe7b1e798ee4b6d018534946" compoundref="d6/d8a/FSI__dirUtils_8c" startline="12" endline="37">fsi_walk</references>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="62" endline="81">addExtendedInfo</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1a098bb0a974616eb40e6a08111c192868" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fsi::Indexer::Indexer</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>Indexer</name>
+        <qualifiedname>fsi::Indexer::Indexer</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="85" column="1" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="54" bodyend="56"/>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="62">id</references>
+      </memberdef>
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1a6b4728ec2c6e51adae5f5465b919ead0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fsi::Indexer::~Indexer</definition>
+        <argsstring>()</argsstring>
+        <name>~Indexer</name>
+        <qualifiedname>fsi::Indexer::~Indexer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="86" column="1" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="59" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/dea/structfsi_1_1IndexerError" kindref="compound">IndexerError</ref></type>
+        <definition>IndexerError fsi::Indexer::addExtendedInfo</definition>
+        <argsstring>(const IndexerInfo &amp;info)</argsstring>
+        <name>addExtendedInfo</name>
+        <qualifiedname>fsi::Indexer::addExtendedInfo</qualifiedname>
+        <param>
+          <type>const <ref refid="d8/dd6/structfsi_1_1IndexerInfo" kindref="compound">IndexerInfo</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+<para>Add the exact path and the sub-paths to have the info from. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get the information from the exact path and deeper </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d1/dea/structfsi_1_1IndexerError" kindref="compound">IndexerError</ref> Return error or success from <computeroutput><ref refid="d1/dea/structfsi_1_1IndexerError" kindref="compound">IndexerError</ref></computeroutput> type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="100" column="14" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="62" bodyend="81"/>
+        <references refid="d8/d6f/FSI__Indexer_8hpp_1a5f1510074e5b49e79ce5ccd97d927c53" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="10" endline="11">__FSI_INDEXERERR_CHECK</references>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="18" endline="24">__getPathType</references>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="26" endline="49">__iteratePath</references>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="107" endline="141">addInfo</references>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="63">indexerInfo</references>
+        <references refid="d8/dd6/structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="43">fsi::IndexerInfo::path</references>
+        <references refid="d8/dd6/structfsi_1_1IndexerInfo_1ad3eb8adcbd97fd15894e43a715ad2958" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="46">fsi::IndexerInfo::pathType</references>
+        <referencedby refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="df/d0a/main_8cpp" startline="20" endline="43">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/dea/structfsi_1_1IndexerError" kindref="compound">IndexerError</ref></type>
+        <definition>IndexerError fsi::Indexer::addInfo</definition>
+        <argsstring>(const IndexerInfo &amp;info)</argsstring>
+        <name>addInfo</name>
+        <qualifiedname>fsi::Indexer::addInfo</qualifiedname>
+        <param>
+          <type>const <ref refid="d8/dd6/structfsi_1_1IndexerInfo" kindref="compound">IndexerInfo</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+<para>Add the exact path to have the info from. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get the information from the exact path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d1/dea/structfsi_1_1IndexerError" kindref="compound">IndexerError</ref> Return error or success from <computeroutput><ref refid="d1/dea/structfsi_1_1IndexerError" kindref="compound">IndexerError</ref></computeroutput> type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="93" column="14" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="107" bodyend="141"/>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="18" endline="24">__getPathType</references>
+        <references refid="d1/dea/structfsi_1_1IndexerError_1a9e0bda0195d038e4e133452e3347705a" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="53">fsi::IndexerError::code</references>
+        <references refid="d9/dd2/namespacefsi_1_1codes_1a141522bb6ab01bdab1888f51984bb08b" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="17">fsi::codes::ERROR_ADDITION_FAIL</references>
+        <references refid="d9/dd2/namespacefsi_1_1codes_1a88198637504cbb63a06c76d7d0b7a1a7" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="19">fsi::codes::ERROR_INVALID_PATH</references>
+        <references refid="d1/dea/structfsi_1_1IndexerError_1a7d9081b0d5752868ed7ccb5aff0b0354" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="55">fsi::IndexerError::fatal</references>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="63">indexerInfo</references>
+        <references refid="d1/dea/structfsi_1_1IndexerError_1a16eb42d00430ff3bbe0e14ce67b857be" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="51">fsi::IndexerError::message</references>
+        <references refid="d8/dd6/structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="43">fsi::IndexerInfo::path</references>
+        <references refid="d8/dd6/structfsi_1_1IndexerInfo_1ad3eb8adcbd97fd15894e43a715ad2958" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="46">fsi::IndexerInfo::pathType</references>
+        <references refid="d1/dea/structfsi_1_1IndexerError_1a1eb3e813f7bb46dca644058737249e25" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="56">fsi::IndexerError::raise</references>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="62" endline="81">addExtendedInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/dd6/structfsi_1_1IndexerInfo" kindref="compound">IndexerInfo</ref></type>
+        <definition>IndexerInfo fsi::Indexer::findIndex</definition>
+        <argsstring>(const std::string &amp;toFind)</argsstring>
+        <name>findIndex</name>
+        <qualifiedname>fsi::Indexer::findIndex</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>toFind</declname>
+        </param>
+        <briefdescription>
+<para>Find the index from the vector database from the indexer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toFind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Search for the path or ID and remove them from the indexer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d8/dd6/structfsi_1_1IndexerInfo" kindref="compound">IndexerInfo</ref> Find the indexed info from the indexer &quot;data base&quot; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="114" column="13" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="143" bodyend="152"/>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="63">indexerInfo</references>
+        <referencedby refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="df/d0a/main_8cpp" startline="20" endline="43">main</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a7d989963a7a874e5d03e441b383e0b61" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="83" endline="89">searchExactMatching</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1a536321b24430696e730bc71f35c9ed0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime" kindref="compound">utils::TimeUtils_DateTime</ref></type>
+        <definition>utils::TimeUtils_DateTime fsi::Indexer::getFileDTInfo</definition>
+        <argsstring>(const std::string &amp;path)</argsstring>
+        <name>getFileDTInfo</name>
+        <qualifiedname>fsi::Indexer::getFileDTInfo</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Get when the file, dir or symlink was last modified. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to get date time information </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Date time info </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="121" column="27" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="184" bodyend="189"/>
+        <references refid="da/df3/namespacefsi_1_1utils_1ae0fd58fdf5e153ce89499a2bad2a8974" compoundref="d9/df4/FSI__timeUtils_8cpp" startline="8" endline="36">fsi::utils::fsClockDataToDT</references>
+        <referencedby refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="df/d0a/main_8cpp" startline="20" endline="43">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1a9c25a27ee35467915d8ca45100ae4716" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string fsi::Indexer::getID</definition>
+        <argsstring>() const</argsstring>
+        <name>getID</name>
+        <qualifiedname>fsi::Indexer::getID</qualifiedname>
+        <briefdescription>
+<para>Get this object&apos;s ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Object ID </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="153" column="13" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="204" bodyend="205"/>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="62">id</references>
+      </memberdef>
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1ac277ab3386ab90f04ae1495b4db6bee3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="d8/dd6/structfsi_1_1IndexerInfo" kindref="compound">IndexerInfo</ref> &gt;</type>
+        <definition>std::vector&lt; IndexerInfo &gt; fsi::Indexer::getIndexerInfo</definition>
+        <argsstring>() const</argsstring>
+        <name>getIndexerInfo</name>
+        <qualifiedname>fsi::Indexer::getIndexerInfo</qualifiedname>
+        <briefdescription>
+<para>Return indexer information from this object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Get all the indexed information that was added </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="141" column="13" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="191" bodyend="192"/>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="63">indexerInfo</references>
+      </memberdef>
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1a7cc91da352e5eeac9c672be8eb6ff452" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; fsi::Indexer::getIndexPaths</definition>
+        <argsstring>() const</argsstring>
+        <name>getIndexPaths</name>
+        <qualifiedname>fsi::Indexer::getIndexPaths</qualifiedname>
+        <briefdescription>
+<para>Get all the indexed paths from the vector indexes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>All the indexed paths in a vector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="147" column="13" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="194" bodyend="202"/>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="63">indexerInfo</references>
+      </memberdef>
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/dea/structfsi_1_1IndexerError" kindref="compound">IndexerError</ref></type>
+        <definition>IndexerError fsi::Indexer::removeInfo</definition>
+        <argsstring>(const std::string &amp;searcher)</argsstring>
+        <name>removeInfo</name>
+        <qualifiedname>fsi::Indexer::removeInfo</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>searcher</declname>
+        </param>
+        <briefdescription>
+<para>Remove information from its ID or full path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>searcher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Search for the path or ID and remove them from the indexer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d1/dea/structfsi_1_1IndexerError" kindref="compound">IndexerError</ref> Return error or success from <computeroutput><ref refid="d1/dea/structfsi_1_1IndexerError" kindref="compound">IndexerError</ref></computeroutput> type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="107" column="14" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="154" bodyend="182"/>
+        <references refid="d1/dea/structfsi_1_1IndexerError_1a9e0bda0195d038e4e133452e3347705a" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="53">fsi::IndexerError::code</references>
+        <references refid="d9/dd2/namespacefsi_1_1codes_1ac2ba68f515a46e02eae9671750056860" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="20">fsi::codes::ERROR_EMPTY_VALUE</references>
+        <references refid="d1/dea/structfsi_1_1IndexerError_1a7d9081b0d5752868ed7ccb5aff0b0354" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="55">fsi::IndexerError::fatal</references>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="63">indexerInfo</references>
+        <references refid="d1/dea/structfsi_1_1IndexerError_1a16eb42d00430ff3bbe0e14ce67b857be" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="51">fsi::IndexerError::message</references>
+        <references refid="d1/dea/structfsi_1_1IndexerError_1a1eb3e813f7bb46dca644058737249e25" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="56">fsi::IndexerError::raise</references>
+      </memberdef>
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1a7d989963a7a874e5d03e441b383e0b61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string fsi::Indexer::searchExactMatching</definition>
+        <argsstring>(const std::string &amp;find)</argsstring>
+        <name>searchExactMatching</name>
+        <qualifiedname>fsi::Indexer::searchExactMatching</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>find</declname>
+        </param>
+        <briefdescription>
+<para>Search for an exact matching path or ID;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>find</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get the ID or path to find </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The first match found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="128" column="13" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="83" bodyend="89"/>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="143" endline="152">findIndex</references>
+        <references refid="d8/dd6/structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="43">fsi::IndexerInfo::path</references>
+      </memberdef>
+      <memberdef kind="function" id="d0/d3b/classfsi_1_1Indexer_1a5c7f5cec792676647ac1f40fc69ecec3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; fsi::Indexer::searchMatching</definition>
+        <argsstring>(const std::string &amp;path)</argsstring>
+        <name>searchMatching</name>
+        <qualifiedname>fsi::Indexer::searchMatching</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Search all matching path or ID that contains <computeroutput>path</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path or ID to search </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of all the found <computeroutput>path</computeroutput>s </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="135" column="13" bodyfile="src/lib/FSI_Indexer.cpp" bodystart="91" bodyend="105"/>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="63">indexerInfo</references>
+        <referencedby refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="df/d0a/main_8cpp" startline="20" endline="43">main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>fsi::Indexer</label>
+        <link refid="d0/d3b/classfsi_1_1Indexer"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>indexerInfo</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>fsi::IndexerInfo</label>
+        <link refid="d8/dd6/structfsi_1_1IndexerInfo"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>id</edgelabel>
+          <edgelabel>path</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; fsi::IndexerInfo &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="inc/fsi/lib/FSI_Indexer.hpp" line="59" column="1" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="60" bodyend="154"/>
+    <listofallmembers>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a" prot="protected" virt="virtual"><scope>fsi::Indexer</scope><name>__getPathType</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607" prot="protected" virt="virtual"><scope>fsi::Indexer</scope><name>__iteratePath</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" prot="public" virt="non-virtual"><scope>fsi::Indexer</scope><name>addExtendedInfo</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" prot="public" virt="non-virtual"><scope>fsi::Indexer</scope><name>addInfo</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8" prot="public" virt="non-virtual"><scope>fsi::Indexer</scope><name>findIndex</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1a536321b24430696e730bc71f35c9ed0a" prot="public" virt="non-virtual"><scope>fsi::Indexer</scope><name>getFileDTInfo</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1a9c25a27ee35467915d8ca45100ae4716" prot="public" virt="non-virtual"><scope>fsi::Indexer</scope><name>getID</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1ac277ab3386ab90f04ae1495b4db6bee3" prot="public" virt="non-virtual"><scope>fsi::Indexer</scope><name>getIndexerInfo</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1a7cc91da352e5eeac9c672be8eb6ff452" prot="public" virt="non-virtual"><scope>fsi::Indexer</scope><name>getIndexPaths</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9" prot="private" virt="non-virtual"><scope>fsi::Indexer</scope><name>id</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1a098bb0a974616eb40e6a08111c192868" prot="public" virt="non-virtual"><scope>fsi::Indexer</scope><name>Indexer</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6" prot="private" virt="non-virtual"><scope>fsi::Indexer</scope><name>indexerInfo</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a" prot="public" virt="non-virtual"><scope>fsi::Indexer</scope><name>removeInfo</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1a7d989963a7a874e5d03e441b383e0b61" prot="public" virt="non-virtual"><scope>fsi::Indexer</scope><name>searchExactMatching</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1a5c7f5cec792676647ac1f40fc69ecec3" prot="public" virt="non-virtual"><scope>fsi::Indexer</scope><name>searchMatching</name></member>
+      <member refid="d0/d3b/classfsi_1_1Indexer_1a6b4728ec2c6e51adae5f5465b919ead0" prot="public" virt="non-virtual"><scope>fsi::Indexer</scope><name>~Indexer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

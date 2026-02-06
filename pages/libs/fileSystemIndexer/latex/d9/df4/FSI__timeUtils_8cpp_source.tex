@@ -1,0 +1,44 @@
+\doxysection{FSI\+\_\+time\+Utils.\+cpp}
+\hypertarget{FSI__timeUtils_8cpp_source}{}\label{FSI__timeUtils_8cpp_source}\index{src/core/FSI\_timeUtils.cpp@{src/core/FSI\_timeUtils.cpp}}
+\doxymbox{\hyperlink{FSI__timeUtils_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{FSI__timeUtils_8hpp}{../../inc/fsi/core/FSI\_timeUtils.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00006}00006\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespacefsi_1_1utils}{fsi::utils}}}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00008}\doxymbox{\hyperlink{namespacefsi_1_1utils_ae0fd58fdf5e153ce89499a2bad2a8974}{00008}}\ \ \ \ \ \doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime}{TimeUtils\_DateTime}}\ \doxymbox{\hyperlink{namespacefsi_1_1utils_ae0fd58fdf5e153ce89499a2bad2a8974}{fsClockDataToDT}}(\textcolor{keyword}{const}\ fs::file\_time\_type\ \&time)}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime}{TimeUtils\_DateTime}}\ dt\{0\};}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&sctp\ =\ std::chrono::time\_point\_cast<std::chrono::system\_clock::duration>(}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ time\ -\/\ fs::file\_time\_type::clock::now()\ +\ std::chrono::system\_clock::now()}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ epochSec\ =\ std::chrono::time\_point\_cast<std::chrono::seconds>(sctp);}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ epochMs\ =\ std::chrono::duration\_cast<std::chrono::microseconds>(sctp\ -\/\ epochSec).count();}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ std::time\_t\ timeInfo\ =\ std::chrono::system\_clock::to\_time\_t(epochSec);}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ std::tm\ tm\{\};}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{FSI__timeUtils_8hpp_ab5d97f02701e4d2a93fdea536534621e}{\_\_FSI\_LOCALTIME}}(\&timeInfo,\ \&tm);}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Time}}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a8135eb12c7d645962892d79939767f2b}{hour}}\ =\ tm.tm\_hour;}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a224f4265be90b19828d9e999ceba56e4}{min}}\ =\ tm.tm\_min;}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a53f747e0ef76ed43ec51c4bdc844fd43}{sec}}\ =\ tm.tm\_sec;}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a773404a9ff6e5c0a13eded6429ff26dd}{ms}}\ =\ (\textcolor{keywordtype}{unsigned}\ int)(epochMs);}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Date}}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a9169ed2e239eac50365d363b9365b704}{year}}\ =\ tm.tm\_year\ +\ 1900;}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a4c79e8bac795772430a0c7624e01f3c8}{month}}\ =\ tm.tm\_mon\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ dt.\doxymbox{\hyperlink{structfsi_1_1utils_1_1TimeUtils__DateTime_a340cd86b315b94e24ba58f047a05d977}{day}}\ =\ tm.tm\_mday;}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dt;}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{FSI__timeUtils_8cpp_source_l00038}00038\ }
+
+\end{DoxyCode}

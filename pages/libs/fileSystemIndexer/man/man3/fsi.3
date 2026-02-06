@@ -1,0 +1,92 @@
+.TH "fsi" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fsi
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBcodes\fP"
+.br
+.ti -1c
+.RI "namespace \fBmodules\fP"
+.br
+.ti -1c
+.RI "namespace \fButils\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBIndexer\fP"
+.br
+.ti -1c
+.RI "struct \fBIndexerError\fP"
+.br
+.ti -1c
+.RI "struct \fBIndexerFoundInfo\fP"
+.br
+.ti -1c
+.RI "struct \fBIndexerInfo\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct fsi::IndexerError \fBIndexerError\fP"
+.br
+.ti -1c
+.RI "typedef struct fsi::IndexerFoundInfo \fBIndexerFoundInfo\fP"
+.br
+.ti -1c
+.RI "typedef struct fsi::IndexerInfo \fBIndexerInfo\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum class \fBIndexerPathType\fP { \fBDirectory\fP, \fBFile\fP, \fBSymLink\fP }"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct fsi::IndexerError fsi::IndexerError"
+
+.SS "typedef struct fsi::IndexerFoundInfo fsi::IndexerFoundInfo"
+
+.SS "typedef struct fsi::IndexerInfo fsi::IndexerInfo"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum class \fBfsi::IndexerPathType\fP\fR [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIDirectory \fP
+.TP
+\f(BIFile \fP
+.TP
+\f(BISymLink \fP
+.PP
+Definition at line \fB23\fP of file \fBFSI_Indexer\&.hpp\fP\&.
+.nf
+24     {
+25         Directory,
+26         File,
+27         SymLink
+28     };
+.PP
+.fi
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

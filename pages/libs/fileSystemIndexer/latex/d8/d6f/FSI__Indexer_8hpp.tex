@@ -1,0 +1,112 @@
+\doxysection{inc/\+fsi/\+lib/\+\+FSI\+\_\+\+Indexer.hpp File Reference}
+\hypertarget{FSI__Indexer_8hpp}{}\label{FSI__Indexer_8hpp}\index{inc/fsi/lib/FSI\_Indexer.hpp@{inc/fsi/lib/FSI\_Indexer.hpp}}
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include "{}../\+core/\+\+FSI\+\_\+time\+Utils.\+hpp"{}}\newline
+Include dependency graph for FSI\+\_\+\+Indexer.\+hpp:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{d5/d0d/FSI__Indexer_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{de/d52/FSI__Indexer_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{classfsi_1_1Indexer}{fsi::\+\+Indexer}}
+\item 
+struct \doxymbox{\hyperlink{structfsi_1_1IndexerError}{fsi::\+\+Indexer\+Error}}
+\item 
+struct \doxymbox{\hyperlink{structfsi_1_1IndexerFoundInfo}{fsi::\+\+Indexer\+Found\+Info}}
+\item 
+struct \doxymbox{\hyperlink{structfsi_1_1IndexerInfo}{fsi::\+\+Indexer\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespacefsi}{fsi}}
+\item 
+namespace \doxymbox{\hyperlink{namespacefsi_1_1codes}{fsi::\+codes}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{FSI__Indexer_8hpp_a5f1510074e5b49e79ce5ccd97d927c53}{\+\_\+\+\_\+\+FSI\+\_\+\+INDEXERERR\+\_\+\+CHECK}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{FSI__Indexer_8hpp_a3ac8f32fbd100d7ab4f9ab08af2f846a}{\+\_\+\+\_\+\+FSI\+\_\+\+SUCCESS}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct fsi::\+\+Indexer\+Error \doxymbox{\hyperlink{namespacefsi_ac4f8a22716e600e7e92d5a700255d081}{fsi::\+\+Indexer\+Error}}
+\item 
+typedef struct fsi::\+\+Indexer\+Found\+Info \doxymbox{\hyperlink{namespacefsi_a863274d842a7a1996114f2b0f4424251}{fsi::\+\+Indexer\+Found\+Info}}
+\item 
+typedef struct fsi::\+\+Indexer\+Info \doxymbox{\hyperlink{namespacefsi_ac37e1b86ed295241cce0bbc399f023da}{fsi::\+\+Indexer\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30}{fsi::\+\+Indexer\+Path\+Type}} \{ \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494}{fsi::\+\+Directory}}
+, \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e}{fsi::\+\+File}}
+, \doxymbox{\hyperlink{namespacefsi_ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0}{fsi::\+\+Sym\+Link}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr int \doxymbox{\hyperlink{namespacefsi_1_1codes_a141522bb6ab01bdab1888f51984bb08b}{fsi::\+codes::\+\+ERROR\+\_\+\+ADDITION\+\_\+\+FAIL}} = 1
+\item 
+constexpr int \doxymbox{\hyperlink{namespacefsi_1_1codes_ac2ba68f515a46e02eae9671750056860}{fsi::\+codes::\+\+ERROR\+\_\+\+EMPTY\+\_\+\+VALUE}} = 4
+\item 
+constexpr int \doxymbox{\hyperlink{namespacefsi_1_1codes_a94f1ddf1a0dccd865341cdc258614b91}{fsi::\+codes::\+\+ERROR\+\_\+\+ERASE\+\_\+\+FAIL}} = 2
+\item 
+constexpr int \doxymbox{\hyperlink{namespacefsi_1_1codes_a88198637504cbb63a06c76d7d0b7a1a7}{fsi::\+codes::\+\+ERROR\+\_\+\+INVALID\+\_\+\+PATH}} = 3
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{FSI__Indexer_8hpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{FSI__Indexer_8hpp_a5f1510074e5b49e79ce5ccd97d927c53}\index{FSI\_Indexer.hpp@{FSI\_Indexer.hpp}!\_\_FSI\_INDEXERERR\_CHECK@{\_\_FSI\_INDEXERERR\_CHECK}}
+\index{\_\_FSI\_INDEXERERR\_CHECK@{\_\_FSI\_INDEXERERR\_CHECK}!FSI\_Indexer.hpp@{FSI\_Indexer.hpp}}
+\doxysubsubsection{\texorpdfstring{\_\_FSI\_INDEXERERR\_CHECK}{\_\_FSI\_INDEXERERR\_CHECK}}
+{\footnotesize\ttfamily \label{FSI__Indexer_8hpp_a5f1510074e5b49e79ce5ccd97d927c53} 
+\+\#define \+\_\+\+\_\+\+FSI\+\_\+\+INDEXERERR\+\_\+\+CHECK(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(e.raise\ ||\ e.fatal)\ \&\&\ e.code\ !=\ \doxymbox{\hyperlink{FSI__Indexer_8hpp_a3ac8f32fbd100d7ab4f9ab08af2f846a}{\_\_FSI\_SUCCESS}}}
+
+\end{DoxyCode}
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00010}{10}} of file \doxymbox{\hyperlink{FSI__Indexer_8hpp_source}{FSI\+\_\+\+Indexer.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ \_\_FSI\_INDEXERERR\_CHECK(e)\ \(\backslash\)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ \ \ (e.raise\ ||\ e.fatal)\ \&\&\ e.code\ !=\ \_\_FSI\_SUCCESS}}
+
+\end{DoxyCode}
+
+
+Referenced by \doxymbox{\hyperlink{FSI__Indexer_8cpp_source_l00062}{fsi::\+\+Indexer::\+add\+Extended\+Info()}}.
+
+\Hypertarget{FSI__Indexer_8hpp_a3ac8f32fbd100d7ab4f9ab08af2f846a}\index{FSI\_Indexer.hpp@{FSI\_Indexer.hpp}!\_\_FSI\_SUCCESS@{\_\_FSI\_SUCCESS}}
+\index{\_\_FSI\_SUCCESS@{\_\_FSI\_SUCCESS}!FSI\_Indexer.hpp@{FSI\_Indexer.hpp}}
+\doxysubsubsection{\texorpdfstring{\_\_FSI\_SUCCESS}{\_\_FSI\_SUCCESS}}
+{\footnotesize\ttfamily \label{FSI__Indexer_8hpp_a3ac8f32fbd100d7ab4f9ab08af2f846a} 
+\+\#define \+\_\+\+\_\+\+FSI\+\_\+\+SUCCESS~0}
+
+
+
+Definition at line \doxymbox{\hyperlink{FSI__Indexer_8hpp_source_l00009}{9}} of file \doxymbox{\hyperlink{FSI__Indexer_8hpp_source}{FSI\+\_\+\+Indexer.\+hpp}}.
+

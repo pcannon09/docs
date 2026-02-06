@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="d5/def/FSI__dirUtils__windows_8h" kind="file" language="C++">
+    <compoundname>FSI_dirUtils_windows.h</compoundname>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="d5/def/FSI__dirUtils__windows_8h_1a7a1e5c1f77073fd9606e1eefae29bb7f" prot="public" static="no">
+        <name>__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</name>
+        <initializer>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/interfaces/FSI_dirUtils_windows.h" line="6" column="11" bodyfile="inc/fsi/core/interfaces/FSI_dirUtils_windows.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d5/def/FSI__dirUtils__windows_8h_1a3cb98626af17e298ce16235844075656" prot="public" static="no">
+        <name>__FSI_DIRUTILS_WINDOWS_CPP_OPEN</name>
+        <initializer>extern &quot;C&quot; {</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/interfaces/FSI_dirUtils_windows.h" line="5" column="11" bodyfile="inc/fsi/core/interfaces/FSI_dirUtils_windows.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>INCLUDE_INTERFACES_FSI_DIRUTILS_WINDOWS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_INTERFACES_FSI_DIRUTILS_WINDOWS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="d5/def/FSI__dirUtils__windows_8h_1a3cb98626af17e298ce16235844075656" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_WINDOWS_CPP_OPEN<sp/><sp/><sp/><sp/><sp/><sp/>extern<sp/>&quot;C&quot;<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d5/def/FSI__dirUtils__windows_8h_1a7a1e5c1f77073fd9606e1eefae29bb7f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_WINDOWS_CPP_CLOSE<sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_WINDOWS_CPP_OPEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="d5/def/FSI__dirUtils__windows_8h_1a3cb98626af17e298ce16235844075656" kindref="member">__FSI_DIRUTILS_WINDOWS_CPP_OPEN</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WINDOWS<sp/>IMPLEMENTATION<sp/>OF<sp/>DIR<sp/>UTILS<sp/>(<sp/>POSIX<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="d5/def/FSI__dirUtils__windows_8h_1a7a1e5c1f77073fd9606e1eefae29bb7f" kindref="member">__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>__FSI_DIRUTILS_WINDOWS_CPP_OPEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>INCLUDE_INTERFACES_FSI_DIRUTILS_WINDOWS_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/fsi/core/interfaces/FSI_dirUtils_windows.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,5 @@
+<map id="fsi::Indexer::getFileDTInfo" name="fsi::Indexer::getFileDTInfo">
+<area shape="rect" id="Node000001" title="Get when the file, dir or symlink was last modified." alt="" coords="5,5,179,32"/>
+<area shape="rect" id="Node000002" href="$da/df3/namespacefsi_1_1utils.html#ae0fd58fdf5e153ce89499a2bad2a8974" title="Set std::filesystem clock data to an actual usable Date and Time format." alt="" coords="227,5,407,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,16,214,19,208,19,179,21"/>
+</map>

@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSIpredefines_8h" xml:lang="en-US">
+<title>inc/fsi/FSIpredefines.h File Reference</title>
+<indexterm><primary>inc/fsi/FSIpredefines.h</primary></indexterm>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../db/d29/FSIpredefines_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1ac9cd5367b5a6b833467beec0c0f8ab30">__FSI_DIRUTILS_PREDEF_CPP_CLOSE</link>&#160;&#160;&#160;}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1a295402e18de37cc2ce1ffc3d384bd07d">__FSI_DIRUTILS_PREDEF_CPP_OPEN</link>&#160;&#160;&#160;extern &quot;C&quot; {</para>
+
+<para><link linkend="_FSIpredefines_8h">FSIpredefines.h</link> - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1.0S. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1ab2e1764830d9afa8aec2149f527024a4">FSI_DEFAULT_CPP_STD</link>&#160;&#160;&#160;201703L</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1a5bd97c6a004e9974d1da59b14d5a52cf">FSI_DEL</link>(x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1ab0a960f494d546badeba4fb8803aba45">FSI_DEV</link>&#160;&#160;&#160;true</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9">FSI_FREE</link>(x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1aa86fcd3af2b1d06bfe51d040498e3eac">FSI_STRINGIFY</link>(x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1a361ef337aed85177f332d71f04d3f3c5">FSI_TOSTRING</link>(x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1a4558abf943c73a669f1df9213fdc5c91">FSI_VERSION</link>&#160;&#160;&#160;((<link linkend="_FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f">FSI_VERSION_MAJOR</link>&lt;&lt;16)|(<link linkend="_FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a">FSI_VERSION_MINOR</link>&lt;&lt;8)|(<link linkend="_FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7">FSI_VERSION_PATCH</link>)|(<link linkend="_FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484">FSI_VERSION_STATE</link> &lt;&lt; 24))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1a81f33c3a184d2904c827bf08ca6b20fe">FSI_VERSION_CHECK</link>(<link linkend="_FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f">FSI_VERSION_MAJOR</link>,  <link linkend="_FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a">FSI_VERSION_MINOR</link>,  <link linkend="_FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7">FSI_VERSION_PATCH</link>,  <link linkend="_FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484">FSI_VERSION_STATE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f">FSI_VERSION_MAJOR</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a">FSI_VERSION_MINOR</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7">FSI_VERSION_PATCH</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484">FSI_VERSION_STATE</link>&#160;&#160;&#160;&quot;beta&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1a3cf97e4cc4c73ad21eb6b2881d430add">FSI_VERSION_STD</link>&#160;&#160;&#160;20260205</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_FSIpredefines_8h_1ac9cd5367b5a6b833467beec0c0f8ab30"/><section>
+    <title>__FSI_DIRUTILS_PREDEF_CPP_CLOSE</title>
+<indexterm><primary>__FSI_DIRUTILS_PREDEF_CPP_CLOSE</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>__FSI_DIRUTILS_PREDEF_CPP_CLOSE</secondary></indexterm>
+<para><computeroutput>#define __FSI_DIRUTILS_PREDEF_CPP_CLOSE&#160;&#160;&#160;}</computeroutput></para><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00012">12</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_FSIpredefines_8h_1a295402e18de37cc2ce1ffc3d384bd07d"/><section>
+    <title>__FSI_DIRUTILS_PREDEF_CPP_OPEN</title>
+<indexterm><primary>__FSI_DIRUTILS_PREDEF_CPP_OPEN</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>__FSI_DIRUTILS_PREDEF_CPP_OPEN</secondary></indexterm>
+<para><computeroutput>#define __FSI_DIRUTILS_PREDEF_CPP_OPEN&#160;&#160;&#160;extern &quot;C&quot; {</computeroutput></para><para>
+
+<para><link linkend="_FSIpredefines_8h">FSIpredefines.h</link> - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1.0S. </para>
+</para>
+<para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00011">11</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_FSIpredefines_8h_1ab2e1764830d9afa8aec2149f527024a4"/><section>
+    <title>FSI_DEFAULT_CPP_STD</title>
+<indexterm><primary>FSI_DEFAULT_CPP_STD</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>FSI_DEFAULT_CPP_STD</secondary></indexterm>
+<para><computeroutput>#define FSI_DEFAULT_CPP_STD&#160;&#160;&#160;201703L</computeroutput></para><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00021">21</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_FSIpredefines_8h_1a5bd97c6a004e9974d1da59b14d5a52cf"/><section>
+    <title>FSI_DEL</title>
+<indexterm><primary>FSI_DEL</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>FSI_DEL</secondary></indexterm>
+<para><computeroutput>#define FSI_DEL( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><emphasis role="keyword">delete</emphasis>&#32;x;&#32;x&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+</programlisting><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00046">46</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_FSIpredefines_8h_1ab0a960f494d546badeba4fb8803aba45"/><section>
+    <title>FSI_DEV</title>
+<indexterm><primary>FSI_DEV</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>FSI_DEV</secondary></indexterm>
+<para><computeroutput>#define FSI_DEV&#160;&#160;&#160;true</computeroutput></para><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00049">49</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9"/><section>
+    <title>FSI_FREE</title>
+<indexterm><primary>FSI_FREE</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>FSI_FREE</secondary></indexterm>
+<para><computeroutput>#define FSI_FREE( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">free(x);&#32;x&#32;=&#32;NULL;
+</programlisting><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00045">45</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00026">fsi::Indexer::__iteratePath()</link>, <link linkend="_FSI__dirUtils__posix_8c_source_1l00075">fsi_closeDir()</link>, and <link linkend="_FSI__dirUtils__posix_8c_source_1l00014">fsi_openDir()</link>.</para>
+</section>
+<anchor xml:id="_FSIpredefines_8h_1aa86fcd3af2b1d06bfe51d040498e3eac"/><section>
+    <title>FSI_STRINGIFY</title>
+<indexterm><primary>FSI_STRINGIFY</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>FSI_STRINGIFY</secondary></indexterm>
+<para><computeroutput>#define FSI_STRINGIFY( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><emphasis role="preprocessor">#x</emphasis>
+</programlisting><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00042">42</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_FSIpredefines_8h_1a361ef337aed85177f332d71f04d3f3c5"/><section>
+    <title>FSI_TOSTRING</title>
+<indexterm><primary>FSI_TOSTRING</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>FSI_TOSTRING</secondary></indexterm>
+<para><computeroutput>#define FSI_TOSTRING( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><link linkend="_FSIpredefines_8h_1aa86fcd3af2b1d06bfe51d040498e3eac">FSI_STRINGIFY</link>(x)
+</programlisting><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00043">43</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_FSIpredefines_8h_1a4558abf943c73a669f1df9213fdc5c91"/><section>
+    <title>FSI_VERSION</title>
+<indexterm><primary>FSI_VERSION</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>FSI_VERSION</secondary></indexterm>
+<para><computeroutput>#define FSI_VERSION&#160;&#160;&#160;((<link linkend="_FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f">FSI_VERSION_MAJOR</link>&lt;&lt;16)|(<link linkend="_FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a">FSI_VERSION_MINOR</link>&lt;&lt;8)|(<link linkend="_FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7">FSI_VERSION_PATCH</link>)|(<link linkend="_FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484">FSI_VERSION_STATE</link> &lt;&lt; 24))</computeroutput></para><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00036">36</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_FSIpredefines_8h_1a81f33c3a184d2904c827bf08ca6b20fe"/><section>
+    <title>FSI_VERSION_CHECK</title>
+<indexterm><primary>FSI_VERSION_CHECK</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>FSI_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define FSI_VERSION_CHECK( <link linkend="_FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f">FSI_VERSION_MAJOR</link>,  <link linkend="_FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a">FSI_VERSION_MINOR</link>,  <link linkend="_FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7">FSI_VERSION_PATCH</link>,  <link linkend="_FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484">FSI_VERSION_STATE</link>)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((<link linkend="_FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f">FSI_VERSION_MAJOR</link>)&lt;&lt;16)|((<link linkend="_FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a">FSI_VERSION_MINOR</link>)&lt;&lt;8)|(<link linkend="_FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7">FSI_VERSION_PATCH</link>)|((<link linkend="_FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484">FSI_VERSION_STATE</link>)&#32;&lt;&lt;&#32;24))
+</programlisting><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00038">38</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+<programlisting linenumbering="unnumbered">00038 <emphasis role="preprocessor">#define&#32;FSI_VERSION_CHECK(FSI_VERSION_MAJOR,&#32;FSI_VERSION_MINOR,&#32;FSI_VERSION_PATCH,&#32;FSI_VERSION_STATE)&#32;\</emphasis>
+00039 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(((FSI_VERSION_MAJOR)&lt;&lt;16)|((FSI_VERSION_MINOR)&lt;&lt;8)|(FSI_VERSION_PATCH)|((FSI_VERSION_STATE)&#32;&lt;&lt;&#32;24))</emphasis>
+</programlisting></section>
+<anchor xml:id="_FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f"/><section>
+    <title>FSI_VERSION_MAJOR</title>
+<indexterm><primary>FSI_VERSION_MAJOR</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>FSI_VERSION_MAJOR</secondary></indexterm>
+<para><computeroutput>#define FSI_VERSION_MAJOR&#160;&#160;&#160;0</computeroutput></para><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00024">24</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a"/><section>
+    <title>FSI_VERSION_MINOR</title>
+<indexterm><primary>FSI_VERSION_MINOR</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>FSI_VERSION_MINOR</secondary></indexterm>
+<para><computeroutput>#define FSI_VERSION_MINOR&#160;&#160;&#160;1</computeroutput></para><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00025">25</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7"/><section>
+    <title>FSI_VERSION_PATCH</title>
+<indexterm><primary>FSI_VERSION_PATCH</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>FSI_VERSION_PATCH</secondary></indexterm>
+<para><computeroutput>#define FSI_VERSION_PATCH&#160;&#160;&#160;0</computeroutput></para><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00026">26</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484"/><section>
+    <title>FSI_VERSION_STATE</title>
+<indexterm><primary>FSI_VERSION_STATE</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>FSI_VERSION_STATE</secondary></indexterm>
+<para><computeroutput>#define FSI_VERSION_STATE&#160;&#160;&#160;&quot;beta&quot;</computeroutput></para><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00034">34</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_FSIpredefines_8h_1a3cf97e4cc4c73ad21eb6b2881d430add"/><section>
+    <title>FSI_VERSION_STD</title>
+<indexterm><primary>FSI_VERSION_STD</primary><secondary>FSIpredefines.h</secondary></indexterm>
+<indexterm><primary>FSIpredefines.h</primary><secondary>FSI_VERSION_STD</secondary></indexterm>
+<para><computeroutput>#define FSI_VERSION_STD&#160;&#160;&#160;20260205</computeroutput></para><para>
+Definition at line <link linkend="_FSIpredefines_8h_source_1l00028">28</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
+</section>
+</section>
+</section>

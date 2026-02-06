@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8cpp_source" xml:lang="en-US">
+<title>main.cpp</title>
+<indexterm><primary>src/main.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_main_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_FSI__Indexer_8hpp">../inc/fsi/lib/FSI_Indexer.hpp</link>&quot;</emphasis>
+<anchor xml:id="_main_8cpp_source_1l00002"/>00002 
+<anchor xml:id="_main_8cpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_FSI__dirUtils__posix_8h">../inc/fsi/core/interfaces/FSI_dirUtils_posix.h</link>&quot;</emphasis>
+<anchor xml:id="_main_8cpp_source_1l00004"/>00004 
+<anchor xml:id="_main_8cpp_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_FSI__temperatureConverter_8h">../inc/fsi/modules/temperature/FSI_temperatureConverter.h</link>&quot;</emphasis>
+<anchor xml:id="_main_8cpp_source_1l00006"/>00006 
+<anchor xml:id="_main_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;ciof/ciof.hpp&quot;</emphasis>
+<anchor xml:id="_main_8cpp_source_1l00008"/>00008 
+<anchor xml:id="_main_8cpp_source_1l00009"/><link linkend="_namespaceanonymous__namespace_02main_8cpp_03">00009</link> <emphasis role="keyword">namespace</emphasis>
+<anchor xml:id="_main_8cpp_source_1l00010"/>00010 {
+<anchor xml:id="_main_8cpp_source_1l00011"/><link linkend="_namespaceanonymous__namespace_02main_8cpp_03_1ab4857c620ed555971c741512e920a0ac">00011</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_namespaceanonymous__namespace_02main_8cpp_03_1ab4857c620ed555971c741512e920a0ac">__timeToStr</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">fsi::utils::TimeUtils_DateTime</link>&#32;&amp;time)
+<anchor xml:id="_main_8cpp_source_1l00012"/>00012 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_main_8cpp_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ciof::format(<emphasis role="stringliteral">&quot;%1/%2/%3&#32;-&#32;%4:%5:%6.%7&quot;</emphasis>,
+<anchor xml:id="_main_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a9169ed2e239eac50365d363b9365b704">year</link>,&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a4c79e8bac795772430a0c7624e01f3c8">month</link>,&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a340cd86b315b94e24ba58f047a05d977">day</link>,
+<anchor xml:id="_main_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a8135eb12c7d645962892d79939767f2b">hour</link>,&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a224f4265be90b19828d9e999ceba56e4">min</link>,&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a53f747e0ef76ed43ec51c4bdc844fd43">sec</link>,&#32;time.<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime_1a773404a9ff6e5c0a13eded6429ff26dd">ms</link>
+<anchor xml:id="_main_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+<anchor xml:id="_main_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_main_8cpp_source_1l00018"/>00018 }
+<anchor xml:id="_main_8cpp_source_1l00019"/>00019 
+<anchor xml:id="_main_8cpp_source_1l00020"/><link linkend="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">00020</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link>()
+<anchor xml:id="_main_8cpp_source_1l00021"/>00021 {
+<anchor xml:id="_main_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;ciof::print(<link linkend="_FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d">FSI_temperatureConvertCelTo</link>(<emphasis role="stringliteral">&quot;f&quot;</emphasis>,&#32;33));
+<anchor xml:id="_main_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;ciof::print(<link linkend="_FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1">FSI_temperatureConvertCelFrom</link>(<emphasis role="stringliteral">&quot;f&quot;</emphasis>,&#32;33));
+<anchor xml:id="_main_8cpp_source_1l00024"/>00024 
+<anchor xml:id="_main_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<link linkend="_classfsi_1_1Indexer">fsi::Indexer</link>&#32;indexer(<emphasis role="stringliteral">&quot;main-indexer&quot;</emphasis>);
+<anchor xml:id="_main_8cpp_source_1l00026"/>00026 
+<anchor xml:id="_main_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_main_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerInfo">fsi::IndexerInfo</link>&#32;info;
+<anchor xml:id="_main_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>&#32;=&#32;<emphasis role="stringliteral">&quot;.&quot;</emphasis>;
+<anchor xml:id="_main_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structfsi_1_1IndexerInfo_1a9ed84fe71c39594a0ab6c487a165f06c">id</link>&#32;=&#32;<emphasis role="stringliteral">&quot;current-dir&quot;</emphasis>;
+<anchor xml:id="_main_8cpp_source_1l00031"/>00031 
+<anchor xml:id="_main_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;indexer.<link linkend="_classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d">addExtendedInfo</link>(info);
+<anchor xml:id="_main_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_main_8cpp_source_1l00034"/>00034 
+<anchor xml:id="_main_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;indexer.<link linkend="_classfsi_1_1Indexer_1a5c7f5cec792676647ac1f40fc69ecec3">searchMatching</link>(<emphasis role="stringliteral">&quot;cpp&quot;</emphasis>))
+<anchor xml:id="_main_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_main_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ciof::print(<emphasis role="stringliteral">&quot;FILE&#32;NAME:&#32;%1&#32;--&#32;%2&quot;</emphasis>,&#32;x,&#32;<link linkend="_namespaceanonymous__namespace_02main_8cpp_03_1ab4857c620ed555971c741512e920a0ac">__timeToStr</link>(indexer.<link linkend="_classfsi_1_1Indexer_1a536321b24430696e730bc71f35c9ed0a">getFileDTInfo</link>(x)));
+<anchor xml:id="_main_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_main_8cpp_source_1l00039"/>00039 
+<anchor xml:id="_main_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;ciof::print(<emphasis role="stringliteral">&quot;ID&#32;`current-dir`&#32;has&#32;path:&#32;%1&quot;</emphasis>,&#32;indexer.<link linkend="_classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8">findIndex</link>(<emphasis role="stringliteral">&quot;current-dir&quot;</emphasis>).<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>);
+<anchor xml:id="_main_8cpp_source_1l00041"/>00041 
+<anchor xml:id="_main_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_main_8cpp_source_1l00043"/>00043 }
+<anchor xml:id="_main_8cpp_source_1l00044"/>00044 
+</programlisting></section>

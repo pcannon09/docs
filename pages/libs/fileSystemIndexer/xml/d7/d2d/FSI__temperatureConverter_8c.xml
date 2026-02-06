@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="d7/d2d/FSI__temperatureConverter_8c" kind="file" language="C++">
+    <compoundname>FSI_temperatureConverter.c</compoundname>
+    <includes local="no">string.h</includes>
+    <includes refid="db/d19/FSI__temperatureConverter_8h" local="yes">../../../inc/fsi/modules/temperature/FSI_temperatureConverter.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>../../../inc/fsi/modules/temperature/FSI_temperatureConverter.h</label>
+        <link refid="db/d19/FSI__temperatureConverter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/modules/temperature/FSI_temperatureConverter.c</label>
+        <link refid="d7/d2d/FSI__temperatureConverter_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d7/d2d/FSI__temperatureConverter_8c_1a39b05ae287af83bc12cb5c8442cbdee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double FSI_temperatureConvertCelFrom</definition>
+        <argsstring>(const char *to, const double from)</argsstring>
+        <name>FSI_temperatureConvertCelFrom</name>
+        <param>
+          <type>const char *</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+<para>Convert from <computeroutput>from</computeroutput> to Celcius as a double. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the temperature </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>From celcius to the temperature </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The exact converted temperature </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/modules/temperature/FSI_temperatureConverter.c" line="5" column="8" bodyfile="src/modules/temperature/FSI_temperatureConverter.c" bodystart="5" bodyend="29"/>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1af3c95b6196f59322328be76f69c59951" compoundref="db/d19/FSI__temperatureConverter_8h" startline="27">__FSI_TC_CEL_FROM_C</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1ab6545bfd018f75702e35f396d8d5e770" compoundref="db/d19/FSI__temperatureConverter_8h" startline="28">__FSI_TC_CEL_FROM_F</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1a67ef9c32ed33d539a95d811049fdda3a" compoundref="db/d19/FSI__temperatureConverter_8h" startline="29">__FSI_TC_CEL_FROM_K</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1af73b75586b7bdb2579ab6e9c7f71ecf6" compoundref="db/d19/FSI__temperatureConverter_8h" startline="31">__FSI_TC_CEL_FROM_RA</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1a6dcd96eb8642f4466614b1dc212d9bf9" compoundref="db/d19/FSI__temperatureConverter_8h" startline="30">__FSI_TC_CEL_FROM_RE</references>
+        <referencedby refid="de/d44/namespacefsi_1_1modules_1_1tc_1a37c21a89ea28cc2a16ad463cb908e604" compoundref="db/d8b/FSI__temperature_8cpp" startline="9" endline="10">fsi::modules::tc::convertFrom</referencedby>
+        <referencedby refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="df/d0a/main_8cpp" startline="20" endline="43">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d7/d2d/FSI__temperatureConverter_8c_1aafde95eb428450f7515b36decef7b59d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double FSI_temperatureConvertCelTo</definition>
+        <argsstring>(const char *from, const double to)</argsstring>
+        <name>FSI_temperatureConvertCelTo</name>
+        <param>
+          <type>const char *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+<para>Convert Celcius to <computeroutput>from</computeroutput> as a double. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Convert to from celcius </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the temperature </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The exact converted temperature </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/modules/temperature/FSI_temperatureConverter.c" line="31" column="8" bodyfile="src/modules/temperature/FSI_temperatureConverter.c" bodystart="31" bodyend="55"/>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1afeadea79f323e1fa506ef564778ba0ca" compoundref="db/d19/FSI__temperatureConverter_8h" startline="20">__FSI_TC_CEL_TO_C</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1acd61e380f61f77ef0d5d2ff8da6362fd" compoundref="db/d19/FSI__temperatureConverter_8h" startline="21">__FSI_TC_CEL_TO_F</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1af451dbedd0aea3ff1e584c4766eedbb5" compoundref="db/d19/FSI__temperatureConverter_8h" startline="22">__FSI_TC_CEL_TO_K</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1a4d45c2cd654fc2c106349e7d8b6b0e7c" compoundref="db/d19/FSI__temperatureConverter_8h" startline="24">__FSI_TC_CEL_TO_RA</references>
+        <references refid="db/d19/FSI__temperatureConverter_8h_1a051d6a203331a736d5e5f328b1a69f4b" compoundref="db/d19/FSI__temperatureConverter_8h" startline="23">__FSI_TC_CEL_TO_RE</references>
+        <referencedby refid="de/d44/namespacefsi_1_1modules_1_1tc_1abbdea450d8dae5c95298bdd261a12da1" compoundref="db/d8b/FSI__temperature_8cpp" startline="6" endline="7">fsi::modules::tc::convertTo</referencedby>
+        <referencedby refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="df/d0a/main_8cpp" startline="20" endline="43">main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="db/d19/FSI__temperatureConverter_8h" kindref="compound">../../../inc/fsi/modules/temperature/FSI_temperatureConverter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="db/d19/FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="d7/d2d/FSI__temperatureConverter_8c_1a39b05ae287af83bc12cb5c8442cbdee1" kindref="member">FSI_temperatureConvertCelFrom</ref>(</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*to,</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>from</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strlen(to)<sp/>&gt;=<sp/>0<sp/>||<sp/>strlen(to)<sp/>&gt;=<sp/>1)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(to[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;c&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1af3c95b6196f59322328be76f69c59951" kindref="member">__FSI_TC_CEL_FROM_C</ref>(from);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(to[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;f&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1ab6545bfd018f75702e35f396d8d5e770" kindref="member">__FSI_TC_CEL_FROM_F</ref>(from);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(to[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;k&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1a67ef9c32ed33d539a95d811049fdda3a" kindref="member">__FSI_TC_CEL_FROM_K</ref>(from);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(to[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;r&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>to[1]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;e&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1a6dcd96eb8642f4466614b1dc212d9bf9" kindref="member">__FSI_TC_CEL_FROM_RE</ref>(from);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(to[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;r&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>to[1]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1af73b75586b7bdb2579ab6e9c7f71ecf6" kindref="member">__FSI_TC_CEL_FROM_RA</ref>(from);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="db/d19/FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="d7/d2d/FSI__temperatureConverter_8c_1aafde95eb428450f7515b36decef7b59d" kindref="member">FSI_temperatureConvertCelTo</ref>(</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*from,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>to</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strlen(from)<sp/>&gt;=<sp/>0<sp/>||<sp/>strlen(from)<sp/>&gt;=<sp/>1)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(from[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;c&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1afeadea79f323e1fa506ef564778ba0ca" kindref="member">__FSI_TC_CEL_TO_C</ref>(to);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(from[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;f&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1acd61e380f61f77ef0d5d2ff8da6362fd" kindref="member">__FSI_TC_CEL_TO_F</ref>(to);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(from[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;k&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1af451dbedd0aea3ff1e584c4766eedbb5" kindref="member">__FSI_TC_CEL_TO_K</ref>(to);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(from[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;r&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>from[1]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;e&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1a051d6a203331a736d5e5f328b1a69f4b" kindref="member">__FSI_TC_CEL_TO_RE</ref>(to);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(from[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;r&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>from[1]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="db/d19/FSI__temperatureConverter_8h_1a4d45c2cd654fc2c106349e7d8b6b0e7c" kindref="member">__FSI_TC_CEL_TO_RA</ref>(to);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/modules/temperature/FSI_temperatureConverter.c"/>
+  </compounddef>
+</doxygen>

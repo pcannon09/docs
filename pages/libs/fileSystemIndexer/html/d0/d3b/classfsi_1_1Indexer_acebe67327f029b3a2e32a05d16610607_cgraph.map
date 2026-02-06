@@ -1,0 +1,12 @@
+<map id="fsi::Indexer::__iteratePath" name="fsi::Indexer::__iteratePath">
+<area shape="rect" id="Node000001" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="5,56,177,83"/>
+<area shape="rect" id="Node000002" href="$d6/d8a/FSI__dirUtils_8c.html#a3bc7da82fe7b1e798ee4b6d018534946" title="Walk to every directory and file and set vec to a CVEC value." alt="" coords="225,56,294,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,67,212,69,207,70,177,72"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="237,55,233,47,235,38,245,32,259,29,275,32,285,41,279,40,273,37,259,35,247,37,240,41,238,47,241,57"/>
+<area shape="rect" id="Node000003" href="$da/d97/FSI__dirUtils__posix_8c.html#a07bb8fc8aa9e6ea91c2f2e65425e03e1" title="Get the directory data to deallocate memory." alt="" coords="342,5,432,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="293,53,335,39,340,37,295,58"/>
+<area shape="rect" id="Node000004" href="$da/d97/FSI__dirUtils__posix_8c.html#a1c15e434435c62f17b15a34877bd60bd" title="Open directory as read only." alt="" coords="344,56,431,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="294,67,331,69,326,70,294,72"/>
+<area shape="rect" id="Node000005" href="$da/d97/FSI__dirUtils__posix_8c.html#acb473fa7940b3c89aa11845436bbae8f" title="Read directory from reading the FSI_DirData information." alt="" coords="345,107,429,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="295,80,340,101,335,100,294,86"/>
+</map>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="d8/dd6/structfsi_1_1IndexerInfo" kind="struct" language="C++" prot="public">
+    <compoundname>fsi::IndexerInfo</compoundname>
+    <includes refid="d8/d6f/FSI__Indexer_8hpp" local="no">FSI_Indexer.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d8/dd6/structfsi_1_1IndexerInfo_1a9ed84fe71c39594a0ab6c487a165f06c" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string fsi::IndexerInfo::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>fsi::IndexerInfo::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="42" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="42" bodyend="-1"/>
+        <referencedby refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="df/d0a/main_8cpp" startline="20" endline="43">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/dd6/structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string fsi::IndexerInfo::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <qualifiedname>fsi::IndexerInfo::path</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="43" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="43" bodyend="-1"/>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="62" endline="81">fsi::Indexer::addExtendedInfo</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="107" endline="141">fsi::Indexer::addInfo</referencedby>
+        <referencedby refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="df/d0a/main_8cpp" startline="20" endline="43">main</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a7d989963a7a874e5d03e441b383e0b61" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="83" endline="89">fsi::Indexer::searchExactMatching</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/dd6/structfsi_1_1IndexerInfo_1ad3eb8adcbd97fd15894e43a715ad2958" prot="public" static="no" mutable="no">
+        <type><ref refid="da/d46/namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30" kindref="member">IndexerPathType</ref></type>
+        <definition>IndexerPathType fsi::IndexerInfo::pathType</definition>
+        <argsstring></argsstring>
+        <name>pathType</name>
+        <qualifiedname>fsi::IndexerInfo::pathType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="46" column="17" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="46" bodyend="-1"/>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="62" endline="81">fsi::Indexer::addExtendedInfo</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="107" endline="141">fsi::Indexer::addInfo</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>fsi::IndexerInfo</label>
+        <link refid="d8/dd6/structfsi_1_1IndexerInfo"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>id</edgelabel>
+          <edgelabel>path</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="inc/fsi/lib/FSI_Indexer.hpp" line="40" column="1" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="41" bodyend="47"/>
+    <listofallmembers>
+      <member refid="d8/dd6/structfsi_1_1IndexerInfo_1a9ed84fe71c39594a0ab6c487a165f06c" prot="public" virt="non-virtual"><scope>fsi::IndexerInfo</scope><name>id</name></member>
+      <member refid="d8/dd6/structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b" prot="public" virt="non-virtual"><scope>fsi::IndexerInfo</scope><name>path</name></member>
+      <member refid="d8/dd6/structfsi_1_1IndexerInfo_1ad3eb8adcbd97fd15894e43a715ad2958" prot="public" virt="non-virtual"><scope>fsi::IndexerInfo</scope><name>pathType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

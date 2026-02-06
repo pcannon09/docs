@@ -1,0 +1,158 @@
+.TH "inc/fsi/FSIpredefines.h" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/fsi/FSIpredefines.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__FSI_DIRUTILS_PREDEF_CPP_CLOSE\fP   }"
+.br
+.ti -1c
+.RI "#define \fB__FSI_DIRUTILS_PREDEF_CPP_OPEN\fP   extern 'C' {"
+.br
+.RI "\fBFSIpredefines\&.h\fP - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1\&.0S\&. "
+.ti -1c
+.RI "#define \fBFSI_DEFAULT_CPP_STD\fP   201703L"
+.br
+.ti -1c
+.RI "#define \fBFSI_DEL\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBFSI_DEV\fP   true"
+.br
+.ti -1c
+.RI "#define \fBFSI_FREE\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBFSI_STRINGIFY\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBFSI_TOSTRING\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBFSI_VERSION\fP   ((\fBFSI_VERSION_MAJOR\fP<<16)|(\fBFSI_VERSION_MINOR\fP<<8)|(\fBFSI_VERSION_PATCH\fP)|(\fBFSI_VERSION_STATE\fP << 24))"
+.br
+.ti -1c
+.RI "#define \fBFSI_VERSION_CHECK\fP(\fBFSI_VERSION_MAJOR\fP,  \fBFSI_VERSION_MINOR\fP,  \fBFSI_VERSION_PATCH\fP,  \fBFSI_VERSION_STATE\fP)"
+.br
+.ti -1c
+.RI "#define \fBFSI_VERSION_MAJOR\fP   0"
+.br
+.ti -1c
+.RI "#define \fBFSI_VERSION_MINOR\fP   1"
+.br
+.ti -1c
+.RI "#define \fBFSI_VERSION_PATCH\fP   0"
+.br
+.ti -1c
+.RI "#define \fBFSI_VERSION_STATE\fP   'beta'"
+.br
+.ti -1c
+.RI "#define \fBFSI_VERSION_STD\fP   20260205"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __FSI_DIRUTILS_PREDEF_CPP_CLOSE   }"
+
+.PP
+Definition at line \fB12\fP of file \fBFSIpredefines\&.h\fP\&.
+.SS "#define __FSI_DIRUTILS_PREDEF_CPP_OPEN   extern 'C' {"
+
+.PP
+\fBFSIpredefines\&.h\fP - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1\&.0S\&. 
+.PP
+Definition at line \fB11\fP of file \fBFSIpredefines\&.h\fP\&.
+.SS "#define FSI_DEFAULT_CPP_STD   201703L"
+
+.PP
+Definition at line \fB21\fP of file \fBFSIpredefines\&.h\fP\&.
+.SS "#define FSI_DEL( x)"
+\fBValue:\fP
+.nf
+delete x; x = nullptr;
+.PP
+.fi
+
+.PP
+Definition at line \fB46\fP of file \fBFSIpredefines\&.h\fP\&.
+.SS "#define FSI_DEV   true"
+
+.PP
+Definition at line \fB49\fP of file \fBFSIpredefines\&.h\fP\&.
+.SS "#define FSI_FREE( x)"
+\fBValue:\fP
+.nf
+free(x); x = NULL;
+.PP
+.fi
+
+.PP
+Definition at line \fB45\fP of file \fBFSIpredefines\&.h\fP\&.
+.PP
+Referenced by \fBfsi::Indexer::__iteratePath()\fP, \fBfsi_closeDir()\fP, and \fBfsi_openDir()\fP\&.
+.SS "#define FSI_STRINGIFY( x)"
+\fBValue:\fP
+.nf
+#x
+.PP
+.fi
+
+.PP
+Definition at line \fB42\fP of file \fBFSIpredefines\&.h\fP\&.
+.SS "#define FSI_TOSTRING( x)"
+\fBValue:\fP
+.nf
+FSI_STRINGIFY(x)
+.PP
+.fi
+
+.PP
+Definition at line \fB43\fP of file \fBFSIpredefines\&.h\fP\&.
+.SS "#define FSI_VERSION   ((\fBFSI_VERSION_MAJOR\fP<<16)|(\fBFSI_VERSION_MINOR\fP<<8)|(\fBFSI_VERSION_PATCH\fP)|(\fBFSI_VERSION_STATE\fP << 24))"
+
+.PP
+Definition at line \fB36\fP of file \fBFSIpredefines\&.h\fP\&.
+.SS "#define FSI_VERSION_CHECK( \fBFSI_VERSION_MAJOR\fP,  \fBFSI_VERSION_MINOR\fP,  \fBFSI_VERSION_PATCH\fP,  \fBFSI_VERSION_STATE\fP)"
+\fBValue:\fP
+.nf
+(((FSI_VERSION_MAJOR)<<16)|((FSI_VERSION_MINOR)<<8)|(FSI_VERSION_PATCH)|((FSI_VERSION_STATE) << 24))
+.PP
+.fi
+
+.PP
+Definition at line \fB38\fP of file \fBFSIpredefines\&.h\fP\&.
+.nf
+38 #define FSI_VERSION_CHECK(FSI_VERSION_MAJOR, FSI_VERSION_MINOR, FSI_VERSION_PATCH, FSI_VERSION_STATE) \\
+39     (((FSI_VERSION_MAJOR)<<16)|((FSI_VERSION_MINOR)<<8)|(FSI_VERSION_PATCH)|((FSI_VERSION_STATE) << 24))
+.PP
+.fi
+
+.SS "#define FSI_VERSION_MAJOR   0"
+
+.PP
+Definition at line \fB24\fP of file \fBFSIpredefines\&.h\fP\&.
+.SS "#define FSI_VERSION_MINOR   1"
+
+.PP
+Definition at line \fB25\fP of file \fBFSIpredefines\&.h\fP\&.
+.SS "#define FSI_VERSION_PATCH   0"
+
+.PP
+Definition at line \fB26\fP of file \fBFSIpredefines\&.h\fP\&.
+.SS "#define FSI_VERSION_STATE   'beta'"
+
+.PP
+Definition at line \fB34\fP of file \fBFSIpredefines\&.h\fP\&.
+.SS "#define FSI_VERSION_STD   20260205"
+
+.PP
+Definition at line \fB28\fP of file \fBFSIpredefines\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

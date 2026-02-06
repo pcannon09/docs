@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSI__temperature_8hpp" xml:lang="en-US">
+<title>inc/fsi/modules/temperature/FSI_temperature.hpp File Reference</title>
+<indexterm><primary>inc/fsi/modules/temperature/FSI_temperature.hpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;<?linebreak?></programlisting>Include dependency graph for FSI_temperature.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../dd/d95/FSI__temperature_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/d1f/FSI__temperature_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacefsi">fsi</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacefsi_1_1modules">fsi::modules</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacefsi_1_1modules_1_1tc">fsi::modules::tc</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>double <link linkend="_namespacefsi_1_1modules_1_1tc_1a37c21a89ea28cc2a16ad463cb908e604">fsi::modules::tc::convertFrom</link> (const std::string &amp;to, const double &amp;from)</para>
+
+<para>Wrapper for <computeroutput><link linkend="_FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1">FSI_temperatureConvertCelFrom()</link></computeroutput> function. </para>
+</listitem>
+            <listitem><para>double <link linkend="_namespacefsi_1_1modules_1_1tc_1abbdea450d8dae5c95298bdd261a12da1">fsi::modules::tc::convertTo</link> (const std::string &amp;from, const double &amp;to)</para>
+
+<para>Wrapper for <computeroutput><link linkend="_FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d">FSI_temperatureConvertCelTo()</link></computeroutput> function. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>
