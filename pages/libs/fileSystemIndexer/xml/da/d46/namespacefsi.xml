@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="23" column="1" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="24" bodyend="28"/>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="24" column="1" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="25" bodyend="29"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="57" column="14"/>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="58" column="14"/>
       </memberdef>
       <memberdef kind="typedef" id="da/d46/namespacefsi_1a863274d842a7a1996114f2b0f4424251" prot="public" static="no">
         <type>struct fsi::IndexerFoundInfo</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="38" column="18"/>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="39" column="18"/>
       </memberdef>
       <memberdef kind="typedef" id="da/d46/namespacefsi_1ac37e1b86ed295241cce0bbc399f023da" prot="public" static="no">
         <type>struct fsi::IndexerInfo</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="47" column="13"/>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="48" column="13"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

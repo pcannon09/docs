@@ -28,7 +28,7 @@ Collaboration diagram for fsi::IndexerInfo:<para>
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00040">40</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00041">41</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
 </section>
 <section>
 <title>Member Data Documentation</title>
@@ -37,7 +37,7 @@ Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00040">40</link> o
 <indexterm><primary>id</primary><secondary>fsi::IndexerInfo</secondary></indexterm>
 <indexterm><primary>fsi::IndexerInfo</primary><secondary>id</secondary></indexterm>
 <para><computeroutput>std::string fsi::IndexerInfo::id</computeroutput></para><para>
-Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00042">42</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00043">43</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
 <para>
 Referenced by <link linkend="_main_8cpp_source_1l00020">main()</link>.</para>
 </section>
@@ -46,18 +46,18 @@ Referenced by <link linkend="_main_8cpp_source_1l00020">main()</link>.</para>
 <indexterm><primary>path</primary><secondary>fsi::IndexerInfo</secondary></indexterm>
 <indexterm><primary>fsi::IndexerInfo</primary><secondary>path</secondary></indexterm>
 <para><computeroutput>std::string fsi::IndexerInfo::path</computeroutput></para><para>
-Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00043">43</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00044">44</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
 <para>
-Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00062">fsi::Indexer::addExtendedInfo()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00107">fsi::Indexer::addInfo()</link>, <link linkend="_main_8cpp_source_1l00020">main()</link>, and <link linkend="_FSI__Indexer_8cpp_source_1l00083">fsi::Indexer::searchExactMatching()</link>.</para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00069">fsi::Indexer::__addExtendedInfoStandard()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00090">fsi::Indexer::__addExtendedInfoThreaded()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00198">fsi::Indexer::addInfo()</link>, <link linkend="_main_8cpp_source_1l00020">main()</link>, and <link linkend="_FSI__Indexer_8cpp_source_1l00183">fsi::Indexer::searchExactMatching()</link>.</para>
 </section>
 <anchor xml:id="_structfsi_1_1IndexerInfo_1ad3eb8adcbd97fd15894e43a715ad2958"/><section>
     <title>pathType</title>
 <indexterm><primary>pathType</primary><secondary>fsi::IndexerInfo</secondary></indexterm>
 <indexterm><primary>fsi::IndexerInfo</primary><secondary>pathType</secondary></indexterm>
 <para><computeroutput><link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30">IndexerPathType</link> fsi::IndexerInfo::pathType</computeroutput></para><para>
-Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00046">46</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00047">47</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
 <para>
-Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00062">fsi::Indexer::addExtendedInfo()</link>, and <link linkend="_FSI__Indexer_8cpp_source_1l00107">fsi::Indexer::addInfo()</link>.</para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00069">fsi::Indexer::__addExtendedInfoStandard()</link>, <link linkend="_FSI__Indexer_8cpp_source_1l00090">fsi::Indexer::__addExtendedInfoThreaded()</link>, and <link linkend="_FSI__Indexer_8cpp_source_1l00198">fsi::Indexer::addInfo()</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

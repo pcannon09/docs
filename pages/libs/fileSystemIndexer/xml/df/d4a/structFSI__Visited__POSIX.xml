@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="df/d4a/structFSI__Visited__POSIX" kind="struct" language="C++" prot="public">
+    <compoundname>FSI_Visited_POSIX</compoundname>
+    <includes refid="d5/d64/FSI__dirUtils__posix_8h" local="no">FSI_dirUtils_posix.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="df/d4a/structFSI__Visited__POSIX_1a3f318d91a35ba724589e3107bfffebb0" prot="public" static="no" mutable="no">
+        <type>dev_t</type>
+        <definition>dev_t FSI_Visited_POSIX::dev</definition>
+        <argsstring></argsstring>
+        <name>dev</name>
+        <qualifiedname>FSI_Visited_POSIX::dev</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/interfaces/FSI_dirUtils_posix.h" line="37" column="7" bodyfile="inc/fsi/core/interfaces/FSI_dirUtils_posix.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a9420f3d1392d4194c6192d2096605bd9" compoundref="d5/d64/FSI__dirUtils__posix_8h" startline="135" endline="143">fsi_visitedAdd</referencedby>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a84035112786899729fa79cc37ea76f52" compoundref="d5/d64/FSI__dirUtils__posix_8h" startline="120" endline="133">fsi_visitedHas</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/d4a/structFSI__Visited__POSIX_1a79f6bbed4fd64b013beba3658e41fcc4" prot="public" static="no" mutable="no">
+        <type>ino_t</type>
+        <definition>ino_t FSI_Visited_POSIX::ino</definition>
+        <argsstring></argsstring>
+        <name>ino</name>
+        <qualifiedname>FSI_Visited_POSIX::ino</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/fsi/core/interfaces/FSI_dirUtils_posix.h" line="38" column="7" bodyfile="inc/fsi/core/interfaces/FSI_dirUtils_posix.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a9420f3d1392d4194c6192d2096605bd9" compoundref="d5/d64/FSI__dirUtils__posix_8h" startline="135" endline="143">fsi_visitedAdd</referencedby>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a84035112786899729fa79cc37ea76f52" compoundref="d5/d64/FSI__dirUtils__posix_8h" startline="120" endline="133">fsi_visitedHas</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/fsi/core/interfaces/FSI_dirUtils_posix.h" line="35" column="1" bodyfile="inc/fsi/core/interfaces/FSI_dirUtils_posix.h" bodystart="36" bodyend="39"/>
+    <listofallmembers>
+      <member refid="df/d4a/structFSI__Visited__POSIX_1a3f318d91a35ba724589e3107bfffebb0" prot="public" virt="non-virtual"><scope>FSI_Visited_POSIX</scope><name>dev</name></member>
+      <member refid="df/d4a/structFSI__Visited__POSIX_1a79f6bbed4fd64b013beba3658e41fcc4" prot="public" virt="non-virtual"><scope>FSI_Visited_POSIX</scope><name>ino</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

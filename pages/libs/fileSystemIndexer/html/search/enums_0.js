@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fsi_5ftype_0',['FSI_Type',['../dc/d84/FSI__dirUtils_8h.html#a38036f8b8fb04c1fd1196158847782d0',1,'FSI_dirUtils.h']]]
+  ['fsi_5fentrytype_0',['FSI_EntryType',['../dc/d84/FSI__dirUtils_8h.html#aaa6bee37aab1227d0184642f73bf069e',1,'FSI_dirUtils.h']]]
 ];

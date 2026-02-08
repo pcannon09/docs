@@ -1,0 +1,7 @@
+<map id="fsi::Indexer::__searchMatchingThreaded" name="fsi::Indexer::__searchMatchingThreaded">
+<area shape="rect" id="Node000001" title="Search all matching path or ID that contains path using parallelization with multiple CPU threads." alt="" coords="337,5,537,48"/>
+<area shape="rect" id="Node000002" href="$d0/d3b/classfsi_1_1Indexer.html#a5c7f5cec792676647ac1f40fc69ecec3" title="Either use threaded or unthreaded search matching." alt="" coords="103,13,289,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="318,27,290,29,290,24,324,27"/>
+<area shape="rect" id="Node000003" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,55,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,28,55,29,55,24,90,26"/>
+</map>

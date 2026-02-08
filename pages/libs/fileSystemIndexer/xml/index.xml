@@ -5,18 +5,29 @@
   </compound>
   <compound refid="d5/d16/structFSI__DirData__POSIX" kind="struct"><name>FSI_DirData_POSIX</name>
     <member refid="d5/d16/structFSI__DirData__POSIX_1a78670985b16d169b902cfda51881f02c" kind="variable"><name>dir</name></member>
+    <member refid="d5/d16/structFSI__DirData__POSIX_1a469e85e9dfedf6ff6ac12cc11ca7217c" kind="variable"><name>dirfd</name></member>
     <member refid="d5/d16/structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e" kind="variable"><name>path</name></member>
   </compound>
   <compound refid="d1/d62/structFSI__EntryData" kind="struct"><name>FSI_EntryData</name>
     <member refid="d1/d62/structFSI__EntryData_1ad540a33418e7055d0cd7a582146aed10" kind="variable"><name>name</name></member>
-    <member refid="d1/d62/structFSI__EntryData_1aae303e170665a972cc52c708470a2b27" kind="variable"><name>type</name></member>
+    <member refid="d1/d62/structFSI__EntryData_1a98d969e02ac80d2a38c2002a2cc97a26" kind="variable"><name>type</name></member>
+  </compound>
+  <compound refid="df/d4a/structFSI__Visited__POSIX" kind="struct"><name>FSI_Visited_POSIX</name>
+    <member refid="df/d4a/structFSI__Visited__POSIX_1a3f318d91a35ba724589e3107bfffebb0" kind="variable"><name>dev</name></member>
+    <member refid="df/d4a/structFSI__Visited__POSIX_1a79f6bbed4fd64b013beba3658e41fcc4" kind="variable"><name>ino</name></member>
   </compound>
   <compound refid="d0/d3b/classfsi_1_1Indexer" kind="class"><name>fsi::Indexer</name>
     <member refid="d0/d3b/classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9" kind="variable"><name>id</name></member>
     <member refid="d0/d3b/classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6" kind="variable"><name>indexerInfo</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1abafcc16ed35ce10fdff093289e6bacba" kind="variable"><name>threadsImpl</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1ad2b706e6b58c00d167a87187175755aa" kind="function"><name>__addExtendedInfoStandard</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a8f2a4860b7e2480e0af81f6fabb94794" kind="function"><name>__addExtendedInfoThreaded</name></member>
     <member refid="d0/d3b/classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a" kind="function"><name>__getPathType</name></member>
     <member refid="d0/d3b/classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607" kind="function"><name>__iteratePath</name></member>
-    <member refid="d0/d3b/classfsi_1_1Indexer_1a098bb0a974616eb40e6a08111c192868" kind="function"><name>Indexer</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a0ebbb0775498567b4097d43916470856" kind="function"><name>__searchMatchingStandard</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1ad8a0076334628f5909825d154f1898e3" kind="function"><name>__searchMatchingThreaded</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a474d4b7684d96bee45e1f6573b224a39" kind="function"><name>__splitPathByCores</name></member>
+    <member refid="d0/d3b/classfsi_1_1Indexer_1a60c93e6c1f5caf21f6549a1d00cf14d0" kind="function"><name>Indexer</name></member>
     <member refid="d0/d3b/classfsi_1_1Indexer_1a6b4728ec2c6e51adae5f5465b919ead0" kind="function"><name>~Indexer</name></member>
     <member refid="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" kind="function"><name>addExtendedInfo</name></member>
     <member refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" kind="function"><name>addInfo</name></member>
@@ -89,14 +100,14 @@
   <compound refid="dc/d84/FSI__dirUtils_8h" kind="file"><name>FSI_dirUtils.h</name>
     <member refid="dc/d84/FSI__dirUtils_8h_1a25f893df9ebe7ec475499f28f3673918" kind="define"><name>__FSI_DIRUTILS_CPP_CLOSE</name></member>
     <member refid="dc/d84/FSI__dirUtils_8h_1a80b32c6ce26d659377a18ad665438b2a" kind="define"><name>__FSI_DIRUTILS_CPP_OPEN</name></member>
-    <member refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0" kind="enum"><name>FSI_Type</name></member>
-    <member refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1" kind="enumvalue"><name>FSI_FILE</name></member>
-    <member refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552" kind="enumvalue"><name>FSI_DIR</name></member>
-    <member refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e" kind="enumvalue"><name>FSI_SYMLINK</name></member>
-    <member refid="dc/d84/FSI__dirUtils_8h_1a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede" kind="enumvalue"><name>FSI_OTHER</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069e" kind="enum"><name>FSI_EntryType</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1" kind="enumvalue"><name>FSI_FILE</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552" kind="enumvalue"><name>FSI_DIR</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e" kind="enumvalue"><name>FSI_SYMLINK</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede" kind="enumvalue"><name>FSI_OTHER</name></member>
     <member refid="dc/d84/FSI__dirUtils_8h_1ad39412d571379a5f201181f21dcd0313" kind="typedef"><name>FSI_DirData</name></member>
     <member refid="dc/d84/FSI__dirUtils_8h_1aad5302271e8d3cc39f711397abe5b957" kind="typedef"><name>FSI_EntryData</name></member>
-    <member refid="dc/d84/FSI__dirUtils_8h_1af91db6d6c004b3548000fa4f76a94cf9" kind="typedef"><name>FSI_Type</name></member>
+    <member refid="dc/d84/FSI__dirUtils_8h_1a4b60467ff5f727ee8bba88d082b1b0c3" kind="typedef"><name>FSI_EntryType</name></member>
     <member refid="dc/d84/FSI__dirUtils_8h_1a3bc7da82fe7b1e798ee4b6d018534946" kind="function"><name>fsi_walk</name></member>
   </compound>
   <compound refid="d3/dcb/FSI__timeUtils_8hpp" kind="file"><name>FSI_timeUtils.hpp</name>
@@ -106,9 +117,15 @@
     <member refid="d5/d64/FSI__dirUtils__posix_8h_1a8c0b3d71cc0ffa34f54f11ef309ff965" kind="define"><name>__FSI_DIRUTILS_POSIX_CPP_CLOSE</name></member>
     <member refid="d5/d64/FSI__dirUtils__posix_8h_1ae5d0abcc9e2ec0b0ec7b3c8f094a1862" kind="define"><name>__FSI_DIRUTILS_POSIX_CPP_OPEN</name></member>
     <member refid="d5/d64/FSI__dirUtils__posix_8h_1a9e656c74e3e41518c2759918f0527719" kind="typedef"><name>FSI_DirData_POSIX</name></member>
+    <member refid="d5/d64/FSI__dirUtils__posix_8h_1a86e514cccb091d2fa372f36ca856bf7c" kind="typedef"><name>FSI_Visited_POSIX</name></member>
+    <member refid="d5/d64/FSI__dirUtils__posix_8h_1a1d0d11194a91ede34644606912fbbebf" kind="function"><name>__fsi_walk</name></member>
     <member refid="d5/d64/FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1" kind="function"><name>fsi_closeDir</name></member>
+    <member refid="d5/d64/FSI__dirUtils__posix_8h_1a99bf5f7e3d00cfba1db0b2582e529af4" kind="function"><name>fsi_getEntryType</name></member>
+    <member refid="d5/d64/FSI__dirUtils__posix_8h_1a5a4f995512a0183ca0e5d7aed16d62c3" kind="function"><name>fsi_getEntryTypeFromDirent</name></member>
     <member refid="d5/d64/FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd" kind="function"><name>fsi_openDir</name></member>
     <member refid="d5/d64/FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f" kind="function"><name>fsi_readDir</name></member>
+    <member refid="d5/d64/FSI__dirUtils__posix_8h_1a9420f3d1392d4194c6192d2096605bd9" kind="function"><name>fsi_visitedAdd</name></member>
+    <member refid="d5/d64/FSI__dirUtils__posix_8h_1a84035112786899729fa79cc37ea76f52" kind="function"><name>fsi_visitedHas</name></member>
   </compound>
   <compound refid="d5/def/FSI__dirUtils__windows_8h" kind="file"><name>FSI_dirUtils_windows.h</name>
     <member refid="d5/def/FSI__dirUtils__windows_8h_1a7a1e5c1f77073fd9606e1eefae29bb7f" kind="define"><name>__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</name></member>
@@ -156,15 +173,13 @@
   <compound refid="da/ddd/README_8md" kind="file"><name>README.md</name>
   </compound>
   <compound refid="d6/d8a/FSI__dirUtils_8c" kind="file"><name>FSI_dirUtils.c</name>
-    <member refid="d6/d8a/FSI__dirUtils_8c_1a3bc7da82fe7b1e798ee4b6d018534946" kind="function"><name>fsi_walk</name></member>
+    <member refid="d6/d8a/FSI__dirUtils_8c_1a6717de7c355039c7846da70c56cd2f61" kind="function"><name>fsi_walk</name></member>
   </compound>
   <compound refid="d9/df4/FSI__timeUtils_8cpp" kind="file"><name>FSI_timeUtils.cpp</name>
   </compound>
   <compound refid="da/d97/FSI__dirUtils__posix_8c" kind="file"><name>FSI_dirUtils_posix.c</name>
-    <member refid="da/d97/FSI__dirUtils__posix_8c_1a8fb447618db946a9e2a596d9ea18763f" kind="define"><name>_DEFAULT_SOURCE</name></member>
     <member refid="da/d97/FSI__dirUtils__posix_8c_1a07bb8fc8aa9e6ea91c2f2e65425e03e1" kind="function"><name>fsi_closeDir</name></member>
     <member refid="da/d97/FSI__dirUtils__posix_8c_1a1c15e434435c62f17b15a34877bd60bd" kind="function"><name>fsi_openDir</name></member>
-    <member refid="da/d97/FSI__dirUtils__posix_8c_1acb473fa7940b3c89aa11845436bbae8f" kind="function"><name>fsi_readDir</name></member>
   </compound>
   <compound refid="d0/dc6/FSI__dirUtils__windows_8c" kind="file"><name>FSI_dirUtils_windows.c</name>
   </compound>

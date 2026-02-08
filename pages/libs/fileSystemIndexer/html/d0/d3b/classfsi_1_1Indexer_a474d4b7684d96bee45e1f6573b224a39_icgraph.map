@@ -1,0 +1,10 @@
+<map id="fsi::Indexer::__splitPathByCores" name="fsi::Indexer::__splitPathByCores">
+<area shape="rect" id="Node000001" title="Split the paths found to be used in the future in different CPU cores." alt="" coords="575,29,735,72"/>
+<area shape="rect" id="Node000002" href="$d0/d3b/classfsi_1_1Indexer.html#a8f2a4860b7e2480e0af81f6fabb94794" title="Threaded extended information." alt="" coords="343,29,527,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="558,51,528,53,528,48,563,51"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="469,13,457,10,435,8,414,10,402,15,397,21,398,30,394,27,392,19,399,10,413,5,435,3,459,5,474,14"/>
+<area shape="rect" id="Node000003" href="$d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d" title="Add the exact path and the sub&#45;paths to have the info from;." alt="" coords="103,37,295,64"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="325,51,295,53,295,48,330,51"/>
+<area shape="rect" id="Node000004" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,37,55,64"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="85,52,55,53,55,48,90,50"/>
+</map>

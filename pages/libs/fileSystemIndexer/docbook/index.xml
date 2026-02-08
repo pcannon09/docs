@@ -34,6 +34,7 @@
     <xi:include href="d5/d63/structFSI__DirData.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="d5/d16/structFSI__DirData__POSIX.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="d1/d62/structFSI__EntryData.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="df/d4a/structFSI__Visited__POSIX.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="d0/d3b/classfsi_1_1Indexer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="d1/dea/structfsi_1_1IndexerError.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="db/da6/structfsi_1_1IndexerFoundInfo.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>

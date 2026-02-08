@@ -1,4 +1,4 @@
-.TH "src/main.cpp" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.TH "src/main.cpp" 3 "Version v0.1.2-beta" "FileSystemIndexer" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -43,7 +43,7 @@ Definition at line \fB20\fP of file \fBmain\&.cpp\fP\&.
 22     ciof::print(FSI_temperatureConvertCelTo("f", 33));
 23     ciof::print(FSI_temperatureConvertCelFrom("f", 33));
 24 
-25     fsi::Indexer indexer("main\-indexer");
+25     fsi::Indexer indexer("main\-indexer", true);
 26 
 27     {
 28         fsi::IndexerInfo info;

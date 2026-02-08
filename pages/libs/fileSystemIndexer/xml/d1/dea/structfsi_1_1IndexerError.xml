@@ -17,9 +17,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="53" column="5" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="53" bodyend="-1"/>
-        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="107" endline="141">fsi::Indexer::addInfo</referencedby>
-        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="154" endline="182">fsi::Indexer::removeInfo</referencedby>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="54" column="5" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="54" bodyend="-1"/>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="198" endline="232">fsi::Indexer::addInfo</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="245" endline="273">fsi::Indexer::removeInfo</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d1/dea/structfsi_1_1IndexerError_1a7d9081b0d5752868ed7ccb5aff0b0354" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -34,9 +34,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="55" column="6" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="55" bodyend="-1"/>
-        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="107" endline="141">fsi::Indexer::addInfo</referencedby>
-        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="154" endline="182">fsi::Indexer::removeInfo</referencedby>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="56" column="6" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="56" bodyend="-1"/>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="198" endline="232">fsi::Indexer::addInfo</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="245" endline="273">fsi::Indexer::removeInfo</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d1/dea/structfsi_1_1IndexerError_1a16eb42d00430ff3bbe0e14ce67b857be" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -50,9 +50,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="51" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="51" bodyend="-1"/>
-        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="107" endline="141">fsi::Indexer::addInfo</referencedby>
-        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="154" endline="182">fsi::Indexer::removeInfo</referencedby>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="52" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="52" bodyend="-1"/>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="198" endline="232">fsi::Indexer::addInfo</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="245" endline="273">fsi::Indexer::removeInfo</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d1/dea/structfsi_1_1IndexerError_1a1eb3e813f7bb46dca644058737249e25" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -67,9 +67,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="56" column="6" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="56" bodyend="-1"/>
-        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="107" endline="141">fsi::Indexer::addInfo</referencedby>
-        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="154" endline="182">fsi::Indexer::removeInfo</referencedby>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="57" column="6" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="57" bodyend="-1"/>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="198" endline="232">fsi::Indexer::addInfo</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="245" endline="273">fsi::Indexer::removeInfo</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -93,7 +93,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="inc/fsi/lib/FSI_Indexer.hpp" line="49" column="1" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="50" bodyend="57"/>
+    <location file="inc/fsi/lib/FSI_Indexer.hpp" line="50" column="1" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="51" bodyend="58"/>
     <listofallmembers>
       <member refid="d1/dea/structfsi_1_1IndexerError_1a9e0bda0195d038e4e133452e3347705a" prot="public" virt="non-virtual"><scope>fsi::IndexerError</scope><name>code</name></member>
       <member refid="d1/dea/structfsi_1_1IndexerError_1a7d9081b0d5752868ed7ccb5aff0b0354" prot="public" virt="non-virtual"><scope>fsi::IndexerError</scope><name>fatal</name></member>

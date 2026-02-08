@@ -4,209 +4,300 @@
 <indexterm><primary>src/lib/FSI_Indexer.cpp</primary></indexterm>
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_FSI__Indexer_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;filesystem&gt;</emphasis>
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&lt;algorithm&gt;</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00003"/>00003 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_FSI__Indexer_8hpp">../../inc/fsi/lib/FSI_Indexer.hpp</link>&quot;</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_FSI__timeUtils_8hpp">../../inc/fsi/core/FSI_timeUtils.hpp</link>&quot;</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00006"/>00006 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_FSI__dirUtils_8h">../../inc/fsi/core/FSI_dirUtils.h</link>&quot;</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;future&gt;</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;execution&gt;</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00005"/>00005 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_FSI__Indexer_8hpp">../../inc/fsi/lib/FSI_Indexer.hpp</link>&quot;</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_FSI__timeUtils_8hpp">../../inc/fsi/core/FSI_timeUtils.hpp</link>&quot;</emphasis>
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00008"/>00008 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_FSIpredefines_8h">../../inc/fsi/FSIpredefines.h</link>&quot;</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_FSI__dirUtils_8h">../../inc/fsi/core/FSI_dirUtils.h</link>&quot;</emphasis>
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00010"/>00010 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;ciof/ciof.hpp&quot;</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_FSIpredefines_8h">../../inc/fsi/FSIpredefines.h</link>&quot;</emphasis>
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00012"/>00012 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00013"/>00013 <emphasis role="keyword">namespace&#32;</emphasis>fs&#32;=&#32;std::filesystem;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;ciof/ciof.hpp&quot;</emphasis>
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00014"/>00014 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00015"/>00015 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacefsi">fsi</link>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00016"/>00016 {
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PROTECTED&#32;//</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00018"/><link linkend="_classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a">00018</link> &#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30">IndexerPathType</link>&#32;<link linkend="_classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a">Indexer::__getPathType</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;path)<emphasis role="keyword">&#32;const</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00019"/>00019 <emphasis role="keyword">&#32;&#32;&#32;&#32;</emphasis>{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fs::is_directory(path))&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494">IndexerPathType::Directory</link>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fs::is_symlink(path))&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0">IndexerPathType::SymLink</link>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00022"/>00022 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e">IndexerPathType::File</link>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00025"/>00025 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00026"/><link linkend="_classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607">00026</link> &#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;<link linkend="_classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607">Indexer::__iteratePath</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;path)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;paths;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00029"/>00029 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CVEC&#32;tmpPathsVec&#32;=&#32;cvec_init(-1,&#32;<emphasis role="keyword">sizeof</emphasis>(<emphasis role="keywordtype">char</emphasis>*));
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00031"/>00031 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_FSI__dirUtils_8h_1a3bc7da82fe7b1e798ee4b6d018534946">fsi_walk</link>(&amp;tmpPathsVec,&#32;path.c_str());
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00033"/>00033 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;tmpPathsVec.size;&#32;++i)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>*&#32;p&#32;=&#32;*(<emphasis role="keywordtype">char</emphasis>**)cvec_get(&amp;tmpPathsVec,&#32;i);
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00037"/>00037 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(p)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paths.emplace_back(p);
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00041"/>00041 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9">FSI_FREE</link>(p);
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00045"/>00045 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cvec_destroy(&amp;tmpPathsVec);
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00047"/>00047 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;paths;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00050"/>00050 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00015"/>00015 <emphasis role="keyword">namespace&#32;</emphasis>fs&#32;=&#32;std::filesystem;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00016"/>00016 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00017"/>00017 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacefsi">fsi</link>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00018"/>00018 {
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PROTECTED&#32;//</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00020"/><link linkend="_classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a">00020</link> &#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30">IndexerPathType</link>&#32;<link linkend="_classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a">Indexer::__getPathType</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;path)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00021"/>00021 <emphasis role="keyword">&#32;&#32;&#32;&#32;</emphasis>{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fs::is_directory(path))&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494">IndexerPathType::Directory</link>;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fs::is_symlink(path))&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0">IndexerPathType::SymLink</link>;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00024"/>00024 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e">IndexerPathType::File</link>;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00027"/>00027 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00028"/><link linkend="_classfsi_1_1Indexer_1a0ebbb0775498567b4097d43916470856">00028</link> &#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;<link linkend="_classfsi_1_1Indexer_1a0ebbb0775498567b4097d43916470856">Indexer::__searchMatchingStandard</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;find)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(find.empty())
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{};
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00032"/>00032 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;vec;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00034"/>00034 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x.path.find(find)&#32;!=&#32;std::string::npos)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vec.emplace_back(x.path);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00040"/>00040 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;vec;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00043"/>00043 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00044"/><link linkend="_classfsi_1_1Indexer_1ad8a0076334628f5909825d154f1898e3">00044</link> &#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;<link linkend="_classfsi_1_1Indexer_1ad8a0076334628f5909825d154f1898e3">Indexer::__searchMatchingThreaded</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;find)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(find.empty())
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{};
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00048"/>00048 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;result;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::mutex&#32;mutex;
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00051"/>00051 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PUBLIC&#32;//</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;CONSTRUCTOR</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00054"/><link linkend="_classfsi_1_1Indexer_1a098bb0a974616eb40e6a08111c192868">00054</link> &#32;&#32;&#32;&#32;<link linkend="_classfsi_1_1Indexer_1a098bb0a974616eb40e6a08111c192868">Indexer::Indexer</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;<emphasis role="keywordtype">id</emphasis>)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<link linkend="_classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9">id</link>(<link linkend="_classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9">id</link>)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;{&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00057"/>00057 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;DECONSTRUCTOR</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00059"/><link linkend="_classfsi_1_1Indexer_1a6b4728ec2c6e51adae5f5465b919ead0">00059</link> &#32;&#32;&#32;&#32;<link linkend="_classfsi_1_1Indexer_1a6b4728ec2c6e51adae5f5465b919ead0">Indexer::~Indexer</link>()
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;{&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00061"/>00061 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00062"/><link linkend="_classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d">00062</link> &#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;<link linkend="_classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d">Indexer::addExtendedInfo</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;&amp;info)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;error&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8">addInfo</link>(info);
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;totalInfo&#32;=&#32;info;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00066"/>00066 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_FSI__Indexer_8hpp_1a5f1510074e5b49e79ce5ccd97d927c53">__FSI_INDEXERERR_CHECK</link>(error))
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00069"/>00069 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;std::string&gt;&#32;iteratedPaths&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607">__iteratePath</link>(info.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>);
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00071"/>00071 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;iteratedPaths)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1ad3eb8adcbd97fd15894e43a715ad2958">pathType</link>&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a">__getPathType</link>(totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>);
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>&#32;=&#32;x;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::for_each(
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::execution::par,
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.begin(),
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.end(),
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[&amp;](<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&amp;&#32;x)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(x.path.find(find)&#32;!=&#32;std::string::npos)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::lock_guard&lt;std::mutex&gt;&#32;lock(mutex);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result.emplace_back(x.path);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00065"/>00065 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00068"/>00068 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00069"/><link linkend="_classfsi_1_1Indexer_1ad2b706e6b58c00d167a87187175755aa">00069</link> &#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;<link linkend="_classfsi_1_1Indexer_1ad2b706e6b58c00d167a87187175755aa">Indexer::__addExtendedInfoStandard</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;&amp;info)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;error&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8">addInfo</link>(info);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;totalInfo&#32;=&#32;info;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00073"/>00073 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_FSI__Indexer_8hpp_1a5f1510074e5b49e79ce5ccd97d927c53">__FSI_INDEXERERR_CHECK</link>(error))
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00076"/>00076 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.emplace_back(totalInfo);
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00079"/>00079 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00082"/>00082 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00083"/><link linkend="_classfsi_1_1Indexer_1a7d989963a7a874e5d03e441b383e0b61">00083</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classfsi_1_1Indexer_1a7d989963a7a874e5d03e441b383e0b61">Indexer::searchExactMatching</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;find)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(find.empty())
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00087"/>00087 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8">findIndex</link>(find).<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00090"/>00090 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00091"/><link linkend="_classfsi_1_1Indexer_1a5c7f5cec792676647ac1f40fc69ecec3">00091</link> &#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;<link linkend="_classfsi_1_1Indexer_1a5c7f5cec792676647ac1f40fc69ecec3">Indexer::searchMatching</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;find)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(find.empty())
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{};
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00095"/>00095 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;vec;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00097"/>00097 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x.path.find(find)&#32;!=&#32;std::string::npos)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vec.emplace_back(x.path);
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00103"/>00103 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;vec;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;std::string&gt;&#32;iteratedPaths&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607">__iteratePath</link>(info.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00078"/>00078 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;iteratedPaths)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1ad3eb8adcbd97fd15894e43a715ad2958">pathType</link>&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a">__getPathType</link>(totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>&#32;=&#32;x;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00083"/>00083 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.emplace_back(totalInfo);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00086"/>00086 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00089"/>00089 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00090"/><link linkend="_classfsi_1_1Indexer_1a8f2a4860b7e2480e0af81f6fabb94794">00090</link> &#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;<link linkend="_classfsi_1_1Indexer_1a8f2a4860b7e2480e0af81f6fabb94794">Indexer::__addExtendedInfoThreaded</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;&amp;info)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;error&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8">addInfo</link>(info);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00093"/>00093 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_FSI__Indexer_8hpp_1a5f1510074e5b49e79ce5ccd97d927c53">__FSI_INDEXERERR_CHECK</link>(error))
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00096"/>00096 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;paths&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607">__iteratePath</link>(info.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;chunks&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a474d4b7684d96bee45e1f6573b224a39">__splitPathByCores</link>(paths);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00099"/>00099 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::future&lt;std::vector&lt;IndexerInfo&gt;&gt;&gt;&#32;tasks;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00101"/>00101 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">auto</emphasis>&#32;&amp;chunk&#32;:&#32;chunks)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(chunk.empty())
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00106"/>00106 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00107"/><link linkend="_classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8">00107</link> &#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;<link linkend="_classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8">Indexer::addInfo</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;&amp;info)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;error;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;totalInfo&#32;=&#32;info;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tasks.emplace_back(std::async(std::launch::async,
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[&amp;,&#32;chunk]()&#32;-&gt;&#32;std::vector&lt;IndexerInfo&gt;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;IndexerInfo&gt;&#32;local;
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00111"/>00111 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Do&#32;checks&#32;before&#32;adding</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>.empty())
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a9e0bda0195d038e4e133452e3347705a">code</link>&#32;=&#32;<link linkend="_namespacefsi_1_1codes_1a141522bb6ab01bdab1888f51984bb08b">fsi::codes::ERROR_ADDITION_FAIL</link>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a16eb42d00430ff3bbe0e14ce67b857be">message</link>&#32;=&#32;<emphasis role="stringliteral">&quot;Path&#32;is&#32;empty&quot;</emphasis>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a7d9081b0d5752868ed7ccb5aff0b0354">fatal</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a1eb3e813f7bb46dca644058737249e25">raise</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00119"/>00119 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00122"/>00122 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!fs::exists(totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>))
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a9e0bda0195d038e4e133452e3347705a">code</link>&#32;=&#32;<link linkend="_namespacefsi_1_1codes_1a88198637504cbb63a06c76d7d0b7a1a7">fsi::codes::ERROR_INVALID_PATH</link>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a16eb42d00430ff3bbe0e14ce67b857be">message</link>&#32;=&#32;ciof::format(<emphasis role="stringliteral">&quot;Unknown&#32;path&#32;`%1`;&#32;No&#32;such&#32;file&#32;or&#32;directory&#32;exists&quot;</emphasis>,&#32;totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>);
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a7d9081b0d5752868ed7ccb5aff0b0354">fatal</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00128"/>00128 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00131"/>00131 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;path&#32;type</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1ad3eb8adcbd97fd15894e43a715ad2958">pathType</link>&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a">__getPathType</link>(totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>);
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00135"/>00135 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Add&#32;final&#32;information</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00137"/>00137 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.emplace_back(totalInfo);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;local.reserve(chunk.size());
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00113"/>00113 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;p&#32;:&#32;chunk)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;tmp&#32;=&#32;info;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tmp.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>&#32;=&#32;p;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tmp.<link linkend="_structfsi_1_1IndexerInfo_1ad3eb8adcbd97fd15894e43a715ad2958">pathType</link>&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a">__getPathType</link>(p);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;local.emplace_back(std::move(tmp));
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00121"/>00121 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;local;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}));
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00125"/>00125 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Merging&#32;phase</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">auto</emphasis>&#32;&amp;t&#32;:&#32;tasks)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;local&#32;=&#32;t.get();
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00130"/>00130 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.insert(
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.end(),
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::make_move_iterator(local.begin()),
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::make_move_iterator(local.end()));
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00136"/>00136 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;}
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00139"/>00139 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00141"/>00141 &#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00142"/>00142 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00143"/><link linkend="_classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8">00143</link> &#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;<link linkend="_classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8">Indexer::findIndex</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;toFind)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00144"/>00144 &#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x.path&#32;==&#32;toFind&#32;||&#32;x.id&#32;==&#32;toFind)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;x;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00150"/>00150 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{&#32;};
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00153"/>00153 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00154"/><link linkend="_classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a">00154</link> &#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;<link linkend="_classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a">Indexer::removeInfo</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;searcher)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00155"/>00155 &#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;error;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00157"/>00157 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Do&#32;checks</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00140"/><link linkend="_classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607">00140</link> &#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;<link linkend="_classfsi_1_1Indexer_1acebe67327f029b3a2e32a05d16610607">Indexer::__iteratePath</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;path)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00141"/>00141 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;paths;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00143"/>00143 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CVEC&#32;tmpPathsVec&#32;=&#32;cvec_init(-1,&#32;<emphasis role="keyword">sizeof</emphasis>(<emphasis role="keywordtype">char</emphasis>*));
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00145"/>00145 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_FSI__dirUtils_8h_1a3bc7da82fe7b1e798ee4b6d018534946">fsi_walk</link>(&amp;tmpPathsVec,&#32;path.c_str());
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00147"/>00147 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;tmpPathsVec.size;&#32;++i)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>*&#32;p&#32;=&#32;*(<emphasis role="keywordtype">char</emphasis>**)cvec_get(&amp;tmpPathsVec,&#32;i);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00151"/>00151 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(p)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paths.emplace_back(p,&#32;strlen(p));
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00155"/>00155 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9">FSI_FREE</link>(p);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00159"/>00159 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(searcher.empty())
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a9e0bda0195d038e4e133452e3347705a">code</link>&#32;=&#32;<link linkend="_namespacefsi_1_1codes_1ac2ba68f515a46e02eae9671750056860">fsi::codes::ERROR_EMPTY_VALUE</link>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a16eb42d00430ff3bbe0e14ce67b857be">message</link>&#32;=&#32;<emphasis role="stringliteral">&quot;Empty&#32;value&#32;to&#32;remove&#32;from&#32;the&#32;Indexer&#32;Information&#32;list&quot;</emphasis>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a7d9081b0d5752868ed7ccb5aff0b0354">fatal</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a1eb3e813f7bb46dca644058737249e25">raise</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00166"/>00166 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00169"/>00169 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Erase&#32;the&#32;found&#32;object&#32;(IndexerInfo)&#32;value&#32;by&#32;ID&#32;or&#32;Path</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.erase(
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::remove_if(
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.begin(),
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;indexerInfo.end(),
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[&amp;](<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;&amp;info)&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;(info.id&#32;==&#32;searcher&#32;||&#32;info.path&#32;==&#32;searcher);
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}),
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;indexerInfo.end()
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00180"/>00180 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00182"/>00182 &#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00183"/>00183 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00184"/><link linkend="_classfsi_1_1Indexer_1a536321b24430696e730bc71f35c9ed0a">00184</link> &#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">utils::TimeUtils_DateTime</link>&#32;<link linkend="_classfsi_1_1Indexer_1a536321b24430696e730bc71f35c9ed0a">Indexer::getFileDTInfo</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;path)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00185"/>00185 &#32;&#32;&#32;&#32;{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;fs::file_time_type&#32;&amp;lastWriteTime&#32;=&#32;fs::last_write_time(path);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cvec_destroy(&amp;tmpPathsVec);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00161"/>00161 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;paths;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00163"/>00163 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00164"/>00164 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00165"/>00165 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PUBLIC&#32;//</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00166"/>00166 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;CONSTRUCTOR</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00167"/><link linkend="_classfsi_1_1Indexer_1a60c93e6c1f5caf21f6549a1d00cf14d0">00167</link> &#32;&#32;&#32;&#32;<link linkend="_classfsi_1_1Indexer_1a60c93e6c1f5caf21f6549a1d00cf14d0">Indexer::Indexer</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classfsi_1_1Indexer_1abafcc16ed35ce10fdff093289e6bacba">threadsImpl</link>)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<link linkend="_classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9">id</link>(<link linkend="_classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9">id</link>),&#32;<link linkend="_classfsi_1_1Indexer_1abafcc16ed35ce10fdff093289e6bacba">threadsImpl</link>(<link linkend="_classfsi_1_1Indexer_1abafcc16ed35ce10fdff093289e6bacba">threadsImpl</link>)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00169"/>00169 &#32;&#32;&#32;&#32;{&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00170"/>00170 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00171"/>00171 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;DECONSTRUCTOR</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00172"/><link linkend="_classfsi_1_1Indexer_1a6b4728ec2c6e51adae5f5465b919ead0">00172</link> &#32;&#32;&#32;&#32;<link linkend="_classfsi_1_1Indexer_1a6b4728ec2c6e51adae5f5465b919ead0">Indexer::~Indexer</link>()
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00173"/>00173 &#32;&#32;&#32;&#32;{&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00174"/>00174 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00175"/><link linkend="_classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d">00175</link> &#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;<link linkend="_classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d">Indexer::addExtendedInfo</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;&amp;info)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00176"/>00176 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(this-&gt;<link linkend="_classfsi_1_1Indexer_1abafcc16ed35ce10fdff093289e6bacba">threadsImpl</link>)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a8f2a4860b7e2480e0af81f6fabb94794">__addExtendedInfoThreaded</link>(info);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1ad2b706e6b58c00d167a87187175755aa">__addExtendedInfoStandard</link>(info);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00181"/>00181 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00182"/>00182 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00183"/><link linkend="_classfsi_1_1Indexer_1a7d989963a7a874e5d03e441b383e0b61">00183</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classfsi_1_1Indexer_1a7d989963a7a874e5d03e441b383e0b61">Indexer::searchExactMatching</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;find)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00184"/>00184 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(find.empty())
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00187"/>00187 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacefsi_1_1utils_1ae0fd58fdf5e153ce89499a2bad2a8974">utils::fsClockDataToDT</link>(lastWriteTime);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8">findIndex</link>(find).<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>;
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00189"/>00189 &#32;&#32;&#32;&#32;}
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00190"/>00190 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00191"/><link linkend="_classfsi_1_1Indexer_1ac277ab3386ab90f04ae1495b4db6bee3">00191</link> &#32;&#32;&#32;&#32;std::vector&lt;IndexerInfo&gt;&#32;<link linkend="_classfsi_1_1Indexer_1ac277ab3386ab90f04ae1495b4db6bee3">Indexer::getIndexerInfo</link>()<emphasis role="keyword">&#32;const</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00192"/>00192 <emphasis role="keyword">&#32;&#32;&#32;&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00193"/>00193 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00194"/><link linkend="_classfsi_1_1Indexer_1a7cc91da352e5eeac9c672be8eb6ff452">00194</link> &#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;<link linkend="_classfsi_1_1Indexer_1a7cc91da352e5eeac9c672be8eb6ff452">Indexer::getIndexPaths</link>()<emphasis role="keyword">&#32;const</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00195"/>00195 <emphasis role="keyword">&#32;&#32;&#32;&#32;</emphasis>{
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;additions;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00191"/><link linkend="_classfsi_1_1Indexer_1a5c7f5cec792676647ac1f40fc69ecec3">00191</link> &#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;<link linkend="_classfsi_1_1Indexer_1a5c7f5cec792676647ac1f40fc69ecec3">Indexer::searchMatching</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;find)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00192"/>00192 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(this-&gt;<link linkend="_classfsi_1_1Indexer_1abafcc16ed35ce10fdff093289e6bacba">threadsImpl</link>)&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1ad8a0076334628f5909825d154f1898e3">__searchMatchingThreaded</link>(find);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00194"/>00194 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a0ebbb0775498567b4097d43916470856">__searchMatchingStandard</link>(find);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00196"/>00196 &#32;&#32;&#32;&#32;}
 <anchor xml:id="_FSI__Indexer_8cpp_source_1l00197"/>00197 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>)
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;additions.emplace_back(x.path);&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00200"/>00200 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;additions;
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00202"/>00202 &#32;&#32;&#32;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00203"/>00203 
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00204"/><link linkend="_classfsi_1_1Indexer_1a9c25a27ee35467915d8ca45100ae4716">00204</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classfsi_1_1Indexer_1a9c25a27ee35467915d8ca45100ae4716">Indexer::getID</link>()<emphasis role="keyword">&#32;const</emphasis>
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00205"/>00205 <emphasis role="keyword">&#32;&#32;&#32;&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9">id</link>;&#32;}
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00206"/>00206 }
-<anchor xml:id="_FSI__Indexer_8cpp_source_1l00207"/>00207 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00198"/><link linkend="_classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8">00198</link> &#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;<link linkend="_classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8">Indexer::addInfo</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;&amp;info)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00199"/>00199 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;error;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;totalInfo&#32;=&#32;info;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00202"/>00202 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Do&#32;checks&#32;before&#32;adding</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>.empty())
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a9e0bda0195d038e4e133452e3347705a">code</link>&#32;=&#32;<link linkend="_namespacefsi_1_1codes_1a141522bb6ab01bdab1888f51984bb08b">fsi::codes::ERROR_ADDITION_FAIL</link>;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a16eb42d00430ff3bbe0e14ce67b857be">message</link>&#32;=&#32;<emphasis role="stringliteral">&quot;Path&#32;is&#32;empty&quot;</emphasis>;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a7d9081b0d5752868ed7ccb5aff0b0354">fatal</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a1eb3e813f7bb46dca644058737249e25">raise</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00210"/>00210 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00213"/>00213 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!fs::exists(totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>))
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a9e0bda0195d038e4e133452e3347705a">code</link>&#32;=&#32;<link linkend="_namespacefsi_1_1codes_1a88198637504cbb63a06c76d7d0b7a1a7">fsi::codes::ERROR_INVALID_PATH</link>;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a16eb42d00430ff3bbe0e14ce67b857be">message</link>&#32;=&#32;ciof::format(<emphasis role="stringliteral">&quot;Unknown&#32;path&#32;`%1`;&#32;No&#32;such&#32;file&#32;or&#32;directory&#32;exists&quot;</emphasis>,&#32;totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a7d9081b0d5752868ed7ccb5aff0b0354">fatal</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00219"/>00219 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00222"/>00222 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;path&#32;type</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1ad3eb8adcbd97fd15894e43a715ad2958">pathType</link>&#32;=&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a2237929b6d3b94b3255ec187888caa7a">__getPathType</link>(totalInfo.<link linkend="_structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b">path</link>);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00226"/>00226 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Add&#32;final&#32;information</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00228"/>00228 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.emplace_back(totalInfo);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00230"/>00230 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00232"/>00232 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00233"/>00233 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00234"/><link linkend="_classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8">00234</link> &#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;<link linkend="_classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8">Indexer::findIndex</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;toFind)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00235"/>00235 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x.path&#32;==&#32;toFind&#32;||&#32;x.id&#32;==&#32;toFind)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;x;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00241"/>00241 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{&#32;};
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00243"/>00243 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00244"/>00244 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00245"/><link linkend="_classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a">00245</link> &#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;<link linkend="_classfsi_1_1Indexer_1a4fe004107c4cd63ebd99c31f3e199a9a">Indexer::removeInfo</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;searcher)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00246"/>00246 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00247"/>00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerError">IndexerError</link>&#32;error;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00248"/>00248 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Do&#32;checks</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00250"/>00250 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(searcher.empty())
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a9e0bda0195d038e4e133452e3347705a">code</link>&#32;=&#32;<link linkend="_namespacefsi_1_1codes_1ac2ba68f515a46e02eae9671750056860">fsi::codes::ERROR_EMPTY_VALUE</link>;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a16eb42d00430ff3bbe0e14ce67b857be">message</link>&#32;=&#32;<emphasis role="stringliteral">&quot;Empty&#32;value&#32;to&#32;remove&#32;from&#32;the&#32;Indexer&#32;Information&#32;list&quot;</emphasis>;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a7d9081b0d5752868ed7ccb5aff0b0354">fatal</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;error.<link linkend="_structfsi_1_1IndexerError_1a1eb3e813f7bb46dca644058737249e25">raise</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00257"/>00257 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00260"/>00260 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Erase&#32;the&#32;found&#32;object&#32;(IndexerInfo)&#32;value&#32;by&#32;ID&#32;or&#32;Path</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.erase(
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::remove_if(
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>.begin(),
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00265"/>00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;indexerInfo.end(),
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[&amp;](<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structfsi_1_1IndexerInfo">IndexerInfo</link>&#32;&amp;info)&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;(info.id&#32;==&#32;searcher&#32;||&#32;info.path&#32;==&#32;searcher);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}),
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;indexerInfo.end()
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00271"/>00271 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;error;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00273"/>00273 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00274"/>00274 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00275"/><link linkend="_classfsi_1_1Indexer_1a536321b24430696e730bc71f35c9ed0a">00275</link> &#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">utils::TimeUtils_DateTime</link>&#32;<link linkend="_classfsi_1_1Indexer_1a536321b24430696e730bc71f35c9ed0a">Indexer::getFileDTInfo</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;path)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00276"/>00276 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;fs::file_time_type&#32;&amp;lastWriteTime&#32;=&#32;fs::last_write_time(path);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00278"/>00278 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_namespacefsi_1_1utils_1ae0fd58fdf5e153ce89499a2bad2a8974">utils::fsClockDataToDT</link>(lastWriteTime);
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00280"/>00280 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00281"/>00281 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00282"/><link linkend="_classfsi_1_1Indexer_1ac277ab3386ab90f04ae1495b4db6bee3">00282</link> &#32;&#32;&#32;&#32;std::vector&lt;IndexerInfo&gt;&#32;<link linkend="_classfsi_1_1Indexer_1ac277ab3386ab90f04ae1495b4db6bee3">Indexer::getIndexerInfo</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00283"/>00283 <emphasis role="keyword">&#32;&#32;&#32;&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00284"/>00284 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00285"/><link linkend="_classfsi_1_1Indexer_1a7cc91da352e5eeac9c672be8eb6ff452">00285</link> &#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;<link linkend="_classfsi_1_1Indexer_1a7cc91da352e5eeac9c672be8eb6ff452">Indexer::getIndexPaths</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00286"/>00286 <emphasis role="keyword">&#32;&#32;&#32;&#32;</emphasis>{
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;additions;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00288"/>00288 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00289"/>00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;x&#32;:&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1a29e402b90c8232798f546ef1fdc48cc6">indexerInfo</link>)
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;additions.emplace_back(x.path);&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00291"/>00291 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00292"/>00292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;additions;
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00293"/>00293 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00294"/>00294 
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00295"/><link linkend="_classfsi_1_1Indexer_1a9c25a27ee35467915d8ca45100ae4716">00295</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classfsi_1_1Indexer_1a9c25a27ee35467915d8ca45100ae4716">Indexer::getID</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00296"/>00296 <emphasis role="keyword">&#32;&#32;&#32;&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_classfsi_1_1Indexer_1aed611d6ab66da2b9683c9c7cfc6c01c9">id</link>;&#32;}
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00297"/>00297 }
+<anchor xml:id="_FSI__Indexer_8cpp_source_1l00298"/>00298 
 </programlisting></section>

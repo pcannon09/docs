@@ -1,4 +1,4 @@
-.TH "FSI_DirData_POSIX" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.TH "FSI_DirData_POSIX" 3 "Version v0.1.2-beta" "FileSystemIndexer" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,26 +15,35 @@ FSI_DirData_POSIX
 .RI "DIR * \fBdir\fP"
 .br
 .ti -1c
+.RI "int \fBdirfd\fP"
+.br
+.ti -1c
 .RI "CSTR \fBpath\fP"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line \fB24\fP of file \fBFSI_dirUtils_posix\&.h\fP\&.
+Definition at line \fB27\fP of file \fBFSI_dirUtils_posix\&.h\fP\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "DIR* FSI_DirData_POSIX::dir"
 
 .PP
-Definition at line \fB26\fP of file \fBFSI_dirUtils_posix\&.h\fP\&.
+Definition at line \fB29\fP of file \fBFSI_dirUtils_posix\&.h\fP\&.
 .PP
-Referenced by \fBfsi_closeDir()\fP, \fBfsi_openDir()\fP, and \fBfsi_readDir()\fP\&.
+Referenced by \fBfsi_closeDir()\fP, and \fBfsi_openDir()\fP\&.
+.SS "int FSI_DirData_POSIX::dirfd"
+
+.PP
+Definition at line \fB32\fP of file \fBFSI_dirUtils_posix\&.h\fP\&.
+.PP
+Referenced by \fBfsi_openDir()\fP\&.
 .SS "CSTR FSI_DirData_POSIX::path"
 
 .PP
-Definition at line \fB27\fP of file \fBFSI_dirUtils_posix\&.h\fP\&.
+Definition at line \fB30\fP of file \fBFSI_dirUtils_posix\&.h\fP\&.
 .PP
-Referenced by \fBfsi_closeDir()\fP, and \fBfsi_openDir()\fP\&.
+Referenced by \fBfsi_closeDir()\fP\&.
 
 .SH "Author"
 .PP 

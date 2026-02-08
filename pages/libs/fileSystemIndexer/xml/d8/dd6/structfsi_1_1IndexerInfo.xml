@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="42" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="42" bodyend="-1"/>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="43" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="43" bodyend="-1"/>
         <referencedby refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="df/d0a/main_8cpp" startline="20" endline="43">main</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d8/dd6/structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b" prot="public" static="no" mutable="no">
@@ -31,11 +31,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="43" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="43" bodyend="-1"/>
-        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="62" endline="81">fsi::Indexer::addExtendedInfo</referencedby>
-        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="107" endline="141">fsi::Indexer::addInfo</referencedby>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="44" column="13" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="44" bodyend="-1"/>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1ad2b706e6b58c00d167a87187175755aa" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="69" endline="88">fsi::Indexer::__addExtendedInfoStandard</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a8f2a4860b7e2480e0af81f6fabb94794" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="90" endline="138">fsi::Indexer::__addExtendedInfoThreaded</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="198" endline="232">fsi::Indexer::addInfo</referencedby>
         <referencedby refid="df/d0a/main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="df/d0a/main_8cpp" startline="20" endline="43">main</referencedby>
-        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a7d989963a7a874e5d03e441b383e0b61" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="83" endline="89">fsi::Indexer::searchExactMatching</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a7d989963a7a874e5d03e441b383e0b61" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="183" endline="189">fsi::Indexer::searchExactMatching</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d8/dd6/structfsi_1_1IndexerInfo_1ad3eb8adcbd97fd15894e43a715ad2958" prot="public" static="no" mutable="no">
         <type><ref refid="da/d46/namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30" kindref="member">IndexerPathType</ref></type>
@@ -49,9 +50,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="46" column="17" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="46" bodyend="-1"/>
-        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="62" endline="81">fsi::Indexer::addExtendedInfo</referencedby>
-        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="107" endline="141">fsi::Indexer::addInfo</referencedby>
+        <location file="inc/fsi/lib/FSI_Indexer.hpp" line="47" column="17" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="47" bodyend="-1"/>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1ad2b706e6b58c00d167a87187175755aa" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="69" endline="88">fsi::Indexer::__addExtendedInfoStandard</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a8f2a4860b7e2480e0af81f6fabb94794" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="90" endline="138">fsi::Indexer::__addExtendedInfoThreaded</referencedby>
+        <referencedby refid="d0/d3b/classfsi_1_1Indexer_1a4a17eef7e041ea4b1cfe67796fe39bf8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="198" endline="232">fsi::Indexer::addInfo</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -76,7 +78,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="inc/fsi/lib/FSI_Indexer.hpp" line="40" column="1" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="41" bodyend="47"/>
+    <location file="inc/fsi/lib/FSI_Indexer.hpp" line="41" column="1" bodyfile="inc/fsi/lib/FSI_Indexer.hpp" bodystart="42" bodyend="48"/>
     <listofallmembers>
       <member refid="d8/dd6/structfsi_1_1IndexerInfo_1a9ed84fe71c39594a0ab6c487a165f06c" prot="public" virt="non-virtual"><scope>fsi::IndexerInfo</scope><name>id</name></member>
       <member refid="d8/dd6/structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b" prot="public" virt="non-virtual"><scope>fsi::IndexerInfo</scope><name>path</name></member>

@@ -36,41 +36,41 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>enum FSI_Type</type>
-      <name>FSI_Type</name>
+      <type>enum FSI_EntryType</type>
+      <name>FSI_EntryType</name>
       <anchorfile>dc/d84/FSI__dirUtils_8h.html</anchorfile>
-      <anchor>af91db6d6c004b3548000fa4f76a94cf9</anchor>
+      <anchor>a4b60467ff5f727ee8bba88d082b1b0c3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
-      <name>FSI_Type</name>
+      <name>FSI_EntryType</name>
       <anchorfile>dc/d84/FSI__dirUtils_8h.html</anchorfile>
-      <anchor>a38036f8b8fb04c1fd1196158847782d0</anchor>
+      <anchor>aaa6bee37aab1227d0184642f73bf069e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>FSI_FILE</name>
       <anchorfile>dc/d84/FSI__dirUtils_8h.html</anchorfile>
-      <anchor>a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1</anchor>
+      <anchor>aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>FSI_DIR</name>
       <anchorfile>dc/d84/FSI__dirUtils_8h.html</anchorfile>
-      <anchor>a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552</anchor>
+      <anchor>aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>FSI_SYMLINK</name>
       <anchorfile>dc/d84/FSI__dirUtils_8h.html</anchorfile>
-      <anchor>a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e</anchor>
+      <anchor>aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>FSI_OTHER</name>
       <anchorfile>dc/d84/FSI__dirUtils_8h.html</anchorfile>
-      <anchor>a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede</anchor>
+      <anchor>aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -103,6 +103,7 @@
     <includes id="d8/db8/FSIpredefines_8h" name="FSIpredefines.h" local="yes" import="no" module="no" objc="no">../../FSIpredefines.h</includes>
     <includes id="dc/d84/FSI__dirUtils_8h" name="FSI_dirUtils.h" local="yes" import="no" module="no" objc="no">../FSI_dirUtils.h</includes>
     <class kind="struct">FSI_DirData_POSIX</class>
+    <class kind="struct">FSI_Visited_POSIX</class>
     <member kind="define">
       <type>#define</type>
       <name>__FSI_DIRUTILS_POSIX_CPP_CLOSE</name>
@@ -124,12 +125,40 @@
       <anchor>a9e656c74e3e41518c2759918f0527719</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>struct FSI_Visited_POSIX</type>
+      <name>FSI_Visited_POSIX</name>
+      <anchorfile>d5/d64/FSI__dirUtils__posix_8h.html</anchorfile>
+      <anchor>a86e514cccb091d2fa372f36ca856bf7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>__fsi_walk</name>
+      <anchorfile>d5/d64/FSI__dirUtils__posix_8h.html</anchorfile>
+      <anchor>a1d0d11194a91ede34644606912fbbebf</anchor>
+      <arglist>(CVEC *out, CVEC *visited, const char *path)</arglist>
+    </member>
     <member kind="function">
       <type>void</type>
       <name>fsi_closeDir</name>
       <anchorfile>d5/d64/FSI__dirUtils__posix_8h.html</anchorfile>
       <anchor>a07bb8fc8aa9e6ea91c2f2e65425e03e1</anchor>
       <arglist>(FSI_DirData *d)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static FSI_EntryType</type>
+      <name>fsi_getEntryType</name>
+      <anchorfile>d5/d64/FSI__dirUtils__posix_8h.html</anchorfile>
+      <anchor>a99bf5f7e3d00cfba1db0b2582e529af4</anchor>
+      <arglist>(int dirfd, struct dirent *e)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static FSI_EntryType</type>
+      <name>fsi_getEntryTypeFromDirent</name>
+      <anchorfile>d5/d64/FSI__dirUtils__posix_8h.html</anchorfile>
+      <anchor>a5a4f995512a0183ca0e5d7aed16d62c3</anchor>
+      <arglist>(int dirfd, struct dirent *e, struct stat *stOut)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -145,11 +174,26 @@
       <anchor>acb473fa7940b3c89aa11845436bbae8f</anchor>
       <arglist>(FSI_DirData *d, FSI_EntryData *out)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>fsi_visitedAdd</name>
+      <anchorfile>d5/d64/FSI__dirUtils__posix_8h.html</anchorfile>
+      <anchor>a9420f3d1392d4194c6192d2096605bd9</anchor>
+      <arglist>(CVEC *v, dev_t dev, ino_t ino)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static int</type>
+      <name>fsi_visitedHas</name>
+      <anchorfile>d5/d64/FSI__dirUtils__posix_8h.html</anchorfile>
+      <anchor>a84035112786899729fa79cc37ea76f52</anchor>
+      <arglist>(CVEC *v, dev_t dev, ino_t ino)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>FSI_dirUtils_windows.h</name>
     <path>inc/fsi/core/interfaces/</path>
     <filename>d5/def/FSI__dirUtils__windows_8h.html</filename>
+    <includes id="d8/db8/FSIpredefines_8h" name="FSIpredefines.h" local="yes" import="no" module="no" objc="no">../../FSIpredefines.h</includes>
     <member kind="define">
       <type>#define</type>
       <name>__FSI_DIRUTILS_WINDOWS_CPP_CLOSE</name>
@@ -428,8 +472,8 @@
       <type>void</type>
       <name>fsi_walk</name>
       <anchorfile>d6/d8a/FSI__dirUtils_8c.html</anchorfile>
-      <anchor>a3bc7da82fe7b1e798ee4b6d018534946</anchor>
-      <arglist>(CVEC *vec, const char *path)</arglist>
+      <anchor>a6717de7c355039c7846da70c56cd2f61</anchor>
+      <arglist>(CVEC *out, const char *path)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -446,13 +490,6 @@
     <filename>da/d97/FSI__dirUtils__posix_8c.html</filename>
     <includes id="d8/db8/FSIpredefines_8h" name="FSIpredefines.h" local="yes" import="no" module="no" objc="no">../../../inc/fsi/FSIpredefines.h</includes>
     <includes id="d5/d64/FSI__dirUtils__posix_8h" name="FSI_dirUtils_posix.h" local="yes" import="no" module="no" objc="no">../../../inc/fsi/core/interfaces/FSI_dirUtils_posix.h</includes>
-    <member kind="define">
-      <type>#define</type>
-      <name>_DEFAULT_SOURCE</name>
-      <anchorfile>da/d97/FSI__dirUtils__posix_8c.html</anchorfile>
-      <anchor>a8fb447618db946a9e2a596d9ea18763f</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type>void</type>
       <name>fsi_closeDir</name>
@@ -466,13 +503,6 @@
       <anchorfile>da/d97/FSI__dirUtils__posix_8c.html</anchorfile>
       <anchor>a1c15e434435c62f17b15a34877bd60bd</anchor>
       <arglist>(FSI_DirData *d, const char *path)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>fsi_readDir</name>
-      <anchorfile>da/d97/FSI__dirUtils__posix_8c.html</anchorfile>
-      <anchor>acb473fa7940b3c89aa11845436bbae8f</anchor>
-      <arglist>(FSI_DirData *d, FSI_EntryData *out)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -558,6 +588,13 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
+      <type>int</type>
+      <name>dirfd</name>
+      <anchorfile>d5/d16/structFSI__DirData__POSIX.html</anchorfile>
+      <anchor>a469e85e9dfedf6ff6ac12cc11ca7217c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
       <type>CSTR</type>
       <name>path</name>
       <anchorfile>d5/d16/structFSI__DirData__POSIX.html</anchorfile>
@@ -576,10 +613,28 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>FSI_Type</type>
+      <type>FSI_EntryType</type>
       <name>type</name>
       <anchorfile>d1/d62/structFSI__EntryData.html</anchorfile>
-      <anchor>aae303e170665a972cc52c708470a2b27</anchor>
+      <anchor>a98d969e02ac80d2a38c2002a2cc97a26</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>FSI_Visited_POSIX</name>
+    <filename>df/d4a/structFSI__Visited__POSIX.html</filename>
+    <member kind="variable">
+      <type>dev_t</type>
+      <name>dev</name>
+      <anchorfile>df/d4a/structFSI__Visited__POSIX.html</anchorfile>
+      <anchor>a3f318d91a35ba724589e3107bfffebb0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ino_t</type>
+      <name>ino</name>
+      <anchorfile>df/d4a/structFSI__Visited__POSIX.html</anchorfile>
+      <anchor>a79f6bbed4fd64b013beba3658e41fcc4</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -590,8 +645,8 @@
       <type></type>
       <name>Indexer</name>
       <anchorfile>d0/d3b/classfsi_1_1Indexer.html</anchorfile>
-      <anchor>a098bb0a974616eb40e6a08111c192868</anchor>
-      <arglist>(const std::string &amp;id)</arglist>
+      <anchor>a60c93e6c1f5caf21f6549a1d00cf14d0</anchor>
+      <arglist>(const std::string &amp;id, const bool threadsImpl=false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -671,6 +726,20 @@
       <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual IndexerError</type>
+      <name>__addExtendedInfoStandard</name>
+      <anchorfile>d0/d3b/classfsi_1_1Indexer.html</anchorfile>
+      <anchor>ad2b706e6b58c00d167a87187175755aa</anchor>
+      <arglist>(const IndexerInfo &amp;info)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual IndexerError</type>
+      <name>__addExtendedInfoThreaded</name>
+      <anchorfile>d0/d3b/classfsi_1_1Indexer.html</anchorfile>
+      <anchor>a8f2a4860b7e2480e0af81f6fabb94794</anchor>
+      <arglist>(const IndexerInfo &amp;info)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual IndexerPathType</type>
       <name>__getPathType</name>
       <anchorfile>d0/d3b/classfsi_1_1Indexer.html</anchorfile>
@@ -684,6 +753,27 @@
       <anchor>acebe67327f029b3a2e32a05d16610607</anchor>
       <arglist>(const std::string &amp;path)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual std::vector&lt; std::string &gt;</type>
+      <name>__searchMatchingStandard</name>
+      <anchorfile>d0/d3b/classfsi_1_1Indexer.html</anchorfile>
+      <anchor>a0ebbb0775498567b4097d43916470856</anchor>
+      <arglist>(const std::string &amp;find)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual std::vector&lt; std::string &gt;</type>
+      <name>__searchMatchingThreaded</name>
+      <anchorfile>d0/d3b/classfsi_1_1Indexer.html</anchorfile>
+      <anchor>ad8a0076334628f5909825d154f1898e3</anchor>
+      <arglist>(const std::string &amp;find)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static std::vector&lt; std::vector&lt; std::string &gt; &gt;</type>
+      <name>__splitPathByCores</name>
+      <anchorfile>d0/d3b/classfsi_1_1Indexer.html</anchorfile>
+      <anchor>a474d4b7684d96bee45e1f6573b224a39</anchor>
+      <arglist>(const std::vector&lt; std::string &gt; &amp;paths)</arglist>
+    </member>
     <member kind="variable" protection="private">
       <type>std::string</type>
       <name>id</name>
@@ -696,6 +786,13 @@
       <name>indexerInfo</name>
       <anchorfile>d0/d3b/classfsi_1_1Indexer.html</anchorfile>
       <anchor>a29e402b90c8232798f546ef1fdc48cc6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>bool</type>
+      <name>threadsImpl</name>
+      <anchorfile>d0/d3b/classfsi_1_1Indexer.html</anchorfile>
+      <anchor>abafcc16ed35ce10fdff093289e6bacba</anchor>
       <arglist></arglist>
     </member>
   </compound>

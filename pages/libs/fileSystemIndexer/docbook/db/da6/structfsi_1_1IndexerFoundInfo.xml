@@ -32,7 +32,7 @@ Collaboration diagram for fsi::IndexerFoundInfo:<para>
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00030">30</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00031">31</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
 </section>
 <section>
 <title>Member Data Documentation</title>
@@ -41,35 +41,35 @@ Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00030">30</link> o
 <indexterm><primary>extension</primary><secondary>fsi::IndexerFoundInfo</secondary></indexterm>
 <indexterm><primary>fsi::IndexerFoundInfo</primary><secondary>extension</secondary></indexterm>
 <para><computeroutput>std::string fsi::IndexerFoundInfo::extension</computeroutput></para><para>
-Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00034">34</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00035">35</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
 </section>
 <anchor xml:id="_structfsi_1_1IndexerFoundInfo_1a689841b7cae9a7dc1dbd0a0f0afc10c0"/><section>
     <title>extType</title>
 <indexterm><primary>extType</primary><secondary>fsi::IndexerFoundInfo</secondary></indexterm>
 <indexterm><primary>fsi::IndexerFoundInfo</primary><secondary>extType</secondary></indexterm>
 <para><computeroutput>std::string fsi::IndexerFoundInfo::extType</computeroutput></para><para>
-Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00035">35</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00036">36</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
 </section>
 <anchor xml:id="_structfsi_1_1IndexerFoundInfo_1a12d34a2de8d49b37707745903e5f7382"/><section>
     <title>lastModDT</title>
 <indexterm><primary>lastModDT</primary><secondary>fsi::IndexerFoundInfo</secondary></indexterm>
 <indexterm><primary>fsi::IndexerFoundInfo</primary><secondary>lastModDT</secondary></indexterm>
 <para><computeroutput><link linkend="_structfsi_1_1utils_1_1TimeUtils__DateTime">utils::TimeUtils_DateTime</link> fsi::IndexerFoundInfo::lastModDT</computeroutput></para><para>
-Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00037">37</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00038">38</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
 </section>
 <anchor xml:id="_structfsi_1_1IndexerFoundInfo_1a16ff738a7eaa12857f3c9fea4c551187"/><section>
     <title>name</title>
 <indexterm><primary>name</primary><secondary>fsi::IndexerFoundInfo</secondary></indexterm>
 <indexterm><primary>fsi::IndexerFoundInfo</primary><secondary>name</secondary></indexterm>
 <para><computeroutput>std::string fsi::IndexerFoundInfo::name</computeroutput></para><para>
-Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00033">33</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00034">34</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
 </section>
 <anchor xml:id="_structfsi_1_1IndexerFoundInfo_1a7ef33d4ef2854d39adf0963f5e8c3c53"/><section>
     <title>path</title>
 <indexterm><primary>path</primary><secondary>fsi::IndexerFoundInfo</secondary></indexterm>
 <indexterm><primary>fsi::IndexerFoundInfo</primary><secondary>path</secondary></indexterm>
 <para><computeroutput>std::string fsi::IndexerFoundInfo::path</computeroutput></para><para>
-Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00032">32</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00033">33</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

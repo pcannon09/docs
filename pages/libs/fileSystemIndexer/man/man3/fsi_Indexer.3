@@ -1,4 +1,4 @@
-.TH "fsi::Indexer" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.TH "fsi::Indexer" 3 "Version v0.1.2-beta" "FileSystemIndexer" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,7 +12,7 @@ fsi::Indexer
 
 .in +1c
 .ti -1c
-.RI "\fBIndexer\fP (const std::string &\fBid\fP)"
+.RI "\fBIndexer\fP (const std::string &\fBid\fP, const bool \fBthreadsImpl\fP=false)"
 .br
 .ti -1c
 .RI "\fB~Indexer\fP ()"
@@ -20,7 +20,7 @@ fsi::Indexer
 .ti -1c
 .RI "\fBIndexerError\fP \fBaddExtendedInfo\fP (const \fBIndexerInfo\fP &info)"
 .br
-.RI "Add the exact path and the sub-paths to have the info from\&. "
+.RI "Add the exact path and the sub-paths to have the info from;\&. "
 .ti -1c
 .RI "\fBIndexerError\fP \fBaddInfo\fP (const \fBIndexerInfo\fP &info)"
 .br
@@ -56,11 +56,19 @@ fsi::Indexer
 .ti -1c
 .RI "std::vector< std::string > \fBsearchMatching\fP (const std::string &path)"
 .br
-.RI "Search all matching path or ID that contains \fRpath\fP\&. "
+.RI "Either use threaded or unthreaded search matching\&. "
 .in -1c
 .SS "Protected Member Functions"
 
 .in +1c
+.ti -1c
+.RI "virtual \fBIndexerError\fP \fB__addExtendedInfoStandard\fP (const \fBIndexerInfo\fP &info)"
+.br
+.RI "Standard non-threaded extended information\&. "
+.ti -1c
+.RI "virtual \fBIndexerError\fP \fB__addExtendedInfoThreaded\fP (const \fBIndexerInfo\fP &info)"
+.br
+.RI "Threaded extended information\&. "
 .ti -1c
 .RI "virtual \fBIndexerPathType\fP \fB__getPathType\fP (const std::string &path) const"
 .br
@@ -69,6 +77,22 @@ fsi::Indexer
 .RI "virtual std::vector< std::string > \fB__iteratePath\fP (const std::string &path)"
 .br
 .RI "Iterate all the files and directories (symlinks too) from \fRpath\fP\&. "
+.ti -1c
+.RI "virtual std::vector< std::string > \fB__searchMatchingStandard\fP (const std::string &find)"
+.br
+.RI "Search all matching path or ID that contains \fRpath\fP\&. "
+.ti -1c
+.RI "virtual std::vector< std::string > \fB__searchMatchingThreaded\fP (const std::string &find)"
+.br
+.RI "Search all matching path or ID that contains \fRpath\fP using parallelization with multiple CPU threads\&. "
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::vector< std::vector< std::string > > \fB__splitPathByCores\fP (const std::vector< std::string > &paths)"
+.br
+.RI "Split the paths found to be used in the future in different CPU cores\&. "
 .in -1c
 .SS "Private Attributes"
 
@@ -79,35 +103,167 @@ fsi::Indexer
 .ti -1c
 .RI "std::vector< \fBIndexerInfo\fP > \fBindexerInfo\fP"
 .br
+.ti -1c
+.RI "bool \fBthreadsImpl\fP"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line \fB59\fP of file \fBFSI_Indexer\&.hpp\fP\&.
+Definition at line \fB60\fP of file \fBFSI_Indexer\&.hpp\fP\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "fsi::Indexer::Indexer (const std::string & id)"
+.SS "fsi::Indexer::Indexer (const std::string & id, const bool threadsImpl = \fRfalse\fP)"
 
 .PP
-Definition at line \fB54\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+Definition at line \fB167\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-55         : id(id)
-56     { }
+168         : id(id), threadsImpl(threadsImpl)
+169     { }
 .PP
 .fi
 
 .PP
-References \fBid\fP\&.
+References \fBIndexer()\fP, \fBid\fP, and \fBthreadsImpl\fP\&.
+.PP
+Referenced by \fBIndexer()\fP\&.
 .SS "fsi::Indexer::~Indexer ()"
 
 .PP
-Definition at line \fB59\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+Definition at line \fB172\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-60     { }
+173     { }
 .PP
 .fi
 
 .SH "Member Function Documentation"
 .PP 
+.SS "\fBIndexerError\fP fsi::Indexer::__addExtendedInfoStandard (const \fBIndexerInfo\fP & info)\fR [protected]\fP, \fR [virtual]\fP"
+
+.PP
+Standard non-threaded extended information\&. 
+.IP "\(bu" 2
+This will not add multiple extended information to be processed 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinfo\fP Get the information from the exact path and deeper 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBIndexerError\fP Return error or success from \fR\fBIndexerError\fP\fP type 
+.RE
+.PP
+
+.PP
+
+.PP
+Definition at line \fB69\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+70     {
+71         IndexerError error = this\->addInfo(info);
+72         IndexerInfo totalInfo = info;
+73 
+74         if (__FSI_INDEXERERR_CHECK(error))
+75             return error;
+76 
+77         const std::vector<std::string> iteratedPaths = this\->__iteratePath(info\&.path);
+78 
+79         for (const auto &x : iteratedPaths)
+80         {
+81             totalInfo\&.pathType = this\->__getPathType(totalInfo\&.path);
+82             totalInfo\&.path = x;
+83 
+84             this\->indexerInfo\&.emplace_back(totalInfo);
+85         }
+86 
+87         return error;
+88     }
+.PP
+.fi
+
+.PP
+References \fB__addExtendedInfoStandard()\fP, \fB__FSI_INDEXERERR_CHECK\fP, \fB__getPathType()\fP, \fB__iteratePath()\fP, \fBaddInfo()\fP, \fBindexerInfo\fP, \fBfsi::IndexerInfo::path\fP, and \fBfsi::IndexerInfo::pathType\fP\&.
+.PP
+Referenced by \fB__addExtendedInfoStandard()\fP, and \fBaddExtendedInfo()\fP\&.
+.SS "\fBIndexerError\fP fsi::Indexer::__addExtendedInfoThreaded (const \fBIndexerInfo\fP & info)\fR [protected]\fP, \fR [virtual]\fP"
+
+.PP
+Threaded extended information\&. 
+.IP "\(bu" 2
+This will add multiple extended information to be processed in the future 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinfo\fP Get the information from the exact path and deeper 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBIndexerError\fP Return error or success from \fR\fBIndexerError\fP\fP type 
+.RE
+.PP
+
+.PP
+
+.PP
+Definition at line \fB90\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+91     {
+92         IndexerError error = this\->addInfo(info);
+93 
+94         if (__FSI_INDEXERERR_CHECK(error))
+95             return error;
+96 
+97         const auto paths = this\->__iteratePath(info\&.path);
+98         const auto &chunks = this\->__splitPathByCores(paths);
+99 
+100         std::vector<std::future<std::vector<IndexerInfo>>> tasks;
+101 
+102         for (auto &chunk : chunks)
+103         {
+104             if (chunk\&.empty())
+105                 continue;
+106 
+107             tasks\&.emplace_back(std::async(std::launch::async,
+108                         [&, chunk]() \-> std::vector<IndexerInfo>
+109             {
+110                 std::vector<IndexerInfo> local;
+111 
+112                 local\&.reserve(chunk\&.size());
+113 
+114                 for (const auto &p : chunk)
+115                 {
+116                     IndexerInfo tmp = info;
+117                     tmp\&.path = p;
+118                     tmp\&.pathType = this\->__getPathType(p);
+119                     local\&.emplace_back(std::move(tmp));
+120                 }
+121 
+122                 return local;
+123             }));
+124         }
+125 
+126         // Merging phase
+127         for (auto &t : tasks)
+128         {
+129             auto local = t\&.get();
+130 
+131             this\->indexerInfo\&.insert(
+132                     this\->indexerInfo\&.end(),
+133                     std::make_move_iterator(local\&.begin()),
+134                     std::make_move_iterator(local\&.end()));
+135         }
+136 
+137         return error;
+138     }
+.PP
+.fi
+
+.PP
+References \fB__addExtendedInfoThreaded()\fP, \fB__FSI_INDEXERERR_CHECK\fP, \fB__getPathType()\fP, \fB__iteratePath()\fP, \fB__splitPathByCores()\fP, \fBaddInfo()\fP, \fBindexerInfo\fP, \fBfsi::IndexerInfo::path\fP, and \fBfsi::IndexerInfo::pathType\fP\&.
+.PP
+Referenced by \fB__addExtendedInfoThreaded()\fP, and \fBaddExtendedInfo()\fP\&.
 .SS "\fBIndexerPathType\fP fsi::Indexer::__getPathType (const std::string & path) const\fR [protected]\fP, \fR [virtual]\fP"
 
 .PP
@@ -135,21 +291,21 @@ Others
 .PP
 
 .PP
-Definition at line \fB18\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+Definition at line \fB20\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-19     {
-20         if (fs::is_directory(path)) return IndexerPathType::Directory;
-21         else if (fs::is_symlink(path)) return IndexerPathType::SymLink;
-22 
-23         return IndexerPathType::File;
-24     }
+21     {
+22         if (fs::is_directory(path)) return IndexerPathType::Directory;
+23         else if (fs::is_symlink(path)) return IndexerPathType::SymLink;
+24 
+25         return IndexerPathType::File;
+26     }
 .PP
 .fi
 
 .PP
 References \fBfsi::Directory\fP, \fBfsi::File\fP, and \fBfsi::SymLink\fP\&.
 .PP
-Referenced by \fBaddExtendedInfo()\fP, and \fBaddInfo()\fP\&.
+Referenced by \fB__addExtendedInfoStandard()\fP, \fB__addExtendedInfoThreaded()\fP, and \fBaddInfo()\fP\&.
 .SS "std::vector< std::string > fsi::Indexer::__iteratePath (const std::string & path)\fR [protected]\fP, \fR [virtual]\fP"
 
 .PP
@@ -167,42 +323,171 @@ A tree of full path in a vector of strings
 .PP
 
 .PP
-Definition at line \fB26\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+Definition at line \fB140\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-27     {
-28         std::vector<std::string> paths;
-29 
-30         CVEC tmpPathsVec = cvec_init(\-1, sizeof(char*));
-31 
-32         fsi_walk(&tmpPathsVec, path\&.c_str());
-33 
-34         for (size_t i = 0; i < tmpPathsVec\&.size; ++i)
-35         {
-36             char* p = *(char**)cvec_get(&tmpPathsVec, i);
-37 
-38             if (p)
-39             {
-40                 paths\&.emplace_back(p);
-41 
-42                 FSI_FREE(p);
-43             }
-44         }
-45 
-46         cvec_destroy(&tmpPathsVec);
-47 
-48         return paths;
-49     }
+141     {
+142         std::vector<std::string> paths;
+143 
+144         CVEC tmpPathsVec = cvec_init(\-1, sizeof(char*));
+145 
+146         fsi_walk(&tmpPathsVec, path\&.c_str());
+147 
+148         for (size_t i = 0; i < tmpPathsVec\&.size; ++i)
+149         {
+150             char* p = *(char**)cvec_get(&tmpPathsVec, i);
+151 
+152             if (p)
+153             {
+154                 paths\&.emplace_back(p, strlen(p));
+155 
+156                 FSI_FREE(p);
+157             }
+158         }
+159 
+160         cvec_destroy(&tmpPathsVec);
+161 
+162         return paths;
+163     }
 .PP
 .fi
 
 .PP
-References \fBFSI_FREE\fP, and \fBfsi_walk()\fP\&.
+References \fB__iteratePath()\fP, \fBFSI_FREE\fP, and \fBfsi_walk()\fP\&.
 .PP
-Referenced by \fBaddExtendedInfo()\fP\&.
+Referenced by \fB__addExtendedInfoStandard()\fP, \fB__addExtendedInfoThreaded()\fP, and \fB__iteratePath()\fP\&.
+.SS "std::vector< std::string > fsi::Indexer::__searchMatchingStandard (const std::string & find)\fR [protected]\fP, \fR [virtual]\fP"
+
+.PP
+Search all matching path or ID that contains \fRpath\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path or ID to search 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A vector of all the found \fRpath\fPs 
+.RE
+.PP
+
+.PP
+Definition at line \fB28\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+29     {
+30         if (find\&.empty())
+31             return {};
+32 
+33         std::vector<std::string> vec;
+34 
+35         for (const auto &x : this\->indexerInfo)
+36         {
+37             if (x\&.path\&.find(find) != std::string::npos)
+38                 vec\&.emplace_back(x\&.path);
+39         }
+40 
+41         return vec;
+42     }
+.PP
+.fi
+
+.PP
+References \fBindexerInfo\fP\&.
+.PP
+Referenced by \fBsearchMatching()\fP\&.
+.SS "std::vector< std::string > fsi::Indexer::__searchMatchingThreaded (const std::string & find)\fR [protected]\fP, \fR [virtual]\fP"
+
+.PP
+Search all matching path or ID that contains \fRpath\fP using parallelization with multiple CPU threads\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path or ID to search 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A vector of all the found \fRpath\fPs 
+.RE
+.PP
+
+.PP
+Definition at line \fB44\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+.nf
+45     {
+46         if (find\&.empty())
+47             return {};
+48 
+49         std::vector<std::string> result;
+50         std::mutex mutex;
+51 
+52         std::for_each(
+53                 std::execution::par,
+54                 indexerInfo\&.begin(),
+55                 indexerInfo\&.end(),
+56                 [&](const auto& x)
+57             {
+58                 if (x\&.path\&.find(find) != std::string::npos)
+59                 {
+60                     std::lock_guard<std::mutex> lock(mutex);
+61                     result\&.emplace_back(x\&.path);
+62                 }
+63             }
+64         );
+65 
+66         return result;
+67     }
+.PP
+.fi
+
+.PP
+References \fBindexerInfo\fP\&.
+.PP
+Referenced by \fBsearchMatching()\fP\&.
+.SS "std::vector< std::vector< std::string > > fsi::Indexer::__splitPathByCores (const std::vector< std::string > & paths)\fR [inline]\fP, \fR [static]\fP, \fR [protected]\fP"
+
+.PP
+Split the paths found to be used in the future in different CPU cores\&. 
+.IP "\(bu" 2
+Split the vector in to tiny vectors depending on how many CPU cores the hardware has 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpaths\fP The paths to split according to CPU cores 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return the splitted paths 
+.RE
+.PP
+
+.PP
+
+.PP
+Definition at line \fB124\fP of file \fBFSI_Indexer\&.hpp\fP\&.
+.nf
+125         {
+126             const unsigned int threads = std::max(1u, std::thread::hardware_concurrency());
+127 
+128             std::vector<std::vector<std::string>> chunks(threads);
+129 
+130             for (size_t i = 0; i < paths\&.size(); ++i)
+131                 chunks[i % threads]\&.push_back(paths[i]);
+132 
+133             return chunks;
+134         }
+.PP
+.fi
+
+.PP
+Referenced by \fB__addExtendedInfoThreaded()\fP\&.
 .SS "\fBIndexerError\fP fsi::Indexer::addExtendedInfo (const \fBIndexerInfo\fP & info)"
 
 .PP
-Add the exact path and the sub-paths to have the info from\&. 
+Add the exact path and the sub-paths to have the info from;\&. 
+.IP "\(bu" 2
+Use \fR\fBIndexer::__addExtendedInfoStandard()\fP\fP or \fR\fBIndexer::__addExtendedInfoThreaded()\fP\fP if threads are disabled or enabled 
 .PP
 \fBParameters\fP
 .RS 4
@@ -216,32 +501,21 @@ Add the exact path and the sub-paths to have the info from\&.
 .PP
 
 .PP
-Definition at line \fB62\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+
+.PP
+Definition at line \fB175\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-63     {
-64         IndexerError error = this\->addInfo(info);
-65         IndexerInfo totalInfo = info;
-66 
-67         if (__FSI_INDEXERERR_CHECK(error))
-68             return error;
-69 
-70         const std::vector<std::string> iteratedPaths = this\->__iteratePath(info\&.path);
-71 
-72         for (const auto &x : iteratedPaths)
-73         {
-74             totalInfo\&.pathType = this\->__getPathType(totalInfo\&.path);
-75             totalInfo\&.path = x;
-76 
-77             this\->indexerInfo\&.emplace_back(totalInfo);
-78         }
-79 
-80         return error;
-81     }
+176     {
+177         if (this\->threadsImpl)
+178             return this\->__addExtendedInfoThreaded(info);
+179         
+180         return this\->__addExtendedInfoStandard(info);
+181     }
 .PP
 .fi
 
 .PP
-References \fB__FSI_INDEXERERR_CHECK\fP, \fB__getPathType()\fP, \fB__iteratePath()\fP, \fBaddInfo()\fP, \fBindexerInfo\fP, \fBfsi::IndexerInfo::path\fP, and \fBfsi::IndexerInfo::pathType\fP\&.
+References \fB__addExtendedInfoStandard()\fP, \fB__addExtendedInfoThreaded()\fP, and \fBthreadsImpl\fP\&.
 .PP
 Referenced by \fBmain()\fP\&.
 .SS "\fBIndexerError\fP fsi::Indexer::addInfo (const \fBIndexerInfo\fP & info)"
@@ -261,49 +535,49 @@ Add the exact path to have the info from\&.
 .PP
 
 .PP
-Definition at line \fB107\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+Definition at line \fB198\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-108     {
-109         IndexerError error;
-110         IndexerInfo totalInfo = info;
-111 
-112         // Do checks before adding
-113         if (totalInfo\&.path\&.empty())
-114         {
-115             error\&.code = fsi::codes::ERROR_ADDITION_FAIL;
-116             error\&.message = "Path is empty";
-117             error\&.fatal = false;
-118             error\&.raise = false;
-119 
-120             return error;
-121         }
-122 
-123         if (!fs::exists(totalInfo\&.path))
-124         {
-125             error\&.code = fsi::codes::ERROR_INVALID_PATH;
-126             error\&.message = ciof::format("Unknown path `%1`; No such file or directory exists", totalInfo\&.path);
-127             error\&.fatal = true;
-128 
-129             return error;
-130         }
-131 
-132         
-133         // Set path type
-134         totalInfo\&.pathType = this\->__getPathType(totalInfo\&.path);
-135 
-136         // Add final information
-137 
-138         this\->indexerInfo\&.emplace_back(totalInfo);
-139 
-140         return error;
-141     }
+199     {
+200         IndexerError error;
+201         IndexerInfo totalInfo = info;
+202 
+203         // Do checks before adding
+204         if (totalInfo\&.path\&.empty())
+205         {
+206             error\&.code = fsi::codes::ERROR_ADDITION_FAIL;
+207             error\&.message = "Path is empty";
+208             error\&.fatal = false;
+209             error\&.raise = false;
+210 
+211             return error;
+212         }
+213 
+214         if (!fs::exists(totalInfo\&.path))
+215         {
+216             error\&.code = fsi::codes::ERROR_INVALID_PATH;
+217             error\&.message = ciof::format("Unknown path `%1`; No such file or directory exists", totalInfo\&.path);
+218             error\&.fatal = true;
+219 
+220             return error;
+221         }
+222 
+223         
+224         // Set path type
+225         totalInfo\&.pathType = this\->__getPathType(totalInfo\&.path);
+226 
+227         // Add final information
+228 
+229         this\->indexerInfo\&.emplace_back(totalInfo);
+230 
+231         return error;
+232     }
 .PP
 .fi
 
 .PP
 References \fB__getPathType()\fP, \fBfsi::IndexerError::code\fP, \fBfsi::codes::ERROR_ADDITION_FAIL\fP, \fBfsi::codes::ERROR_INVALID_PATH\fP, \fBfsi::IndexerError::fatal\fP, \fBindexerInfo\fP, \fBfsi::IndexerError::message\fP, \fBfsi::IndexerInfo::path\fP, \fBfsi::IndexerInfo::pathType\fP, and \fBfsi::IndexerError::raise\fP\&.
 .PP
-Referenced by \fBaddExtendedInfo()\fP\&.
+Referenced by \fB__addExtendedInfoStandard()\fP, and \fB__addExtendedInfoThreaded()\fP\&.
 .SS "\fBIndexerInfo\fP fsi::Indexer::findIndex (const std::string & toFind)"
 
 .PP
@@ -321,17 +595,17 @@ Find the index from the vector database from the indexer\&.
 .PP
 
 .PP
-Definition at line \fB143\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+Definition at line \fB234\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-144     {
-145         for (const auto &x : this\->indexerInfo)
-146         {
-147             if (x\&.path == toFind || x\&.id == toFind)
-148                 return x;
-149         }
-150 
-151         return { };
-152     }
+235     {
+236         for (const auto &x : this\->indexerInfo)
+237         {
+238             if (x\&.path == toFind || x\&.id == toFind)
+239                 return x;
+240         }
+241 
+242         return { };
+243     }
 .PP
 .fi
 
@@ -356,13 +630,13 @@ Date time info
 .PP
 
 .PP
-Definition at line \fB184\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+Definition at line \fB275\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-185     {
-186         const fs::file_time_type &lastWriteTime = fs::last_write_time(path);
-187 
-188         return utils::fsClockDataToDT(lastWriteTime);
-189     }
+276     {
+277         const fs::file_time_type &lastWriteTime = fs::last_write_time(path);
+278 
+279         return utils::fsClockDataToDT(lastWriteTime);
+280     }
 .PP
 .fi
 
@@ -382,9 +656,9 @@ Object ID
 .PP
 
 .PP
-Definition at line \fB204\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+Definition at line \fB295\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-205     { return this\->id; }
+296     { return this\->id; }
 .PP
 .fi
 
@@ -402,9 +676,9 @@ Get all the indexed information that was added
 .PP
 
 .PP
-Definition at line \fB191\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+Definition at line \fB282\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-192     { return this\->indexerInfo; }
+283     { return this\->indexerInfo; }
 .PP
 .fi
 
@@ -422,16 +696,16 @@ All the indexed paths in a vector
 .PP
 
 .PP
-Definition at line \fB194\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+Definition at line \fB285\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-195     {
-196         std::vector<std::string> additions;
-197 
-198         for (const auto &x : this\->indexerInfo)
-199         { additions\&.emplace_back(x\&.path); }
-200 
-201         return additions;
-202     }
+286     {
+287         std::vector<std::string> additions;
+288 
+289         for (const auto &x : this\->indexerInfo)
+290         { additions\&.emplace_back(x\&.path); }
+291 
+292         return additions;
+293     }
 .PP
 .fi
 
@@ -454,36 +728,36 @@ Remove information from its ID or full path\&.
 .PP
 
 .PP
-Definition at line \fB154\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+Definition at line \fB245\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-155     {
-156         IndexerError error;
-157 
-158         // Do checks
-159 
-160         if (searcher\&.empty())
-161         {
-162             error\&.code = fsi::codes::ERROR_EMPTY_VALUE;
-163             error\&.message = "Empty value to remove from the Indexer Information list";
-164             error\&.fatal = false;
-165             error\&.raise = false;
-166 
-167             return error;
-168         }
-169 
-170         // Erase the found object (IndexerInfo) value by ID or Path
-171         this\->indexerInfo\&.erase(
-172                 std::remove_if(
-173                     this\->indexerInfo\&.begin(),
-174                     this\->indexerInfo\&.end(),
-175                     [&](const IndexerInfo &info) {
-176                         return (info\&.id == searcher || info\&.path == searcher);
-177                     }),
-178                 this\->indexerInfo\&.end()
-179         );
-180 
-181         return error;
-182     }
+246     {
+247         IndexerError error;
+248 
+249         // Do checks
+250 
+251         if (searcher\&.empty())
+252         {
+253             error\&.code = fsi::codes::ERROR_EMPTY_VALUE;
+254             error\&.message = "Empty value to remove from the Indexer Information list";
+255             error\&.fatal = false;
+256             error\&.raise = false;
+257 
+258             return error;
+259         }
+260 
+261         // Erase the found object (IndexerInfo) value by ID or Path
+262         this\->indexerInfo\&.erase(
+263                 std::remove_if(
+264                     this\->indexerInfo\&.begin(),
+265                     this\->indexerInfo\&.end(),
+266                     [&](const IndexerInfo &info) {
+267                         return (info\&.id == searcher || info\&.path == searcher);
+268                     }),
+269                 this\->indexerInfo\&.end()
+270         );
+271 
+272         return error;
+273     }
 .PP
 .fi
 
@@ -506,14 +780,14 @@ The first match found
 .PP
 
 .PP
-Definition at line \fB83\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+Definition at line \fB183\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-84     {
-85         if (find\&.empty())
-86             return "";
-87 
-88         return this\->findIndex(find)\&.path;
-89     }
+184     {
+185         if (find\&.empty())
+186             return "";
+187 
+188         return this\->findIndex(find)\&.path;
+189     }
 .PP
 .fi
 
@@ -522,41 +796,36 @@ References \fBfindIndex()\fP, and \fBfsi::IndexerInfo::path\fP\&.
 .SS "std::vector< std::string > fsi::Indexer::searchMatching (const std::string & path)"
 
 .PP
-Search all matching path or ID that contains \fRpath\fP\&. 
+Either use threaded or unthreaded search matching\&. 
+.IP "\(bu" 2
+Use \fR\fBIndexer::__searchMatchingThreaded()\fP\fP or \fR\fBIndexer::__searchMatchingStandard()\fP\fP 
 .PP
 \fBParameters\fP
 .RS 4
-\fIpath\fP Path or ID to search 
+\fIpath\fP Path to read the data to search 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-A vector of all the found \fRpath\fPs 
+All the data found in a vector of strings 
 .RE
 .PP
 
 .PP
-Definition at line \fB91\fP of file \fBFSI_Indexer\&.cpp\fP\&.
+
+.PP
+Definition at line \fB191\fP of file \fBFSI_Indexer\&.cpp\fP\&.
 .nf
-92     {
-93         if (find\&.empty())
-94             return {};
-95 
-96         std::vector<std::string> vec;
-97 
-98         for (const auto &x : this\->indexerInfo)
-99         {
-100             if (x\&.path\&.find(find) != std::string::npos)
-101                 vec\&.emplace_back(x\&.path);
-102         }
-103 
-104         return vec;
-105     }
+192     {
+193         if (this\->threadsImpl) return this\->__searchMatchingThreaded(find);
+194 
+195         return this\->__searchMatchingStandard(find);
+196     }
 .PP
 .fi
 
 .PP
-References \fBindexerInfo\fP\&.
+References \fB__searchMatchingStandard()\fP, \fB__searchMatchingThreaded()\fP, and \fBthreadsImpl\fP\&.
 .PP
 Referenced by \fBmain()\fP\&.
 .SH "Member Data Documentation"
@@ -564,15 +833,21 @@ Referenced by \fBmain()\fP\&.
 .SS "std::string fsi::Indexer::id\fR [private]\fP"
 
 .PP
-Definition at line \fB62\fP of file \fBFSI_Indexer\&.hpp\fP\&.
+Definition at line \fB63\fP of file \fBFSI_Indexer\&.hpp\fP\&.
 .PP
 Referenced by \fBIndexer()\fP, and \fBgetID()\fP\&.
 .SS "std::vector<\fBIndexerInfo\fP> fsi::Indexer::indexerInfo\fR [private]\fP"
 
 .PP
-Definition at line \fB63\fP of file \fBFSI_Indexer\&.hpp\fP\&.
+Definition at line \fB65\fP of file \fBFSI_Indexer\&.hpp\fP\&.
 .PP
-Referenced by \fBaddExtendedInfo()\fP, \fBaddInfo()\fP, \fBfindIndex()\fP, \fBgetIndexerInfo()\fP, \fBgetIndexPaths()\fP, \fBremoveInfo()\fP, and \fBsearchMatching()\fP\&.
+Referenced by \fB__addExtendedInfoStandard()\fP, \fB__addExtendedInfoThreaded()\fP, \fB__searchMatchingStandard()\fP, \fB__searchMatchingThreaded()\fP, \fBaddInfo()\fP, \fBfindIndex()\fP, \fBgetIndexerInfo()\fP, \fBgetIndexPaths()\fP, and \fBremoveInfo()\fP\&.
+.SS "bool fsi::Indexer::threadsImpl\fR [private]\fP"
+
+.PP
+Definition at line \fB67\fP of file \fBFSI_Indexer\&.hpp\fP\&.
+.PP
+Referenced by \fBIndexer()\fP, \fBaddExtendedInfo()\fP, and \fBsearchMatching()\fP\&.
 
 .SH "Author"
 .PP 

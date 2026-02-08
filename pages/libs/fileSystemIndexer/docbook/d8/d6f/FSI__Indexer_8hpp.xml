@@ -2,7 +2,7 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSI__Indexer_8hpp" xml:lang="en-US">
 <title>inc/fsi/lib/FSI_Indexer.hpp File Reference</title>
 <indexterm><primary>inc/fsi/lib/FSI_Indexer.hpp</primary></indexterm>
-<programlisting linenumbering="unnumbered">#include &lt;string&gt;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &quot;../core/FSI_timeUtils.hpp&quot;<?linebreak?></programlisting>Include dependency graph for FSI_Indexer.hpp:<para>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &lt;thread&gt;<?linebreak?>#include &quot;../core/FSI_timeUtils.hpp&quot;<?linebreak?></programlisting>Include dependency graph for FSI_Indexer.hpp:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -93,18 +93,18 @@ This graph shows which files directly or indirectly include this file:<para>
 <indexterm><primary>FSI_Indexer.hpp</primary><secondary>__FSI_INDEXERERR_CHECK</secondary></indexterm>
 <para><computeroutput>#define __FSI_INDEXERERR_CHECK( e)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(e.raise&#32;||&#32;e.fatal)&#32;&amp;&amp;&#32;e.code&#32;!=&#32;<link linkend="_FSI__Indexer_8hpp_1a3ac8f32fbd100d7ab4f9ab08af2f846a">__FSI_SUCCESS</link>
 </programlisting><para>
-Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00010">10</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
-<programlisting linenumbering="unnumbered">00010 <emphasis role="preprocessor">#define&#32;__FSI_INDEXERERR_CHECK(e)&#32;\</emphasis>
-00011 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(e.raise&#32;||&#32;e.fatal)&#32;&amp;&amp;&#32;e.code&#32;!=&#32;__FSI_SUCCESS</emphasis>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00011">11</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+<programlisting linenumbering="unnumbered">00011 <emphasis role="preprocessor">#define&#32;__FSI_INDEXERERR_CHECK(e)&#32;\</emphasis>
+00012 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(e.raise&#32;||&#32;e.fatal)&#32;&amp;&amp;&#32;e.code&#32;!=&#32;__FSI_SUCCESS</emphasis>
 </programlisting><para>
-Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00062">fsi::Indexer::addExtendedInfo()</link>.</para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00069">fsi::Indexer::__addExtendedInfoStandard()</link>, and <link linkend="_FSI__Indexer_8cpp_source_1l00090">fsi::Indexer::__addExtendedInfoThreaded()</link>.</para>
 </section>
 <anchor xml:id="_FSI__Indexer_8hpp_1a3ac8f32fbd100d7ab4f9ab08af2f846a"/><section>
     <title>__FSI_SUCCESS</title>
 <indexterm><primary>__FSI_SUCCESS</primary><secondary>FSI_Indexer.hpp</secondary></indexterm>
 <indexterm><primary>FSI_Indexer.hpp</primary><secondary>__FSI_SUCCESS</secondary></indexterm>
 <para><computeroutput>#define __FSI_SUCCESS&#160;&#160;&#160;0</computeroutput></para><para>
-Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00009">9</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00010">10</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
 </section>
 </section>
 </section>

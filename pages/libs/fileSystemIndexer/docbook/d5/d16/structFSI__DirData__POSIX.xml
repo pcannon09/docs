@@ -10,6 +10,8 @@
         <itemizedlist>
             <listitem><para>DIR * <link linkend="_structFSI__DirData__POSIX_1a78670985b16d169b902cfda51881f02c">dir</link></para>
 </listitem>
+            <listitem><para>int <link linkend="_structFSI__DirData__POSIX_1a469e85e9dfedf6ff6ac12cc11ca7217c">dirfd</link></para>
+</listitem>
             <listitem><para>CSTR <link linkend="_structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e">path</link></para>
 </listitem>
         </itemizedlist>
@@ -17,7 +19,7 @@
 <section>
 <title>Detailed Description</title>
 <para>
-Definition at line <link linkend="_FSI__dirUtils__posix_8h_source_1l00024">24</link> of file <link linkend="_FSI__dirUtils__posix_8h_source">FSI_dirUtils_posix.h</link>.</para>
+Definition at line <link linkend="_FSI__dirUtils__posix_8h_source_1l00027">27</link> of file <link linkend="_FSI__dirUtils__posix_8h_source">FSI_dirUtils_posix.h</link>.</para>
 </section>
 <section>
 <title>Member Data Documentation</title>
@@ -26,18 +28,27 @@ Definition at line <link linkend="_FSI__dirUtils__posix_8h_source_1l00024">24</l
 <indexterm><primary>dir</primary><secondary>FSI_DirData_POSIX</secondary></indexterm>
 <indexterm><primary>FSI_DirData_POSIX</primary><secondary>dir</secondary></indexterm>
 <para><computeroutput>DIR* FSI_DirData_POSIX::dir</computeroutput></para><para>
-Definition at line <link linkend="_FSI__dirUtils__posix_8h_source_1l00026">26</link> of file <link linkend="_FSI__dirUtils__posix_8h_source">FSI_dirUtils_posix.h</link>.</para>
+Definition at line <link linkend="_FSI__dirUtils__posix_8h_source_1l00029">29</link> of file <link linkend="_FSI__dirUtils__posix_8h_source">FSI_dirUtils_posix.h</link>.</para>
 <para>
-Referenced by <link linkend="_FSI__dirUtils__posix_8c_source_1l00075">fsi_closeDir()</link>, <link linkend="_FSI__dirUtils__posix_8c_source_1l00014">fsi_openDir()</link>, and <link linkend="_FSI__dirUtils__posix_8c_source_1l00044">fsi_readDir()</link>.</para>
+Referenced by <link linkend="_FSI__dirUtils__posix_8c_source_1l00041">fsi_closeDir()</link>, and <link linkend="_FSI__dirUtils__posix_8c_source_1l00009">fsi_openDir()</link>.</para>
+</section>
+<anchor xml:id="_structFSI__DirData__POSIX_1a469e85e9dfedf6ff6ac12cc11ca7217c"/><section>
+    <title>dirfd</title>
+<indexterm><primary>dirfd</primary><secondary>FSI_DirData_POSIX</secondary></indexterm>
+<indexterm><primary>FSI_DirData_POSIX</primary><secondary>dirfd</secondary></indexterm>
+<para><computeroutput>int FSI_DirData_POSIX::dirfd</computeroutput></para><para>
+Definition at line <link linkend="_FSI__dirUtils__posix_8h_source_1l00032">32</link> of file <link linkend="_FSI__dirUtils__posix_8h_source">FSI_dirUtils_posix.h</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__dirUtils__posix_8c_source_1l00009">fsi_openDir()</link>.</para>
 </section>
 <anchor xml:id="_structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e"/><section>
     <title>path</title>
 <indexterm><primary>path</primary><secondary>FSI_DirData_POSIX</secondary></indexterm>
 <indexterm><primary>FSI_DirData_POSIX</primary><secondary>path</secondary></indexterm>
 <para><computeroutput>CSTR FSI_DirData_POSIX::path</computeroutput></para><para>
-Definition at line <link linkend="_FSI__dirUtils__posix_8h_source_1l00027">27</link> of file <link linkend="_FSI__dirUtils__posix_8h_source">FSI_dirUtils_posix.h</link>.</para>
+Definition at line <link linkend="_FSI__dirUtils__posix_8h_source_1l00030">30</link> of file <link linkend="_FSI__dirUtils__posix_8h_source">FSI_dirUtils_posix.h</link>.</para>
 <para>
-Referenced by <link linkend="_FSI__dirUtils__posix_8c_source_1l00075">fsi_closeDir()</link>, and <link linkend="_FSI__dirUtils__posix_8c_source_1l00014">fsi_openDir()</link>.</para>
+Referenced by <link linkend="_FSI__dirUtils__posix_8c_source_1l00041">fsi_closeDir()</link>.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

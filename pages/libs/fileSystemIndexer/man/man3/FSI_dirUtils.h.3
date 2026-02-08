@@ -1,4 +1,4 @@
-.TH "inc/fsi/core/FSI_dirUtils.h" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.TH "inc/fsi/core/FSI_dirUtils.h" 3 "Version v0.1.2-beta" "FileSystemIndexer" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,8 +7,6 @@ inc/fsi/core/FSI_dirUtils.h
 .br
 .PP
 \fR#include '\&.\&./FSIpredefines\&.h'\fP
-.br
-\fR#include <string\&.h>\fP
 .br
 \fR#include 'cvec/cvec\&.h'\fP
 .br
@@ -43,14 +41,14 @@ inc/fsi/core/FSI_dirUtils.h
 .RI "typedef struct FSI_EntryData \fBFSI_EntryData\fP"
 .br
 .ti -1c
-.RI "typedef enum \fBFSI_Type\fP \fBFSI_Type\fP"
+.RI "typedef enum \fBFSI_EntryType\fP \fBFSI_EntryType\fP"
 .br
 .in -1c
 .SS "Enumerations"
 
 .in +1c
 .ti -1c
-.RI "enum \fBFSI_Type\fP { \fBFSI_FILE\fP, \fBFSI_DIR\fP, \fBFSI_SYMLINK\fP, \fBFSI_OTHER\fP }"
+.RI "enum \fBFSI_EntryType\fP { \fBFSI_FILE\fP, \fBFSI_DIR\fP, \fBFSI_SYMLINK\fP, \fBFSI_OTHER\fP }"
 .br
 .in -1c
 .SS "Functions"
@@ -77,11 +75,11 @@ Definition at line \fB5\fP of file \fBFSI_dirUtils\&.h\fP\&.
 
 .SS "typedef struct FSI_EntryData FSI_EntryData"
 
-.SS "typedef enum \fBFSI_Type\fP \fBFSI_Type\fP"
+.SS "typedef enum \fBFSI_EntryType\fP \fBFSI_EntryType\fP"
 
 .SH "Enumeration Type Documentation"
 .PP 
-.SS "enum \fBFSI_Type\fP"
+.SS "enum \fBFSI_EntryType\fP"
 
 .PP
 \fBEnumerator\fP
@@ -95,14 +93,14 @@ Definition at line \fB5\fP of file \fBFSI_dirUtils\&.h\fP\&.
 .TP
 \f(BIFSI_OTHER \fP
 .PP
-Definition at line \fB20\fP of file \fBFSI_dirUtils\&.h\fP\&.
+Definition at line \fB18\fP of file \fBFSI_dirUtils\&.h\fP\&.
 .nf
-21 {
-22     FSI_FILE,
-23     FSI_DIR,
-24     FSI_SYMLINK,
-25     FSI_OTHER
-26 } FSI_Type;
+19 {
+20     FSI_FILE,
+21     FSI_DIR,
+22     FSI_SYMLINK,
+23     FSI_OTHER
+24 } FSI_EntryType;
 .PP
 .fi
 
@@ -125,37 +123,19 @@ Walk to every directory and file and set \fRvec\fP to a CVEC value\&.
 Definition at line \fB12\fP of file \fBFSI_dirUtils\&.c\fP\&.
 .nf
 13 {
-14     FSI_DirData dir;
-15     FSI_EntryData entry;
-16 
-17     if (!fsi_openDir(&dir, path))
-18         return;
-19 
-20     CSTR tmpPath = cstr_init();
-21 
-22     while (fsi_readDir(&dir, &entry))
-23     {
-24         cstr_set(&tmpPath, path);
-25         cstr_add(&tmpPath, "/");
-26         cstr_add(&tmpPath, entry\&.name);
-27 
-28         cvec_push(vec, const char*, CVEC_sys_strdup(tmpPath\&.data));
-29 
-30         if (entry\&.type == FSI_DIR)
-31             fsi_walk(vec, tmpPath\&.data);
-32     }
-33 
-34     cstr_destroy(&tmpPath);
-35 
-36     fsi_closeDir(&dir);
-37 }
+14     CVEC visited = cvec_init(\-1, sizeof(FSI_Visited_POSIX*));
+15 
+16     __fsi_walk(out, &visited, path);
+17 
+18     cvec_destroy(&visited);
+19 }
 .PP
 .fi
 
 .PP
-References \fBfsi_closeDir()\fP, \fBFSI_DIR\fP, \fBfsi_openDir()\fP, \fBfsi_readDir()\fP, \fBfsi_walk()\fP, \fBFSI_EntryData::name\fP, and \fBFSI_EntryData::type\fP\&.
+References \fB__fsi_walk()\fP\&.
 .PP
-Referenced by \fBfsi::Indexer::__iteratePath()\fP, and \fBfsi_walk()\fP\&.
+Referenced by \fBfsi::Indexer::__iteratePath()\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

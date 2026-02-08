@@ -1,4 +1,4 @@
-.TH "inc/fsi/FSIpredefines.h" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.TH "inc/fsi/FSIpredefines.h" 3 "Version v0.1.2-beta" "FileSystemIndexer" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -47,13 +47,13 @@ inc/fsi/FSIpredefines.h
 .RI "#define \fBFSI_VERSION_MINOR\fP   1"
 .br
 .ti -1c
-.RI "#define \fBFSI_VERSION_PATCH\fP   0"
+.RI "#define \fBFSI_VERSION_PATCH\fP   2"
 .br
 .ti -1c
 .RI "#define \fBFSI_VERSION_STATE\fP   'beta'"
 .br
 .ti -1c
-.RI "#define \fBFSI_VERSION_STD\fP   20260205"
+.RI "#define \fBFSI_VERSION_STD\fP   20260208"
 .br
 .in -1c
 .SH "Macro Definition Documentation"
@@ -75,7 +75,7 @@ Definition at line \fB21\fP of file \fBFSIpredefines\&.h\fP\&.
 .SS "#define FSI_DEL( x)"
 \fBValue:\fP
 .nf
-delete x; x = nullptr;
+delete x; x = nullptr
 .PP
 .fi
 
@@ -88,14 +88,14 @@ Definition at line \fB49\fP of file \fBFSIpredefines\&.h\fP\&.
 .SS "#define FSI_FREE( x)"
 \fBValue:\fP
 .nf
-free(x); x = NULL;
+free(x); x = NULL
 .PP
 .fi
 
 .PP
 Definition at line \fB45\fP of file \fBFSIpredefines\&.h\fP\&.
 .PP
-Referenced by \fBfsi::Indexer::__iteratePath()\fP, \fBfsi_closeDir()\fP, and \fBfsi_openDir()\fP\&.
+Referenced by \fBfsi::Indexer::__iteratePath()\fP, and \fBfsi_closeDir()\fP\&.
 .SS "#define FSI_STRINGIFY( x)"
 \fBValue:\fP
 .nf
@@ -141,7 +141,7 @@ Definition at line \fB24\fP of file \fBFSIpredefines\&.h\fP\&.
 
 .PP
 Definition at line \fB25\fP of file \fBFSIpredefines\&.h\fP\&.
-.SS "#define FSI_VERSION_PATCH   0"
+.SS "#define FSI_VERSION_PATCH   2"
 
 .PP
 Definition at line \fB26\fP of file \fBFSIpredefines\&.h\fP\&.
@@ -149,7 +149,7 @@ Definition at line \fB26\fP of file \fBFSIpredefines\&.h\fP\&.
 
 .PP
 Definition at line \fB34\fP of file \fBFSIpredefines\&.h\fP\&.
-.SS "#define FSI_VERSION_STD   20260205"
+.SS "#define FSI_VERSION_STD   20260208"
 
 .PP
 Definition at line \fB28\fP of file \fBFSIpredefines\&.h\fP\&.

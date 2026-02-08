@@ -26,7 +26,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_main_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;ciof::print(<link linkend="_FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d">FSI_temperatureConvertCelTo</link>(<emphasis role="stringliteral">&quot;f&quot;</emphasis>,&#32;33));
 <anchor xml:id="_main_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;ciof::print(<link linkend="_FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1">FSI_temperatureConvertCelFrom</link>(<emphasis role="stringliteral">&quot;f&quot;</emphasis>,&#32;33));
 <anchor xml:id="_main_8cpp_source_1l00024"/>00024 
-<anchor xml:id="_main_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<link linkend="_classfsi_1_1Indexer">fsi::Indexer</link>&#32;indexer(<emphasis role="stringliteral">&quot;main-indexer&quot;</emphasis>);
+<anchor xml:id="_main_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<link linkend="_classfsi_1_1Indexer">fsi::Indexer</link>&#32;indexer(<emphasis role="stringliteral">&quot;main-indexer&quot;</emphasis>,&#32;<emphasis role="keyword">true</emphasis>);
 <anchor xml:id="_main_8cpp_source_1l00026"/>00026 
 <anchor xml:id="_main_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
 <anchor xml:id="_main_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structfsi_1_1IndexerInfo">fsi::IndexerInfo</link>&#32;info;

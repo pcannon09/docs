@@ -11,5 +11,6 @@ var annotated_dup =
     ] ],
     [ "FSI_DirData", "d5/d63/structFSI__DirData.html", "d5/d63/structFSI__DirData" ],
     [ "FSI_DirData_POSIX", "d5/d16/structFSI__DirData__POSIX.html", "d5/d16/structFSI__DirData__POSIX" ],
-    [ "FSI_EntryData", "d1/d62/structFSI__EntryData.html", "d1/d62/structFSI__EntryData" ]
+    [ "FSI_EntryData", "d1/d62/structFSI__EntryData.html", "d1/d62/structFSI__EntryData" ],
+    [ "FSI_Visited_POSIX", "df/d4a/structFSI__Visited__POSIX.html", "df/d4a/structFSI__Visited__POSIX" ]
 ];

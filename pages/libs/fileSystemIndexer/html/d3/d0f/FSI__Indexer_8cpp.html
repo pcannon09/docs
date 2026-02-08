@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FileSystemIndexer<span id="projectnumber">&#160;v0.1.0-beta</span>
+   <div id="projectname">FileSystemIndexer<span id="projectnumber">&#160;v0.1.2-beta</span>
    </div>
-   <div id="projectbrief">File System Indexer - API to index files from your system</div>
+   <div id="projectbrief">File System Indexer - An API to index files from your system</div>
   </td>
  </tr>
  </tbody>
@@ -94,6 +94,8 @@ $(function(){initNavTree('d3/d0f/FSI__Indexer_8cpp.html','../../',''); });
 <div class="contents">
 <div class="textblock"><code>#include &lt;filesystem&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;future&gt;</code><br />
+<code>#include &lt;execution&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d8/d6f/FSI__Indexer_8hpp_source.html">../../inc/fsi/lib/FSI_Indexer.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/dcb/FSI__timeUtils_8hpp_source.html">../../inc/fsi/core/FSI_timeUtils.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html">../../inc/fsi/core/FSI_dirUtils.h</a>&quot;</code><br />
@@ -104,32 +106,36 @@ Include dependency graph for FSI_Indexer.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d9b/FSI__Indexer_8cpp__incl.png" border="0" usemap="#asrc_2lib_2FSI__Indexer_8cpp" loading="lazy" alt=""/></div>
 <map name="asrc_2lib_2FSI__Indexer_8cpp" id="asrc_2lib_2FSI__Indexer_8cpp">
-<area shape="rect" title=" " alt="" coords="223,5,379,32"/>
-<area shape="rect" title=" " alt="" coords="100,245,181,272"/>
-<area shape="poly" title=" " alt="" coords="221,29,109,48,61,63,44,72,32,82,14,110,8,137,13,165,28,196,40,210,54,222,88,241,84,244,51,227,36,214,24,199,8,167,3,137,9,108,28,78,41,67,59,58,108,43,224,25"/>
-<area shape="rect" title=" " alt="" coords="42,88,117,115"/>
-<area shape="poly" title=" " alt="" coords="262,35,130,83,125,84,122,80,128,77,264,30"/>
-<area shape="rect" href="../../d8/d6f/FSI__Indexer_8hpp.html" title=" " alt="" coords="141,80,263,123"/>
-<area shape="poly" title=" " alt="" coords="283,34,241,72,237,68,287,31"/>
-<area shape="rect" href="../../d3/dcb/FSI__timeUtils_8hpp.html" title=" " alt="" coords="197,171,364,197"/>
-<area shape="poly" title=" " alt="" coords="301,30,287,157,282,154,297,34"/>
-<area shape="rect" href="../../dc/d84/FSI__dirUtils_8h.html" title=" " alt="" coords="397,80,506,123"/>
-<area shape="poly" title=" " alt="" coords="325,30,402,72,397,73,324,35"/>
-<area shape="rect" href="../../d8/db8/FSIpredefines_8h.html" title=" " alt="" coords="389,171,514,197"/>
-<area shape="poly" title=" " alt="" coords="311,30,344,72,387,121,428,161,422,160,383,125,340,75,309,35"/>
-<area shape="rect" title=" " alt="" coords="531,88,623,115"/>
-<area shape="poly" title=" " alt="" coords="350,30,519,77,529,83,524,83,517,83,350,35"/>
-<area shape="rect" title=" " alt="" coords="38,171,91,197"/>
-<area shape="poly" title=" " alt="" coords="165,125,101,165,98,160,169,121"/>
-<area shape="rect" title=" " alt="" coords="116,171,173,197"/>
-<area shape="poly" title=" " alt="" coords="189,121,165,160,161,156,185,125"/>
-<area shape="poly" title=" " alt="" coords="223,121,260,159,255,159,222,126"/>
-<area shape="poly" title=" " alt="" coords="259,197,180,240,178,235,254,198"/>
-<area shape="poly" title=" " alt="" coords="453,121,454,156,449,153,450,125"/>
-<area shape="rect" title=" " alt="" coords="538,171,602,197"/>
-<area shape="poly" title=" " alt="" coords="483,121,542,162,536,161,481,126"/>
-<area shape="rect" title=" " alt="" coords="627,171,719,197"/>
-<area shape="poly" title=" " alt="" coords="507,120,627,165,621,165,506,125"/>
+<area shape="rect" title=" " alt="" coords="292,5,448,32"/>
+<area shape="rect" title=" " alt="" coords="176,245,257,272"/>
+<area shape="poly" title=" " alt="" coords="289,24,215,30,134,40,64,57,39,68,22,82,10,105,11,127,24,149,46,171,106,208,170,238,165,240,104,213,43,175,20,153,6,129,4,104,17,78,36,64,62,52,133,35,214,25,294,21"/>
+<area shape="rect" title=" " alt="" coords="32,88,106,115"/>
+<area shape="poly" title=" " alt="" coords="303,34,217,55,119,83,113,84,110,80,117,77,215,50,307,31"/>
+<area shape="rect" title=" " alt="" coords="130,88,184,115"/>
+<area shape="poly" title=" " alt="" coords="326,34,266,56,196,82,195,83,192,79,194,78,264,51,330,31"/>
+<area shape="rect" title=" " alt="" coords="207,88,285,115"/>
+<area shape="poly" title=" " alt="" coords="349,34,279,82,276,77,353,31"/>
+<area shape="rect" href="../../d8/d6f/FSI__Indexer_8hpp.html" title=" " alt="" coords="309,80,431,123"/>
+<area shape="poly" title=" " alt="" coords="372,30,373,66,368,64,369,35"/>
+<area shape="rect" href="../../d3/dcb/FSI__timeUtils_8hpp.html" title=" " alt="" coords="357,171,524,197"/>
+<area shape="poly" title=" " alt="" coords="395,30,424,50,446,79,452,98,454,119,450,158,446,155,449,119,447,99,441,81,420,54,395,35"/>
+<area shape="rect" href="../../dc/d84/FSI__dirUtils_8h.html" title=" " alt="" coords="557,80,666,123"/>
+<area shape="poly" title=" " alt="" coords="408,30,545,76,540,78,408,35"/>
+<area shape="rect" href="../../d8/db8/FSIpredefines_8h.html" title=" " alt="" coords="549,171,674,197"/>
+<area shape="poly" title=" " alt="" coords="391,30,468,78,585,161,579,161,465,82,391,35"/>
+<area shape="rect" title=" " alt="" coords="691,88,783,115"/>
+<area shape="poly" title=" " alt="" coords="449,30,559,50,679,77,691,83,685,83,677,83,557,55,449,35"/>
+<area shape="rect" title=" " alt="" coords="117,171,170,197"/>
+<area shape="poly" title=" " alt="" coords="310,125,186,171,184,166,314,122"/>
+<area shape="rect" title=" " alt="" coords="195,171,252,197"/>
+<area shape="poly" title=" " alt="" coords="335,122,261,165,258,161,330,124"/>
+<area shape="rect" title=" " alt="" coords="276,171,333,197"/>
+<area shape="poly" title=" " alt="" coords="356,122,326,161,323,156,351,125"/>
+<area shape="poly" title=" " alt="" coords="389,121,422,159,417,158,387,126"/>
+<area shape="poly" title=" " alt="" coords="404,198,271,243,270,238,399,198"/>
+<area shape="poly" title=" " alt="" coords="613,121,614,156,609,153,610,125"/>
+<area shape="rect" title=" " alt="" coords="699,171,791,197"/>
+<area shape="poly" title=" " alt="" coords="646,121,714,163,708,162,645,126"/>
 </map>
 </div>
 </div>

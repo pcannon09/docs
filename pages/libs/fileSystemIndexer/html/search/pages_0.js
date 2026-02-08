@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['0_20beta_0',['Last version updated: v0.1.0-beta',['../index.html#autotoc_md1',1,'']]]
+  ['1_202_20beta_0',['Last version of README updated: v0.1.2-beta',['../index.html#autotoc_md1',1,'']]]
 ];

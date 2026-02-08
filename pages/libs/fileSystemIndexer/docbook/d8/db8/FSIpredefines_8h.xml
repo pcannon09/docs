@@ -40,11 +40,11 @@ This graph shows which files directly or indirectly include this file:<para>
 </listitem>
             <listitem><para>#define <link linkend="_FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a">FSI_VERSION_MINOR</link>&#160;&#160;&#160;1</para>
 </listitem>
-            <listitem><para>#define <link linkend="_FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7">FSI_VERSION_PATCH</link>&#160;&#160;&#160;0</para>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7">FSI_VERSION_PATCH</link>&#160;&#160;&#160;2</para>
 </listitem>
             <listitem><para>#define <link linkend="_FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484">FSI_VERSION_STATE</link>&#160;&#160;&#160;&quot;beta&quot;</para>
 </listitem>
-            <listitem><para>#define <link linkend="_FSIpredefines_8h_1a3cf97e4cc4c73ad21eb6b2881d430add">FSI_VERSION_STD</link>&#160;&#160;&#160;20260205</para>
+            <listitem><para>#define <link linkend="_FSIpredefines_8h_1a3cf97e4cc4c73ad21eb6b2881d430add">FSI_VERSION_STD</link>&#160;&#160;&#160;20260208</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -79,7 +79,7 @@ Definition at line <link linkend="_FSIpredefines_8h_source_1l00021">21</link> of
     <title>FSI_DEL</title>
 <indexterm><primary>FSI_DEL</primary><secondary>FSIpredefines.h</secondary></indexterm>
 <indexterm><primary>FSIpredefines.h</primary><secondary>FSI_DEL</secondary></indexterm>
-<para><computeroutput>#define FSI_DEL( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><emphasis role="keyword">delete</emphasis>&#32;x;&#32;x&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+<para><computeroutput>#define FSI_DEL( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><emphasis role="keyword">delete</emphasis>&#32;x;&#32;x&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>
 </programlisting><para>
 Definition at line <link linkend="_FSIpredefines_8h_source_1l00046">46</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
 </section>
@@ -94,11 +94,11 @@ Definition at line <link linkend="_FSIpredefines_8h_source_1l00049">49</link> of
     <title>FSI_FREE</title>
 <indexterm><primary>FSI_FREE</primary><secondary>FSIpredefines.h</secondary></indexterm>
 <indexterm><primary>FSIpredefines.h</primary><secondary>FSI_FREE</secondary></indexterm>
-<para><computeroutput>#define FSI_FREE( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">free(x);&#32;x&#32;=&#32;NULL;
+<para><computeroutput>#define FSI_FREE( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">free(x);&#32;x&#32;=&#32;NULL
 </programlisting><para>
 Definition at line <link linkend="_FSIpredefines_8h_source_1l00045">45</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
 <para>
-Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00026">fsi::Indexer::__iteratePath()</link>, <link linkend="_FSI__dirUtils__posix_8c_source_1l00075">fsi_closeDir()</link>, and <link linkend="_FSI__dirUtils__posix_8c_source_1l00014">fsi_openDir()</link>.</para>
+Referenced by <link linkend="_FSI__Indexer_8cpp_source_1l00140">fsi::Indexer::__iteratePath()</link>, and <link linkend="_FSI__dirUtils__posix_8c_source_1l00041">fsi_closeDir()</link>.</para>
 </section>
 <anchor xml:id="_FSIpredefines_8h_1aa86fcd3af2b1d06bfe51d040498e3eac"/><section>
     <title>FSI_STRINGIFY</title>
@@ -151,7 +151,7 @@ Definition at line <link linkend="_FSIpredefines_8h_source_1l00025">25</link> of
     <title>FSI_VERSION_PATCH</title>
 <indexterm><primary>FSI_VERSION_PATCH</primary><secondary>FSIpredefines.h</secondary></indexterm>
 <indexterm><primary>FSIpredefines.h</primary><secondary>FSI_VERSION_PATCH</secondary></indexterm>
-<para><computeroutput>#define FSI_VERSION_PATCH&#160;&#160;&#160;0</computeroutput></para><para>
+<para><computeroutput>#define FSI_VERSION_PATCH&#160;&#160;&#160;2</computeroutput></para><para>
 Definition at line <link linkend="_FSIpredefines_8h_source_1l00026">26</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
 </section>
 <anchor xml:id="_FSIpredefines_8h_1aff5eff986bd3492f2e1e10df8f5d9484"/><section>
@@ -165,7 +165,7 @@ Definition at line <link linkend="_FSIpredefines_8h_source_1l00034">34</link> of
     <title>FSI_VERSION_STD</title>
 <indexterm><primary>FSI_VERSION_STD</primary><secondary>FSIpredefines.h</secondary></indexterm>
 <indexterm><primary>FSIpredefines.h</primary><secondary>FSI_VERSION_STD</secondary></indexterm>
-<para><computeroutput>#define FSI_VERSION_STD&#160;&#160;&#160;20260205</computeroutput></para><para>
+<para><computeroutput>#define FSI_VERSION_STD&#160;&#160;&#160;20260208</computeroutput></para><para>
 Definition at line <link linkend="_FSIpredefines_8h_source_1l00028">28</link> of file <link linkend="_FSIpredefines_8h_source">FSIpredefines.h</link>.</para>
 </section>
 </section>

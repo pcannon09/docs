@@ -4,6 +4,9 @@
 {\ttfamily \+\#include "{}../\+\+FSI\+\_\+dir\+Utils.\+h"{}}\newline
 {\ttfamily \+\#include "{}cstr/\+cstr.\+h"{}}\newline
 {\ttfamily \+\#include $<$dirent.\+h$>$}\newline
+{\ttfamily \+\#include $<$sys/\+stat.\+h$>$}\newline
+{\ttfamily \+\#include $<$unistd.\+h$>$}\newline
+{\ttfamily \+\#include $<$fcntl.\+h$>$}\newline
 Include dependency graph for FSI\+\_\+dir\+Utils\+\_\+posix.\+h:\+
 \nopagebreak
 \begin{figure}[H]
@@ -12,7 +15,8 @@ Include dependency graph for FSI\+\_\+dir\+Utils\+\_\+posix.\+h:\+
 \includegraphics[width=350pt]{d4/dca/FSI__dirUtils__posix_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file:\+\nopagebreak
+This graph shows which files directly or indirectly include this file:\+
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,6 +27,8 @@ This graph shows which files directly or indirectly include this file:\+\nopageb
 \begin{DoxyCompactItemize}
 \item 
 struct \doxymbox{\hyperlink{structFSI__DirData__POSIX}{FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX}}
+\item 
+struct \doxymbox{\hyperlink{structFSI__Visited__POSIX}{FSI\+\_\+\+Visited\+\_\+\+POSIX}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
@@ -35,16 +41,28 @@ struct \doxymbox{\hyperlink{structFSI__DirData__POSIX}{FSI\+\_\+\+Dir\+Data\+\_\
 \begin{DoxyCompactItemize}
 \item 
 typedef struct FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a9e656c74e3e41518c2759918f0527719}{FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX}}
+\item 
+typedef struct FSI\+\_\+\+Visited\+\_\+\+POSIX \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a86e514cccb091d2fa372f36ca856bf7c}{FSI\+\_\+\+Visited\+\_\+\+POSIX}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+static void \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a1d0d11194a91ede34644606912fbbebf}{\+\_\+\+\_\+fsi\+\_\+walk}} (CVEC \texorpdfstring{$\ast$}{*}out, CVEC \texorpdfstring{$\ast$}{*}visited, const char \texorpdfstring{$\ast$}{*}path)
+\item 
 void \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a07bb8fc8aa9e6ea91c2f2e65425e03e1}{fsi\+\_\+close\+Dir}} (\doxymbox{\hyperlink{structFSI__DirData}{FSI\+\_\+\+Dir\+Data}} \texorpdfstring{$\ast$}{*}d)
 \begin{DoxyCompactList}\small\item\em Get the directory data to deallocate memory. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069e}{FSI\+\_\+\+Entry\+Type}} \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a99bf5f7e3d00cfba1db0b2582e529af4}{fsi\+\_\+get\+Entry\+Type}} (int dirfd, struct dirent \texorpdfstring{$\ast$}{*}e)
+\begin{DoxyCompactList}\small\item\em Get the entry type of the dirfd from the \doxylink{structFSI__DirData__POSIX}{FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX}. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069e}{FSI\+\_\+\+Entry\+Type}} \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a5a4f995512a0183ca0e5d7aed16d62c3}{fsi\+\_\+get\+Entry\+Type\+From\+Dirent}} (int dirfd, struct dirent \texorpdfstring{$\ast$}{*}e, struct stat \texorpdfstring{$\ast$}{*}st\+Out)
+\item 
 int \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a1c15e434435c62f17b15a34877bd60bd}{fsi\+\_\+open\+Dir}} (\doxymbox{\hyperlink{structFSI__DirData}{FSI\+\_\+\+Dir\+Data}} \texorpdfstring{$\ast$}{*}d, const char \texorpdfstring{$\ast$}{*}path)
 \begin{DoxyCompactList}\small\item\em Open directory as read only. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_acb473fa7940b3c89aa11845436bbae8f}{fsi\+\_\+read\+Dir}} (\doxymbox{\hyperlink{structFSI__DirData}{FSI\+\_\+\+Dir\+Data}} \texorpdfstring{$\ast$}{*}d, \doxymbox{\hyperlink{structFSI__EntryData}{FSI\+\_\+\+Entry\+Data}} \texorpdfstring{$\ast$}{*}out)
-\begin{DoxyCompactList}\small\item\em Read directory from reading the {\ttfamily \doxylink{structFSI__DirData}{FSI\+\_\+\+Dir\+Data}} information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Read directory from reading the {\ttfamily \doxylink{structFSI__DirData}{FSI\+\_\+\+Dir\+Data}} information. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a9420f3d1392d4194c6192d2096605bd9}{fsi\+\_\+visited\+Add}} (CVEC \texorpdfstring{$\ast$}{*}v, dev\+\_\+t dev, ino\+\_\+t ino)
+\item 
+static int \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a84035112786899729fa79cc37ea76f52}{fsi\+\_\+visited\+Has}} (CVEC \texorpdfstring{$\ast$}{*}v, dev\+\_\+t dev, ino\+\_\+t ino)
+\end{DoxyCompactItemize}
 
 
 \label{doc-define-members}
@@ -81,11 +99,109 @@ Definition at line \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00005}{5
 {\footnotesize\ttfamily \label{FSI__dirUtils__posix_8h_a9e656c74e3e41518c2759918f0527719} 
 typedef struct FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX}
 
+\Hypertarget{FSI__dirUtils__posix_8h_a86e514cccb091d2fa372f36ca856bf7c}\index{FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}!FSI\_Visited\_POSIX@{FSI\_Visited\_POSIX}}
+\index{FSI\_Visited\_POSIX@{FSI\_Visited\_POSIX}!FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}}
+\doxysubsubsection{\texorpdfstring{FSI\_Visited\_POSIX}{FSI\_Visited\_POSIX}}
+{\footnotesize\ttfamily \label{FSI__dirUtils__posix_8h_a86e514cccb091d2fa372f36ca856bf7c} 
+typedef struct FSI\+\_\+\+Visited\+\_\+\+POSIX FSI\+\_\+\+Visited\+\_\+\+POSIX}
+
 
 
 \label{doc-func-members}
 \Hypertarget{FSI__dirUtils__posix_8h_doc-func-members}
 \doxysubsection{Function Documentation}
+\Hypertarget{FSI__dirUtils__posix_8h_a1d0d11194a91ede34644606912fbbebf}\index{FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}!\_\_fsi\_walk@{\_\_fsi\_walk}}
+\index{\_\_fsi\_walk@{\_\_fsi\_walk}!FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}}
+\doxysubsubsection{\texorpdfstring{\_\_fsi\_walk()}{\_\_fsi\_walk()}}
+{\footnotesize\ttfamily \label{FSI__dirUtils__posix_8h_a1d0d11194a91ede34644606912fbbebf} 
+void \+\_\+\+\_\+fsi\+\_\+walk (\begin{DoxyParamCaption}\item[{CVEC \texorpdfstring{$\ast$}{*}}]{out}{, }\item[{CVEC \texorpdfstring{$\ast$}{*}}]{visited}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00145}{145}} of file \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source}{FSI\+\_\+dir\+Utils\+\_\+posix.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00151\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{int}\ fd\ =\ open(path,\ O\_RDONLY\ |\ O\_DIRECTORY\ |\ O\_CLOEXEC);}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordflow}{if}\ (fd\ <\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ DIR\ *dir\ =\ fdopendir(fd);}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dir)}
+\DoxyCodeLine{00157\ \ \ \ \ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ close(fd);}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00160\ \ \ \ \ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{struct\ }stat\ dirSt;}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordflow}{if}\ (fstat(fd,\ \&dirSt)\ !=\ 0)}
+\DoxyCodeLine{00165\ \ \ \ \ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ closedir(dir);}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00168\ \ \ \ \ \}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a84035112786899729fa79cc37ea76f52}{fsi\_visitedHas}}(visited,\ dirSt.st\_dev,\ dirSt.st\_ino))}
+\DoxyCodeLine{00171\ \ \ \ \ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ closedir(dir);}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00174\ \ \ \ \ \}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a9420f3d1392d4194c6192d2096605bd9}{fsi\_visitedAdd}}(visited,\ dirSt.st\_dev,\ dirSt.st\_ino);}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keyword}{struct\ }dirent\ *e;}
+\DoxyCodeLine{00179\ \ \ \ \ CSTR\ tmp\ =\ cstr\_init();}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordflow}{while}\ ((e\ =\ readdir(dir)))}
+\DoxyCodeLine{00182\ \ \ \ \ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e-\/>d\_name[0]\ ==\ \textcolor{charliteral}{'.'}\ \&\&}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ (e-\/>d\_name[1]\ ==\ \textcolor{charliteral}{'\(\backslash\)0'}\ ||\ (e-\/>d\_name[1]\ ==\ \textcolor{charliteral}{'.'}\ \&\&\ e-\/>d\_name[2]\ ==\ \textcolor{charliteral}{'\(\backslash\)0'})))}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }stat\ st;}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ type\ =\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a5a4f995512a0183ca0e5d7aed16d62c3}{fsi\_getEntryTypeFromDirent}}(fd,\ e,\ \&st);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ cstr\_set(\&tmp,\ path);}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ cstr\_add(\&tmp,\ \textcolor{stringliteral}{"{}/"{}});}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ cstr\_add(\&tmp,\ e-\/>d\_name);}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ cvec\_push(out,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\ CVEC\_sys\_strdup(tmp.data));}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (type\ ==\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}})}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a1d0d11194a91ede34644606912fbbebf}{\_\_fsi\_walk}}(out,\ visited,\ tmp.data);}
+\DoxyCodeLine{00199\ \ \ \ \ \}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ cstr\_destroy(\&tmp);}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ closedir(dir);}
+\DoxyCodeLine{00204\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00145}{\+\_\+\+\_\+fsi\+\_\+walk()}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00021}{FSI\+\_\+\+DIR}}, \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00094}{fsi\+\_\+get\+Entry\+Type\+From\+Dirent()}}, \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00135}{fsi\+\_\+visited\+Add()}}, and \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00120}{fsi\+\_\+visited\+Has()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00145}{\+\_\+\+\_\+fsi\+\_\+walk()}}, and \doxymbox{\hyperlink{FSI__dirUtils_8c_source_l00012}{fsi\+\_\+walk()}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{d5/d64/FSI__dirUtils__posix_8h_a1d0d11194a91ede34644606912fbbebf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d64/FSI__dirUtils__posix_8h_a1d0d11194a91ede34644606912fbbebf_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{FSI__dirUtils__posix_8h_a07bb8fc8aa9e6ea91c2f2e65425e03e1}\index{FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}!fsi\_closeDir@{fsi\_closeDir}}
 \index{fsi\_closeDir@{fsi\_closeDir}!FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}}
 \doxysubsubsection{\texorpdfstring{fsi\_closeDir()}{fsi\_closeDir()}}
@@ -103,34 +219,135 @@ Get the directory data to deallocate memory.
 \end{DoxyParams}
 
 
-Definition at line \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source_l00075}{75}} of file \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source}{FSI\+\_\+dir\+Utils\+\_\+posix.\+c}}.
+Definition at line \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source_l00041}{41}} of file \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source}{FSI\+\_\+dir\+Utils\+\_\+posix.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00076\ \{}
-\DoxyCodeLine{00077\ \ \ \ \ \doxymbox{\hyperlink{structFSI__DirData__POSIX}{FSI\_DirData\_POSIX}}\ *p\ =\ d-\/>\doxymbox{\hyperlink{structFSI__DirData_ac8944367a6d007b8e0f6ba53be1ba1c0}{impl}};}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ \ \ \ \ cstr\_destroy(\&p-\/>\doxymbox{\hyperlink{structFSI__DirData__POSIX_a82d93611ad90fa5af9b11b6cc08a208e}{path}});}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00081\ \ \ \ \ closedir(p-\/>\doxymbox{\hyperlink{structFSI__DirData__POSIX_a78670985b16d169b902cfda51881f02c}{dir}});}
-\DoxyCodeLine{00082\ }
-\DoxyCodeLine{00083\ \ \ \ \ \doxymbox{\hyperlink{FSIpredefines_8h_a62bdb0773dcdb91d52bb8e4eca4c03d9}{FSI\_FREE}}(p);}
-\DoxyCodeLine{00084\ \}}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \doxymbox{\hyperlink{structFSI__DirData__POSIX}{FSI\_DirData\_POSIX}}\ *p\ =\ d-\/>\doxymbox{\hyperlink{structFSI__DirData_ac8944367a6d007b8e0f6ba53be1ba1c0}{impl}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ cstr\_destroy(\&p-\/>\doxymbox{\hyperlink{structFSI__DirData__POSIX_a82d93611ad90fa5af9b11b6cc08a208e}{path}});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ Closes\ FD\ variable\ too}}
+\DoxyCodeLine{00048\ \ \ \ \ closedir(p-\/>\doxymbox{\hyperlink{structFSI__DirData__POSIX_a78670985b16d169b902cfda51881f02c}{dir}});}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \doxymbox{\hyperlink{FSIpredefines_8h_a62bdb0773dcdb91d52bb8e4eca4c03d9}{FSI\_FREE}}(p);}
+\DoxyCodeLine{00051\ \}}
 
 \end{DoxyCode}
 
 
-References \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00026}{FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX::\+dir}}, \doxymbox{\hyperlink{FSIpredefines_8h_source_l00045}{FSI\+\_\+\+FREE}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00030}{FSI\+\_\+\+Dir\+Data::\+impl}}, and \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00027}{FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX::\+path}}.
+References \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00029}{FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX::\+dir}}, \doxymbox{\hyperlink{FSIpredefines_8h_source_l00045}{FSI\+\_\+\+FREE}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00028}{FSI\+\_\+\+Dir\+Data::\+impl}}, and \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00030}{FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX::\+path}}.
+
+\Hypertarget{FSI__dirUtils__posix_8h_a99bf5f7e3d00cfba1db0b2582e529af4}\index{FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}!fsi\_getEntryType@{fsi\_getEntryType}}
+\index{fsi\_getEntryType@{fsi\_getEntryType}!FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}}
+\doxysubsubsection{\texorpdfstring{fsi\_getEntryType()}{fsi\_getEntryType()}}
+{\footnotesize\ttfamily \label{FSI__dirUtils__posix_8h_a99bf5f7e3d00cfba1db0b2582e529af4} 
+\doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069e}{FSI\+\_\+\+Entry\+Type}} fsi\+\_\+get\+Entry\+Type (\begin{DoxyParamCaption}\item[{int}]{dirfd}{, }\item[{struct dirent \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 
-Referenced by \doxymbox{\hyperlink{FSI__dirUtils_8c_source_l00012}{fsi\+\_\+walk()}}.
+Get the entry type of the dirfd from the \doxylink{structFSI__DirData__POSIX}{FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX}. 
 
-Here is the caller graph for this function:\+\nopagebreak
+
+\begin{DoxyItemize}
+\item Get if:\+ Directory, File, Symlink or other 
+\begin{DoxyParams}{Parameters}
+{\em dirfd} & Entry type to get from the syscall \\
+\hline
+{\em e} & Get dirent type quickly from the {\ttfamily e} ptr with its corresponding {\ttfamily dirent} data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the \doxylink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069e}{FSI\+\_\+\+Entry\+Type} 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00070}{70}} of file \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source}{FSI\+\_\+dir\+Utils\+\_\+posix.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{switch}\ (e-\/>d\_type)}
+\DoxyCodeLine{00073\ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_REG:\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1}{FSI\_FILE}};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_DIR:\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_LNK:\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e}{FSI\_SYMLINK}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_UNKNOWN:}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }stat\ st;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fstatat(dirfd,\ e-\/>d\_name,\ \&st,\ AT\_SYMLINK\_NOFOLLOW)\ ==\ 0)}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S\_ISREG(st.st\_mode))\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1}{FSI\_FILE}};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S\_ISDIR(st.st\_mode))\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S\_ISDIR(st.st\_mode))\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e}{FSI\_SYMLINK}};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede}{FSI\_OTHER}};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00021}{FSI\+\_\+\+DIR}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00020}{FSI\+\_\+\+FILE}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00023}{FSI\+\_\+\+OTHER}}, and \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00022}{FSI\+\_\+\+SYMLINK}}.
+
+\Hypertarget{FSI__dirUtils__posix_8h_a5a4f995512a0183ca0e5d7aed16d62c3}\index{FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}!fsi\_getEntryTypeFromDirent@{fsi\_getEntryTypeFromDirent}}
+\index{fsi\_getEntryTypeFromDirent@{fsi\_getEntryTypeFromDirent}!FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}}
+\doxysubsubsection{\texorpdfstring{fsi\_getEntryTypeFromDirent()}{fsi\_getEntryTypeFromDirent()}}
+{\footnotesize\ttfamily \label{FSI__dirUtils__posix_8h_a5a4f995512a0183ca0e5d7aed16d62c3} 
+\doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069e}{FSI\+\_\+\+Entry\+Type}} fsi\+\_\+get\+Entry\+Type\+From\+Dirent (\begin{DoxyParamCaption}\item[{int}]{dirfd}{, }\item[{struct dirent \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{struct stat \texorpdfstring{$\ast$}{*}}]{st\+Out}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00094}{94}} of file \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source}{FSI\+\_\+dir\+Utils\+\_\+posix.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00095\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{switch}\ (e-\/>d\_type)}
+\DoxyCodeLine{00097\ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_REG:}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1}{FSI\_FILE}};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_DIR:}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fstatat(dirfd,\ e-\/>d\_name,\ stOut,\ AT\_SYMLINK\_NOFOLLOW)\ ==\ 0)}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede}{FSI\_OTHER}};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_LNK:\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e}{FSI\_SYMLINK}};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fstatat(dirfd,\ e-\/>d\_name,\ stOut,\ AT\_SYMLINK\_NOFOLLOW)\ ==\ 0)}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S\_ISDIR(stOut-\/>st\_mode))\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S\_ISREG(stOut-\/>st\_mode))\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1}{FSI\_FILE}};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede}{FSI\_OTHER}};}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00021}{FSI\+\_\+\+DIR}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00020}{FSI\+\_\+\+FILE}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00023}{FSI\+\_\+\+OTHER}}, and \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00022}{FSI\+\_\+\+SYMLINK}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00145}{\+\_\+\+\_\+fsi\+\_\+walk()}}.
+
+Here is the caller graph for this function:\+
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d5/d64/FSI__dirUtils__posix_8h_a07bb8fc8aa9e6ea91c2f2e65425e03e1_icgraph}
+\includegraphics[width=350pt]{d5/d64/FSI__dirUtils__posix_8h_a5a4f995512a0183ca0e5d7aed16d62c3_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{FSI__dirUtils__posix_8h_a1c15e434435c62f17b15a34877bd60bd}\index{FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}!fsi\_openDir@{fsi\_openDir}}
@@ -155,55 +372,46 @@ Status (1 if worked, 0 if failed)
 \end{DoxyReturn}
 
 
-Definition at line \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source_l00014}{14}} of file \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source}{FSI\+\_\+dir\+Utils\+\_\+posix.\+c}}.
+Definition at line \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source_l00009}{9}} of file \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source}{FSI\+\_\+dir\+Utils\+\_\+posix.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00015\ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{structFSI__DirData__POSIX}{FSI\_DirData\_POSIX}}\ *p\ =\ malloc(\textcolor{keyword}{sizeof}(*p));}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{if}\ (!p)\ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ p-\/>\doxymbox{\hyperlink{structFSI__DirData__POSIX_a82d93611ad90fa5af9b11b6cc08a208e}{path}}\ =\ cstr\_init();}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \{}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ dirFD\ =\ open(path,\ O\_RDONLY);}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ p-\/>\doxymbox{\hyperlink{structFSI__DirData__POSIX_a78670985b16d169b902cfda51881f02c}{dir}}\ =\ fdopendir(dirFD);}
-\DoxyCodeLine{00026\ \ \ \ \ \}}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{if}\ (!p-\/>\doxymbox{\hyperlink{structFSI__DirData__POSIX_a78670985b16d169b902cfda51881f02c}{dir}})}
-\DoxyCodeLine{00029\ \ \ \ \ \{}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ cstr\_destroy(\&p-\/>\doxymbox{\hyperlink{structFSI__DirData__POSIX_a82d93611ad90fa5af9b11b6cc08a208e}{path}});}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{FSIpredefines_8h_a62bdb0773dcdb91d52bb8e4eca4c03d9}{FSI\_FREE}}(p);}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00035\ \ \ \ \ \}}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \ \ cstr\_set(\&p-\/>\doxymbox{\hyperlink{structFSI__DirData__POSIX_a82d93611ad90fa5af9b11b6cc08a208e}{path}},\ path);}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \ \ \ \ d-\/>\doxymbox{\hyperlink{structFSI__DirData_ac8944367a6d007b8e0f6ba53be1ba1c0}{impl}}\ =\ p;}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
-\DoxyCodeLine{00042\ \}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ dirFD\ =\ open(path,\ O\_RDONLY\ |\ O\_DIRECTORY\ |\ O\_CLOEXEC);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{if}\ (dirFD\ <\ 0)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ DIR\ *dir\ =\ fdopendir(dirFD);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dir)}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ close(dirFD);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{structFSI__DirData__POSIX}{FSI\_DirData\_POSIX}}\ *p\ =\ malloc(\textcolor{keyword}{sizeof}(*p));}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{if}\ (!p)}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ closedir(dir);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ p-\/>\doxymbox{\hyperlink{structFSI__DirData__POSIX_a78670985b16d169b902cfda51881f02c}{dir}}\ =\ dir;}
+\DoxyCodeLine{00034\ \ \ \ \ p-\/>\doxymbox{\hyperlink{structFSI__DirData__POSIX_a469e85e9dfedf6ff6ac12cc11ca7217c}{dirfd}}\ =\ dirFD;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ d-\/>\doxymbox{\hyperlink{structFSI__DirData_ac8944367a6d007b8e0f6ba53be1ba1c0}{impl}}\ =\ p;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00039\ \}}
 
 \end{DoxyCode}
 
 
-References \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00026}{FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX::\+dir}}, \doxymbox{\hyperlink{FSIpredefines_8h_source_l00045}{FSI\+\_\+\+FREE}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00030}{FSI\+\_\+\+Dir\+Data::\+impl}}, and \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00027}{FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX::\+path}}.
+References \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00029}{FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX::\+dir}}, \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00032}{FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX::\+dirfd}}, and \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00028}{FSI\+\_\+\+Dir\+Data::\+impl}}.
 
-
-
-Referenced by \doxymbox{\hyperlink{FSI__dirUtils_8c_source_l00012}{fsi\+\_\+walk()}}.
-
-Here is the caller graph for this function:\+\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d5/d64/FSI__dirUtils__posix_8h_a1c15e434435c62f17b15a34877bd60bd_icgraph}
-\end{center}
-\end{figure}
 \Hypertarget{FSI__dirUtils__posix_8h_acb473fa7940b3c89aa11845436bbae8f}\index{FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}!fsi\_readDir@{fsi\_readDir}}
 \index{fsi\_readDir@{fsi\_readDir}!FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}}
 \doxysubsubsection{\texorpdfstring{fsi\_readDir()}{fsi\_readDir()}}
@@ -224,55 +432,84 @@ Read directory from reading the {\ttfamily \doxylink{structFSI__DirData}{FSI\+\_
 \begin{DoxyReturn}{Returns}
 Status (1 if worked, 0 if failed) 
 \end{DoxyReturn}
+\Hypertarget{FSI__dirUtils__posix_8h_a9420f3d1392d4194c6192d2096605bd9}\index{FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}!fsi\_visitedAdd@{fsi\_visitedAdd}}
+\index{fsi\_visitedAdd@{fsi\_visitedAdd}!FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}}
+\doxysubsubsection{\texorpdfstring{fsi\_visitedAdd()}{fsi\_visitedAdd()}}
+{\footnotesize\ttfamily \label{FSI__dirUtils__posix_8h_a9420f3d1392d4194c6192d2096605bd9} 
+void fsi\+\_\+visited\+Add (\begin{DoxyParamCaption}\item[{CVEC \texorpdfstring{$\ast$}{*}}]{v}{, }\item[{dev\+\_\+t}]{dev}{, }\item[{ino\+\_\+t}]{ino}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
-Definition at line \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source_l00044}{44}} of file \doxymbox{\hyperlink{FSI__dirUtils__posix_8c_source}{FSI\+\_\+dir\+Utils\+\_\+posix.\+c}}.
+
+Definition at line \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00135}{135}} of file \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source}{FSI\+\_\+dir\+Utils\+\_\+posix.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00045\ \{}
-\DoxyCodeLine{00046\ \ \ \ \ \doxymbox{\hyperlink{structFSI__DirData__POSIX}{FSI\_DirData\_POSIX}}\ *p\ =\ d-\/>\doxymbox{\hyperlink{structFSI__DirData_ac8944367a6d007b8e0f6ba53be1ba1c0}{impl}};}
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{struct\ }dirent\ *e;}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{while}\ ((e\ =\ readdir(p-\/>\doxymbox{\hyperlink{structFSI__DirData__POSIX_a78670985b16d169b902cfda51881f02c}{dir}})))}
-\DoxyCodeLine{00050\ \ \ \ \ \{}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e-\/>d\_name[0]\ ==\ \textcolor{charliteral}{'.'}\ \&\&}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ (!e-\/>d\_name[1]\ ||}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ (e-\/>d\_name[1]\ ==\ \textcolor{charliteral}{'.'}\ \&\&\ !e-\/>d\_name[2])))}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e-\/>d\_type\ ==\ DT\_DIR)}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ out-\/>\doxymbox{\hyperlink{structFSI__EntryData_aae303e170665a972cc52c708470a2b27}{type}}\ =\ \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}};}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (e-\/>d\_type\ ==\ DT\_REG)}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ out-\/>\doxymbox{\hyperlink{structFSI__EntryData_aae303e170665a972cc52c708470a2b27}{type}}\ =\ \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1}{FSI\_FILE}};}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (e-\/>d\_type\ ==\ DT\_LNK)}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ out-\/>\doxymbox{\hyperlink{structFSI__EntryData_aae303e170665a972cc52c708470a2b27}{type}}\ =\ \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e}{FSI\_SYMLINK}};}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ out-\/>\doxymbox{\hyperlink{structFSI__EntryData_aae303e170665a972cc52c708470a2b27}{type}}\ =\ \doxymbox{\hyperlink{FSI__dirUtils_8h_a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede}{FSI\_OTHER}};}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ out-\/>\doxymbox{\hyperlink{structFSI__EntryData_ad540a33418e7055d0cd7a582146aed10}{name}}\ =\ e-\/>d\_name;}
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
-\DoxyCodeLine{00070\ \ \ \ \ \}}
-\DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00073\ \}}
+\DoxyCodeLine{00136\ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \doxymbox{\hyperlink{structFSI__Visited__POSIX}{FSI\_Visited\_POSIX}}\ e\ =\ \{0\};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ e.\doxymbox{\hyperlink{structFSI__Visited__POSIX_a3f318d91a35ba724589e3107bfffebb0}{dev}}\ =\ dev;}
+\DoxyCodeLine{00140\ \ \ \ \ e.\doxymbox{\hyperlink{structFSI__Visited__POSIX_a79f6bbed4fd64b013beba3658e41fcc4}{ino}}\ =\ ino;}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ cvec\_push(v,\ \doxymbox{\hyperlink{structFSI__Visited__POSIX}{FSI\_Visited\_POSIX}},\ e);}
+\DoxyCodeLine{00143\ \}}
 
 \end{DoxyCode}
 
 
-References \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00026}{FSI\+\_\+\+Dir\+Data\+\_\+\+POSIX::\+dir}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00023}{FSI\+\_\+\+DIR}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00022}{FSI\+\_\+\+FILE}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00025}{FSI\+\_\+\+OTHER}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00024}{FSI\+\_\+\+SYMLINK}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00030}{FSI\+\_\+\+Dir\+Data::\+impl}}, \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00035}{FSI\+\_\+\+Entry\+Data::\+name}}, and \doxymbox{\hyperlink{FSI__dirUtils_8h_source_l00037}{FSI\+\_\+\+Entry\+Data::\+type}}.
+References \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00037}{FSI\+\_\+\+Visited\+\_\+\+POSIX::\+dev}}, and \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00038}{FSI\+\_\+\+Visited\+\_\+\+POSIX::\+ino}}.
 
 
 
-Referenced by \doxymbox{\hyperlink{FSI__dirUtils_8c_source_l00012}{fsi\+\_\+walk()}}.
+Referenced by \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00145}{\+\_\+\+\_\+fsi\+\_\+walk()}}.
 
-Here is the caller graph for this function:\+\nopagebreak
+Here is the caller graph for this function:\+
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d5/d64/FSI__dirUtils__posix_8h_acb473fa7940b3c89aa11845436bbae8f_icgraph}
+\includegraphics[width=350pt]{d5/d64/FSI__dirUtils__posix_8h_a9420f3d1392d4194c6192d2096605bd9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{FSI__dirUtils__posix_8h_a84035112786899729fa79cc37ea76f52}\index{FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}!fsi\_visitedHas@{fsi\_visitedHas}}
+\index{fsi\_visitedHas@{fsi\_visitedHas}!FSI\_dirUtils\_posix.h@{FSI\_dirUtils\_posix.h}}
+\doxysubsubsection{\texorpdfstring{fsi\_visitedHas()}{fsi\_visitedHas()}}
+{\footnotesize\ttfamily \label{FSI__dirUtils__posix_8h_a84035112786899729fa79cc37ea76f52} 
+int fsi\+\_\+visited\+Has (\begin{DoxyParamCaption}\item[{CVEC \texorpdfstring{$\ast$}{*}}]{v}{, }\item[{dev\+\_\+t}]{dev}{, }\item[{ino\+\_\+t}]{ino}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00120}{120}} of file \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source}{FSI\+\_\+dir\+Utils\+\_\+posix.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00121\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0\ ;\ i\ <\ v-\/>size\ ;\ i++)}
+\DoxyCodeLine{00123\ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structFSI__Visited__POSIX}{FSI\_Visited\_POSIX}}\ *e\ =\ (\doxymbox{\hyperlink{structFSI__Visited__POSIX}{FSI\_Visited\_POSIX}}*)cvec\_get(v,\ i);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!e)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e-\/>\doxymbox{\hyperlink{structFSI__Visited__POSIX_a3f318d91a35ba724589e3107bfffebb0}{dev}}\ ==\ dev\ \&\&\ e-\/>\doxymbox{\hyperlink{structFSI__Visited__POSIX_a79f6bbed4fd64b013beba3658e41fcc4}{ino}}\ ==\ ino)}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00130\ \ \ \ \ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00133\ \}}
+
+\end{DoxyCode}
+
+
+References \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00037}{FSI\+\_\+\+Visited\+\_\+\+POSIX::\+dev}}, and \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00038}{FSI\+\_\+\+Visited\+\_\+\+POSIX::\+ino}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_source_l00145}{\+\_\+\+\_\+fsi\+\_\+walk()}}.
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d64/FSI__dirUtils__posix_8h_a84035112786899729fa79cc37ea76f52_icgraph}
 \end{center}
 \end{figure}

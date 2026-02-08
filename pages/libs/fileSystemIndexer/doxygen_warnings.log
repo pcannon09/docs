@@ -1,0 +1,6 @@
+/home/pcannon/repo/programming/cpp/fileSystemIndexer/inc/fsi/lib/FSI_Indexer.hpp:106: warning: argument 'path' of command @param is not found in the argument list of fsi::Indexer::__searchMatchingStandard(const std::string &find)
+/home/pcannon/repo/programming/cpp/fileSystemIndexer/inc/fsi/lib/FSI_Indexer.hpp:106: warning: The following parameter of fsi::Indexer::__searchMatchingStandard(const std::string &find) is not documented:
+  parameter 'find'
+/home/pcannon/repo/programming/cpp/fileSystemIndexer/inc/fsi/lib/FSI_Indexer.hpp:113: warning: argument 'path' of command @param is not found in the argument list of fsi::Indexer::__searchMatchingThreaded(const std::string &find)
+/home/pcannon/repo/programming/cpp/fileSystemIndexer/inc/fsi/lib/FSI_Indexer.hpp:113: warning: The following parameter of fsi::Indexer::__searchMatchingThreaded(const std::string &find) is not documented:
+  parameter 'find'

@@ -87,12 +87,12 @@
     </tgroup>
 </informaltable>
 <para>
-Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00023">23</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
-<programlisting linenumbering="unnumbered">00024 &#32;&#32;&#32;&#32;{
-00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494">Directory</link>,
-00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e">File</link>,
-00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0">SymLink</link>
-00028 &#32;&#32;&#32;&#32;};
+Definition at line <link linkend="_FSI__Indexer_8hpp_source_1l00024">24</link> of file <link linkend="_FSI__Indexer_8hpp_source">FSI_Indexer.hpp</link>.</para>
+<programlisting linenumbering="unnumbered">00025 &#32;&#32;&#32;&#32;{
+00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30ae73cda510e8bb947f7e61089e5581494">Directory</link>,
+00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a0b27918290ff5323bea1e3b78a9cf04e">File</link>,
+00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacefsi_1ad8ea5c10f932972b6b4b6a9c290d8b30a63fb4ccd08ca8010357d515a5998bfa0">SymLink</link>
+00029 &#32;&#32;&#32;&#32;};
 </programlisting></section>
 </section>
 </section>

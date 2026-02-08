@@ -1,4 +1,4 @@
-.TH "inc/fsi/lib/FSI_Indexer.hpp" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.TH "inc/fsi/lib/FSI_Indexer.hpp" 3 "Version v0.1.2-beta" "FileSystemIndexer" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,6 +9,8 @@ inc/fsi/lib/FSI_Indexer.hpp
 \fR#include <string>\fP
 .br
 \fR#include <vector>\fP
+.br
+\fR#include <thread>\fP
 .br
 \fR#include '\&.\&./core/FSI_timeUtils\&.hpp'\fP
 .br
@@ -95,19 +97,19 @@ inc/fsi/lib/FSI_Indexer.hpp
 .fi
 
 .PP
-Definition at line \fB10\fP of file \fBFSI_Indexer\&.hpp\fP\&.
+Definition at line \fB11\fP of file \fBFSI_Indexer\&.hpp\fP\&.
 .nf
-10 #define __FSI_INDEXERERR_CHECK(e) \\
-11     (e\&.raise || e\&.fatal) && e\&.code != __FSI_SUCCESS
+11 #define __FSI_INDEXERERR_CHECK(e) \\
+12     (e\&.raise || e\&.fatal) && e\&.code != __FSI_SUCCESS
 .PP
 .fi
 
 .PP
-Referenced by \fBfsi::Indexer::addExtendedInfo()\fP\&.
+Referenced by \fBfsi::Indexer::__addExtendedInfoStandard()\fP, and \fBfsi::Indexer::__addExtendedInfoThreaded()\fP\&.
 .SS "#define __FSI_SUCCESS   0"
 
 .PP
-Definition at line \fB9\fP of file \fBFSI_Indexer\&.hpp\fP\&.
+Definition at line \fB10\fP of file \fBFSI_Indexer\&.hpp\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

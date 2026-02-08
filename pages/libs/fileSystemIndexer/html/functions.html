@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FileSystemIndexer<span id="projectnumber">&#160;v0.1.0-beta</span>
+   <div id="projectname">FileSystemIndexer<span id="projectnumber">&#160;v0.1.2-beta</span>
    </div>
-   <div id="projectbrief">File System Indexer - API to index files from your system</div>
+   <div id="projectbrief">File System Indexer - An API to index files from your system</div>
   </td>
  </tr>
  </tbody>
@@ -92,8 +92,13 @@ $(function(){initNavTree('functions.html','',''); });
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3 class="doxsection"><a id="index__5F" name="index__5F"></a>- _ -</h3><ul>
+<li>__addExtendedInfoStandard()&#160;:&#160;<a class="el" href="d0/d3b/classfsi_1_1Indexer.html#ad2b706e6b58c00d167a87187175755aa">fsi::Indexer</a></li>
+<li>__addExtendedInfoThreaded()&#160;:&#160;<a class="el" href="d0/d3b/classfsi_1_1Indexer.html#a8f2a4860b7e2480e0af81f6fabb94794">fsi::Indexer</a></li>
 <li>__getPathType()&#160;:&#160;<a class="el" href="d0/d3b/classfsi_1_1Indexer.html#a2237929b6d3b94b3255ec187888caa7a">fsi::Indexer</a></li>
 <li>__iteratePath()&#160;:&#160;<a class="el" href="d0/d3b/classfsi_1_1Indexer.html#acebe67327f029b3a2e32a05d16610607">fsi::Indexer</a></li>
+<li>__searchMatchingStandard()&#160;:&#160;<a class="el" href="d0/d3b/classfsi_1_1Indexer.html#a0ebbb0775498567b4097d43916470856">fsi::Indexer</a></li>
+<li>__searchMatchingThreaded()&#160;:&#160;<a class="el" href="d0/d3b/classfsi_1_1Indexer.html#ad8a0076334628f5909825d154f1898e3">fsi::Indexer</a></li>
+<li>__splitPathByCores()&#160;:&#160;<a class="el" href="d0/d3b/classfsi_1_1Indexer.html#a474d4b7684d96bee45e1f6573b224a39">fsi::Indexer</a></li>
 </ul>
 
 
@@ -110,7 +115,9 @@ $(function(){initNavTree('functions.html','',''); });
 
 <h3 class="doxsection"><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>day&#160;:&#160;<a class="el" href="d3/dc6/structfsi_1_1utils_1_1TimeUtils__DateTime.html#a340cd86b315b94e24ba58f047a05d977">fsi::utils::TimeUtils_DateTime</a></li>
+<li>dev&#160;:&#160;<a class="el" href="df/d4a/structFSI__Visited__POSIX.html#a3f318d91a35ba724589e3107bfffebb0">FSI_Visited_POSIX</a></li>
 <li>dir&#160;:&#160;<a class="el" href="d5/d16/structFSI__DirData__POSIX.html#a78670985b16d169b902cfda51881f02c">FSI_DirData_POSIX</a></li>
+<li>dirfd&#160;:&#160;<a class="el" href="d5/d16/structFSI__DirData__POSIX.html#a469e85e9dfedf6ff6ac12cc11ca7217c">FSI_DirData_POSIX</a></li>
 </ul>
 
 
@@ -142,8 +149,9 @@ $(function(){initNavTree('functions.html','',''); });
 <h3 class="doxsection"><a id="index_i" name="index_i"></a>- i -</h3><ul>
 <li>id&#160;:&#160;<a class="el" href="d0/d3b/classfsi_1_1Indexer.html#aed611d6ab66da2b9683c9c7cfc6c01c9">fsi::Indexer</a>, <a class="el" href="d8/dd6/structfsi_1_1IndexerInfo.html#a9ed84fe71c39594a0ab6c487a165f06c">fsi::IndexerInfo</a></li>
 <li>impl&#160;:&#160;<a class="el" href="d5/d63/structFSI__DirData.html#ac8944367a6d007b8e0f6ba53be1ba1c0">FSI_DirData</a></li>
-<li>Indexer()&#160;:&#160;<a class="el" href="d0/d3b/classfsi_1_1Indexer.html#a098bb0a974616eb40e6a08111c192868">fsi::Indexer</a></li>
+<li>Indexer()&#160;:&#160;<a class="el" href="d0/d3b/classfsi_1_1Indexer.html#a60c93e6c1f5caf21f6549a1d00cf14d0">fsi::Indexer</a></li>
 <li>indexerInfo&#160;:&#160;<a class="el" href="d0/d3b/classfsi_1_1Indexer.html#a29e402b90c8232798f546ef1fdc48cc6">fsi::Indexer</a></li>
+<li>ino&#160;:&#160;<a class="el" href="df/d4a/structFSI__Visited__POSIX.html#a79f6bbed4fd64b013beba3658e41fcc4">FSI_Visited_POSIX</a></li>
 </ul>
 
 
@@ -185,7 +193,8 @@ $(function(){initNavTree('functions.html','',''); });
 
 
 <h3 class="doxsection"><a id="index_t" name="index_t"></a>- t -</h3><ul>
-<li>type&#160;:&#160;<a class="el" href="d1/d62/structFSI__EntryData.html#aae303e170665a972cc52c708470a2b27">FSI_EntryData</a></li>
+<li>threadsImpl&#160;:&#160;<a class="el" href="d0/d3b/classfsi_1_1Indexer.html#abafcc16ed35ce10fdff093289e6bacba">fsi::Indexer</a></li>
+<li>type&#160;:&#160;<a class="el" href="d1/d62/structFSI__EntryData.html#a98d969e02ac80d2a38c2002a2cc97a26">FSI_EntryData</a></li>
 </ul>
 
 

@@ -1,0 +1,25 @@
+<map id="fsi::Indexer::__addExtendedInfoThreaded" name="fsi::Indexer::__addExtendedInfoThreaded">
+<area shape="rect" id="Node000001" title="Threaded extended information." alt="" coords="5,128,190,171"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="55,127,53,118,60,109,75,103,98,101,122,104,138,112,133,113,120,109,97,107,76,109,63,113,58,119,60,128"/>
+<area shape="rect" id="Node000002" href="$d0/d3b/classfsi_1_1Indexer.html#a2237929b6d3b94b3255ec187888caa7a" title="Get if path from function param is a:" alt="" coords="457,165,638,192"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="190,139,295,136,409,143,489,161,484,161,409,148,295,142,191,144"/>
+<area shape="rect" id="Node000003" href="$d0/d3b/classfsi_1_1Indexer.html#acebe67327f029b3a2e32a05d16610607" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="238,56,409,83"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="159,125,271,87,267,90,161,130"/>
+<area shape="rect" id="Node000009" href="$d0/d3b/classfsi_1_1Indexer.html#a474d4b7684d96bee45e1f6573b224a39" title="Split the paths found to be used in the future in different CPU cores." alt="" coords="244,157,403,200"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="190,159,231,166,226,167,190,164"/>
+<area shape="rect" id="Node000010" href="$d0/d3b/classfsi_1_1Indexer.html#a4a17eef7e041ea4b1cfe67796fe39bf8" title="Add the exact path to have the info from." alt="" coords="255,224,392,251"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="144,169,239,210,260,219,255,219,237,214,143,174"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="285,55,279,47,283,37,299,31,323,29,350,32,366,41,360,41,349,37,323,35,300,37,287,41,284,47,290,56"/>
+<area shape="rect" id="Node000004" href="$d6/d8a/FSI__dirUtils_8c.html#a6717de7c355039c7846da70c56cd2f61" title="Walk to every directory and file and set vec to a CVEC value." alt="" coords="513,56,582,83"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="409,67,500,69,495,70,410,72"/>
+<area shape="rect" id="Node000005" href="$d5/d64/FSI__dirUtils__posix_8h.html#a1d0d11194a91ede34644606912fbbebf" title=" " alt="" coords="686,56,770,83"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="583,67,674,69,669,70,583,72"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="697,55,692,47,695,38,708,31,728,29,750,32,763,41,757,40,748,37,728,35,709,37,699,41,697,47,702,57"/>
+<area shape="rect" id="Node000006" href="$d5/d64/FSI__dirUtils__posix_8h.html#a5a4f995512a0183ca0e5d7aed16d62c3" title=" " alt="" coords="818,5,1002,32"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="770,55,817,41,841,37,846,36,818,47,771,60"/>
+<area shape="rect" id="Node000007" href="$d5/d64/FSI__dirUtils__posix_8h.html#a9420f3d1392d4194c6192d2096605bd9" title=" " alt="" coords="858,56,962,83"/>
+<area shape="poly" id="edge9_Node000005_Node000007" title=" " alt="" coords="770,67,845,69,840,70,770,72"/>
+<area shape="rect" id="Node000008" href="$d5/d64/FSI__dirUtils__posix_8h.html#a84035112786899729fa79cc37ea76f52" title=" " alt="" coords="858,107,962,133"/>
+<area shape="poly" id="edge10_Node000005_Node000008" title=" " alt="" coords="770,78,818,92,847,102,841,102,817,97,770,84"/>
+<area shape="poly" id="edge13_Node000010_Node000002" title=" " alt="" coords="377,221,477,197,482,196,378,226"/>
+</map>

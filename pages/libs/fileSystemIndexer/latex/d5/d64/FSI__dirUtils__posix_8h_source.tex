@@ -24,42 +24,196 @@
 \DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}cstr/cstr.h"{}}}
 \DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00021}00021\ }
 \DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00022}00022\ \textcolor{preprocessor}{\#include\ <dirent.h>}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00024}\doxymbox{\hyperlink{structFSI__DirData__POSIX}{00024}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structFSI__DirData__POSIX}{FSI\_DirData\_POSIX}}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00025}00025\ \{}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00026}\doxymbox{\hyperlink{structFSI__DirData__POSIX_a78670985b16d169b902cfda51881f02c}{00026}}\ \ \ \ \ DIR\ *\doxymbox{\hyperlink{structFSI__DirData__POSIX_a78670985b16d169b902cfda51881f02c}{dir}};}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00027}\doxymbox{\hyperlink{structFSI__DirData__POSIX_a82d93611ad90fa5af9b11b6cc08a208e}{00027}}\ \ \ \ \ CSTR\ \doxymbox{\hyperlink{structFSI__DirData__POSIX_a82d93611ad90fa5af9b11b6cc08a208e}{path}};}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00028}\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a9e656c74e3e41518c2759918f0527719}{00028}}\ \}\ \doxymbox{\hyperlink{structFSI__DirData__POSIX}{FSI\_DirData\_POSIX}};}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00029}00029\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00030}00030\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00031}00031\ \textcolor{comment}{\ *\ @brief\ Open\ directory\ as\ read\ only}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00032}00032\ \textcolor{comment}{\ *\ @param\ d\ Directory\ data}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00033}00033\ \textcolor{comment}{\ *\ @param\ path\ Path\ to\ open\ dir}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00034}00034\ \textcolor{comment}{\ *\ @return\ Status\ (1\ if\ worked,\ 0\ if\ failed)}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00035}00035\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00036}00036\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a1c15e434435c62f17b15a34877bd60bd}{fsi\_openDir}}(\doxymbox{\hyperlink{structFSI__DirData}{FSI\_DirData}}\ *d,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path);}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00037}00037\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00038}00038\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00039}00039\ \textcolor{comment}{\ *\ @brief\ Read\ directory\ from\ reading\ the\ \`{}FSI\_DirData`\ information}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00040}00040\ \textcolor{comment}{\ *\ @param\ d\ Directory\ data}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00041}00041\ \textcolor{comment}{\ *\ @param\ out\ Entry\ data\ to\ set\ the\ information}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00042}00042\ \textcolor{comment}{\ *\ @return\ Status\ (1\ if\ worked,\ 0\ if\ failed)}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00043}00043\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00044}00044\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_acb473fa7940b3c89aa11845436bbae8f}{fsi\_readDir}}(\doxymbox{\hyperlink{structFSI__DirData}{FSI\_DirData}}\ *d,\ \doxymbox{\hyperlink{structFSI__EntryData}{FSI\_EntryData}}\ *out);}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00045}00045\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00046}00046\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00047}00047\ \textcolor{comment}{\ *\ @brief\ Get\ the\ directory\ data\ to\ deallocate\ memory}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00048}00048\ \textcolor{comment}{\ *\ @param\ d\ Object\ to\ deallocate}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00049}00049\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00050}00050\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a07bb8fc8aa9e6ea91c2f2e65425e03e1}{fsi\_closeDir}}(\doxymbox{\hyperlink{structFSI__DirData}{FSI\_DirData}}\ *d);}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00051}00051\ }
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00052}00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FSI\_OS\_WIN32}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00054}00054\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a8c0b3d71cc0ffa34f54f11ef309ff965}{\_\_FSI\_DIRUTILS\_POSIX\_CPP\_CLOSE}}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00055}00055\ }
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00056}00056\ \textcolor{preprocessor}{\#undef\ \_\_FSI\_DIRUTILS\_POSIX\_CPP\_OPEN}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00057}00057\ \textcolor{preprocessor}{\#undef\ \_\_FSI\_DIRUTILS\_POSIX\_CPP\_CLOSE}}
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00059}00059\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ INCLUDE\_CORE\_FSI\_DIRUTILS\_H\_}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00023}00023\ \textcolor{preprocessor}{\#include\ <sys/stat.h>}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00024}00024\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00025}00025\ \textcolor{preprocessor}{\#include\ <fcntl.h>}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00027}\doxymbox{\hyperlink{structFSI__DirData__POSIX}{00027}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structFSI__DirData__POSIX}{FSI\_DirData\_POSIX}}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00029}\doxymbox{\hyperlink{structFSI__DirData__POSIX_a78670985b16d169b902cfda51881f02c}{00029}}\ \ \ \ \ DIR\ *\doxymbox{\hyperlink{structFSI__DirData__POSIX_a78670985b16d169b902cfda51881f02c}{dir}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00030}\doxymbox{\hyperlink{structFSI__DirData__POSIX_a82d93611ad90fa5af9b11b6cc08a208e}{00030}}\ \ \ \ \ CSTR\ \doxymbox{\hyperlink{structFSI__DirData__POSIX_a82d93611ad90fa5af9b11b6cc08a208e}{path}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00032}\doxymbox{\hyperlink{structFSI__DirData__POSIX_a469e85e9dfedf6ff6ac12cc11ca7217c}{00032}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structFSI__DirData__POSIX_a469e85e9dfedf6ff6ac12cc11ca7217c}{dirfd}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00033}\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a9e656c74e3e41518c2759918f0527719}{00033}}\ \}\ \doxymbox{\hyperlink{structFSI__DirData__POSIX}{FSI\_DirData\_POSIX}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00035}\doxymbox{\hyperlink{structFSI__Visited__POSIX}{00035}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structFSI__Visited__POSIX}{FSI\_Visited\_POSIX}}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00037}\doxymbox{\hyperlink{structFSI__Visited__POSIX_a3f318d91a35ba724589e3107bfffebb0}{00037}}\ \ \ \ \ dev\_t\ \doxymbox{\hyperlink{structFSI__Visited__POSIX_a3f318d91a35ba724589e3107bfffebb0}{dev}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00038}\doxymbox{\hyperlink{structFSI__Visited__POSIX_a79f6bbed4fd64b013beba3658e41fcc4}{00038}}\ \ \ \ \ ino\_t\ \doxymbox{\hyperlink{structFSI__Visited__POSIX_a79f6bbed4fd64b013beba3658e41fcc4}{ino}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00039}\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a86e514cccb091d2fa372f36ca856bf7c}{00039}}\ \}\ \doxymbox{\hyperlink{structFSI__Visited__POSIX}{FSI\_Visited\_POSIX}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00040}00040\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00041}00041\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00042}00042\ \textcolor{comment}{\ *\ @brief\ Open\ directory\ as\ read\ only}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00043}00043\ \textcolor{comment}{\ *\ @param\ d\ Directory\ data}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00044}00044\ \textcolor{comment}{\ *\ @param\ path\ Path\ to\ open\ dir}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00045}00045\ \textcolor{comment}{\ *\ @return\ Status\ (1\ if\ worked,\ 0\ if\ failed)}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00046}00046\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00047}00047\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a1c15e434435c62f17b15a34877bd60bd}{fsi\_openDir}}(\doxymbox{\hyperlink{structFSI__DirData}{FSI\_DirData}}\ *d,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00048}00048\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00049}00049\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00050}00050\ \textcolor{comment}{\ *\ @brief\ Read\ directory\ from\ reading\ the\ \`{}FSI\_DirData`\ information}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00051}00051\ \textcolor{comment}{\ *\ @param\ d\ Directory\ data}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00052}00052\ \textcolor{comment}{\ *\ @param\ out\ Entry\ data\ to\ set\ the\ information}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00053}00053\ \textcolor{comment}{\ *\ @return\ Status\ (1\ if\ worked,\ 0\ if\ failed)}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00054}00054\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00055}\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_acb473fa7940b3c89aa11845436bbae8f}{00055}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_acb473fa7940b3c89aa11845436bbae8f}{fsi\_readDir}}(\doxymbox{\hyperlink{structFSI__DirData}{FSI\_DirData}}\ *d,\ \doxymbox{\hyperlink{structFSI__EntryData}{FSI\_EntryData}}\ *out);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00056}00056\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00057}00057\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00058}00058\ \textcolor{comment}{\ *\ @brief\ Get\ the\ directory\ data\ to\ deallocate\ memory}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00059}00059\ \textcolor{comment}{\ *\ @param\ d\ Object\ to\ deallocate}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00060}00060\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00061}00061\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a07bb8fc8aa9e6ea91c2f2e65425e03e1}{fsi\_closeDir}}(\doxymbox{\hyperlink{structFSI__DirData}{FSI\_DirData}}\ *d);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00062}00062\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00063}00063\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00064}00064\ \textcolor{comment}{\ *\ @brief\ Get\ the\ entry\ type\ of\ the\ dirfd\ from\ the\ FSI\_DirData\_POSIX}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00065}00065\ \textcolor{comment}{\ *\ *\ Get\ if:\ Directory,\ File,\ Symlink\ or\ other}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00066}00066\ \textcolor{comment}{\ *\ @param\ dirfd\ Entry\ type\ to\ get\ from\ the\ syscall}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00067}00067\ \textcolor{comment}{\ *\ @param\ e\ Get\ dirent\ type\ quickly\ from\ the\ \`{}e`\ ptr\ with\ its\ corresponding\ \`{}dirent`\ data}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00068}00068\ \textcolor{comment}{\ *\ @return\ Return\ the\ FSI\_EntryType}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00069}00069\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00070}\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a99bf5f7e3d00cfba1db0b2582e529af4}{00070}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069e}{FSI\_EntryType}}\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a99bf5f7e3d00cfba1db0b2582e529af4}{fsi\_getEntryType}}(\textcolor{keywordtype}{int}\ dirfd,\ \textcolor{keyword}{struct}\ dirent\ *e)}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00071}00071\ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{switch}\ (e-\/>d\_type)}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00073}00073\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_REG:\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1}{FSI\_FILE}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_DIR:\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_LNK:\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e}{FSI\_SYMLINK}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_UNKNOWN:}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }stat\ st;}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fstatat(dirfd,\ e-\/>d\_name,\ \&st,\ AT\_SYMLINK\_NOFOLLOW)\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S\_ISREG(st.st\_mode))\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1}{FSI\_FILE}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S\_ISDIR(st.st\_mode))\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S\_ISDIR(st.st\_mode))\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e}{FSI\_SYMLINK}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede}{FSI\_OTHER}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00090}00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00092}00092\ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00094}\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a5a4f995512a0183ca0e5d7aed16d62c3}{00094}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069e}{FSI\_EntryType}}\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a5a4f995512a0183ca0e5d7aed16d62c3}{fsi\_getEntryTypeFromDirent}}(\textcolor{keywordtype}{int}\ dirfd,\ \textcolor{keyword}{struct}\ dirent\ *e,\ \textcolor{keyword}{struct}\ stat\ *stOut)}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00095}00095\ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00096}00096\ \ \ \ \ \textcolor{keywordflow}{switch}\ (e-\/>d\_type)}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00097}00097\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_REG:}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1}{FSI\_FILE}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_DIR:}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fstatat(dirfd,\ e-\/>d\_name,\ stOut,\ AT\_SYMLINK\_NOFOLLOW)\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede}{FSI\_OTHER}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DT\_LNK:\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e}{FSI\_SYMLINK}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fstatat(dirfd,\ e-\/>d\_name,\ stOut,\ AT\_SYMLINK\_NOFOLLOW)\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S\_ISDIR(stOut-\/>st\_mode))\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (S\_ISREG(stOut-\/>st\_mode))\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1}{FSI\_FILE}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede}{FSI\_OTHER}};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00118}00118\ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00120}\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a84035112786899729fa79cc37ea76f52}{00120}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a84035112786899729fa79cc37ea76f52}{fsi\_visitedHas}}(CVEC\ *v,\ dev\_t\ dev,\ ino\_t\ ino)}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00121}00121\ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00122}00122\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0\ ;\ i\ <\ v-\/>size\ ;\ i++)}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00123}00123\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00124}00124\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structFSI__Visited__POSIX}{FSI\_Visited\_POSIX}}\ *e\ =\ (\doxymbox{\hyperlink{structFSI__Visited__POSIX}{FSI\_Visited\_POSIX}}*)cvec\_get(v,\ i);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00125}00125\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!e)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e-\/>\doxymbox{\hyperlink{structFSI__Visited__POSIX_a3f318d91a35ba724589e3107bfffebb0}{dev}}\ ==\ dev\ \&\&\ e-\/>\doxymbox{\hyperlink{structFSI__Visited__POSIX_a79f6bbed4fd64b013beba3658e41fcc4}{ino}}\ ==\ ino)}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00130}00130\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00132}00132\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00133}00133\ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00135}\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a9420f3d1392d4194c6192d2096605bd9}{00135}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a9420f3d1392d4194c6192d2096605bd9}{fsi\_visitedAdd}}(CVEC\ *v,\ dev\_t\ dev,\ ino\_t\ ino)}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00136}00136\ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00137}00137\ \ \ \ \ \doxymbox{\hyperlink{structFSI__Visited__POSIX}{FSI\_Visited\_POSIX}}\ e\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00139}00139\ \ \ \ \ e.\doxymbox{\hyperlink{structFSI__Visited__POSIX_a3f318d91a35ba724589e3107bfffebb0}{dev}}\ =\ dev;}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00140}00140\ \ \ \ \ e.\doxymbox{\hyperlink{structFSI__Visited__POSIX_a79f6bbed4fd64b013beba3658e41fcc4}{ino}}\ =\ ino;}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00142}00142\ \ \ \ \ cvec\_push(v,\ \doxymbox{\hyperlink{structFSI__Visited__POSIX}{FSI\_Visited\_POSIX}},\ e);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00143}00143\ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00145}\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a1d0d11194a91ede34644606912fbbebf}{00145}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a1d0d11194a91ede34644606912fbbebf}{\_\_fsi\_walk}}(}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00146}00146\ \ \ \ \ CVEC\ *out,}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00147}00147\ \ \ \ \ CVEC\ *visited,}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00149}00149\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *path}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00150}00150\ )}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00151}00151\ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00152}00152\ \ \ \ \ \textcolor{keywordtype}{int}\ fd\ =\ open(path,\ O\_RDONLY\ |\ O\_DIRECTORY\ |\ O\_CLOEXEC);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00153}00153\ \ \ \ \ \textcolor{keywordflow}{if}\ (fd\ <\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00155}00155\ \ \ \ \ DIR\ *dir\ =\ fdopendir(fd);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00156}00156\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dir)}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00157}00157\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00158}00158\ \ \ \ \ \ \ \ \ close(fd);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00160}00160\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00162}00162\ \ \ \ \ \textcolor{keyword}{struct\ }stat\ dirSt;}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00164}00164\ \ \ \ \ \textcolor{keywordflow}{if}\ (fstat(fd,\ \&dirSt)\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00165}00165\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00166}00166\ \ \ \ \ \ \ \ \ closedir(dir);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00167}00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00168}00168\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00170}00170\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a84035112786899729fa79cc37ea76f52}{fsi\_visitedHas}}(visited,\ dirSt.st\_dev,\ dirSt.st\_ino))}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00171}00171\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00172}00172\ \ \ \ \ \ \ \ \ closedir(dir);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00173}00173\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00174}00174\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00176}00176\ \ \ \ \ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a9420f3d1392d4194c6192d2096605bd9}{fsi\_visitedAdd}}(visited,\ dirSt.st\_dev,\ dirSt.st\_ino);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00178}00178\ \ \ \ \ \textcolor{keyword}{struct\ }dirent\ *e;}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00179}00179\ \ \ \ \ CSTR\ tmp\ =\ cstr\_init();}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00181}00181\ \ \ \ \ \textcolor{keywordflow}{while}\ ((e\ =\ readdir(dir)))}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00182}00182\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00183}00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e-\/>d\_name[0]\ ==\ \textcolor{charliteral}{'.'}\ \&\&}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ (e-\/>d\_name[1]\ ==\ \textcolor{charliteral}{'\(\backslash\)0'}\ ||\ (e-\/>d\_name[1]\ ==\ \textcolor{charliteral}{'.'}\ \&\&\ e-\/>d\_name[2]\ ==\ \textcolor{charliteral}{'\(\backslash\)0'})))}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00187}00187\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }stat\ st;}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00189}00189\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ type\ =\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a5a4f995512a0183ca0e5d7aed16d62c3}{fsi\_getEntryTypeFromDirent}}(fd,\ e,\ \&st);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00191}00191\ \ \ \ \ \ \ \ \ cstr\_set(\&tmp,\ path);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00192}00192\ \ \ \ \ \ \ \ \ cstr\_add(\&tmp,\ \textcolor{stringliteral}{"{}/"{}});}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00193}00193\ \ \ \ \ \ \ \ \ cstr\_add(\&tmp,\ e-\/>d\_name);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00195}00195\ \ \ \ \ \ \ \ \ cvec\_push(out,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\ CVEC\_sys\_strdup(tmp.data));}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00197}00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (type\ ==\ \doxymbox{\hyperlink{FSI__dirUtils_8h_aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552}{FSI\_DIR}})}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a1d0d11194a91ede34644606912fbbebf}{\_\_fsi\_walk}}(out,\ visited,\ tmp.data);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00199}00199\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00201}00201\ \ \ \ \ cstr\_destroy(\&tmp);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00203}00203\ \ \ \ \ closedir(dir);}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00204}00204\ \}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00206}00206\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FSI\_OS\_WIN32}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00208}00208\ \doxymbox{\hyperlink{FSI__dirUtils__posix_8h_a8c0b3d71cc0ffa34f54f11ef309ff965}{\_\_FSI\_DIRUTILS\_POSIX\_CPP\_CLOSE}}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00210}00210\ \textcolor{preprocessor}{\#undef\ \_\_FSI\_DIRUTILS\_POSIX\_CPP\_OPEN}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00211}00211\ \textcolor{preprocessor}{\#undef\ \_\_FSI\_DIRUTILS\_POSIX\_CPP\_CLOSE}}
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{FSI__dirUtils__posix_8h_source_l00213}00213\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ INCLUDE\_CORE\_FSI\_DIRUTILS\_H\_}}
 
 \end{DoxyCode}

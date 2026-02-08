@@ -1,7 +1,15 @@
 <map id="fsi::Indexer::__iteratePath" name="fsi::Indexer::__iteratePath">
-<area shape="rect" id="Node000001" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="343,5,514,32"/>
-<area shape="rect" id="Node000002" href="$d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d" title="Add the exact path and the sub&#45;paths to have the info from." alt="" coords="103,5,295,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="325,19,296,21,295,16,330,19"/>
-<area shape="rect" id="Node000003" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+<area shape="rect" id="Node000001" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="575,83,747,109"/>
+<area shape="poly" id="edge8_Node000001_Node000001" title=" " alt="" coords="698,67,686,64,661,61,637,63,624,68,621,73,628,83,623,81,616,74,621,64,636,58,661,56,688,59,704,68"/>
+<area shape="rect" id="Node000002" href="$d0/d3b/classfsi_1_1Indexer.html#ad2b706e6b58c00d167a87187175755aa" title="Standard non&#45;threaded extended information." alt="" coords="343,29,527,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="573,79,528,72,528,67,579,79"/>
+<area shape="rect" id="Node000005" href="$d0/d3b/classfsi_1_1Indexer.html#a8f2a4860b7e2480e0af81f6fabb94794" title="Threaded extended information." alt="" coords="343,120,527,163"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="579,113,528,125,527,120,573,113"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="470,14,458,10,435,8,414,10,401,15,396,21,397,30,393,27,391,19,398,10,413,5,435,3,459,5,475,14"/>
+<area shape="rect" id="Node000003" href="$d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d" title="Add the exact path and the sub&#45;paths to have the info from;." alt="" coords="103,83,295,109"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="325,72,273,85,272,79,330,71"/>
+<area shape="rect" id="Node000004" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,83,55,109"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="85,98,55,99,54,93,89,94"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="325,121,272,113,272,107,330,121"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="470,104,458,101,435,99,414,101,401,105,396,111,397,121,393,118,391,110,398,101,413,95,435,93,459,96,475,105"/>
 </map>

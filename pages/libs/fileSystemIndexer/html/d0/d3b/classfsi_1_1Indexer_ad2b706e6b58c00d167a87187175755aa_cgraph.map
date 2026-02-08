@@ -1,0 +1,23 @@
+<map id="fsi::Indexer::__addExtendedInfoStandard" name="fsi::Indexer::__addExtendedInfoStandard">
+<area shape="rect" id="Node000001" title="Standard non&#45;threaded extended information." alt="" coords="5,29,190,72"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="55,29,53,19,60,10,75,5,98,3,122,5,138,13,133,15,120,10,97,8,76,10,63,15,58,21,60,29"/>
+<area shape="rect" id="Node000002" href="$d0/d3b/classfsi_1_1Indexer.html#a2237929b6d3b94b3255ec187888caa7a" title="Get if path from function param is a:" alt="" coords="457,12,638,39"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="189,29,237,23,342,17,444,20,439,21,343,23,238,28,191,34"/>
+<area shape="rect" id="Node000003" href="$d0/d3b/classfsi_1_1Indexer.html#acebe67327f029b3a2e32a05d16610607" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="238,112,409,139"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="165,70,268,105,263,108,164,75"/>
+<area shape="rect" id="Node000009" href="$d0/d3b/classfsi_1_1Indexer.html#a4a17eef7e041ea4b1cfe67796fe39bf8" title="Add the exact path to have the info from." alt="" coords="255,37,392,64"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="190,48,242,50,237,52,191,53"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="285,111,279,103,283,93,299,87,323,85,350,88,366,97,360,97,349,93,323,91,300,93,287,97,284,103,290,112"/>
+<area shape="rect" id="Node000004" href="$d6/d8a/FSI__dirUtils_8c.html#a6717de7c355039c7846da70c56cd2f61" title="Walk to every directory and file and set vec to a CVEC value." alt="" coords="513,112,582,139"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="409,123,500,125,495,126,409,128"/>
+<area shape="rect" id="Node000005" href="$d5/d64/FSI__dirUtils__posix_8h.html#a1d0d11194a91ede34644606912fbbebf" title=" " alt="" coords="686,112,770,139"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="583,123,674,125,668,126,583,128"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="697,110,692,103,695,94,708,87,728,85,750,88,762,97,757,96,748,93,728,91,709,93,699,97,697,103,702,113"/>
+<area shape="rect" id="Node000006" href="$d5/d64/FSI__dirUtils__posix_8h.html#a5a4f995512a0183ca0e5d7aed16d62c3" title=" " alt="" coords="818,61,1002,88"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="770,111,817,97,841,93,847,92,818,103,771,116"/>
+<area shape="rect" id="Node000007" href="$d5/d64/FSI__dirUtils__posix_8h.html#a9420f3d1392d4194c6192d2096605bd9" title=" " alt="" coords="858,112,962,139"/>
+<area shape="poly" id="edge9_Node000005_Node000007" title=" " alt="" coords="770,123,845,125,840,125,770,128"/>
+<area shape="rect" id="Node000008" href="$d5/d64/FSI__dirUtils__posix_8h.html#a84035112786899729fa79cc37ea76f52" title=" " alt="" coords="858,163,962,189"/>
+<area shape="poly" id="edge10_Node000005_Node000008" title=" " alt="" coords="771,134,818,148,847,158,841,158,817,153,770,140"/>
+<area shape="poly" id="edge12_Node000009_Node000002" title=" " alt="" coords="392,40,444,37,439,38,393,46"/>
+</map>

@@ -1,10 +1,18 @@
 <map id="fsi::Indexer::__getPathType" name="fsi::Indexer::__getPathType">
-<area shape="rect" id="Node000001" title="Get if path from function param is a:" alt="" coords="528,5,710,32"/>
-<area shape="rect" id="Node000002" href="$d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d" title="Add the exact path and the sub&#45;paths to have the info from." alt="" coords="103,5,295,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="510,19,295,21,295,16,515,18"/>
-<area shape="rect" id="Node000004" href="$d0/d3b/classfsi_1_1Indexer.html#a4a17eef7e041ea4b1cfe67796fe39bf8" title="Add the exact path to have the info from." alt="" coords="343,31,480,57"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="516,31,481,38,480,33,510,32"/>
-<area shape="rect" id="Node000003" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,20,55,21,54,16,89,17"/>
-<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="325,34,296,33,296,28,330,34"/>
+<area shape="rect" id="Node000001" title="Get if path from function param is a:" alt="" coords="761,83,942,109"/>
+<area shape="rect" id="Node000002" href="$d0/d3b/classfsi_1_1Indexer.html#ad2b706e6b58c00d167a87187175755aa" title="Standard non&#45;threaded extended information." alt="" coords="343,29,527,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="765,79,712,73,528,57,528,52,713,68,770,79"/>
+<area shape="rect" id="Node000005" href="$d0/d3b/classfsi_1_1Indexer.html#a8f2a4860b7e2480e0af81f6fabb94794" title="Threaded extended information." alt="" coords="343,120,527,163"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="770,112,713,124,528,140,527,135,712,119,765,113"/>
+<area shape="rect" id="Node000006" href="$d0/d3b/classfsi_1_1Indexer.html#a4a17eef7e041ea4b1cfe67796fe39bf8" title="Add the exact path to have the info from." alt="" coords="575,83,713,109"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="742,96,713,99,713,93,748,96"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="467,14,456,10,435,8,416,10,404,15,399,21,400,30,396,27,394,19,400,10,414,5,435,3,458,5,473,14"/>
+<area shape="rect" id="Node000003" href="$d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d" title="Add the exact path and the sub&#45;paths to have the info from;." alt="" coords="103,83,295,109"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="325,72,273,85,272,79,330,71"/>
+<area shape="rect" id="Node000004" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,83,55,109"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="85,98,55,99,54,93,89,94"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="325,121,272,113,272,107,330,121"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="467,104,456,101,435,99,416,101,404,105,399,111,400,121,396,118,394,110,400,101,414,95,435,93,458,96,473,105"/>
+<area shape="poly" id="edge9_Node000006_Node000002" title=" " alt="" coords="562,79,528,73,528,68,567,79"/>
+<area shape="poly" id="edge10_Node000006_Node000005" title=" " alt="" coords="567,113,528,124,527,119,562,114"/>
 </map>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structFSI__Visited__POSIX" xml:lang="en-US">
+<title>FSI_Visited_POSIX Struct Reference</title>
+<indexterm><primary>FSI_Visited_POSIX</primary></indexterm>
+<para>
+<computeroutput>#include &lt;FSI_dirUtils_posix.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>dev_t <link linkend="_structFSI__Visited__POSIX_1a3f318d91a35ba724589e3107bfffebb0">dev</link></para>
+</listitem>
+            <listitem><para>ino_t <link linkend="_structFSI__Visited__POSIX_1a79f6bbed4fd64b013beba3658e41fcc4">ino</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_FSI__dirUtils__posix_8h_source_1l00035">35</link> of file <link linkend="_FSI__dirUtils__posix_8h_source">FSI_dirUtils_posix.h</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structFSI__Visited__POSIX_1a3f318d91a35ba724589e3107bfffebb0"/><section>
+    <title>dev</title>
+<indexterm><primary>dev</primary><secondary>FSI_Visited_POSIX</secondary></indexterm>
+<indexterm><primary>FSI_Visited_POSIX</primary><secondary>dev</secondary></indexterm>
+<para><computeroutput>dev_t FSI_Visited_POSIX::dev</computeroutput></para><para>
+Definition at line <link linkend="_FSI__dirUtils__posix_8h_source_1l00037">37</link> of file <link linkend="_FSI__dirUtils__posix_8h_source">FSI_dirUtils_posix.h</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__dirUtils__posix_8h_source_1l00135">fsi_visitedAdd()</link>, and <link linkend="_FSI__dirUtils__posix_8h_source_1l00120">fsi_visitedHas()</link>.</para>
+</section>
+<anchor xml:id="_structFSI__Visited__POSIX_1a79f6bbed4fd64b013beba3658e41fcc4"/><section>
+    <title>ino</title>
+<indexterm><primary>ino</primary><secondary>FSI_Visited_POSIX</secondary></indexterm>
+<indexterm><primary>FSI_Visited_POSIX</primary><secondary>ino</secondary></indexterm>
+<para><computeroutput>ino_t FSI_Visited_POSIX::ino</computeroutput></para><para>
+Definition at line <link linkend="_FSI__dirUtils__posix_8h_source_1l00038">38</link> of file <link linkend="_FSI__dirUtils__posix_8h_source">FSI_dirUtils_posix.h</link>.</para>
+<para>
+Referenced by <link linkend="_FSI__dirUtils__posix_8h_source_1l00135">fsi_visitedAdd()</link>, and <link linkend="_FSI__dirUtils__posix_8h_source_1l00120">fsi_visitedHas()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/fsi/core/interfaces/<link linkend="_FSI__dirUtils__posix_8h">FSI_dirUtils_posix.h</link></section>
+</section>

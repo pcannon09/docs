@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FileSystemIndexer<span id="projectnumber">&#160;v0.1.0-beta</span>
+   <div id="projectname">FileSystemIndexer<span id="projectnumber">&#160;v0.1.2-beta</span>
    </div>
-   <div id="projectbrief">File System Indexer - API to index files from your system</div>
+   <div id="projectbrief">File System Indexer - An API to index files from your system</div>
   </td>
  </tr>
  </tbody>
@@ -93,20 +93,17 @@ $(function(){initNavTree('dc/d84/FSI__dirUtils_8h.html','../../',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d8/db8/FSIpredefines_8h_source.html">../FSIpredefines.h</a>&quot;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
 <code>#include &quot;cvec/cvec.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for FSI_dirUtils.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbc/FSI__dirUtils_8h__incl.png" border="0" usemap="#ainc_2fsi_2core_2FSI__dirUtils_8h" loading="lazy" alt=""/></div>
 <map name="ainc_2fsi_2core_2FSI__dirUtils_8h" id="ainc_2fsi_2core_2FSI__dirUtils_8h">
-<area shape="rect" title=" " alt="" coords="102,5,271,32"/>
+<area shape="rect" title=" " alt="" coords="50,5,219,32"/>
 <area shape="rect" href="../../d8/db8/FSIpredefines_8h.html" title=" " alt="" coords="5,80,131,107"/>
-<area shape="poly" title=" " alt="" coords="169,32,103,74,100,69,163,33"/>
-<area shape="rect" title=" " alt="" coords="154,80,219,107"/>
-<area shape="poly" title=" " alt="" coords="188,31,189,66,184,63,185,34"/>
-<area shape="rect" title=" " alt="" coords="243,80,336,107"/>
-<area shape="poly" title=" " alt="" coords="205,30,261,70,256,71,204,35"/>
+<area shape="poly" title=" " alt="" coords="125,31,91,71,88,67,121,34"/>
+<area shape="rect" title=" " alt="" coords="155,80,248,107"/>
+<area shape="poly" title=" " alt="" coords="147,30,182,69,177,69,145,35"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -145,14 +142,14 @@ Macros</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:ad39412d571379a5f201181f21dcd0313" id="r_ad39412d571379a5f201181f21dcd0313"><td class="memItemLeft">typedef struct FSI_DirData&#160;</td><td class="memItemRight"><a class="el" href="#ad39412d571379a5f201181f21dcd0313">FSI_DirData</a></td></tr>
 <tr class="memitem:aad5302271e8d3cc39f711397abe5b957" id="r_aad5302271e8d3cc39f711397abe5b957"><td class="memItemLeft">typedef struct FSI_EntryData&#160;</td><td class="memItemRight"><a class="el" href="#aad5302271e8d3cc39f711397abe5b957">FSI_EntryData</a></td></tr>
-<tr class="memitem:af91db6d6c004b3548000fa4f76a94cf9" id="r_af91db6d6c004b3548000fa4f76a94cf9"><td class="memItemLeft">typedef enum <a class="el" href="#a38036f8b8fb04c1fd1196158847782d0">FSI_Type</a>&#160;</td><td class="memItemRight"><a class="el" href="#af91db6d6c004b3548000fa4f76a94cf9">FSI_Type</a></td></tr>
+<tr class="memitem:a4b60467ff5f727ee8bba88d082b1b0c3" id="r_a4b60467ff5f727ee8bba88d082b1b0c3"><td class="memItemLeft">typedef enum <a class="el" href="#aaa6bee37aab1227d0184642f73bf069e">FSI_EntryType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4b60467ff5f727ee8bba88d082b1b0c3">FSI_EntryType</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a38036f8b8fb04c1fd1196158847782d0" id="r_a38036f8b8fb04c1fd1196158847782d0"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a38036f8b8fb04c1fd1196158847782d0">FSI_Type</a> { <a class="el" href="#a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1">FSI_FILE</a>
-, <a class="el" href="#a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</a>
-, <a class="el" href="#a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e">FSI_SYMLINK</a>
-, <a class="el" href="#a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede">FSI_OTHER</a>
+<tr class="memitem:aaa6bee37aab1227d0184642f73bf069e" id="r_aaa6bee37aab1227d0184642f73bf069e"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#aaa6bee37aab1227d0184642f73bf069e">FSI_EntryType</a> { <a class="el" href="#aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1">FSI_FILE</a>
+, <a class="el" href="#aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</a>
+, <a class="el" href="#aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e">FSI_SYMLINK</a>
+, <a class="el" href="#aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede">FSI_OTHER</a>
  }</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
@@ -222,14 +219,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af91db6d6c004b3548000fa4f76a94cf9" name="af91db6d6c004b3548000fa4f76a94cf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af91db6d6c004b3548000fa4f76a94cf9">&#9670;&#160;</a></span>FSI_Type</h2>
+<a id="a4b60467ff5f727ee8bba88d082b1b0c3" name="a4b60467ff5f727ee8bba88d082b1b0c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b60467ff5f727ee8bba88d082b1b0c3">&#9670;&#160;</a></span>FSI_EntryType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef enum <a class="el" href="#a38036f8b8fb04c1fd1196158847782d0">FSI_Type</a> <a class="el" href="#a38036f8b8fb04c1fd1196158847782d0">FSI_Type</a></td>
+          <td class="memname">typedef enum <a class="el" href="#aaa6bee37aab1227d0184642f73bf069e">FSI_EntryType</a> <a class="el" href="#aaa6bee37aab1227d0184642f73bf069e">FSI_EntryType</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -237,36 +234,36 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
-<a id="a38036f8b8fb04c1fd1196158847782d0" name="a38036f8b8fb04c1fd1196158847782d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38036f8b8fb04c1fd1196158847782d0">&#9670;&#160;</a></span>FSI_Type</h2>
+<a id="aaa6bee37aab1227d0184642f73bf069e" name="aaa6bee37aab1227d0184642f73bf069e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa6bee37aab1227d0184642f73bf069e">&#9670;&#160;</a></span>FSI_EntryType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#a38036f8b8fb04c1fd1196158847782d0">FSI_Type</a></td>
+          <td class="memname">enum <a class="el" href="#aaa6bee37aab1227d0184642f73bf069e">FSI_EntryType</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1" name="a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1"></a>FSI_FILE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552" name="a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552"></a>FSI_DIR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e" name="a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e"></a>FSI_SYMLINK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede" name="a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede"></a>FSI_OTHER&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1" name="aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1"></a>FSI_FILE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552" name="aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552"></a>FSI_DIR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e" name="aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e"></a>FSI_SYMLINK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede" name="aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede"></a>FSI_OTHER&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00020">20</a> of file <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html">FSI_dirUtils.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>{</div>
-<div class="line"><span class="lineno">   22</span>    <a class="code hl_enumvalue" href="#a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1">FSI_FILE</a>,</div>
-<div class="line"><span class="lineno">   23</span>    <a class="code hl_enumvalue" href="#a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</a>,</div>
-<div class="line"><span class="lineno">   24</span>    <a class="code hl_enumvalue" href="#a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e">FSI_SYMLINK</a>,</div>
-<div class="line"><span class="lineno">   25</span>    <a class="code hl_enumvalue" href="#a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede">FSI_OTHER</a></div>
-<div class="line"><span class="lineno">   26</span>} <a class="code hl_enumeration" href="#a38036f8b8fb04c1fd1196158847782d0">FSI_Type</a>;</div>
-<div class="ttc" id="aFSI__dirUtils_8h_html_a38036f8b8fb04c1fd1196158847782d0"><div class="ttname"><a href="#a38036f8b8fb04c1fd1196158847782d0">FSI_Type</a></div><div class="ttdeci">FSI_Type</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00020">FSI_dirUtils.h:21</a></div></div>
-<div class="ttc" id="aFSI__dirUtils_8h_html_a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e"><div class="ttname"><a href="#a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e">FSI_SYMLINK</a></div><div class="ttdeci">@ FSI_SYMLINK</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00024">FSI_dirUtils.h:24</a></div></div>
-<div class="ttc" id="aFSI__dirUtils_8h_html_a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552"><div class="ttname"><a href="#a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</a></div><div class="ttdeci">@ FSI_DIR</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00023">FSI_dirUtils.h:23</a></div></div>
-<div class="ttc" id="aFSI__dirUtils_8h_html_a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede"><div class="ttname"><a href="#a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede">FSI_OTHER</a></div><div class="ttdeci">@ FSI_OTHER</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00025">FSI_dirUtils.h:25</a></div></div>
-<div class="ttc" id="aFSI__dirUtils_8h_html_a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1"><div class="ttname"><a href="#a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1">FSI_FILE</a></div><div class="ttdeci">@ FSI_FILE</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00022">FSI_dirUtils.h:22</a></div></div>
+<p class="definition">Definition at line <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00018">18</a> of file <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html">FSI_dirUtils.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>{</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_enumvalue" href="#aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1">FSI_FILE</a>,</div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_enumvalue" href="#aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</a>,</div>
+<div class="line"><span class="lineno">   22</span>    <a class="code hl_enumvalue" href="#aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e">FSI_SYMLINK</a>,</div>
+<div class="line"><span class="lineno">   23</span>    <a class="code hl_enumvalue" href="#aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede">FSI_OTHER</a></div>
+<div class="line"><span class="lineno">   24</span>} <a class="code hl_enumeration" href="#aaa6bee37aab1227d0184642f73bf069e">FSI_EntryType</a>;</div>
+<div class="ttc" id="aFSI__dirUtils_8h_html_aaa6bee37aab1227d0184642f73bf069e"><div class="ttname"><a href="#aaa6bee37aab1227d0184642f73bf069e">FSI_EntryType</a></div><div class="ttdeci">FSI_EntryType</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00018">FSI_dirUtils.h:19</a></div></div>
+<div class="ttc" id="aFSI__dirUtils_8h_html_aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e"><div class="ttname"><a href="#aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e">FSI_SYMLINK</a></div><div class="ttdeci">@ FSI_SYMLINK</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00022">FSI_dirUtils.h:22</a></div></div>
+<div class="ttc" id="aFSI__dirUtils_8h_html_aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552"><div class="ttname"><a href="#aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</a></div><div class="ttdeci">@ FSI_DIR</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00021">FSI_dirUtils.h:21</a></div></div>
+<div class="ttc" id="aFSI__dirUtils_8h_html_aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede"><div class="ttname"><a href="#aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede">FSI_OTHER</a></div><div class="ttdeci">@ FSI_OTHER</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00023">FSI_dirUtils.h:23</a></div></div>
+<div class="ttc" id="aFSI__dirUtils_8h_html_aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1"><div class="ttname"><a href="#aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1">FSI_FILE</a></div><div class="ttdeci">@ FSI_FILE</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00020">FSI_dirUtils.h:20</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -301,55 +298,33 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d8a/FSI__dirUtils_8c_source.html#l00012">12</a> of file <a class="el" href="../../d6/d8a/FSI__dirUtils_8c_source.html">FSI_dirUtils.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   13</span>{</div>
-<div class="line"><span class="lineno">   14</span>    <a class="code hl_struct" href="../../d5/d63/structFSI__DirData.html">FSI_DirData</a> dir;</div>
-<div class="line"><span class="lineno">   15</span>    <a class="code hl_struct" href="../../d1/d62/structFSI__EntryData.html">FSI_EntryData</a> entry;</div>
-<div class="line"><span class="lineno">   16</span> </div>
-<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d5/d64/FSI__dirUtils__posix_8h.html#a1c15e434435c62f17b15a34877bd60bd">fsi_openDir</a>(&amp;dir, path))</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   19</span> </div>
-<div class="line"><span class="lineno">   20</span>    CSTR tmpPath = cstr_init();</div>
-<div class="line"><span class="lineno">   21</span> </div>
-<div class="line"><span class="lineno">   22</span>    <span class="keywordflow">while</span> (<a class="code hl_function" href="../../d5/d64/FSI__dirUtils__posix_8h.html#acb473fa7940b3c89aa11845436bbae8f">fsi_readDir</a>(&amp;dir, &amp;entry))</div>
-<div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        cstr_set(&amp;tmpPath, path);</div>
-<div class="line"><span class="lineno">   25</span>        cstr_add(&amp;tmpPath, <span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line"><span class="lineno">   26</span>        cstr_add(&amp;tmpPath, entry.<a class="code hl_variable" href="../../d1/d62/structFSI__EntryData.html#ad540a33418e7055d0cd7a582146aed10">name</a>);</div>
-<div class="line"><span class="lineno">   27</span> </div>
-<div class="line"><span class="lineno">   28</span>        cvec_push(vec, <span class="keyword">const</span> <span class="keywordtype">char</span>*, CVEC_sys_strdup(tmpPath.data));</div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (entry.<a class="code hl_variable" href="../../d1/d62/structFSI__EntryData.html#aae303e170665a972cc52c708470a2b27">type</a> == <a class="code hl_enumvalue" href="#a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</a>)</div>
-<div class="line"><span class="lineno">   31</span>            <a class="code hl_function" href="../../d6/d8a/FSI__dirUtils_8c.html#a3bc7da82fe7b1e798ee4b6d018534946">fsi_walk</a>(vec, tmpPath.data);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-<div class="line"><span class="lineno">   33</span> </div>
-<div class="line"><span class="lineno">   34</span>    cstr_destroy(&amp;tmpPath);</div>
-<div class="line"><span class="lineno">   35</span> </div>
-<div class="line"><span class="lineno">   36</span>    <a class="code hl_function" href="../../d5/d64/FSI__dirUtils__posix_8h.html#a07bb8fc8aa9e6ea91c2f2e65425e03e1">fsi_closeDir</a>(&amp;dir);</div>
-<div class="line"><span class="lineno">   37</span>}</div>
-<div class="ttc" id="aFSI__dirUtils_8c_html_a3bc7da82fe7b1e798ee4b6d018534946"><div class="ttname"><a href="../../d6/d8a/FSI__dirUtils_8c.html#a3bc7da82fe7b1e798ee4b6d018534946">fsi_walk</a></div><div class="ttdeci">void fsi_walk(CVEC *vec, const char *path)</div><div class="ttdoc">Walk to every directory and file and set vec to a CVEC value.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d8a/FSI__dirUtils_8c_source.html#l00012">FSI_dirUtils.c:12</a></div></div>
-<div class="ttc" id="aFSI__dirUtils__posix_8h_html_a07bb8fc8aa9e6ea91c2f2e65425e03e1"><div class="ttname"><a href="../../d5/d64/FSI__dirUtils__posix_8h.html#a07bb8fc8aa9e6ea91c2f2e65425e03e1">fsi_closeDir</a></div><div class="ttdeci">void fsi_closeDir(FSI_DirData *d)</div><div class="ttdoc">Get the directory data to deallocate memory.</div><div class="ttdef"><b>Definition</b> <a href="../../da/d97/FSI__dirUtils__posix_8c_source.html#l00075">FSI_dirUtils_posix.c:75</a></div></div>
-<div class="ttc" id="aFSI__dirUtils__posix_8h_html_a1c15e434435c62f17b15a34877bd60bd"><div class="ttname"><a href="../../d5/d64/FSI__dirUtils__posix_8h.html#a1c15e434435c62f17b15a34877bd60bd">fsi_openDir</a></div><div class="ttdeci">int fsi_openDir(FSI_DirData *d, const char *path)</div><div class="ttdoc">Open directory as read only.</div><div class="ttdef"><b>Definition</b> <a href="../../da/d97/FSI__dirUtils__posix_8c_source.html#l00014">FSI_dirUtils_posix.c:14</a></div></div>
-<div class="ttc" id="aFSI__dirUtils__posix_8h_html_acb473fa7940b3c89aa11845436bbae8f"><div class="ttname"><a href="../../d5/d64/FSI__dirUtils__posix_8h.html#acb473fa7940b3c89aa11845436bbae8f">fsi_readDir</a></div><div class="ttdeci">int fsi_readDir(FSI_DirData *d, FSI_EntryData *out)</div><div class="ttdoc">Read directory from reading the FSI_DirData information.</div><div class="ttdef"><b>Definition</b> <a href="../../da/d97/FSI__dirUtils__posix_8c_source.html#l00044">FSI_dirUtils_posix.c:44</a></div></div>
-<div class="ttc" id="astructFSI__DirData_html"><div class="ttname"><a href="../../d5/d63/structFSI__DirData.html">FSI_DirData</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00028">FSI_dirUtils.h:29</a></div></div>
-<div class="ttc" id="astructFSI__EntryData_html"><div class="ttname"><a href="../../d1/d62/structFSI__EntryData.html">FSI_EntryData</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00033">FSI_dirUtils.h:34</a></div></div>
-<div class="ttc" id="astructFSI__EntryData_html_aae303e170665a972cc52c708470a2b27"><div class="ttname"><a href="../../d1/d62/structFSI__EntryData.html#aae303e170665a972cc52c708470a2b27">FSI_EntryData::type</a></div><div class="ttdeci">FSI_Type type</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00037">FSI_dirUtils.h:37</a></div></div>
-<div class="ttc" id="astructFSI__EntryData_html_ad540a33418e7055d0cd7a582146aed10"><div class="ttname"><a href="../../d1/d62/structFSI__EntryData.html#ad540a33418e7055d0cd7a582146aed10">FSI_EntryData::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00035">FSI_dirUtils.h:35</a></div></div>
+<div class="line"><span class="lineno">   14</span>    CVEC visited = cvec_init(-1, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../df/d4a/structFSI__Visited__POSIX.html">FSI_Visited_POSIX</a>*));</div>
+<div class="line"><span class="lineno">   15</span> </div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_function" href="../../d5/d64/FSI__dirUtils__posix_8h.html#a1d0d11194a91ede34644606912fbbebf">__fsi_walk</a>(out, &amp;visited, path);</div>
+<div class="line"><span class="lineno">   17</span> </div>
+<div class="line"><span class="lineno">   18</span>    cvec_destroy(&amp;visited);</div>
+<div class="line"><span class="lineno">   19</span>}</div>
+<div class="ttc" id="aFSI__dirUtils__posix_8h_html_a1d0d11194a91ede34644606912fbbebf"><div class="ttname"><a href="../../d5/d64/FSI__dirUtils__posix_8h.html#a1d0d11194a91ede34644606912fbbebf">__fsi_walk</a></div><div class="ttdeci">static void __fsi_walk(CVEC *out, CVEC *visited, const char *path)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00145">FSI_dirUtils_posix.h:145</a></div></div>
+<div class="ttc" id="astructFSI__Visited__POSIX_html"><div class="ttname"><a href="../../df/d4a/structFSI__Visited__POSIX.html">FSI_Visited_POSIX</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00035">FSI_dirUtils_posix.h:36</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html#l00075">fsi_closeDir()</a>, <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00023">FSI_DIR</a>, <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html#l00014">fsi_openDir()</a>, <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html#l00044">fsi_readDir()</a>, <a class="el" href="../../d6/d8a/FSI__dirUtils_8c_source.html#l00012">fsi_walk()</a>, <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00035">FSI_EntryData::name</a>, and <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00037">FSI_EntryData::type</a>.</p>
+<p class="reference">References <a class="el" href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00145">__fsi_walk()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/d0f/FSI__Indexer_8cpp_source.html#l00026">fsi::Indexer::__iteratePath()</a>, and <a class="el" href="../../d6/d8a/FSI__dirUtils_8c_source.html#l00012">fsi_walk()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/d0f/FSI__Indexer_8cpp_source.html#l00140">fsi::Indexer::__iteratePath()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d84/FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946_cgraph.png" border="0" usemap="#adc/d84/FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946_cgraph" loading="lazy" alt=""/></div>
 <map name="adc/d84/FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946_cgraph" id="adc/d84/FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946_cgraph">
 <area shape="rect" title="Walk to every directory and file and set vec to a CVEC value." alt="" coords="5,56,75,83"/>
-<area shape="poly" title=" " alt="" coords="17,56,13,47,16,38,25,32,40,29,56,32,65,40,60,41,54,37,40,35,27,37,20,41,19,47,22,55"/>
-<area shape="rect" href="../../da/d97/FSI__dirUtils__posix_8c.html#a07bb8fc8aa9e6ea91c2f2e65425e03e1" title="Get the directory data to deallocate memory." alt="" coords="123,5,213,32"/>
-<area shape="poly" title=" " alt="" coords="74,53,120,36,116,40,76,58"/>
-<area shape="rect" href="../../da/d97/FSI__dirUtils__posix_8c.html#a1c15e434435c62f17b15a34877bd60bd" title="Open directory as read only." alt="" coords="124,56,212,83"/>
-<area shape="poly" title=" " alt="" coords="74,67,111,68,107,71,75,72"/>
-<area shape="rect" href="../../da/d97/FSI__dirUtils__posix_8c.html#acb473fa7940b3c89aa11845436bbae8f" title="Read directory from reading the FSI_DirData information." alt="" coords="126,107,210,133"/>
-<area shape="poly" title=" " alt="" coords="75,80,120,99,116,101,74,86"/>
+<area shape="rect" href="../../d5/d64/FSI__dirUtils__posix_8h.html#a1d0d11194a91ede34644606912fbbebf" title=" " alt="" coords="123,56,206,83"/>
+<area shape="poly" title=" " alt="" coords="75,67,110,68,105,71,76,72"/>
+<area shape="poly" title=" " alt="" coords="142,55,138,47,141,38,150,32,164,29,180,32,189,41,184,41,178,37,164,35,152,37,145,41,144,47,147,56"/>
+<area shape="rect" href="../../d5/d64/FSI__dirUtils__posix_8h.html#a5a4f995512a0183ca0e5d7aed16d62c3" title=" " alt="" coords="254,5,438,32"/>
+<area shape="poly" title=" " alt="" coords="206,55,253,41,283,36,278,37,255,47,207,60"/>
+<area shape="rect" href="../../d5/d64/FSI__dirUtils__posix_8h.html#a9420f3d1392d4194c6192d2096605bd9" title=" " alt="" coords="294,56,398,83"/>
+<area shape="poly" title=" " alt="" coords="206,67,282,69,276,70,207,72"/>
+<area shape="rect" href="../../d5/d64/FSI__dirUtils__posix_8h.html#a84035112786899729fa79cc37ea76f52" title=" " alt="" coords="294,107,398,133"/>
+<area shape="poly" title=" " alt="" coords="207,78,255,92,283,102,278,102,253,97,206,84"/>
 </map>
 </div>
 <div class="dynheader">
@@ -357,14 +332,21 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d84/FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946_icgraph.png" border="0" usemap="#adc/d84/FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946_icgraph" loading="lazy" alt=""/></div>
 <map name="adc/d84/FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946_icgraph" id="adc/d84/FSI__dirUtils_8h_a3bc7da82fe7b1e798ee4b6d018534946_icgraph">
-<area shape="rect" title="Walk to every directory and file and set vec to a CVEC value." alt="" coords="562,29,632,56"/>
-<area shape="poly" title=" " alt="" coords="624,13,616,10,597,8,580,10,570,15,568,20,573,30,568,28,563,21,566,11,578,5,597,3,617,5,629,15"/>
-<area shape="rect" href="../../d0/d3b/classfsi_1_1Indexer.html#acebe67327f029b3a2e32a05d16610607" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="343,29,514,56"/>
-<area shape="poly" title=" " alt="" coords="544,43,515,45,515,40,549,43"/>
-<area shape="rect" href="../../d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d" title="Add the exact path and the sub&#45;paths to have the info from." alt="" coords="103,29,295,56"/>
-<area shape="poly" title=" " alt="" coords="325,43,296,45,295,40,330,43"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
-<area shape="poly" title=" " alt="" coords="85,44,55,45,55,40,90,42"/>
+<area shape="rect" title="Walk to every directory and file and set vec to a CVEC value." alt="" coords="795,83,864,109"/>
+<area shape="rect" href="../../d0/d3b/classfsi_1_1Indexer.html#acebe67327f029b3a2e32a05d16610607" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="575,83,747,109"/>
+<area shape="poly" title=" " alt="" coords="776,96,747,99,747,93,782,96"/>
+<area shape="poly" title=" " alt="" coords="688,67,680,64,661,61,644,63,634,68,632,73,637,83,632,81,627,74,630,64,642,58,661,56,681,59,693,68"/>
+<area shape="rect" href="../../d0/d3b/classfsi_1_1Indexer.html#ad2b706e6b58c00d167a87187175755aa" title="Standard non&#45;threaded extended information." alt="" coords="343,29,527,72"/>
+<area shape="poly" title=" " alt="" coords="573,79,528,72,528,67,579,79"/>
+<area shape="rect" href="../../d0/d3b/classfsi_1_1Indexer.html#a8f2a4860b7e2480e0af81f6fabb94794" title="Threaded extended information." alt="" coords="343,120,527,163"/>
+<area shape="poly" title=" " alt="" coords="579,113,528,125,527,120,573,113"/>
+<area shape="poly" title=" " alt="" coords="470,14,458,10,435,8,414,10,401,15,396,21,397,30,393,27,391,19,398,10,413,5,435,3,459,5,475,14"/>
+<area shape="rect" href="../../d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d" title="Add the exact path and the sub&#45;paths to have the info from;." alt="" coords="103,83,295,109"/>
+<area shape="poly" title=" " alt="" coords="325,72,273,85,272,79,330,71"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,83,55,109"/>
+<area shape="poly" title=" " alt="" coords="85,98,55,99,54,93,89,94"/>
+<area shape="poly" title=" " alt="" coords="325,121,272,113,272,107,330,121"/>
+<area shape="poly" title=" " alt="" coords="470,104,458,101,435,99,414,101,401,105,396,111,397,121,393,118,391,110,398,101,413,95,435,93,459,96,475,105"/>
 </map>
 </div>
 

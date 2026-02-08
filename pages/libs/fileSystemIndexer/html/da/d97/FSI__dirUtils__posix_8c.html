@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FileSystemIndexer<span id="projectnumber">&#160;v0.1.0-beta</span>
+   <div id="projectname">FileSystemIndexer<span id="projectnumber">&#160;v0.1.2-beta</span>
    </div>
-   <div id="projectbrief">File System Indexer - API to index files from your system</div>
+   <div id="projectbrief">File System Indexer - An API to index files from your system</div>
   </td>
  </tr>
  </tbody>
@@ -94,74 +94,47 @@ $(function(){initNavTree('da/d97/FSI__dirUtils__posix_8c.html','../../',''); });
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d8/db8/FSIpredefines_8h_source.html">../../../inc/fsi/FSIpredefines.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d64/FSI__dirUtils__posix_8h_source.html">../../../inc/fsi/core/interfaces/FSI_dirUtils_posix.h</a>&quot;</code><br />
-<code>#include &lt;dirent.h&gt;</code><br />
-<code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;fcntl.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for FSI_dirUtils_posix.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d40/FSI__dirUtils__posix_8c__incl.png" border="0" usemap="#asrc_2core_2interfaces_2FSI__dirUtils__posix_8c" loading="lazy" alt=""/></div>
 <map name="asrc_2core_2interfaces_2FSI__dirUtils__posix_8c" id="asrc_2core_2interfaces_2FSI__dirUtils__posix_8c">
-<area shape="rect" title=" " alt="" coords="377,5,520,48"/>
+<area shape="rect" title=" " alt="" coords="317,5,460,48"/>
 <area shape="rect" href="../../d8/db8/FSIpredefines_8h.html" title=" " alt="" coords="5,277,194,304"/>
-<area shape="poly" title=" " alt="" coords="374,35,336,44,291,56,247,74,208,98,171,136,143,181,122,226,109,264,104,261,117,224,138,178,167,133,205,94,245,69,290,51,334,39,379,33"/>
-<area shape="rect" href="../../d5/d64/FSI__dirUtils__posix_8h.html" title=" " alt="" coords="218,96,373,155"/>
-<area shape="poly" title=" " alt="" coords="418,47,355,90,352,85,414,50"/>
-<area shape="rect" title=" " alt="" coords="430,203,494,229"/>
-<area shape="poly" title=" " alt="" coords="445,46,436,97,435,126,438,154,450,190,445,188,433,155,430,126,431,97,441,50"/>
-<area shape="rect" title=" " alt="" coords="448,112,527,139"/>
-<area shape="poly" title=" " alt="" coords="458,46,479,98,474,97,456,51"/>
-<area shape="rect" title=" " alt="" coords="552,112,615,139"/>
-<area shape="poly" title=" " alt="" coords="478,46,556,103,551,103,477,51"/>
-<area shape="rect" title=" " alt="" coords="639,112,696,139"/>
-<area shape="poly" title=" " alt="" coords="515,46,572,67,629,94,642,103,637,103,626,98,569,72,515,51"/>
-<area shape="poly" title=" " alt="" coords="246,154,211,179,177,205,146,236,119,267,116,263,142,232,174,201,208,175,241,156"/>
-<area shape="rect" href="../../dc/d84/FSI__dirUtils_8h.html" title=" " alt="" coords="188,203,302,229"/>
-<area shape="poly" title=" " alt="" coords="281,153,262,191,258,187,277,157"/>
-<area shape="rect" title=" " alt="" coords="326,203,406,229"/>
-<area shape="poly" title=" " alt="" coords="319,152,349,191,344,190,317,158"/>
-<area shape="poly" title=" " alt="" coords="350,153,428,195,422,195,349,158"/>
-<area shape="poly" title=" " alt="" coords="222,229,140,272,137,268,217,230"/>
-<area shape="rect" title=" " alt="" coords="218,277,282,304"/>
-<area shape="poly" title=" " alt="" coords="248,228,250,263,246,260,244,232"/>
-<area shape="rect" title=" " alt="" coords="307,277,399,304"/>
-<area shape="poly" title=" " alt="" coords="264,227,324,268,319,268,263,232"/>
+<area shape="poly" title=" " alt="" coords="334,50,286,75,228,109,172,152,147,177,124,204,111,233,104,263,99,261,106,231,120,201,143,174,168,148,225,105,284,71,339,47"/>
+<area shape="rect" href="../../d5/d64/FSI__dirUtils__posix_8h.html" title=" " alt="" coords="311,96,466,155"/>
+<area shape="poly" title=" " alt="" coords="390,46,391,82,386,79,387,51"/>
+<area shape="rect" title=" " alt="" coords="490,112,554,139"/>
+<area shape="poly" title=" " alt="" coords="418,46,495,103,490,103,417,51"/>
+<area shape="poly" title=" " alt="" coords="308,138,230,163,190,181,153,205,128,233,111,265,107,261,124,230,150,201,187,176,229,158,313,136"/>
+<area shape="rect" href="../../dc/d84/FSI__dirUtils_8h.html" title=" " alt="" coords="163,203,276,229"/>
+<area shape="poly" title=" " alt="" coords="336,154,258,198,255,193,331,156"/>
+<area shape="rect" title=" " alt="" coords="301,203,381,229"/>
+<area shape="poly" title=" " alt="" coords="375,153,357,191,353,187,371,157"/>
+<area shape="rect" title=" " alt="" coords="405,203,469,229"/>
+<area shape="poly" title=" " alt="" coords="405,153,425,190,420,188,403,157"/>
+<area shape="rect" title=" " alt="" coords="493,203,572,229"/>
+<area shape="poly" title=" " alt="" coords="436,153,502,194,497,194,435,158"/>
+<area shape="rect" title=" " alt="" coords="596,203,664,229"/>
+<area shape="poly" title=" " alt="" coords="467,152,585,197,579,197,466,158"/>
+<area shape="rect" title=" " alt="" coords="688,203,746,229"/>
+<area shape="poly" title=" " alt="" coords="467,149,479,152,574,176,676,202,670,202,573,181,477,157,467,154"/>
+<area shape="poly" title=" " alt="" coords="201,229,135,271,132,267,196,231"/>
+<area shape="rect" title=" " alt="" coords="217,277,310,304"/>
+<area shape="poly" title=" " alt="" coords="228,228,251,265,245,263,226,232"/>
 </map>
 </div>
 </div>
 <p><a href="../../da/d97/FSI__dirUtils__posix_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a8fb447618db946a9e2a596d9ea18763f" id="r_a8fb447618db946a9e2a596d9ea18763f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8fb447618db946a9e2a596d9ea18763f">_DEFAULT_SOURCE</a></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a07bb8fc8aa9e6ea91c2f2e65425e03e1" id="r_a07bb8fc8aa9e6ea91c2f2e65425e03e1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a07bb8fc8aa9e6ea91c2f2e65425e03e1">fsi_closeDir</a> (<a class="el" href="../../d5/d63/structFSI__DirData.html">FSI_DirData</a> *d)</td></tr>
 <tr class="memdesc:a07bb8fc8aa9e6ea91c2f2e65425e03e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the directory data to deallocate memory.  <br /></td></tr>
 <tr class="memitem:a1c15e434435c62f17b15a34877bd60bd" id="r_a1c15e434435c62f17b15a34877bd60bd"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1c15e434435c62f17b15a34877bd60bd">fsi_openDir</a> (<a class="el" href="../../d5/d63/structFSI__DirData.html">FSI_DirData</a> *d, const char *path)</td></tr>
 <tr class="memdesc:a1c15e434435c62f17b15a34877bd60bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open directory as read only.  <br /></td></tr>
-<tr class="memitem:acb473fa7940b3c89aa11845436bbae8f" id="r_acb473fa7940b3c89aa11845436bbae8f"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acb473fa7940b3c89aa11845436bbae8f">fsi_readDir</a> (<a class="el" href="../../d5/d63/structFSI__DirData.html">FSI_DirData</a> *d, <a class="el" href="../../d1/d62/structFSI__EntryData.html">FSI_EntryData</a> *out)</td></tr>
-<tr class="memdesc:acb473fa7940b3c89aa11845436bbae8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read directory from reading the <span class="tt"><a class="el" href="../../d5/d63/structFSI__DirData.html">FSI_DirData</a></span> information.  <br /></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
-<a id="a8fb447618db946a9e2a596d9ea18763f" name="a8fb447618db946a9e2a596d9ea18763f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fb447618db946a9e2a596d9ea18763f">&#9670;&#160;</a></span>_DEFAULT_SOURCE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define _DEFAULT_SOURCE</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html#l00001">1</a> of file <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html">FSI_dirUtils_posix.c</a>.</p>
-
-</div>
-</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a07bb8fc8aa9e6ea91c2f2e65425e03e1" name="a07bb8fc8aa9e6ea91c2f2e65425e03e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a07bb8fc8aa9e6ea91c2f2e65425e03e1">&#9670;&#160;</a></span>fsi_closeDir()</h2>
@@ -186,42 +159,24 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html#l00075">75</a> of file <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html">FSI_dirUtils_posix.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>{</div>
-<div class="line"><span class="lineno">   77</span>    <a class="code hl_struct" href="../../d5/d16/structFSI__DirData__POSIX.html">FSI_DirData_POSIX</a> *p = d-&gt;<a class="code hl_variable" href="../../d5/d63/structFSI__DirData.html#ac8944367a6d007b8e0f6ba53be1ba1c0">impl</a>;</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>    cstr_destroy(&amp;p-&gt;<a class="code hl_variable" href="../../d5/d16/structFSI__DirData__POSIX.html#a82d93611ad90fa5af9b11b6cc08a208e">path</a>);</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>    closedir(p-&gt;<a class="code hl_variable" href="../../d5/d16/structFSI__DirData__POSIX.html#a78670985b16d169b902cfda51881f02c">dir</a>);</div>
-<div class="line"><span class="lineno">   82</span> </div>
-<div class="line"><span class="lineno">   83</span>    <a class="code hl_define" href="../../d8/db8/FSIpredefines_8h.html#a62bdb0773dcdb91d52bb8e4eca4c03d9">FSI_FREE</a>(p);</div>
-<div class="line"><span class="lineno">   84</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html#l00041">41</a> of file <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html">FSI_dirUtils_posix.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>{</div>
+<div class="line"><span class="lineno">   43</span>    <a class="code hl_struct" href="../../d5/d16/structFSI__DirData__POSIX.html">FSI_DirData_POSIX</a> *p = d-&gt;<a class="code hl_variable" href="../../d5/d63/structFSI__DirData.html#ac8944367a6d007b8e0f6ba53be1ba1c0">impl</a>;</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>    cstr_destroy(&amp;p-&gt;<a class="code hl_variable" href="../../d5/d16/structFSI__DirData__POSIX.html#a82d93611ad90fa5af9b11b6cc08a208e">path</a>);</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    <span class="comment">// Closes FD variable too</span></div>
+<div class="line"><span class="lineno">   48</span>    closedir(p-&gt;<a class="code hl_variable" href="../../d5/d16/structFSI__DirData__POSIX.html#a78670985b16d169b902cfda51881f02c">dir</a>);</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>    <a class="code hl_define" href="../../d8/db8/FSIpredefines_8h.html#a62bdb0773dcdb91d52bb8e4eca4c03d9">FSI_FREE</a>(p);</div>
+<div class="line"><span class="lineno">   51</span>}</div>
 <div class="ttc" id="aFSIpredefines_8h_html_a62bdb0773dcdb91d52bb8e4eca4c03d9"><div class="ttname"><a href="../../d8/db8/FSIpredefines_8h.html#a62bdb0773dcdb91d52bb8e4eca4c03d9">FSI_FREE</a></div><div class="ttdeci">#define FSI_FREE(x)</div><div class="ttdef"><b>Definition</b> <a href="../../d8/db8/FSIpredefines_8h_source.html#l00045">FSIpredefines.h:45</a></div></div>
-<div class="ttc" id="astructFSI__DirData__POSIX_html"><div class="ttname"><a href="../../d5/d16/structFSI__DirData__POSIX.html">FSI_DirData_POSIX</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00024">FSI_dirUtils_posix.h:25</a></div></div>
-<div class="ttc" id="astructFSI__DirData__POSIX_html_a78670985b16d169b902cfda51881f02c"><div class="ttname"><a href="../../d5/d16/structFSI__DirData__POSIX.html#a78670985b16d169b902cfda51881f02c">FSI_DirData_POSIX::dir</a></div><div class="ttdeci">DIR * dir</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00026">FSI_dirUtils_posix.h:26</a></div></div>
-<div class="ttc" id="astructFSI__DirData__POSIX_html_a82d93611ad90fa5af9b11b6cc08a208e"><div class="ttname"><a href="../../d5/d16/structFSI__DirData__POSIX.html#a82d93611ad90fa5af9b11b6cc08a208e">FSI_DirData_POSIX::path</a></div><div class="ttdeci">CSTR path</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00027">FSI_dirUtils_posix.h:27</a></div></div>
-<div class="ttc" id="astructFSI__DirData_html_ac8944367a6d007b8e0f6ba53be1ba1c0"><div class="ttname"><a href="../../d5/d63/structFSI__DirData.html#ac8944367a6d007b8e0f6ba53be1ba1c0">FSI_DirData::impl</a></div><div class="ttdeci">void * impl</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00030">FSI_dirUtils.h:30</a></div></div>
+<div class="ttc" id="astructFSI__DirData__POSIX_html"><div class="ttname"><a href="../../d5/d16/structFSI__DirData__POSIX.html">FSI_DirData_POSIX</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00027">FSI_dirUtils_posix.h:28</a></div></div>
+<div class="ttc" id="astructFSI__DirData__POSIX_html_a78670985b16d169b902cfda51881f02c"><div class="ttname"><a href="../../d5/d16/structFSI__DirData__POSIX.html#a78670985b16d169b902cfda51881f02c">FSI_DirData_POSIX::dir</a></div><div class="ttdeci">DIR * dir</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00029">FSI_dirUtils_posix.h:29</a></div></div>
+<div class="ttc" id="astructFSI__DirData__POSIX_html_a82d93611ad90fa5af9b11b6cc08a208e"><div class="ttname"><a href="../../d5/d16/structFSI__DirData__POSIX.html#a82d93611ad90fa5af9b11b6cc08a208e">FSI_DirData_POSIX::path</a></div><div class="ttdeci">CSTR path</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00030">FSI_dirUtils_posix.h:30</a></div></div>
+<div class="ttc" id="astructFSI__DirData_html_ac8944367a6d007b8e0f6ba53be1ba1c0"><div class="ttname"><a href="../../d5/d63/structFSI__DirData.html#ac8944367a6d007b8e0f6ba53be1ba1c0">FSI_DirData::impl</a></div><div class="ttdeci">void * impl</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00028">FSI_dirUtils.h:28</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00026">FSI_DirData_POSIX::dir</a>, <a class="el" href="../../d8/db8/FSIpredefines_8h_source.html#l00045">FSI_FREE</a>, <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00030">FSI_DirData::impl</a>, and <a class="el" href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00027">FSI_DirData_POSIX::path</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d6/d8a/FSI__dirUtils_8c_source.html#l00012">fsi_walk()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d97/FSI__dirUtils__posix_8c_a07bb8fc8aa9e6ea91c2f2e65425e03e1_icgraph.png" border="0" usemap="#ada/d97/FSI__dirUtils__posix_8c_a07bb8fc8aa9e6ea91c2f2e65425e03e1_icgraph" loading="lazy" alt=""/></div>
-<map name="ada/d97/FSI__dirUtils__posix_8c_a07bb8fc8aa9e6ea91c2f2e65425e03e1_icgraph" id="ada/d97/FSI__dirUtils__posix_8c_a07bb8fc8aa9e6ea91c2f2e65425e03e1_icgraph">
-<area shape="rect" title="Get the directory data to deallocate memory." alt="" coords="680,29,770,56"/>
-<area shape="rect" href="../../d6/d8a/FSI__dirUtils_8c.html#a3bc7da82fe7b1e798ee4b6d018534946" title="Walk to every directory and file and set vec to a CVEC value." alt="" coords="562,29,632,56"/>
-<area shape="poly" title=" " alt="" coords="661,43,632,45,632,40,666,43"/>
-<area shape="poly" title=" " alt="" coords="617,13,611,10,597,8,584,10,577,14,576,20,579,30,574,27,570,21,573,11,582,5,597,3,613,5,622,15"/>
-<area shape="rect" href="../../d0/d3b/classfsi_1_1Indexer.html#acebe67327f029b3a2e32a05d16610607" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="343,29,514,56"/>
-<area shape="poly" title=" " alt="" coords="544,43,515,45,515,40,549,43"/>
-<area shape="rect" href="../../d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d" title="Add the exact path and the sub&#45;paths to have the info from." alt="" coords="103,29,295,56"/>
-<area shape="poly" title=" " alt="" coords="325,43,296,45,295,40,330,43"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
-<area shape="poly" title=" " alt="" coords="85,44,55,45,55,40,90,42"/>
-</map>
-</div>
+<p class="reference">References <a class="el" href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00029">FSI_DirData_POSIX::dir</a>, <a class="el" href="../../d8/db8/FSIpredefines_8h_source.html#l00045">FSI_FREE</a>, <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00028">FSI_DirData::impl</a>, and <a class="el" href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00030">FSI_DirData_POSIX::path</a>.</p>
 
 </div>
 </div>
@@ -254,145 +209,40 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Status (1 if worked, 0 if failed) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html#l00014">14</a> of file <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html">FSI_dirUtils_posix.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>{</div>
-<div class="line"><span class="lineno">   16</span>    <a class="code hl_struct" href="../../d5/d16/structFSI__DirData__POSIX.html">FSI_DirData_POSIX</a> *p = malloc(<span class="keyword">sizeof</span>(*p));</div>
-<div class="line"><span class="lineno">   17</span> </div>
-<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">if</span> (!p) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   19</span> </div>
-<div class="line"><span class="lineno">   20</span>    p-&gt;<a class="code hl_variable" href="../../d5/d16/structFSI__DirData__POSIX.html#a82d93611ad90fa5af9b11b6cc08a208e">path</a> = cstr_init();</div>
-<div class="line"><span class="lineno">   21</span> </div>
-<div class="line"><span class="lineno">   22</span>    {</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> dirFD = open(path, O_RDONLY);</div>
-<div class="line"><span class="lineno">   24</span> </div>
-<div class="line"><span class="lineno">   25</span>        p-&gt;<a class="code hl_variable" href="../../d5/d16/structFSI__DirData__POSIX.html#a78670985b16d169b902cfda51881f02c">dir</a> = fdopendir(dirFD);</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
-<div class="line"><span class="lineno">   27</span> </div>
-<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">if</span> (!p-&gt;<a class="code hl_variable" href="../../d5/d16/structFSI__DirData__POSIX.html#a78670985b16d169b902cfda51881f02c">dir</a>)</div>
-<div class="line"><span class="lineno">   29</span>    {</div>
-<div class="line"><span class="lineno">   30</span>        cstr_destroy(&amp;p-&gt;<a class="code hl_variable" href="../../d5/d16/structFSI__DirData__POSIX.html#a82d93611ad90fa5af9b11b6cc08a208e">path</a>);</div>
-<div class="line"><span class="lineno">   31</span> </div>
-<div class="line"><span class="lineno">   32</span>        <a class="code hl_define" href="../../d8/db8/FSIpredefines_8h.html#a62bdb0773dcdb91d52bb8e4eca4c03d9">FSI_FREE</a>(p);</div>
-<div class="line"><span class="lineno">   33</span> </div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-<div class="line"><span class="lineno">   36</span> </div>
-<div class="line"><span class="lineno">   37</span>    cstr_set(&amp;p-&gt;<a class="code hl_variable" href="../../d5/d16/structFSI__DirData__POSIX.html#a82d93611ad90fa5af9b11b6cc08a208e">path</a>, path);</div>
-<div class="line"><span class="lineno">   38</span> </div>
-<div class="line"><span class="lineno">   39</span>    d-&gt;<a class="code hl_variable" href="../../d5/d63/structFSI__DirData.html#ac8944367a6d007b8e0f6ba53be1ba1c0">impl</a> = p;</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">   42</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html#l00009">9</a> of file <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html">FSI_dirUtils_posix.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>{</div>
+<div class="line"><span class="lineno">   11</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> dirFD = open(path, O_RDONLY | O_DIRECTORY | O_CLOEXEC);</div>
+<div class="line"><span class="lineno">   12</span> </div>
+<div class="line"><span class="lineno">   13</span>    <span class="keywordflow">if</span> (dirFD &lt; 0) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   14</span> </div>
+<div class="line"><span class="lineno">   15</span>    DIR *dir = fdopendir(dirFD);</div>
+<div class="line"><span class="lineno">   16</span> </div>
+<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">if</span> (!dir)</div>
+<div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        close(dirFD);</div>
+<div class="line"><span class="lineno">   20</span> </div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_struct" href="../../d5/d16/structFSI__DirData__POSIX.html">FSI_DirData_POSIX</a> *p = malloc(<span class="keyword">sizeof</span>(*p));</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>    <span class="keywordflow">if</span> (!p)</div>
+<div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        closedir(dir);</div>
+<div class="line"><span class="lineno">   29</span> </div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>    p-&gt;<a class="code hl_variable" href="../../d5/d16/structFSI__DirData__POSIX.html#a78670985b16d169b902cfda51881f02c">dir</a> = dir;</div>
+<div class="line"><span class="lineno">   34</span>    p-&gt;<a class="code hl_variable" href="../../d5/d16/structFSI__DirData__POSIX.html#a469e85e9dfedf6ff6ac12cc11ca7217c">dirfd</a> = dirFD;</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>    d-&gt;<a class="code hl_variable" href="../../d5/d63/structFSI__DirData.html#ac8944367a6d007b8e0f6ba53be1ba1c0">impl</a> = p;</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   39</span>}</div>
+<div class="ttc" id="astructFSI__DirData__POSIX_html_a469e85e9dfedf6ff6ac12cc11ca7217c"><div class="ttname"><a href="../../d5/d16/structFSI__DirData__POSIX.html#a469e85e9dfedf6ff6ac12cc11ca7217c">FSI_DirData_POSIX::dirfd</a></div><div class="ttdeci">int dirfd</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00032">FSI_dirUtils_posix.h:32</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00026">FSI_DirData_POSIX::dir</a>, <a class="el" href="../../d8/db8/FSIpredefines_8h_source.html#l00045">FSI_FREE</a>, <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00030">FSI_DirData::impl</a>, and <a class="el" href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00027">FSI_DirData_POSIX::path</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d6/d8a/FSI__dirUtils_8c_source.html#l00012">fsi_walk()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d97/FSI__dirUtils__posix_8c_a1c15e434435c62f17b15a34877bd60bd_icgraph.png" border="0" usemap="#ada/d97/FSI__dirUtils__posix_8c_a1c15e434435c62f17b15a34877bd60bd_icgraph" loading="lazy" alt=""/></div>
-<map name="ada/d97/FSI__dirUtils__posix_8c_a1c15e434435c62f17b15a34877bd60bd_icgraph" id="ada/d97/FSI__dirUtils__posix_8c_a1c15e434435c62f17b15a34877bd60bd_icgraph">
-<area shape="rect" title="Open directory as read only." alt="" coords="680,29,767,56"/>
-<area shape="rect" href="../../d6/d8a/FSI__dirUtils_8c.html#a3bc7da82fe7b1e798ee4b6d018534946" title="Walk to every directory and file and set vec to a CVEC value." alt="" coords="562,29,632,56"/>
-<area shape="poly" title=" " alt="" coords="661,43,632,45,632,40,667,43"/>
-<area shape="poly" title=" " alt="" coords="617,13,610,10,597,8,584,10,578,14,576,20,579,30,575,27,571,21,573,11,582,5,597,3,613,5,622,15"/>
-<area shape="rect" href="../../d0/d3b/classfsi_1_1Indexer.html#acebe67327f029b3a2e32a05d16610607" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="343,29,514,56"/>
-<area shape="poly" title=" " alt="" coords="544,43,515,45,515,40,549,43"/>
-<area shape="rect" href="../../d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d" title="Add the exact path and the sub&#45;paths to have the info from." alt="" coords="103,29,295,56"/>
-<area shape="poly" title=" " alt="" coords="325,43,296,45,295,40,330,43"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
-<area shape="poly" title=" " alt="" coords="85,44,55,45,55,40,90,42"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="acb473fa7940b3c89aa11845436bbae8f" name="acb473fa7940b3c89aa11845436bbae8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb473fa7940b3c89aa11845436bbae8f">&#9670;&#160;</a></span>fsi_readDir()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int fsi_readDir </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d5/d63/structFSI__DirData.html">FSI_DirData</a> *</td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d1/d62/structFSI__EntryData.html">FSI_EntryData</a> *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read directory from reading the <span class="tt"><a class="el" href="../../d5/d63/structFSI__DirData.html">FSI_DirData</a></span> information. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">d</td><td>Directory data </td></tr>
-    <tr><td class="paramname">out</td><td>Entry data to set the information </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Status (1 if worked, 0 if failed) </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html#l00044">44</a> of file <a class="el" href="../../da/d97/FSI__dirUtils__posix_8c_source.html">FSI_dirUtils_posix.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>{</div>
-<div class="line"><span class="lineno">   46</span>    <a class="code hl_struct" href="../../d5/d16/structFSI__DirData__POSIX.html">FSI_DirData_POSIX</a> *p = d-&gt;<a class="code hl_variable" href="../../d5/d63/structFSI__DirData.html#ac8944367a6d007b8e0f6ba53be1ba1c0">impl</a>;</div>
-<div class="line"><span class="lineno">   47</span>    <span class="keyword">struct </span>dirent *e;</div>
-<div class="line"><span class="lineno">   48</span> </div>
-<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">while</span> ((e = readdir(p-&gt;<a class="code hl_variable" href="../../d5/d16/structFSI__DirData__POSIX.html#a78670985b16d169b902cfda51881f02c">dir</a>)))</div>
-<div class="line"><span class="lineno">   50</span>    {</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (e-&gt;d_name[0] == <span class="charliteral">&#39;.&#39;</span> &amp;&amp;</div>
-<div class="line"><span class="lineno">   52</span>           (!e-&gt;d_name[1] ||</div>
-<div class="line"><span class="lineno">   53</span>           (e-&gt;d_name[1] == <span class="charliteral">&#39;.&#39;</span> &amp;&amp; !e-&gt;d_name[2])))</div>
-<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   55</span> </div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (e-&gt;d_type == DT_DIR)</div>
-<div class="line"><span class="lineno">   57</span>            out-&gt;<a class="code hl_variable" href="../../d1/d62/structFSI__EntryData.html#aae303e170665a972cc52c708470a2b27">type</a> = <a class="code hl_enumvalue" href="../../dc/d84/FSI__dirUtils_8h.html#a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</a>;</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (e-&gt;d_type == DT_REG)</div>
-<div class="line"><span class="lineno">   60</span>            out-&gt;<a class="code hl_variable" href="../../d1/d62/structFSI__EntryData.html#aae303e170665a972cc52c708470a2b27">type</a> = <a class="code hl_enumvalue" href="../../dc/d84/FSI__dirUtils_8h.html#a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1">FSI_FILE</a>;</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (e-&gt;d_type == DT_LNK)</div>
-<div class="line"><span class="lineno">   63</span>            out-&gt;<a class="code hl_variable" href="../../d1/d62/structFSI__EntryData.html#aae303e170665a972cc52c708470a2b27">type</a> = <a class="code hl_enumvalue" href="../../dc/d84/FSI__dirUtils_8h.html#a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e">FSI_SYMLINK</a>;</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">else</span> out-&gt;<a class="code hl_variable" href="../../d1/d62/structFSI__EntryData.html#aae303e170665a972cc52c708470a2b27">type</a> = <a class="code hl_enumvalue" href="../../dc/d84/FSI__dirUtils_8h.html#a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede">FSI_OTHER</a>;</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>        out-&gt;<a class="code hl_variable" href="../../d1/d62/structFSI__EntryData.html#ad540a33418e7055d0cd7a582146aed10">name</a> = e-&gt;d_name;</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   73</span>}</div>
-<div class="ttc" id="aFSI__dirUtils_8h_html_a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e"><div class="ttname"><a href="../../dc/d84/FSI__dirUtils_8h.html#a38036f8b8fb04c1fd1196158847782d0aac54d5b41ff8c4f704ff77916d97e71e">FSI_SYMLINK</a></div><div class="ttdeci">@ FSI_SYMLINK</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00024">FSI_dirUtils.h:24</a></div></div>
-<div class="ttc" id="aFSI__dirUtils_8h_html_a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552"><div class="ttname"><a href="../../dc/d84/FSI__dirUtils_8h.html#a38036f8b8fb04c1fd1196158847782d0aaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</a></div><div class="ttdeci">@ FSI_DIR</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00023">FSI_dirUtils.h:23</a></div></div>
-<div class="ttc" id="aFSI__dirUtils_8h_html_a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede"><div class="ttname"><a href="../../dc/d84/FSI__dirUtils_8h.html#a38036f8b8fb04c1fd1196158847782d0ac89c677a4f85ee4147f1c1fa5bc75ede">FSI_OTHER</a></div><div class="ttdeci">@ FSI_OTHER</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00025">FSI_dirUtils.h:25</a></div></div>
-<div class="ttc" id="aFSI__dirUtils_8h_html_a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1"><div class="ttname"><a href="../../dc/d84/FSI__dirUtils_8h.html#a38036f8b8fb04c1fd1196158847782d0acae0a0c9cddc0e241fef6d4f30ddd6c1">FSI_FILE</a></div><div class="ttdeci">@ FSI_FILE</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00022">FSI_dirUtils.h:22</a></div></div>
-<div class="ttc" id="astructFSI__EntryData_html_aae303e170665a972cc52c708470a2b27"><div class="ttname"><a href="../../d1/d62/structFSI__EntryData.html#aae303e170665a972cc52c708470a2b27">FSI_EntryData::type</a></div><div class="ttdeci">FSI_Type type</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00037">FSI_dirUtils.h:37</a></div></div>
-<div class="ttc" id="astructFSI__EntryData_html_ad540a33418e7055d0cd7a582146aed10"><div class="ttname"><a href="../../d1/d62/structFSI__EntryData.html#ad540a33418e7055d0cd7a582146aed10">FSI_EntryData::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d84/FSI__dirUtils_8h_source.html#l00035">FSI_dirUtils.h:35</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00026">FSI_DirData_POSIX::dir</a>, <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00023">FSI_DIR</a>, <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00022">FSI_FILE</a>, <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00025">FSI_OTHER</a>, <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00024">FSI_SYMLINK</a>, <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00030">FSI_DirData::impl</a>, <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00035">FSI_EntryData::name</a>, and <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00037">FSI_EntryData::type</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d6/d8a/FSI__dirUtils_8c_source.html#l00012">fsi_walk()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d97/FSI__dirUtils__posix_8c_acb473fa7940b3c89aa11845436bbae8f_icgraph.png" border="0" usemap="#ada/d97/FSI__dirUtils__posix_8c_acb473fa7940b3c89aa11845436bbae8f_icgraph" loading="lazy" alt=""/></div>
-<map name="ada/d97/FSI__dirUtils__posix_8c_acb473fa7940b3c89aa11845436bbae8f_icgraph" id="ada/d97/FSI__dirUtils__posix_8c_acb473fa7940b3c89aa11845436bbae8f_icgraph">
-<area shape="rect" title="Read directory from reading the FSI_DirData information." alt="" coords="680,29,764,56"/>
-<area shape="rect" href="../../d6/d8a/FSI__dirUtils_8c.html#a3bc7da82fe7b1e798ee4b6d018534946" title="Walk to every directory and file and set vec to a CVEC value." alt="" coords="562,29,632,56"/>
-<area shape="poly" title=" " alt="" coords="661,43,632,45,632,40,667,43"/>
-<area shape="poly" title=" " alt="" coords="617,13,610,10,597,8,585,10,578,14,576,20,579,30,575,27,571,21,574,11,583,5,597,3,613,5,622,15"/>
-<area shape="rect" href="../../d0/d3b/classfsi_1_1Indexer.html#acebe67327f029b3a2e32a05d16610607" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="343,29,514,56"/>
-<area shape="poly" title=" " alt="" coords="544,43,515,45,515,40,549,43"/>
-<area shape="rect" href="../../d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d" title="Add the exact path and the sub&#45;paths to have the info from." alt="" coords="103,29,295,56"/>
-<area shape="poly" title=" " alt="" coords="325,43,296,45,295,40,330,43"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
-<area shape="poly" title=" " alt="" coords="85,44,55,45,55,40,90,42"/>
-</map>
-</div>
+<p class="reference">References <a class="el" href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00029">FSI_DirData_POSIX::dir</a>, <a class="el" href="../../d5/d64/FSI__dirUtils__posix_8h_source.html#l00032">FSI_DirData_POSIX::dirfd</a>, and <a class="el" href="../../dc/d84/FSI__dirUtils_8h_source.html#l00028">FSI_DirData::impl</a>.</p>
 
 </div>
 </div>

@@ -1,9 +1,14 @@
 var classfsi_1_1Indexer =
 [
-    [ "Indexer", "d0/d3b/classfsi_1_1Indexer.html#a098bb0a974616eb40e6a08111c192868", null ],
+    [ "Indexer", "d0/d3b/classfsi_1_1Indexer.html#a60c93e6c1f5caf21f6549a1d00cf14d0", null ],
     [ "~Indexer", "d0/d3b/classfsi_1_1Indexer.html#a6b4728ec2c6e51adae5f5465b919ead0", null ],
+    [ "__addExtendedInfoStandard", "d0/d3b/classfsi_1_1Indexer.html#ad2b706e6b58c00d167a87187175755aa", null ],
+    [ "__addExtendedInfoThreaded", "d0/d3b/classfsi_1_1Indexer.html#a8f2a4860b7e2480e0af81f6fabb94794", null ],
     [ "__getPathType", "d0/d3b/classfsi_1_1Indexer.html#a2237929b6d3b94b3255ec187888caa7a", null ],
     [ "__iteratePath", "d0/d3b/classfsi_1_1Indexer.html#acebe67327f029b3a2e32a05d16610607", null ],
+    [ "__searchMatchingStandard", "d0/d3b/classfsi_1_1Indexer.html#a0ebbb0775498567b4097d43916470856", null ],
+    [ "__searchMatchingThreaded", "d0/d3b/classfsi_1_1Indexer.html#ad8a0076334628f5909825d154f1898e3", null ],
+    [ "__splitPathByCores", "d0/d3b/classfsi_1_1Indexer.html#a474d4b7684d96bee45e1f6573b224a39", null ],
     [ "addExtendedInfo", "d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d", null ],
     [ "addInfo", "d0/d3b/classfsi_1_1Indexer.html#a4a17eef7e041ea4b1cfe67796fe39bf8", null ],
     [ "findIndex", "d0/d3b/classfsi_1_1Indexer.html#a25d6b1b0f03419e825b9a8c45c9125e8", null ],
@@ -15,5 +20,6 @@ var classfsi_1_1Indexer =
     [ "searchExactMatching", "d0/d3b/classfsi_1_1Indexer.html#a7d989963a7a874e5d03e441b383e0b61", null ],
     [ "searchMatching", "d0/d3b/classfsi_1_1Indexer.html#a5c7f5cec792676647ac1f40fc69ecec3", null ],
     [ "id", "d0/d3b/classfsi_1_1Indexer.html#aed611d6ab66da2b9683c9c7cfc6c01c9", null ],
-    [ "indexerInfo", "d0/d3b/classfsi_1_1Indexer.html#a29e402b90c8232798f546ef1fdc48cc6", null ]
+    [ "indexerInfo", "d0/d3b/classfsi_1_1Indexer.html#a29e402b90c8232798f546ef1fdc48cc6", null ],
+    [ "threadsImpl", "d0/d3b/classfsi_1_1Indexer.html#abafcc16ed35ce10fdff093289e6bacba", null ]
 ];

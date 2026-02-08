@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FileSystemIndexer<span id="projectnumber">&#160;v0.1.0-beta</span>
+   <div id="projectname">FileSystemIndexer<span id="projectnumber">&#160;v0.1.2-beta</span>
    </div>
-   <div id="projectbrief">File System Indexer - API to index files from your system</div>
+   <div id="projectbrief">File System Indexer - An API to index files from your system</div>
   </td>
  </tr>
  </tbody>
@@ -94,7 +94,7 @@ $(function(){initNavTree('index.html','',''); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a></p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
-Last version updated: v0.1.0-beta</h1>
+Last version of README updated: v0.1.2-beta</h1>
 <hr  />
 <h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 Support information</h1>
@@ -144,9 +144,9 @@ Basic usage</h1>
 <div class="line">info.<a class="code hl_variable" href="d8/dd6/structfsi_1_1IndexerInfo.html#a9ed84fe71c39594a0ab6c487a165f06c">id</a> = <span class="stringliteral">&quot;optional-id&quot;</span>; <span class="comment">// Recommended to set an ID</span></div>
 <div class="line"> </div>
 <div class="line">indexer.addInfo(info); <span class="comment">// Add indexer info</span></div>
-<div class="ttc" id="astructfsi_1_1IndexerInfo_html"><div class="ttname"><a href="d8/dd6/structfsi_1_1IndexerInfo.html">fsi::IndexerInfo</a></div><div class="ttdef"><b>Definition</b> <a href="d8/d6f/FSI__Indexer_8hpp_source.html#l00040">FSI_Indexer.hpp:41</a></div></div>
-<div class="ttc" id="astructfsi_1_1IndexerInfo_html_a92c8f13432f387e693961996fac5963b"><div class="ttname"><a href="d8/dd6/structfsi_1_1IndexerInfo.html#a92c8f13432f387e693961996fac5963b">fsi::IndexerInfo::path</a></div><div class="ttdeci">std::string path</div><div class="ttdef"><b>Definition</b> <a href="d8/d6f/FSI__Indexer_8hpp_source.html#l00043">FSI_Indexer.hpp:43</a></div></div>
-<div class="ttc" id="astructfsi_1_1IndexerInfo_html_a9ed84fe71c39594a0ab6c487a165f06c"><div class="ttname"><a href="d8/dd6/structfsi_1_1IndexerInfo.html#a9ed84fe71c39594a0ab6c487a165f06c">fsi::IndexerInfo::id</a></div><div class="ttdeci">std::string id</div><div class="ttdef"><b>Definition</b> <a href="d8/d6f/FSI__Indexer_8hpp_source.html#l00042">FSI_Indexer.hpp:42</a></div></div>
+<div class="ttc" id="astructfsi_1_1IndexerInfo_html"><div class="ttname"><a href="d8/dd6/structfsi_1_1IndexerInfo.html">fsi::IndexerInfo</a></div><div class="ttdef"><b>Definition</b> <a href="d8/d6f/FSI__Indexer_8hpp_source.html#l00041">FSI_Indexer.hpp:42</a></div></div>
+<div class="ttc" id="astructfsi_1_1IndexerInfo_html_a92c8f13432f387e693961996fac5963b"><div class="ttname"><a href="d8/dd6/structfsi_1_1IndexerInfo.html#a92c8f13432f387e693961996fac5963b">fsi::IndexerInfo::path</a></div><div class="ttdeci">std::string path</div><div class="ttdef"><b>Definition</b> <a href="d8/d6f/FSI__Indexer_8hpp_source.html#l00044">FSI_Indexer.hpp:44</a></div></div>
+<div class="ttc" id="astructfsi_1_1IndexerInfo_html_a9ed84fe71c39594a0ab6c487a165f06c"><div class="ttname"><a href="d8/dd6/structfsi_1_1IndexerInfo.html#a9ed84fe71c39594a0ab6c487a165f06c">fsi::IndexerInfo::id</a></div><div class="ttdeci">std::string id</div><div class="ttdef"><b>Definition</b> <a href="d8/d6f/FSI__Indexer_8hpp_source.html#l00043">FSI_Indexer.hpp:43</a></div></div>
 </div><!-- fragment --><p>Recursively index a specific dir </p><div class="fragment"><div class="line"><a class="code hl_struct" href="d8/dd6/structfsi_1_1IndexerInfo.html">fsi::IndexerInfo</a> info;</div>
 <div class="line">info.<a class="code hl_variable" href="d8/dd6/structfsi_1_1IndexerInfo.html#a92c8f13432f387e693961996fac5963b">path</a> = <span class="stringliteral">&quot;/path/to/directory&quot;</span>;</div>
 <div class="line">info.<a class="code hl_variable" href="d8/dd6/structfsi_1_1IndexerInfo.html#a9ed84fe71c39594a0ab6c487a165f06c">id</a> = <span class="stringliteral">&quot;optional-id&quot;</span>;</div>
@@ -168,7 +168,7 @@ How to handle errors automatically</h1>
 <div class="line">    <span class="comment">// Print message by accessing:</span></div>
 <div class="line">    <span class="comment">// errorVariable.message</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aFSI__Indexer_8hpp_html_a5f1510074e5b49e79ce5ccd97d927c53"><div class="ttname"><a href="d8/d6f/FSI__Indexer_8hpp.html#a5f1510074e5b49e79ce5ccd97d927c53">__FSI_INDEXERERR_CHECK</a></div><div class="ttdeci">#define __FSI_INDEXERERR_CHECK(e)</div><div class="ttdef"><b>Definition</b> <a href="d8/d6f/FSI__Indexer_8hpp_source.html#l00010">FSI_Indexer.hpp:10</a></div></div>
+<div class="ttc" id="aFSI__Indexer_8hpp_html_a5f1510074e5b49e79ce5ccd97d927c53"><div class="ttname"><a href="d8/d6f/FSI__Indexer_8hpp.html#a5f1510074e5b49e79ce5ccd97d927c53">__FSI_INDEXERERR_CHECK</a></div><div class="ttdeci">#define __FSI_INDEXERERR_CHECK(e)</div><div class="ttdef"><b>Definition</b> <a href="d8/d6f/FSI__Indexer_8hpp_source.html#l00011">FSI_Indexer.hpp:11</a></div></div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
 Example usage</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
@@ -196,7 +196,7 @@ Example usage</h1>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassfsi_1_1Indexer_html"><div class="ttname"><a href="d0/d3b/classfsi_1_1Indexer.html">fsi::Indexer</a></div><div class="ttdef"><b>Definition</b> <a href="d8/d6f/FSI__Indexer_8hpp_source.html#l00059">FSI_Indexer.hpp:60</a></div></div>
+<div class="ttc" id="aclassfsi_1_1Indexer_html"><div class="ttname"><a href="d0/d3b/classfsi_1_1Indexer.html">fsi::Indexer</a></div><div class="ttdef"><b>Definition</b> <a href="d8/d6f/FSI__Indexer_8hpp_source.html#l00060">FSI_Indexer.hpp:61</a></div></div>
 <div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="df/d0a/main_8cpp_source.html#l00020">main.cpp:20</a></div></div>
 </div><!-- fragment --> </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>

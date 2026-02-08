@@ -2,6 +2,15 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_FSI__dirUtils__windows_8h" xml:lang="en-US">
 <title>inc/fsi/core/interfaces/FSI_dirUtils_windows.h File Reference</title>
 <indexterm><primary>inc/fsi/core/interfaces/FSI_dirUtils_windows.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../../FSIpredefines.h&quot;<?linebreak?></programlisting>Include dependency graph for FSI_dirUtils_windows.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d6c/FSI__dirUtils__windows_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 <simplesect>
     <title>Macros    </title>
         <itemizedlist>

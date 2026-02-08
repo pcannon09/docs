@@ -16,17 +16,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="inc/fsi/core/FSI_dirUtils.h" line="30" column="6" bodyfile="inc/fsi/core/FSI_dirUtils.h" bodystart="30" bodyend="-1"/>
-        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="75" endline="84">fsi_closeDir</referencedby>
-        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="14" endline="42">fsi_openDir</referencedby>
-        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="44" endline="73">fsi_readDir</referencedby>
+        <location file="inc/fsi/core/FSI_dirUtils.h" line="28" column="6" bodyfile="inc/fsi/core/FSI_dirUtils.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="41" endline="51">fsi_closeDir</referencedby>
+        <referencedby refid="d5/d64/FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd" compoundref="da/d97/FSI__dirUtils__posix_8c" startline="9" endline="39">fsi_openDir</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="inc/fsi/core/FSI_dirUtils.h" line="28" column="1" bodyfile="inc/fsi/core/FSI_dirUtils.h" bodystart="29" bodyend="31"/>
+    <location file="inc/fsi/core/FSI_dirUtils.h" line="26" column="1" bodyfile="inc/fsi/core/FSI_dirUtils.h" bodystart="27" bodyend="29"/>
     <listofallmembers>
       <member refid="d5/d63/structFSI__DirData_1ac8944367a6d007b8e0f6ba53be1ba1c0" prot="public" virt="non-virtual"><scope>FSI_DirData</scope><name>impl</name></member>
     </listofallmembers>

@@ -27,9 +27,9 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_FSIpredefines_8h_source_1l00023"/>00023 <emphasis role="comment">//&#32;Versioning</emphasis>
 <anchor xml:id="_FSIpredefines_8h_source_1l00024"/><link linkend="_FSIpredefines_8h_1ab5a8b868225b3a54762ebf66b914376f">00024</link> <emphasis role="preprocessor">#define&#32;FSI_VERSION_MAJOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
 <anchor xml:id="_FSIpredefines_8h_source_1l00025"/><link linkend="_FSIpredefines_8h_1a4dce5ab1ed10448e569faca3ef47471a">00025</link> <emphasis role="preprocessor">#define&#32;FSI_VERSION_MINOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
-<anchor xml:id="_FSIpredefines_8h_source_1l00026"/><link linkend="_FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7">00026</link> <emphasis role="preprocessor">#define&#32;FSI_VERSION_PATCH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00026"/><link linkend="_FSIpredefines_8h_1aba04b92fcc487e878a4a1401ce89d7d7">00026</link> <emphasis role="preprocessor">#define&#32;FSI_VERSION_PATCH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2</emphasis>
 <anchor xml:id="_FSIpredefines_8h_source_1l00027"/>00027 
-<anchor xml:id="_FSIpredefines_8h_source_1l00028"/><link linkend="_FSIpredefines_8h_1a3cf97e4cc4c73ad21eb6b2881d430add">00028</link> <emphasis role="preprocessor">#define&#32;FSI_VERSION_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;20260205</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00028"/><link linkend="_FSIpredefines_8h_1a3cf97e4cc4c73ad21eb6b2881d430add">00028</link> <emphasis role="preprocessor">#define&#32;FSI_VERSION_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;20260208</emphasis>
 <anchor xml:id="_FSIpredefines_8h_source_1l00029"/>00029 
 <anchor xml:id="_FSIpredefines_8h_source_1l00030"/>00030 <emphasis role="comment">//&#32;Version&#32;states:</emphasis>
 <anchor xml:id="_FSIpredefines_8h_source_1l00031"/>00031 <emphasis role="comment">//&#32;*&#32;dev</emphasis>
@@ -46,8 +46,8 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_FSIpredefines_8h_source_1l00042"/><link linkend="_FSIpredefines_8h_1aa86fcd3af2b1d06bfe51d040498e3eac">00042</link> <emphasis role="preprocessor">#define&#32;FSI_STRINGIFY(x)&#32;#x</emphasis>
 <anchor xml:id="_FSIpredefines_8h_source_1l00043"/><link linkend="_FSIpredefines_8h_1a361ef337aed85177f332d71f04d3f3c5">00043</link> <emphasis role="preprocessor">#define&#32;FSI_TOSTRING(x)&#32;FSI_STRINGIFY(x)</emphasis>
 <anchor xml:id="_FSIpredefines_8h_source_1l00044"/>00044 
-<anchor xml:id="_FSIpredefines_8h_source_1l00045"/><link linkend="_FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9">00045</link> <emphasis role="preprocessor">#define&#32;FSI_FREE(x)&#32;free(x);&#32;x&#32;=&#32;NULL;</emphasis>
-<anchor xml:id="_FSIpredefines_8h_source_1l00046"/><link linkend="_FSIpredefines_8h_1a5bd97c6a004e9974d1da59b14d5a52cf">00046</link> <emphasis role="preprocessor">#define&#32;FSI_DEL(x)&#32;delete&#32;x;&#32;x&#32;=&#32;nullptr;</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00045"/><link linkend="_FSIpredefines_8h_1a62bdb0773dcdb91d52bb8e4eca4c03d9">00045</link> <emphasis role="preprocessor">#define&#32;FSI_FREE(x)&#32;free(x);&#32;x&#32;=&#32;NULL</emphasis>
+<anchor xml:id="_FSIpredefines_8h_source_1l00046"/><link linkend="_FSIpredefines_8h_1a5bd97c6a004e9974d1da59b14d5a52cf">00046</link> <emphasis role="preprocessor">#define&#32;FSI_DEL(x)&#32;delete&#32;x;&#32;x&#32;=&#32;nullptr</emphasis>
 <anchor xml:id="_FSIpredefines_8h_source_1l00047"/>00047 
 <anchor xml:id="_FSIpredefines_8h_source_1l00048"/>00048 <emphasis role="preprocessor">#ifndef&#32;FSI_DEV</emphasis>
 <anchor xml:id="_FSIpredefines_8h_source_1l00049"/><link linkend="_FSIpredefines_8h_1ab0a960f494d546badeba4fb8803aba45">00049</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;FSI_DEV&#32;true</emphasis>

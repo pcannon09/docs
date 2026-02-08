@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['what_20is_20fsi_0',['What is FSI?',['../index.html#autotoc_md4',1,'']]]
+  ['v0_201_202_20beta_0',['Last version of README updated: v0.1.2-beta',['../index.html#autotoc_md1',1,'']]],
+  ['version_20of_20readme_20updated_3a_20v0_201_202_20beta_1',['Last version of README updated: v0.1.2-beta',['../index.html#autotoc_md1',1,'']]]
 ];

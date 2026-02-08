@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['tests_0',['Run the Tests',['../index.html#autotoc_md11',1,'']]],
-  ['the_20sources_1',['Compile the sources',['../index.html#autotoc_md10',1,'']]],
-  ['the_20tests_2',['Run the Tests',['../index.html#autotoc_md11',1,'']]],
-  ['to_20compile_3',['How to Compile',['../index.html#autotoc_md6',1,'']]],
-  ['to_20handle_20errors_20automatically_4',['How to handle errors automatically',['../index.html#autotoc_md14',1,'']]]
+  ['search_20and_20manipulate_20indexed_20info_0',['Search and manipulate indexed info',['../index.html#autotoc_md13',1,'']]],
+  ['setting_20up_1',['Setting up',['../index.html#autotoc_md7',1,'']]],
+  ['sources_2',['Compile the sources',['../index.html#autotoc_md10',1,'']]],
+  ['support_20information_3',['Support information',['../index.html#autotoc_md3',1,'']]],
+  ['system_20indexer_4',['File System Indexer',['../index.html',1,'']]]
 ];

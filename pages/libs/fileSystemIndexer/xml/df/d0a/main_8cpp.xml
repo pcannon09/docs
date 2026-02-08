@@ -7,36 +7,40 @@
     <includes refid="db/d19/FSI__temperatureConverter_8h" local="yes">../inc/fsi/modules/temperature/FSI_temperatureConverter.h</includes>
     <includes local="yes">ciof/ciof.hpp</includes>
     <incdepgraph>
-      <node id="8">
+      <node id="9">
         <label>../../FSIpredefines.h</label>
         <link refid="d8/db8/FSIpredefines_8h"/>
       </node>
-      <node id="9">
+      <node id="10">
         <label>../FSI_dirUtils.h</label>
         <link refid="dc/d84/FSI__dirUtils_8h"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>../core/FSI_timeUtils.hpp</label>
         <link refid="d3/dcb/FSI__timeUtils_8hpp"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>../inc/fsi/core/interfaces/FSI_dirUtils_posix.h</label>
         <link refid="d5/d64/FSI__dirUtils__posix_8h"/>
-        <childnode refid="8" relation="include">
-        </childnode>
         <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -48,11 +52,13 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
-      <node id="14">
+      <node id="17">
         <label>../inc/fsi/modules/temperature/FSI_temperatureConverter.h</label>
         <link refid="db/d19/FSI__temperatureConverter_8h"/>
-        <childnode refid="15" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -60,14 +66,14 @@
         <link refid="df/d0a/main_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="19">
         <label>ciof/ciof.hpp</label>
       </node>
       <node id="12">
@@ -79,17 +85,26 @@
       <node id="13">
         <label>dirent.h</label>
       </node>
-      <node id="6">
+      <node id="16">
+        <label>fcntl.h</label>
+      </node>
+      <node id="7">
         <label>filesystem</label>
       </node>
-      <node id="15">
+      <node id="18">
         <label>stdbool.h</label>
       </node>
       <node id="3">
         <label>string</label>
       </node>
-      <node id="10">
-        <label>string.h</label>
+      <node id="14">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="5">
+        <label>thread</label>
+      </node>
+      <node id="15">
+        <label>unistd.h</label>
       </node>
       <node id="4">
         <label>vector</label>
@@ -110,14 +125,14 @@
         </inbodydescription>
         <location file="src/main.cpp" line="20" column="5" bodyfile="src/main.cpp" bodystart="20" bodyend="43"/>
         <references refid="dc/d27/namespaceanonymous__namespace_02main_8cpp_03_1ab4857c620ed555971c741512e920a0ac" compoundref="df/d0a/main_8cpp" startline="11" endline="17">anonymous_namespace{main.cpp}::__timeToStr</references>
-        <references refid="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="62" endline="81">fsi::Indexer::addExtendedInfo</references>
-        <references refid="d0/d3b/classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="143" endline="152">fsi::Indexer::findIndex</references>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1aa99e1614c02288ffc1f5b62ecf2e602d" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="175" endline="181">fsi::Indexer::addExtendedInfo</references>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a25d6b1b0f03419e825b9a8c45c9125e8" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="234" endline="243">fsi::Indexer::findIndex</references>
         <references refid="db/d19/FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1" compoundref="d7/d2d/FSI__temperatureConverter_8c" startline="5" endline="29">FSI_temperatureConvertCelFrom</references>
         <references refid="db/d19/FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d" compoundref="d7/d2d/FSI__temperatureConverter_8c" startline="31" endline="55">FSI_temperatureConvertCelTo</references>
-        <references refid="d0/d3b/classfsi_1_1Indexer_1a536321b24430696e730bc71f35c9ed0a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="184" endline="189">fsi::Indexer::getFileDTInfo</references>
-        <references refid="d8/dd6/structfsi_1_1IndexerInfo_1a9ed84fe71c39594a0ab6c487a165f06c" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="42">fsi::IndexerInfo::id</references>
-        <references refid="d8/dd6/structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="43">fsi::IndexerInfo::path</references>
-        <references refid="d0/d3b/classfsi_1_1Indexer_1a5c7f5cec792676647ac1f40fc69ecec3" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="91" endline="105">fsi::Indexer::searchMatching</references>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a536321b24430696e730bc71f35c9ed0a" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="275" endline="280">fsi::Indexer::getFileDTInfo</references>
+        <references refid="d8/dd6/structfsi_1_1IndexerInfo_1a9ed84fe71c39594a0ab6c487a165f06c" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="43">fsi::IndexerInfo::id</references>
+        <references refid="d8/dd6/structfsi_1_1IndexerInfo_1a92c8f13432f387e693961996fac5963b" compoundref="d8/d6f/FSI__Indexer_8hpp" startline="44">fsi::IndexerInfo::path</references>
+        <references refid="d0/d3b/classfsi_1_1Indexer_1a5c7f5cec792676647ac1f40fc69ecec3" compoundref="d3/d0f/FSI__Indexer_8cpp" startline="191" endline="196">fsi::Indexer::searchMatching</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -149,7 +164,7 @@
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>ciof::print(<ref refid="db/d19/FSI__temperatureConverter_8h_1aafde95eb428450f7515b36decef7b59d" kindref="member">FSI_temperatureConvertCelTo</ref>(</highlight><highlight class="stringliteral">&quot;f&quot;</highlight><highlight class="normal">,<sp/>33));</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>ciof::print(<ref refid="db/d19/FSI__temperatureConverter_8h_1a39b05ae287af83bc12cb5c8442cbdee1" kindref="member">FSI_temperatureConvertCelFrom</ref>(</highlight><highlight class="stringliteral">&quot;f&quot;</highlight><highlight class="normal">,<sp/>33));</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/d3b/classfsi_1_1Indexer" kindref="compound">fsi::Indexer</ref><sp/>indexer(</highlight><highlight class="stringliteral">&quot;main-indexer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/d3b/classfsi_1_1Indexer" kindref="compound">fsi::Indexer</ref><sp/>indexer(</highlight><highlight class="stringliteral">&quot;main-indexer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/dd6/structfsi_1_1IndexerInfo" kindref="compound">fsi::IndexerInfo</ref><sp/>info;</highlight></codeline>

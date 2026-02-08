@@ -1,6 +1,6 @@
 var index =
 [
-    [ "Last version updated: v0.1.0-beta", "index.html#autotoc_md1", null ],
+    [ "Last version of README updated: v0.1.2-beta", "index.html#autotoc_md1", null ],
     [ "Support information", "index.html#autotoc_md3", null ],
     [ "What is FSI?", "index.html#autotoc_md4", null ],
     [ "Requirements", "index.html#autotoc_md5", null ],

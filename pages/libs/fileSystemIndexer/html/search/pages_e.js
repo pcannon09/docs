@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['search_20and_20manipulate_20indexed_20info_0',['Search and manipulate indexed info',['../index.html#autotoc_md13',1,'']]],
-  ['setting_20up_1',['Setting up',['../index.html#autotoc_md7',1,'']]],
-  ['sources_2',['Compile the sources',['../index.html#autotoc_md10',1,'']]],
-  ['support_20information_3',['Support information',['../index.html#autotoc_md3',1,'']]],
-  ['system_20indexer_4',['File System Indexer',['../index.html',1,'']]]
+  ['readme_20updated_3a_20v0_201_202_20beta_0',['Last version of README updated: v0.1.2-beta',['../index.html#autotoc_md1',1,'']]],
+  ['requirements_1',['Requirements',['../index.html#autotoc_md5',1,'']]],
+  ['run_20the_20tests_2',['Run the Tests',['../index.html#autotoc_md11',1,'']]]
 ];

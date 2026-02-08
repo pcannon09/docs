@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FileSystemIndexer<span id="projectnumber">&#160;v0.1.0-beta</span>
+   <div id="projectname">FileSystemIndexer<span id="projectnumber">&#160;v0.1.2-beta</span>
    </div>
-   <div id="projectbrief">File System Indexer - API to index files from your system</div>
+   <div id="projectbrief">File System Indexer - An API to index files from your system</div>
   </td>
  </tr>
  </tbody>
@@ -94,21 +94,24 @@ $(function(){initNavTree('d8/d6f/FSI__Indexer_8hpp.html','../../',''); });
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/dcb/FSI__timeUtils_8hpp_source.html">../core/FSI_timeUtils.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for FSI_Indexer.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d0d/FSI__Indexer_8hpp__incl.png" border="0" usemap="#ainc_2fsi_2lib_2FSI__Indexer_8hpp" loading="lazy" alt=""/></div>
 <map name="ainc_2fsi_2lib_2FSI__Indexer_8hpp" id="ainc_2fsi_2lib_2FSI__Indexer_8hpp">
-<area shape="rect" title=" " alt="" coords="25,5,199,32"/>
+<area shape="rect" title=" " alt="" coords="65,5,239,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,59,107"/>
-<area shape="poly" title=" " alt="" coords="97,35,59,71,55,68,99,30"/>
+<area shape="poly" title=" " alt="" coords="130,35,68,74,64,70,132,30"/>
 <area shape="rect" title=" " alt="" coords="83,80,141,107"/>
-<area shape="poly" title=" " alt="" coords="113,30,115,65,109,64,111,35"/>
-<area shape="rect" href="../../d3/dcb/FSI__timeUtils_8hpp.html" title=" " alt="" coords="164,80,332,107"/>
-<area shape="poly" title=" " alt="" coords="136,30,213,71,208,73,135,35"/>
-<area shape="rect" title=" " alt="" coords="207,155,289,181"/>
-<area shape="poly" title=" " alt="" coords="250,105,250,140,246,138,246,109"/>
+<area shape="poly" title=" " alt="" coords="147,31,128,68,124,65,143,35"/>
+<area shape="rect" title=" " alt="" coords="165,80,222,107"/>
+<area shape="poly" title=" " alt="" coords="160,30,181,67,176,67,158,35"/>
+<area shape="rect" href="../../d3/dcb/FSI__timeUtils_8hpp.html" title=" " alt="" coords="246,80,413,107"/>
+<area shape="poly" title=" " alt="" coords="183,30,287,73,282,75,183,35"/>
+<area shape="rect" title=" " alt="" coords="289,155,370,181"/>
+<area shape="poly" title=" " alt="" coords="331,105,331,141,327,137,327,109"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -179,13 +182,13 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(e.raise || e.fatal) &amp;&amp; e.code != <a class="code hl_define" href="#a3ac8f32fbd100d7ab4f9ab08af2f846a">__FSI_SUCCESS</a></div>
-<div class="ttc" id="aFSI__Indexer_8hpp_html_a3ac8f32fbd100d7ab4f9ab08af2f846a"><div class="ttname"><a href="#a3ac8f32fbd100d7ab4f9ab08af2f846a">__FSI_SUCCESS</a></div><div class="ttdeci">#define __FSI_SUCCESS</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d6f/FSI__Indexer_8hpp_source.html#l00009">FSI_Indexer.hpp:9</a></div></div>
+<div class="ttc" id="aFSI__Indexer_8hpp_html_a3ac8f32fbd100d7ab4f9ab08af2f846a"><div class="ttname"><a href="#a3ac8f32fbd100d7ab4f9ab08af2f846a">__FSI_SUCCESS</a></div><div class="ttdeci">#define __FSI_SUCCESS</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d6f/FSI__Indexer_8hpp_source.html#l00010">FSI_Indexer.hpp:10</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d8/d6f/FSI__Indexer_8hpp_source.html#l00010">10</a> of file <a class="el" href="../../d8/d6f/FSI__Indexer_8hpp_source.html">FSI_Indexer.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span><span class="preprocessor">#define __FSI_INDEXERERR_CHECK(e) \</span></div>
-<div class="line"><span class="lineno">   11</span><span class="preprocessor">    (e.raise || e.fatal) &amp;&amp; e.code != __FSI_SUCCESS</span></div>
+<p class="definition">Definition at line <a class="el" href="../../d8/d6f/FSI__Indexer_8hpp_source.html#l00011">11</a> of file <a class="el" href="../../d8/d6f/FSI__Indexer_8hpp_source.html">FSI_Indexer.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span><span class="preprocessor">#define __FSI_INDEXERERR_CHECK(e) \</span></div>
+<div class="line"><span class="lineno">   12</span><span class="preprocessor">    (e.raise || e.fatal) &amp;&amp; e.code != __FSI_SUCCESS</span></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="../../d3/d0f/FSI__Indexer_8cpp_source.html#l00062">fsi::Indexer::addExtendedInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/d0f/FSI__Indexer_8cpp_source.html#l00069">fsi::Indexer::__addExtendedInfoStandard()</a>, and <a class="el" href="../../d3/d0f/FSI__Indexer_8cpp_source.html#l00090">fsi::Indexer::__addExtendedInfoThreaded()</a>.</p>
 
 </div>
 </div>
@@ -201,7 +204,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d6f/FSI__Indexer_8hpp_source.html#l00009">9</a> of file <a class="el" href="../../d8/d6f/FSI__Indexer_8hpp_source.html">FSI_Indexer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d6f/FSI__Indexer_8hpp_source.html#l00010">10</a> of file <a class="el" href="../../d8/d6f/FSI__Indexer_8hpp_source.html">FSI_Indexer.hpp</a>.</p>
 
 </div>
 </div>

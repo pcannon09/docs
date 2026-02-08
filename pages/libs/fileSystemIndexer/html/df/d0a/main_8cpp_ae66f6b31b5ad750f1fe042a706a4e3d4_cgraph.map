@@ -1,35 +1,53 @@
 <map id="main" name="main">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,173,55,200"/>
-<area shape="rect" id="Node000002" href="$dc/d27/namespaceanonymous__namespace_02main_8cpp_03.html#ab4857c620ed555971c741512e920a0ac" title=" " alt="" coords="128,5,292,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="33,172,56,117,75,85,101,58,116,50,112,54,104,62,79,89,60,120,38,174"/>
-<area shape="rect" id="Node000003" href="$d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d" title="Add the exact path and the sub&#45;paths to have the info from." alt="" coords="114,72,306,99"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="38,172,64,139,101,108,116,103,112,107,104,113,68,143,43,174"/>
-<area shape="rect" id="Node000011" href="$d0/d3b/classfsi_1_1Indexer.html#a25d6b1b0f03419e825b9a8c45c9125e8" title="Find the index from the vector database from the indexer." alt="" coords="136,123,284,149"/>
-<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="53,175,102,159,133,152,129,155,103,164,57,180"/>
-<area shape="rect" id="Node000012" href="$d7/d2d/FSI__temperatureConverter_8c.html#a39b05ae287af83bc12cb5c8442cbdee1" title="Convert from from to Celcius as a double." alt="" coords="103,173,317,200"/>
-<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="54,184,89,185,85,188,56,189"/>
-<area shape="rect" id="Node000013" href="$d7/d2d/FSI__temperatureConverter_8c.html#aafde95eb428450f7515b36decef7b59d" title="Convert Celcius to from as a double." alt="" coords="111,224,309,251"/>
-<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="54,193,103,209,133,219,128,221,102,215,55,198"/>
-<area shape="rect" id="Node000014" href="$d0/d3b/classfsi_1_1Indexer.html#a536321b24430696e730bc71f35c9ed0a" title="Get when the file, dir or symlink was last modified." alt="" coords="123,275,296,301"/>
-<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="40,198,68,230,104,260,116,268,111,269,101,265,64,234,40,203"/>
-<area shape="rect" id="Node000016" href="$d0/d3b/classfsi_1_1Indexer.html#a5c7f5cec792676647ac1f40fc69ecec3" title="Search all matching path or ID that contains path." alt="" coords="117,325,303,352"/>
-<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="36,198,60,255,79,285,104,311,112,318,106,318,101,315,75,289,55,257,34,203"/>
-<area shape="rect" id="Node000004" href="$d0/d3b/classfsi_1_1Indexer.html#a2237929b6d3b94b3255ec187888caa7a" title="Get if path from function param is a:" alt="" coords="593,35,775,61"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="284,69,365,57,475,49,580,48,575,50,475,55,365,63,285,74"/>
-<area shape="rect" id="Node000005" href="$d0/d3b/classfsi_1_1Indexer.html#acebe67327f029b3a2e32a05d16610607" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="370,123,541,149"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="278,97,375,118,370,120,278,102"/>
-<area shape="rect" id="Node000010" href="$d0/d3b/classfsi_1_1Indexer.html#a4a17eef7e041ea4b1cfe67796fe39bf8" title="Add the exact path to have the info from." alt="" coords="386,72,524,99"/>
-<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="306,83,373,84,369,86,307,88"/>
-<area shape="rect" id="Node000006" href="$d6/d8a/FSI__dirUtils_8c.html#a3bc7da82fe7b1e798ee4b6d018534946" title="Walk to every directory and file and set vec to a CVEC value." alt="" coords="649,123,719,149"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="541,133,636,135,631,137,542,139"/>
-<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="652,121,647,114,651,104,663,98,684,96,706,99,719,108,714,107,704,104,684,101,665,103,655,108,652,113,657,123"/>
-<area shape="rect" id="Node000007" href="$da/d97/FSI__dirUtils__posix_8c.html#a07bb8fc8aa9e6ea91c2f2e65425e03e1" title="Get the directory data to deallocate memory." alt="" coords="823,72,913,99"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="718,124,810,101,805,103,720,129"/>
-<area shape="rect" id="Node000008" href="$da/d97/FSI__dirUtils__posix_8c.html#a1c15e434435c62f17b15a34877bd60bd" title="Open directory as read only." alt="" coords="824,123,912,149"/>
-<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="719,133,811,136,806,136,719,139"/>
-<area shape="rect" id="Node000009" href="$da/d97/FSI__dirUtils__posix_8c.html#acb473fa7940b3c89aa11845436bbae8f" title="Read directory from reading the FSI_DirData information." alt="" coords="826,173,910,200"/>
-<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="719,143,813,171,808,171,719,148"/>
-<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="524,72,586,64,581,65,525,77"/>
-<area shape="rect" id="Node000015" href="$da/df3/namespacefsi_1_1utils.html#ae0fd58fdf5e153ce89499a2bad2a8974" title="Set std::filesystem clock data to an actual usable Date and Time format." alt="" coords="365,275,545,301"/>
-<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="297,285,352,288,347,288,297,291"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,184,55,211"/>
+<area shape="rect" id="Node000002" href="$dc/d27/namespaceanonymous__namespace_02main_8cpp_03.html#ab4857c620ed555971c741512e920a0ac" title=" " alt="" coords="128,16,292,59"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="33,183,56,128,75,96,101,69,115,61,112,65,104,73,79,99,60,130,38,184"/>
+<area shape="rect" id="Node000003" href="$d0/d3b/classfsi_1_1Indexer.html#aa99e1614c02288ffc1f5b62ecf2e602d" title="Add the exact path and the sub&#45;paths to have the info from;." alt="" coords="114,83,306,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="38,183,64,150,101,119,115,114,112,118,104,124,68,154,43,185"/>
+<area shape="rect" id="Node000015" href="$d0/d3b/classfsi_1_1Indexer.html#a25d6b1b0f03419e825b9a8c45c9125e8" title="Find the index from the vector database from the indexer." alt="" coords="136,133,284,160"/>
+<area shape="poly" id="edge22_Node000001_Node000015" title=" " alt="" coords="53,186,102,169,133,162,129,166,103,175,57,190"/>
+<area shape="rect" id="Node000016" href="$d7/d2d/FSI__temperatureConverter_8c.html#a39b05ae287af83bc12cb5c8442cbdee1" title="Convert from from to Celcius as a double." alt="" coords="103,184,317,211"/>
+<area shape="poly" id="edge23_Node000001_Node000016" title=" " alt="" coords="54,195,89,196,85,199,57,200"/>
+<area shape="rect" id="Node000017" href="$d7/d2d/FSI__temperatureConverter_8c.html#aafde95eb428450f7515b36decef7b59d" title="Convert Celcius to from as a double." alt="" coords="111,235,309,261"/>
+<area shape="poly" id="edge24_Node000001_Node000017" title=" " alt="" coords="54,204,103,220,133,229,128,232,102,225,56,209"/>
+<area shape="rect" id="Node000018" href="$d0/d3b/classfsi_1_1Indexer.html#a536321b24430696e730bc71f35c9ed0a" title="Get when the file, dir or symlink was last modified." alt="" coords="123,285,296,312"/>
+<area shape="poly" id="edge25_Node000001_Node000018" title=" " alt="" coords="40,208,68,241,104,271,116,278,111,280,101,276,64,245,40,214"/>
+<area shape="rect" id="Node000020" href="$d0/d3b/classfsi_1_1Indexer.html#a5c7f5cec792676647ac1f40fc69ecec3" title="Either use threaded or unthreaded search matching." alt="" coords="117,340,303,367"/>
+<area shape="poly" id="edge27_Node000001_Node000020" title=" " alt="" coords="35,208,60,265,79,296,104,322,119,333,114,334,101,326,75,299,55,267,35,214"/>
+<area shape="rect" id="Node000004" href="$d0/d3b/classfsi_1_1Indexer.html#ad2b706e6b58c00d167a87187175755aa" title="Standard non&#45;threaded extended information." alt="" coords="373,29,557,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="288,80,360,68,355,71,290,84"/>
+<area shape="rect" id="Node000013" href="$d0/d3b/classfsi_1_1Indexer.html#a8f2a4860b7e2480e0af81f6fabb94794" title="Threaded extended information." alt="" coords="373,120,557,163"/>
+<area shape="poly" id="edge16_Node000003_Node000013" title=" " alt="" coords="288,107,360,121,355,123,290,113"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="421,28,419,19,426,10,442,5,465,3,490,5,507,13,502,14,489,10,465,8,443,10,430,15,424,21,426,29"/>
+<area shape="rect" id="Node000005" href="$d0/d3b/classfsi_1_1Indexer.html#a2237929b6d3b94b3255ec187888caa7a" title="Get if path from function param is a:" alt="" coords="833,37,1014,64"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="557,30,613,23,699,18,785,23,848,33,843,34,784,28,699,23,614,28,559,35"/>
+<area shape="rect" id="Node000006" href="$d0/d3b/classfsi_1_1Indexer.html#acebe67327f029b3a2e32a05d16610607" title="Iterate all the files and directories (symlinks too) from path." alt="" coords="613,163,785,189"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="539,70,567,82,623,116,672,153,667,153,620,120,564,86,539,75"/>
+<area shape="rect" id="Node000012" href="$d0/d3b/classfsi_1_1Indexer.html#a4a17eef7e041ea4b1cfe67796fe39bf8" title="Add the exact path to have the info from." alt="" coords="630,37,768,64"/>
+<area shape="poly" id="edge14_Node000004_Node000012" title=" " alt="" coords="557,48,617,50,612,52,559,53"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="661,162,654,154,659,144,674,138,699,136,726,139,741,147,736,147,724,144,699,141,675,143,663,148,660,153,666,163"/>
+<area shape="rect" id="Node000007" href="$d6/d8a/FSI__dirUtils_8c.html#a6717de7c355039c7846da70c56cd2f61" title="Walk to every directory and file and set vec to a CVEC value." alt="" coords="889,163,958,189"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="784,173,876,176,870,176,785,179"/>
+<area shape="rect" id="Node000008" href="$d5/d64/FSI__dirUtils__posix_8h.html#a1d0d11194a91ede34644606912fbbebf" title=" " alt="" coords="1062,163,1145,189"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="958,173,1049,176,1044,176,959,179"/>
+<area shape="poly" id="edge10_Node000008_Node000008" title=" " alt="" coords="1073,161,1067,154,1071,144,1084,138,1104,136,1125,139,1138,148,1133,147,1124,144,1104,141,1085,143,1075,148,1073,153,1077,163"/>
+<area shape="rect" id="Node000009" href="$d5/d64/FSI__dirUtils__posix_8h.html#a5a4f995512a0183ca0e5d7aed16d62c3" title=" " alt="" coords="1193,112,1378,139"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="1145,162,1193,148,1217,144,1222,143,1194,153,1147,167"/>
+<area shape="rect" id="Node000010" href="$d5/d64/FSI__dirUtils__posix_8h.html#a9420f3d1392d4194c6192d2096605bd9" title=" " alt="" coords="1234,163,1337,189"/>
+<area shape="poly" id="edge12_Node000008_Node000010" title=" " alt="" coords="1145,173,1221,176,1216,176,1146,179"/>
+<area shape="rect" id="Node000011" href="$d5/d64/FSI__dirUtils__posix_8h.html#a84035112786899729fa79cc37ea76f52" title=" " alt="" coords="1233,213,1338,240"/>
+<area shape="poly" id="edge13_Node000008_Node000011" title=" " alt="" coords="1146,185,1194,199,1222,209,1217,209,1193,204,1146,190"/>
+<area shape="poly" id="edge15_Node000012_Node000005" title=" " alt="" coords="767,48,820,50,814,51,769,53"/>
+<area shape="poly" id="edge18_Node000013_Node000005" title=" " alt="" coords="557,121,839,66,835,69,558,126"/>
+<area shape="poly" id="edge19_Node000013_Node000006" title=" " alt="" coords="558,152,601,161,595,162,558,158"/>
+<area shape="poly" id="edge21_Node000013_Node000012" title=" " alt="" coords="520,117,612,80,649,69,644,71,614,85,522,122"/>
+<area shape="poly" id="edge17_Node000013_Node000013" title=" " alt="" coords="421,119,419,110,426,101,442,95,465,93,490,96,507,104,501,105,489,101,465,99,443,101,430,105,424,111,426,120"/>
+<area shape="rect" id="Node000014" href="$d0/d3b/classfsi_1_1Indexer.html#a474d4b7684d96bee45e1f6573b224a39" title="Split the paths found to be used in the future in different CPU cores." alt="" coords="619,213,779,256"/>
+<area shape="poly" id="edge20_Node000013_Node000014" title=" " alt="" coords="520,161,614,199,631,207,625,207,612,204,520,166"/>
+<area shape="rect" id="Node000019" href="$da/df3/namespacefsi_1_1utils.html#ae0fd58fdf5e153ce89499a2bad2a8974" title="Set std::filesystem clock data to an actual usable Date and Time format." alt="" coords="375,281,555,308"/>
+<area shape="poly" id="edge26_Node000018_Node000019" title=" " alt="" coords="297,295,362,296,357,297,298,300"/>
+<area shape="rect" id="Node000021" href="$d0/d3b/classfsi_1_1Indexer.html#a0ebbb0775498567b4097d43916470856" title="Search all matching path or ID that contains path." alt="" coords="365,399,565,441"/>
+<area shape="poly" id="edge28_Node000020_Node000021" title=" " alt="" coords="264,365,369,394,363,395,264,370"/>
+<area shape="rect" id="Node000022" href="$d0/d3b/classfsi_1_1Indexer.html#ad8a0076334628f5909825d154f1898e3" title="Search all matching path or ID that contains path using parallelization with multiple CPU threads." alt="" coords="365,332,565,375"/>
+<area shape="poly" id="edge29_Node000020_Node000022" title=" " alt="" coords="303,351,352,353,347,354,304,356"/>
 </map>

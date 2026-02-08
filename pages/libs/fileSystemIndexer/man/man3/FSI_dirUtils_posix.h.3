@@ -1,4 +1,4 @@
-.TH "inc/fsi/core/interfaces/FSI_dirUtils_posix.h" 3 "Version v0.1.0-beta" "FileSystemIndexer" \" -*- nroff -*-
+.TH "inc/fsi/core/interfaces/FSI_dirUtils_posix.h" 3 "Version v0.1.2-beta" "FileSystemIndexer" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,12 +14,21 @@ inc/fsi/core/interfaces/FSI_dirUtils_posix.h
 .br
 \fR#include <dirent\&.h>\fP
 .br
+\fR#include <sys/stat\&.h>\fP
+.br
+\fR#include <unistd\&.h>\fP
+.br
+\fR#include <fcntl\&.h>\fP
+.br
 
 .SS "Classes"
 
 .in +1c
 .ti -1c
 .RI "struct \fBFSI_DirData_POSIX\fP"
+.br
+.ti -1c
+.RI "struct \fBFSI_Visited_POSIX\fP"
 .br
 .in -1c
 .SS "Macros"
@@ -38,14 +47,27 @@ inc/fsi/core/interfaces/FSI_dirUtils_posix.h
 .ti -1c
 .RI "typedef struct FSI_DirData_POSIX \fBFSI_DirData_POSIX\fP"
 .br
+.ti -1c
+.RI "typedef struct FSI_Visited_POSIX \fBFSI_Visited_POSIX\fP"
+.br
 .in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
+.RI "static void \fB__fsi_walk\fP (CVEC *out, CVEC *visited, const char *path)"
+.br
+.ti -1c
 .RI "void \fBfsi_closeDir\fP (\fBFSI_DirData\fP *d)"
 .br
 .RI "Get the directory data to deallocate memory\&. "
+.ti -1c
+.RI "static \fBFSI_EntryType\fP \fBfsi_getEntryType\fP (int dirfd, struct dirent *e)"
+.br
+.RI "Get the entry type of the dirfd from the \fBFSI_DirData_POSIX\fP\&. "
+.ti -1c
+.RI "static \fBFSI_EntryType\fP \fBfsi_getEntryTypeFromDirent\fP (int dirfd, struct dirent *e, struct stat *stOut)"
+.br
 .ti -1c
 .RI "int \fBfsi_openDir\fP (\fBFSI_DirData\fP *d, const char *path)"
 .br
@@ -54,6 +76,12 @@ inc/fsi/core/interfaces/FSI_dirUtils_posix.h
 .RI "int \fBfsi_readDir\fP (\fBFSI_DirData\fP *d, \fBFSI_EntryData\fP *out)"
 .br
 .RI "Read directory from reading the \fR\fBFSI_DirData\fP\fP information\&. "
+.ti -1c
+.RI "static void \fBfsi_visitedAdd\fP (CVEC *v, dev_t dev, ino_t ino)"
+.br
+.ti -1c
+.RI "static int \fBfsi_visitedHas\fP (CVEC *v, dev_t dev, ino_t ino)"
+.br
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
@@ -69,8 +97,76 @@ Definition at line \fB5\fP of file \fBFSI_dirUtils_posix\&.h\fP\&.
 .PP 
 .SS "typedef struct FSI_DirData_POSIX FSI_DirData_POSIX"
 
+.SS "typedef struct FSI_Visited_POSIX FSI_Visited_POSIX"
+
 .SH "Function Documentation"
 .PP 
+.SS "void __fsi_walk (CVEC * out, CVEC * visited, const char * path)\fR [inline]\fP, \fR [static]\fP"
+
+.PP
+Definition at line \fB145\fP of file \fBFSI_dirUtils_posix\&.h\fP\&.
+.nf
+151 {
+152     int fd = open(path, O_RDONLY | O_DIRECTORY | O_CLOEXEC);
+153     if (fd < 0) return;
+154 
+155     DIR *dir = fdopendir(fd);
+156     if (!dir)
+157     {
+158         close(fd);
+159         return;
+160     }
+161 
+162     struct stat dirSt;
+163 
+164     if (fstat(fd, &dirSt) != 0)
+165     {
+166         closedir(dir);
+167         return;
+168     }
+169 
+170     if (fsi_visitedHas(visited, dirSt\&.st_dev, dirSt\&.st_ino))
+171     {
+172         closedir(dir);
+173         return;
+174     }
+175 
+176     fsi_visitedAdd(visited, dirSt\&.st_dev, dirSt\&.st_ino);
+177 
+178     struct dirent *e;
+179     CSTR tmp = cstr_init();
+180 
+181     while ((e = readdir(dir)))
+182     {
+183         if (e\->d_name[0] == '\&.' &&
+184             (e\->d_name[1] == '\\0' || (e\->d_name[1] == '\&.' && e\->d_name[2] == '\\0')))
+185             continue;
+186 
+187         struct stat st;
+188 
+189         int type = fsi_getEntryTypeFromDirent(fd, e, &st);
+190 
+191         cstr_set(&tmp, path);
+192         cstr_add(&tmp, "/");
+193         cstr_add(&tmp, e\->d_name);
+194 
+195         cvec_push(out, const char*, CVEC_sys_strdup(tmp\&.data));
+196 
+197         if (type == FSI_DIR)
+198             __fsi_walk(out, visited, tmp\&.data);
+199     }
+200 
+201     cstr_destroy(&tmp);
+202 
+203     closedir(dir);
+204 }
+.PP
+.fi
+
+.PP
+References \fB__fsi_walk()\fP, \fBFSI_DIR\fP, \fBfsi_getEntryTypeFromDirent()\fP, \fBfsi_visitedAdd()\fP, and \fBfsi_visitedHas()\fP\&.
+.PP
+Referenced by \fB__fsi_walk()\fP, and \fBfsi_walk()\fP\&.
 .SS "void fsi_closeDir (\fBFSI_DirData\fP * d)"
 
 .PP
@@ -83,24 +179,111 @@ Get the directory data to deallocate memory\&.
 .PP
 
 .PP
-Definition at line \fB75\fP of file \fBFSI_dirUtils_posix\&.c\fP\&.
+Definition at line \fB41\fP of file \fBFSI_dirUtils_posix\&.c\fP\&.
 .nf
-76 {
-77     FSI_DirData_POSIX *p = d\->impl;
-78 
-79     cstr_destroy(&p\->path);
-80 
-81     closedir(p\->dir);
-82 
-83     FSI_FREE(p);
-84 }
+42 {
+43     FSI_DirData_POSIX *p = d\->impl;
+44 
+45     cstr_destroy(&p\->path);
+46 
+47     // Closes FD variable too
+48     closedir(p\->dir);
+49 
+50     FSI_FREE(p);
+51 }
 .PP
 .fi
 
 .PP
 References \fBFSI_DirData_POSIX::dir\fP, \fBFSI_FREE\fP, \fBFSI_DirData::impl\fP, and \fBFSI_DirData_POSIX::path\fP\&.
+.SS "\fBFSI_EntryType\fP fsi_getEntryType (int dirfd, struct dirent * e)\fR [inline]\fP, \fR [static]\fP"
+
 .PP
-Referenced by \fBfsi_walk()\fP\&.
+Get the entry type of the dirfd from the \fBFSI_DirData_POSIX\fP\&. 
+.IP "\(bu" 2
+Get if: Directory, File, Symlink or other 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdirfd\fP Entry type to get from the syscall 
+.br
+\fIe\fP Get dirent type quickly from the \fRe\fP ptr with its corresponding \fRdirent\fP data 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return the \fBFSI_EntryType\fP 
+.RE
+.PP
+
+.PP
+
+.PP
+Definition at line \fB70\fP of file \fBFSI_dirUtils_posix\&.h\fP\&.
+.nf
+71 {
+72     switch (e\->d_type)
+73     {
+74         case DT_REG: return FSI_FILE;
+75         case DT_DIR: return FSI_DIR;
+76         case DT_LNK: return FSI_SYMLINK;
+77         case DT_UNKNOWN:
+78         default:
+79         {
+80             struct stat st;
+81 
+82             if (fstatat(dirfd, e\->d_name, &st, AT_SYMLINK_NOFOLLOW) == 0)
+83             {
+84                 if (S_ISREG(st\&.st_mode)) return FSI_FILE;
+85                 if (S_ISDIR(st\&.st_mode)) return FSI_DIR;
+86                 if (S_ISDIR(st\&.st_mode)) return FSI_SYMLINK;
+87             }
+88 
+89             return FSI_OTHER;
+90         }
+91     }
+92 }
+.PP
+.fi
+
+.PP
+References \fBFSI_DIR\fP, \fBFSI_FILE\fP, \fBFSI_OTHER\fP, and \fBFSI_SYMLINK\fP\&.
+.SS "\fBFSI_EntryType\fP fsi_getEntryTypeFromDirent (int dirfd, struct dirent * e, struct stat * stOut)\fR [inline]\fP, \fR [static]\fP"
+
+.PP
+Definition at line \fB94\fP of file \fBFSI_dirUtils_posix\&.h\fP\&.
+.nf
+95 {
+96     switch (e\->d_type)
+97     {
+98         case DT_REG:
+99             return FSI_FILE;
+100 
+101         case DT_DIR:
+102             if (fstatat(dirfd, e\->d_name, stOut, AT_SYMLINK_NOFOLLOW) == 0)
+103                 return FSI_DIR;
+104 
+105             return FSI_OTHER;
+106 
+107         case DT_LNK: return FSI_SYMLINK;
+108 
+109         default:
+110             if (fstatat(dirfd, e\->d_name, stOut, AT_SYMLINK_NOFOLLOW) == 0)
+111             {
+112                 if (S_ISDIR(stOut\->st_mode)) return FSI_DIR;
+113                 if (S_ISREG(stOut\->st_mode)) return FSI_FILE;
+114             }
+115 
+116             return FSI_OTHER;
+117     }
+118 }
+.PP
+.fi
+
+.PP
+References \fBFSI_DIR\fP, \fBFSI_FILE\fP, \fBFSI_OTHER\fP, and \fBFSI_SYMLINK\fP\&.
+.PP
+Referenced by \fB__fsi_walk()\fP\&.
 .SS "int fsi_openDir (\fBFSI_DirData\fP * d, const char * path)"
 
 .PP
@@ -120,43 +303,43 @@ Status (1 if worked, 0 if failed)
 .PP
 
 .PP
-Definition at line \fB14\fP of file \fBFSI_dirUtils_posix\&.c\fP\&.
+Definition at line \fB9\fP of file \fBFSI_dirUtils_posix\&.c\fP\&.
 .nf
-15 {
-16     FSI_DirData_POSIX *p = malloc(sizeof(*p));
-17 
-18     if (!p) return 0;
-19 
-20     p\->path = cstr_init();
-21 
-22     {
-23         const int dirFD = open(path, O_RDONLY);
-24 
-25         p\->dir = fdopendir(dirFD);
-26     }
-27 
-28     if (!p\->dir)
-29     {
-30         cstr_destroy(&p\->path);
-31 
-32         FSI_FREE(p);
-33 
-34         return 0;
-35     }
-36 
-37     cstr_set(&p\->path, path);
-38 
-39     d\->impl = p;
-40 
-41     return 1;
-42 }
+10 {
+11     const int dirFD = open(path, O_RDONLY | O_DIRECTORY | O_CLOEXEC);
+12 
+13     if (dirFD < 0) return 0;
+14 
+15     DIR *dir = fdopendir(dirFD);
+16 
+17     if (!dir)
+18     {
+19         close(dirFD);
+20 
+21         return 0;
+22     }
+23 
+24     FSI_DirData_POSIX *p = malloc(sizeof(*p));
+25 
+26     if (!p)
+27     {
+28         closedir(dir);
+29 
+30         return 0;
+31     }
+32 
+33     p\->dir = dir;
+34     p\->dirfd = dirFD;
+35 
+36     d\->impl = p;
+37 
+38     return 1;
+39 }
 .PP
 .fi
 
 .PP
-References \fBFSI_DirData_POSIX::dir\fP, \fBFSI_FREE\fP, \fBFSI_DirData::impl\fP, and \fBFSI_DirData_POSIX::path\fP\&.
-.PP
-Referenced by \fBfsi_walk()\fP\&.
+References \fBFSI_DirData_POSIX::dir\fP, \fBFSI_DirData_POSIX::dirfd\fP, and \fBFSI_DirData::impl\fP\&.
 .SS "int fsi_readDir (\fBFSI_DirData\fP * d, \fBFSI_EntryData\fP * out)"
 
 .PP
@@ -175,45 +358,51 @@ Status (1 if worked, 0 if failed)
 .RE
 .PP
 
+.SS "void fsi_visitedAdd (CVEC * v, dev_t dev, ino_t ino)\fR [inline]\fP, \fR [static]\fP"
+
 .PP
-Definition at line \fB44\fP of file \fBFSI_dirUtils_posix\&.c\fP\&.
+Definition at line \fB135\fP of file \fBFSI_dirUtils_posix\&.h\fP\&.
 .nf
-45 {
-46     FSI_DirData_POSIX *p = d\->impl;
-47     struct dirent *e;
-48 
-49     while ((e = readdir(p\->dir)))
-50     {
-51         if (e\->d_name[0] == '\&.' &&
-52            (!e\->d_name[1] ||
-53            (e\->d_name[1] == '\&.' && !e\->d_name[2])))
-54             continue;
-55 
-56         if (e\->d_type == DT_DIR)
-57             out\->type = FSI_DIR;
-58 
-59         else if (e\->d_type == DT_REG)
-60             out\->type = FSI_FILE;
-61 
-62         else if (e\->d_type == DT_LNK)
-63             out\->type = FSI_SYMLINK;
-64 
-65         else out\->type = FSI_OTHER;
-66 
-67         out\->name = e\->d_name;
-68 
-69         return 1;
-70     }
-71 
-72     return 0;
-73 }
+136 {
+137     FSI_Visited_POSIX e = {0};
+138 
+139     e\&.dev = dev;
+140     e\&.ino = ino;
+141 
+142     cvec_push(v, FSI_Visited_POSIX, e);
+143 }
 .PP
 .fi
 
 .PP
-References \fBFSI_DirData_POSIX::dir\fP, \fBFSI_DIR\fP, \fBFSI_FILE\fP, \fBFSI_OTHER\fP, \fBFSI_SYMLINK\fP, \fBFSI_DirData::impl\fP, \fBFSI_EntryData::name\fP, and \fBFSI_EntryData::type\fP\&.
+References \fBFSI_Visited_POSIX::dev\fP, and \fBFSI_Visited_POSIX::ino\fP\&.
 .PP
-Referenced by \fBfsi_walk()\fP\&.
+Referenced by \fB__fsi_walk()\fP\&.
+.SS "int fsi_visitedHas (CVEC * v, dev_t dev, ino_t ino)\fR [inline]\fP, \fR [static]\fP"
+
+.PP
+Definition at line \fB120\fP of file \fBFSI_dirUtils_posix\&.h\fP\&.
+.nf
+121 {
+122     for (size_t i = 0 ; i < v\->size ; i++)
+123     {
+124         FSI_Visited_POSIX *e = (FSI_Visited_POSIX*)cvec_get(v, i);
+125         
+126         if (!e) continue;
+127 
+128         if (e\->dev == dev && e\->ino == ino)
+129             return 1;
+130     }
+131 
+132     return 0;
+133 }
+.PP
+.fi
+
+.PP
+References \fBFSI_Visited_POSIX::dev\fP, and \fBFSI_Visited_POSIX::ino\fP\&.
+.PP
+Referenced by \fB__fsi_walk()\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for FileSystemIndexer from the source code\&.

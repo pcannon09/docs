@@ -24,41 +24,195 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00020"/>00020 <emphasis role="preprocessor">#include&#32;&quot;cstr/cstr.h&quot;</emphasis>
 <anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00021"/>00021 
 <anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00022"/>00022 <emphasis role="preprocessor">#include&#32;&lt;dirent.h&gt;</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00023"/>00023 
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00024"/><link linkend="_structFSI__DirData__POSIX">00024</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structFSI__DirData__POSIX">FSI_DirData_POSIX</link>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00025"/>00025 {
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00026"/><link linkend="_structFSI__DirData__POSIX_1a78670985b16d169b902cfda51881f02c">00026</link> &#32;&#32;&#32;&#32;DIR&#32;*<link linkend="_structFSI__DirData__POSIX_1a78670985b16d169b902cfda51881f02c">dir</link>;
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00027"/><link linkend="_structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e">00027</link> &#32;&#32;&#32;&#32;CSTR&#32;<link linkend="_structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e">path</link>;
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00028"/><link linkend="_FSI__dirUtils__posix_8h_1a9e656c74e3e41518c2759918f0527719">00028</link> }&#32;<link linkend="_structFSI__DirData__POSIX">FSI_DirData_POSIX</link>;
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00029"/>00029 <emphasis role="comment"></emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00030"/>00030 <emphasis role="comment">/**</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00031"/>00031 <emphasis role="comment">&#32;*&#32;@brief&#32;Open&#32;directory&#32;as&#32;read&#32;only</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00032"/>00032 <emphasis role="comment">&#32;*&#32;@param&#32;d&#32;Directory&#32;data</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00033"/>00033 <emphasis role="comment">&#32;*&#32;@param&#32;path&#32;Path&#32;to&#32;open&#32;dir</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00034"/>00034 <emphasis role="comment">&#32;*&#32;@return&#32;Status&#32;(1&#32;if&#32;worked,&#32;0&#32;if&#32;failed)</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00035"/>00035 <emphasis role="comment">&#32;*/</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00036"/>00036 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd">fsi_openDir</link>(<link linkend="_structFSI__DirData">FSI_DirData</link>&#32;*d,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*path);
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00037"/>00037 <emphasis role="comment"></emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00038"/>00038 <emphasis role="comment">/**</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00039"/>00039 <emphasis role="comment">&#32;*&#32;@brief&#32;Read&#32;directory&#32;from&#32;reading&#32;the&#32;`FSI_DirData`&#32;information</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00040"/>00040 <emphasis role="comment">&#32;*&#32;@param&#32;d&#32;Directory&#32;data</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00041"/>00041 <emphasis role="comment">&#32;*&#32;@param&#32;out&#32;Entry&#32;data&#32;to&#32;set&#32;the&#32;information</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00042"/>00042 <emphasis role="comment">&#32;*&#32;@return&#32;Status&#32;(1&#32;if&#32;worked,&#32;0&#32;if&#32;failed)</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00043"/>00043 <emphasis role="comment">&#32;*/</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00044"/>00044 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f">fsi_readDir</link>(<link linkend="_structFSI__DirData">FSI_DirData</link>&#32;*d,&#32;<link linkend="_structFSI__EntryData">FSI_EntryData</link>&#32;*out);
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00045"/>00045 <emphasis role="comment"></emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00046"/>00046 <emphasis role="comment">/**</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00047"/>00047 <emphasis role="comment">&#32;*&#32;@brief&#32;Get&#32;the&#32;directory&#32;data&#32;to&#32;deallocate&#32;memory</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00048"/>00048 <emphasis role="comment">&#32;*&#32;@param&#32;d&#32;Object&#32;to&#32;deallocate</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00049"/>00049 <emphasis role="comment">&#32;*/</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00050"/>00050 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1">fsi_closeDir</link>(<link linkend="_structFSI__DirData">FSI_DirData</link>&#32;*d);
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00051"/>00051 
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00052"/>00052 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;FSI_OS_WIN32</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00053"/>00053 
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00054"/>00054 <link linkend="_FSI__dirUtils__posix_8h_1a8c0b3d71cc0ffa34f54f11ef309ff965">__FSI_DIRUTILS_POSIX_CPP_CLOSE</link>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00055"/>00055 
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00056"/>00056 <emphasis role="preprocessor">#undef&#32;__FSI_DIRUTILS_POSIX_CPP_OPEN</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00057"/>00057 <emphasis role="preprocessor">#undef&#32;__FSI_DIRUTILS_POSIX_CPP_CLOSE</emphasis>
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00058"/>00058 
-<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00059"/>00059 <emphasis role="preprocessor">#endif&#32;&#32;</emphasis><emphasis role="comment">//&#32;INCLUDE_CORE_FSI_DIRUTILS_H_</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00023"/>00023 <emphasis role="preprocessor">#include&#32;&lt;sys/stat.h&gt;</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00024"/>00024 <emphasis role="preprocessor">#include&#32;&lt;unistd.h&gt;</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00025"/>00025 <emphasis role="preprocessor">#include&#32;&lt;fcntl.h&gt;</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00026"/>00026 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00027"/><link linkend="_structFSI__DirData__POSIX">00027</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structFSI__DirData__POSIX">FSI_DirData_POSIX</link>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00028"/>00028 {
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00029"/><link linkend="_structFSI__DirData__POSIX_1a78670985b16d169b902cfda51881f02c">00029</link> &#32;&#32;&#32;&#32;DIR&#32;*<link linkend="_structFSI__DirData__POSIX_1a78670985b16d169b902cfda51881f02c">dir</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00030"/><link linkend="_structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e">00030</link> &#32;&#32;&#32;&#32;CSTR&#32;<link linkend="_structFSI__DirData__POSIX_1a82d93611ad90fa5af9b11b6cc08a208e">path</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00031"/>00031 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00032"/><link linkend="_structFSI__DirData__POSIX_1a469e85e9dfedf6ff6ac12cc11ca7217c">00032</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_structFSI__DirData__POSIX_1a469e85e9dfedf6ff6ac12cc11ca7217c">dirfd</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00033"/><link linkend="_FSI__dirUtils__posix_8h_1a9e656c74e3e41518c2759918f0527719">00033</link> }&#32;<link linkend="_structFSI__DirData__POSIX">FSI_DirData_POSIX</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00034"/>00034 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00035"/><link linkend="_structFSI__Visited__POSIX">00035</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structFSI__Visited__POSIX">FSI_Visited_POSIX</link>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00036"/>00036 {
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00037"/><link linkend="_structFSI__Visited__POSIX_1a3f318d91a35ba724589e3107bfffebb0">00037</link> &#32;&#32;&#32;&#32;dev_t&#32;<link linkend="_structFSI__Visited__POSIX_1a3f318d91a35ba724589e3107bfffebb0">dev</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00038"/><link linkend="_structFSI__Visited__POSIX_1a79f6bbed4fd64b013beba3658e41fcc4">00038</link> &#32;&#32;&#32;&#32;ino_t&#32;<link linkend="_structFSI__Visited__POSIX_1a79f6bbed4fd64b013beba3658e41fcc4">ino</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00039"/><link linkend="_FSI__dirUtils__posix_8h_1a86e514cccb091d2fa372f36ca856bf7c">00039</link> }&#32;<link linkend="_structFSI__Visited__POSIX">FSI_Visited_POSIX</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00040"/>00040 <emphasis role="comment"></emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00041"/>00041 <emphasis role="comment">/**</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00042"/>00042 <emphasis role="comment">&#32;*&#32;@brief&#32;Open&#32;directory&#32;as&#32;read&#32;only</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00043"/>00043 <emphasis role="comment">&#32;*&#32;@param&#32;d&#32;Directory&#32;data</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00044"/>00044 <emphasis role="comment">&#32;*&#32;@param&#32;path&#32;Path&#32;to&#32;open&#32;dir</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00045"/>00045 <emphasis role="comment">&#32;*&#32;@return&#32;Status&#32;(1&#32;if&#32;worked,&#32;0&#32;if&#32;failed)</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00046"/>00046 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00047"/>00047 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_FSI__dirUtils__posix_8h_1a1c15e434435c62f17b15a34877bd60bd">fsi_openDir</link>(<link linkend="_structFSI__DirData">FSI_DirData</link>&#32;*d,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*path);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00048"/>00048 <emphasis role="comment"></emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00049"/>00049 <emphasis role="comment">/**</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00050"/>00050 <emphasis role="comment">&#32;*&#32;@brief&#32;Read&#32;directory&#32;from&#32;reading&#32;the&#32;`FSI_DirData`&#32;information</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00051"/>00051 <emphasis role="comment">&#32;*&#32;@param&#32;d&#32;Directory&#32;data</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00052"/>00052 <emphasis role="comment">&#32;*&#32;@param&#32;out&#32;Entry&#32;data&#32;to&#32;set&#32;the&#32;information</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00053"/>00053 <emphasis role="comment">&#32;*&#32;@return&#32;Status&#32;(1&#32;if&#32;worked,&#32;0&#32;if&#32;failed)</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00054"/>00054 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00055"/><link linkend="_FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f">00055</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_FSI__dirUtils__posix_8h_1acb473fa7940b3c89aa11845436bbae8f">fsi_readDir</link>(<link linkend="_structFSI__DirData">FSI_DirData</link>&#32;*d,&#32;<link linkend="_structFSI__EntryData">FSI_EntryData</link>&#32;*out);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00056"/>00056 <emphasis role="comment"></emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00057"/>00057 <emphasis role="comment">/**</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00058"/>00058 <emphasis role="comment">&#32;*&#32;@brief&#32;Get&#32;the&#32;directory&#32;data&#32;to&#32;deallocate&#32;memory</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00059"/>00059 <emphasis role="comment">&#32;*&#32;@param&#32;d&#32;Object&#32;to&#32;deallocate</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00060"/>00060 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00061"/>00061 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_FSI__dirUtils__posix_8h_1a07bb8fc8aa9e6ea91c2f2e65425e03e1">fsi_closeDir</link>(<link linkend="_structFSI__DirData">FSI_DirData</link>&#32;*d);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00062"/>00062 <emphasis role="comment"></emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00063"/>00063 <emphasis role="comment">/**</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00064"/>00064 <emphasis role="comment">&#32;*&#32;@brief&#32;Get&#32;the&#32;entry&#32;type&#32;of&#32;the&#32;dirfd&#32;from&#32;the&#32;FSI_DirData_POSIX</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00065"/>00065 <emphasis role="comment">&#32;*&#32;*&#32;Get&#32;if:&#32;Directory,&#32;File,&#32;Symlink&#32;or&#32;other</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00066"/>00066 <emphasis role="comment">&#32;*&#32;@param&#32;dirfd&#32;Entry&#32;type&#32;to&#32;get&#32;from&#32;the&#32;syscall</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00067"/>00067 <emphasis role="comment">&#32;*&#32;@param&#32;e&#32;Get&#32;dirent&#32;type&#32;quickly&#32;from&#32;the&#32;`e`&#32;ptr&#32;with&#32;its&#32;corresponding&#32;`dirent`&#32;data</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00068"/>00068 <emphasis role="comment">&#32;*&#32;@return&#32;Return&#32;the&#32;FSI_EntryType</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00069"/>00069 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00070"/><link linkend="_FSI__dirUtils__posix_8h_1a99bf5f7e3d00cfba1db0b2582e529af4">00070</link> <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069e">FSI_EntryType</link>&#32;<link linkend="_FSI__dirUtils__posix_8h_1a99bf5f7e3d00cfba1db0b2582e529af4">fsi_getEntryType</link>(<emphasis role="keywordtype">int</emphasis>&#32;dirfd,&#32;<emphasis role="keyword">struct</emphasis>&#32;dirent&#32;*e)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00071"/>00071 {
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00072"/>00072 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(e-&gt;d_type)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00073"/>00073 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;DT_REG:&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1">FSI_FILE</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;DT_DIR:&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;DT_LNK:&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e">FSI_SYMLINK</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;DT_UNKNOWN:
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis>stat&#32;st;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00081"/>00081 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fstatat(dirfd,&#32;e-&gt;d_name,&#32;&amp;st,&#32;AT_SYMLINK_NOFOLLOW)&#32;==&#32;0)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(S_ISREG(st.st_mode))&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1">FSI_FILE</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(S_ISDIR(st.st_mode))&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(S_ISDIR(st.st_mode))&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e">FSI_SYMLINK</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00088"/>00088 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede">FSI_OTHER</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00091"/>00091 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00092"/>00092 }
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00093"/>00093 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00094"/><link linkend="_FSI__dirUtils__posix_8h_1a5a4f995512a0183ca0e5d7aed16d62c3">00094</link> <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069e">FSI_EntryType</link>&#32;<link linkend="_FSI__dirUtils__posix_8h_1a5a4f995512a0183ca0e5d7aed16d62c3">fsi_getEntryTypeFromDirent</link>(<emphasis role="keywordtype">int</emphasis>&#32;dirfd,&#32;<emphasis role="keyword">struct</emphasis>&#32;dirent&#32;*e,&#32;<emphasis role="keyword">struct</emphasis>&#32;stat&#32;*stOut)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00095"/>00095 {
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00096"/>00096 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(e-&gt;d_type)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00097"/>00097 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;DT_REG:
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1">FSI_FILE</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00100"/>00100 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;DT_DIR:
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fstatat(dirfd,&#32;e-&gt;d_name,&#32;stOut,&#32;AT_SYMLINK_NOFOLLOW)&#32;==&#32;0)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00104"/>00104 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede">FSI_OTHER</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00106"/>00106 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;DT_LNK:&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eaac54d5b41ff8c4f704ff77916d97e71e">FSI_SYMLINK</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00108"/>00108 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fstatat(dirfd,&#32;e-&gt;d_name,&#32;stOut,&#32;AT_SYMLINK_NOFOLLOW)&#32;==&#32;0)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(S_ISDIR(stOut-&gt;st_mode))&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(S_ISREG(stOut-&gt;st_mode))&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eacae0a0c9cddc0e241fef6d4f30ddd6c1">FSI_FILE</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00115"/>00115 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eac89c677a4f85ee4147f1c1fa5bc75ede">FSI_OTHER</link>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00117"/>00117 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00118"/>00118 }
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00119"/>00119 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00120"/><link linkend="_FSI__dirUtils__posix_8h_1a84035112786899729fa79cc37ea76f52">00120</link> <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_FSI__dirUtils__posix_8h_1a84035112786899729fa79cc37ea76f52">fsi_visitedHas</link>(CVEC&#32;*v,&#32;dev_t&#32;dev,&#32;ino_t&#32;ino)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00121"/>00121 {
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00122"/>00122 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0&#32;;&#32;i&#32;&lt;&#32;v-&gt;size&#32;;&#32;i++)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00123"/>00123 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structFSI__Visited__POSIX">FSI_Visited_POSIX</link>&#32;*e&#32;=&#32;(<link linkend="_structFSI__Visited__POSIX">FSI_Visited_POSIX</link>*)cvec_get(v,&#32;i);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!e)&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00127"/>00127 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(e-&gt;<link linkend="_structFSI__Visited__POSIX_1a3f318d91a35ba724589e3107bfffebb0">dev</link>&#32;==&#32;dev&#32;&amp;&amp;&#32;e-&gt;<link linkend="_structFSI__Visited__POSIX_1a79f6bbed4fd64b013beba3658e41fcc4">ino</link>&#32;==&#32;ino)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;1;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00130"/>00130 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00131"/>00131 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00132"/>00132 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00133"/>00133 }
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00134"/>00134 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00135"/><link linkend="_FSI__dirUtils__posix_8h_1a9420f3d1392d4194c6192d2096605bd9">00135</link> <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_FSI__dirUtils__posix_8h_1a9420f3d1392d4194c6192d2096605bd9">fsi_visitedAdd</link>(CVEC&#32;*v,&#32;dev_t&#32;dev,&#32;ino_t&#32;ino)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00136"/>00136 {
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00137"/>00137 &#32;&#32;&#32;&#32;<link linkend="_structFSI__Visited__POSIX">FSI_Visited_POSIX</link>&#32;e&#32;=&#32;{0};
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00138"/>00138 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00139"/>00139 &#32;&#32;&#32;&#32;e.<link linkend="_structFSI__Visited__POSIX_1a3f318d91a35ba724589e3107bfffebb0">dev</link>&#32;=&#32;dev;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00140"/>00140 &#32;&#32;&#32;&#32;e.<link linkend="_structFSI__Visited__POSIX_1a79f6bbed4fd64b013beba3658e41fcc4">ino</link>&#32;=&#32;ino;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00141"/>00141 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00142"/>00142 &#32;&#32;&#32;&#32;cvec_push(v,&#32;<link linkend="_structFSI__Visited__POSIX">FSI_Visited_POSIX</link>,&#32;e);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00143"/>00143 }
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00144"/>00144 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00145"/><link linkend="_FSI__dirUtils__posix_8h_1a1d0d11194a91ede34644606912fbbebf">00145</link> <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_FSI__dirUtils__posix_8h_1a1d0d11194a91ede34644606912fbbebf">__fsi_walk</link>(
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00146"/>00146 &#32;&#32;&#32;&#32;CVEC&#32;*out,
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00147"/>00147 &#32;&#32;&#32;&#32;CVEC&#32;*visited,
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00148"/>00148 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00149"/>00149 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*path
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00150"/>00150 )
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00151"/>00151 {
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00152"/>00152 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;fd&#32;=&#32;open(path,&#32;O_RDONLY&#32;|&#32;O_DIRECTORY&#32;|&#32;O_CLOEXEC);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00153"/>00153 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fd&#32;&lt;&#32;0)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00154"/>00154 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00155"/>00155 &#32;&#32;&#32;&#32;DIR&#32;*dir&#32;=&#32;fdopendir(fd);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00156"/>00156 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!dir)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00157"/>00157 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;close(fd);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00160"/>00160 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00161"/>00161 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00162"/>00162 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis>stat&#32;dirSt;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00163"/>00163 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00164"/>00164 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(fstat(fd,&#32;&amp;dirSt)&#32;!=&#32;0)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00165"/>00165 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;closedir(dir);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00168"/>00168 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00169"/>00169 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00170"/>00170 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_FSI__dirUtils__posix_8h_1a84035112786899729fa79cc37ea76f52">fsi_visitedHas</link>(visited,&#32;dirSt.st_dev,&#32;dirSt.st_ino))
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00171"/>00171 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;closedir(dir);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00174"/>00174 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00175"/>00175 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00176"/>00176 &#32;&#32;&#32;&#32;<link linkend="_FSI__dirUtils__posix_8h_1a9420f3d1392d4194c6192d2096605bd9">fsi_visitedAdd</link>(visited,&#32;dirSt.st_dev,&#32;dirSt.st_ino);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00177"/>00177 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00178"/>00178 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis>dirent&#32;*e;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00179"/>00179 &#32;&#32;&#32;&#32;CSTR&#32;tmp&#32;=&#32;cstr_init();
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00180"/>00180 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00181"/>00181 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;((e&#32;=&#32;readdir(dir)))
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00182"/>00182 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(e-&gt;d_name[0]&#32;==&#32;<emphasis role="charliteral">&apos;.&apos;</emphasis>&#32;&amp;&amp;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(e-&gt;d_name[1]&#32;==&#32;<emphasis role="charliteral">&apos;\0&apos;</emphasis>&#32;||&#32;(e-&gt;d_name[1]&#32;==&#32;<emphasis role="charliteral">&apos;.&apos;</emphasis>&#32;&amp;&amp;&#32;e-&gt;d_name[2]&#32;==&#32;<emphasis role="charliteral">&apos;\0&apos;</emphasis>)))
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00186"/>00186 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis>stat&#32;st;
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00188"/>00188 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;type&#32;=&#32;<link linkend="_FSI__dirUtils__posix_8h_1a5a4f995512a0183ca0e5d7aed16d62c3">fsi_getEntryTypeFromDirent</link>(fd,&#32;e,&#32;&amp;st);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00190"/>00190 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_set(&amp;tmp,&#32;path);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmp,&#32;<emphasis role="stringliteral">&quot;/&quot;</emphasis>);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmp,&#32;e-&gt;d_name);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00194"/>00194 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cvec_push(out,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*,&#32;CVEC_sys_strdup(tmp.data));
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00196"/>00196 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(type&#32;==&#32;<link linkend="_FSI__dirUtils_8h_1aaa6bee37aab1227d0184642f73bf069eaaeb173f74a25b669e8f9f7d6371ae552">FSI_DIR</link>)
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_FSI__dirUtils__posix_8h_1a1d0d11194a91ede34644606912fbbebf">__fsi_walk</link>(out,&#32;visited,&#32;tmp.data);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00199"/>00199 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00200"/>00200 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00201"/>00201 &#32;&#32;&#32;&#32;cstr_destroy(&amp;tmp);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00202"/>00202 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00203"/>00203 &#32;&#32;&#32;&#32;closedir(dir);
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00204"/>00204 }
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00205"/>00205 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00206"/>00206 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;FSI_OS_WIN32</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00207"/>00207 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00208"/>00208 <link linkend="_FSI__dirUtils__posix_8h_1a8c0b3d71cc0ffa34f54f11ef309ff965">__FSI_DIRUTILS_POSIX_CPP_CLOSE</link>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00209"/>00209 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00210"/>00210 <emphasis role="preprocessor">#undef&#32;__FSI_DIRUTILS_POSIX_CPP_OPEN</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00211"/>00211 <emphasis role="preprocessor">#undef&#32;__FSI_DIRUTILS_POSIX_CPP_CLOSE</emphasis>
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00212"/>00212 
+<anchor xml:id="_FSI__dirUtils__posix_8h_source_1l00213"/>00213 <emphasis role="preprocessor">#endif&#32;&#32;</emphasis><emphasis role="comment">//&#32;INCLUDE_CORE_FSI_DIRUTILS_H_</emphasis>
 </programlisting></section>
