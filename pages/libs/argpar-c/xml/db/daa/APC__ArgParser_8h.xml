@@ -1,0 +1,707 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="db/daa/APC__ArgParser_8h" kind="file" language="C++">
+    <compoundname>APC_ArgParser.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes local="yes">../../../vendor/cvec/inc/cvec/cvec.h</includes>
+    <includedby refid="dc/d17/APC__ArgParser_8c" local="yes">src/lib/APC_ArgParser.c</includedby>
+    <includedby refid="d0/d29/main_8c" local="yes">src/main.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>../../../vendor/cvec/inc/cvec/cvec.h</label>
+      </node>
+      <node id="1">
+        <label>inc/argpar-c/lib/APC_ArgParser.h</label>
+        <link refid="db/daa/APC__ArgParser_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>inc/argpar-c/lib/APC_ArgParser.h</label>
+        <link refid="db/daa/APC__ArgParser_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/lib/APC_ArgParser.c</label>
+        <link refid="dc/d17/APC__ArgParser_8c"/>
+      </node>
+      <node id="3">
+        <label>src/main.c</label>
+        <link refid="d0/d29/main_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d3/d7d/structAPC__ArgInfo" prot="public">APC_ArgInfo</innerclass>
+    <innerclass refid="d6/d78/structAPC__ArgParser" prot="public">APC_ArgParser</innerclass>
+    <innerclass refid="df/df7/structAPC__RGB" prot="public">APC_RGB</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="db/daa/APC__ArgParser_8h_1abe892064a84b35884208fc7a6ec82cb5" prot="public" static="no">
+        <name>__APC_CPP_GUARD_CLOSE</name>
+        <initializer>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="10" column="11" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/daa/APC__ArgParser_8h_1aad021104ca2a3f4411fd05ae01955d38" prot="public" static="no">
+        <name>__APC_CPP_GUARD_OPEN</name>
+        <initializer>extern &quot;C&quot; {</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="9" column="11" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85" prot="public" static="no" strong="no">
+        <type></type>
+        <name>APC_RGB_Command</name>
+        <enumvalue id="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ad4dcaa8f0262403054fdea2104df055c" prot="public">
+          <name>APC_RGB_Command_None</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ac47aed32852a5fa599f6b9066513cfd0" prot="public">
+          <name>APC_RGB_Command_Reset</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85af9a7fad67473564c2d002fbfc893c114" prot="public">
+          <name>APC_RGB_Command_Bold</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a77bf6ee8259c87d7ad1e3fec321e95a5" prot="public">
+          <name>APC_RGB_Command_Italic</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a6164b6a0358e4d1461a30f814205b8ca" prot="public">
+          <name>APC_RGB_Command_Underline</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="18" column="1" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="19" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="db/daa/APC__ArgParser_8h_1a465c9ba9922a24c7ac076a0cc6f50031" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * __apc_colorFormat</definition>
+        <argsstring>(APC_ArgParser *argpar, const char *msg)</argsstring>
+        <name>__apc_colorFormat</name>
+        <param>
+          <type><ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref> *</type>
+          <declname>argpar</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Format color;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Remove color commands if color disabled</para>
+</listitem><listitem><para>Convert to color ANSI escape code if enabled <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argpar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Argument to format color and get data from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to format </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="114" column="6" bodyfile="src/lib/APC_ArgParser.c" bodystart="199" bodyend="299" declfile="inc/argpar-c/lib/APC_ArgParser.h" declline="114" declcolumn="6"/>
+        <references refid="dc/d17/APC__ArgParser_8c_1a1817d1f01f3bd3eab30e9b2521835bd0" compoundref="dc/d17/APC__ArgParser_8c" startline="132" endline="197">__apc_rgbToRGBStruct</references>
+        <references refid="dc/d17/APC__ArgParser_8c_1aef714ae3c362917994350860533b358f" compoundref="dc/d17/APC__ArgParser_8c" startline="101" endline="130">__apc_setRGB</references>
+        <references refid="df/df7/structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8" compoundref="db/daa/APC__ArgParser_8h" startline="55">APC_RGB::__externalAction</references>
+        <references refid="d9/d1d/APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968" compoundref="d9/d1d/APCpredefines_8h" startline="39">APC_FREE</references>
+        <references refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85af9a7fad67473564c2d002fbfc893c114" compoundref="db/daa/APC__ArgParser_8h" startline="22">APC_RGB_Command_Bold</references>
+        <references refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a77bf6ee8259c87d7ad1e3fec321e95a5" compoundref="db/daa/APC__ArgParser_8h" startline="23">APC_RGB_Command_Italic</references>
+        <references refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ac47aed32852a5fa599f6b9066513cfd0" compoundref="db/daa/APC__ArgParser_8h" startline="21">APC_RGB_Command_Reset</references>
+        <references refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a6164b6a0358e4d1461a30f814205b8ca" compoundref="db/daa/APC__ArgParser_8h" startline="24">APC_RGB_Command_Underline</references>
+        <references refid="d5/db8/APC__config_8h_1a765a8ea177a5abcfddc4206cfea4a62a" compoundref="d5/db8/APC__config_8h" startline="15">APC_STYLE_BOLD</references>
+        <references refid="d5/db8/APC__config_8h_1a6bcdf6a249f3b8d2856bcd62706dae38" compoundref="d5/db8/APC__config_8h" startline="16">APC_STYLE_ITALIC</references>
+        <references refid="d5/db8/APC__config_8h_1a9a8ce316a5f751a9de5f591648a0ccda" compoundref="d5/db8/APC__config_8h" startline="14">APC_STYLE_RESET</references>
+        <references refid="d5/db8/APC__config_8h_1ab664f8bd1490b2d0feba1260ae627ba8" compoundref="d5/db8/APC__config_8h" startline="17">APC_STYLE_UNDERLINE</references>
+        <references refid="df/df7/structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656" compoundref="db/daa/APC__ArgParser_8h" startline="59">APC_RGB::b</references>
+        <references refid="d6/d78/structAPC__ArgParser_1a85b5d693243b0d6d8f23370fd4fc8dc2" compoundref="db/daa/APC__ArgParser_8h" startline="41">APC_ArgParser::enableColor</references>
+        <references refid="df/df7/structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c" compoundref="db/daa/APC__ArgParser_8h" startline="58">APC_RGB::g</references>
+        <references refid="df/df7/structAPC__RGB_1af0429b86b207e9c03311b23075b65d02" compoundref="db/daa/APC__ArgParser_8h" startline="57">APC_RGB::r</references>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" compoundref="dc/d17/APC__ArgParser_8c" startline="301" endline="426">apc_generateHelp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="db/daa/APC__ArgParser_8h_1a1817d1f01f3bd3eab30e9b2521835bd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/df7/structAPC__RGB" kindref="compound">APC_RGB</ref></type>
+        <definition>APC_RGB __apc_rgbToRGBStruct</definition>
+        <argsstring>(const char *rgbStr)</argsstring>
+        <name>__apc_rgbToRGBStruct</name>
+        <param>
+          <type>const char *</type>
+          <declname>rgbStr</declname>
+        </param>
+        <briefdescription>
+<para>Convert the default RGB format to a valid RGB struct and parse all extended commands. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>${r,g,b}</para>
+</listitem><listitem><para>${R}</para>
+</listitem><listitem><para>${BOLD} <simplesect kind="return"><para>New <ref refid="df/df7/structAPC__RGB" kindref="compound">APC_RGB</ref> with RGB data and extended data type (italic, bold, reset, ...) </para>
+</simplesect>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="85" column="9" bodyfile="src/lib/APC_ArgParser.c" bodystart="132" bodyend="197" declfile="inc/argpar-c/lib/APC_ArgParser.h" declline="85" declcolumn="9"/>
+        <references refid="df/df7/structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8" compoundref="db/daa/APC__ArgParser_8h" startline="55">APC_RGB::__externalAction</references>
+        <references refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85af9a7fad67473564c2d002fbfc893c114" compoundref="db/daa/APC__ArgParser_8h" startline="22">APC_RGB_Command_Bold</references>
+        <references refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a77bf6ee8259c87d7ad1e3fec321e95a5" compoundref="db/daa/APC__ArgParser_8h" startline="23">APC_RGB_Command_Italic</references>
+        <references refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ad4dcaa8f0262403054fdea2104df055c" compoundref="db/daa/APC__ArgParser_8h" startline="20">APC_RGB_Command_None</references>
+        <references refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ac47aed32852a5fa599f6b9066513cfd0" compoundref="db/daa/APC__ArgParser_8h" startline="21">APC_RGB_Command_Reset</references>
+        <references refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a6164b6a0358e4d1461a30f814205b8ca" compoundref="db/daa/APC__ArgParser_8h" startline="24">APC_RGB_Command_Underline</references>
+        <references refid="df/df7/structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656" compoundref="db/daa/APC__ArgParser_8h" startline="59">APC_RGB::b</references>
+        <references refid="df/df7/structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c" compoundref="db/daa/APC__ArgParser_8h" startline="58">APC_RGB::g</references>
+        <references refid="df/df7/structAPC__RGB_1af0429b86b207e9c03311b23075b65d02" compoundref="db/daa/APC__ArgParser_8h" startline="57">APC_RGB::r</references>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a465c9ba9922a24c7ac076a0cc6f50031" compoundref="dc/d17/APC__ArgParser_8c" startline="199" endline="299">__apc_colorFormat</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="db/daa/APC__ArgParser_8h_1aef714ae3c362917994350860533b358f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * __apc_setRGB</definition>
+        <argsstring>(int r, int g, int b)</argsstring>
+        <name>__apc_setRGB</name>
+        <param>
+          <type>int</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Convert RGB to ANSI escape code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Red color </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Green color </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blue color </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Constructed ANSI escape code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="123" column="6" bodyfile="src/lib/APC_ArgParser.c" bodystart="101" bodyend="130" declfile="inc/argpar-c/lib/APC_ArgParser.h" declline="123" declcolumn="6"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a465c9ba9922a24c7ac076a0cc6f50031" compoundref="dc/d17/APC__ArgParser_8c" startline="199" endline="299">__apc_colorFormat</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="db/daa/APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apc_add</definition>
+        <argsstring>(APC_ArgParser *argpar, APC_ArgInfo info)</argsstring>
+        <name>apc_add</name>
+        <param>
+          <type><ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref> *</type>
+          <declname>argpar</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref></type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+<para>Setup Arg Information to the <computeroutput>argpar</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argpar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Argument Parser to modify information from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Create information about the param </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false if fail, true if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="131" column="6" bodyfile="src/lib/APC_ArgParser.c" bodystart="48" bodyend="59" declfile="inc/argpar-c/lib/APC_ArgParser.h" declline="131" declcolumn="6"/>
+        <references refid="d6/d78/structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21" compoundref="db/daa/APC__ArgParser_8h" startline="48">APC_ArgParser::args</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31" compoundref="db/daa/APC__ArgParser_8h" startline="31">APC_ArgInfo::id</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9" compoundref="db/daa/APC__ArgParser_8h" startline="32">APC_ArgInfo::param</references>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="db/daa/APC__ArgParser_8h_1acce093adeb486562d49b2e483102abbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apc_destroy</definition>
+        <argsstring>(APC_ArgParser *argpar)</argsstring>
+        <name>apc_destroy</name>
+        <param>
+          <type><ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref> *</type>
+          <declname>argpar</declname>
+        </param>
+        <briefdescription>
+<para>Free all allocated data for argument parser. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argpar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Argument parser to free from memory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="91" column="6" bodyfile="src/lib/APC_ArgParser.c" bodystart="33" bodyend="46" declfile="inc/argpar-c/lib/APC_ArgParser.h" declline="91" declcolumn="6"/>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971" compoundref="db/daa/APC__ArgParser_8h" startline="36">APC_ArgInfo::aliases</references>
+        <references refid="d6/d78/structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21" compoundref="db/daa/APC__ArgParser_8h" startline="48">APC_ArgParser::args</references>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * apc_generateHelp</definition>
+        <argsstring>(APC_ArgParser *argpar, const char *title, const char *topInfo, const char *lowerInfo)</argsstring>
+        <name>apc_generateHelp</name>
+        <param>
+          <type><ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref> *</type>
+          <declname>argpar</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>topInfo</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>lowerInfo</declname>
+        </param>
+        <briefdescription>
+<para>Automatically generate help and pass it to the string to return. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argpar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Argument parser to generate help from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of the help </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Top information (eg: Little intro of the tool) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lowerInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lower information (eg: License, ...) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Generated help with escape characters for colors (if enabled) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="101" column="6" bodyfile="src/lib/APC_ArgParser.c" bodystart="301" bodyend="426" declfile="inc/argpar-c/lib/APC_ArgParser.h" declline="101" declcolumn="6"/>
+        <references refid="dc/d17/APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031" compoundref="dc/d17/APC__ArgParser_8c" startline="199" endline="299">__apc_colorFormat</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971" compoundref="db/daa/APC__ArgParser_8h" startline="36">APC_ArgInfo::aliases</references>
+        <references refid="d9/d1d/APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968" compoundref="d9/d1d/APCpredefines_8h" startline="39">APC_FREE</references>
+        <references refid="d5/db8/APC__config_8h_1a51ea406f28c1c64d9959c7b5daa5d806" compoundref="d5/db8/APC__config_8h" startline="21">APC_STYLECOLOR_OPTIONAL</references>
+        <references refid="d5/db8/APC__config_8h_1a1157bc9d6b51d6e7f47d1ae86bc914de" compoundref="d5/db8/APC__config_8h" startline="20">APC_STYLECOLOR_TITLE</references>
+        <references refid="d6/d78/structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21" compoundref="db/daa/APC__ArgParser_8h" startline="48">APC_ArgParser::args</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb" compoundref="db/daa/APC__ArgParser_8h" startline="34">APC_ArgInfo::help</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31" compoundref="db/daa/APC__ArgParser_8h" startline="31">APC_ArgInfo::id</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9" compoundref="db/daa/APC__ArgParser_8h" startline="32">APC_ArgInfo::param</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367" compoundref="db/daa/APC__ArgParser_8h" startline="29">APC_ArgInfo::required</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262" compoundref="db/daa/APC__ArgParser_8h" startline="33">APC_ArgInfo::sparam</references>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apc_get</definition>
+        <argsstring>(APC_ArgParser *argpar, const char *id)</argsstring>
+        <name>apc_get</name>
+        <param>
+          <type><ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref> *</type>
+          <declname>argpar</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get if there is an argument present. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argpar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get parameters from argpar </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID to fetch </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false if fail, true if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="139" column="6" bodyfile="src/lib/APC_ArgParser.c" bodystart="61" bodyend="99" declfile="inc/argpar-c/lib/APC_ArgParser.h" declline="139" declcolumn="6"/>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971" compoundref="db/daa/APC__ArgParser_8h" startline="36">APC_ArgInfo::aliases</references>
+        <references refid="d6/d78/structAPC__ArgParser_1adbf2fdfbf96ade60dfc6af7d82a950c1" compoundref="db/daa/APC__ArgParser_8h" startline="43">APC_ArgParser::argc</references>
+        <references refid="d6/d78/structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21" compoundref="db/daa/APC__ArgParser_8h" startline="48">APC_ArgParser::args</references>
+        <references refid="d6/d78/structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d" compoundref="db/daa/APC__ArgParser_8h" startline="50">APC_ArgParser::argv</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31" compoundref="db/daa/APC__ArgParser_8h" startline="31">APC_ArgInfo::id</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9" compoundref="db/daa/APC__ArgParser_8h" startline="32">APC_ArgInfo::param</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262" compoundref="db/daa/APC__ArgParser_8h" startline="33">APC_ArgInfo::sparam</references>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="db/daa/APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref></type>
+        <definition>APC_ArgParser apc_init</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>apc_init</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Initialize parser with argc and argv from the <computeroutput><ref refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main()</ref></computeroutput> function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of arguments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Argument values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Constructed <ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref> with all the recommended data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="68" column="15" bodyfile="src/lib/APC_ArgParser.c" bodystart="12" bodyend="22" declfile="inc/argpar-c/lib/APC_ArgParser.h" declline="68" declcolumn="15"/>
+        <references refid="d6/d78/structAPC__ArgParser_1adbf2fdfbf96ade60dfc6af7d82a950c1" compoundref="db/daa/APC__ArgParser_8h" startline="43">APC_ArgParser::argc</references>
+        <references refid="d6/d78/structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21" compoundref="db/daa/APC__ArgParser_8h" startline="48">APC_ArgParser::args</references>
+        <references refid="d6/d78/structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d" compoundref="db/daa/APC__ArgParser_8h" startline="50">APC_ArgParser::argv</references>
+        <references refid="d6/d78/structAPC__ArgParser_1a85b5d693243b0d6d8f23370fd4fc8dc2" compoundref="db/daa/APC__ArgParser_8h" startline="41">APC_ArgParser::enableColor</references>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="db/daa/APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref></type>
+        <definition>APC_ArgInfo apc_initInfo</definition>
+        <argsstring>(void)</argsstring>
+        <name>apc_initInfo</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize information for params. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Constructed empty aliases</para>
+</listitem><listitem><para><computeroutput>required</computeroutput> defaults to <computeroutput>false</computeroutput> <simplesect kind="return"><para>Initialized <ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref> with default values </para>
+</simplesect>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="76" column="13" bodyfile="src/lib/APC_ArgParser.c" bodystart="24" bodyend="31" declfile="inc/argpar-c/lib/APC_ArgParser.h" declline="76" declcolumn="13"/>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971" compoundref="db/daa/APC__ArgParser_8h" startline="36">APC_ArgInfo::aliases</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367" compoundref="db/daa/APC__ArgParser_8h" startline="29">APC_ArgInfo::required</references>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>INCLUDE_LIB_APC_ARGPARSER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_LIB_APC_ARGPARSER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../../vendor/cvec/inc/cvec/cvec.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="db/daa/APC__ArgParser_8h_1aad021104ca2a3f4411fd05ae01955d38" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__APC_CPP_GUARD_OPEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extern<sp/>&quot;C&quot;<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="db/daa/APC__ArgParser_8h_1abe892064a84b35884208fc7a6ec82cb5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__APC_CPP_GUARD_CLOSE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__APC_CPP_GUARD_OPEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>__APC_CPP_GUARD_CLOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__cplusplus<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="d5/db8/APC__config_8h_1aad021104ca2a3f4411fd05ae01955d38" kindref="member">__APC_CPP_GUARD_OPEN</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85" kindref="member">APC_RGB_Command</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20" refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ad4dcaa8f0262403054fdea2104df055c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ad4dcaa8f0262403054fdea2104df055c" kindref="member">APC_RGB_Command_None</ref>,</highlight></codeline>
+<codeline lineno="21" refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ac47aed32852a5fa599f6b9066513cfd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ac47aed32852a5fa599f6b9066513cfd0" kindref="member">APC_RGB_Command_Reset</ref>,</highlight></codeline>
+<codeline lineno="22" refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85af9a7fad67473564c2d002fbfc893c114" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85af9a7fad67473564c2d002fbfc893c114" kindref="member">APC_RGB_Command_Bold</ref>,</highlight></codeline>
+<codeline lineno="23" refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a77bf6ee8259c87d7ad1e3fec321e95a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a77bf6ee8259c87d7ad1e3fec321e95a5" kindref="member">APC_RGB_Command_Italic</ref>,</highlight></codeline>
+<codeline lineno="24" refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a6164b6a0358e4d1461a30f814205b8ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a6164b6a0358e4d1461a30f814205b8ca" kindref="member">APC_RGB_Command_Underline</ref>,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="d3/d7d/structAPC__ArgInfo" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="d3/d7d/structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/d7d/structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367" kindref="member">required</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="d3/d7d/structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d3/d7d/structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="32" refid="d3/d7d/structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d3/d7d/structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9" kindref="member">param</ref>;</highlight></codeline>
+<codeline lineno="33" refid="d3/d7d/structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d3/d7d/structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262" kindref="member">sparam</ref>;</highlight></codeline>
+<codeline lineno="34" refid="d3/d7d/structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d3/d7d/structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb" kindref="member">help</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="d3/d7d/structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CVEC<sp/><ref refid="d3/d7d/structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971" kindref="member">aliases</ref>;<sp/></highlight><highlight class="comment">//<sp/>CVEC<sp/>of:<sp/>const<sp/>char*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}<sp/><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="d6/d78/structAPC__ArgParser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41" refid="d6/d78/structAPC__ArgParser_1a85b5d693243b0d6d8f23370fd4fc8dc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d6/d78/structAPC__ArgParser_1a85b5d693243b0d6d8f23370fd4fc8dc2" kindref="member">enableColor</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="d6/d78/structAPC__ArgParser_1adbf2fdfbf96ade60dfc6af7d82a950c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d6/d78/structAPC__ArgParser_1adbf2fdfbf96ade60dfc6af7d82a950c1" kindref="member">argc</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="d6/d78/structAPC__ArgParser_1a163455ed5deca655acc930ce1cd6f09b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d6/d78/structAPC__ArgParser_1a163455ed5deca655acc930ce1cd6f09b" kindref="member">fullHelp</ref>;</highlight></codeline>
+<codeline lineno="46" refid="d6/d78/structAPC__ArgParser_1af3ef816ddb709898139610230828eeb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d6/d78/structAPC__ArgParser_1af3ef816ddb709898139610230828eeb7" kindref="member">helpDescription</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="d6/d78/structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CVEC<sp/><ref refid="d6/d78/structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21" kindref="member">args</ref>;<sp/></highlight><highlight class="comment">//<sp/>CVEC<sp/>of<sp/>APC_ArgInfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="d6/d78/structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="d6/d78/structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d" kindref="member">argv</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}<sp/><ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="df/df7/structAPC__RGB" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55" refid="df/df7/structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85" kindref="member">APC_RGB_Command</ref><sp/><ref refid="df/df7/structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8" kindref="member">__externalAction</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="df/df7/structAPC__RGB_1af0429b86b207e9c03311b23075b65d02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/df7/structAPC__RGB_1af0429b86b207e9c03311b23075b65d02" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="58" refid="df/df7/structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/df7/structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c" kindref="member">g</ref>;</highlight></codeline>
+<codeline lineno="59" refid="df/df7/structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/df7/structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656" kindref="member">b</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}<sp/><ref refid="df/df7/structAPC__RGB" kindref="compound">APC_RGB</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="62"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Initialize<sp/>parser<sp/>with<sp/>argc<sp/>and<sp/>argv<sp/>from<sp/>the<sp/>`main()`<sp/>function</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/>*<sp/>@param<sp/>argc<sp/>Number<sp/>of<sp/>arguments</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/>*<sp/>@param<sp/>argv<sp/>Argument<sp/>values</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/>*<sp/>@return<sp/>Constructed<sp/>APC_ArgParser<sp/>with<sp/>all<sp/>the<sp/>recommended<sp/>data</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref><sp/><ref refid="db/daa/APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4" kindref="member">apc_init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[]);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="70"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Initialize<sp/>information<sp/>for<sp/>params</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/>*<sp/>*<sp/>Constructed<sp/>empty<sp/>aliases</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/>*<sp/>*<sp/>`required`<sp/>defaults<sp/>to<sp/>`false`</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/>*<sp/>@return<sp/>Initialized<sp/>APC_ArgInfo<sp/>with<sp/>default<sp/>values</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref><sp/><ref refid="db/daa/APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98" kindref="member">apc_initInfo</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="78"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Convert<sp/>the<sp/>default<sp/>RGB<sp/>format<sp/>to<sp/>a<sp/>valid<sp/>RGB<sp/>struct<sp/>and<sp/>parse<sp/>all<sp/>extended<sp/>commands</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/>*<sp/>*<sp/>${r,g,b}</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/>*<sp/>*<sp/>${R}</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/>*<sp/>*<sp/>${BOLD}</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/>*<sp/>@return<sp/>New<sp/>APC_RGB<sp/>with<sp/>RGB<sp/>data<sp/>and<sp/>extended<sp/>data<sp/>type<sp/>(italic,<sp/>bold,<sp/>reset,<sp/>...)</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="df/df7/structAPC__RGB" kindref="compound">APC_RGB</ref><sp/><ref refid="db/daa/APC__ArgParser_8h_1a1817d1f01f3bd3eab30e9b2521835bd0" kindref="member">__apc_rgbToRGBStruct</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*rgbStr);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="87"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Free<sp/>all<sp/>allocated<sp/>data<sp/>for<sp/>argument<sp/>parser</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/>*<sp/>@param<sp/>argpar<sp/>Argument<sp/>parser<sp/>to<sp/>free<sp/>from<sp/>memory</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="db/daa/APC__ArgParser_8h_1acce093adeb486562d49b2e483102abbf" kindref="member">apc_destroy</ref>(<ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref><sp/>*argpar);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="93"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Automatically<sp/>generate<sp/>help<sp/>and<sp/>pass<sp/>it<sp/>to<sp/>the<sp/>string<sp/>to<sp/>return</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/>*<sp/>@param<sp/>argpar<sp/>Argument<sp/>parser<sp/>to<sp/>generate<sp/>help<sp/>from</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/>*<sp/>@param<sp/>title<sp/>Title<sp/>of<sp/>the<sp/>help</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/>*<sp/>@param<sp/>topInfo<sp/>Top<sp/>information<sp/>(eg:<sp/>Little<sp/>intro<sp/>of<sp/>the<sp/>tool)</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/>*<sp/>@param<sp/>lowerInfo<sp/>Lower<sp/>information<sp/>(eg:<sp/>License,<sp/>...)</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/>*<sp/>@return<sp/>Generated<sp/>help<sp/>with<sp/>escape<sp/>characters<sp/>for<sp/>colors<sp/>(if<sp/>enabled)</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" kindref="member">apc_generateHelp</ref>(<ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref><sp/>*argpar,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topInfo,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*lowerInfo</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="107"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Format<sp/>color;</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/>*<sp/>*<sp/>Remove<sp/>color<sp/>commands<sp/>if<sp/>color<sp/>disabled</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/>*<sp/>*<sp/>Convert<sp/>to<sp/>color<sp/>ANSI<sp/>escape<sp/>code<sp/>if<sp/>enabled</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/>*<sp/>@param<sp/>argpar<sp/>Argument<sp/>to<sp/>format<sp/>color<sp/>and<sp/>get<sp/>data<sp/>from</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/>*<sp/>@param<sp/>msg<sp/>Message<sp/>to<sp/>format</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="db/daa/APC__ArgParser_8h_1a465c9ba9922a24c7ac076a0cc6f50031" kindref="member">__apc_colorFormat</ref>(<ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref><sp/>*argpar,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*msg);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="116"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Convert<sp/>RGB<sp/>to<sp/>ANSI<sp/>escape<sp/>code</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/>*<sp/>@param<sp/>r<sp/>Red<sp/>color</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/>*<sp/>@param<sp/>g<sp/>Green<sp/>color</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/>*<sp/>@param<sp/>b<sp/>Blue<sp/>color</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/>*<sp/>@return<sp/>Constructed<sp/>ANSI<sp/>escape<sp/>code</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="db/daa/APC__ArgParser_8h_1aef714ae3c362917994350860533b358f" kindref="member">__apc_setRGB</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>g,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="125"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Setup<sp/>Arg<sp/>Information<sp/>to<sp/>the<sp/>`argpar`</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/>*<sp/>@param<sp/>argpar<sp/>Argument<sp/>Parser<sp/>to<sp/>modify<sp/>information<sp/>from</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/>*<sp/>@param<sp/>info<sp/>Create<sp/>information<sp/>about<sp/>the<sp/>param</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/>*<sp/>@return<sp/>false<sp/>if<sp/>fail,<sp/>true<sp/>if<sp/>success</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="db/daa/APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd" kindref="member">apc_add</ref>(<ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref><sp/>*argpar,<sp/><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref><sp/>info);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="133"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Get<sp/>if<sp/>there<sp/>is<sp/>an<sp/>argument<sp/>present</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/>*<sp/>@param<sp/>argpar<sp/>Get<sp/>parameters<sp/>from<sp/>argpar</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/>*<sp/>@param<sp/>id<sp/>ID<sp/>to<sp/>fetch</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/>*<sp/>@return<sp/>false<sp/>if<sp/>fail,<sp/>true<sp/>if<sp/>success</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" kindref="member">apc_get</ref>(<ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref><sp/>*argpar,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><ref refid="d5/db8/APC__config_8h_1abe892064a84b35884208fc7a6ec82cb5" kindref="member">__APC_CPP_GUARD_CLOSE</ref></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>__APC_CPP_GUARD_OPEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>__APC_CPP_GUARD_CLOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>INCLUDE_LIB_APC_ARGPARSER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/argpar-c/lib/APC_ArgParser.h"/>
+  </compounddef>
+</doxygen>

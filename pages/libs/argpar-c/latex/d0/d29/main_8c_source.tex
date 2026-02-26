@@ -1,0 +1,72 @@
+\doxysection{main.\+c}
+\hypertarget{main_8c_source}{}\label{main_8c_source}\index{src/main.c@{src/main.c}}
+\doxymbox{\hyperlink{main_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{APC__ArgParser_8h}{../inc/argpar-\/c/lib/APC\_ArgParser.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{APCpredefines_8h}{../inc/argpar-\/c/APCpredefines.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00006}\doxymbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{00006}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00008}00008\ \ \ \ \ \doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}}\ parser\ =\ \doxymbox{\hyperlink{APC__ArgParser_8h_a61d4424e1c28b49745d42226a00c60f4}{apc\_init}}(argc,\ argv);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00011}00011\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structAPC__ArgInfo}{APC\_ArgInfo}}\ info\ =\ \doxymbox{\hyperlink{APC__ArgParser_8h_a89cd1dbd57bfa347f76c06add302ed98}{apc\_initInfo}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00012}00012\ \ \ \ \ \ \ \ \ info.\doxymbox{\hyperlink{structAPC__ArgInfo_ae160e2f6e81ca0483624dbdb919beb31}{id}}\ =\ \textcolor{stringliteral}{"{}version"{}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00013}00013\ \ \ \ \ \ \ \ \ info.\doxymbox{\hyperlink{structAPC__ArgInfo_a9b0e5f5c7508b80e5f5063287024e7d9}{param}}\ =\ \textcolor{stringliteral}{"{}-\/-\/version"{}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00014}00014\ \ \ \ \ \ \ \ \ info.\doxymbox{\hyperlink{structAPC__ArgInfo_a7da2302dd312d46292c81180a61fe262}{sparam}}\ =\ \textcolor{stringliteral}{"{}-\/v"{}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00015}00015\ \ \ \ \ \ \ \ \ info.\doxymbox{\hyperlink{structAPC__ArgInfo_afe9d07845b60869e1bf4808ed1c998cb}{help}}\ =\ \textcolor{stringliteral}{"{}Version\ information\ for\ ArgParser-\/C"{}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00017}00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{APC__ArgParser_8h_a249d5856e4d70717a20b468fd5600bbd}{apc\_add}}(\&parser,\ info);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structAPC__ArgInfo}{APC\_ArgInfo}}\ info\ =\ \doxymbox{\hyperlink{APC__ArgParser_8h_a89cd1dbd57bfa347f76c06add302ed98}{apc\_initInfo}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ info.\doxymbox{\hyperlink{structAPC__ArgInfo_ae160e2f6e81ca0483624dbdb919beb31}{id}}\ =\ \textcolor{stringliteral}{"{}help"{}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ info.\doxymbox{\hyperlink{structAPC__ArgInfo_a9b0e5f5c7508b80e5f5063287024e7d9}{param}}\ =\ \textcolor{stringliteral}{"{}-\/-\/help"{}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ info.\doxymbox{\hyperlink{structAPC__ArgInfo_a7da2302dd312d46292c81180a61fe262}{sparam}}\ =\ \textcolor{stringliteral}{"{}-\/h"{}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ info.\doxymbox{\hyperlink{structAPC__ArgInfo_afe9d07845b60869e1bf4808ed1c998cb}{help}}\ =\ \textcolor{stringliteral}{"{}Show\ this\ help"{}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ cvec\_push(\&info.\doxymbox{\hyperlink{structAPC__ArgInfo_a50f6a9e743e07bcbd8575353a43c6971}{aliases}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *,\ \textcolor{stringliteral}{"{}-\/?"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{APC__ArgParser_8h_a249d5856e4d70717a20b468fd5600bbd}{apc\_add}}(\&parser,\ info);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{APC__ArgParser_8h_a00b47bfc8947418ae1f908f4de1f5f1e}{apc\_get}}(\&parser,\ \textcolor{stringliteral}{"{}version"{}}))}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}==\ VERSION\ INFO\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/\ VERSION:\ \%i.\%i.\%i\(\backslash\)n"{}},\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{APCpredefines_8h_a9412374c5cc180e9ca749ec7922d0df1}{APC\_VERSION\_MAJOR}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{APCpredefines_8h_a2763ac51a4447229701bc32ccaac20c0}{APC\_VERSION\_MINOR}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{APCpredefines_8h_ac1b9cadf4fcb82b36457b6a9f6de2e96}{APC\_VERSION\_PATCH}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/\ VERSION\ STANDARD:\ \%ld\(\backslash\)n"{}},\ \doxymbox{\hyperlink{APCpredefines_8h_ad929b9e4adfbaa61af799731c43c6128}{APC\_VERSION\_STD}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/\ VERSION\ STATE:\ \%s\(\backslash\)n"{}},\ \doxymbox{\hyperlink{APCpredefines_8h_ac585be23e57e986af5d40ba3fd3b2ec0}{APC\_VERSION\_STATE}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{APC__ArgParser_8h_a00b47bfc8947418ae1f908f4de1f5f1e}{apc\_get}}(\&parser,\ \textcolor{stringliteral}{"{}help"{}}))}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00044}00044\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *licenseMessage\ =}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)nArgPar-\/C\ Copyright\ (C)\ 2026\ \ pcannon09\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}This\ program\ comes\ with\ ABSOLUTELY\ NO\ WARRANTY;\ for\ details\ type\ \`{}./run.sh\ -\/-\/help'.\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}This\ is\ free\ software,\ and\ you\ are\ welcome\ to\ redistribute\ it\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}under\ certain\ conditions;\ type\ \`{}./run.sh\ -\/-\/help'\ for\ details."{}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *helpMsg\ =\ \doxymbox{\hyperlink{APC__ArgParser_8h_a235f33a098769075131ad521168d2e0a}{apc\_generateHelp}}(}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&parser,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}APC\ Help"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}ArgParser-\/C\ help\ information\ and\ demo\(\backslash\)nCheck\ the\ code\ for\ more\ information\(\backslash\)n"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ licenseMessage);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}},\ helpMsg);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{APCpredefines_8h_a29ff4691ac6827a68a53aa7c6a5b9968}{APC\_FREE}}(helpMsg);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00062}00062\ \ \ \ \ \doxymbox{\hyperlink{APC__ArgParser_8h_acce093adeb486562d49b2e483102abbf}{apc\_destroy}}(\&parser);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00065}00065\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00066}00066\ }
+
+\end{DoxyCode}

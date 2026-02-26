@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_APC__config_8h_source" xml:lang="en-US">
+<title>APC_config.h</title>
+<indexterm><primary>inc/argpar-c/APC_config.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_APC__config_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;INCLUDE_ARGPAR_C_APC_CONFIG_H_</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;INCLUDE_ARGPAR_C_APC_CONFIG_H_</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00003"/>00003 
+<anchor xml:id="_APC__config_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00005"/><link linkend="_APC__config_8h_1aad021104ca2a3f4411fd05ae01955d38">00005</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__APC_CPP_GUARD_OPEN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;extern&#32;&quot;C&quot;&#32;{</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00006"/><link linkend="_APC__config_8h_1abe892064a84b35884208fc7a6ec82cb5">00006</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__APC_CPP_GUARD_CLOSE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__APC_CPP_GUARD_OPEN</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;__APC_CPP_GUARD_CLOSE</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;__cplusplus&#32;</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00011"/>00011 
+<anchor xml:id="_APC__config_8h_source_1l00012"/>00012 <link linkend="_APC__config_8h_1aad021104ca2a3f4411fd05ae01955d38">__APC_CPP_GUARD_OPEN</link>
+<anchor xml:id="_APC__config_8h_source_1l00013"/>00013 
+<anchor xml:id="_APC__config_8h_source_1l00014"/><link linkend="_APC__config_8h_1a9a8ce316a5f751a9de5f591648a0ccda">00014</link> <emphasis role="preprocessor">#define&#32;APC_STYLE_RESET&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;\033[0m&quot;</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00015"/><link linkend="_APC__config_8h_1a765a8ea177a5abcfddc4206cfea4a62a">00015</link> <emphasis role="preprocessor">#define&#32;APC_STYLE_BOLD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;\033[1m&quot;</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00016"/><link linkend="_APC__config_8h_1a6bcdf6a249f3b8d2856bcd62706dae38">00016</link> <emphasis role="preprocessor">#define&#32;APC_STYLE_ITALIC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;\033[3m&quot;</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00017"/><link linkend="_APC__config_8h_1ab664f8bd1490b2d0feba1260ae627ba8">00017</link> <emphasis role="preprocessor">#define&#32;APC_STYLE_UNDERLINE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;\033[4m&quot;</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00018"/><link linkend="_APC__config_8h_1ae875079c6c32e30db22b910244b48bd3">00018</link> <emphasis role="preprocessor">#define&#32;APC_STYLE_STRIKETRHOUGH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;\033[9m&quot;</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00019"/>00019 
+<anchor xml:id="_APC__config_8h_source_1l00020"/><link linkend="_APC__config_8h_1a1157bc9d6b51d6e7f47d1ae86bc914de">00020</link> <emphasis role="preprocessor">#define&#32;APC_STYLECOLOR_TITLE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;${245,245,245}&quot;&#32;</emphasis><emphasis role="comment">//&#32;rgb(245,245,245)</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00021"/><link linkend="_APC__config_8h_1a51ea406f28c1c64d9959c7b5daa5d806">00021</link> <emphasis role="preprocessor">#define&#32;APC_STYLECOLOR_OPTIONAL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;${150,150,150}&quot;&#32;</emphasis><emphasis role="comment">//&#32;rgb(150,150,150)</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00022"/><link linkend="_APC__config_8h_1a6f52e79ca8a9e69b0f19a929168c7099">00022</link> <emphasis role="preprocessor">#define&#32;APC_STYLECOLOR_IMPORTANT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;${255,71,76}&quot;&#32;</emphasis><emphasis role="comment">//&#32;rgb(255,71,76)</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00023"/><link linkend="_APC__config_8h_1ac9375bfe888e738df60816b9932e145c">00023</link> <emphasis role="preprocessor">#define&#32;APC_STYLECOLOR_WARNING&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;${255,255,40}&quot;&#32;</emphasis><emphasis role="comment">//&#32;rgb(255,255,40)</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00024"/>00024 
+<anchor xml:id="_APC__config_8h_source_1l00025"/><link linkend="_APC__config_8h_1aa73dd466079d5169c09a7e3aebfea366">00025</link> <emphasis role="preprocessor">#define&#32;APC_Declare_Pair(_first,&#32;_second,&#32;_name)&#32;\</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00026"/>00026 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;typedef&#32;struct&#32;APC_Pair##_name&#32;\</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00027"/>00027 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;{&#32;\</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00028"/>00028 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_first&#32;first;&#32;\</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00029"/>00029 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_second&#32;second;&#32;\</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00030"/>00030 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;}&#32;APC_Pair##_name;&#32;\</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00031"/>00031 <emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00032"/>00032 <link linkend="_APC__config_8h_1abe892064a84b35884208fc7a6ec82cb5">__APC_CPP_GUARD_CLOSE</link>
+<anchor xml:id="_APC__config_8h_source_1l00033"/>00033 
+<anchor xml:id="_APC__config_8h_source_1l00034"/>00034 <emphasis role="preprocessor">#undef&#32;__APC_CPP_GUARD_OPEN</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00035"/>00035 <emphasis role="preprocessor">#undef&#32;__APC_CPP_GUARD_CLOSE</emphasis>
+<anchor xml:id="_APC__config_8h_source_1l00036"/>00036 
+<anchor xml:id="_APC__config_8h_source_1l00037"/>00037 <emphasis role="preprocessor">#endif&#32;&#32;</emphasis><emphasis role="comment">//&#32;INCLUDE_ARGPAR-C_APC_CONFIG_H_</emphasis>
+</programlisting></section>

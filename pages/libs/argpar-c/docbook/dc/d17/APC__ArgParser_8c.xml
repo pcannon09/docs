@@ -1,0 +1,845 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_APC__ArgParser_8c" xml:lang="en-US">
+<title>src/lib/APC_ArgParser.c File Reference</title>
+<indexterm><primary>src/lib/APC_ArgParser.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../../inc/argpar-c/lib/APC_ArgParser.h&quot;<?linebreak?>#include &quot;../../inc/argpar-c/APCpredefines.h&quot;<?linebreak?>#include &quot;../../inc/argpar-c/APC_config.h&quot;<?linebreak?>#include &quot;../../vendor/cstr/inc/cstr/cstr.h&quot;<?linebreak?>#include &lt;unistd.h&gt;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_APC__ArgParser_8c_1a2f3cf9f39a0079e3830d921cf3106227">__USE_MISC</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031">__apc_colorFormat</link> (<link linkend="_structAPC__ArgParser">APC_ArgParser</link> *argpar, const char *msg)</para>
+
+<para>Format color;. </para>
+</listitem>
+            <listitem><para><link linkend="_structAPC__RGB">APC_RGB</link> <link linkend="_APC__ArgParser_8c_1a1817d1f01f3bd3eab30e9b2521835bd0">__apc_rgbToRGBStruct</link> (const char *rgbStr)</para>
+
+<para>Convert the default RGB format to a valid RGB struct and parse all extended commands. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_APC__ArgParser_8c_1aef714ae3c362917994350860533b358f">__apc_setRGB</link> (int r, int g, int b)</para>
+
+<para>Convert RGB to ANSI escape code. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_APC__ArgParser_8c_1a249d5856e4d70717a20b468fd5600bbd">apc_add</link> (<link linkend="_structAPC__ArgParser">APC_ArgParser</link> *argpar, <link linkend="_structAPC__ArgInfo">APC_ArgInfo</link> info)</para>
+
+<para>Setup Arg Information to the <computeroutput>argpar</computeroutput>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_APC__ArgParser_8c_1acce093adeb486562d49b2e483102abbf">apc_destroy</link> (<link linkend="_structAPC__ArgParser">APC_ArgParser</link> *argpar)</para>
+
+<para>Free all allocated data for argument parser. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_APC__ArgParser_8c_1a235f33a098769075131ad521168d2e0a">apc_generateHelp</link> (<link linkend="_structAPC__ArgParser">APC_ArgParser</link> *argpar, const char *title, const char *topInfo, const char *lowerInfo)</para>
+
+<para>Automatically generate help and pass it to the string to return. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_APC__ArgParser_8c_1a00b47bfc8947418ae1f908f4de1f5f1e">apc_get</link> (<link linkend="_structAPC__ArgParser">APC_ArgParser</link> *argpar, const char *id)</para>
+
+<para>Get if there is an argument present. </para>
+</listitem>
+            <listitem><para><link linkend="_structAPC__ArgParser">APC_ArgParser</link> <link linkend="_APC__ArgParser_8c_1a61d4424e1c28b49745d42226a00c60f4">apc_init</link> (int argc, char *argv[])</para>
+
+<para>Initialize parser with argc and argv from the <computeroutput><link linkend="_main_8c_1a0ddf1224851353fc92bfbff6f499fa97">main()</link></computeroutput> function. </para>
+</listitem>
+            <listitem><para><link linkend="_structAPC__ArgInfo">APC_ArgInfo</link> <link linkend="_APC__ArgParser_8c_1a89cd1dbd57bfa347f76c06add302ed98">apc_initInfo</link> (void)</para>
+
+<para>Initialize information for params. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_APC__ArgParser_8c_1a2f3cf9f39a0079e3830d921cf3106227"/><section>
+    <title>__USE_MISC</title>
+<indexterm><primary>__USE_MISC</primary><secondary>APC_ArgParser.c</secondary></indexterm>
+<indexterm><primary>APC_ArgParser.c</primary><secondary>__USE_MISC</secondary></indexterm>
+<para><computeroutput>#define __USE_MISC</computeroutput></para><para>
+Definition at line <link linkend="_APC__ArgParser_8c_source_1l00001">1</link> of file <link linkend="_APC__ArgParser_8c_source">APC_ArgParser.c</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031"/><section>
+    <title>__apc_colorFormat()</title>
+<indexterm><primary>__apc_colorFormat</primary><secondary>APC_ArgParser.c</secondary></indexterm>
+<indexterm><primary>APC_ArgParser.c</primary><secondary>__apc_colorFormat</secondary></indexterm>
+<para><computeroutput>char * __apc_colorFormat (<link linkend="_structAPC__ArgParser">APC_ArgParser</link> * argpar, const char * msg)</computeroutput></para><para>
+
+<para>Format color;. </para>
+</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Remove color commands if color disabled</para>
+</listitem><listitem>
+<para>Convert to color ANSI escape code if enabled 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argpar</entry><entry>
+<para>Argument to format color and get data from </para>
+</entry>
+                            </row>
+                            <row>
+<entry>msg</entry><entry>
+<para>Message to format </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_APC__ArgParser_8c_source_1l00199">199</link> of file <link linkend="_APC__ArgParser_8c_source">APC_ArgParser.c</link>.</para>
+<programlisting linenumbering="unnumbered">00200 {
+00201 &#32;&#32;&#32;&#32;CSTR&#32;result&#32;=&#32;cstr_init();
+00202 &#32;&#32;&#32;&#32;cstr_set(&amp;result,&#32;msg);
+00203 
+00204 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argpar-&gt;<link linkend="_structAPC__ArgParser_1a85b5d693243b0d6d8f23370fd4fc8dc2">enableColor</link>)
+00205 &#32;&#32;&#32;&#32;{
+00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Remove&#32;occurrences&#32;that&#32;have:</emphasis>
+00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;`${`&#32;until&#32;the&#32;next&#32;`}`</emphasis>
+00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;pos&#32;=&#32;0;
+00209 
+00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(1)
+00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;start&#32;=&#32;cstr_findFrom(&amp;result,&#32;<emphasis role="stringliteral">&quot;${&quot;</emphasis>,&#32;pos);
+00213 
+00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(start&#32;==&#32;CSTR_NPOS)
+00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+00216 
+00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;end&#32;=&#32;cstr_findFrom(&amp;result,&#32;<emphasis role="stringliteral">&quot;}&quot;</emphasis>,&#32;start&#32;+&#32;2);
+00218 
+00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(end&#32;==&#32;CSTR_NPOS)
+00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+00221 
+00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;len&#32;=&#32;(end&#32;-&#32;start)&#32;+&#32;1;
+00223 
+00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_erase(&amp;result,&#32;start,&#32;len);
+00225 
+00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pos&#32;=&#32;start;
+00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00228 &#32;&#32;&#32;&#32;}
+00229 
+00230 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+00231 &#32;&#32;&#32;&#32;{
+00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Replace&#32;occurrences&#32;that&#32;have:</emphasis>
+00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;`${`&#32;until&#32;the&#32;next&#32;`}`</emphasis>
+00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;With&#32;the&#32;corresponding&#32;color&#32;syntax;</emphasis>
+00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;${r,g,b}</emphasis>
+00236 
+00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;pos&#32;=&#32;0;
+00238 
+00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CSTR&#32;substr&#32;=&#32;cstr_init();
+00240 
+00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(1)
+00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;start&#32;=&#32;cstr_findFrom(&amp;result,&#32;<emphasis role="stringliteral">&quot;${&quot;</emphasis>,&#32;pos);
+00244 
+00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(start&#32;==&#32;CSTR_NPOS)
+00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+00247 
+00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;end&#32;=&#32;cstr_findFrom(&amp;result,&#32;<emphasis role="stringliteral">&quot;}&quot;</emphasis>,&#32;start&#32;+&#32;2);
+00249 
+00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(end&#32;==&#32;CSTR_NPOS)
+00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+00252 
+00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;len&#32;=&#32;(end&#32;-&#32;start)&#32;+&#32;1;
+00254 
+00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_set(&amp;substr,&#32;result.data);
+00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_substr(&amp;substr,&#32;start,&#32;len);
+00257 
+00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;the&#32;RGB&#32;to&#32;the&#32;struct&#32;and&#32;then&#32;format&#32;it&#32;to&#32;string&#32;to</emphasis>
+00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;output&#32;it&#32;in&#32;an&#32;ANSI&#32;color&#32;format</emphasis>
+00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structAPC__RGB">APC_RGB</link>&#32;rgb&#32;=&#32;<link linkend="_APC__ArgParser_8c_1a1817d1f01f3bd3eab30e9b2521835bd0">__apc_rgbToRGBStruct</link>(substr.data);
+00261 
+00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*rgbStr&#32;=&#32;NULL;
+00263 
+00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;==&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ac47aed32852a5fa599f6b9066513cfd0">APC_RGB_Command_Reset</link>)
+00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgbStr&#32;=&#32;<link linkend="_APC__config_8h_1a9a8ce316a5f751a9de5f591648a0ccda">APC_STYLE_RESET</link>;
+00266 
+00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;==&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85af9a7fad67473564c2d002fbfc893c114">APC_RGB_Command_Bold</link>)
+00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgbStr&#32;=&#32;<link linkend="_APC__config_8h_1a765a8ea177a5abcfddc4206cfea4a62a">APC_STYLE_BOLD</link>;
+00269 
+00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;==&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a77bf6ee8259c87d7ad1e3fec321e95a5">APC_RGB_Command_Italic</link>)
+00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgbStr&#32;=&#32;<link linkend="_APC__config_8h_1a6bcdf6a249f3b8d2856bcd62706dae38">APC_STYLE_ITALIC</link>;
+00272 
+00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;==&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a6164b6a0358e4d1461a30f814205b8ca">APC_RGB_Command_Underline</link>)
+00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgbStr&#32;=&#32;<link linkend="_APC__config_8h_1ab664f8bd1490b2d0feba1260ae627ba8">APC_STYLE_UNDERLINE</link>;
+00275 
+00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;rgbStr&#32;=&#32;<link linkend="_APC__ArgParser_8c_1aef714ae3c362917994350860533b358f">__apc_setRGB</link>(rgb.<link linkend="_structAPC__RGB_1af0429b86b207e9c03311b23075b65d02">r</link>,&#32;rgb.<link linkend="_structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c">g</link>,&#32;rgb.<link linkend="_structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656">b</link>);
+00277 
+00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;1.&#32;Remove&#32;`${r,g,b}`&#32;with&#32;its&#32;params</emphasis>
+00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;2.&#32;And&#32;Insert&#32;ANSI&#32;string&#32;at&#32;same&#32;position&#32;where&#32;it&apos;s&#32;supposed&#32;to&#32;be</emphasis>
+00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_erase(&amp;result,&#32;start,&#32;len);
+00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_insert(&amp;result,&#32;rgbStr,&#32;start);
+00282 
+00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Move&#32;position&#32;forward&#32;past&#32;inserted&#32;ANSI&#32;sequence</emphasis>
+00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pos&#32;=&#32;start&#32;+&#32;strlen(rgbStr);
+00285 
+00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;external&#32;action&#32;is&#32;made</emphasis>
+00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;DO&#32;NOT&#32;free,&#32;or&#32;else,&#32;it&apos;ll&#32;crash</emphasis>
+00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>)&#32;{&#32;<link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(rgbStr);&#32;}
+00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00290 
+00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_destroy(&amp;substr);
+00292 &#32;&#32;&#32;&#32;}
+00293 
+00294 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*ret&#32;=&#32;CSTR_sys_strdup(result.data);
+00295 
+00296 &#32;&#32;&#32;&#32;cstr_destroy(&amp;result);
+00297 
+00298 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ret;
+00299 }
+</programlisting><para>
+References <link linkend="_APC__ArgParser_8c_source_1l00132">__apc_rgbToRGBStruct()</link>, <link linkend="_APC__ArgParser_8c_source_1l00101">__apc_setRGB()</link>, <link linkend="_APC__ArgParser_8h_source_1l00055">APC_RGB::__externalAction</link>, <link linkend="_APCpredefines_8h_source_1l00039">APC_FREE</link>, <link linkend="_APC__ArgParser_8h_source_1l00022">APC_RGB_Command_Bold</link>, <link linkend="_APC__ArgParser_8h_source_1l00023">APC_RGB_Command_Italic</link>, <link linkend="_APC__ArgParser_8h_source_1l00021">APC_RGB_Command_Reset</link>, <link linkend="_APC__ArgParser_8h_source_1l00024">APC_RGB_Command_Underline</link>, <link linkend="_APC__config_8h_source_1l00015">APC_STYLE_BOLD</link>, <link linkend="_APC__config_8h_source_1l00016">APC_STYLE_ITALIC</link>, <link linkend="_APC__config_8h_source_1l00014">APC_STYLE_RESET</link>, <link linkend="_APC__config_8h_source_1l00017">APC_STYLE_UNDERLINE</link>, <link linkend="_APC__ArgParser_8h_source_1l00059">APC_RGB::b</link>, <link linkend="_APC__ArgParser_8h_source_1l00041">APC_ArgParser::enableColor</link>, <link linkend="_APC__ArgParser_8h_source_1l00058">APC_RGB::g</link>, and <link linkend="_APC__ArgParser_8h_source_1l00057">APC_RGB::r</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00301">apc_generateHelp()</link>.</para>
+</section>
+<anchor xml:id="_APC__ArgParser_8c_1a1817d1f01f3bd3eab30e9b2521835bd0"/><section>
+    <title>__apc_rgbToRGBStruct()</title>
+<indexterm><primary>__apc_rgbToRGBStruct</primary><secondary>APC_ArgParser.c</secondary></indexterm>
+<indexterm><primary>APC_ArgParser.c</primary><secondary>__apc_rgbToRGBStruct</secondary></indexterm>
+<para><computeroutput><link linkend="_structAPC__RGB">APC_RGB</link> __apc_rgbToRGBStruct (const char * rgbStr)</computeroutput></para><para>
+
+<para>Convert the default RGB format to a valid RGB struct and parse all extended commands. </para>
+</para>
+
+<para><itemizedlist>
+<listitem>
+<para>${r,g,b}</para>
+</listitem><listitem>
+<para>${R}</para>
+</listitem><listitem>
+<para>${BOLD} <formalpara><title>Returns</title>
+
+<para>New <link linkend="_structAPC__RGB">APC_RGB</link> with RGB data and extended data type (italic, bold, reset, ...) </para>
+</formalpara>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_APC__ArgParser_8c_source_1l00132">132</link> of file <link linkend="_APC__ArgParser_8c_source">APC_ArgParser.c</link>.</para>
+<programlisting linenumbering="unnumbered">00133 {
+00134 &#32;&#32;&#32;&#32;<link linkend="_structAPC__RGB">APC_RGB</link>&#32;rgb&#32;=&#32;{0};
+00135 &#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;=&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ad4dcaa8f0262403054fdea2104df055c">APC_RGB_Command_None</link>;
+00136 
+00137 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Reset&#32;terminal&#32;styles</emphasis>
+00138 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Such&#32;as&#32;color,&#32;bolds,&#32;italics,&#32;etc</emphasis>
+00139 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(rgbStr,&#32;<emphasis role="stringliteral">&quot;${R}&quot;</emphasis>)&#32;==&#32;0)
+00140 &#32;&#32;&#32;&#32;{
+00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;=&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ac47aed32852a5fa599f6b9066513cfd0">APC_RGB_Command_Reset</link>;
+00142 
+00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1af0429b86b207e9c03311b23075b65d02">r</link>&#32;=&#32;0;
+00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c">g</link>&#32;=&#32;0;
+00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656">b</link>&#32;=&#32;0;
+00146 
+00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;rgb;
+00148 &#32;&#32;&#32;&#32;}
+00149 
+00150 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(rgbStr,&#32;<emphasis role="stringliteral">&quot;${BOLD}&quot;</emphasis>)&#32;==&#32;0)
+00151 &#32;&#32;&#32;&#32;{
+00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;=&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85af9a7fad67473564c2d002fbfc893c114">APC_RGB_Command_Bold</link>;
+00153 
+00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1af0429b86b207e9c03311b23075b65d02">r</link>&#32;=&#32;0;
+00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c">g</link>&#32;=&#32;0;
+00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656">b</link>&#32;=&#32;0;
+00157 
+00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;rgb;
+00159 &#32;&#32;&#32;&#32;}
+00160 
+00161 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(rgbStr,&#32;<emphasis role="stringliteral">&quot;${ITALIC}&quot;</emphasis>)&#32;==&#32;0)
+00162 &#32;&#32;&#32;&#32;{
+00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;=&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a77bf6ee8259c87d7ad1e3fec321e95a5">APC_RGB_Command_Italic</link>;
+00164 
+00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1af0429b86b207e9c03311b23075b65d02">r</link>&#32;=&#32;0;
+00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c">g</link>&#32;=&#32;0;
+00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656">b</link>&#32;=&#32;0;
+00168 
+00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;rgb;
+00170 &#32;&#32;&#32;&#32;}
+00171 
+00172 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(rgbStr,&#32;<emphasis role="stringliteral">&quot;${UNDERLINE}&quot;</emphasis>)&#32;==&#32;0)
+00173 &#32;&#32;&#32;&#32;{
+00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;=&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a6164b6a0358e4d1461a30f814205b8ca">APC_RGB_Command_Underline</link>;
+00175 
+00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1af0429b86b207e9c03311b23075b65d02">r</link>&#32;=&#32;0;
+00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c">g</link>&#32;=&#32;0;
+00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656">b</link>&#32;=&#32;0;
+00179 
+00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;rgb;
+00181 &#32;&#32;&#32;&#32;}
+00182 
+00183 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!rgbStr)
+00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;rgb;
+00185 
+00186 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;r,&#32;g,&#32;b;
+00187 
+00188 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Get&#32;format:&#32;${r,g,b}</emphasis>
+00189 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sscanf(rgbStr,&#32;<emphasis role="stringliteral">&quot;${%d,%d,%d}&quot;</emphasis>,&#32;&amp;r,&#32;&amp;g,&#32;&amp;b)&#32;==&#32;3)
+00190 &#32;&#32;&#32;&#32;{
+00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(r&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;r&#32;&lt;=&#32;255)&#32;rgb.<link linkend="_structAPC__RGB_1af0429b86b207e9c03311b23075b65d02">r</link>&#32;=&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;char)r;
+00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(g&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;g&#32;&lt;=&#32;255)&#32;rgb.<link linkend="_structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c">g</link>&#32;=&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;char)g;
+00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(b&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;b&#32;&lt;=&#32;255)&#32;rgb.<link linkend="_structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656">b</link>&#32;=&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;char)b;
+00194 &#32;&#32;&#32;&#32;}
+00195 
+00196 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;rgb;
+00197 }
+</programlisting><para>
+References <link linkend="_APC__ArgParser_8h_source_1l00055">APC_RGB::__externalAction</link>, <link linkend="_APC__ArgParser_8h_source_1l00022">APC_RGB_Command_Bold</link>, <link linkend="_APC__ArgParser_8h_source_1l00023">APC_RGB_Command_Italic</link>, <link linkend="_APC__ArgParser_8h_source_1l00020">APC_RGB_Command_None</link>, <link linkend="_APC__ArgParser_8h_source_1l00021">APC_RGB_Command_Reset</link>, <link linkend="_APC__ArgParser_8h_source_1l00024">APC_RGB_Command_Underline</link>, <link linkend="_APC__ArgParser_8h_source_1l00059">APC_RGB::b</link>, <link linkend="_APC__ArgParser_8h_source_1l00058">APC_RGB::g</link>, and <link linkend="_APC__ArgParser_8h_source_1l00057">APC_RGB::r</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00199">__apc_colorFormat()</link>.</para>
+</section>
+<anchor xml:id="_APC__ArgParser_8c_1aef714ae3c362917994350860533b358f"/><section>
+    <title>__apc_setRGB()</title>
+<indexterm><primary>__apc_setRGB</primary><secondary>APC_ArgParser.c</secondary></indexterm>
+<indexterm><primary>APC_ArgParser.c</primary><secondary>__apc_setRGB</secondary></indexterm>
+<para><computeroutput>char * __apc_setRGB (int r, int g, int b)</computeroutput></para><para>
+
+<para>Convert RGB to ANSI escape code. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>r</entry><entry>
+<para>Red color </para>
+</entry>
+                            </row>
+                            <row>
+<entry>g</entry><entry>
+<para>Green color </para>
+</entry>
+                            </row>
+                            <row>
+<entry>b</entry><entry>
+<para>Blue color </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Constructed ANSI escape code </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_APC__ArgParser_8c_source_1l00101">101</link> of file <link linkend="_APC__ArgParser_8c_source">APC_ArgParser.c</link>.</para>
+<programlisting linenumbering="unnumbered">00102 {
+00103 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(r&#32;&lt;&#32;0&#32;||&#32;r&#32;&gt;&#32;255)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00104 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(g&#32;&lt;&#32;0&#32;||&#32;g&#32;&gt;&#32;255)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00105 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(b&#32;&lt;&#32;0&#32;||&#32;b&#32;&gt;&#32;255)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+00106 
+00107 &#32;&#32;&#32;&#32;CSTR&#32;formatted&#32;=&#32;cstr_init();
+00108 
+00109 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;tmp[16];
+00110 
+00111 &#32;&#32;&#32;&#32;cstr_set(&amp;formatted,&#32;<emphasis role="stringliteral">&quot;\033[38;2;&quot;</emphasis>);
+00112 
+00113 &#32;&#32;&#32;&#32;snprintf(tmp,&#32;<emphasis role="keyword">sizeof</emphasis>(tmp),&#32;<emphasis role="stringliteral">&quot;%u&quot;</emphasis>,&#32;r);
+00114 &#32;&#32;&#32;&#32;cstr_add(&amp;formatted,&#32;tmp);
+00115 &#32;&#32;&#32;&#32;cstr_add(&amp;formatted,&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>);
+00116 
+00117 &#32;&#32;&#32;&#32;snprintf(tmp,&#32;<emphasis role="keyword">sizeof</emphasis>(tmp),&#32;<emphasis role="stringliteral">&quot;%u&quot;</emphasis>,&#32;g);
+00118 &#32;&#32;&#32;&#32;cstr_add(&amp;formatted,&#32;tmp);
+00119 &#32;&#32;&#32;&#32;cstr_add(&amp;formatted,&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>);
+00120 
+00121 &#32;&#32;&#32;&#32;snprintf(tmp,&#32;<emphasis role="keyword">sizeof</emphasis>(tmp),&#32;<emphasis role="stringliteral">&quot;%u&quot;</emphasis>,&#32;b);
+00122 &#32;&#32;&#32;&#32;cstr_add(&amp;formatted,&#32;tmp);
+00123 &#32;&#32;&#32;&#32;cstr_add(&amp;formatted,&#32;<emphasis role="stringliteral">&quot;m&quot;</emphasis>);
+00124 
+00125 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*ret&#32;=&#32;CSTR_sys_strdup(formatted.data);
+00126 
+00127 &#32;&#32;&#32;&#32;cstr_destroy(&amp;formatted);
+00128 
+00129 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ret;
+00130 }
+</programlisting><para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00199">__apc_colorFormat()</link>.</para>
+</section>
+<anchor xml:id="_APC__ArgParser_8c_1a249d5856e4d70717a20b468fd5600bbd"/><section>
+    <title>apc_add()</title>
+<indexterm><primary>apc_add</primary><secondary>APC_ArgParser.c</secondary></indexterm>
+<indexterm><primary>APC_ArgParser.c</primary><secondary>apc_add</secondary></indexterm>
+<para><computeroutput>bool apc_add (<link linkend="_structAPC__ArgParser">APC_ArgParser</link> * argpar, <link linkend="_structAPC__ArgInfo">APC_ArgInfo</link> info)</computeroutput></para><para>
+
+<para>Setup Arg Information to the <computeroutput>argpar</computeroutput>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argpar</entry><entry>
+<para>Argument Parser to modify information from </para>
+</entry>
+                            </row>
+                            <row>
+<entry>info</entry><entry>
+<para>Create information about the param </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>false if fail, true if success </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_APC__ArgParser_8c_source_1l00048">48</link> of file <link linkend="_APC__ArgParser_8c_source">APC_ArgParser.c</link>.</para>
+<programlisting linenumbering="unnumbered">00049 {
+00050 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Make&#32;addition&#32;checks</emphasis>
+00051 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(info.<link linkend="_structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31">id</link>[0]&#32;==&#32;<emphasis role="charliteral">&apos;\0&apos;</emphasis>&#32;||
+00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9">param</link>[0]&#32;==&#32;<emphasis role="charliteral">&apos;\0&apos;</emphasis>)
+00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+00054 
+00055 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;passed,&#32;push&#32;it:</emphasis>
+00056 &#32;&#32;&#32;&#32;cvec_push(&amp;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>,&#32;<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>,&#32;info);
+00057 
+00058 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+00059 }
+</programlisting><para>
+References <link linkend="_APC__ArgParser_8h_source_1l00048">APC_ArgParser::args</link>, <link linkend="_APC__ArgParser_8h_source_1l00031">APC_ArgInfo::id</link>, and <link linkend="_APC__ArgParser_8h_source_1l00032">APC_ArgInfo::param</link>.</para>
+<para>
+Referenced by <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_APC__ArgParser_8c_1acce093adeb486562d49b2e483102abbf"/><section>
+    <title>apc_destroy()</title>
+<indexterm><primary>apc_destroy</primary><secondary>APC_ArgParser.c</secondary></indexterm>
+<indexterm><primary>APC_ArgParser.c</primary><secondary>apc_destroy</secondary></indexterm>
+<para><computeroutput>void apc_destroy (<link linkend="_structAPC__ArgParser">APC_ArgParser</link> * argpar)</computeroutput></para><para>
+
+<para>Free all allocated data for argument parser. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argpar</entry><entry>
+<para>Argument parser to free from memory </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_APC__ArgParser_8c_source_1l00033">33</link> of file <link linkend="_APC__ArgParser_8c_source">APC_ArgParser.c</link>.</para>
+<programlisting linenumbering="unnumbered">00034 {
+00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0&#32;;&#32;i&#32;&lt;&#32;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>.size&#32;;&#32;i++)
+00036 &#32;&#32;&#32;&#32;{
+00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>&#32;*info&#32;=&#32;cvec_get(&amp;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>,&#32;i);
+00038 
+00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!info)&#32;<emphasis role="keywordflow">continue</emphasis>;
+00040 
+00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Destroy</emphasis>
+00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cvec_destroy(&amp;info-&gt;<link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link>);
+00043 &#32;&#32;&#32;&#32;}
+00044 
+00045 &#32;&#32;&#32;&#32;cvec_destroy(&amp;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>);
+00046 }
+</programlisting><para>
+References <link linkend="_APC__ArgParser_8h_source_1l00036">APC_ArgInfo::aliases</link>, and <link linkend="_APC__ArgParser_8h_source_1l00048">APC_ArgParser::args</link>.</para>
+<para>
+Referenced by <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_APC__ArgParser_8c_1a235f33a098769075131ad521168d2e0a"/><section>
+    <title>apc_generateHelp()</title>
+<indexterm><primary>apc_generateHelp</primary><secondary>APC_ArgParser.c</secondary></indexterm>
+<indexterm><primary>APC_ArgParser.c</primary><secondary>apc_generateHelp</secondary></indexterm>
+<para><computeroutput>char * apc_generateHelp (<link linkend="_structAPC__ArgParser">APC_ArgParser</link> * argpar, const char * title, const char * topInfo, const char * lowerInfo)</computeroutput></para><para>
+
+<para>Automatically generate help and pass it to the string to return. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argpar</entry><entry>
+<para>Argument parser to generate help from </para>
+</entry>
+                            </row>
+                            <row>
+<entry>title</entry><entry>
+<para>Title of the help </para>
+</entry>
+                            </row>
+                            <row>
+<entry>topInfo</entry><entry>
+<para>Top information (eg: Little intro of the tool) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>lowerInfo</entry><entry>
+<para>Lower information (eg: License, ...) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Generated help with escape characters for colors (if enabled) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_APC__ArgParser_8c_source_1l00301">301</link> of file <link linkend="_APC__ArgParser_8c_source">APC_ArgParser.c</link>.</para>
+<programlisting linenumbering="unnumbered">00305 {
+00306 &#32;&#32;&#32;&#32;CSTR&#32;docs&#32;=&#32;cstr_init();
+00307 &#32;&#32;&#32;&#32;cstr_set(&amp;docs,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00308 
+00309 &#32;&#32;&#32;&#32;CSTR&#32;tmpContent&#32;=&#32;cstr_init();
+00310 &#32;&#32;&#32;&#32;cstr_set(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00311 
+00312 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*result&#32;=&#32;NULL;
+00313 
+00314 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Title</emphasis>
+00315 &#32;&#32;&#32;&#32;cstr_clear(&amp;tmpContent);
+00316 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<link linkend="_APC__config_8h_1a1157bc9d6b51d6e7f47d1ae86bc914de">APC_STYLECOLOR_TITLE</link>&#32;<emphasis role="stringliteral">&quot;${BOLD}&quot;</emphasis>);
+00317 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;title&#32;?&#32;title&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00318 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;${R}\n&quot;</emphasis>);
+00319 
+00320 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="_APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031">__apc_colorFormat</link>(argpar,&#32;tmpContent.data);
+00321 
+00322 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(result)
+00323 &#32;&#32;&#32;&#32;{
+00324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;docs,&#32;result);
+00325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(result);
+00326 &#32;&#32;&#32;&#32;}
+00327 
+00328 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Top&#32;info</emphasis>
+00329 &#32;&#32;&#32;&#32;cstr_clear(&amp;tmpContent);
+00330 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;${ITALIC}&quot;</emphasis>);
+00331 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;topInfo&#32;?&#32;topInfo&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00332 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;${R}\n&quot;</emphasis>);
+00333 
+00334 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="_APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031">__apc_colorFormat</link>(argpar,&#32;tmpContent.data);
+00335 
+00336 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(result)
+00337 &#32;&#32;&#32;&#32;{
+00338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;docs,&#32;result);
+00339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(result);
+00340 &#32;&#32;&#32;&#32;}
+00341 
+00342 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;MAIN&#32;INFO</emphasis>
+00343 
+00344 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0&#32;;&#32;i&#32;&lt;&#32;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>.size&#32;;&#32;i++)
+00345 &#32;&#32;&#32;&#32;{
+00346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>&#32;*info&#32;=&#32;cvec_get(&amp;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>,&#32;i);
+00347 
+00348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_clear(&amp;tmpContent);
+00349 
+00350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Example:</emphasis>
+00351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;help&#32;[&#32;--help|-h|-?&#32;];&#32;Show&#32;this&#32;help</emphasis>
+00352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Structure:</emphasis>
+00353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;{ID}&#32;[&#32;{param1}|{param2}|{alias1}|{alias2}|{...}&#32;];&#32;{Description}</emphasis>
+00354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31">id</link>);
+00355 
+00356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Open&#32;optional</emphasis>
+00357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!info-&gt;<link linkend="_structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367">required</link>)
+00358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*parsedColor&#32;=&#32;<link linkend="_APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031">__apc_colorFormat</link>(argpar,&#32;<link linkend="_APC__config_8h_1a51ea406f28c1c64d9959c7b5daa5d806">APC_STYLECOLOR_OPTIONAL</link>);
+00360 
+00361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;parsedColor);
+00362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;&#32;[&#32;&quot;</emphasis>);
+00363 
+00364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(parsedColor);
+00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00366 
+00367 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9">param</link>);
+00368 
+00369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strlen(info-&gt;<link linkend="_structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262">sparam</link>)&#32;&gt;&#32;0)&#32;
+00370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;|&quot;</emphasis>);
+00372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262">sparam</link>);
+00373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00374 
+00375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0&#32;;&#32;i&#32;&lt;&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link>.size&#32;;&#32;i++)
+00376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;**aliasName&#32;=&#32;cvec_get(&amp;info-&gt;<link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link>,&#32;i);
+00378 
+00379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!aliasName&#32;&amp;&amp;&#32;!*aliasName)
+00380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+00381 
+00382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;|&quot;</emphasis>);
+00383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;*aliasName);
+00384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00385 
+00386 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Close&#32;optional</emphasis>
+00387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!info-&gt;<link linkend="_structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367">required</link>)
+00388 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*parsedColor&#32;=&#32;<link linkend="_APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031">__apc_colorFormat</link>(argpar,&#32;<emphasis role="stringliteral">&quot;${R}&quot;</emphasis>);
+00390 
+00391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;&#32;]&quot;</emphasis>);
+00392 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;parsedColor);
+00393 
+00394 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(parsedColor);
+00395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00396 
+00397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;;&#32;&quot;</emphasis>);
+00398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb">help</link>);
+00399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>);
+00400 
+00401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;docs,&#32;tmpContent.data);
+00402 &#32;&#32;&#32;&#32;}
+00403 
+00404 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+00405 
+00406 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Lower&#32;info</emphasis>
+00407 &#32;&#32;&#32;&#32;cstr_clear(&amp;tmpContent);
+00408 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;${ITALIC}&quot;</emphasis>);
+00409 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;lowerInfo&#32;?&#32;lowerInfo&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+00410 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;${R}&quot;</emphasis>);
+00411 
+00412 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="_APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031">__apc_colorFormat</link>(argpar,&#32;tmpContent.data);
+00413 
+00414 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(result)
+00415 &#32;&#32;&#32;&#32;{
+00416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;docs,&#32;result);
+00417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(result);
+00418 &#32;&#32;&#32;&#32;}
+00419 
+00420 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*data&#32;=&#32;CSTR_sys_strdup(docs.data);
+00421 
+00422 &#32;&#32;&#32;&#32;cstr_destroy(&amp;docs);
+00423 &#32;&#32;&#32;&#32;cstr_destroy(&amp;tmpContent);
+00424 
+00425 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;data;
+00426 }
+</programlisting><para>
+References <link linkend="_APC__ArgParser_8c_source_1l00199">__apc_colorFormat()</link>, <link linkend="_APC__ArgParser_8h_source_1l00036">APC_ArgInfo::aliases</link>, <link linkend="_APCpredefines_8h_source_1l00039">APC_FREE</link>, <link linkend="_APC__config_8h_source_1l00021">APC_STYLECOLOR_OPTIONAL</link>, <link linkend="_APC__config_8h_source_1l00020">APC_STYLECOLOR_TITLE</link>, <link linkend="_APC__ArgParser_8h_source_1l00048">APC_ArgParser::args</link>, <link linkend="_APC__ArgParser_8h_source_1l00034">APC_ArgInfo::help</link>, <link linkend="_APC__ArgParser_8h_source_1l00031">APC_ArgInfo::id</link>, <link linkend="_APC__ArgParser_8h_source_1l00032">APC_ArgInfo::param</link>, <link linkend="_APC__ArgParser_8h_source_1l00029">APC_ArgInfo::required</link>, and <link linkend="_APC__ArgParser_8h_source_1l00033">APC_ArgInfo::sparam</link>.</para>
+<para>
+Referenced by <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_APC__ArgParser_8c_1a00b47bfc8947418ae1f908f4de1f5f1e"/><section>
+    <title>apc_get()</title>
+<indexterm><primary>apc_get</primary><secondary>APC_ArgParser.c</secondary></indexterm>
+<indexterm><primary>APC_ArgParser.c</primary><secondary>apc_get</secondary></indexterm>
+<para><computeroutput>bool apc_get (<link linkend="_structAPC__ArgParser">APC_ArgParser</link> * argpar, const char * id)</computeroutput></para><para>
+
+<para>Get if there is an argument present. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argpar</entry><entry>
+<para>Get parameters from argpar </para>
+</entry>
+                            </row>
+                            <row>
+<entry>id</entry><entry>
+<para>ID to fetch </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>false if fail, true if success </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_APC__ArgParser_8c_source_1l00061">61</link> of file <link linkend="_APC__ArgParser_8c_source">APC_ArgParser.c</link>.</para>
+<programlisting linenumbering="unnumbered">00062 {
+00063 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keywordtype">id</emphasis>[0]&#32;==&#32;<emphasis role="charliteral">&apos;\0&apos;</emphasis>&#32;&#32;||&#32;!<emphasis role="keywordtype">id</emphasis>&#32;||
+00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;!argpar)
+00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+00066 
+00067 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;main&#32;CVEC&#32;ARGS</emphasis>
+00068 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;arg&#32;=&#32;0&#32;;&#32;arg&#32;&lt;&#32;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>.size&#32;;&#32;arg++)
+00069 &#32;&#32;&#32;&#32;{
+00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>&#32;*info&#32;=&#32;cvec_get(&amp;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>,&#32;arg);
+00071 
+00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!info)&#32;<emphasis role="keywordflow">continue</emphasis>;
+00073 
+00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(info-&gt;<link linkend="_structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31">id</link>,&#32;<emphasis role="keywordtype">id</emphasis>)&#32;!=&#32;0)
+00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+00076 
+00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;ARGV&#32;from&#32;apc_init()&#32;function</emphasis>
+00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;argv&#32;=&#32;0&#32;;&#32;argv&#32;&lt;&#32;argpar-&gt;<link linkend="_structAPC__ArgParser_1adbf2fdfbf96ade60dfc6af7d82a950c1">argc</link>&#32;;&#32;argv++)
+00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(argpar-&gt;<link linkend="_structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d">argv</link>[argv],&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9">param</link>)&#32;==&#32;0&#32;||
+00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcmp(argpar-&gt;<link linkend="_structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d">argv</link>[argv],&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262">sparam</link>)&#32;==&#32;0)
+00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+00083 
+00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Parse&#32;aliases</emphasis>
+00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;a&#32;=&#32;0&#32;;&#32;a&#32;&lt;&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link>.size&#32;;&#32;a++)
+00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;**alias&#32;=&#32;cvec_get(&amp;info-&gt;<link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link>,&#32;a);
+00088 
+00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!alias&#32;&amp;&amp;&#32;!*alias)
+00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+00091 
+00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(argpar-&gt;<link linkend="_structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d">argv</link>[argv],&#32;*alias)&#32;==&#32;0)
+00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+00096 &#32;&#32;&#32;&#32;}
+00097 
+00098 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+00099 }
+</programlisting><para>
+References <link linkend="_APC__ArgParser_8h_source_1l00036">APC_ArgInfo::aliases</link>, <link linkend="_APC__ArgParser_8h_source_1l00043">APC_ArgParser::argc</link>, <link linkend="_APC__ArgParser_8h_source_1l00048">APC_ArgParser::args</link>, <link linkend="_APC__ArgParser_8h_source_1l00050">APC_ArgParser::argv</link>, <link linkend="_APC__ArgParser_8h_source_1l00031">APC_ArgInfo::id</link>, <link linkend="_APC__ArgParser_8h_source_1l00032">APC_ArgInfo::param</link>, and <link linkend="_APC__ArgParser_8h_source_1l00033">APC_ArgInfo::sparam</link>.</para>
+<para>
+Referenced by <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_APC__ArgParser_8c_1a61d4424e1c28b49745d42226a00c60f4"/><section>
+    <title>apc_init()</title>
+<indexterm><primary>apc_init</primary><secondary>APC_ArgParser.c</secondary></indexterm>
+<indexterm><primary>APC_ArgParser.c</primary><secondary>apc_init</secondary></indexterm>
+<para><computeroutput><link linkend="_structAPC__ArgParser">APC_ArgParser</link> apc_init (int argc, char * argv[])</computeroutput></para><para>
+
+<para>Initialize parser with argc and argv from the <computeroutput><link linkend="_main_8c_1a0ddf1224851353fc92bfbff6f499fa97">main()</link></computeroutput> function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argc</entry><entry>
+<para>Number of arguments </para>
+</entry>
+                            </row>
+                            <row>
+<entry>argv</entry><entry>
+<para>Argument values </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Constructed <link linkend="_structAPC__ArgParser">APC_ArgParser</link> with all the recommended data </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_APC__ArgParser_8c_source_1l00012">12</link> of file <link linkend="_APC__ArgParser_8c_source">APC_ArgParser.c</link>.</para>
+<programlisting linenumbering="unnumbered">00013 {
+00014 &#32;&#32;&#32;&#32;<link linkend="_structAPC__ArgParser">APC_ArgParser</link>&#32;parser&#32;=&#32;{0};
+00015 
+00016 &#32;&#32;&#32;&#32;parser.<link linkend="_structAPC__ArgParser_1adbf2fdfbf96ade60dfc6af7d82a950c1">argc</link>&#32;=&#32;argc;
+00017 &#32;&#32;&#32;&#32;parser.<link linkend="_structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d">argv</link>&#32;=&#32;argv;
+00018 &#32;&#32;&#32;&#32;parser.<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>&#32;=&#32;cvec_init(-1,&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>));
+00019 &#32;&#32;&#32;&#32;parser.<link linkend="_structAPC__ArgParser_1a85b5d693243b0d6d8f23370fd4fc8dc2">enableColor</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+00020 
+00021 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;parser;
+00022 }
+</programlisting><para>
+References <link linkend="_APC__ArgParser_8h_source_1l00043">APC_ArgParser::argc</link>, <link linkend="_APC__ArgParser_8h_source_1l00048">APC_ArgParser::args</link>, <link linkend="_APC__ArgParser_8h_source_1l00050">APC_ArgParser::argv</link>, and <link linkend="_APC__ArgParser_8h_source_1l00041">APC_ArgParser::enableColor</link>.</para>
+<para>
+Referenced by <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_APC__ArgParser_8c_1a89cd1dbd57bfa347f76c06add302ed98"/><section>
+    <title>apc_initInfo()</title>
+<indexterm><primary>apc_initInfo</primary><secondary>APC_ArgParser.c</secondary></indexterm>
+<indexterm><primary>APC_ArgParser.c</primary><secondary>apc_initInfo</secondary></indexterm>
+<para><computeroutput><link linkend="_structAPC__ArgInfo">APC_ArgInfo</link> apc_initInfo (void )</computeroutput></para><para>
+
+<para>Initialize information for params. </para>
+</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Constructed empty aliases</para>
+</listitem><listitem>
+<para><computeroutput>required</computeroutput> defaults to <computeroutput>false</computeroutput> <formalpara><title>Returns</title>
+
+<para>Initialized <link linkend="_structAPC__ArgInfo">APC_ArgInfo</link> with default values </para>
+</formalpara>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_APC__ArgParser_8c_source_1l00024">24</link> of file <link linkend="_APC__ArgParser_8c_source">APC_ArgParser.c</link>.</para>
+<programlisting linenumbering="unnumbered">00025 {
+00026 &#32;&#32;&#32;&#32;<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>&#32;info&#32;=&#32;{0};
+00027 &#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link>&#32;=&#32;cvec_init(-1,&#32;<emphasis role="keyword">sizeof</emphasis>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*));
+00028 &#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367">required</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+00029 
+00030 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;info;
+00031 }
+</programlisting><para>
+References <link linkend="_APC__ArgParser_8h_source_1l00036">APC_ArgInfo::aliases</link>, and <link linkend="_APC__ArgParser_8h_source_1l00029">APC_ArgInfo::required</link>.</para>
+<para>
+Referenced by <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+</section>
+</section>

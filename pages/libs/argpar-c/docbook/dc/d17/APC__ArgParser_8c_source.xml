@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_APC__ArgParser_8c_source" xml:lang="en-US">
+<title>APC_ArgParser.c</title>
+<indexterm><primary>src/lib/APC_ArgParser.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_APC__ArgParser_8c_source_1l00001"/><link linkend="_APC__ArgParser_8c_1a2f3cf9f39a0079e3830d921cf3106227">00001</link> <emphasis role="preprocessor">#define&#32;__USE_MISC</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_APC__ArgParser_8h">../../inc/argpar-c/lib/APC_ArgParser.h</link>&quot;</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00003"/>00003 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_APCpredefines_8h">../../inc/argpar-c/APCpredefines.h</link>&quot;</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_APC__config_8h">../../inc/argpar-c/APC_config.h</link>&quot;</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00006"/>00006 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;../../vendor/cstr/inc/cstr/cstr.h&quot;</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00008"/>00008 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&lt;unistd.h&gt;</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00010"/>00010 <emphasis role="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00011"/>00011 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00012"/><link linkend="_APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4">00012</link> <link linkend="_structAPC__ArgParser">APC_ArgParser</link>&#32;<link linkend="_APC__ArgParser_8c_1a61d4424e1c28b49745d42226a00c60f4">apc_init</link>(<emphasis role="keywordtype">int</emphasis>&#32;argc,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*argv[])
+<anchor xml:id="_APC__ArgParser_8c_source_1l00013"/>00013 {
+<anchor xml:id="_APC__ArgParser_8c_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<link linkend="_structAPC__ArgParser">APC_ArgParser</link>&#32;parser&#32;=&#32;{0};
+<anchor xml:id="_APC__ArgParser_8c_source_1l00015"/>00015 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00016"/>00016 &#32;&#32;&#32;&#32;parser.<link linkend="_structAPC__ArgParser_1adbf2fdfbf96ade60dfc6af7d82a950c1">argc</link>&#32;=&#32;argc;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00017"/>00017 &#32;&#32;&#32;&#32;parser.<link linkend="_structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d">argv</link>&#32;=&#32;argv;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00018"/>00018 &#32;&#32;&#32;&#32;parser.<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>&#32;=&#32;cvec_init(-1,&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>));
+<anchor xml:id="_APC__ArgParser_8c_source_1l00019"/>00019 &#32;&#32;&#32;&#32;parser.<link linkend="_structAPC__ArgParser_1a85b5d693243b0d6d8f23370fd4fc8dc2">enableColor</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00020"/>00020 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;parser;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00022"/>00022 }
+<anchor xml:id="_APC__ArgParser_8c_source_1l00023"/>00023 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00024"/><link linkend="_APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98">00024</link> <link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>&#32;<link linkend="_APC__ArgParser_8c_1a89cd1dbd57bfa347f76c06add302ed98">apc_initInfo</link>(<emphasis role="keywordtype">void</emphasis>)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00025"/>00025 {
+<anchor xml:id="_APC__ArgParser_8c_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>&#32;info&#32;=&#32;{0};
+<anchor xml:id="_APC__ArgParser_8c_source_1l00027"/>00027 &#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link>&#32;=&#32;cvec_init(-1,&#32;<emphasis role="keyword">sizeof</emphasis>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*));
+<anchor xml:id="_APC__ArgParser_8c_source_1l00028"/>00028 &#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367">required</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00029"/>00029 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;info;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00031"/>00031 }
+<anchor xml:id="_APC__ArgParser_8c_source_1l00032"/>00032 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00033"/><link linkend="_APC__ArgParser_8h_1acce093adeb486562d49b2e483102abbf">00033</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_APC__ArgParser_8c_1acce093adeb486562d49b2e483102abbf">apc_destroy</link>(<link linkend="_structAPC__ArgParser">APC_ArgParser</link>&#32;*argpar)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00034"/>00034 {
+<anchor xml:id="_APC__ArgParser_8c_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0&#32;;&#32;i&#32;&lt;&#32;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>.size&#32;;&#32;i++)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00036"/>00036 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>&#32;*info&#32;=&#32;cvec_get(&amp;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>,&#32;i);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00038"/>00038 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!info)&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00040"/>00040 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Destroy</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cvec_destroy(&amp;info-&gt;<link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00043"/>00043 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00044"/>00044 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00045"/>00045 &#32;&#32;&#32;&#32;cvec_destroy(&amp;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00046"/>00046 }
+<anchor xml:id="_APC__ArgParser_8c_source_1l00047"/>00047 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00048"/><link linkend="_APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd">00048</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_APC__ArgParser_8c_1a249d5856e4d70717a20b468fd5600bbd">apc_add</link>(<link linkend="_structAPC__ArgParser">APC_ArgParser</link>&#32;*argpar,&#32;<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>&#32;info)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00049"/>00049 {
+<anchor xml:id="_APC__ArgParser_8c_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Make&#32;addition&#32;checks</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00051"/>00051 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(info.<link linkend="_structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31">id</link>[0]&#32;==&#32;<emphasis role="charliteral">&apos;\0&apos;</emphasis>&#32;||
+<anchor xml:id="_APC__ArgParser_8c_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9">param</link>[0]&#32;==&#32;<emphasis role="charliteral">&apos;\0&apos;</emphasis>)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00054"/>00054 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;passed,&#32;push&#32;it:</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00056"/>00056 &#32;&#32;&#32;&#32;cvec_push(&amp;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>,&#32;<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>,&#32;info);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00057"/>00057 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00058"/>00058 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00059"/>00059 }
+<anchor xml:id="_APC__ArgParser_8c_source_1l00060"/>00060 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00061"/><link linkend="_APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e">00061</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_APC__ArgParser_8c_1a00b47bfc8947418ae1f908f4de1f5f1e">apc_get</link>(<link linkend="_structAPC__ArgParser">APC_ArgParser</link>&#32;*argpar,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*<emphasis role="keywordtype">id</emphasis>)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00062"/>00062 {
+<anchor xml:id="_APC__ArgParser_8c_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keywordtype">id</emphasis>[0]&#32;==&#32;<emphasis role="charliteral">&apos;\0&apos;</emphasis>&#32;&#32;||&#32;!<emphasis role="keywordtype">id</emphasis>&#32;||
+<anchor xml:id="_APC__ArgParser_8c_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;!argpar)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00066"/>00066 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;main&#32;CVEC&#32;ARGS</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00068"/>00068 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;arg&#32;=&#32;0&#32;;&#32;arg&#32;&lt;&#32;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>.size&#32;;&#32;arg++)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00069"/>00069 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>&#32;*info&#32;=&#32;cvec_get(&amp;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>,&#32;arg);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00071"/>00071 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!info)&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00073"/>00073 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(info-&gt;<link linkend="_structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31">id</link>,&#32;<emphasis role="keywordtype">id</emphasis>)&#32;!=&#32;0)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00076"/>00076 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;ARGV&#32;from&#32;apc_init()&#32;function</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;argv&#32;=&#32;0&#32;;&#32;argv&#32;&lt;&#32;argpar-&gt;<link linkend="_structAPC__ArgParser_1adbf2fdfbf96ade60dfc6af7d82a950c1">argc</link>&#32;;&#32;argv++)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(argpar-&gt;<link linkend="_structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d">argv</link>[argv],&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9">param</link>)&#32;==&#32;0&#32;||
+<anchor xml:id="_APC__ArgParser_8c_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcmp(argpar-&gt;<link linkend="_structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d">argv</link>[argv],&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262">sparam</link>)&#32;==&#32;0)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00083"/>00083 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Parse&#32;aliases</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;a&#32;=&#32;0&#32;;&#32;a&#32;&lt;&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link>.size&#32;;&#32;a++)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;**alias&#32;=&#32;cvec_get(&amp;info-&gt;<link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link>,&#32;a);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00088"/>00088 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!alias&#32;&amp;&amp;&#32;!*alias)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00091"/>00091 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(argpar-&gt;<link linkend="_structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d">argv</link>[argv],&#32;*alias)&#32;==&#32;0)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00096"/>00096 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00097"/>00097 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00098"/>00098 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00099"/>00099 }
+<anchor xml:id="_APC__ArgParser_8c_source_1l00100"/>00100 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00101"/><link linkend="_APC__ArgParser_8h_1aef714ae3c362917994350860533b358f">00101</link> <emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_APC__ArgParser_8c_1aef714ae3c362917994350860533b358f">__apc_setRGB</link>(<emphasis role="keywordtype">int</emphasis>&#32;r,&#32;<emphasis role="keywordtype">int</emphasis>&#32;g,&#32;<emphasis role="keywordtype">int</emphasis>&#32;b)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00102"/>00102 {
+<anchor xml:id="_APC__ArgParser_8c_source_1l00103"/>00103 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(r&#32;&lt;&#32;0&#32;||&#32;r&#32;&gt;&#32;255)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00104"/>00104 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(g&#32;&lt;&#32;0&#32;||&#32;g&#32;&gt;&#32;255)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00105"/>00105 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(b&#32;&lt;&#32;0&#32;||&#32;b&#32;&gt;&#32;255)&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00106"/>00106 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00107"/>00107 &#32;&#32;&#32;&#32;CSTR&#32;formatted&#32;=&#32;cstr_init();
+<anchor xml:id="_APC__ArgParser_8c_source_1l00108"/>00108 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00109"/>00109 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;tmp[16];
+<anchor xml:id="_APC__ArgParser_8c_source_1l00110"/>00110 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00111"/>00111 &#32;&#32;&#32;&#32;cstr_set(&amp;formatted,&#32;<emphasis role="stringliteral">&quot;\033[38;2;&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00112"/>00112 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00113"/>00113 &#32;&#32;&#32;&#32;snprintf(tmp,&#32;<emphasis role="keyword">sizeof</emphasis>(tmp),&#32;<emphasis role="stringliteral">&quot;%u&quot;</emphasis>,&#32;r);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00114"/>00114 &#32;&#32;&#32;&#32;cstr_add(&amp;formatted,&#32;tmp);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00115"/>00115 &#32;&#32;&#32;&#32;cstr_add(&amp;formatted,&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00116"/>00116 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00117"/>00117 &#32;&#32;&#32;&#32;snprintf(tmp,&#32;<emphasis role="keyword">sizeof</emphasis>(tmp),&#32;<emphasis role="stringliteral">&quot;%u&quot;</emphasis>,&#32;g);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00118"/>00118 &#32;&#32;&#32;&#32;cstr_add(&amp;formatted,&#32;tmp);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00119"/>00119 &#32;&#32;&#32;&#32;cstr_add(&amp;formatted,&#32;<emphasis role="stringliteral">&quot;;&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00120"/>00120 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00121"/>00121 &#32;&#32;&#32;&#32;snprintf(tmp,&#32;<emphasis role="keyword">sizeof</emphasis>(tmp),&#32;<emphasis role="stringliteral">&quot;%u&quot;</emphasis>,&#32;b);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00122"/>00122 &#32;&#32;&#32;&#32;cstr_add(&amp;formatted,&#32;tmp);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00123"/>00123 &#32;&#32;&#32;&#32;cstr_add(&amp;formatted,&#32;<emphasis role="stringliteral">&quot;m&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00124"/>00124 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00125"/>00125 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*ret&#32;=&#32;CSTR_sys_strdup(formatted.data);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00126"/>00126 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00127"/>00127 &#32;&#32;&#32;&#32;cstr_destroy(&amp;formatted);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00128"/>00128 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00129"/>00129 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ret;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00130"/>00130 }
+<anchor xml:id="_APC__ArgParser_8c_source_1l00131"/>00131 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00132"/><link linkend="_APC__ArgParser_8h_1a1817d1f01f3bd3eab30e9b2521835bd0">00132</link> <link linkend="_structAPC__RGB">APC_RGB</link>&#32;<link linkend="_APC__ArgParser_8c_1a1817d1f01f3bd3eab30e9b2521835bd0">__apc_rgbToRGBStruct</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*rgbStr)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00133"/>00133 {
+<anchor xml:id="_APC__ArgParser_8c_source_1l00134"/>00134 &#32;&#32;&#32;&#32;<link linkend="_structAPC__RGB">APC_RGB</link>&#32;rgb&#32;=&#32;{0};
+<anchor xml:id="_APC__ArgParser_8c_source_1l00135"/>00135 &#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;=&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ad4dcaa8f0262403054fdea2104df055c">APC_RGB_Command_None</link>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00136"/>00136 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00137"/>00137 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Reset&#32;terminal&#32;styles</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00138"/>00138 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Such&#32;as&#32;color,&#32;bolds,&#32;italics,&#32;etc</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00139"/>00139 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(rgbStr,&#32;<emphasis role="stringliteral">&quot;${R}&quot;</emphasis>)&#32;==&#32;0)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00140"/>00140 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;=&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ac47aed32852a5fa599f6b9066513cfd0">APC_RGB_Command_Reset</link>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00142"/>00142 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1af0429b86b207e9c03311b23075b65d02">r</link>&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c">g</link>&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656">b</link>&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00146"/>00146 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;rgb;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00148"/>00148 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00149"/>00149 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00150"/>00150 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(rgbStr,&#32;<emphasis role="stringliteral">&quot;${BOLD}&quot;</emphasis>)&#32;==&#32;0)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00151"/>00151 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;=&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85af9a7fad67473564c2d002fbfc893c114">APC_RGB_Command_Bold</link>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00153"/>00153 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1af0429b86b207e9c03311b23075b65d02">r</link>&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c">g</link>&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656">b</link>&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00157"/>00157 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;rgb;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00159"/>00159 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00160"/>00160 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00161"/>00161 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(rgbStr,&#32;<emphasis role="stringliteral">&quot;${ITALIC}&quot;</emphasis>)&#32;==&#32;0)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00162"/>00162 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;=&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a77bf6ee8259c87d7ad1e3fec321e95a5">APC_RGB_Command_Italic</link>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00164"/>00164 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1af0429b86b207e9c03311b23075b65d02">r</link>&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c">g</link>&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656">b</link>&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00168"/>00168 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;rgb;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00170"/>00170 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00171"/>00171 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00172"/>00172 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(rgbStr,&#32;<emphasis role="stringliteral">&quot;${UNDERLINE}&quot;</emphasis>)&#32;==&#32;0)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00173"/>00173 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;=&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a6164b6a0358e4d1461a30f814205b8ca">APC_RGB_Command_Underline</link>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00175"/>00175 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1af0429b86b207e9c03311b23075b65d02">r</link>&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c">g</link>&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgb.<link linkend="_structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656">b</link>&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00179"/>00179 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;rgb;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00181"/>00181 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00182"/>00182 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00183"/>00183 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!rgbStr)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;rgb;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00185"/>00185 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00186"/>00186 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;r,&#32;g,&#32;b;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00187"/>00187 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00188"/>00188 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Get&#32;format:&#32;${r,g,b}</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00189"/>00189 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sscanf(rgbStr,&#32;<emphasis role="stringliteral">&quot;${%d,%d,%d}&quot;</emphasis>,&#32;&amp;r,&#32;&amp;g,&#32;&amp;b)&#32;==&#32;3)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00190"/>00190 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(r&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;r&#32;&lt;=&#32;255)&#32;rgb.<link linkend="_structAPC__RGB_1af0429b86b207e9c03311b23075b65d02">r</link>&#32;=&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;char)r;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(g&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;g&#32;&lt;=&#32;255)&#32;rgb.<link linkend="_structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c">g</link>&#32;=&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;char)g;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(b&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;b&#32;&lt;=&#32;255)&#32;rgb.<link linkend="_structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656">b</link>&#32;=&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;char)b;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00194"/>00194 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00195"/>00195 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00196"/>00196 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;rgb;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00197"/>00197 }
+<anchor xml:id="_APC__ArgParser_8c_source_1l00198"/>00198 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00199"/><link linkend="_APC__ArgParser_8h_1a465c9ba9922a24c7ac076a0cc6f50031">00199</link> <emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031">__apc_colorFormat</link>(<link linkend="_structAPC__ArgParser">APC_ArgParser</link>&#32;*argpar,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*msg)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00200"/>00200 {
+<anchor xml:id="_APC__ArgParser_8c_source_1l00201"/>00201 &#32;&#32;&#32;&#32;CSTR&#32;result&#32;=&#32;cstr_init();
+<anchor xml:id="_APC__ArgParser_8c_source_1l00202"/>00202 &#32;&#32;&#32;&#32;cstr_set(&amp;result,&#32;msg);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00203"/>00203 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00204"/>00204 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!argpar-&gt;<link linkend="_structAPC__ArgParser_1a85b5d693243b0d6d8f23370fd4fc8dc2">enableColor</link>)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00205"/>00205 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Remove&#32;occurrences&#32;that&#32;have:</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;`${`&#32;until&#32;the&#32;next&#32;`}`</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;pos&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00209"/>00209 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(1)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;start&#32;=&#32;cstr_findFrom(&amp;result,&#32;<emphasis role="stringliteral">&quot;${&quot;</emphasis>,&#32;pos);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00213"/>00213 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(start&#32;==&#32;CSTR_NPOS)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00216"/>00216 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;end&#32;=&#32;cstr_findFrom(&amp;result,&#32;<emphasis role="stringliteral">&quot;}&quot;</emphasis>,&#32;start&#32;+&#32;2);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00218"/>00218 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(end&#32;==&#32;CSTR_NPOS)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00221"/>00221 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;len&#32;=&#32;(end&#32;-&#32;start)&#32;+&#32;1;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00223"/>00223 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_erase(&amp;result,&#32;start,&#32;len);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00225"/>00225 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pos&#32;=&#32;start;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00228"/>00228 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00229"/>00229 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00230"/>00230 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00231"/>00231 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Replace&#32;occurrences&#32;that&#32;have:</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;`${`&#32;until&#32;the&#32;next&#32;`}`</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;With&#32;the&#32;corresponding&#32;color&#32;syntax;</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;${r,g,b}</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00236"/>00236 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;pos&#32;=&#32;0;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00238"/>00238 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CSTR&#32;substr&#32;=&#32;cstr_init();
+<anchor xml:id="_APC__ArgParser_8c_source_1l00240"/>00240 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00241"/>00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(1)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;start&#32;=&#32;cstr_findFrom(&amp;result,&#32;<emphasis role="stringliteral">&quot;${&quot;</emphasis>,&#32;pos);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00244"/>00244 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(start&#32;==&#32;CSTR_NPOS)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00246"/>00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00247"/>00247 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;end&#32;=&#32;cstr_findFrom(&amp;result,&#32;<emphasis role="stringliteral">&quot;}&quot;</emphasis>,&#32;start&#32;+&#32;2);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00249"/>00249 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(end&#32;==&#32;CSTR_NPOS)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00252"/>00252 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;len&#32;=&#32;(end&#32;-&#32;start)&#32;+&#32;1;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00254"/>00254 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_set(&amp;substr,&#32;result.data);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_substr(&amp;substr,&#32;start,&#32;len);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00257"/>00257 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;the&#32;RGB&#32;to&#32;the&#32;struct&#32;and&#32;then&#32;format&#32;it&#32;to&#32;string&#32;to</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;output&#32;it&#32;in&#32;an&#32;ANSI&#32;color&#32;format</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structAPC__RGB">APC_RGB</link>&#32;rgb&#32;=&#32;<link linkend="_APC__ArgParser_8c_1a1817d1f01f3bd3eab30e9b2521835bd0">__apc_rgbToRGBStruct</link>(substr.data);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00261"/>00261 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*rgbStr&#32;=&#32;NULL;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00263"/>00263 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;==&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85ac47aed32852a5fa599f6b9066513cfd0">APC_RGB_Command_Reset</link>)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00265"/>00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgbStr&#32;=&#32;<link linkend="_APC__config_8h_1a9a8ce316a5f751a9de5f591648a0ccda">APC_STYLE_RESET</link>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00266"/>00266 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;==&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85af9a7fad67473564c2d002fbfc893c114">APC_RGB_Command_Bold</link>)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgbStr&#32;=&#32;<link linkend="_APC__config_8h_1a765a8ea177a5abcfddc4206cfea4a62a">APC_STYLE_BOLD</link>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00269"/>00269 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;==&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a77bf6ee8259c87d7ad1e3fec321e95a5">APC_RGB_Command_Italic</link>)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00271"/>00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgbStr&#32;=&#32;<link linkend="_APC__config_8h_1a6bcdf6a249f3b8d2856bcd62706dae38">APC_STYLE_ITALIC</link>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00272"/>00272 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00273"/>00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>&#32;==&#32;<link linkend="_APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85a6164b6a0358e4d1461a30f814205b8ca">APC_RGB_Command_Underline</link>)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rgbStr&#32;=&#32;<link linkend="_APC__config_8h_1ab664f8bd1490b2d0feba1260ae627ba8">APC_STYLE_UNDERLINE</link>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00275"/>00275 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;rgbStr&#32;=&#32;<link linkend="_APC__ArgParser_8c_1aef714ae3c362917994350860533b358f">__apc_setRGB</link>(rgb.<link linkend="_structAPC__RGB_1af0429b86b207e9c03311b23075b65d02">r</link>,&#32;rgb.<link linkend="_structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c">g</link>,&#32;rgb.<link linkend="_structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656">b</link>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00277"/>00277 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;1.&#32;Remove&#32;`${r,g,b}`&#32;with&#32;its&#32;params</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;2.&#32;And&#32;Insert&#32;ANSI&#32;string&#32;at&#32;same&#32;position&#32;where&#32;it&apos;s&#32;supposed&#32;to&#32;be</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_erase(&amp;result,&#32;start,&#32;len);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_insert(&amp;result,&#32;rgbStr,&#32;start);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00282"/>00282 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00283"/>00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Move&#32;position&#32;forward&#32;past&#32;inserted&#32;ANSI&#32;sequence</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00284"/>00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pos&#32;=&#32;start&#32;+&#32;strlen(rgbStr);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00285"/>00285 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00286"/>00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;external&#32;action&#32;is&#32;made</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;DO&#32;NOT&#32;free,&#32;or&#32;else,&#32;it&apos;ll&#32;crash</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00288"/>00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!rgb.<link linkend="_structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8">__externalAction</link>)&#32;{&#32;<link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(rgbStr);&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00289"/>00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00290"/>00290 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00291"/>00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_destroy(&amp;substr);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00292"/>00292 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00293"/>00293 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00294"/>00294 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*ret&#32;=&#32;CSTR_sys_strdup(result.data);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00295"/>00295 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00296"/>00296 &#32;&#32;&#32;&#32;cstr_destroy(&amp;result);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00297"/>00297 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00298"/>00298 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ret;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00299"/>00299 }
+<anchor xml:id="_APC__ArgParser_8c_source_1l00300"/>00300 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00301"/><link linkend="_APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a">00301</link> <emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_APC__ArgParser_8c_1a235f33a098769075131ad521168d2e0a">apc_generateHelp</link>(<link linkend="_structAPC__ArgParser">APC_ArgParser</link>&#32;*argpar,
+<anchor xml:id="_APC__ArgParser_8c_source_1l00302"/>00302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*title,
+<anchor xml:id="_APC__ArgParser_8c_source_1l00303"/>00303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*topInfo,
+<anchor xml:id="_APC__ArgParser_8c_source_1l00304"/>00304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*lowerInfo)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00305"/>00305 {
+<anchor xml:id="_APC__ArgParser_8c_source_1l00306"/>00306 &#32;&#32;&#32;&#32;CSTR&#32;docs&#32;=&#32;cstr_init();
+<anchor xml:id="_APC__ArgParser_8c_source_1l00307"/>00307 &#32;&#32;&#32;&#32;cstr_set(&amp;docs,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00308"/>00308 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00309"/>00309 &#32;&#32;&#32;&#32;CSTR&#32;tmpContent&#32;=&#32;cstr_init();
+<anchor xml:id="_APC__ArgParser_8c_source_1l00310"/>00310 &#32;&#32;&#32;&#32;cstr_set(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00311"/>00311 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00312"/>00312 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*result&#32;=&#32;NULL;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00313"/>00313 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00314"/>00314 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Title</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00315"/>00315 &#32;&#32;&#32;&#32;cstr_clear(&amp;tmpContent);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00316"/>00316 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<link linkend="_APC__config_8h_1a1157bc9d6b51d6e7f47d1ae86bc914de">APC_STYLECOLOR_TITLE</link>&#32;<emphasis role="stringliteral">&quot;${BOLD}&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00317"/>00317 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;title&#32;?&#32;title&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00318"/>00318 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;${R}\n&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00319"/>00319 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00320"/>00320 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="_APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031">__apc_colorFormat</link>(argpar,&#32;tmpContent.data);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00321"/>00321 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00322"/>00322 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(result)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00323"/>00323 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00324"/>00324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;docs,&#32;result);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00325"/>00325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(result);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00326"/>00326 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00327"/>00327 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00328"/>00328 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Top&#32;info</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00329"/>00329 &#32;&#32;&#32;&#32;cstr_clear(&amp;tmpContent);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00330"/>00330 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;${ITALIC}&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00331"/>00331 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;topInfo&#32;?&#32;topInfo&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00332"/>00332 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;${R}\n&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00333"/>00333 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00334"/>00334 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="_APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031">__apc_colorFormat</link>(argpar,&#32;tmpContent.data);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00335"/>00335 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00336"/>00336 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(result)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00337"/>00337 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00338"/>00338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;docs,&#32;result);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00339"/>00339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(result);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00340"/>00340 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00341"/>00341 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00342"/>00342 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;MAIN&#32;INFO</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00343"/>00343 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00344"/>00344 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0&#32;;&#32;i&#32;&lt;&#32;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>.size&#32;;&#32;i++)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00345"/>00345 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00346"/>00346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>&#32;*info&#32;=&#32;cvec_get(&amp;argpar-&gt;<link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link>,&#32;i);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00347"/>00347 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00348"/>00348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_clear(&amp;tmpContent);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00349"/>00349 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00350"/>00350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Example:</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00351"/>00351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;help&#32;[&#32;--help|-h|-?&#32;];&#32;Show&#32;this&#32;help</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00352"/>00352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Structure:</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00353"/>00353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;{ID}&#32;[&#32;{param1}|{param2}|{alias1}|{alias2}|{...}&#32;];&#32;{Description}</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00354"/>00354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31">id</link>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00355"/>00355 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00356"/>00356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Open&#32;optional</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00357"/>00357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!info-&gt;<link linkend="_structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367">required</link>)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00358"/>00358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00359"/>00359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*parsedColor&#32;=&#32;<link linkend="_APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031">__apc_colorFormat</link>(argpar,&#32;<link linkend="_APC__config_8h_1a51ea406f28c1c64d9959c7b5daa5d806">APC_STYLECOLOR_OPTIONAL</link>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00360"/>00360 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00361"/>00361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;parsedColor);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00362"/>00362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;&#32;[&#32;&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00363"/>00363 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00364"/>00364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(parsedColor);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00366"/>00366 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00367"/>00367 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9">param</link>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00368"/>00368 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00369"/>00369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strlen(info-&gt;<link linkend="_structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262">sparam</link>)&#32;&gt;&#32;0)&#32;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00370"/>00370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00371"/>00371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;|&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00372"/>00372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262">sparam</link>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00373"/>00373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00374"/>00374 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00375"/>00375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0&#32;;&#32;i&#32;&lt;&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link>.size&#32;;&#32;i++)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00376"/>00376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;**aliasName&#32;=&#32;cvec_get(&amp;info-&gt;<link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link>,&#32;i);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00378"/>00378 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00379"/>00379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!aliasName&#32;&amp;&amp;&#32;!*aliasName)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00380"/>00380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00381"/>00381 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00382"/>00382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;|&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00383"/>00383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;*aliasName);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00384"/>00384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00385"/>00385 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00386"/>00386 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Close&#32;optional</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00387"/>00387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!info-&gt;<link linkend="_structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367">required</link>)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00388"/>00388 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00389"/>00389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*parsedColor&#32;=&#32;<link linkend="_APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031">__apc_colorFormat</link>(argpar,&#32;<emphasis role="stringliteral">&quot;${R}&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00390"/>00390 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00391"/>00391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;&#32;]&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00392"/>00392 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;parsedColor);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00393"/>00393 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00394"/>00394 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(parsedColor);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00395"/>00395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00396"/>00396 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00397"/>00397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;;&#32;&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00398"/>00398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;info-&gt;<link linkend="_structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb">help</link>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00399"/>00399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00400"/>00400 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00401"/>00401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;docs,&#32;tmpContent.data);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00402"/>00402 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00403"/>00403 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00404"/>00404 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00405"/>00405 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00406"/>00406 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Lower&#32;info</emphasis>
+<anchor xml:id="_APC__ArgParser_8c_source_1l00407"/>00407 &#32;&#32;&#32;&#32;cstr_clear(&amp;tmpContent);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00408"/>00408 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;${ITALIC}&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00409"/>00409 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;lowerInfo&#32;?&#32;lowerInfo&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00410"/>00410 &#32;&#32;&#32;&#32;cstr_add(&amp;tmpContent,&#32;<emphasis role="stringliteral">&quot;${R}&quot;</emphasis>);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00411"/>00411 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00412"/>00412 &#32;&#32;&#32;&#32;result&#32;=&#32;<link linkend="_APC__ArgParser_8c_1a465c9ba9922a24c7ac076a0cc6f50031">__apc_colorFormat</link>(argpar,&#32;tmpContent.data);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00413"/>00413 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00414"/>00414 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(result)
+<anchor xml:id="_APC__ArgParser_8c_source_1l00415"/>00415 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_APC__ArgParser_8c_source_1l00416"/>00416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cstr_add(&amp;docs,&#32;result);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00417"/>00417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(result);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00418"/>00418 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_APC__ArgParser_8c_source_1l00419"/>00419 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00420"/>00420 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*data&#32;=&#32;CSTR_sys_strdup(docs.data);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00421"/>00421 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00422"/>00422 &#32;&#32;&#32;&#32;cstr_destroy(&amp;docs);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00423"/>00423 &#32;&#32;&#32;&#32;cstr_destroy(&amp;tmpContent);
+<anchor xml:id="_APC__ArgParser_8c_source_1l00424"/>00424 
+<anchor xml:id="_APC__ArgParser_8c_source_1l00425"/>00425 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;data;
+<anchor xml:id="_APC__ArgParser_8c_source_1l00426"/>00426 }
+<anchor xml:id="_APC__ArgParser_8c_source_1l00427"/>00427 
+</programlisting></section>

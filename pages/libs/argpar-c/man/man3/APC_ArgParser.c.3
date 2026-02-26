@@ -1,0 +1,724 @@
+.TH "src/lib/APC_ArgParser.c" 3 "Version v1.0.0-build" "ArgPar-C" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/lib/APC_ArgParser.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include '\&.\&./\&.\&./inc/argpar\-c/lib/APC_ArgParser\&.h'\fP
+.br
+\fR#include '\&.\&./\&.\&./inc/argpar\-c/APCpredefines\&.h'\fP
+.br
+\fR#include '\&.\&./\&.\&./inc/argpar\-c/APC_config\&.h'\fP
+.br
+\fR#include '\&.\&./\&.\&./vendor/cstr/inc/cstr/cstr\&.h'\fP
+.br
+\fR#include <unistd\&.h>\fP
+.br
+\fR#include <stdlib\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__USE_MISC\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "char * \fB__apc_colorFormat\fP (\fBAPC_ArgParser\fP *argpar, const char *msg)"
+.br
+.RI "Format color;\&. "
+.ti -1c
+.RI "\fBAPC_RGB\fP \fB__apc_rgbToRGBStruct\fP (const char *rgbStr)"
+.br
+.RI "Convert the default RGB format to a valid RGB struct and parse all extended commands\&. "
+.ti -1c
+.RI "char * \fB__apc_setRGB\fP (int r, int g, int b)"
+.br
+.RI "Convert RGB to ANSI escape code\&. "
+.ti -1c
+.RI "bool \fBapc_add\fP (\fBAPC_ArgParser\fP *argpar, \fBAPC_ArgInfo\fP info)"
+.br
+.RI "Setup Arg Information to the \fRargpar\fP\&. "
+.ti -1c
+.RI "void \fBapc_destroy\fP (\fBAPC_ArgParser\fP *argpar)"
+.br
+.RI "Free all allocated data for argument parser\&. "
+.ti -1c
+.RI "char * \fBapc_generateHelp\fP (\fBAPC_ArgParser\fP *argpar, const char *title, const char *topInfo, const char *lowerInfo)"
+.br
+.RI "Automatically generate help and pass it to the string to return\&. "
+.ti -1c
+.RI "bool \fBapc_get\fP (\fBAPC_ArgParser\fP *argpar, const char *id)"
+.br
+.RI "Get if there is an argument present\&. "
+.ti -1c
+.RI "\fBAPC_ArgParser\fP \fBapc_init\fP (int argc, char *argv[])"
+.br
+.RI "Initialize parser with argc and argv from the \fR\fBmain()\fP\fP function\&. "
+.ti -1c
+.RI "\fBAPC_ArgInfo\fP \fBapc_initInfo\fP (void)"
+.br
+.RI "Initialize information for params\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __USE_MISC"
+
+.PP
+Definition at line \fB1\fP of file \fBAPC_ArgParser\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "char * __apc_colorFormat (\fBAPC_ArgParser\fP * argpar, const char * msg)"
+
+.PP
+Format color;\&. 
+.IP "\(bu" 2
+Remove color commands if color disabled
+.IP "\(bu" 2
+Convert to color ANSI escape code if enabled 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargpar\fP Argument to format color and get data from 
+.br
+\fImsg\fP Message to format 
+.RE
+.PP
+
+.PP
+
+.PP
+Definition at line \fB199\fP of file \fBAPC_ArgParser\&.c\fP\&.
+.nf
+200 {
+201     CSTR result = cstr_init();
+202     cstr_set(&result, msg);
+203 
+204     if (!argpar\->enableColor)
+205     {
+206         // Remove occurrences that have:
+207         // `${` until the next `}`
+208         int pos = 0;
+209 
+210         while (1)
+211         {
+212             const int start = cstr_findFrom(&result, "${", pos);
+213 
+214             if (start == CSTR_NPOS)
+215                 break;
+216 
+217             const int end = cstr_findFrom(&result, "}", start + 2);
+218 
+219             if (end == CSTR_NPOS)
+220                 break;
+221 
+222             int len = (end \- start) + 1;
+223 
+224             cstr_erase(&result, start, len);
+225 
+226             pos = start;
+227         }
+228     }
+229 
+230     else
+231     {
+232         // Replace occurrences that have:
+233         // `${` until the next `}`
+234         // With the corresponding color syntax;
+235         // ${r,g,b}
+236 
+237         int pos = 0;
+238 
+239         CSTR substr = cstr_init();
+240 
+241         while (1)
+242         {
+243             const int start = cstr_findFrom(&result, "${", pos);
+244 
+245             if (start == CSTR_NPOS)
+246                 break;
+247 
+248             const int end = cstr_findFrom(&result, "}", start + 2);
+249 
+250             if (end == CSTR_NPOS)
+251                 break;
+252 
+253             int len = (end \- start) + 1;
+254 
+255             cstr_set(&substr, result\&.data);
+256             cstr_substr(&substr, start, len);
+257 
+258             // Set the RGB to the struct and then format it to string to
+259             // output it in an ANSI color format
+260             const APC_RGB rgb = __apc_rgbToRGBStruct(substr\&.data);
+261 
+262             char *rgbStr = NULL;
+263 
+264             if (rgb\&.__externalAction == APC_RGB_Command_Reset)
+265                 rgbStr = APC_STYLE_RESET;
+266 
+267             else if (rgb\&.__externalAction == APC_RGB_Command_Bold)
+268                 rgbStr = APC_STYLE_BOLD;
+269 
+270             else if (rgb\&.__externalAction == APC_RGB_Command_Italic)
+271                 rgbStr = APC_STYLE_ITALIC;
+272 
+273             else if (rgb\&.__externalAction == APC_RGB_Command_Underline)
+274                 rgbStr = APC_STYLE_UNDERLINE;
+275 
+276             else rgbStr = __apc_setRGB(rgb\&.r, rgb\&.g, rgb\&.b);
+277 
+278             // 1\&. Remove `${r,g,b}` with its params
+279             // 2\&. And Insert ANSI string at same position where it's supposed to be
+280             cstr_erase(&result, start, len);
+281             cstr_insert(&result, rgbStr, start);
+282 
+283             // Move position forward past inserted ANSI sequence
+284             pos = start + strlen(rgbStr);
+285 
+286             // If external action is made
+287             // DO NOT free, or else, it'll crash
+288             if (!rgb\&.__externalAction) { APC_FREE(rgbStr); }
+289         }
+290 
+291         cstr_destroy(&substr);
+292     }
+293 
+294     char *ret = CSTR_sys_strdup(result\&.data);
+295 
+296     cstr_destroy(&result);
+297 
+298     return ret;
+299 }
+.PP
+.fi
+
+.PP
+References \fB__apc_rgbToRGBStruct()\fP, \fB__apc_setRGB()\fP, \fBAPC_RGB::__externalAction\fP, \fBAPC_FREE\fP, \fBAPC_RGB_Command_Bold\fP, \fBAPC_RGB_Command_Italic\fP, \fBAPC_RGB_Command_Reset\fP, \fBAPC_RGB_Command_Underline\fP, \fBAPC_STYLE_BOLD\fP, \fBAPC_STYLE_ITALIC\fP, \fBAPC_STYLE_RESET\fP, \fBAPC_STYLE_UNDERLINE\fP, \fBAPC_RGB::b\fP, \fBAPC_ArgParser::enableColor\fP, \fBAPC_RGB::g\fP, and \fBAPC_RGB::r\fP\&.
+.PP
+Referenced by \fBapc_generateHelp()\fP\&.
+.SS "\fBAPC_RGB\fP __apc_rgbToRGBStruct (const char * rgbStr)"
+
+.PP
+Convert the default RGB format to a valid RGB struct and parse all extended commands\&. 
+.IP "\(bu" 2
+${r,g,b}
+.IP "\(bu" 2
+${R}
+.IP "\(bu" 2
+${BOLD} 
+.PP
+\fBReturns\fP
+.RS 4
+New \fBAPC_RGB\fP with RGB data and extended data type (italic, bold, reset, \&.\&.\&.) 
+.RE
+.PP
+
+.PP
+
+.PP
+Definition at line \fB132\fP of file \fBAPC_ArgParser\&.c\fP\&.
+.nf
+133 {
+134     APC_RGB rgb = {0};
+135     rgb\&.__externalAction = APC_RGB_Command_None;
+136 
+137     // Reset terminal styles
+138     // Such as color, bolds, italics, etc
+139     if (strcmp(rgbStr, "${R}") == 0)
+140     {
+141         rgb\&.__externalAction = APC_RGB_Command_Reset;
+142 
+143         rgb\&.r = 0;
+144         rgb\&.g = 0;
+145         rgb\&.b = 0;
+146 
+147         return rgb;
+148     }
+149 
+150     else if (strcmp(rgbStr, "${BOLD}") == 0)
+151     {
+152         rgb\&.__externalAction = APC_RGB_Command_Bold;
+153 
+154         rgb\&.r = 0;
+155         rgb\&.g = 0;
+156         rgb\&.b = 0;
+157 
+158         return rgb;
+159     }
+160 
+161     else if (strcmp(rgbStr, "${ITALIC}") == 0)
+162     {
+163         rgb\&.__externalAction = APC_RGB_Command_Italic;
+164 
+165         rgb\&.r = 0;
+166         rgb\&.g = 0;
+167         rgb\&.b = 0;
+168 
+169         return rgb;
+170     }
+171 
+172     else if (strcmp(rgbStr, "${UNDERLINE}") == 0)
+173     {
+174         rgb\&.__externalAction = APC_RGB_Command_Underline;
+175 
+176         rgb\&.r = 0;
+177         rgb\&.g = 0;
+178         rgb\&.b = 0;
+179 
+180         return rgb;
+181     }
+182 
+183     if (!rgbStr)
+184         return rgb;
+185 
+186     int r, g, b;
+187 
+188     // Get format: ${r,g,b}
+189     if (sscanf(rgbStr, "${%d,%d,%d}", &r, &g, &b) == 3)
+190     {
+191         if (r >= 0 && r <= 255) rgb\&.r = (unsigned char)r;
+192         if (g >= 0 && g <= 255) rgb\&.g = (unsigned char)g;
+193         if (b >= 0 && b <= 255) rgb\&.b = (unsigned char)b;
+194     }
+195 
+196     return rgb;
+197 }
+.PP
+.fi
+
+.PP
+References \fBAPC_RGB::__externalAction\fP, \fBAPC_RGB_Command_Bold\fP, \fBAPC_RGB_Command_Italic\fP, \fBAPC_RGB_Command_None\fP, \fBAPC_RGB_Command_Reset\fP, \fBAPC_RGB_Command_Underline\fP, \fBAPC_RGB::b\fP, \fBAPC_RGB::g\fP, and \fBAPC_RGB::r\fP\&.
+.PP
+Referenced by \fB__apc_colorFormat()\fP\&.
+.SS "char * __apc_setRGB (int r, int g, int b)"
+
+.PP
+Convert RGB to ANSI escape code\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIr\fP Red color 
+.br
+\fIg\fP Green color 
+.br
+\fIb\fP Blue color 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Constructed ANSI escape code 
+.RE
+.PP
+
+.PP
+Definition at line \fB101\fP of file \fBAPC_ArgParser\&.c\fP\&.
+.nf
+102 {
+103     if (r < 0 || r > 255) return NULL;
+104     if (g < 0 || g > 255) return NULL;
+105     if (b < 0 || b > 255) return NULL;
+106 
+107     CSTR formatted = cstr_init();
+108 
+109     char tmp[16];
+110 
+111     cstr_set(&formatted, "\\033[38;2;");
+112 
+113     snprintf(tmp, sizeof(tmp), "%u", r);
+114     cstr_add(&formatted, tmp);
+115     cstr_add(&formatted, ";");
+116 
+117     snprintf(tmp, sizeof(tmp), "%u", g);
+118     cstr_add(&formatted, tmp);
+119     cstr_add(&formatted, ";");
+120 
+121     snprintf(tmp, sizeof(tmp), "%u", b);
+122     cstr_add(&formatted, tmp);
+123     cstr_add(&formatted, "m");
+124 
+125     char *ret = CSTR_sys_strdup(formatted\&.data);
+126 
+127     cstr_destroy(&formatted);
+128 
+129     return ret;
+130 }
+.PP
+.fi
+
+.PP
+Referenced by \fB__apc_colorFormat()\fP\&.
+.SS "bool apc_add (\fBAPC_ArgParser\fP * argpar, \fBAPC_ArgInfo\fP info)"
+
+.PP
+Setup Arg Information to the \fRargpar\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargpar\fP Argument Parser to modify information from 
+.br
+\fIinfo\fP Create information about the param 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+false if fail, true if success 
+.RE
+.PP
+
+.PP
+Definition at line \fB48\fP of file \fBAPC_ArgParser\&.c\fP\&.
+.nf
+49 {
+50     // Make addition checks
+51     if (info\&.id[0] == '\\0' ||
+52             info\&.param[0] == '\\0')
+53         return false;
+54 
+55     // If passed, push it:
+56     cvec_push(&argpar\->args, APC_ArgInfo, info);
+57 
+58     return true;
+59 }
+.PP
+.fi
+
+.PP
+References \fBAPC_ArgParser::args\fP, \fBAPC_ArgInfo::id\fP, and \fBAPC_ArgInfo::param\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SS "void apc_destroy (\fBAPC_ArgParser\fP * argpar)"
+
+.PP
+Free all allocated data for argument parser\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargpar\fP Argument parser to free from memory 
+.RE
+.PP
+
+.PP
+Definition at line \fB33\fP of file \fBAPC_ArgParser\&.c\fP\&.
+.nf
+34 {
+35     for (size_t i = 0 ; i < argpar\->args\&.size ; i++)
+36     {
+37         APC_ArgInfo *info = cvec_get(&argpar\->args, i);
+38 
+39         if (!info) continue;
+40 
+41         // Destroy
+42         cvec_destroy(&info\->aliases);
+43     }
+44 
+45     cvec_destroy(&argpar\->args);
+46 }
+.PP
+.fi
+
+.PP
+References \fBAPC_ArgInfo::aliases\fP, and \fBAPC_ArgParser::args\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SS "char * apc_generateHelp (\fBAPC_ArgParser\fP * argpar, const char * title, const char * topInfo, const char * lowerInfo)"
+
+.PP
+Automatically generate help and pass it to the string to return\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargpar\fP Argument parser to generate help from 
+.br
+\fItitle\fP Title of the help 
+.br
+\fItopInfo\fP Top information (eg: Little intro of the tool) 
+.br
+\fIlowerInfo\fP Lower information (eg: License, \&.\&.\&.) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Generated help with escape characters for colors (if enabled) 
+.RE
+.PP
+
+.PP
+Definition at line \fB301\fP of file \fBAPC_ArgParser\&.c\fP\&.
+.nf
+305 {
+306     CSTR docs = cstr_init();
+307     cstr_set(&docs, "");
+308 
+309     CSTR tmpContent = cstr_init();
+310     cstr_set(&tmpContent, "");
+311 
+312     char *result = NULL;
+313 
+314     // Title
+315     cstr_clear(&tmpContent);
+316     cstr_add(&tmpContent, APC_STYLECOLOR_TITLE "${BOLD}");
+317     cstr_add(&tmpContent, title ? title : "");
+318     cstr_add(&tmpContent, "${R}\\n");
+319 
+320     result = __apc_colorFormat(argpar, tmpContent\&.data);
+321 
+322     if (result)
+323     {
+324         cstr_add(&docs, result);
+325         APC_FREE(result);
+326     }
+327 
+328     // Top info
+329     cstr_clear(&tmpContent);
+330     cstr_add(&tmpContent, "${ITALIC}");
+331     cstr_add(&tmpContent, topInfo ? topInfo : "");
+332     cstr_add(&tmpContent, "${R}\\n");
+333 
+334     result = __apc_colorFormat(argpar, tmpContent\&.data);
+335 
+336     if (result)
+337     {
+338         cstr_add(&docs, result);
+339         APC_FREE(result);
+340     }
+341 
+342     // MAIN INFO
+343 
+344     for (size_t i = 0 ; i < argpar\->args\&.size ; i++)
+345     {
+346         const APC_ArgInfo *info = cvec_get(&argpar\->args, i);
+347 
+348         cstr_clear(&tmpContent);
+349 
+350         // Example:
+351         // help [ \-\-help|\-h|\-? ]; Show this help
+352         // Structure:
+353         // {ID} [ {param1}|{param2}|{alias1}|{alias2}|{\&.\&.\&.} ]; {Description}
+354         cstr_add(&tmpContent, info\->id);
+355 
+356         // Open optional
+357         if (!info\->required)
+358         {
+359             char *parsedColor = __apc_colorFormat(argpar, APC_STYLECOLOR_OPTIONAL);
+360 
+361             cstr_add(&tmpContent, parsedColor);
+362             cstr_add(&tmpContent, " [ ");
+363 
+364             APC_FREE(parsedColor);
+365         }
+366 
+367         cstr_add(&tmpContent, info\->param);
+368 
+369         if (strlen(info\->sparam) > 0) 
+370         {
+371             cstr_add(&tmpContent, "|");
+372             cstr_add(&tmpContent, info\->sparam);
+373         }
+374 
+375         for (size_t i = 0 ; i < info\->aliases\&.size ; i++)
+376         {
+377             const char **aliasName = cvec_get(&info\->aliases, i);
+378 
+379             if (!aliasName && !*aliasName)
+380                 continue;
+381 
+382             cstr_add(&tmpContent, "|");
+383             cstr_add(&tmpContent, *aliasName);
+384         }
+385 
+386         // Close optional
+387         if (!info\->required)
+388         {
+389             char *parsedColor = __apc_colorFormat(argpar, "${R}");
+390 
+391             cstr_add(&tmpContent, " ]");
+392             cstr_add(&tmpContent, parsedColor);
+393 
+394             APC_FREE(parsedColor);
+395         }
+396 
+397         cstr_add(&tmpContent, "; ");
+398         cstr_add(&tmpContent, info\->help);
+399         cstr_add(&tmpContent, "\\n");
+400 
+401         cstr_add(&docs, tmpContent\&.data);
+402     }
+403 
+404     //
+405 
+406     // Lower info
+407     cstr_clear(&tmpContent);
+408     cstr_add(&tmpContent, "${ITALIC}");
+409     cstr_add(&tmpContent, lowerInfo ? lowerInfo : "");
+410     cstr_add(&tmpContent, "${R}");
+411 
+412     result = __apc_colorFormat(argpar, tmpContent\&.data);
+413 
+414     if (result)
+415     {
+416         cstr_add(&docs, result);
+417         APC_FREE(result);
+418     }
+419 
+420     char *data = CSTR_sys_strdup(docs\&.data);
+421 
+422     cstr_destroy(&docs);
+423     cstr_destroy(&tmpContent);
+424 
+425     return data;
+426 }
+.PP
+.fi
+
+.PP
+References \fB__apc_colorFormat()\fP, \fBAPC_ArgInfo::aliases\fP, \fBAPC_FREE\fP, \fBAPC_STYLECOLOR_OPTIONAL\fP, \fBAPC_STYLECOLOR_TITLE\fP, \fBAPC_ArgParser::args\fP, \fBAPC_ArgInfo::help\fP, \fBAPC_ArgInfo::id\fP, \fBAPC_ArgInfo::param\fP, \fBAPC_ArgInfo::required\fP, and \fBAPC_ArgInfo::sparam\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SS "bool apc_get (\fBAPC_ArgParser\fP * argpar, const char * id)"
+
+.PP
+Get if there is an argument present\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargpar\fP Get parameters from argpar 
+.br
+\fIid\fP ID to fetch 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+false if fail, true if success 
+.RE
+.PP
+
+.PP
+Definition at line \fB61\fP of file \fBAPC_ArgParser\&.c\fP\&.
+.nf
+62 {
+63     if (id[0] == '\\0'  || !id ||
+64             !argpar)
+65         return false;
+66 
+67     // Check main CVEC ARGS
+68     for (size_t arg = 0 ; arg < argpar\->args\&.size ; arg++)
+69     {
+70         APC_ArgInfo *info = cvec_get(&argpar\->args, arg);
+71 
+72         if (!info) continue;
+73 
+74         if (strcmp(info\->id, id) != 0)
+75             continue;
+76 
+77         // Check ARGV from apc_init() function
+78         for (int argv = 0 ; argv < argpar\->argc ; argv++)
+79         {
+80             if (strcmp(argpar\->argv[argv], info\->param) == 0 ||
+81                 strcmp(argpar\->argv[argv], info\->sparam) == 0)
+82                 return true;
+83 
+84             // Parse aliases
+85             for (size_t a = 0 ; a < info\->aliases\&.size ; a++)
+86             {
+87                 char **alias = cvec_get(&info\->aliases, a);
+88 
+89                 if (!alias && !*alias)
+90                     continue;
+91 
+92                 if (strcmp(argpar\->argv[argv], *alias) == 0)
+93                     return true;
+94             }
+95         }
+96     }
+97 
+98     return false;
+99 }
+.PP
+.fi
+
+.PP
+References \fBAPC_ArgInfo::aliases\fP, \fBAPC_ArgParser::argc\fP, \fBAPC_ArgParser::args\fP, \fBAPC_ArgParser::argv\fP, \fBAPC_ArgInfo::id\fP, \fBAPC_ArgInfo::param\fP, and \fBAPC_ArgInfo::sparam\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SS "\fBAPC_ArgParser\fP apc_init (int argc, char * argv[])"
+
+.PP
+Initialize parser with argc and argv from the \fR\fBmain()\fP\fP function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargc\fP Number of arguments 
+.br
+\fIargv\fP Argument values 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Constructed \fBAPC_ArgParser\fP with all the recommended data 
+.RE
+.PP
+
+.PP
+Definition at line \fB12\fP of file \fBAPC_ArgParser\&.c\fP\&.
+.nf
+13 {
+14     APC_ArgParser parser = {0};
+15 
+16     parser\&.argc = argc;
+17     parser\&.argv = argv;
+18     parser\&.args = cvec_init(\-1, sizeof(APC_ArgInfo));
+19     parser\&.enableColor = true;
+20 
+21     return parser;
+22 }
+.PP
+.fi
+
+.PP
+References \fBAPC_ArgParser::argc\fP, \fBAPC_ArgParser::args\fP, \fBAPC_ArgParser::argv\fP, and \fBAPC_ArgParser::enableColor\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SS "\fBAPC_ArgInfo\fP apc_initInfo (void )"
+
+.PP
+Initialize information for params\&. 
+.IP "\(bu" 2
+Constructed empty aliases
+.IP "\(bu" 2
+\fRrequired\fP defaults to \fRfalse\fP 
+.PP
+\fBReturns\fP
+.RS 4
+Initialized \fBAPC_ArgInfo\fP with default values 
+.RE
+.PP
+
+.PP
+
+.PP
+Definition at line \fB24\fP of file \fBAPC_ArgParser\&.c\fP\&.
+.nf
+25 {
+26     APC_ArgInfo info = {0};
+27     info\&.aliases = cvec_init(\-1, sizeof(const char*));
+28     info\&.required = false;
+29 
+30     return info;
+31 }
+.PP
+.fi
+
+.PP
+References \fBAPC_ArgInfo::aliases\fP, and \fBAPC_ArgInfo::required\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArgPar-C from the source code\&.

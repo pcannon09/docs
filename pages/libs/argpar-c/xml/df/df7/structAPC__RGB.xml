@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="df/df7/structAPC__RGB" kind="struct" language="C++" prot="public">
+    <compoundname>APC_RGB</compoundname>
+    <includes refid="db/daa/APC__ArgParser_8h" local="no">APC_ArgParser.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="df/df7/structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="db/daa/APC__ArgParser_8h_1ab5d572607786bde4c2bafcf2bbe2fd85" kindref="member">APC_RGB_Command</ref></type>
+        <definition>enum APC_RGB_Command APC_RGB::__externalAction</definition>
+        <argsstring></argsstring>
+        <name>__externalAction</name>
+        <qualifiedname>APC_RGB::__externalAction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="55" column="21" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a465c9ba9922a24c7ac076a0cc6f50031" compoundref="dc/d17/APC__ArgParser_8c" startline="199" endline="299">__apc_colorFormat</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a1817d1f01f3bd3eab30e9b2521835bd0" compoundref="dc/d17/APC__ArgParser_8c" startline="132" endline="197">__apc_rgbToRGBStruct</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/df7/structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int APC_RGB::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <qualifiedname>APC_RGB::b</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="59" column="14" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a465c9ba9922a24c7ac076a0cc6f50031" compoundref="dc/d17/APC__ArgParser_8c" startline="199" endline="299">__apc_colorFormat</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a1817d1f01f3bd3eab30e9b2521835bd0" compoundref="dc/d17/APC__ArgParser_8c" startline="132" endline="197">__apc_rgbToRGBStruct</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/df7/structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int APC_RGB::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <qualifiedname>APC_RGB::g</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="58" column="14" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a465c9ba9922a24c7ac076a0cc6f50031" compoundref="dc/d17/APC__ArgParser_8c" startline="199" endline="299">__apc_colorFormat</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a1817d1f01f3bd3eab30e9b2521835bd0" compoundref="dc/d17/APC__ArgParser_8c" startline="132" endline="197">__apc_rgbToRGBStruct</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/df7/structAPC__RGB_1af0429b86b207e9c03311b23075b65d02" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int APC_RGB::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <qualifiedname>APC_RGB::r</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="57" column="14" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a465c9ba9922a24c7ac076a0cc6f50031" compoundref="dc/d17/APC__ArgParser_8c" startline="199" endline="299">__apc_colorFormat</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a1817d1f01f3bd3eab30e9b2521835bd0" compoundref="dc/d17/APC__ArgParser_8c" startline="132" endline="197">__apc_rgbToRGBStruct</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/argpar-c/lib/APC_ArgParser.h" line="53" column="1" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="54" bodyend="60"/>
+    <listofallmembers>
+      <member refid="df/df7/structAPC__RGB_1ad8b7415a95f73bb67b04b60e46394ad8" prot="public" virt="non-virtual"><scope>APC_RGB</scope><name>__externalAction</name></member>
+      <member refid="df/df7/structAPC__RGB_1aa9e264cca9ad8011fadb971ab149a656" prot="public" virt="non-virtual"><scope>APC_RGB</scope><name>b</name></member>
+      <member refid="df/df7/structAPC__RGB_1a34d82d77c9c59f3071ed54ce92c9dc7c" prot="public" virt="non-virtual"><scope>APC_RGB</scope><name>g</name></member>
+      <member refid="df/df7/structAPC__RGB_1af0429b86b207e9c03311b23075b65d02" prot="public" virt="non-virtual"><scope>APC_RGB</scope><name>r</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

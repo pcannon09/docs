@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_491221007ed99280941a2f276a2451d5" xml:lang="en-US">
+<title>inc/argpar-c Directory Reference</title>
+<indexterm><primary>inc/argpar-c Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_678705c4cf4147d05905f93026ebb718">lib</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_APC__config_8h">APC_config.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_APCpredefines_8h">APCpredefines.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

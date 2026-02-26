@@ -1,0 +1,62 @@
+\doxysection{APCpredefines.\+h}
+\hypertarget{APCpredefines_8h_source}{}\label{APCpredefines_8h_source}\index{inc/argpar-\/c/APCpredefines.h@{inc/argpar-\/c/APCpredefines.h}}
+\doxymbox{\hyperlink{APCpredefines_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00002}00002\ \textcolor{comment}{\ *\ APCpredefines.h\ -\/\ pcannonProjectStandards}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00003}00003\ \textcolor{comment}{\ *\ Predefines\ for\ C\ and\ C++\ projects}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00004}00004\ \textcolor{comment}{\ *\ STD\ Information:\ 20250723\ -\/\ 1.0S}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00005}00005\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00007}00007\ \textcolor{preprocessor}{\#ifndef\ INCLUDE\_C\_APCPREDEFINES\_H\_}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00008}00008\ \textcolor{preprocessor}{\#define\ INCLUDE\_C\_APCPREDEFINES\_H\_}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00010}00010\ \textcolor{comment}{//\ Project\ setup}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00011}\doxymbox{\hyperlink{APCpredefines_8h_a615f7fed3c19a52fca133a9f12a83fd1}{00011}}\ \textcolor{preprocessor}{\#define\ APC\_DEFAULT\_C\_STD\ \ \ \ \ \ \ \ \ \ \ 201112L}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00013}00013\ \textcolor{comment}{//\ Versioning}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00014}\doxymbox{\hyperlink{APCpredefines_8h_a9412374c5cc180e9ca749ec7922d0df1}{00014}}\ \textcolor{preprocessor}{\#define\ APC\_VERSION\_MAJOR\ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00015}\doxymbox{\hyperlink{APCpredefines_8h_a2763ac51a4447229701bc32ccaac20c0}{00015}}\ \textcolor{preprocessor}{\#define\ APC\_VERSION\_MINOR\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00016}\doxymbox{\hyperlink{APCpredefines_8h_ac1b9cadf4fcb82b36457b6a9f6de2e96}{00016}}\ \textcolor{preprocessor}{\#define\ APC\_VERSION\_PATCH\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00018}\doxymbox{\hyperlink{APCpredefines_8h_ad929b9e4adfbaa61af799731c43c6128}{00018}}\ \textcolor{preprocessor}{\#define\ APC\_VERSION\_STD\ \ \ \ \ \ \ \ \ \ \ \ \ \ 20260226L}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00020}00020\ \textcolor{comment}{//\ Version\ states:}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00021}00021\ \textcolor{comment}{//\ *\ dev}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00022}00022\ \textcolor{comment}{//\ *\ beta}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00023}00023\ \textcolor{comment}{//\ *\ build}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00024}\doxymbox{\hyperlink{APCpredefines_8h_ac585be23e57e986af5d40ba3fd3b2ec0}{00024}}\ \textcolor{preprocessor}{\#define\ APC\_VERSION\_STATE\ \ \ \ \ \ \ \ \ \ "{}dev"{}}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00026}\doxymbox{\hyperlink{APCpredefines_8h_ad1a55db09a52e483b577822725c6db6a}{00026}}\ \textcolor{preprocessor}{\#define\ APC\_VERSION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((EXAMPLE\_VERSION\_MAJOR<<16)|(EXAMPLE\_VERSION\_MINOR<<8)|(EXAMPLE\_VERSION\_PATCH)|(EXAMPLE\_VERSION\_STATE\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00028}\doxymbox{\hyperlink{APCpredefines_8h_a9b9703e97d0f1d35e2ab9de379cae390}{00028}}\ \textcolor{preprocessor}{\#define\ APC\_VERSION\_CHECK(EXAMPLE\_VERSION\_MAJOR,\ EXAMPLE\_VERSION\_MINOR,\ EXAMPLE\_VERSION\_PATCH,\ EXAMPLE\_VERSION\_STATE)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00029}00029\ \textcolor{preprocessor}{\ \ \ \ (((APC\_VERSION\_MAJOR)<<16)|((EXAMPLE\_VERSION\_MINOR)<<8)|(EXAMPLE\_VERSION\_PATCH)|((EXAMPLE\_VERSION\_STATE)\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00031}00031\ \textcolor{comment}{//\ Macro\ utils}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00032}\doxymbox{\hyperlink{APCpredefines_8h_a0b684fbd00994f3d3f6acc14402b87fb}{00032}}\ \textcolor{preprocessor}{\#define\ APC\_STRINGIFY(x)\ \#x}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00033}\doxymbox{\hyperlink{APCpredefines_8h_a9e39d9b330a846e686fbe66223ca82f9}{00033}}\ \textcolor{preprocessor}{\#define\ APC\_TOSTRING(x)\ EXAMPLE\_STRINGIFY(x)}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00035}00035\ \textcolor{preprocessor}{\#ifndef\ APC\_DEV}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00036}\doxymbox{\hyperlink{APCpredefines_8h_a97a420225178f042c0e2c19cffd92876}{00036}}\ \textcolor{preprocessor}{\#\ \ \ define\ APC\_DEV\ true}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00037}00037\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00039}\doxymbox{\hyperlink{APCpredefines_8h_a29ff4691ac6827a68a53aa7c6a5b9968}{00039}}\ \textcolor{preprocessor}{\#define\ APC\_FREE(x)\ free(x);\ x\ =\ NULL}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00041}00041\ \textcolor{preprocessor}{\#if\ defined(WIN32)\ ||\ defined(\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00042}00042\ \textcolor{preprocessor}{\#\ \ \ define\ APC\_OS\_WIN32}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00043}00043\ \textcolor{preprocessor}{\#elif\ defined(\_\_APPLE\_\_)\ ||\ defined(\_\_MACH\_\_)\ ||\ defined(Macintosh)}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00044}00044\ \textcolor{preprocessor}{\#\ \ \ define\ APC\_OS\_MACOS}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00045}00045\ \textcolor{preprocessor}{\#elif\ defined(\_\_linux\_\_)}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00046}00046\ \textcolor{preprocessor}{\#\ \ \ define\ APC\_OS\_UNIX\_LINUX}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00047}00047\ \textcolor{preprocessor}{\#elif\ defined(\_\_unix)\ ||\ defined(\_\_unix\_\_)}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00048}00048\ \textcolor{preprocessor}{\#\ \ \ define\ APC\_OS\_UNIX}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00049}00049\ \textcolor{preprocessor}{\#elif\ defined(\_\_FreeBSD\_\_)}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00050}00050\ \textcolor{preprocessor}{\#\ \ \ define\ APC\_OS\_FREEBSD}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00051}00051\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00052}00052\ \textcolor{preprocessor}{\#\ \ \ error\ "{}Current\ platform\ might\ not\ supported"{}}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00053}00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ defined(WIN32)\ //\ Platform\ check}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00055}00055\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ INCLUDE\_C\_APCPREDEFINES\_H\_}}
+\DoxyCodeLine{\Hypertarget{APCpredefines_8h_source_l00056}00056\ }
+
+\end{DoxyCode}

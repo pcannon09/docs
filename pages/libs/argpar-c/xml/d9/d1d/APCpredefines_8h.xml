@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="d9/d1d/APCpredefines_8h" kind="file" language="C++">
+    <compoundname>APCpredefines.h</compoundname>
+    <includedby refid="dc/d17/APC__ArgParser_8c" local="yes">src/lib/APC_ArgParser.c</includedby>
+    <includedby refid="d0/d29/main_8c" local="yes">src/main.c</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>inc/argpar-c/APCpredefines.h</label>
+        <link refid="d9/d1d/APCpredefines_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/lib/APC_ArgParser.c</label>
+        <link refid="dc/d17/APC__ArgParser_8c"/>
+      </node>
+      <node id="3">
+        <label>src/main.c</label>
+        <link refid="d0/d29/main_8c"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="d9/d1d/APCpredefines_8h_1a615f7fed3c19a52fca133a9f12a83fd1" prot="public" static="no">
+        <name>APC_DEFAULT_C_STD</name>
+        <initializer>201112L</initializer>
+        <briefdescription>
+<para><ref refid="d9/d1d/APCpredefines_8h" kindref="compound">APCpredefines.h</ref> - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1.0S. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/APCpredefines.h" line="11" column="9" bodyfile="inc/argpar-c/APCpredefines.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/d1d/APCpredefines_8h_1a97a420225178f042c0e2c19cffd92876" prot="public" static="no">
+        <name>APC_DEV</name>
+        <initializer>true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/APCpredefines.h" line="36" column="12" bodyfile="inc/argpar-c/APCpredefines.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/d1d/APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968" prot="public" static="no">
+        <name>APC_FREE</name>
+        <param><defname>x</defname></param>
+        <initializer>free(x); x = NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/APCpredefines.h" line="39" column="9" bodyfile="inc/argpar-c/APCpredefines.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a465c9ba9922a24c7ac076a0cc6f50031" compoundref="dc/d17/APC__ArgParser_8c" startline="199" endline="299">__apc_colorFormat</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" compoundref="dc/d17/APC__ArgParser_8c" startline="301" endline="426">apc_generateHelp</referencedby>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="d9/d1d/APCpredefines_8h_1a0b684fbd00994f3d3f6acc14402b87fb" prot="public" static="no">
+        <name>APC_STRINGIFY</name>
+        <param><defname>x</defname></param>
+        <initializer>#x</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/APCpredefines.h" line="32" column="9" bodyfile="inc/argpar-c/APCpredefines.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/d1d/APCpredefines_8h_1a9e39d9b330a846e686fbe66223ca82f9" prot="public" static="no">
+        <name>APC_TOSTRING</name>
+        <param><defname>x</defname></param>
+        <initializer>EXAMPLE_STRINGIFY(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/APCpredefines.h" line="33" column="9" bodyfile="inc/argpar-c/APCpredefines.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/d1d/APCpredefines_8h_1ad1a55db09a52e483b577822725c6db6a" prot="public" static="no">
+        <name>APC_VERSION</name>
+        <initializer>((EXAMPLE_VERSION_MAJOR&lt;&lt;16)|(EXAMPLE_VERSION_MINOR&lt;&lt;8)|(EXAMPLE_VERSION_PATCH)|(EXAMPLE_VERSION_STATE &lt;&lt; 24))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/APCpredefines.h" line="26" column="9" bodyfile="inc/argpar-c/APCpredefines.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/d1d/APCpredefines_8h_1a9b9703e97d0f1d35e2ab9de379cae390" prot="public" static="no">
+        <name>APC_VERSION_CHECK</name>
+        <param><defname>EXAMPLE_VERSION_MAJOR</defname></param>
+        <param><defname>EXAMPLE_VERSION_MINOR</defname></param>
+        <param><defname>EXAMPLE_VERSION_PATCH</defname></param>
+        <param><defname>EXAMPLE_VERSION_STATE</defname></param>
+        <initializer>(((<ref refid="d9/d1d/APCpredefines_8h_1a9412374c5cc180e9ca749ec7922d0df1" kindref="member">APC_VERSION_MAJOR</ref>)&lt;&lt;16)|((EXAMPLE_VERSION_MINOR)&lt;&lt;8)|(EXAMPLE_VERSION_PATCH)|((EXAMPLE_VERSION_STATE) &lt;&lt; 24))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/APCpredefines.h" line="28" column="9" bodyfile="inc/argpar-c/APCpredefines.h" bodystart="28" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/d1d/APCpredefines_8h_1a9412374c5cc180e9ca749ec7922d0df1" prot="public" static="no">
+        <name>APC_VERSION_MAJOR</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/APCpredefines.h" line="14" column="9" bodyfile="inc/argpar-c/APCpredefines.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="d9/d1d/APCpredefines_8h_1a2763ac51a4447229701bc32ccaac20c0" prot="public" static="no">
+        <name>APC_VERSION_MINOR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/APCpredefines.h" line="15" column="9" bodyfile="inc/argpar-c/APCpredefines.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="d9/d1d/APCpredefines_8h_1ac1b9cadf4fcb82b36457b6a9f6de2e96" prot="public" static="no">
+        <name>APC_VERSION_PATCH</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/APCpredefines.h" line="16" column="9" bodyfile="inc/argpar-c/APCpredefines.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="d9/d1d/APCpredefines_8h_1ac585be23e57e986af5d40ba3fd3b2ec0" prot="public" static="no">
+        <name>APC_VERSION_STATE</name>
+        <initializer>&quot;dev&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/APCpredefines.h" line="24" column="9" bodyfile="inc/argpar-c/APCpredefines.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="d9/d1d/APCpredefines_8h_1ad929b9e4adfbaa61af799731c43c6128" prot="public" static="no">
+        <name>APC_VERSION_STD</name>
+        <initializer>20260226L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/APCpredefines.h" line="18" column="9" bodyfile="inc/argpar-c/APCpredefines.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>APCpredefines.h<sp/>-<sp/>pcannonProjectStandards</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Predefines<sp/>for<sp/>C<sp/>and<sp/>C++<sp/>projects</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>STD<sp/>Information:<sp/>20250723<sp/>-<sp/>1.0S</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDE_C_APCPREDEFINES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_C_APCPREDEFINES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Project<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="d9/d1d/APCpredefines_8h_1a615f7fed3c19a52fca133a9f12a83fd1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APC_DEFAULT_C_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>201112L</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Versioning</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="d9/d1d/APCpredefines_8h_1a9412374c5cc180e9ca749ec7922d0df1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APC_VERSION_MAJOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="d9/d1d/APCpredefines_8h_1a2763ac51a4447229701bc32ccaac20c0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APC_VERSION_MINOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="d9/d1d/APCpredefines_8h_1ac1b9cadf4fcb82b36457b6a9f6de2e96" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APC_VERSION_PATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="d9/d1d/APCpredefines_8h_1ad929b9e4adfbaa61af799731c43c6128" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APC_VERSION_STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20260226L</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>states:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>beta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>build</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="d9/d1d/APCpredefines_8h_1ac585be23e57e986af5d40ba3fd3b2ec0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APC_VERSION_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;dev&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="d9/d1d/APCpredefines_8h_1ad1a55db09a52e483b577822725c6db6a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APC_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((EXAMPLE_VERSION_MAJOR&lt;&lt;16)|(EXAMPLE_VERSION_MINOR&lt;&lt;8)|(EXAMPLE_VERSION_PATCH)|(EXAMPLE_VERSION_STATE<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="d9/d1d/APCpredefines_8h_1a9b9703e97d0f1d35e2ab9de379cae390" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APC_VERSION_CHECK(EXAMPLE_VERSION_MAJOR,<sp/>EXAMPLE_VERSION_MINOR,<sp/>EXAMPLE_VERSION_PATCH,<sp/>EXAMPLE_VERSION_STATE)<sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(((APC_VERSION_MAJOR)&lt;&lt;16)|((EXAMPLE_VERSION_MINOR)&lt;&lt;8)|(EXAMPLE_VERSION_PATCH)|((EXAMPLE_VERSION_STATE)<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Macro<sp/>utils</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="d9/d1d/APCpredefines_8h_1a0b684fbd00994f3d3f6acc14402b87fb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APC_STRINGIFY(x)<sp/>#x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="d9/d1d/APCpredefines_8h_1a9e39d9b330a846e686fbe66223ca82f9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APC_TOSTRING(x)<sp/>EXAMPLE_STRINGIFY(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>APC_DEV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="d9/d1d/APCpredefines_8h_1a97a420225178f042c0e2c19cffd92876" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>APC_DEV<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="d9/d1d/APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APC_FREE(x)<sp/>free(x);<sp/>x<sp/>=<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(WIN32)<sp/>||<sp/>defined(_WIN32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>APC_OS_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__APPLE__)<sp/>||<sp/>defined(__MACH__)<sp/>||<sp/>defined(Macintosh)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>APC_OS_MACOS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__linux__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>APC_OS_UNIX_LINUX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__unix)<sp/>||<sp/>defined(__unix__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>APC_OS_UNIX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__FreeBSD__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>APC_OS_FREEBSD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>error<sp/>&quot;Current<sp/>platform<sp/>might<sp/>not<sp/>supported&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>defined(WIN32)<sp/>//<sp/>Platform<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>INCLUDE_C_APCPREDEFINES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/argpar-c/APCpredefines.h"/>
+  </compounddef>
+</doxygen>

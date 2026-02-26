@@ -1,0 +1,96 @@
+.TH "src/main.c" 3 "Version v1.0.0-build" "ArgPar-C" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/main.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <stdio\&.h>\fP
+.br
+\fR#include '\&.\&./inc/argpar\-c/lib/APC_ArgParser\&.h'\fP
+.br
+\fR#include '\&.\&./inc/argpar\-c/APCpredefines\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main (int argc, char * argv[])"
+
+.PP
+Definition at line \fB6\fP of file \fBmain\&.c\fP\&.
+.nf
+7 {
+8     APC_ArgParser parser = apc_init(argc, argv);
+9 
+10     {
+11         APC_ArgInfo info = apc_initInfo();
+12         info\&.id = "version";
+13         info\&.param = "\-\-version";
+14         info\&.sparam = "\-v";
+15         info\&.help = "Version information for ArgParser\-C";
+16 
+17         apc_add(&parser, info);
+18     }
+19 
+20     {
+21         APC_ArgInfo info = apc_initInfo();
+22         info\&.id = "help";
+23         info\&.param = "\-\-help";
+24         info\&.sparam = "\-h";
+25         info\&.help = "Show this help";
+26 
+27         cvec_push(&info\&.aliases, const char *, "\-?");
+28 
+29         apc_add(&parser, info);
+30     }
+31 
+32     if (apc_get(&parser, "version"))
+33     {
+34         printf("== VERSION INFO\\n");
+35         printf("\- VERSION: %i\&.%i\&.%i\\n", 
+36                 APC_VERSION_MAJOR,
+37                 APC_VERSION_MINOR,
+38                 APC_VERSION_PATCH);
+39         printf("\- VERSION STANDARD: %ld\\n", APC_VERSION_STD);
+40         printf("\- VERSION STATE: %s\\n", APC_VERSION_STATE);
+41     }
+42 
+43     else if (apc_get(&parser, "help"))
+44     {
+45         const char *licenseMessage =
+46             "\\nArgPar\-C Copyright (C) 2026  pcannon09\\n"
+47             "This program comes with ABSOLUTELY NO WARRANTY; for details type `\&./run\&.sh \-\-help'\&.\\n"
+48             "This is free software, and you are welcome to redistribute it\\n"
+49             "under certain conditions; type `\&./run\&.sh \-\-help' for details\&.";
+50 
+51         char *helpMsg = apc_generateHelp(
+52                 &parser,
+53                 "APC Help",
+54                 "ArgParser\-C help information and demo\\nCheck the code for more information\\n",
+55                 licenseMessage);
+56 
+57         printf("%s\\n", helpMsg);
+58 
+59         APC_FREE(helpMsg);
+60     }
+61 
+62     apc_destroy(&parser);
+63 
+64     return 0;
+65 }
+.PP
+.fi
+
+.PP
+References \fBAPC_ArgInfo::aliases\fP, \fBapc_add()\fP, \fBapc_destroy()\fP, \fBAPC_FREE\fP, \fBapc_generateHelp()\fP, \fBapc_get()\fP, \fBapc_init()\fP, \fBapc_initInfo()\fP, \fBAPC_VERSION_MAJOR\fP, \fBAPC_VERSION_MINOR\fP, \fBAPC_VERSION_PATCH\fP, \fBAPC_VERSION_STATE\fP, \fBAPC_VERSION_STD\fP, \fBAPC_ArgInfo::help\fP, \fBAPC_ArgInfo::id\fP, \fBAPC_ArgInfo::param\fP, and \fBAPC_ArgInfo::sparam\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArgPar-C from the source code\&.

@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>ArgParser-C – Usage Guide</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/></para>
+<para>A lightweight and structured argument parsing library for C</para>
+<para>This document explains how to use the public API of ArgParser-C, including function descriptions and minimal usage examples</para>
+<para><hruler/>
+</para>
+<sect1 id="index_1autotoc_md2">
+<title>Basic Usage</title><sect2 id="index_1autotoc_md3">
+<title>1. Initialize the Parser</title><sect3 id="index_1autotoc_md4">
+<title><computeroutput>APC_ArgParser apc_init(int argc, char *argv[]);</computeroutput></title><para>Initializes a new argument parser instance using the <computeroutput>argc</computeroutput> and <computeroutput>argv</computeroutput> values provided to <computeroutput><ref refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main()</ref></computeroutput></para>
+</sect3>
+<sect3 id="index_1autotoc_md5">
+<title>Example</title><para><programlisting filename=".c"><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref><sp/>parser<sp/>=<sp/><ref refid="db/daa/APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4" kindref="member">apc_init</ref>(argc,<sp/>argv);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>More<sp/>code<sp/>here...<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para>This prepares the parser and stores argument data internally</para>
+<para><hruler/>
+</para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md7">
+<title>2. Define Arguments</title><para>Arguments are described using <computeroutput><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref></computeroutput>.</para>
+<sect3 id="index_1autotoc_md8">
+<title><computeroutput>APC_ArgInfo apc_initInfo(void);</computeroutput></title><para>Initializes an argument descriptor with safe defaults:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>required</computeroutput> defaults to <computeroutput>false</computeroutput></para>
+</listitem><listitem><para><computeroutput>aliases</computeroutput> is automatically constructed</para>
+</listitem><listitem><para>All pointers are initialized to <computeroutput>NULL</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="index_1autotoc_md9">
+<title>Example</title><para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref><sp/>info<sp/>=<sp/><ref refid="db/daa/APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98" kindref="member">apc_initInfo</ref>();</highlight></codeline>
+<codeline><highlight class="normal">info.<ref refid="d3/d7d/structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31" kindref="member">id</ref><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;version&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">info.<ref refid="d3/d7d/structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9" kindref="member">param</ref><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;--version&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">info.<ref refid="d3/d7d/structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262" kindref="member">sparam</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;-v&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">info.<ref refid="d3/d7d/structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb" kindref="member">help</ref><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Version<sp/>information&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="db/daa/APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd" kindref="member">apc_add</ref>(&amp;parser,<sp/>info);</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md11">
+<title>3. Register Arguments</title><sect3 id="index_1autotoc_md12">
+<title><computeroutput>bool apc_add(APC_ArgParser *argpar, APC_ArgInfo info);</computeroutput></title><para>Registers a configured <computeroutput><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref></computeroutput> structure with the parser</para>
+<para>Returns:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>true</computeroutput> on success</para>
+</listitem><listitem><para><computeroutput>false</computeroutput> on failure</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="index_1autotoc_md13">
+<title>Example with Aliases</title><para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref><sp/>info<sp/>=<sp/><ref refid="db/daa/APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98" kindref="member">apc_initInfo</ref>();</highlight></codeline>
+<codeline><highlight class="normal">info.<ref refid="d3/d7d/structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31" kindref="member">id</ref><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;help&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">info.<ref refid="d3/d7d/structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9" kindref="member">param</ref><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;--help&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">info.<ref refid="d3/d7d/structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262" kindref="member">sparam</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;-h&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">info.<ref refid="d3/d7d/structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb" kindref="member">help</ref><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Show<sp/>this<sp/>help&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">cvec_push(&amp;info.<ref refid="d3/d7d/structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971" kindref="member">aliases</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="stringliteral">&quot;-?&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="db/daa/APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd" kindref="member">apc_add</ref>(&amp;parser,<sp/>info);</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md15">
+<title>4. Query Arguments</title><sect3 id="index_1autotoc_md16">
+<title><computeroutput>bool apc_get(APC_ArgParser *argpar, const char *id);</computeroutput></title><para>Checks whether a registered argument is present in <computeroutput>argv</computeroutput>.</para>
+<para>Returns:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>true</computeroutput> if the argument exists</para>
+</listitem><listitem><para><computeroutput>false</computeroutput> otherwise</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="index_1autotoc_md17">
+<title>Example</title><para><programlisting filename=".c"><codeline><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" kindref="member">apc_get</ref>(&amp;parser,<sp/></highlight><highlight class="stringliteral">&quot;version&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Version:<sp/>%i.%i.%i\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d1d/APCpredefines_8h_1a9412374c5cc180e9ca749ec7922d0df1" kindref="member">APC_VERSION_MAJOR</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d1d/APCpredefines_8h_1a2763ac51a4447229701bc32ccaac20c0" kindref="member">APC_VERSION_MINOR</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d1d/APCpredefines_8h_1ac1b9cadf4fcb82b36457b6a9f6de2e96" kindref="member">APC_VERSION_PATCH</ref>);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md19">
+<title>5. Generate Help Text</title><sect3 id="index_1autotoc_md20">
+<title>`char *apc_generateHelp(APC_ArgParser *argpar, const char *title, const char *topInfo, const char *lowerInfo);</title><para>Generates a formatted help message based on registered arguments</para>
+<para>Parameters:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>title</computeroutput> — Help title</para>
+</listitem><listitem><para><computeroutput>topInfo</computeroutput> — Optional description or introduction</para>
+</listitem><listitem><para><computeroutput>lowerInfo</computeroutput> — Optional footer text (license, notes, etc...)</para>
+</listitem></itemizedlist>
+</para>
+<para>Returns:</para>
+<para><itemizedlist>
+<listitem><para>Dynamically allocated string (must be freed)</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="index_1autotoc_md21">
+<title>Example</title><para><programlisting filename=".c"><codeline><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" kindref="member">apc_get</ref>(&amp;parser,<sp/></highlight><highlight class="stringliteral">&quot;help&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*license<sp/>=</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\nVery<sp/>cool<sp/>license\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*helpMsg<sp/>=<sp/><ref refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" kindref="member">apc_generateHelp</ref>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;parser,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;APC<sp/>Help&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;ArgParser-C<sp/>demonstration<sp/>program\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>license);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/>helpMsg);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d1d/APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968" kindref="member">APC_FREE</ref>(helpMsg);<sp/></highlight><highlight class="comment">//<sp/>Internal<sp/>automatic<sp/>free()<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md23">
+<title>6. Cleanup</title><sect3 id="index_1autotoc_md24">
+<title><computeroutput>void apc_destroy(APC_ArgParser *argpar);</computeroutput></title><para>Frees all allocated resources used by the parser</para>
+</sect3>
+<sect3 id="index_1autotoc_md25">
+<title>Example</title><para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="db/daa/APC__ArgParser_8h_1acce093adeb486562d49b2e483102abbf" kindref="member">apc_destroy</ref>(&amp;parser);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect3>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md27">
+<title>Public API Reference</title><para>Below is a summary of the non-private (public) API functions</para>
+<para><hruler/>
+</para>
+<sect2 id="index_1autotoc_md29">
+<title><computeroutput>apc_init</computeroutput></title><para>Initializes the argument parser</para>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref><sp/><ref refid="db/daa/APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4" kindref="member">apc_init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[]);</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md31">
+<title><computeroutput>apc_initInfo</computeroutput></title><para>Creates a clean <computeroutput><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref></computeroutput> structure</para>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref><sp/><ref refid="db/daa/APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98" kindref="member">apc_initInfo</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md33">
+<title><computeroutput>apc_add</computeroutput></title><para>Registers an argument definition</para>
+<para><programlisting filename=".c"><codeline><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="db/daa/APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd" kindref="member">apc_add</ref>(<ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref><sp/>*argpar,<sp/><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref><sp/>info);</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md35">
+<title><computeroutput>apc_get</computeroutput></title><para>Checks if a registered argument exists</para>
+<para><programlisting filename=".c"><codeline><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" kindref="member">apc_get</ref>(<ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref><sp/>*argpar,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md37">
+<title><computeroutput>apc_generateHelp</computeroutput></title><para>Automatically builds formatted help text</para>
+<para><programlisting filename=".c"><codeline><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" kindref="member">apc_generateHelp</ref>(<ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref><sp/>*argpar,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topInfo,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*lowerInfo);</highlight></codeline>
+</programlisting></para>
+<para>Memory ownership: The returned string must be released using <computeroutput><ref refid="d9/d1d/APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968" kindref="member">APC_FREE()</ref></computeroutput>.</para>
+<para><hruler/>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md39">
+<title><computeroutput>apc_destroy</computeroutput></title><para>Destroys the parser and frees all internal allocations</para>
+<para><programlisting filename=".c"><codeline><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="db/daa/APC__ArgParser_8h_1acce093adeb486562d49b2e483102abbf" kindref="member">apc_destroy</ref>(<ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref><sp/>*argpar);</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md41">
+<title>Summary</title><para>Typical usage:</para>
+<para><orderedlist>
+<listitem><para>Initialize parser (<computeroutput><ref refid="db/daa/APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4" kindref="member">apc_init</ref></computeroutput>)</para>
+</listitem><listitem><para>Create argument definitions that can be modified (<computeroutput><ref refid="db/daa/APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98" kindref="member">apc_initInfo</ref></computeroutput>)</para>
+</listitem><listitem><para>Register arguments (<computeroutput><ref refid="db/daa/APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd" kindref="member">apc_add</ref></computeroutput>)</para>
+</listitem><listitem><para>Query arguments (<computeroutput><ref refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" kindref="member">apc_get</ref></computeroutput>)</para>
+</listitem><listitem><para>Optionally generate help (<computeroutput><ref refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" kindref="member">apc_generateHelp</ref></computeroutput>)</para>
+</listitem><listitem><para>Destroy parser (<computeroutput><ref refid="db/daa/APC__ArgParser_8h_1acce093adeb486562d49b2e483102abbf" kindref="member">apc_destroy</ref></computeroutput>)</para>
+</listitem></orderedlist>
+</para>
+<para>The API is intentionally minimal and explicit, designed to remain simple, predictable, and suitable for low-level C projects </para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

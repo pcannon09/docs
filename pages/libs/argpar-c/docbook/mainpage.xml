@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+<title>
+<para>ArgParser-C – Usage Guide </para>
+</title>
+<indexterm><primary>ArgParser-C – Usage Guide</primary></indexterm>
+
+<para><anchor xml:id="_index_1md_README"/></para>
+
+<para>A lightweight and structured argument parsing library for C</para>
+
+<para>This document explains how to use the public API of ArgParser-C, including function descriptions and minimal usage examples</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+<section xml:id="_index_1autotoc_md2">
+<title>Basic Usage</title><section xml:id="_index_1autotoc_md3">
+<title>1. Initialize the Parser</title><section xml:id="_index_1autotoc_md4">
+<title><computeroutput>APC_ArgParser apc_init(int argc, char *argv[]);</computeroutput></title>
+<para>Initializes a new argument parser instance using the <computeroutput>argc</computeroutput> and <computeroutput>argv</computeroutput> values provided to <computeroutput><link linkend="_main_8c_1a0ddf1224851353fc92bfbff6f499fa97">main()</link></computeroutput></para>
+</section>
+<section xml:id="_index_1autotoc_md5">
+<title>Example</title>
+<para><literallayout><computeroutput>int&#32;main(int&#32;argc,&#32;char&#32;*argv[])
+{
+&#32;&#32;&#32;&#32;APC_ArgParser&#32;parser&#32;=&#32;apc_init(argc,&#32;argv);
+
+&#32;&#32;&#32;&#32;/*&#32;More&#32;code&#32;here...&#32;*/
+}
+</computeroutput></literallayout></para>
+
+<para>This prepares the parser and stores argument data internally</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md7">
+<title>2. Define Arguments</title>
+<para>Arguments are described using <computeroutput><link linkend="_structAPC__ArgInfo">APC_ArgInfo</link></computeroutput>.</para>
+<section xml:id="_index_1autotoc_md8">
+<title><computeroutput>APC_ArgInfo apc_initInfo(void);</computeroutput></title>
+<para>Initializes an argument descriptor with safe defaults:</para>
+
+<para><itemizedlist>
+<listitem>
+<para><computeroutput>required</computeroutput> defaults to <computeroutput>false</computeroutput></para>
+</listitem><listitem>
+<para><computeroutput>aliases</computeroutput> is automatically constructed</para>
+</listitem><listitem>
+<para>All pointers are initialized to <computeroutput>NULL</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md9">
+<title>Example</title>
+<para><literallayout><computeroutput>APC_ArgInfo&#32;info&#32;=&#32;apc_initInfo();
+info.id&#32;&#32;&#32;&#32;&#32;=&#32;&quot;version&quot;;
+info.param&#32;&#32;=&#32;&quot;--version&quot;;
+info.sparam&#32;=&#32;&quot;-v&quot;;
+info.help&#32;&#32;&#32;=&#32;&quot;Version&#32;information&quot;;
+
+apc_add(&amp;parser,&#32;info);
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md11">
+<title>3. Register Arguments</title><section xml:id="_index_1autotoc_md12">
+<title><computeroutput>bool apc_add(APC_ArgParser *argpar, APC_ArgInfo info);</computeroutput></title>
+<para>Registers a configured <computeroutput><link linkend="_structAPC__ArgInfo">APC_ArgInfo</link></computeroutput> structure with the parser</para>
+
+<para>Returns:</para>
+
+<para><itemizedlist>
+<listitem>
+<para><computeroutput>true</computeroutput> on success</para>
+</listitem><listitem>
+<para><computeroutput>false</computeroutput> on failure</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md13">
+<title>Example with Aliases</title>
+<para><literallayout><computeroutput>APC_ArgInfo&#32;info&#32;=&#32;apc_initInfo();
+info.id&#32;&#32;&#32;&#32;&#32;=&#32;&quot;help&quot;;
+info.param&#32;&#32;=&#32;&quot;--help&quot;;
+info.sparam&#32;=&#32;&quot;-h&quot;;
+info.help&#32;&#32;&#32;=&#32;&quot;Show&#32;this&#32;help&quot;;
+
+cvec_push(&amp;info.aliases,&#32;const&#32;char&#32;*,&#32;&quot;-?&quot;);
+
+apc_add(&amp;parser,&#32;info);
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md15">
+<title>4. Query Arguments</title><section xml:id="_index_1autotoc_md16">
+<title><computeroutput>bool apc_get(APC_ArgParser *argpar, const char *id);</computeroutput></title>
+<para>Checks whether a registered argument is present in <computeroutput>argv</computeroutput>.</para>
+
+<para>Returns:</para>
+
+<para><itemizedlist>
+<listitem>
+<para><computeroutput>true</computeroutput> if the argument exists</para>
+</listitem><listitem>
+<para><computeroutput>false</computeroutput> otherwise</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md17">
+<title>Example</title>
+<para><literallayout><computeroutput>if&#32;(apc_get(&amp;parser,&#32;&quot;version&quot;))
+{
+&#32;&#32;&#32;&#32;printf(&quot;Version:&#32;%i.%i.%i\n&quot;,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;APC_VERSION_MAJOR,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;APC_VERSION_MINOR,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;APC_VERSION_PATCH);
+}
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md19">
+<title>5. Generate Help Text</title><section xml:id="_index_1autotoc_md20">
+<title>`char *apc_generateHelp(APC_ArgParser *argpar, const char *title, const char *topInfo, const char *lowerInfo);</title>
+<para>Generates a formatted help message based on registered arguments</para>
+
+<para>Parameters:</para>
+
+<para><itemizedlist>
+<listitem>
+<para><computeroutput>title</computeroutput> — Help title</para>
+</listitem><listitem>
+<para><computeroutput>topInfo</computeroutput> — Optional description or introduction</para>
+</listitem><listitem>
+<para><computeroutput>lowerInfo</computeroutput> — Optional footer text (license, notes, etc...)</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Returns:</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Dynamically allocated string (must be freed)</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md21">
+<title>Example</title>
+<para><literallayout><computeroutput>else&#32;if&#32;(apc_get(&amp;parser,&#32;&quot;help&quot;))
+{
+&#32;&#32;&#32;&#32;const&#32;char&#32;*license&#32;=
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;\nVery&#32;cool&#32;license\n&quot;;
+
+&#32;&#32;&#32;&#32;char&#32;*helpMsg&#32;=&#32;apc_generateHelp(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&amp;parser,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;APC&#32;Help&quot;,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;ArgParser-C&#32;demonstration&#32;program\n&quot;,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;license);
+
+&#32;&#32;&#32;&#32;printf(&quot;%s\n&quot;,&#32;helpMsg);
+
+&#32;&#32;&#32;&#32;APC_FREE(helpMsg);&#32;//&#32;Internal&#32;automatic&#32;free()&#32;function
+}
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md23">
+<title>6. Cleanup</title><section xml:id="_index_1autotoc_md24">
+<title><computeroutput>void apc_destroy(APC_ArgParser *argpar);</computeroutput></title>
+<para>Frees all allocated resources used by the parser</para>
+</section>
+<section xml:id="_index_1autotoc_md25">
+<title>Example</title>
+<para><literallayout><computeroutput>apc_destroy(&amp;parser);
+return&#32;0;
+}
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md27">
+<title>Public API Reference</title>
+<para>Below is a summary of the non-private (public) API functions</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+<section xml:id="_index_1autotoc_md29">
+<title><computeroutput>apc_init</computeroutput></title>
+<para>Initializes the argument parser</para>
+
+<para><literallayout><computeroutput>APC_ArgParser&#32;apc_init(int&#32;argc,&#32;char&#32;*argv[]);
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md31">
+<title><computeroutput>apc_initInfo</computeroutput></title>
+<para>Creates a clean <computeroutput><link linkend="_structAPC__ArgInfo">APC_ArgInfo</link></computeroutput> structure</para>
+
+<para><literallayout><computeroutput>APC_ArgInfo&#32;apc_initInfo(void);
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md33">
+<title><computeroutput>apc_add</computeroutput></title>
+<para>Registers an argument definition</para>
+
+<para><literallayout><computeroutput>bool&#32;apc_add(APC_ArgParser&#32;*argpar,&#32;APC_ArgInfo&#32;info);
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md35">
+<title><computeroutput>apc_get</computeroutput></title>
+<para>Checks if a registered argument exists</para>
+
+<para><literallayout><computeroutput>bool&#32;apc_get(APC_ArgParser&#32;*argpar,&#32;const&#32;char&#32;*id);
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md37">
+<title><computeroutput>apc_generateHelp</computeroutput></title>
+<para>Automatically builds formatted help text</para>
+
+<para><literallayout><computeroutput>char&#32;*apc_generateHelp(APC_ArgParser&#32;*argpar,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;const&#32;char&#32;*title,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;const&#32;char&#32;*topInfo,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;const&#32;char&#32;*lowerInfo);
+</computeroutput></literallayout></para>
+
+<para>Memory ownership: The returned string must be released using <computeroutput><link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE()</link></computeroutput>.</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md39">
+<title><computeroutput>apc_destroy</computeroutput></title>
+<para>Destroys the parser and frees all internal allocations</para>
+
+<para><literallayout><computeroutput>void&#32;apc_destroy(APC_ArgParser&#32;*argpar);
+</computeroutput></literallayout></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+</para>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md41">
+<title>Summary</title>
+<para>Typical usage:</para>
+
+<para><orderedlist>
+<listitem>
+<para>Initialize parser (<computeroutput><link linkend="_APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4">apc_init</link></computeroutput>)</para>
+</listitem><listitem>
+<para>Create argument definitions that can be modified (<computeroutput><link linkend="_APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98">apc_initInfo</link></computeroutput>)</para>
+</listitem><listitem>
+<para>Register arguments (<computeroutput><link linkend="_APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd">apc_add</link></computeroutput>)</para>
+</listitem><listitem>
+<para>Query arguments (<computeroutput><link linkend="_APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e">apc_get</link></computeroutput>)</para>
+</listitem><listitem>
+<para>Optionally generate help (<computeroutput><link linkend="_APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a">apc_generateHelp</link></computeroutput>)</para>
+</listitem><listitem>
+<para>Destroy parser (<computeroutput><link linkend="_APC__ArgParser_8h_1acce093adeb486562d49b2e483102abbf">apc_destroy</link></computeroutput>)</para>
+</listitem></orderedlist>
+</para>
+
+<para>The API is intentionally minimal and explicit, designed to remain simple, predictable, and suitable for low-level C projects </para>
+</section>
+</chapter>

@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_APC__config_8h" xml:lang="en-US">
+<title>inc/argpar-c/APC_config.h File Reference</title>
+<indexterm><primary>inc/argpar-c/APC_config.h</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_APC__config_8h_1abe892064a84b35884208fc7a6ec82cb5">__APC_CPP_GUARD_CLOSE</link>&#160;&#160;&#160;}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APC__config_8h_1aad021104ca2a3f4411fd05ae01955d38">__APC_CPP_GUARD_OPEN</link>&#160;&#160;&#160;extern &quot;C&quot; {</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APC__config_8h_1aa73dd466079d5169c09a7e3aebfea366">APC_Declare_Pair</link>(_first,  _second,  _name)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APC__config_8h_1a765a8ea177a5abcfddc4206cfea4a62a">APC_STYLE_BOLD</link>&#160;&#160;&#160;&quot;\033[1m&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APC__config_8h_1a6bcdf6a249f3b8d2856bcd62706dae38">APC_STYLE_ITALIC</link>&#160;&#160;&#160;&quot;\033[3m&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APC__config_8h_1a9a8ce316a5f751a9de5f591648a0ccda">APC_STYLE_RESET</link>&#160;&#160;&#160;&quot;\033[0m&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APC__config_8h_1ae875079c6c32e30db22b910244b48bd3">APC_STYLE_STRIKETRHOUGH</link>&#160;&#160;&#160;&quot;\033[9m&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APC__config_8h_1ab664f8bd1490b2d0feba1260ae627ba8">APC_STYLE_UNDERLINE</link>&#160;&#160;&#160;&quot;\033[4m&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APC__config_8h_1a6f52e79ca8a9e69b0f19a929168c7099">APC_STYLECOLOR_IMPORTANT</link>&#160;&#160;&#160;&quot;${255,71,76}&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APC__config_8h_1a51ea406f28c1c64d9959c7b5daa5d806">APC_STYLECOLOR_OPTIONAL</link>&#160;&#160;&#160;&quot;${150,150,150}&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APC__config_8h_1a1157bc9d6b51d6e7f47d1ae86bc914de">APC_STYLECOLOR_TITLE</link>&#160;&#160;&#160;&quot;${245,245,245}&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APC__config_8h_1ac9375bfe888e738df60816b9932e145c">APC_STYLECOLOR_WARNING</link>&#160;&#160;&#160;&quot;${255,255,40}&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_APC__config_8h_1abe892064a84b35884208fc7a6ec82cb5"/><section>
+    <title>__APC_CPP_GUARD_CLOSE</title>
+<indexterm><primary>__APC_CPP_GUARD_CLOSE</primary><secondary>APC_config.h</secondary></indexterm>
+<indexterm><primary>APC_config.h</primary><secondary>__APC_CPP_GUARD_CLOSE</secondary></indexterm>
+<para><computeroutput>#define __APC_CPP_GUARD_CLOSE&#160;&#160;&#160;}</computeroutput></para><para>
+Definition at line <link linkend="_APC__config_8h_source_1l00006">6</link> of file <link linkend="_APC__config_8h_source">APC_config.h</link>.</para>
+</section>
+<anchor xml:id="_APC__config_8h_1aad021104ca2a3f4411fd05ae01955d38"/><section>
+    <title>__APC_CPP_GUARD_OPEN</title>
+<indexterm><primary>__APC_CPP_GUARD_OPEN</primary><secondary>APC_config.h</secondary></indexterm>
+<indexterm><primary>APC_config.h</primary><secondary>__APC_CPP_GUARD_OPEN</secondary></indexterm>
+<para><computeroutput>#define __APC_CPP_GUARD_OPEN&#160;&#160;&#160;extern &quot;C&quot; {</computeroutput></para><para>
+Definition at line <link linkend="_APC__config_8h_source_1l00005">5</link> of file <link linkend="_APC__config_8h_source">APC_config.h</link>.</para>
+</section>
+<anchor xml:id="_APC__config_8h_1aa73dd466079d5169c09a7e3aebfea366"/><section>
+    <title>APC_Declare_Pair</title>
+<indexterm><primary>APC_Declare_Pair</primary><secondary>APC_config.h</secondary></indexterm>
+<indexterm><primary>APC_config.h</primary><secondary>APC_Declare_Pair</secondary></indexterm>
+<para><computeroutput>#define APC_Declare_Pair( _first,  _second,  _name)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>APC_Pair##_name&#32;\
+{&#32;\
+&#32;&#32;&#32;&#32;_first&#32;first;&#32;\
+&#32;&#32;&#32;&#32;_second&#32;second;&#32;\
+}&#32;APC_Pair##_name;&#32;\
+</programlisting><para>
+Definition at line <link linkend="_APC__config_8h_source_1l00025">25</link> of file <link linkend="_APC__config_8h_source">APC_config.h</link>.</para>
+<programlisting linenumbering="unnumbered">00025 <emphasis role="preprocessor">#define&#32;APC_Declare_Pair(_first,&#32;_second,&#32;_name)&#32;\</emphasis>
+00026 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;typedef&#32;struct&#32;APC_Pair##_name&#32;\</emphasis>
+00027 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;{&#32;\</emphasis>
+00028 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_first&#32;first;&#32;\</emphasis>
+00029 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_second&#32;second;&#32;\</emphasis>
+00030 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;}&#32;APC_Pair##_name;&#32;\</emphasis>
+00031 <emphasis role="preprocessor"></emphasis>
+</programlisting></section>
+<anchor xml:id="_APC__config_8h_1a765a8ea177a5abcfddc4206cfea4a62a"/><section>
+    <title>APC_STYLE_BOLD</title>
+<indexterm><primary>APC_STYLE_BOLD</primary><secondary>APC_config.h</secondary></indexterm>
+<indexterm><primary>APC_config.h</primary><secondary>APC_STYLE_BOLD</secondary></indexterm>
+<para><computeroutput>#define APC_STYLE_BOLD&#160;&#160;&#160;&quot;\033[1m&quot;</computeroutput></para><para>
+Definition at line <link linkend="_APC__config_8h_source_1l00015">15</link> of file <link linkend="_APC__config_8h_source">APC_config.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00199">__apc_colorFormat()</link>.</para>
+</section>
+<anchor xml:id="_APC__config_8h_1a6bcdf6a249f3b8d2856bcd62706dae38"/><section>
+    <title>APC_STYLE_ITALIC</title>
+<indexterm><primary>APC_STYLE_ITALIC</primary><secondary>APC_config.h</secondary></indexterm>
+<indexterm><primary>APC_config.h</primary><secondary>APC_STYLE_ITALIC</secondary></indexterm>
+<para><computeroutput>#define APC_STYLE_ITALIC&#160;&#160;&#160;&quot;\033[3m&quot;</computeroutput></para><para>
+Definition at line <link linkend="_APC__config_8h_source_1l00016">16</link> of file <link linkend="_APC__config_8h_source">APC_config.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00199">__apc_colorFormat()</link>.</para>
+</section>
+<anchor xml:id="_APC__config_8h_1a9a8ce316a5f751a9de5f591648a0ccda"/><section>
+    <title>APC_STYLE_RESET</title>
+<indexterm><primary>APC_STYLE_RESET</primary><secondary>APC_config.h</secondary></indexterm>
+<indexterm><primary>APC_config.h</primary><secondary>APC_STYLE_RESET</secondary></indexterm>
+<para><computeroutput>#define APC_STYLE_RESET&#160;&#160;&#160;&quot;\033[0m&quot;</computeroutput></para><para>
+Definition at line <link linkend="_APC__config_8h_source_1l00014">14</link> of file <link linkend="_APC__config_8h_source">APC_config.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00199">__apc_colorFormat()</link>.</para>
+</section>
+<anchor xml:id="_APC__config_8h_1ae875079c6c32e30db22b910244b48bd3"/><section>
+    <title>APC_STYLE_STRIKETRHOUGH</title>
+<indexterm><primary>APC_STYLE_STRIKETRHOUGH</primary><secondary>APC_config.h</secondary></indexterm>
+<indexterm><primary>APC_config.h</primary><secondary>APC_STYLE_STRIKETRHOUGH</secondary></indexterm>
+<para><computeroutput>#define APC_STYLE_STRIKETRHOUGH&#160;&#160;&#160;&quot;\033[9m&quot;</computeroutput></para><para>
+Definition at line <link linkend="_APC__config_8h_source_1l00018">18</link> of file <link linkend="_APC__config_8h_source">APC_config.h</link>.</para>
+</section>
+<anchor xml:id="_APC__config_8h_1ab664f8bd1490b2d0feba1260ae627ba8"/><section>
+    <title>APC_STYLE_UNDERLINE</title>
+<indexterm><primary>APC_STYLE_UNDERLINE</primary><secondary>APC_config.h</secondary></indexterm>
+<indexterm><primary>APC_config.h</primary><secondary>APC_STYLE_UNDERLINE</secondary></indexterm>
+<para><computeroutput>#define APC_STYLE_UNDERLINE&#160;&#160;&#160;&quot;\033[4m&quot;</computeroutput></para><para>
+Definition at line <link linkend="_APC__config_8h_source_1l00017">17</link> of file <link linkend="_APC__config_8h_source">APC_config.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00199">__apc_colorFormat()</link>.</para>
+</section>
+<anchor xml:id="_APC__config_8h_1a6f52e79ca8a9e69b0f19a929168c7099"/><section>
+    <title>APC_STYLECOLOR_IMPORTANT</title>
+<indexterm><primary>APC_STYLECOLOR_IMPORTANT</primary><secondary>APC_config.h</secondary></indexterm>
+<indexterm><primary>APC_config.h</primary><secondary>APC_STYLECOLOR_IMPORTANT</secondary></indexterm>
+<para><computeroutput>#define APC_STYLECOLOR_IMPORTANT&#160;&#160;&#160;&quot;${255,71,76}&quot;</computeroutput></para><para>
+Definition at line <link linkend="_APC__config_8h_source_1l00022">22</link> of file <link linkend="_APC__config_8h_source">APC_config.h</link>.</para>
+</section>
+<anchor xml:id="_APC__config_8h_1a51ea406f28c1c64d9959c7b5daa5d806"/><section>
+    <title>APC_STYLECOLOR_OPTIONAL</title>
+<indexterm><primary>APC_STYLECOLOR_OPTIONAL</primary><secondary>APC_config.h</secondary></indexterm>
+<indexterm><primary>APC_config.h</primary><secondary>APC_STYLECOLOR_OPTIONAL</secondary></indexterm>
+<para><computeroutput>#define APC_STYLECOLOR_OPTIONAL&#160;&#160;&#160;&quot;${150,150,150}&quot;</computeroutput></para><para>
+Definition at line <link linkend="_APC__config_8h_source_1l00021">21</link> of file <link linkend="_APC__config_8h_source">APC_config.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00301">apc_generateHelp()</link>.</para>
+</section>
+<anchor xml:id="_APC__config_8h_1a1157bc9d6b51d6e7f47d1ae86bc914de"/><section>
+    <title>APC_STYLECOLOR_TITLE</title>
+<indexterm><primary>APC_STYLECOLOR_TITLE</primary><secondary>APC_config.h</secondary></indexterm>
+<indexterm><primary>APC_config.h</primary><secondary>APC_STYLECOLOR_TITLE</secondary></indexterm>
+<para><computeroutput>#define APC_STYLECOLOR_TITLE&#160;&#160;&#160;&quot;${245,245,245}&quot;</computeroutput></para><para>
+Definition at line <link linkend="_APC__config_8h_source_1l00020">20</link> of file <link linkend="_APC__config_8h_source">APC_config.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00301">apc_generateHelp()</link>.</para>
+</section>
+<anchor xml:id="_APC__config_8h_1ac9375bfe888e738df60816b9932e145c"/><section>
+    <title>APC_STYLECOLOR_WARNING</title>
+<indexterm><primary>APC_STYLECOLOR_WARNING</primary><secondary>APC_config.h</secondary></indexterm>
+<indexterm><primary>APC_config.h</primary><secondary>APC_STYLECOLOR_WARNING</secondary></indexterm>
+<para><computeroutput>#define APC_STYLECOLOR_WARNING&#160;&#160;&#160;&quot;${255,255,40}&quot;</computeroutput></para><para>
+Definition at line <link linkend="_APC__config_8h_source_1l00023">23</link> of file <link linkend="_APC__config_8h_source">APC_config.h</link>.</para>
+</section>
+</section>
+</section>

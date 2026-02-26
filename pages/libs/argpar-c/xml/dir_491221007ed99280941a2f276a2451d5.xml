@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_491221007ed99280941a2f276a2451d5" kind="dir">
+    <compoundname>inc/argpar-c</compoundname>
+    <innerdir refid="dir_678705c4cf4147d05905f93026ebb718">inc/argpar-c/lib</innerdir>
+    <innerfile refid="d5/db8/APC__config_8h">APC_config.h</innerfile>
+    <innerfile refid="d9/d1d/APCpredefines_8h">APCpredefines.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/argpar-c/"/>
+  </compounddef>
+</doxygen>

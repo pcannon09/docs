@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="d3/d7d/structAPC__ArgInfo" kind="struct" language="C++" prot="public">
+    <compoundname>APC_ArgInfo</compoundname>
+    <includes refid="db/daa/APC__ArgParser_8h" local="no">APC_ArgParser.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d3/d7d/structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971" prot="public" static="no" mutable="no">
+        <type>CVEC</type>
+        <definition>CVEC APC_ArgInfo::aliases</definition>
+        <argsstring></argsstring>
+        <name>aliases</name>
+        <qualifiedname>APC_ArgInfo::aliases</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="36" column="6" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1acce093adeb486562d49b2e483102abbf" compoundref="dc/d17/APC__ArgParser_8c" startline="33" endline="46">apc_destroy</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" compoundref="dc/d17/APC__ArgParser_8c" startline="301" endline="426">apc_generateHelp</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" compoundref="dc/d17/APC__ArgParser_8c" startline="61" endline="99">apc_get</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98" compoundref="dc/d17/APC__ArgParser_8c" startline="24" endline="31">apc_initInfo</referencedby>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d7d/structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* APC_ArgInfo::help</definition>
+        <argsstring></argsstring>
+        <name>help</name>
+        <qualifiedname>APC_ArgInfo::help</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="34" column="6" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" compoundref="dc/d17/APC__ArgParser_8c" startline="301" endline="426">apc_generateHelp</referencedby>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d7d/structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* APC_ArgInfo::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>APC_ArgInfo::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="31" column="6" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd" compoundref="dc/d17/APC__ArgParser_8c" startline="48" endline="59">apc_add</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" compoundref="dc/d17/APC__ArgParser_8c" startline="301" endline="426">apc_generateHelp</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" compoundref="dc/d17/APC__ArgParser_8c" startline="61" endline="99">apc_get</referencedby>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d7d/structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* APC_ArgInfo::param</definition>
+        <argsstring></argsstring>
+        <name>param</name>
+        <qualifiedname>APC_ArgInfo::param</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="32" column="6" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd" compoundref="dc/d17/APC__ArgParser_8c" startline="48" endline="59">apc_add</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" compoundref="dc/d17/APC__ArgParser_8c" startline="301" endline="426">apc_generateHelp</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" compoundref="dc/d17/APC__ArgParser_8c" startline="61" endline="99">apc_get</referencedby>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d7d/structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool APC_ArgInfo::required</definition>
+        <argsstring></argsstring>
+        <name>required</name>
+        <qualifiedname>APC_ArgInfo::required</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="29" column="6" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" compoundref="dc/d17/APC__ArgParser_8c" startline="301" endline="426">apc_generateHelp</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98" compoundref="dc/d17/APC__ArgParser_8c" startline="24" endline="31">apc_initInfo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d7d/structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* APC_ArgInfo::sparam</definition>
+        <argsstring></argsstring>
+        <name>sparam</name>
+        <qualifiedname>APC_ArgInfo::sparam</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="33" column="6" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" compoundref="dc/d17/APC__ArgParser_8c" startline="301" endline="426">apc_generateHelp</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" compoundref="dc/d17/APC__ArgParser_8c" startline="61" endline="99">apc_get</referencedby>
+        <referencedby refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="d0/d29/main_8c" startline="6" endline="65">main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/argpar-c/lib/APC_ArgParser.h" line="27" column="1" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="28" bodyend="37"/>
+    <listofallmembers>
+      <member refid="d3/d7d/structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971" prot="public" virt="non-virtual"><scope>APC_ArgInfo</scope><name>aliases</name></member>
+      <member refid="d3/d7d/structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb" prot="public" virt="non-virtual"><scope>APC_ArgInfo</scope><name>help</name></member>
+      <member refid="d3/d7d/structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31" prot="public" virt="non-virtual"><scope>APC_ArgInfo</scope><name>id</name></member>
+      <member refid="d3/d7d/structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9" prot="public" virt="non-virtual"><scope>APC_ArgInfo</scope><name>param</name></member>
+      <member refid="d3/d7d/structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367" prot="public" virt="non-virtual"><scope>APC_ArgInfo</scope><name>required</name></member>
+      <member refid="d3/d7d/structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262" prot="public" virt="non-virtual"><scope>APC_ArgInfo</scope><name>sparam</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

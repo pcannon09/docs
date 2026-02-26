@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structAPC__ArgParser" xml:lang="en-US">
+<title>APC_ArgParser Struct Reference</title>
+<indexterm><primary>APC_ArgParser</primary></indexterm>
+<para>
+<computeroutput>#include &lt;APC_ArgParser.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structAPC__ArgParser_1adbf2fdfbf96ade60dfc6af7d82a950c1">argc</link></para>
+</listitem>
+            <listitem><para>CVEC <link linkend="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21">args</link></para>
+</listitem>
+            <listitem><para>char ** <link linkend="_structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d">argv</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structAPC__ArgParser_1a85b5d693243b0d6d8f23370fd4fc8dc2">enableColor</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_structAPC__ArgParser_1a163455ed5deca655acc930ce1cd6f09b">fullHelp</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_structAPC__ArgParser_1af3ef816ddb709898139610230828eeb7">helpDescription</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00039">39</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structAPC__ArgParser_1adbf2fdfbf96ade60dfc6af7d82a950c1"/><section>
+    <title>argc</title>
+<indexterm><primary>argc</primary><secondary>APC_ArgParser</secondary></indexterm>
+<indexterm><primary>APC_ArgParser</primary><secondary>argc</secondary></indexterm>
+<para><computeroutput>int APC_ArgParser::argc</computeroutput></para><para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00043">43</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00061">apc_get()</link>, and <link linkend="_APC__ArgParser_8c_source_1l00012">apc_init()</link>.</para>
+</section>
+<anchor xml:id="_structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21"/><section>
+    <title>args</title>
+<indexterm><primary>args</primary><secondary>APC_ArgParser</secondary></indexterm>
+<indexterm><primary>APC_ArgParser</primary><secondary>args</secondary></indexterm>
+<para><computeroutput>CVEC APC_ArgParser::args</computeroutput></para><para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00048">48</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00048">apc_add()</link>, <link linkend="_APC__ArgParser_8c_source_1l00033">apc_destroy()</link>, <link linkend="_APC__ArgParser_8c_source_1l00301">apc_generateHelp()</link>, <link linkend="_APC__ArgParser_8c_source_1l00061">apc_get()</link>, and <link linkend="_APC__ArgParser_8c_source_1l00012">apc_init()</link>.</para>
+</section>
+<anchor xml:id="_structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d"/><section>
+    <title>argv</title>
+<indexterm><primary>argv</primary><secondary>APC_ArgParser</secondary></indexterm>
+<indexterm><primary>APC_ArgParser</primary><secondary>argv</secondary></indexterm>
+<para><computeroutput>char** APC_ArgParser::argv</computeroutput></para><para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00050">50</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00061">apc_get()</link>, and <link linkend="_APC__ArgParser_8c_source_1l00012">apc_init()</link>.</para>
+</section>
+<anchor xml:id="_structAPC__ArgParser_1a85b5d693243b0d6d8f23370fd4fc8dc2"/><section>
+    <title>enableColor</title>
+<indexterm><primary>enableColor</primary><secondary>APC_ArgParser</secondary></indexterm>
+<indexterm><primary>APC_ArgParser</primary><secondary>enableColor</secondary></indexterm>
+<para><computeroutput>bool APC_ArgParser::enableColor</computeroutput></para><para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00041">41</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00199">__apc_colorFormat()</link>, and <link linkend="_APC__ArgParser_8c_source_1l00012">apc_init()</link>.</para>
+</section>
+<anchor xml:id="_structAPC__ArgParser_1a163455ed5deca655acc930ce1cd6f09b"/><section>
+    <title>fullHelp</title>
+<indexterm><primary>fullHelp</primary><secondary>APC_ArgParser</secondary></indexterm>
+<indexterm><primary>APC_ArgParser</primary><secondary>fullHelp</secondary></indexterm>
+<para><computeroutput>char* APC_ArgParser::fullHelp</computeroutput></para><para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00045">45</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+</section>
+<anchor xml:id="_structAPC__ArgParser_1af3ef816ddb709898139610230828eeb7"/><section>
+    <title>helpDescription</title>
+<indexterm><primary>helpDescription</primary><secondary>APC_ArgParser</secondary></indexterm>
+<indexterm><primary>APC_ArgParser</primary><secondary>helpDescription</secondary></indexterm>
+<para><computeroutput>char* APC_ArgParser::helpDescription</computeroutput></para><para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00046">46</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/argpar-c/lib/<link linkend="_APC__ArgParser_8h">APC_ArgParser.h</link></section>
+</section>

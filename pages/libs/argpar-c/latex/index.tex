@@ -1,0 +1,249 @@
+\chapter{Arg\+Parser-\/C – Usage Guide }
+\hypertarget{index}{}\label{index}\index{ArgParser-\/C – Usage Guide@{ArgParser-\/C – Usage Guide}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+
+
+A lightweight and structured argument parsing library for C
+
+This document explains how to use the public API of Arg\+Parser-\/C, including function descriptions and minimal usage examples
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Basic Usage}{Basic Usage}}\label{index_autotoc_md2}
+\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{1. Initialize the Parser}{1. Initialize the Parser}}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{{\ttfamily APC\+\_\+\+Arg\+Parser apc\+\_\+init(int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+);}}{{\ttfamily APC\+\_\+\+Arg\+Parser apc\+\_\+init(int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+);}}}\label{index_autotoc_md4}
+Initializes a new argument parser instance using the {\ttfamily argc} and {\ttfamily argv} values provided to {\ttfamily \doxylink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}}\hypertarget{index_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Example}{Example}}\label{index_autotoc_md5}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}}\ parser\ =\ \doxymbox{\hyperlink{APC__ArgParser_8h_a61d4424e1c28b49745d42226a00c60f4}{apc\_init}}(argc,\ argv);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{/*\ More\ code\ here...\ */}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+This prepares the parser and stores argument data internally
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{2. Define Arguments}{2. Define Arguments}}\label{index_autotoc_md7}
+Arguments are described using {\ttfamily \doxylink{structAPC__ArgInfo}{APC\+\_\+\+Arg\+Info}}.\hypertarget{index_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{{\ttfamily APC\+\_\+\+Arg\+Info apc\+\_\+init\+Info(void);}}{{\ttfamily APC\+\_\+\+Arg\+Info apc\+\_\+init\+Info(void);}}}\label{index_autotoc_md8}
+Initializes an argument descriptor with safe defaults:\+
+
+
+\begin{DoxyItemize}
+\item {\ttfamily required} defaults to {\ttfamily false}
+\item {\ttfamily aliases} is automatically constructed
+\item All pointers are initialized to {\ttfamily NULL}
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsubsection{\texorpdfstring{Example}{Example}}\label{index_autotoc_md9}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{structAPC__ArgInfo}{APC\_ArgInfo}}\ info\ =\ \doxymbox{\hyperlink{APC__ArgParser_8h_a89cd1dbd57bfa347f76c06add302ed98}{apc\_initInfo}}();}
+\DoxyCodeLine{info.\doxymbox{\hyperlink{structAPC__ArgInfo_ae160e2f6e81ca0483624dbdb919beb31}{id}}\ \ \ \ \ =\ \textcolor{stringliteral}{"{}version"{}};}
+\DoxyCodeLine{info.\doxymbox{\hyperlink{structAPC__ArgInfo_a9b0e5f5c7508b80e5f5063287024e7d9}{param}}\ \ =\ \textcolor{stringliteral}{"{}-\/-\/version"{}};}
+\DoxyCodeLine{info.\doxymbox{\hyperlink{structAPC__ArgInfo_a7da2302dd312d46292c81180a61fe262}{sparam}}\ =\ \textcolor{stringliteral}{"{}-\/v"{}};}
+\DoxyCodeLine{info.\doxymbox{\hyperlink{structAPC__ArgInfo_afe9d07845b60869e1bf4808ed1c998cb}{help}}\ \ \ =\ \textcolor{stringliteral}{"{}Version\ information"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\doxymbox{\hyperlink{APC__ArgParser_8h_a249d5856e4d70717a20b468fd5600bbd}{apc\_add}}(\&parser,\ info);}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md11}{}\doxysubsection{\texorpdfstring{3. Register Arguments}{3. Register Arguments}}\label{index_autotoc_md11}
+\hypertarget{index_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{{\ttfamily bool apc\+\_\+add(\+APC\+\_\+\+Arg\+Parser \texorpdfstring{$\ast$}{*}argpar, APC\+\_\+\+Arg\+Info info);}}{{\ttfamily bool apc\+\_\+add(\+APC\+\_\+\+Arg\+Parser \texorpdfstring{$\ast$}{*}argpar, APC\+\_\+\+Arg\+Info info);}}}\label{index_autotoc_md12}
+Registers a configured {\ttfamily \doxylink{structAPC__ArgInfo}{APC\+\_\+\+Arg\+Info}} structure with the parser
+
+Returns:\+
+
+
+\begin{DoxyItemize}
+\item {\ttfamily true} on success
+\item {\ttfamily false} on failure
+\end{DoxyItemize}\hypertarget{index_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{Example with Aliases}{Example with Aliases}}\label{index_autotoc_md13}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{structAPC__ArgInfo}{APC\_ArgInfo}}\ info\ =\ \doxymbox{\hyperlink{APC__ArgParser_8h_a89cd1dbd57bfa347f76c06add302ed98}{apc\_initInfo}}();}
+\DoxyCodeLine{info.\doxymbox{\hyperlink{structAPC__ArgInfo_ae160e2f6e81ca0483624dbdb919beb31}{id}}\ \ \ \ \ =\ \textcolor{stringliteral}{"{}help"{}};}
+\DoxyCodeLine{info.\doxymbox{\hyperlink{structAPC__ArgInfo_a9b0e5f5c7508b80e5f5063287024e7d9}{param}}\ \ =\ \textcolor{stringliteral}{"{}-\/-\/help"{}};}
+\DoxyCodeLine{info.\doxymbox{\hyperlink{structAPC__ArgInfo_a7da2302dd312d46292c81180a61fe262}{sparam}}\ =\ \textcolor{stringliteral}{"{}-\/h"{}};}
+\DoxyCodeLine{info.\doxymbox{\hyperlink{structAPC__ArgInfo_afe9d07845b60869e1bf4808ed1c998cb}{help}}\ \ \ =\ \textcolor{stringliteral}{"{}Show\ this\ help"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{cvec\_push(\&info.\doxymbox{\hyperlink{structAPC__ArgInfo_a50f6a9e743e07bcbd8575353a43c6971}{aliases}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *,\ \textcolor{stringliteral}{"{}-\/?"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\doxymbox{\hyperlink{APC__ArgParser_8h_a249d5856e4d70717a20b468fd5600bbd}{apc\_add}}(\&parser,\ info);}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md15}{}\doxysubsection{\texorpdfstring{4. Query Arguments}{4. Query Arguments}}\label{index_autotoc_md15}
+\hypertarget{index_autotoc_md16}{}\doxysubsubsection{\texorpdfstring{{\ttfamily bool apc\+\_\+get(\+APC\+\_\+\+Arg\+Parser \texorpdfstring{$\ast$}{*}argpar, const char \texorpdfstring{$\ast$}{*}id);}}{{\ttfamily bool apc\+\_\+get(\+APC\+\_\+\+Arg\+Parser \texorpdfstring{$\ast$}{*}argpar, const char \texorpdfstring{$\ast$}{*}id);}}}\label{index_autotoc_md16}
+Checks whether a registered argument is present in {\ttfamily argv}.
+
+Returns:\+
+
+
+\begin{DoxyItemize}
+\item {\ttfamily true} if the argument exists
+\item {\ttfamily false} otherwise
+\end{DoxyItemize}\hypertarget{index_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{Example}{Example}}\label{index_autotoc_md17}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{APC__ArgParser_8h_a00b47bfc8947418ae1f908f4de1f5f1e}{apc\_get}}(\&parser,\ \textcolor{stringliteral}{"{}version"{}}))}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ printf(\textcolor{stringliteral}{"{}Version:\ \%i.\%i.\%i\(\backslash\)n"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \doxymbox{\hyperlink{APCpredefines_8h_a9412374c5cc180e9ca749ec7922d0df1}{APC\_VERSION\_MAJOR}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \doxymbox{\hyperlink{APCpredefines_8h_a2763ac51a4447229701bc32ccaac20c0}{APC\_VERSION\_MINOR}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \doxymbox{\hyperlink{APCpredefines_8h_ac1b9cadf4fcb82b36457b6a9f6de2e96}{APC\_VERSION\_PATCH}});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md19}{}\doxysubsection{\texorpdfstring{5. Generate Help Text}{5. Generate Help Text}}\label{index_autotoc_md19}
+\hypertarget{index_autotoc_md20}{}\doxysubsubsection{\texorpdfstring{\`{}char \texorpdfstring{$\ast$}{*}apc\+\_\+generate\+Help(APC\+\_\+\+Arg\+Parser \texorpdfstring{$\ast$}{*}argpar, const char \texorpdfstring{$\ast$}{*}title, const char \texorpdfstring{$\ast$}{*}top\+Info, const char \texorpdfstring{$\ast$}{*}lower\+Info);}{\`{}char \texorpdfstring{$\ast$}{*}apc\+\_\+generate\+Help(APC\+\_\+\+Arg\+Parser \texorpdfstring{$\ast$}{*}argpar, const char \texorpdfstring{$\ast$}{*}title, const char \texorpdfstring{$\ast$}{*}top\+Info, const char \texorpdfstring{$\ast$}{*}lower\+Info);}}\label{index_autotoc_md20}
+Generates a formatted help message based on registered arguments
+
+Parameters:\+
+
+
+\begin{DoxyItemize}
+\item {\ttfamily title} — Help title
+\item {\ttfamily top\+Info} — Optional description or introduction
+\item {\ttfamily lower\+Info} — Optional footer text (license, notes, etc...)
+\end{DoxyItemize}
+
+Returns:\+
+
+
+\begin{DoxyItemize}
+\item Dynamically allocated string (must be freed)
+\end{DoxyItemize}\hypertarget{index_autotoc_md21}{}\doxysubsubsection{\texorpdfstring{Example}{Example}}\label{index_autotoc_md21}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{APC__ArgParser_8h_a00b47bfc8947418ae1f908f4de1f5f1e}{apc\_get}}(\&parser,\ \textcolor{stringliteral}{"{}help"{}}))}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *license\ =}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)nVery\ cool\ license\(\backslash\)n"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{char}\ *helpMsg\ =\ \doxymbox{\hyperlink{APC__ArgParser_8h_a235f33a098769075131ad521168d2e0a}{apc\_generateHelp}}(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \&parser,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}APC\ Help"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}ArgParser-\/C\ demonstration\ program\(\backslash\)n"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ license);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}},\ helpMsg);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{APCpredefines_8h_a29ff4691ac6827a68a53aa7c6a5b9968}{APC\_FREE}}(helpMsg);\ \textcolor{comment}{//\ Internal\ automatic\ free()\ function}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md23}{}\doxysubsection{\texorpdfstring{6. Cleanup}{6. Cleanup}}\label{index_autotoc_md23}
+\hypertarget{index_autotoc_md24}{}\doxysubsubsection{\texorpdfstring{{\ttfamily void apc\+\_\+destroy(\+APC\+\_\+\+Arg\+Parser \texorpdfstring{$\ast$}{*}argpar);}}{{\ttfamily void apc\+\_\+destroy(\+APC\+\_\+\+Arg\+Parser \texorpdfstring{$\ast$}{*}argpar);}}}\label{index_autotoc_md24}
+Frees all allocated resources used by the parser\hypertarget{index_autotoc_md25}{}\doxysubsubsection{\texorpdfstring{Example}{Example}}\label{index_autotoc_md25}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{APC__ArgParser_8h_acce093adeb486562d49b2e483102abbf}{apc\_destroy}}(\&parser);}
+\DoxyCodeLine{\textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md27}{}\doxysection{\texorpdfstring{Public API Reference}{Public API Reference}}\label{index_autotoc_md27}
+Below is a summary of the non-\/private (public) API functions
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md29}{}\doxysubsection{\texorpdfstring{{\ttfamily apc\+\_\+init}}{{\ttfamily apc\+\_\+init}}}\label{index_autotoc_md29}
+Initializes the argument parser
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}}\ \doxymbox{\hyperlink{APC__ArgParser_8h_a61d4424e1c28b49745d42226a00c60f4}{apc\_init}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[]);}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md31}{}\doxysubsection{\texorpdfstring{{\ttfamily apc\+\_\+init\+Info}}{{\ttfamily apc\+\_\+init\+Info}}}\label{index_autotoc_md31}
+Creates a clean {\ttfamily \doxylink{structAPC__ArgInfo}{APC\+\_\+\+Arg\+Info}} structure
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{structAPC__ArgInfo}{APC\_ArgInfo}}\ \doxymbox{\hyperlink{APC__ArgParser_8h_a89cd1dbd57bfa347f76c06add302ed98}{apc\_initInfo}}(\textcolor{keywordtype}{void});}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md33}{}\doxysubsection{\texorpdfstring{{\ttfamily apc\+\_\+add}}{{\ttfamily apc\+\_\+add}}}\label{index_autotoc_md33}
+Registers an argument definition
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{APC__ArgParser_8h_a249d5856e4d70717a20b468fd5600bbd}{apc\_add}}(\doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}}\ *argpar,\ \doxymbox{\hyperlink{structAPC__ArgInfo}{APC\_ArgInfo}}\ info);}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md35}{}\doxysubsection{\texorpdfstring{{\ttfamily apc\+\_\+get}}{{\ttfamily apc\+\_\+get}}}\label{index_autotoc_md35}
+Checks if a registered argument exists
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{APC__ArgParser_8h_a00b47bfc8947418ae1f908f4de1f5f1e}{apc\_get}}(\doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}}\ *argpar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{id});}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md37}{}\doxysubsection{\texorpdfstring{{\ttfamily apc\+\_\+generate\+Help}}{{\ttfamily apc\+\_\+generate\+Help}}}\label{index_autotoc_md37}
+Automatically builds formatted help text
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{APC__ArgParser_8h_a235f33a098769075131ad521168d2e0a}{apc\_generateHelp}}(\doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}}\ *argpar,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *title,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *topInfo,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *lowerInfo);}
+
+\end{DoxyCode}
+
+
+Memory ownership:\+ The returned string must be released using {\ttfamily \doxylink{APCpredefines_8h_a29ff4691ac6827a68a53aa7c6a5b9968}{APC\+\_\+\+FREE()}}.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md39}{}\doxysubsection{\texorpdfstring{{\ttfamily apc\+\_\+destroy}}{{\ttfamily apc\+\_\+destroy}}}\label{index_autotoc_md39}
+Destroys the parser and frees all internal allocations
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{APC__ArgParser_8h_acce093adeb486562d49b2e483102abbf}{apc\_destroy}}(\doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}}\ *argpar);}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md41}{}\doxysection{\texorpdfstring{Summary}{Summary}}\label{index_autotoc_md41}
+Typical usage:\+
+
+
+\begin{DoxyEnumerate}
+\item Initialize parser ({\ttfamily \doxylink{APC__ArgParser_8h_a61d4424e1c28b49745d42226a00c60f4}{apc\+\_\+init}})
+\item Create argument definitions that can be modified ({\ttfamily \doxylink{APC__ArgParser_8h_a89cd1dbd57bfa347f76c06add302ed98}{apc\+\_\+init\+Info}})
+\item Register arguments ({\ttfamily \doxylink{APC__ArgParser_8h_a249d5856e4d70717a20b468fd5600bbd}{apc\+\_\+add}})
+\item Query arguments ({\ttfamily \doxylink{APC__ArgParser_8h_a00b47bfc8947418ae1f908f4de1f5f1e}{apc\+\_\+get}})
+\item Optionally generate help ({\ttfamily \doxylink{APC__ArgParser_8h_a235f33a098769075131ad521168d2e0a}{apc\+\_\+generate\+Help}})
+\item Destroy parser ({\ttfamily \doxylink{APC__ArgParser_8h_acce093adeb486562d49b2e483102abbf}{apc\+\_\+destroy}})
+\end{DoxyEnumerate}
+
+The API is intentionally minimal and explicit, designed to remain simple, predictable, and suitable for low-\/level C projects 

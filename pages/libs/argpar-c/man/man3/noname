@@ -1,0 +1,21 @@
+.TH "" 3 "Version v1.0.0-build" "ArgPar-C" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+argpar-c lib APC_ArgParser\&.h 
+.PP
+APC_config\&.h APCpredefines\&.h 
+.PP
+inc argpar-c lib APC_ArgParser\&.h 
+.PP
+APC_config\&.h APCpredefines\&.h 
+.PP
+lib APC_ArgParser\&.h 
+.PP
+lib APC_ArgParser\&.c 
+.PP
+src lib APC_ArgParser\&.c 
+.PP
+main\&.c 
+.PP
+

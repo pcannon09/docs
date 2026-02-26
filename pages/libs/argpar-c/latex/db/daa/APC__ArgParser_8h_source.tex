@@ -1,0 +1,153 @@
+\doxysection{APC\+\_\+\+Arg\+Parser.\+h}
+\hypertarget{APC__ArgParser_8h_source}{}\label{APC__ArgParser_8h_source}\index{inc/argpar-\/c/lib/APC\_ArgParser.h@{inc/argpar-\/c/lib/APC\_ArgParser.h}}
+\doxymbox{\hyperlink{APC__ArgParser_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ INCLUDE\_LIB\_APC\_ARGPARSER\_H\_}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ INCLUDE\_LIB\_APC\_ARGPARSER\_H\_}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}../../../vendor/cvec/inc/cvec/cvec.h"{}}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00009}\doxymbox{\hyperlink{APC__ArgParser_8h_aad021104ca2a3f4411fd05ae01955d38}{00009}}\ \textcolor{preprocessor}{\#\ \ \ define\ \_\_APC\_CPP\_GUARD\_OPEN\ \ \ \ \ \ \ \ \ extern\ "{}C"{}\ \{}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00010}\doxymbox{\hyperlink{APC__ArgParser_8h_abe892064a84b35884208fc7a6ec82cb5}{00010}}\ \textcolor{preprocessor}{\#\ \ \ define\ \_\_APC\_CPP\_GUARD\_CLOSE\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00011}00011\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00012}00012\ \textcolor{preprocessor}{\#\ \ \ define\ \_\_APC\_CPP\_GUARD\_OPEN}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00013}00013\ \textcolor{preprocessor}{\#\ \ \ define\ \_\_APC\_CPP\_GUARD\_CLOSE}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00014}00014\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus\ }}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00016}00016\ \doxymbox{\hyperlink{APC__config_8h_aad021104ca2a3f4411fd05ae01955d38}{\_\_APC\_CPP\_GUARD\_OPEN}}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00018}\doxymbox{\hyperlink{APC__ArgParser_8h_ab5d572607786bde4c2bafcf2bbe2fd85}{00018}}\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{APC__ArgParser_8h_ab5d572607786bde4c2bafcf2bbe2fd85}{APC\_RGB\_Command}}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00020}\doxymbox{\hyperlink{APC__ArgParser_8h_ab5d572607786bde4c2bafcf2bbe2fd85ad4dcaa8f0262403054fdea2104df055c}{00020}}\ \ \ \ \ \doxymbox{\hyperlink{APC__ArgParser_8h_ab5d572607786bde4c2bafcf2bbe2fd85ad4dcaa8f0262403054fdea2104df055c}{APC\_RGB\_Command\_None}},}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00021}\doxymbox{\hyperlink{APC__ArgParser_8h_ab5d572607786bde4c2bafcf2bbe2fd85ac47aed32852a5fa599f6b9066513cfd0}{00021}}\ \ \ \ \ \doxymbox{\hyperlink{APC__ArgParser_8h_ab5d572607786bde4c2bafcf2bbe2fd85ac47aed32852a5fa599f6b9066513cfd0}{APC\_RGB\_Command\_Reset}},}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00022}\doxymbox{\hyperlink{APC__ArgParser_8h_ab5d572607786bde4c2bafcf2bbe2fd85af9a7fad67473564c2d002fbfc893c114}{00022}}\ \ \ \ \ \doxymbox{\hyperlink{APC__ArgParser_8h_ab5d572607786bde4c2bafcf2bbe2fd85af9a7fad67473564c2d002fbfc893c114}{APC\_RGB\_Command\_Bold}},}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00023}\doxymbox{\hyperlink{APC__ArgParser_8h_ab5d572607786bde4c2bafcf2bbe2fd85a77bf6ee8259c87d7ad1e3fec321e95a5}{00023}}\ \ \ \ \ \doxymbox{\hyperlink{APC__ArgParser_8h_ab5d572607786bde4c2bafcf2bbe2fd85a77bf6ee8259c87d7ad1e3fec321e95a5}{APC\_RGB\_Command\_Italic}},}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00024}\doxymbox{\hyperlink{APC__ArgParser_8h_ab5d572607786bde4c2bafcf2bbe2fd85a6164b6a0358e4d1461a30f814205b8ca}{00024}}\ \ \ \ \ \doxymbox{\hyperlink{APC__ArgParser_8h_ab5d572607786bde4c2bafcf2bbe2fd85a6164b6a0358e4d1461a30f814205b8ca}{APC\_RGB\_Command\_Underline}},}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00025}00025\ \};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00027}\doxymbox{\hyperlink{structAPC__ArgInfo}{00027}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00029}\doxymbox{\hyperlink{structAPC__ArgInfo_a963ddcb6ee80394f3be4a245bf8fb367}{00029}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structAPC__ArgInfo_a963ddcb6ee80394f3be4a245bf8fb367}{required}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00031}\doxymbox{\hyperlink{structAPC__ArgInfo_ae160e2f6e81ca0483624dbdb919beb31}{00031}}\ \ \ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structAPC__ArgInfo_ae160e2f6e81ca0483624dbdb919beb31}{id}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00032}\doxymbox{\hyperlink{structAPC__ArgInfo_a9b0e5f5c7508b80e5f5063287024e7d9}{00032}}\ \ \ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structAPC__ArgInfo_a9b0e5f5c7508b80e5f5063287024e7d9}{param}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00033}\doxymbox{\hyperlink{structAPC__ArgInfo_a7da2302dd312d46292c81180a61fe262}{00033}}\ \ \ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structAPC__ArgInfo_a7da2302dd312d46292c81180a61fe262}{sparam}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00034}\doxymbox{\hyperlink{structAPC__ArgInfo_afe9d07845b60869e1bf4808ed1c998cb}{00034}}\ \ \ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structAPC__ArgInfo_afe9d07845b60869e1bf4808ed1c998cb}{help}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00036}\doxymbox{\hyperlink{structAPC__ArgInfo_a50f6a9e743e07bcbd8575353a43c6971}{00036}}\ \ \ \ \ CVEC\ \doxymbox{\hyperlink{structAPC__ArgInfo_a50f6a9e743e07bcbd8575353a43c6971}{aliases}};\ \textcolor{comment}{//\ CVEC\ of:\ const\ char*}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00037}00037\ \}\ \doxymbox{\hyperlink{structAPC__ArgInfo}{APC\_ArgInfo}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00039}\doxymbox{\hyperlink{structAPC__ArgParser}{00039}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00040}00040\ \{}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00041}\doxymbox{\hyperlink{structAPC__ArgParser_a85b5d693243b0d6d8f23370fd4fc8dc2}{00041}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structAPC__ArgParser_a85b5d693243b0d6d8f23370fd4fc8dc2}{enableColor}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00043}\doxymbox{\hyperlink{structAPC__ArgParser_adbf2fdfbf96ade60dfc6af7d82a950c1}{00043}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structAPC__ArgParser_adbf2fdfbf96ade60dfc6af7d82a950c1}{argc}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00045}\doxymbox{\hyperlink{structAPC__ArgParser_a163455ed5deca655acc930ce1cd6f09b}{00045}}\ \ \ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structAPC__ArgParser_a163455ed5deca655acc930ce1cd6f09b}{fullHelp}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00046}\doxymbox{\hyperlink{structAPC__ArgParser_af3ef816ddb709898139610230828eeb7}{00046}}\ \ \ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structAPC__ArgParser_af3ef816ddb709898139610230828eeb7}{helpDescription}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00048}\doxymbox{\hyperlink{structAPC__ArgParser_ad486fc40716568b7abafa7b872cd6c21}{00048}}\ \ \ \ \ CVEC\ \doxymbox{\hyperlink{structAPC__ArgParser_ad486fc40716568b7abafa7b872cd6c21}{args}};\ \textcolor{comment}{//\ CVEC\ of\ APC\_ArgInfo}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00050}\doxymbox{\hyperlink{structAPC__ArgParser_aaf8f31b5c00033ae461e49cede962a2d}{00050}}\ \ \ \ \ \textcolor{keywordtype}{char}\ **\doxymbox{\hyperlink{structAPC__ArgParser_aaf8f31b5c00033ae461e49cede962a2d}{argv}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00051}00051\ \}\ \doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00053}\doxymbox{\hyperlink{structAPC__RGB}{00053}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00054}00054\ \{}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00055}\doxymbox{\hyperlink{structAPC__RGB_ad8b7415a95f73bb67b04b60e46394ad8}{00055}}\ \ \ \ \ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{APC__ArgParser_8h_ab5d572607786bde4c2bafcf2bbe2fd85}{APC\_RGB\_Command}}\ \doxymbox{\hyperlink{structAPC__RGB_ad8b7415a95f73bb67b04b60e46394ad8}{\_\_externalAction}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00057}\doxymbox{\hyperlink{structAPC__RGB_af0429b86b207e9c03311b23075b65d02}{00057}}\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structAPC__RGB_af0429b86b207e9c03311b23075b65d02}{r}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00058}\doxymbox{\hyperlink{structAPC__RGB_a34d82d77c9c59f3071ed54ce92c9dc7c}{00058}}\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structAPC__RGB_a34d82d77c9c59f3071ed54ce92c9dc7c}{g}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00059}\doxymbox{\hyperlink{structAPC__RGB_aa9e264cca9ad8011fadb971ab149a656}{00059}}\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structAPC__RGB_aa9e264cca9ad8011fadb971ab149a656}{b}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00060}00060\ \}\ \doxymbox{\hyperlink{structAPC__RGB}{APC\_RGB}};}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00061}00061\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00062}00062\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00063}00063\ \textcolor{comment}{\ *\ @brief\ Initialize\ parser\ with\ argc\ and\ argv\ from\ the\ \`{}main()`\ function}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00064}00064\ \textcolor{comment}{\ *\ @param\ argc\ Number\ of\ arguments}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00065}00065\ \textcolor{comment}{\ *\ @param\ argv\ Argument\ values}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00066}00066\ \textcolor{comment}{\ *\ @return\ Constructed\ APC\_ArgParser\ with\ all\ the\ recommended\ data}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00067}00067\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00068}00068\ \doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}}\ \doxymbox{\hyperlink{APC__ArgParser_8h_a61d4424e1c28b49745d42226a00c60f4}{apc\_init}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[]);}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00069}00069\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00070}00070\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00071}00071\ \textcolor{comment}{\ *\ @brief\ Initialize\ information\ for\ params}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00072}00072\ \textcolor{comment}{\ *\ *\ Constructed\ empty\ aliases}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00073}00073\ \textcolor{comment}{\ *\ *\ \`{}required`\ defaults\ to\ \`{}false`}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00074}00074\ \textcolor{comment}{\ *\ @return\ Initialized\ APC\_ArgInfo\ with\ default\ values}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00075}00075\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00076}00076\ \doxymbox{\hyperlink{structAPC__ArgInfo}{APC\_ArgInfo}}\ \doxymbox{\hyperlink{APC__ArgParser_8h_a89cd1dbd57bfa347f76c06add302ed98}{apc\_initInfo}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00077}00077\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00078}00078\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00079}00079\ \textcolor{comment}{\ *\ @brief\ Convert\ the\ default\ RGB\ format\ to\ a\ valid\ RGB\ struct\ and\ parse\ all\ extended\ commands}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00080}00080\ \textcolor{comment}{\ *\ *\ \$\{r,g,b\}}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00081}00081\ \textcolor{comment}{\ *\ *\ \$\{R\}}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00082}00082\ \textcolor{comment}{\ *\ *\ \$\{BOLD\}}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00083}00083\ \textcolor{comment}{\ *\ @return\ New\ APC\_RGB\ with\ RGB\ data\ and\ extended\ data\ type\ (italic,\ bold,\ reset,\ ...)}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00084}00084\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00085}00085\ \doxymbox{\hyperlink{structAPC__RGB}{APC\_RGB}}\ \doxymbox{\hyperlink{APC__ArgParser_8h_a1817d1f01f3bd3eab30e9b2521835bd0}{\_\_apc\_rgbToRGBStruct}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *rgbStr);}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00086}00086\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00087}00087\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00088}00088\ \textcolor{comment}{\ *\ @brief\ Free\ all\ allocated\ data\ for\ argument\ parser}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00089}00089\ \textcolor{comment}{\ *\ @param\ argpar\ Argument\ parser\ to\ free\ from\ memory}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00090}00090\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00091}00091\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{APC__ArgParser_8h_acce093adeb486562d49b2e483102abbf}{apc\_destroy}}(\doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}}\ *argpar);}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00092}00092\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00093}00093\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00094}00094\ \textcolor{comment}{\ *\ @brief\ Automatically\ generate\ help\ and\ pass\ it\ to\ the\ string\ to\ return}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00095}00095\ \textcolor{comment}{\ *\ @param\ argpar\ Argument\ parser\ to\ generate\ help\ from}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00096}00096\ \textcolor{comment}{\ *\ @param\ title\ Title\ of\ the\ help}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00097}00097\ \textcolor{comment}{\ *\ @param\ topInfo\ Top\ information\ (eg:\ Little\ intro\ of\ the\ tool)}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00098}00098\ \textcolor{comment}{\ *\ @param\ lowerInfo\ Lower\ information\ (eg:\ License,\ ...)}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00099}00099\ \textcolor{comment}{\ *\ @return\ Generated\ help\ with\ escape\ characters\ for\ colors\ (if\ enabled)}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00100}00100\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00101}00101\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{APC__ArgParser_8h_a235f33a098769075131ad521168d2e0a}{apc\_generateHelp}}(\doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}}\ *argpar,}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *title,}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *topInfo,}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *lowerInfo}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00105}00105\ );}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00106}00106\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00107}00107\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00108}00108\ \textcolor{comment}{\ *\ @brief\ Format\ color;}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00109}00109\ \textcolor{comment}{\ *\ *\ Remove\ color\ commands\ if\ color\ disabled}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00110}00110\ \textcolor{comment}{\ *\ *\ Convert\ to\ color\ ANSI\ escape\ code\ if\ enabled}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00111}00111\ \textcolor{comment}{\ *\ @param\ argpar\ Argument\ to\ format\ color\ and\ get\ data\ from}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00112}00112\ \textcolor{comment}{\ *\ @param\ msg\ Message\ to\ format}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00113}00113\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00114}00114\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{APC__ArgParser_8h_a465c9ba9922a24c7ac076a0cc6f50031}{\_\_apc\_colorFormat}}(\doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}}\ *argpar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *msg);}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00115}00115\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00116}00116\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00117}00117\ \textcolor{comment}{\ *\ @brief\ Convert\ RGB\ to\ ANSI\ escape\ code}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00118}00118\ \textcolor{comment}{\ *\ @param\ r\ Red\ color}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00119}00119\ \textcolor{comment}{\ *\ @param\ g\ Green\ color}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00120}00120\ \textcolor{comment}{\ *\ @param\ b\ Blue\ color}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00121}00121\ \textcolor{comment}{\ *\ @return\ Constructed\ ANSI\ escape\ code}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00122}00122\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00123}00123\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{APC__ArgParser_8h_aef714ae3c362917994350860533b358f}{\_\_apc\_setRGB}}(\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ g,\ \textcolor{keywordtype}{int}\ b);}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00124}00124\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00125}00125\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00126}00126\ \textcolor{comment}{\ *\ @brief\ Setup\ Arg\ Information\ to\ the\ \`{}argpar`}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00127}00127\ \textcolor{comment}{\ *\ @param\ argpar\ Argument\ Parser\ to\ modify\ information\ from}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00128}00128\ \textcolor{comment}{\ *\ @param\ info\ Create\ information\ about\ the\ param}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00129}00129\ \textcolor{comment}{\ *\ @return\ false\ if\ fail,\ true\ if\ success}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00130}00130\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00131}00131\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{APC__ArgParser_8h_a249d5856e4d70717a20b468fd5600bbd}{apc\_add}}(\doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}}\ *argpar,\ \doxymbox{\hyperlink{structAPC__ArgInfo}{APC\_ArgInfo}}\ info);}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00132}00132\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00133}00133\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00134}00134\ \textcolor{comment}{\ *\ @brief\ Get\ if\ there\ is\ an\ argument\ present}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00135}00135\ \textcolor{comment}{\ *\ @param\ argpar\ Get\ parameters\ from\ argpar}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00136}00136\ \textcolor{comment}{\ *\ @param\ id\ ID\ to\ fetch}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00137}00137\ \textcolor{comment}{\ *\ @return\ false\ if\ fail,\ true\ if\ success}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00138}00138\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00139}00139\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{APC__ArgParser_8h_a00b47bfc8947418ae1f908f4de1f5f1e}{apc\_get}}(\doxymbox{\hyperlink{structAPC__ArgParser}{APC\_ArgParser}}\ *argpar,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00141}00141\ \doxymbox{\hyperlink{APC__config_8h_abe892064a84b35884208fc7a6ec82cb5}{\_\_APC\_CPP\_GUARD\_CLOSE}}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00143}00143\ \textcolor{preprocessor}{\#undef\ \_\_APC\_CPP\_GUARD\_OPEN}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00144}00144\ \textcolor{preprocessor}{\#undef\ \_\_APC\_CPP\_GUARD\_CLOSE}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00146}00146\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ INCLUDE\_LIB\_APC\_ARGPARSER\_H\_}}
+\DoxyCodeLine{\Hypertarget{APC__ArgParser_8h_source_l00147}00147\ }
+
+\end{DoxyCode}

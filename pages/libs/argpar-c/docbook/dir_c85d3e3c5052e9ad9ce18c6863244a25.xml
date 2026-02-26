@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_c85d3e3c5052e9ad9ce18c6863244a25" xml:lang="en-US">
+<title>src/lib Directory Reference</title>
+<indexterm><primary>src/lib Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_APC__ArgParser_8c">APC_ArgParser.c</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="d6/d78/structAPC__ArgParser" kind="struct" language="C++" prot="public">
+    <compoundname>APC_ArgParser</compoundname>
+    <includes refid="db/daa/APC__ArgParser_8h" local="no">APC_ArgParser.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d6/d78/structAPC__ArgParser_1adbf2fdfbf96ade60dfc6af7d82a950c1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int APC_ArgParser::argc</definition>
+        <argsstring></argsstring>
+        <name>argc</name>
+        <qualifiedname>APC_ArgParser::argc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="43" column="5" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" compoundref="dc/d17/APC__ArgParser_8c" startline="61" endline="99">apc_get</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4" compoundref="dc/d17/APC__ArgParser_8c" startline="12" endline="22">apc_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d78/structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21" prot="public" static="no" mutable="no">
+        <type>CVEC</type>
+        <definition>CVEC APC_ArgParser::args</definition>
+        <argsstring></argsstring>
+        <name>args</name>
+        <qualifiedname>APC_ArgParser::args</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="48" column="6" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd" compoundref="dc/d17/APC__ArgParser_8c" startline="48" endline="59">apc_add</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1acce093adeb486562d49b2e483102abbf" compoundref="dc/d17/APC__ArgParser_8c" startline="33" endline="46">apc_destroy</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" compoundref="dc/d17/APC__ArgParser_8c" startline="301" endline="426">apc_generateHelp</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" compoundref="dc/d17/APC__ArgParser_8c" startline="61" endline="99">apc_get</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4" compoundref="dc/d17/APC__ArgParser_8c" startline="12" endline="22">apc_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d78/structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d" prot="public" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** APC_ArgParser::argv</definition>
+        <argsstring></argsstring>
+        <name>argv</name>
+        <qualifiedname>APC_ArgParser::argv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="50" column="6" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" compoundref="dc/d17/APC__ArgParser_8c" startline="61" endline="99">apc_get</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4" compoundref="dc/d17/APC__ArgParser_8c" startline="12" endline="22">apc_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d78/structAPC__ArgParser_1a85b5d693243b0d6d8f23370fd4fc8dc2" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool APC_ArgParser::enableColor</definition>
+        <argsstring></argsstring>
+        <name>enableColor</name>
+        <qualifiedname>APC_ArgParser::enableColor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="41" column="6" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a465c9ba9922a24c7ac076a0cc6f50031" compoundref="dc/d17/APC__ArgParser_8c" startline="199" endline="299">__apc_colorFormat</referencedby>
+        <referencedby refid="db/daa/APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4" compoundref="dc/d17/APC__ArgParser_8c" startline="12" endline="22">apc_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d78/structAPC__ArgParser_1a163455ed5deca655acc930ce1cd6f09b" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* APC_ArgParser::fullHelp</definition>
+        <argsstring></argsstring>
+        <name>fullHelp</name>
+        <qualifiedname>APC_ArgParser::fullHelp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="45" column="6" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d78/structAPC__ArgParser_1af3ef816ddb709898139610230828eeb7" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* APC_ArgParser::helpDescription</definition>
+        <argsstring></argsstring>
+        <name>helpDescription</name>
+        <qualifiedname>APC_ArgParser::helpDescription</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/argpar-c/lib/APC_ArgParser.h" line="46" column="6" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/argpar-c/lib/APC_ArgParser.h" line="39" column="1" bodyfile="inc/argpar-c/lib/APC_ArgParser.h" bodystart="40" bodyend="51"/>
+    <listofallmembers>
+      <member refid="d6/d78/structAPC__ArgParser_1adbf2fdfbf96ade60dfc6af7d82a950c1" prot="public" virt="non-virtual"><scope>APC_ArgParser</scope><name>argc</name></member>
+      <member refid="d6/d78/structAPC__ArgParser_1ad486fc40716568b7abafa7b872cd6c21" prot="public" virt="non-virtual"><scope>APC_ArgParser</scope><name>args</name></member>
+      <member refid="d6/d78/structAPC__ArgParser_1aaf8f31b5c00033ae461e49cede962a2d" prot="public" virt="non-virtual"><scope>APC_ArgParser</scope><name>argv</name></member>
+      <member refid="d6/d78/structAPC__ArgParser_1a85b5d693243b0d6d8f23370fd4fc8dc2" prot="public" virt="non-virtual"><scope>APC_ArgParser</scope><name>enableColor</name></member>
+      <member refid="d6/d78/structAPC__ArgParser_1a163455ed5deca655acc930ce1cd6f09b" prot="public" virt="non-virtual"><scope>APC_ArgParser</scope><name>fullHelp</name></member>
+      <member refid="d6/d78/structAPC__ArgParser_1af3ef816ddb709898139610230828eeb7" prot="public" virt="non-virtual"><scope>APC_ArgParser</scope><name>helpDescription</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

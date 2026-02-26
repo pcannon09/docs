@@ -1,0 +1,133 @@
+.TH "inc/argpar-c/APC_config.h" 3 "Version v1.0.0-build" "ArgPar-C" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/argpar-c/APC_config.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__APC_CPP_GUARD_CLOSE\fP   }"
+.br
+.ti -1c
+.RI "#define \fB__APC_CPP_GUARD_OPEN\fP   extern 'C' {"
+.br
+.ti -1c
+.RI "#define \fBAPC_Declare_Pair\fP(_first,  _second,  _name)"
+.br
+.ti -1c
+.RI "#define \fBAPC_STYLE_BOLD\fP   '\\033[1m'"
+.br
+.ti -1c
+.RI "#define \fBAPC_STYLE_ITALIC\fP   '\\033[3m'"
+.br
+.ti -1c
+.RI "#define \fBAPC_STYLE_RESET\fP   '\\033[0m'"
+.br
+.ti -1c
+.RI "#define \fBAPC_STYLE_STRIKETRHOUGH\fP   '\\033[9m'"
+.br
+.ti -1c
+.RI "#define \fBAPC_STYLE_UNDERLINE\fP   '\\033[4m'"
+.br
+.ti -1c
+.RI "#define \fBAPC_STYLECOLOR_IMPORTANT\fP   '${255,71,76}'"
+.br
+.ti -1c
+.RI "#define \fBAPC_STYLECOLOR_OPTIONAL\fP   '${150,150,150}'"
+.br
+.ti -1c
+.RI "#define \fBAPC_STYLECOLOR_TITLE\fP   '${245,245,245}'"
+.br
+.ti -1c
+.RI "#define \fBAPC_STYLECOLOR_WARNING\fP   '${255,255,40}'"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __APC_CPP_GUARD_CLOSE   }"
+
+.PP
+Definition at line \fB6\fP of file \fBAPC_config\&.h\fP\&.
+.SS "#define __APC_CPP_GUARD_OPEN   extern 'C' {"
+
+.PP
+Definition at line \fB5\fP of file \fBAPC_config\&.h\fP\&.
+.SS "#define APC_Declare_Pair( _first,  _second,  _name)"
+\fBValue:\fP
+.nf
+typedef struct APC_Pair##_name \\
+{ \\
+    _first first; \\
+    _second second; \\
+} APC_Pair##_name; \\
+.PP
+.fi
+
+.PP
+Definition at line \fB25\fP of file \fBAPC_config\&.h\fP\&.
+.nf
+25 #define APC_Declare_Pair(_first, _second, _name) \\
+26     typedef struct APC_Pair##_name \\
+27     { \\
+28         _first first; \\
+29         _second second; \\
+30     } APC_Pair##_name; \\
+31 
+.PP
+.fi
+
+.SS "#define APC_STYLE_BOLD   '\\033[1m'"
+
+.PP
+Definition at line \fB15\fP of file \fBAPC_config\&.h\fP\&.
+.PP
+Referenced by \fB__apc_colorFormat()\fP\&.
+.SS "#define APC_STYLE_ITALIC   '\\033[3m'"
+
+.PP
+Definition at line \fB16\fP of file \fBAPC_config\&.h\fP\&.
+.PP
+Referenced by \fB__apc_colorFormat()\fP\&.
+.SS "#define APC_STYLE_RESET   '\\033[0m'"
+
+.PP
+Definition at line \fB14\fP of file \fBAPC_config\&.h\fP\&.
+.PP
+Referenced by \fB__apc_colorFormat()\fP\&.
+.SS "#define APC_STYLE_STRIKETRHOUGH   '\\033[9m'"
+
+.PP
+Definition at line \fB18\fP of file \fBAPC_config\&.h\fP\&.
+.SS "#define APC_STYLE_UNDERLINE   '\\033[4m'"
+
+.PP
+Definition at line \fB17\fP of file \fBAPC_config\&.h\fP\&.
+.PP
+Referenced by \fB__apc_colorFormat()\fP\&.
+.SS "#define APC_STYLECOLOR_IMPORTANT   '${255,71,76}'"
+
+.PP
+Definition at line \fB22\fP of file \fBAPC_config\&.h\fP\&.
+.SS "#define APC_STYLECOLOR_OPTIONAL   '${150,150,150}'"
+
+.PP
+Definition at line \fB21\fP of file \fBAPC_config\&.h\fP\&.
+.PP
+Referenced by \fBapc_generateHelp()\fP\&.
+.SS "#define APC_STYLECOLOR_TITLE   '${245,245,245}'"
+
+.PP
+Definition at line \fB20\fP of file \fBAPC_config\&.h\fP\&.
+.PP
+Referenced by \fBapc_generateHelp()\fP\&.
+.SS "#define APC_STYLECOLOR_WARNING   '${255,255,40}'"
+
+.PP
+Definition at line \fB23\fP of file \fBAPC_config\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArgPar-C from the source code\&.

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>ArgPar-C</title>
+    </info>
+    <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<chapter>
+    <title>Directory Documentation</title>
+    <xi:include href="dir_491221007ed99280941a2f276a2451d5.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_bfccd401955b95cf8c75461437045ac0.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_678705c4cf4147d05905f93026ebb718.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_c85d3e3c5052e9ad9ce18c6863244a25.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dir_68267d1309a1af8e8297ef4c3efbcdba.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Data Structure Documentation</title>
+    <xi:include href="d3/d7d/structAPC__ArgInfo.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d6/d78/structAPC__ArgParser.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="df/df7/structAPC__RGB.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="d5/db8/APC__config_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d5/db8/APC__config_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d9/d1d/APCpredefines_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d9/d1d/APCpredefines_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="db/daa/APC__ArgParser_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="db/daa/APC__ArgParser_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="da/ddd/README_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dc/d17/APC__ArgParser_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dc/d17/APC__ArgParser_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d0/d29/main_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d0/d29/main_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

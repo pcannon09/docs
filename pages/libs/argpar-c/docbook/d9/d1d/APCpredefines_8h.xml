@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_APCpredefines_8h" xml:lang="en-US">
+<title>inc/argpar-c/APCpredefines.h File Reference</title>
+<indexterm><primary>inc/argpar-c/APCpredefines.h</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_APCpredefines_8h_1a615f7fed3c19a52fca133a9f12a83fd1">APC_DEFAULT_C_STD</link>&#160;&#160;&#160;201112L</para>
+
+<para><link linkend="_APCpredefines_8h">APCpredefines.h</link> - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1.0S. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_APCpredefines_8h_1a97a420225178f042c0e2c19cffd92876">APC_DEV</link>&#160;&#160;&#160;true</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APCpredefines_8h_1a0b684fbd00994f3d3f6acc14402b87fb">APC_STRINGIFY</link>(x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APCpredefines_8h_1a9e39d9b330a846e686fbe66223ca82f9">APC_TOSTRING</link>(x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APCpredefines_8h_1ad1a55db09a52e483b577822725c6db6a">APC_VERSION</link>&#160;&#160;&#160;((EXAMPLE_VERSION_MAJOR&lt;&lt;16)|(EXAMPLE_VERSION_MINOR&lt;&lt;8)|(EXAMPLE_VERSION_PATCH)|(EXAMPLE_VERSION_STATE &lt;&lt; 24))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APCpredefines_8h_1a9b9703e97d0f1d35e2ab9de379cae390">APC_VERSION_CHECK</link>(EXAMPLE_VERSION_MAJOR,  EXAMPLE_VERSION_MINOR,  EXAMPLE_VERSION_PATCH,  EXAMPLE_VERSION_STATE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APCpredefines_8h_1a9412374c5cc180e9ca749ec7922d0df1">APC_VERSION_MAJOR</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APCpredefines_8h_1a2763ac51a4447229701bc32ccaac20c0">APC_VERSION_MINOR</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APCpredefines_8h_1ac1b9cadf4fcb82b36457b6a9f6de2e96">APC_VERSION_PATCH</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APCpredefines_8h_1ac585be23e57e986af5d40ba3fd3b2ec0">APC_VERSION_STATE</link>&#160;&#160;&#160;&quot;dev&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_APCpredefines_8h_1ad929b9e4adfbaa61af799731c43c6128">APC_VERSION_STD</link>&#160;&#160;&#160;20260226L</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_APCpredefines_8h_1a615f7fed3c19a52fca133a9f12a83fd1"/><section>
+    <title>APC_DEFAULT_C_STD</title>
+<indexterm><primary>APC_DEFAULT_C_STD</primary><secondary>APCpredefines.h</secondary></indexterm>
+<indexterm><primary>APCpredefines.h</primary><secondary>APC_DEFAULT_C_STD</secondary></indexterm>
+<para><computeroutput>#define APC_DEFAULT_C_STD&#160;&#160;&#160;201112L</computeroutput></para><para>
+
+<para><link linkend="_APCpredefines_8h">APCpredefines.h</link> - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1.0S. </para>
+</para>
+<para>
+Definition at line <link linkend="_APCpredefines_8h_source_1l00011">11</link> of file <link linkend="_APCpredefines_8h_source">APCpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_APCpredefines_8h_1a97a420225178f042c0e2c19cffd92876"/><section>
+    <title>APC_DEV</title>
+<indexterm><primary>APC_DEV</primary><secondary>APCpredefines.h</secondary></indexterm>
+<indexterm><primary>APCpredefines.h</primary><secondary>APC_DEV</secondary></indexterm>
+<para><computeroutput>#define APC_DEV&#160;&#160;&#160;true</computeroutput></para><para>
+Definition at line <link linkend="_APCpredefines_8h_source_1l00036">36</link> of file <link linkend="_APCpredefines_8h_source">APCpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968"/><section>
+    <title>APC_FREE</title>
+<indexterm><primary>APC_FREE</primary><secondary>APCpredefines.h</secondary></indexterm>
+<indexterm><primary>APCpredefines.h</primary><secondary>APC_FREE</secondary></indexterm>
+<para><computeroutput>#define APC_FREE( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">free(x);&#32;x&#32;=&#32;NULL
+</programlisting><para>
+Definition at line <link linkend="_APCpredefines_8h_source_1l00039">39</link> of file <link linkend="_APCpredefines_8h_source">APCpredefines.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00199">__apc_colorFormat()</link>, <link linkend="_APC__ArgParser_8c_source_1l00301">apc_generateHelp()</link>, and <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_APCpredefines_8h_1a0b684fbd00994f3d3f6acc14402b87fb"/><section>
+    <title>APC_STRINGIFY</title>
+<indexterm><primary>APC_STRINGIFY</primary><secondary>APCpredefines.h</secondary></indexterm>
+<indexterm><primary>APCpredefines.h</primary><secondary>APC_STRINGIFY</secondary></indexterm>
+<para><computeroutput>#define APC_STRINGIFY( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered"><emphasis role="preprocessor">#x</emphasis>
+</programlisting><para>
+Definition at line <link linkend="_APCpredefines_8h_source_1l00032">32</link> of file <link linkend="_APCpredefines_8h_source">APCpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_APCpredefines_8h_1a9e39d9b330a846e686fbe66223ca82f9"/><section>
+    <title>APC_TOSTRING</title>
+<indexterm><primary>APC_TOSTRING</primary><secondary>APCpredefines.h</secondary></indexterm>
+<indexterm><primary>APCpredefines.h</primary><secondary>APC_TOSTRING</secondary></indexterm>
+<para><computeroutput>#define APC_TOSTRING( x)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">EXAMPLE_STRINGIFY(x)
+</programlisting><para>
+Definition at line <link linkend="_APCpredefines_8h_source_1l00033">33</link> of file <link linkend="_APCpredefines_8h_source">APCpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_APCpredefines_8h_1ad1a55db09a52e483b577822725c6db6a"/><section>
+    <title>APC_VERSION</title>
+<indexterm><primary>APC_VERSION</primary><secondary>APCpredefines.h</secondary></indexterm>
+<indexterm><primary>APCpredefines.h</primary><secondary>APC_VERSION</secondary></indexterm>
+<para><computeroutput>#define APC_VERSION&#160;&#160;&#160;((EXAMPLE_VERSION_MAJOR&lt;&lt;16)|(EXAMPLE_VERSION_MINOR&lt;&lt;8)|(EXAMPLE_VERSION_PATCH)|(EXAMPLE_VERSION_STATE &lt;&lt; 24))</computeroutput></para><para>
+Definition at line <link linkend="_APCpredefines_8h_source_1l00026">26</link> of file <link linkend="_APCpredefines_8h_source">APCpredefines.h</link>.</para>
+</section>
+<anchor xml:id="_APCpredefines_8h_1a9b9703e97d0f1d35e2ab9de379cae390"/><section>
+    <title>APC_VERSION_CHECK</title>
+<indexterm><primary>APC_VERSION_CHECK</primary><secondary>APCpredefines.h</secondary></indexterm>
+<indexterm><primary>APCpredefines.h</primary><secondary>APC_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define APC_VERSION_CHECK( EXAMPLE_VERSION_MAJOR,  EXAMPLE_VERSION_MINOR,  EXAMPLE_VERSION_PATCH,  EXAMPLE_VERSION_STATE)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((<link linkend="_APCpredefines_8h_1a9412374c5cc180e9ca749ec7922d0df1">APC_VERSION_MAJOR</link>)&lt;&lt;16)|((EXAMPLE_VERSION_MINOR)&lt;&lt;8)|(EXAMPLE_VERSION_PATCH)|((EXAMPLE_VERSION_STATE)&#32;&lt;&lt;&#32;24))
+</programlisting><para>
+Definition at line <link linkend="_APCpredefines_8h_source_1l00028">28</link> of file <link linkend="_APCpredefines_8h_source">APCpredefines.h</link>.</para>
+<programlisting linenumbering="unnumbered">00028 <emphasis role="preprocessor">#define&#32;APC_VERSION_CHECK(EXAMPLE_VERSION_MAJOR,&#32;EXAMPLE_VERSION_MINOR,&#32;EXAMPLE_VERSION_PATCH,&#32;EXAMPLE_VERSION_STATE)&#32;\</emphasis>
+00029 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;(((APC_VERSION_MAJOR)&lt;&lt;16)|((EXAMPLE_VERSION_MINOR)&lt;&lt;8)|(EXAMPLE_VERSION_PATCH)|((EXAMPLE_VERSION_STATE)&#32;&lt;&lt;&#32;24))</emphasis>
+</programlisting></section>
+<anchor xml:id="_APCpredefines_8h_1a9412374c5cc180e9ca749ec7922d0df1"/><section>
+    <title>APC_VERSION_MAJOR</title>
+<indexterm><primary>APC_VERSION_MAJOR</primary><secondary>APCpredefines.h</secondary></indexterm>
+<indexterm><primary>APCpredefines.h</primary><secondary>APC_VERSION_MAJOR</secondary></indexterm>
+<para><computeroutput>#define APC_VERSION_MAJOR&#160;&#160;&#160;1</computeroutput></para><para>
+Definition at line <link linkend="_APCpredefines_8h_source_1l00014">14</link> of file <link linkend="_APCpredefines_8h_source">APCpredefines.h</link>.</para>
+<para>
+Referenced by <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_APCpredefines_8h_1a2763ac51a4447229701bc32ccaac20c0"/><section>
+    <title>APC_VERSION_MINOR</title>
+<indexterm><primary>APC_VERSION_MINOR</primary><secondary>APCpredefines.h</secondary></indexterm>
+<indexterm><primary>APCpredefines.h</primary><secondary>APC_VERSION_MINOR</secondary></indexterm>
+<para><computeroutput>#define APC_VERSION_MINOR&#160;&#160;&#160;0</computeroutput></para><para>
+Definition at line <link linkend="_APCpredefines_8h_source_1l00015">15</link> of file <link linkend="_APCpredefines_8h_source">APCpredefines.h</link>.</para>
+<para>
+Referenced by <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_APCpredefines_8h_1ac1b9cadf4fcb82b36457b6a9f6de2e96"/><section>
+    <title>APC_VERSION_PATCH</title>
+<indexterm><primary>APC_VERSION_PATCH</primary><secondary>APCpredefines.h</secondary></indexterm>
+<indexterm><primary>APCpredefines.h</primary><secondary>APC_VERSION_PATCH</secondary></indexterm>
+<para><computeroutput>#define APC_VERSION_PATCH&#160;&#160;&#160;0</computeroutput></para><para>
+Definition at line <link linkend="_APCpredefines_8h_source_1l00016">16</link> of file <link linkend="_APCpredefines_8h_source">APCpredefines.h</link>.</para>
+<para>
+Referenced by <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_APCpredefines_8h_1ac585be23e57e986af5d40ba3fd3b2ec0"/><section>
+    <title>APC_VERSION_STATE</title>
+<indexterm><primary>APC_VERSION_STATE</primary><secondary>APCpredefines.h</secondary></indexterm>
+<indexterm><primary>APCpredefines.h</primary><secondary>APC_VERSION_STATE</secondary></indexterm>
+<para><computeroutput>#define APC_VERSION_STATE&#160;&#160;&#160;&quot;dev&quot;</computeroutput></para><para>
+Definition at line <link linkend="_APCpredefines_8h_source_1l00024">24</link> of file <link linkend="_APCpredefines_8h_source">APCpredefines.h</link>.</para>
+<para>
+Referenced by <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_APCpredefines_8h_1ad929b9e4adfbaa61af799731c43c6128"/><section>
+    <title>APC_VERSION_STD</title>
+<indexterm><primary>APC_VERSION_STD</primary><secondary>APCpredefines.h</secondary></indexterm>
+<indexterm><primary>APCpredefines.h</primary><secondary>APC_VERSION_STD</secondary></indexterm>
+<para><computeroutput>#define APC_VERSION_STD&#160;&#160;&#160;20260226L</computeroutput></para><para>
+Definition at line <link linkend="_APCpredefines_8h_source_1l00018">18</link> of file <link linkend="_APCpredefines_8h_source">APCpredefines.h</link>.</para>
+<para>
+Referenced by <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+</section>
+</section>

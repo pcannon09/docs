@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structAPC__ArgInfo" xml:lang="en-US">
+<title>APC_ArgInfo Struct Reference</title>
+<indexterm><primary>APC_ArgInfo</primary></indexterm>
+<para>
+<computeroutput>#include &lt;APC_ArgParser.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>CVEC <link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb">help</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31">id</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9">param</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367">required</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262">sparam</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00027">27</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971"/><section>
+    <title>aliases</title>
+<indexterm><primary>aliases</primary><secondary>APC_ArgInfo</secondary></indexterm>
+<indexterm><primary>APC_ArgInfo</primary><secondary>aliases</secondary></indexterm>
+<para><computeroutput>CVEC APC_ArgInfo::aliases</computeroutput></para><para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00036">36</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00033">apc_destroy()</link>, <link linkend="_APC__ArgParser_8c_source_1l00301">apc_generateHelp()</link>, <link linkend="_APC__ArgParser_8c_source_1l00061">apc_get()</link>, <link linkend="_APC__ArgParser_8c_source_1l00024">apc_initInfo()</link>, and <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb"/><section>
+    <title>help</title>
+<indexterm><primary>help</primary><secondary>APC_ArgInfo</secondary></indexterm>
+<indexterm><primary>APC_ArgInfo</primary><secondary>help</secondary></indexterm>
+<para><computeroutput>char* APC_ArgInfo::help</computeroutput></para><para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00034">34</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00301">apc_generateHelp()</link>, and <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>APC_ArgInfo</secondary></indexterm>
+<indexterm><primary>APC_ArgInfo</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>char* APC_ArgInfo::id</computeroutput></para><para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00031">31</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00048">apc_add()</link>, <link linkend="_APC__ArgParser_8c_source_1l00301">apc_generateHelp()</link>, <link linkend="_APC__ArgParser_8c_source_1l00061">apc_get()</link>, and <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9"/><section>
+    <title>param</title>
+<indexterm><primary>param</primary><secondary>APC_ArgInfo</secondary></indexterm>
+<indexterm><primary>APC_ArgInfo</primary><secondary>param</secondary></indexterm>
+<para><computeroutput>char* APC_ArgInfo::param</computeroutput></para><para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00032">32</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00048">apc_add()</link>, <link linkend="_APC__ArgParser_8c_source_1l00301">apc_generateHelp()</link>, <link linkend="_APC__ArgParser_8c_source_1l00061">apc_get()</link>, and <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<anchor xml:id="_structAPC__ArgInfo_1a963ddcb6ee80394f3be4a245bf8fb367"/><section>
+    <title>required</title>
+<indexterm><primary>required</primary><secondary>APC_ArgInfo</secondary></indexterm>
+<indexterm><primary>APC_ArgInfo</primary><secondary>required</secondary></indexterm>
+<para><computeroutput>bool APC_ArgInfo::required</computeroutput></para><para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00029">29</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00301">apc_generateHelp()</link>, and <link linkend="_APC__ArgParser_8c_source_1l00024">apc_initInfo()</link>.</para>
+</section>
+<anchor xml:id="_structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262"/><section>
+    <title>sparam</title>
+<indexterm><primary>sparam</primary><secondary>APC_ArgInfo</secondary></indexterm>
+<indexterm><primary>APC_ArgInfo</primary><secondary>sparam</secondary></indexterm>
+<para><computeroutput>char* APC_ArgInfo::sparam</computeroutput></para><para>
+Definition at line <link linkend="_APC__ArgParser_8h_source_1l00033">33</link> of file <link linkend="_APC__ArgParser_8h_source">APC_ArgParser.h</link>.</para>
+<para>
+Referenced by <link linkend="_APC__ArgParser_8c_source_1l00301">apc_generateHelp()</link>, <link linkend="_APC__ArgParser_8c_source_1l00061">apc_get()</link>, and <link linkend="_main_8c_source_1l00006">main()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/argpar-c/lib/<link linkend="_APC__ArgParser_8h">APC_ArgParser.h</link></section>
+</section>

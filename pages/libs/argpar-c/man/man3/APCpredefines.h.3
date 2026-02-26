@@ -1,0 +1,142 @@
+.TH "inc/argpar-c/APCpredefines.h" 3 "Version v1.0.0-build" "ArgPar-C" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/argpar-c/APCpredefines.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBAPC_DEFAULT_C_STD\fP   201112L"
+.br
+.RI "\fBAPCpredefines\&.h\fP - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1\&.0S\&. "
+.ti -1c
+.RI "#define \fBAPC_DEV\fP   true"
+.br
+.ti -1c
+.RI "#define \fBAPC_FREE\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBAPC_STRINGIFY\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBAPC_TOSTRING\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBAPC_VERSION\fP   ((EXAMPLE_VERSION_MAJOR<<16)|(EXAMPLE_VERSION_MINOR<<8)|(EXAMPLE_VERSION_PATCH)|(EXAMPLE_VERSION_STATE << 24))"
+.br
+.ti -1c
+.RI "#define \fBAPC_VERSION_CHECK\fP(EXAMPLE_VERSION_MAJOR,  EXAMPLE_VERSION_MINOR,  EXAMPLE_VERSION_PATCH,  EXAMPLE_VERSION_STATE)"
+.br
+.ti -1c
+.RI "#define \fBAPC_VERSION_MAJOR\fP   1"
+.br
+.ti -1c
+.RI "#define \fBAPC_VERSION_MINOR\fP   0"
+.br
+.ti -1c
+.RI "#define \fBAPC_VERSION_PATCH\fP   0"
+.br
+.ti -1c
+.RI "#define \fBAPC_VERSION_STATE\fP   'dev'"
+.br
+.ti -1c
+.RI "#define \fBAPC_VERSION_STD\fP   20260226L"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define APC_DEFAULT_C_STD   201112L"
+
+.PP
+\fBAPCpredefines\&.h\fP - pcannonProjectStandards Predefines for C and C++ projects STD Information: 20250723 - 1\&.0S\&. 
+.PP
+Definition at line \fB11\fP of file \fBAPCpredefines\&.h\fP\&.
+.SS "#define APC_DEV   true"
+
+.PP
+Definition at line \fB36\fP of file \fBAPCpredefines\&.h\fP\&.
+.SS "#define APC_FREE( x)"
+\fBValue:\fP
+.nf
+free(x); x = NULL
+.PP
+.fi
+
+.PP
+Definition at line \fB39\fP of file \fBAPCpredefines\&.h\fP\&.
+.PP
+Referenced by \fB__apc_colorFormat()\fP, \fBapc_generateHelp()\fP, and \fBmain()\fP\&.
+.SS "#define APC_STRINGIFY( x)"
+\fBValue:\fP
+.nf
+#x
+.PP
+.fi
+
+.PP
+Definition at line \fB32\fP of file \fBAPCpredefines\&.h\fP\&.
+.SS "#define APC_TOSTRING( x)"
+\fBValue:\fP
+.nf
+EXAMPLE_STRINGIFY(x)
+.PP
+.fi
+
+.PP
+Definition at line \fB33\fP of file \fBAPCpredefines\&.h\fP\&.
+.SS "#define APC_VERSION   ((EXAMPLE_VERSION_MAJOR<<16)|(EXAMPLE_VERSION_MINOR<<8)|(EXAMPLE_VERSION_PATCH)|(EXAMPLE_VERSION_STATE << 24))"
+
+.PP
+Definition at line \fB26\fP of file \fBAPCpredefines\&.h\fP\&.
+.SS "#define APC_VERSION_CHECK( EXAMPLE_VERSION_MAJOR,  EXAMPLE_VERSION_MINOR,  EXAMPLE_VERSION_PATCH,  EXAMPLE_VERSION_STATE)"
+\fBValue:\fP
+.nf
+(((APC_VERSION_MAJOR)<<16)|((EXAMPLE_VERSION_MINOR)<<8)|(EXAMPLE_VERSION_PATCH)|((EXAMPLE_VERSION_STATE) << 24))
+.PP
+.fi
+
+.PP
+Definition at line \fB28\fP of file \fBAPCpredefines\&.h\fP\&.
+.nf
+28 #define APC_VERSION_CHECK(EXAMPLE_VERSION_MAJOR, EXAMPLE_VERSION_MINOR, EXAMPLE_VERSION_PATCH, EXAMPLE_VERSION_STATE) \\
+29     (((APC_VERSION_MAJOR)<<16)|((EXAMPLE_VERSION_MINOR)<<8)|(EXAMPLE_VERSION_PATCH)|((EXAMPLE_VERSION_STATE) << 24))
+.PP
+.fi
+
+.SS "#define APC_VERSION_MAJOR   1"
+
+.PP
+Definition at line \fB14\fP of file \fBAPCpredefines\&.h\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SS "#define APC_VERSION_MINOR   0"
+
+.PP
+Definition at line \fB15\fP of file \fBAPCpredefines\&.h\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SS "#define APC_VERSION_PATCH   0"
+
+.PP
+Definition at line \fB16\fP of file \fBAPCpredefines\&.h\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SS "#define APC_VERSION_STATE   'dev'"
+
+.PP
+Definition at line \fB24\fP of file \fBAPCpredefines\&.h\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SS "#define APC_VERSION_STD   20260226L"
+
+.PP
+Definition at line \fB18\fP of file \fBAPCpredefines\&.h\fP\&.
+.PP
+Referenced by \fBmain()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ArgPar-C from the source code\&.

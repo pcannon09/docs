@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8c_source" xml:lang="en-US">
+<title>main.c</title>
+<indexterm><primary>src/main.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_main_8c_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+<anchor xml:id="_main_8c_source_1l00002"/>00002 
+<anchor xml:id="_main_8c_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_APC__ArgParser_8h">../inc/argpar-c/lib/APC_ArgParser.h</link>&quot;</emphasis>
+<anchor xml:id="_main_8c_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_APCpredefines_8h">../inc/argpar-c/APCpredefines.h</link>&quot;</emphasis>
+<anchor xml:id="_main_8c_source_1l00005"/>00005 
+<anchor xml:id="_main_8c_source_1l00006"/><link linkend="_main_8c_1a0ddf1224851353fc92bfbff6f499fa97">00006</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_main_8c_1a0ddf1224851353fc92bfbff6f499fa97">main</link>(<emphasis role="keywordtype">int</emphasis>&#32;argc,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*argv[])
+<anchor xml:id="_main_8c_source_1l00007"/>00007 {
+<anchor xml:id="_main_8c_source_1l00008"/>00008 &#32;&#32;&#32;&#32;<link linkend="_structAPC__ArgParser">APC_ArgParser</link>&#32;parser&#32;=&#32;<link linkend="_APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4">apc_init</link>(argc,&#32;argv);
+<anchor xml:id="_main_8c_source_1l00009"/>00009 
+<anchor xml:id="_main_8c_source_1l00010"/>00010 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_main_8c_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>&#32;info&#32;=&#32;<link linkend="_APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98">apc_initInfo</link>();
+<anchor xml:id="_main_8c_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31">id</link>&#32;=&#32;<emphasis role="stringliteral">&quot;version&quot;</emphasis>;
+<anchor xml:id="_main_8c_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9">param</link>&#32;=&#32;<emphasis role="stringliteral">&quot;--version&quot;</emphasis>;
+<anchor xml:id="_main_8c_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262">sparam</link>&#32;=&#32;<emphasis role="stringliteral">&quot;-v&quot;</emphasis>;
+<anchor xml:id="_main_8c_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb">help</link>&#32;=&#32;<emphasis role="stringliteral">&quot;Version&#32;information&#32;for&#32;ArgParser-C&quot;</emphasis>;
+<anchor xml:id="_main_8c_source_1l00016"/>00016 
+<anchor xml:id="_main_8c_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd">apc_add</link>(&amp;parser,&#32;info);
+<anchor xml:id="_main_8c_source_1l00018"/>00018 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_main_8c_source_1l00019"/>00019 
+<anchor xml:id="_main_8c_source_1l00020"/>00020 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_main_8c_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structAPC__ArgInfo">APC_ArgInfo</link>&#32;info&#32;=&#32;<link linkend="_APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98">apc_initInfo</link>();
+<anchor xml:id="_main_8c_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31">id</link>&#32;=&#32;<emphasis role="stringliteral">&quot;help&quot;</emphasis>;
+<anchor xml:id="_main_8c_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9">param</link>&#32;=&#32;<emphasis role="stringliteral">&quot;--help&quot;</emphasis>;
+<anchor xml:id="_main_8c_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262">sparam</link>&#32;=&#32;<emphasis role="stringliteral">&quot;-h&quot;</emphasis>;
+<anchor xml:id="_main_8c_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;info.<link linkend="_structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb">help</link>&#32;=&#32;<emphasis role="stringliteral">&quot;Show&#32;this&#32;help&quot;</emphasis>;
+<anchor xml:id="_main_8c_source_1l00026"/>00026 
+<anchor xml:id="_main_8c_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cvec_push(&amp;info.<link linkend="_structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971">aliases</link>,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*,&#32;<emphasis role="stringliteral">&quot;-?&quot;</emphasis>);
+<anchor xml:id="_main_8c_source_1l00028"/>00028 
+<anchor xml:id="_main_8c_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd">apc_add</link>(&amp;parser,&#32;info);
+<anchor xml:id="_main_8c_source_1l00030"/>00030 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_main_8c_source_1l00031"/>00031 
+<anchor xml:id="_main_8c_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e">apc_get</link>(&amp;parser,&#32;<emphasis role="stringliteral">&quot;version&quot;</emphasis>))
+<anchor xml:id="_main_8c_source_1l00033"/>00033 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_main_8c_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;==&#32;VERSION&#32;INFO\n&quot;</emphasis>);
+<anchor xml:id="_main_8c_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;-&#32;VERSION:&#32;%i.%i.%i\n&quot;</emphasis>,&#32;
+<anchor xml:id="_main_8c_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1a9412374c5cc180e9ca749ec7922d0df1">APC_VERSION_MAJOR</link>,
+<anchor xml:id="_main_8c_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1a2763ac51a4447229701bc32ccaac20c0">APC_VERSION_MINOR</link>,
+<anchor xml:id="_main_8c_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1ac1b9cadf4fcb82b36457b6a9f6de2e96">APC_VERSION_PATCH</link>);
+<anchor xml:id="_main_8c_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;-&#32;VERSION&#32;STANDARD:&#32;%ld\n&quot;</emphasis>,&#32;<link linkend="_APCpredefines_8h_1ad929b9e4adfbaa61af799731c43c6128">APC_VERSION_STD</link>);
+<anchor xml:id="_main_8c_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;-&#32;VERSION&#32;STATE:&#32;%s\n&quot;</emphasis>,&#32;<link linkend="_APCpredefines_8h_1ac585be23e57e986af5d40ba3fd3b2ec0">APC_VERSION_STATE</link>);
+<anchor xml:id="_main_8c_source_1l00041"/>00041 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_main_8c_source_1l00042"/>00042 
+<anchor xml:id="_main_8c_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e">apc_get</link>(&amp;parser,&#32;<emphasis role="stringliteral">&quot;help&quot;</emphasis>))
+<anchor xml:id="_main_8c_source_1l00044"/>00044 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_main_8c_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*licenseMessage&#32;=
+<anchor xml:id="_main_8c_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;\nArgPar-C&#32;Copyright&#32;(C)&#32;2026&#32;&#32;pcannon09\n&quot;</emphasis>
+<anchor xml:id="_main_8c_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;This&#32;program&#32;comes&#32;with&#32;ABSOLUTELY&#32;NO&#32;WARRANTY;&#32;for&#32;details&#32;type&#32;`./run.sh&#32;--help&apos;.\n&quot;</emphasis>
+<anchor xml:id="_main_8c_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;This&#32;is&#32;free&#32;software,&#32;and&#32;you&#32;are&#32;welcome&#32;to&#32;redistribute&#32;it\n&quot;</emphasis>
+<anchor xml:id="_main_8c_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;under&#32;certain&#32;conditions;&#32;type&#32;`./run.sh&#32;--help&apos;&#32;for&#32;details.&quot;</emphasis>;
+<anchor xml:id="_main_8c_source_1l00050"/>00050 
+<anchor xml:id="_main_8c_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*helpMsg&#32;=&#32;<link linkend="_APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a">apc_generateHelp</link>(
+<anchor xml:id="_main_8c_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&amp;parser,
+<anchor xml:id="_main_8c_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;APC&#32;Help&quot;</emphasis>,
+<anchor xml:id="_main_8c_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;ArgParser-C&#32;help&#32;information&#32;and&#32;demo\nCheck&#32;the&#32;code&#32;for&#32;more&#32;information\n&quot;</emphasis>,
+<anchor xml:id="_main_8c_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;licenseMessage);
+<anchor xml:id="_main_8c_source_1l00056"/>00056 
+<anchor xml:id="_main_8c_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;%s\n&quot;</emphasis>,&#32;helpMsg);
+<anchor xml:id="_main_8c_source_1l00058"/>00058 
+<anchor xml:id="_main_8c_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968">APC_FREE</link>(helpMsg);
+<anchor xml:id="_main_8c_source_1l00060"/>00060 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_main_8c_source_1l00061"/>00061 
+<anchor xml:id="_main_8c_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<link linkend="_APC__ArgParser_8h_1acce093adeb486562d49b2e483102abbf">apc_destroy</link>(&amp;parser);
+<anchor xml:id="_main_8c_source_1l00063"/>00063 
+<anchor xml:id="_main_8c_source_1l00064"/>00064 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_main_8c_source_1l00065"/>00065 }
+<anchor xml:id="_main_8c_source_1l00066"/>00066 
+</programlisting></section>

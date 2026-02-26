@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="d0/d29/main_8c" kind="file" language="C++">
+    <compoundname>main.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="db/daa/APC__ArgParser_8h" local="yes">../inc/argpar-c/lib/APC_ArgParser.h</includes>
+    <includes refid="d9/d1d/APCpredefines_8h" local="yes">../inc/argpar-c/APCpredefines.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>../../../vendor/cvec/inc/cvec/cvec.h</label>
+      </node>
+      <node id="6">
+        <label>../inc/argpar-c/APCpredefines.h</label>
+        <link refid="d9/d1d/APCpredefines_8h"/>
+      </node>
+      <node id="3">
+        <label>../inc/argpar-c/lib/APC_ArgParser.h</label>
+        <link refid="db/daa/APC__ArgParser_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/main.c</label>
+        <link refid="d0/d29/main_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main.c" line="6" column="5" bodyfile="src/main.c" bodystart="6" bodyend="65"/>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971" compoundref="db/daa/APC__ArgParser_8h" startline="36">APC_ArgInfo::aliases</references>
+        <references refid="db/daa/APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd" compoundref="dc/d17/APC__ArgParser_8c" startline="48" endline="59">apc_add</references>
+        <references refid="db/daa/APC__ArgParser_8h_1acce093adeb486562d49b2e483102abbf" compoundref="dc/d17/APC__ArgParser_8c" startline="33" endline="46">apc_destroy</references>
+        <references refid="d9/d1d/APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968" compoundref="d9/d1d/APCpredefines_8h" startline="39">APC_FREE</references>
+        <references refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" compoundref="dc/d17/APC__ArgParser_8c" startline="301" endline="426">apc_generateHelp</references>
+        <references refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" compoundref="dc/d17/APC__ArgParser_8c" startline="61" endline="99">apc_get</references>
+        <references refid="db/daa/APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4" compoundref="dc/d17/APC__ArgParser_8c" startline="12" endline="22">apc_init</references>
+        <references refid="db/daa/APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98" compoundref="dc/d17/APC__ArgParser_8c" startline="24" endline="31">apc_initInfo</references>
+        <references refid="d9/d1d/APCpredefines_8h_1a9412374c5cc180e9ca749ec7922d0df1" compoundref="d9/d1d/APCpredefines_8h" startline="14">APC_VERSION_MAJOR</references>
+        <references refid="d9/d1d/APCpredefines_8h_1a2763ac51a4447229701bc32ccaac20c0" compoundref="d9/d1d/APCpredefines_8h" startline="15">APC_VERSION_MINOR</references>
+        <references refid="d9/d1d/APCpredefines_8h_1ac1b9cadf4fcb82b36457b6a9f6de2e96" compoundref="d9/d1d/APCpredefines_8h" startline="16">APC_VERSION_PATCH</references>
+        <references refid="d9/d1d/APCpredefines_8h_1ac585be23e57e986af5d40ba3fd3b2ec0" compoundref="d9/d1d/APCpredefines_8h" startline="24">APC_VERSION_STATE</references>
+        <references refid="d9/d1d/APCpredefines_8h_1ad929b9e4adfbaa61af799731c43c6128" compoundref="d9/d1d/APCpredefines_8h" startline="18">APC_VERSION_STD</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb" compoundref="db/daa/APC__ArgParser_8h" startline="34">APC_ArgInfo::help</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31" compoundref="db/daa/APC__ArgParser_8h" startline="31">APC_ArgInfo::id</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9" compoundref="db/daa/APC__ArgParser_8h" startline="32">APC_ArgInfo::param</references>
+        <references refid="d3/d7d/structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262" compoundref="db/daa/APC__ArgParser_8h" startline="33">APC_ArgInfo::sparam</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="db/daa/APC__ArgParser_8h" kindref="compound">../inc/argpar-c/lib/APC_ArgParser.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d9/d1d/APCpredefines_8h" kindref="compound">../inc/argpar-c/APCpredefines.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d0/d29/main_8c_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d6/d78/structAPC__ArgParser" kindref="compound">APC_ArgParser</ref><sp/>parser<sp/>=<sp/><ref refid="db/daa/APC__ArgParser_8h_1a61d4424e1c28b49745d42226a00c60f4" kindref="member">apc_init</ref>(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref><sp/>info<sp/>=<sp/><ref refid="db/daa/APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98" kindref="member">apc_initInfo</ref>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="d3/d7d/structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31" kindref="member">id</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;version&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="d3/d7d/structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9" kindref="member">param</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;--version&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="d3/d7d/structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262" kindref="member">sparam</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;-v&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="d3/d7d/structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb" kindref="member">help</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Version<sp/>information<sp/>for<sp/>ArgParser-C&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/daa/APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd" kindref="member">apc_add</ref>(&amp;parser,<sp/>info);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d7d/structAPC__ArgInfo" kindref="compound">APC_ArgInfo</ref><sp/>info<sp/>=<sp/><ref refid="db/daa/APC__ArgParser_8h_1a89cd1dbd57bfa347f76c06add302ed98" kindref="member">apc_initInfo</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="d3/d7d/structAPC__ArgInfo_1ae160e2f6e81ca0483624dbdb919beb31" kindref="member">id</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;help&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="d3/d7d/structAPC__ArgInfo_1a9b0e5f5c7508b80e5f5063287024e7d9" kindref="member">param</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;--help&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="d3/d7d/structAPC__ArgInfo_1a7da2302dd312d46292c81180a61fe262" kindref="member">sparam</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;-h&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="d3/d7d/structAPC__ArgInfo_1afe9d07845b60869e1bf4808ed1c998cb" kindref="member">help</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Show<sp/>this<sp/>help&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cvec_push(&amp;info.<ref refid="d3/d7d/structAPC__ArgInfo_1a50f6a9e743e07bcbd8575353a43c6971" kindref="member">aliases</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="stringliteral">&quot;-?&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/daa/APC__ArgParser_8h_1a249d5856e4d70717a20b468fd5600bbd" kindref="member">apc_add</ref>(&amp;parser,<sp/>info);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" kindref="member">apc_get</ref>(&amp;parser,<sp/></highlight><highlight class="stringliteral">&quot;version&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;==<sp/>VERSION<sp/>INFO\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-<sp/>VERSION:<sp/>%i.%i.%i\n&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d1d/APCpredefines_8h_1a9412374c5cc180e9ca749ec7922d0df1" kindref="member">APC_VERSION_MAJOR</ref>,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d1d/APCpredefines_8h_1a2763ac51a4447229701bc32ccaac20c0" kindref="member">APC_VERSION_MINOR</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d1d/APCpredefines_8h_1ac1b9cadf4fcb82b36457b6a9f6de2e96" kindref="member">APC_VERSION_PATCH</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-<sp/>VERSION<sp/>STANDARD:<sp/>%ld\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="d9/d1d/APCpredefines_8h_1ad929b9e4adfbaa61af799731c43c6128" kindref="member">APC_VERSION_STD</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-<sp/>VERSION<sp/>STATE:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="d9/d1d/APCpredefines_8h_1ac585be23e57e986af5d40ba3fd3b2ec0" kindref="member">APC_VERSION_STATE</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="db/daa/APC__ArgParser_8h_1a00b47bfc8947418ae1f908f4de1f5f1e" kindref="member">apc_get</ref>(&amp;parser,<sp/></highlight><highlight class="stringliteral">&quot;help&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*licenseMessage<sp/>=</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\nArgPar-C<sp/>Copyright<sp/>(C)<sp/>2026<sp/><sp/>pcannon09\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;This<sp/>program<sp/>comes<sp/>with<sp/>ABSOLUTELY<sp/>NO<sp/>WARRANTY;<sp/>for<sp/>details<sp/>type<sp/>`./run.sh<sp/>--help&apos;.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;This<sp/>is<sp/>free<sp/>software,<sp/>and<sp/>you<sp/>are<sp/>welcome<sp/>to<sp/>redistribute<sp/>it\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;under<sp/>certain<sp/>conditions;<sp/>type<sp/>`./run.sh<sp/>--help&apos;<sp/>for<sp/>details.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*helpMsg<sp/>=<sp/><ref refid="db/daa/APC__ArgParser_8h_1a235f33a098769075131ad521168d2e0a" kindref="member">apc_generateHelp</ref>(</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;parser,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;APC<sp/>Help&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;ArgParser-C<sp/>help<sp/>information<sp/>and<sp/>demo\nCheck<sp/>the<sp/>code<sp/>for<sp/>more<sp/>information\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>licenseMessage);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/>helpMsg);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d1d/APCpredefines_8h_1a29ff4691ac6827a68a53aa7c6a5b9968" kindref="member">APC_FREE</ref>(helpMsg);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/daa/APC__ArgParser_8h_1acce093adeb486562d49b2e483102abbf" kindref="member">apc_destroy</ref>(&amp;parser);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/main.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="da/ddd/README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>ArgParser-C<sp/>–<sp/>Usage<sp/>Guide</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>lightweight<sp/>and<sp/>structured<sp/>argument<sp/>parsing<sp/>library<sp/>for<sp/>C</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>document<sp/>explains<sp/>how<sp/>to<sp/>use<sp/>the<sp/>public<sp/>API<sp/>of<sp/>ArgParser-C,<sp/>including</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>descriptions<sp/>and<sp/>minimal<sp/>usage<sp/>examples</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Basic<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>1.<sp/>Initialize<sp/>the<sp/>Parser</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`APC_ArgParser<sp/>apc_init(int<sp/>argc,<sp/>char<sp/>*argv[]);`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Initializes<sp/>a<sp/>new<sp/>argument<sp/>parser<sp/>instance<sp/>using<sp/>the<sp/>`argc`<sp/>and<sp/>`argv`</highlight></codeline>
+<codeline><highlight class="normal">values<sp/>provided<sp/>to<sp/>`main()`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>main(int<sp/>argc,<sp/>char<sp/>*argv[])</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>APC_ArgParser<sp/>parser<sp/>=<sp/>apc_init(argc,<sp/>argv);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*<sp/>More<sp/>code<sp/>here...<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>prepares<sp/>the<sp/>parser<sp/>and<sp/>stores<sp/>argument<sp/>data<sp/>internally</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>2.<sp/>Define<sp/>Arguments</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Arguments<sp/>are<sp/>described<sp/>using<sp/>`APC_ArgInfo`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`APC_ArgInfo<sp/>apc_initInfo(void);`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Initializes<sp/>an<sp/>argument<sp/>descriptor<sp/>with<sp/>safe<sp/>defaults:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`required`<sp/>defaults<sp/>to<sp/>`false`</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`aliases`<sp/>is<sp/>automatically<sp/>constructed</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>All<sp/>pointers<sp/>are<sp/>initialized<sp/>to<sp/>`NULL`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">APC_ArgInfo<sp/>info<sp/>=<sp/>apc_initInfo();</highlight></codeline>
+<codeline><highlight class="normal">info.id<sp/><sp/><sp/><sp/><sp/>=<sp/>&quot;version&quot;;</highlight></codeline>
+<codeline><highlight class="normal">info.param<sp/><sp/>=<sp/>&quot;--version&quot;;</highlight></codeline>
+<codeline><highlight class="normal">info.sparam<sp/>=<sp/>&quot;-v&quot;;</highlight></codeline>
+<codeline><highlight class="normal">info.help<sp/><sp/><sp/>=<sp/>&quot;Version<sp/>information&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">apc_add(&amp;parser,<sp/>info);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>3.<sp/>Register<sp/>Arguments</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`bool<sp/>apc_add(APC_ArgParser<sp/>*argpar,<sp/>APC_ArgInfo<sp/>info);`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Registers<sp/>a<sp/>configured<sp/>`APC_ArgInfo`<sp/>structure<sp/>with<sp/>the<sp/>parser</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Returns:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`true`<sp/>on<sp/>success</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`false`<sp/>on<sp/>failure</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Example<sp/>with<sp/>Aliases</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">APC_ArgInfo<sp/>info<sp/>=<sp/>apc_initInfo();</highlight></codeline>
+<codeline><highlight class="normal">info.id<sp/><sp/><sp/><sp/><sp/>=<sp/>&quot;help&quot;;</highlight></codeline>
+<codeline><highlight class="normal">info.param<sp/><sp/>=<sp/>&quot;--help&quot;;</highlight></codeline>
+<codeline><highlight class="normal">info.sparam<sp/>=<sp/>&quot;-h&quot;;</highlight></codeline>
+<codeline><highlight class="normal">info.help<sp/><sp/><sp/>=<sp/>&quot;Show<sp/>this<sp/>help&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">cvec_push(&amp;info.aliases,<sp/>const<sp/>char<sp/>*,<sp/>&quot;-?&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">apc_add(&amp;parser,<sp/>info);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>4.<sp/>Query<sp/>Arguments</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`bool<sp/>apc_get(APC_ArgParser<sp/>*argpar,<sp/>const<sp/>char<sp/>*id);`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Checks<sp/>whether<sp/>a<sp/>registered<sp/>argument<sp/>is<sp/>present<sp/>in<sp/>`argv`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Returns:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`true`<sp/>if<sp/>the<sp/>argument<sp/>exists</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`false`<sp/>otherwise</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(apc_get(&amp;parser,<sp/>&quot;version&quot;))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(&quot;Version:<sp/>%i.%i.%i\n&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>APC_VERSION_MAJOR,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>APC_VERSION_MINOR,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>APC_VERSION_PATCH);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>5.<sp/>Generate<sp/>Help<sp/>Text</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`char<sp/>*apc_generateHelp(APC_ArgParser<sp/>*argpar,<sp/>const<sp/>char<sp/>\*title,<sp/>const<sp/>char<sp/>\*topInfo,<sp/>const<sp/>char<sp/>\*lowerInfo);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Generates<sp/>a<sp/>formatted<sp/>help<sp/>message<sp/>based<sp/>on<sp/>registered<sp/>arguments</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Parameters:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`title`<sp/>—<sp/>Help<sp/>title</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`topInfo`<sp/>—<sp/>Optional<sp/>description<sp/>or<sp/>introduction</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`lowerInfo`<sp/>—<sp/>Optional<sp/>footer<sp/>text<sp/>(license,<sp/>notes,<sp/>etc...)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Returns:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Dynamically<sp/>allocated<sp/>string<sp/>(must<sp/>be<sp/>freed)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">else<sp/>if<sp/>(apc_get(&amp;parser,<sp/>&quot;help&quot;))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/>char<sp/>*license<sp/>=</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\nVery<sp/>cool<sp/>license\n&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>char<sp/>*helpMsg<sp/>=<sp/>apc_generateHelp(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;parser,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;APC<sp/>Help&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;ArgParser-C<sp/>demonstration<sp/>program\n&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>license);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(&quot;%s\n&quot;,<sp/>helpMsg);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>APC_FREE(helpMsg);<sp/>//<sp/>Internal<sp/>automatic<sp/>free()<sp/>function</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>6.<sp/>Cleanup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`void<sp/>apc_destroy(APC_ArgParser<sp/>*argpar);`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Frees<sp/>all<sp/>allocated<sp/>resources<sp/>used<sp/>by<sp/>the<sp/>parser</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Example</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">apc_destroy(&amp;parser);</highlight></codeline>
+<codeline><highlight class="normal">return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Public<sp/>API<sp/>Reference</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Below<sp/>is<sp/>a<sp/>summary<sp/>of<sp/>the<sp/>non-private<sp/>(public)<sp/>API<sp/>functions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>`apc_init`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Initializes<sp/>the<sp/>argument<sp/>parser</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">APC_ArgParser<sp/>apc_init(int<sp/>argc,<sp/>char<sp/>*argv[]);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>`apc_initInfo`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Creates<sp/>a<sp/>clean<sp/>`APC_ArgInfo`<sp/>structure</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">APC_ArgInfo<sp/>apc_initInfo(void);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>`apc_add`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Registers<sp/>an<sp/>argument<sp/>definition</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>apc_add(APC_ArgParser<sp/>*argpar,<sp/>APC_ArgInfo<sp/>info);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>`apc_get`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Checks<sp/>if<sp/>a<sp/>registered<sp/>argument<sp/>exists</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>apc_get(APC_ArgParser<sp/>*argpar,<sp/>const<sp/>char<sp/>*id);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>`apc_generateHelp`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Automatically<sp/>builds<sp/>formatted<sp/>help<sp/>text</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">char<sp/>*apc_generateHelp(APC_ArgParser<sp/>*argpar,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>*title,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>*topInfo,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>*lowerInfo);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Memory<sp/>ownership:</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>returned<sp/>string<sp/>must<sp/>be<sp/>released<sp/>using<sp/>`APC_FREE()`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>`apc_destroy`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Destroys<sp/>the<sp/>parser<sp/>and<sp/>frees<sp/>all<sp/>internal<sp/>allocations</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>apc_destroy(APC_ArgParser<sp/>*argpar);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Summary</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Typical<sp/>usage:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Initialize<sp/>parser<sp/>(`apc_init`)</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Create<sp/>argument<sp/>definitions<sp/>that<sp/>can<sp/>be<sp/>modified<sp/>(`apc_initInfo`)</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Register<sp/>arguments<sp/>(`apc_add`)</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Query<sp/>arguments<sp/>(`apc_get`)</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Optionally<sp/>generate<sp/>help<sp/>(`apc_generateHelp`)</highlight></codeline>
+<codeline><highlight class="normal">6.<sp/>Destroy<sp/>parser<sp/>(`apc_destroy`)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>API<sp/>is<sp/>intentionally<sp/>minimal<sp/>and<sp/>explicit,<sp/>designed<sp/>to<sp/>remain<sp/>simple,</highlight></codeline>
+<codeline><highlight class="normal">predictable,<sp/>and<sp/>suitable<sp/>for<sp/>low-level<sp/>C<sp/>projects</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>
