@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['len_0',['len',['../de/d5e/structCSTR.html#a4d4fd3c90e98dd67542e65b6b388980b',1,'CSTR']]]
+  ['initialized_0',['initialized',['../de/d5e/structCSTR.html#a3e40b8f4e913a6e2d49df1f8e16bd323',1,'CSTR']]],
+  ['internal_20helpers_1',['Internal Helpers',['../index.html#autotoc_md11',1,'']]]
 ];

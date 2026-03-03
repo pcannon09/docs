@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['features_0',['Features',['../index.html#autotoc_md5',1,'']]]
+  ['error_20handling_0',['Error Handling',['../index.html#autotoc_md9',1,'']]]
 ];

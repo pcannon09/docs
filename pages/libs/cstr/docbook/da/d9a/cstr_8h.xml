@@ -14,6 +14,10 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
+            <listitem><para>int <link linkend="_cstr_8h_1a3538e4487989d450230e96419f143e8a">__cstr_join</link> (<link linkend="_structCSTR">CSTR</link> *_str, const char *_arr[], const size_t _count)</para>
+
+<para>Add content using an array (From Private API). </para>
+</listitem>
             <listitem><para>static int <link linkend="_cstr_8h_1aa36f129519da357efafe1e2fb11df576">__cstr_setFormat</link> (<link linkend="_structCSTR">CSTR</link> *_str, const char *_fmt,...)</para>
 
 <para>Internal helper to format and set the string content. </para>
@@ -90,6 +94,8 @@
 
 <para>Create a numeric string from a long. </para>
 </listitem>
+            <listitem><para>static void <link linkend="_cstr_8h_1a60795117c0ef5a3bb4757653e4527977">CSTR_GET_CONST_RETURN_warning</link> (void) __attribute__((deprecated(&quot;CSTR_GET_CONST_RETURN is no longer maintained</para>
+</listitem>
             <listitem><para><link linkend="_structCSTR">CSTR</link> <link linkend="_cstr_8h_1ac6b2cbbf55bc53365030b1549166f7c8">cstr_init</link> (void)</para>
 
 <para>Initialize a new empty <link linkend="_structCSTR">CSTR</link>. </para>
@@ -140,8 +146,60 @@
 </listitem>
         </itemizedlist>
 </simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>memory leaks can t be <link linkend="_cstr_8h_1adc40c9420566e6cdd89964b91923b9f5">removed</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
 <section>
 <title>Function Documentation</title>
+<anchor xml:id="_cstr_8h_1a3538e4487989d450230e96419f143e8a"/><section>
+    <title>__cstr_join()</title>
+<indexterm><primary>__cstr_join</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>__cstr_join</secondary></indexterm>
+<para><computeroutput>int __cstr_join (<link linkend="_structCSTR">CSTR</link> * _str, const char * _arr[], const size_t _count)</computeroutput></para><para>
+
+<para>Add content using an array (From Private API). </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_str</entry><entry>
+<para>Pointer to the <link linkend="_structCSTR">CSTR</link> to modify </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_arr</entry><entry>
+<para>Array to add to the string </para>
+</entry>
+                            </row>
+                            <row>
+<entry>count</entry><entry>
+<para>The size of the array </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CSTR_SUCCESS, CSTR_FAIL, or others from the <computeroutput><link linkend="_cstr_8h_1a7a74e1845b0b12ce83fee782b9106f13">cstr_add()</link></computeroutput> function </para>
+</formalpara>
+</para>
+</section>
 <anchor xml:id="_cstr_8h_1aa36f129519da357efafe1e2fb11df576"/><section>
     <title>__cstr_setFormat()</title>
 <indexterm><primary>__cstr_setFormat</primary><secondary>cstr.h</secondary></indexterm>
@@ -723,6 +781,14 @@ Parameters</title>
 <para>Create a numeric string from a long. </para>
 </para>
 </section>
+<anchor xml:id="_cstr_8h_1a60795117c0ef5a3bb4757653e4527977"/><section>
+    <title>CSTR_GET_CONST_RETURN_warning()</title>
+<indexterm><primary>CSTR_GET_CONST_RETURN_warning</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>CSTR_GET_CONST_RETURN_warning</secondary></indexterm>
+<para><computeroutput>void CSTR_GET_CONST_RETURN_warning (void )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_cstr_8h_source_1l00428">428</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
+<programlisting linenumbering="unnumbered">00428 {&#32;}
+</programlisting></section>
 <anchor xml:id="_cstr_8h_1ac6b2cbbf55bc53365030b1549166f7c8"/><section>
     <title>cstr_init()</title>
 <indexterm><primary>cstr_init</primary><secondary>cstr.h</secondary></indexterm>
@@ -1182,6 +1248,16 @@ Parameters</title>
 <para>CSTR_SUCCESS or CSTR_FAIL </para>
 </formalpara>
 </para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_cstr_8h_1adc40c9420566e6cdd89964b91923b9f5"/><section>
+    <title>removed</title>
+<indexterm><primary>removed</primary><secondary>cstr.h</secondary></indexterm>
+<indexterm><primary>cstr.h</primary><secondary>removed</secondary></indexterm>
+<para><computeroutput>memory leaks can t be removed</computeroutput></para><para>
+Definition at line <link linkend="_cstr_8h_source_1l00427">427</link> of file <link linkend="_cstr_8h_source">cstr.h</link>.</para>
 </section>
 </section>
 </section>

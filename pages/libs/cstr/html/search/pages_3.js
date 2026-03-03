@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['compilers_0',['Supported Compilers',['../index.html#autotoc_md4',1,'']]],
-  ['cstr_1',['CSTR',['../index.html',1,'']]]
+  ['basic_20usage_0',['Basic Usage',['../index.html#autotoc_md7',1,'']]]
 ];

@@ -1,6 +1,7 @@
 var cstr_8h =
 [
     [ "CSTR", "de/d5e/structCSTR.html", "de/d5e/structCSTR" ],
+    [ "__cstr_join", "da/d9a/cstr_8h.html#a3538e4487989d450230e96419f143e8a", null ],
     [ "__cstr_setFormat", "da/d9a/cstr_8h.html#aa36f129519da357efafe1e2fb11df576", null ],
     [ "__cstr_updateCap", "da/d9a/cstr_8h.html#aa64fd1fa39e95f059301cde622fe1895", null ],
     [ "cstr_add", "da/d9a/cstr_8h.html#a7a74e1845b0b12ce83fee782b9106f13", null ],
@@ -20,6 +21,7 @@ var cstr_8h =
     [ "cstr_fromHex", "da/d9a/cstr_8h.html#a3afbc750e95934020262efc1a0a4d11a", null ],
     [ "cstr_fromInt", "da/d9a/cstr_8h.html#a536dc346ad93e3750e1842ea43bb4450", null ],
     [ "cstr_fromLong", "da/d9a/cstr_8h.html#ab5087cdbf0f78126f767966a4fd61cb2", null ],
+    [ "CSTR_GET_CONST_RETURN_warning", "da/d9a/cstr_8h.html#a60795117c0ef5a3bb4757653e4527977", null ],
     [ "cstr_init", "da/d9a/cstr_8h.html#ac6b2cbbf55bc53365030b1549166f7c8", null ],
     [ "cstr_initCopy", "da/d9a/cstr_8h.html#a94a452fa90f6788aca985a9afaa6ba36", null ],
     [ "cstr_insert", "da/d9a/cstr_8h.html#a0ba51ccc14c1f17db5b453aa857c92eb", null ],
@@ -31,5 +33,6 @@ var cstr_8h =
     [ "cstr_shrink", "da/d9a/cstr_8h.html#a3f8f5540a61c0814d0518cd2bad72eb8", null ],
     [ "cstr_startsWith", "da/d9a/cstr_8h.html#a5d7d68335475e3e92ad7af71c1436f01", null ],
     [ "cstr_substr", "da/d9a/cstr_8h.html#a48a4112d753f753d4d8725fc3e7c5a33", null ],
-    [ "cstr_upper", "da/d9a/cstr_8h.html#a9a33ebbb1989f05327b1b5464de45b31", null ]
+    [ "cstr_upper", "da/d9a/cstr_8h.html#a9a33ebbb1989f05327b1b5464de45b31", null ],
+    [ "removed", "da/d9a/cstr_8h.html#adc40c9420566e6cdd89964b91923b9f5", null ]
 ];

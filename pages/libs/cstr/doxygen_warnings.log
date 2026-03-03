@@ -1,1 +1,5 @@
+/home/pcannon/repo/programming/c/cstr/inc/cstr/cstr.h:404: warning: found documented #define cstr_join but ignoring it because ENABLE_PREPROCESSING is NO.
 /home/pcannon/repo/programming/c/cstr/inc/cstr/CSTRpredefines.h:10: warning: found documented #define CSTR_DEFAULT_C_STD but ignoring it because ENABLE_PREPROCESSING is NO.
+/home/pcannon/repo/programming/c/cstr/inc/cstr/cstr.h:167: warning: argument 'count' of command @param is not found in the argument list of __cstr_join(CSTR *_str, const char *_arr[], const size_t _count)
+/home/pcannon/repo/programming/c/cstr/inc/cstr/cstr.h:167: warning: The following parameter of __cstr_join(CSTR *_str, const char *_arr[], const size_t _count) is not documented:
+  parameter '_count'

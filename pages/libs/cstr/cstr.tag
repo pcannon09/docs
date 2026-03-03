@@ -1,10 +1,17 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.15.0">
+<tagfile doxygen_version="1.16.1">
   <compound kind="file">
     <name>cstr.h</name>
     <path>inc/cstr/</path>
     <filename>da/d9a/cstr_8h.html</filename>
     <class kind="struct">CSTR</class>
+    <member kind="function">
+      <type>int</type>
+      <name>__cstr_join</name>
+      <anchorfile>da/d9a/cstr_8h.html</anchorfile>
+      <anchor>a3538e4487989d450230e96419f143e8a</anchor>
+      <arglist>(CSTR *_str, const char *_arr[], const size_t _count)</arglist>
+    </member>
     <member kind="function" static="yes">
       <type>static int</type>
       <name>__cstr_setFormat</name>
@@ -138,6 +145,13 @@
       <anchor>ab5087cdbf0f78126f767966a4fd61cb2</anchor>
       <arglist>(CSTR *_str, long _val)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>CSTR_GET_CONST_RETURN_warning</name>
+      <anchorfile>da/d9a/cstr_8h.html</anchorfile>
+      <anchor>a60795117c0ef5a3bb4757653e4527977</anchor>
+      <arglist>(void) __attribute__((deprecated(&quot;CSTR_GET_CONST_RETURN is no longer maintained</arglist>
+    </member>
     <member kind="function">
       <type>CSTR</type>
       <name>cstr_init</name>
@@ -221,6 +235,13 @@
       <anchorfile>da/d9a/cstr_8h.html</anchorfile>
       <anchor>a9a33ebbb1989f05327b1b5464de45b31</anchor>
       <arglist>(CSTR *_str)</arglist>
+    </member>
+    <member kind="variable">
+      <type>memory leaks can t be</type>
+      <name>removed</name>
+      <anchorfile>da/d9a/cstr_8h.html</anchorfile>
+      <anchor>adc40c9420566e6cdd89964b91923b9f5</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="file">

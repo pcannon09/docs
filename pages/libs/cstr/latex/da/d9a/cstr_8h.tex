@@ -1,91 +1,122 @@
-\doxysection{inc/cstr/cstr.h File Reference}
+\doxysection{inc/\+cstr/\+cstr.h File Reference}
 \hypertarget{cstr_8h}{}\label{cstr_8h}\index{inc/cstr/cstr.h@{inc/cstr/cstr.h}}
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structCSTR}{CSTR}}
+struct \doxymbox{\hyperlink{structCSTR}{CSTR}}
 \begin{DoxyCompactList}\small\item\em Custom dynamic string type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-static int \mbox{\hyperlink{cstr_8h_aa36f129519da357efafe1e2fb11df576}{\+\_\+\+\_\+cstr\+\_\+set\+Format}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+fmt,...)
+int \doxymbox{\hyperlink{cstr_8h_a3538e4487989d450230e96419f143e8a}{\+\_\+\+\_\+cstr\+\_\+join}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+arr\+[$\,$]\+, const size\+\_\+t \+\_\+count)
+\begin{DoxyCompactList}\small\item\em Add content using an array (From Private API). \end{DoxyCompactList}\item 
+static int \doxymbox{\hyperlink{cstr_8h_aa36f129519da357efafe1e2fb11df576}{\+\_\+\+\_\+cstr\+\_\+set\+Format}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+fmt,...)
 \begin{DoxyCompactList}\small\item\em Internal helper to format and set the string content. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_aa64fd1fa39e95f059301cde622fe1895}{\+\_\+\+\_\+cstr\+\_\+update\+Cap}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
-\begin{DoxyCompactList}\small\item\em Update the capacity automatically IMPORTANT\+: This function won\textquotesingle{}t do anything if macro {\ttfamily CSTR\+\_\+\+DYNAMIC\+\_\+\+CAPACITY} is NOT defined. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a7a74e1845b0b12ce83fee782b9106f13}{cstr\+\_\+add}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+suffix)
+int \doxymbox{\hyperlink{cstr_8h_aa64fd1fa39e95f059301cde622fe1895}{\+\_\+\+\_\+cstr\+\_\+update\+Cap}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Update the capacity automatically IMPORTANT:\+ This function won\textquotesingle{}t do anything if macro {\ttfamily CSTR\+\_\+\+DYNAMIC\+\_\+\+CAPACITY} is NOT defined. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{cstr_8h_a7a74e1845b0b12ce83fee782b9106f13}{cstr\+\_\+add}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+suffix)
 \begin{DoxyCompactList}\small\item\em Append a suffix to the end of a \doxylink{structCSTR}{CSTR}. \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cstr_8h_acf036d9c3a58a17c081904e6c79d5317}{cstr\+\_\+bool}} (const bool \+\_\+bool)
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cstr_8h_acf036d9c3a58a17c081904e6c79d5317}{cstr\+\_\+bool}} (const bool \+\_\+bool)
 \begin{DoxyCompactList}\small\item\em Return "{}true"{} or "{}false"{} based on a boolean value. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_af89d1a993ff85c0be3926ff1541d8c57}{cstr\+\_\+clear}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
+int \doxymbox{\hyperlink{cstr_8h_af89d1a993ff85c0be3926ff1541d8c57}{cstr\+\_\+clear}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
 \begin{DoxyCompactList}\small\item\em Clear a \doxylink{structCSTR}{CSTR} to an empty string without freeing memory. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{cstr_8h_a19f903d2ed994c92fea4c65903c3b552}{cstr\+\_\+comp}} (const \mbox{\hyperlink{structCSTR}{CSTR}} \+\_\+s1, const \mbox{\hyperlink{structCSTR}{CSTR}} \+\_\+s2)
+bool \doxymbox{\hyperlink{cstr_8h_a19f903d2ed994c92fea4c65903c3b552}{cstr\+\_\+comp}} (const \doxymbox{\hyperlink{structCSTR}{CSTR}} \+\_\+s1, const \doxymbox{\hyperlink{structCSTR}{CSTR}} \+\_\+s2)
 \begin{DoxyCompactList}\small\item\em Compare two \doxylink{structCSTR}{CSTR} instances for equality. \end{DoxyCompactList}\item 
-size\+\_\+t \mbox{\hyperlink{cstr_8h_ae07aeae717d83af2b1bcd181221527a7}{cstr\+\_\+count}} (const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}ch)
+size\+\_\+t \doxymbox{\hyperlink{cstr_8h_ae07aeae717d83af2b1bcd181221527a7}{cstr\+\_\+count}} (const \doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}ch)
 \begin{DoxyCompactList}\small\item\em Count occurrences of a substring within a \doxylink{structCSTR}{CSTR}. \end{DoxyCompactList}\item 
-size\+\_\+t \mbox{\hyperlink{cstr_8h_ad1500bd3765251407dc2769755c6e0f6}{cstr\+\_\+count\+Char}} (const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char ch)
+size\+\_\+t \doxymbox{\hyperlink{cstr_8h_ad1500bd3765251407dc2769755c6e0f6}{cstr\+\_\+count\+Char}} (const \doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char ch)
 \begin{DoxyCompactList}\small\item\em Count occurrences of a single character within a \doxylink{structCSTR}{CSTR}. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a409ae3278ea2df20ece65251e829075a}{cstr\+\_\+destroy}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
+int \doxymbox{\hyperlink{cstr_8h_a409ae3278ea2df20ece65251e829075a}{cstr\+\_\+destroy}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
 \begin{DoxyCompactList}\small\item\em Destroy and clean up a \doxylink{structCSTR}{CSTR} and its allocated objects. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{cstr_8h_aac10925de8ce0961faa123541f9e3bab}{cstr\+\_\+empty}} (const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
-\begin{DoxyCompactList}\small\item\em Get if the string is empty Return true if\+: {\ttfamily .len} smaller or equal to 0 {\ttfamily .data} is empty ("{}"{}) {\ttfamily .initialized} is false {\ttfamily \+\_\+str} is NULL If none of the requirements are met, means that it\textquotesingle{}s not empty, hence, return false. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{cstr_8h_afa6b390abaebf90c0ffe07c92662bdcc}{cstr\+\_\+ends\+With}} (const \mbox{\hyperlink{structCSTR}{CSTR}} \+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+suffix)
+bool \doxymbox{\hyperlink{cstr_8h_aac10925de8ce0961faa123541f9e3bab}{cstr\+\_\+empty}} (const \doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Get if the string is empty Return true if:\+ {\ttfamily .len} smaller or equal to 0 {\ttfamily .data} is empty ("{}"{}) {\ttfamily .initialized} is false {\ttfamily \+\_\+str} is NULL If none of the requirements are met, means that it\textquotesingle{}s not empty, hence, return false. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{cstr_8h_afa6b390abaebf90c0ffe07c92662bdcc}{cstr\+\_\+ends\+With}} (const \doxymbox{\hyperlink{structCSTR}{CSTR}} \+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+suffix)
 \begin{DoxyCompactList}\small\item\em Check if a \doxylink{structCSTR}{CSTR} ends with the given suffix. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a629281b6e3cecf239e0c1d05cd242b35}{cstr\+\_\+erase}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, int \+\_\+pos, size\+\_\+t \+\_\+len)
+int \doxymbox{\hyperlink{cstr_8h_a629281b6e3cecf239e0c1d05cd242b35}{cstr\+\_\+erase}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, int \+\_\+pos, size\+\_\+t \+\_\+len)
 \begin{DoxyCompactList}\small\item\em Erase a portion of the string. \end{DoxyCompactList}\item 
-size\+\_\+t \mbox{\hyperlink{cstr_8h_ababe5de017b72cf0fbc1c1f74bc22337}{cstr\+\_\+find}} (const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+find)
+size\+\_\+t \doxymbox{\hyperlink{cstr_8h_ababe5de017b72cf0fbc1c1f74bc22337}{cstr\+\_\+find}} (const \doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+find)
 \begin{DoxyCompactList}\small\item\em Find the first occurrence of a substring. \end{DoxyCompactList}\item 
-size\+\_\+t \mbox{\hyperlink{cstr_8h_af211d3b88dcfbfa8d8e467c819017e5d}{cstr\+\_\+find\+From}} (const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+find, size\+\_\+t pos)
+size\+\_\+t \doxymbox{\hyperlink{cstr_8h_af211d3b88dcfbfa8d8e467c819017e5d}{cstr\+\_\+find\+From}} (const \doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+find, size\+\_\+t pos)
 \begin{DoxyCompactList}\small\item\em Find a substring starting from a specific index. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a5e208d26ff6fcc88a7ddb77fd332bbe7}{cstr\+\_\+from\+Double}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, double \+\_\+val)
+int \doxymbox{\hyperlink{cstr_8h_a5e208d26ff6fcc88a7ddb77fd332bbe7}{cstr\+\_\+from\+Double}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, double \+\_\+val)
 \begin{DoxyCompactList}\small\item\em Create a numeric string from a double. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a37ba4068bdf1af73b0781ffe9ea7f8b8}{cstr\+\_\+from\+Float}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, float \+\_\+val)
+int \doxymbox{\hyperlink{cstr_8h_a37ba4068bdf1af73b0781ffe9ea7f8b8}{cstr\+\_\+from\+Float}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, float \+\_\+val)
 \begin{DoxyCompactList}\small\item\em Create a numeric string from a float. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a3afbc750e95934020262efc1a0a4d11a}{cstr\+\_\+from\+Hex}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, unsigned int \+\_\+val)
+int \doxymbox{\hyperlink{cstr_8h_a3afbc750e95934020262efc1a0a4d11a}{cstr\+\_\+from\+Hex}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, unsigned int \+\_\+val)
 \begin{DoxyCompactList}\small\item\em Create a hexadecimal string from an unsigned integer. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a536dc346ad93e3750e1842ea43bb4450}{cstr\+\_\+from\+Int}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, int \+\_\+val)
+int \doxymbox{\hyperlink{cstr_8h_a536dc346ad93e3750e1842ea43bb4450}{cstr\+\_\+from\+Int}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, int \+\_\+val)
 \begin{DoxyCompactList}\small\item\em Create a numeric string from an integer. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_ab5087cdbf0f78126f767966a4fd61cb2}{cstr\+\_\+from\+Long}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, long \+\_\+val)
+int \doxymbox{\hyperlink{cstr_8h_ab5087cdbf0f78126f767966a4fd61cb2}{cstr\+\_\+from\+Long}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, long \+\_\+val)
 \begin{DoxyCompactList}\small\item\em Create a numeric string from a long. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structCSTR}{CSTR}} \mbox{\hyperlink{cstr_8h_ac6b2cbbf55bc53365030b1549166f7c8}{cstr\+\_\+init}} (void)
+static void \doxymbox{\hyperlink{cstr_8h_a60795117c0ef5a3bb4757653e4527977}{CSTR\+\_\+\+GET\+\_\+\+CONST\+\_\+\+RETURN\+\_\+warning}} (void) \+\_\+\+\_\+attribute\+\_\+\+\_\+((deprecated("{}CSTR\+\_\+\+GET\+\_\+\+CONST\+\_\+\+RETURN is no longer maintained
+\item 
+\doxymbox{\hyperlink{structCSTR}{CSTR}} \doxymbox{\hyperlink{cstr_8h_ac6b2cbbf55bc53365030b1549166f7c8}{cstr\+\_\+init}} (void)
 \begin{DoxyCompactList}\small\item\em Initialize a new empty \doxylink{structCSTR}{CSTR}. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a94a452fa90f6788aca985a9afaa6ba36}{cstr\+\_\+init\+Copy}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+dest, const char \texorpdfstring{$\ast$}{*}\+\_\+src)
+int \doxymbox{\hyperlink{cstr_8h_a94a452fa90f6788aca985a9afaa6ba36}{cstr\+\_\+init\+Copy}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+dest, const char \texorpdfstring{$\ast$}{*}\+\_\+src)
 \begin{DoxyCompactList}\small\item\em Initialize a \doxylink{structCSTR}{CSTR} with a copy of an original C-\/string. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a0ba51ccc14c1f17db5b453aa857c92eb}{cstr\+\_\+insert}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+data, size\+\_\+t \+\_\+pos)
+int \doxymbox{\hyperlink{cstr_8h_a0ba51ccc14c1f17db5b453aa857c92eb}{cstr\+\_\+insert}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+data, size\+\_\+t \+\_\+pos)
 \begin{DoxyCompactList}\small\item\em Insert a string at a specific position in a \doxylink{structCSTR}{CSTR}. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a1dba58127f74ebaa9244dc9bff79b065}{cstr\+\_\+lower}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
+int \doxymbox{\hyperlink{cstr_8h_a1dba58127f74ebaa9244dc9bff79b065}{cstr\+\_\+lower}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
 \begin{DoxyCompactList}\small\item\em Convert all characters in a \doxylink{structCSTR}{CSTR} to lowercase. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_ad5ffa3660e5c00c93763589cb4d55ea8}{cstr\+\_\+replace}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+old, const char \texorpdfstring{$\ast$}{*}\+\_\+new)
+int \doxymbox{\hyperlink{cstr_8h_ad5ffa3660e5c00c93763589cb4d55ea8}{cstr\+\_\+replace}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+old, const char \texorpdfstring{$\ast$}{*}\+\_\+new)
 \begin{DoxyCompactList}\small\item\em Replace only the first occurrence of a substring. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a260c899e712785b5e45f07c6b4d6a934}{cstr\+\_\+replace\+All}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+old, const char \texorpdfstring{$\ast$}{*}\+\_\+new)
+int \doxymbox{\hyperlink{cstr_8h_a260c899e712785b5e45f07c6b4d6a934}{cstr\+\_\+replace\+All}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+old, const char \texorpdfstring{$\ast$}{*}\+\_\+new)
 \begin{DoxyCompactList}\small\item\em Replace all occurrences of a substring. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a184ac1e789dc883dbb3b61c2ab3155d8}{cstr\+\_\+reverse}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
+int \doxymbox{\hyperlink{cstr_8h_a184ac1e789dc883dbb3b61c2ab3155d8}{cstr\+\_\+reverse}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
 \begin{DoxyCompactList}\small\item\em Reverse the content of a \doxylink{structCSTR}{CSTR} in place. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a5869f4de55dbc9604a41377a98a5d8d1}{cstr\+\_\+set}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+data)
+int \doxymbox{\hyperlink{cstr_8h_a5869f4de55dbc9604a41377a98a5d8d1}{cstr\+\_\+set}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+data)
 \begin{DoxyCompactList}\small\item\em Set the content of a \doxylink{structCSTR}{CSTR} to a new C-\/string in {\ttfamily .data}. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a3f8f5540a61c0814d0518cd2bad72eb8}{cstr\+\_\+shrink}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const size\+\_\+t \+\_\+len)
+int \doxymbox{\hyperlink{cstr_8h_a3f8f5540a61c0814d0518cd2bad72eb8}{cstr\+\_\+shrink}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, const size\+\_\+t \+\_\+len)
 \begin{DoxyCompactList}\small\item\em Clear the content of a \doxylink{structCSTR}{CSTR} and optionally shrink capacity. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{cstr_8h_a5d7d68335475e3e92ad7af71c1436f01}{cstr\+\_\+starts\+With}} (\mbox{\hyperlink{structCSTR}{CSTR}} \+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+prefix)
+bool \doxymbox{\hyperlink{cstr_8h_a5d7d68335475e3e92ad7af71c1436f01}{cstr\+\_\+starts\+With}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \+\_\+str, const char \texorpdfstring{$\ast$}{*}\+\_\+prefix)
 \begin{DoxyCompactList}\small\item\em Check if a \doxylink{structCSTR}{CSTR} begins with the given prefix. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a48a4112d753f753d4d8725fc3e7c5a33}{cstr\+\_\+substr}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, size\+\_\+t \+\_\+start, size\+\_\+t \+\_\+len)
+int \doxymbox{\hyperlink{cstr_8h_a48a4112d753f753d4d8725fc3e7c5a33}{cstr\+\_\+substr}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str, size\+\_\+t \+\_\+start, size\+\_\+t \+\_\+len)
 \begin{DoxyCompactList}\small\item\em Extract a substring in place from a \doxylink{structCSTR}{CSTR}. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{cstr_8h_a9a33ebbb1989f05327b1b5464de45b31}{cstr\+\_\+upper}} (\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
+int \doxymbox{\hyperlink{cstr_8h_a9a33ebbb1989f05327b1b5464de45b31}{cstr\+\_\+upper}} (\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}\+\_\+str)
 \begin{DoxyCompactList}\small\item\em Convert all characters in a \doxylink{structCSTR}{CSTR} to uppercase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+memory leaks can t be \doxymbox{\hyperlink{cstr_8h_adc40c9420566e6cdd89964b91923b9f5}{removed}}
+\end{DoxyCompactItemize}
 
 
 \label{doc-func-members}
 \Hypertarget{cstr_8h_doc-func-members}
 \doxysubsection{Function Documentation}
+\Hypertarget{cstr_8h_a3538e4487989d450230e96419f143e8a}\index{cstr.h@{cstr.h}!\_\_cstr\_join@{\_\_cstr\_join}}
+\index{\_\_cstr\_join@{\_\_cstr\_join}!cstr.h@{cstr.h}}
+\doxysubsubsection{\texorpdfstring{\_\_cstr\_join()}{\_\_cstr\_join()}}
+{\footnotesize\ttfamily \label{cstr_8h_a3538e4487989d450230e96419f143e8a} 
+int \+\_\+\+\_\+cstr\+\_\+join (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+arr}{\+[$\,$]\+, }\item[{const size\+\_\+t}]{\+\_\+count}{}\end{DoxyParamCaption})}
+
+
+
+Add content using an array (From Private API). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+str} & Pointer to the \doxylink{structCSTR}{CSTR} to modify \\
+\hline
+{\em \+\_\+arr} & Array to add to the string \\
+\hline
+{\em count} & The size of the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CSTR\+\_\+\+SUCCESS, CSTR\+\_\+\+FAIL, or others from the {\ttfamily \doxylink{cstr_8h_a7a74e1845b0b12ce83fee782b9106f13}{cstr\+\_\+add()}} function 
+\end{DoxyReturn}
 \Hypertarget{cstr_8h_aa36f129519da357efafe1e2fb11df576}\index{cstr.h@{cstr.h}!\_\_cstr\_setFormat@{\_\_cstr\_setFormat}}
 \index{\_\_cstr\_setFormat@{\_\_cstr\_setFormat}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{\_\_cstr\_setFormat()}{\_\_cstr\_setFormat()}}
 {\footnotesize\ttfamily \label{cstr_8h_aa36f129519da357efafe1e2fb11df576} 
-int \+\_\+\+\_\+cstr\+\_\+set\+Format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+fmt}{, }\item[{}]{...}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+int \+\_\+\+\_\+cstr\+\_\+set\+Format (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+fmt}{, }\item[{}]{...}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 Internal helper to format and set the string content. 
 
-Uses a printf-\/style format string and variadic arguments to overwrite the content of a \doxylink{structCSTR}{CSTR}. The function computes the required buffer size, reallocates if needed (unless force\+Cap is active), formats the string, and updates length/capacity.
+Uses a printf-\/style format string and variadic arguments to overwrite the content of a \doxylink{structCSTR}{CSTR}. The function computes the required buffer size, reallocates if needed (unless force\+Cap is active), formats the string, and updates length/\+capacity.
 
 
 \begin{DoxyParams}{Parameters}
@@ -111,11 +142,11 @@ Typically used in the other defined functions for \doxylink{structCSTR}{CSTR} in
 \index{\_\_cstr\_updateCap@{\_\_cstr\_updateCap}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{\_\_cstr\_updateCap()}{\_\_cstr\_updateCap()}}
 {\footnotesize\ttfamily \label{cstr_8h_aa64fd1fa39e95f059301cde622fe1895} 
-int \+\_\+\+\_\+cstr\+\_\+update\+Cap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
+int \+\_\+\+\_\+cstr\+\_\+update\+Cap (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
 
 
 
-Update the capacity automatically IMPORTANT\+: This function won\textquotesingle{}t do anything if macro {\ttfamily CSTR\+\_\+\+DYNAMIC\+\_\+\+CAPACITY} is NOT defined. 
+Update the capacity automatically IMPORTANT:\+ This function won\textquotesingle{}t do anything if macro {\ttfamily CSTR\+\_\+\+DYNAMIC\+\_\+\+CAPACITY} is NOT defined. 
 
 \begin{DoxyReturn}{Returns}
 Return if fail or success 
@@ -127,7 +158,7 @@ Typically used in the other defined functions for \doxylink{structCSTR}{CSTR} in
 \index{cstr\_add@{cstr\_add}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_add()}{cstr\_add()}}
 {\footnotesize\ttfamily \label{cstr_8h_a7a74e1845b0b12ce83fee782b9106f13} 
-int cstr\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+suffix}{}\end{DoxyParamCaption})}
+int cstr\+\_\+add (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+suffix}{}\end{DoxyParamCaption})}
 
 
 
@@ -165,7 +196,7 @@ Return "{}true"{} or "{}false"{} based on a boolean value.
 \index{cstr\_clear@{cstr\_clear}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_clear()}{cstr\_clear()}}
 {\footnotesize\ttfamily \label{cstr_8h_af89d1a993ff85c0be3926ff1541d8c57} 
-int cstr\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
+int cstr\+\_\+clear (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
 
 
 
@@ -183,7 +214,7 @@ CSTR\+\_\+\+SUCCESS or CSTR\+\_\+\+FAIL
 \index{cstr\_comp@{cstr\_comp}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_comp()}{cstr\_comp()}}
 {\footnotesize\ttfamily \label{cstr_8h_a19f903d2ed994c92fea4c65903c3b552} 
-bool cstr\+\_\+comp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCSTR}{CSTR}}}]{\+\_\+s1}{, }\item[{const \mbox{\hyperlink{structCSTR}{CSTR}}}]{\+\_\+s2}{}\end{DoxyParamCaption})}
+bool cstr\+\_\+comp (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structCSTR}{CSTR}}}]{\+\_\+s1}{, }\item[{const \doxymbox{\hyperlink{structCSTR}{CSTR}}}]{\+\_\+s2}{}\end{DoxyParamCaption})}
 
 
 
@@ -203,7 +234,7 @@ true if equal, false otherwise
 \index{cstr\_count@{cstr\_count}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_count()}{cstr\_count()}}
 {\footnotesize\ttfamily \label{cstr_8h_ae07aeae717d83af2b1bcd181221527a7} 
-size\+\_\+t cstr\+\_\+count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{ch}{}\end{DoxyParamCaption})}
+size\+\_\+t cstr\+\_\+count (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{ch}{}\end{DoxyParamCaption})}
 
 
 
@@ -225,7 +256,7 @@ Number of non-\/overlapping occurrences found Returns 0 if parameters are invali
 \index{cstr\_countChar@{cstr\_countChar}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_countChar()}{cstr\_countChar()}}
 {\footnotesize\ttfamily \label{cstr_8h_ad1500bd3765251407dc2769755c6e0f6} 
-size\+\_\+t cstr\+\_\+count\+Char (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char}]{ch}{}\end{DoxyParamCaption})}
+size\+\_\+t cstr\+\_\+count\+Char (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char}]{ch}{}\end{DoxyParamCaption})}
 
 
 
@@ -250,7 +281,7 @@ This function performs a linear scan across all characters.
 \index{cstr\_destroy@{cstr\_destroy}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_destroy()}{cstr\_destroy()}}
 {\footnotesize\ttfamily \label{cstr_8h_a409ae3278ea2df20ece65251e829075a} 
-int cstr\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
+int cstr\+\_\+destroy (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
 
 
 
@@ -268,11 +299,11 @@ CSTR\+\_\+\+SUCCESS on success, otherwise CSTR\+\_\+\+FAIL
 \index{cstr\_empty@{cstr\_empty}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_empty()}{cstr\_empty()}}
 {\footnotesize\ttfamily \label{cstr_8h_aac10925de8ce0961faa123541f9e3bab} 
-bool cstr\+\_\+empty (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
+bool cstr\+\_\+empty (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
 
 
 
-Get if the string is empty Return true if\+: {\ttfamily .len} smaller or equal to 0 {\ttfamily .data} is empty ("{}"{}) {\ttfamily .initialized} is false {\ttfamily \+\_\+str} is NULL If none of the requirements are met, means that it\textquotesingle{}s not empty, hence, return false. 
+Get if the string is empty Return true if:\+ {\ttfamily .len} smaller or equal to 0 {\ttfamily .data} is empty ("{}"{}) {\ttfamily .initialized} is false {\ttfamily \+\_\+str} is NULL If none of the requirements are met, means that it\textquotesingle{}s not empty, hence, return false. 
 
 \begin{DoxyReturn}{Returns}
 Is the string empty? Yes (true), No (false) 
@@ -281,7 +312,7 @@ Is the string empty? Yes (true), No (false)
 \index{cstr\_endsWith@{cstr\_endsWith}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_endsWith()}{cstr\_endsWith()}}
 {\footnotesize\ttfamily \label{cstr_8h_afa6b390abaebf90c0ffe07c92662bdcc} 
-bool cstr\+\_\+ends\+With (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCSTR}{CSTR}}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+suffix}{}\end{DoxyParamCaption})}
+bool cstr\+\_\+ends\+With (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structCSTR}{CSTR}}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+suffix}{}\end{DoxyParamCaption})}
 
 
 
@@ -301,7 +332,7 @@ true if it ends with suffix, false otherwise
 \index{cstr\_erase@{cstr\_erase}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_erase()}{cstr\_erase()}}
 {\footnotesize\ttfamily \label{cstr_8h_a629281b6e3cecf239e0c1d05cd242b35} 
-int cstr\+\_\+erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{int}]{\+\_\+pos}{, }\item[{size\+\_\+t}]{\+\_\+len}{}\end{DoxyParamCaption})}
+int cstr\+\_\+erase (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{int}]{\+\_\+pos}{, }\item[{size\+\_\+t}]{\+\_\+len}{}\end{DoxyParamCaption})}
 
 
 
@@ -323,7 +354,7 @@ CSTR\+\_\+\+SUCCESS or CSTR\+\_\+\+FAIL
 \index{cstr\_find@{cstr\_find}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_find()}{cstr\_find()}}
 {\footnotesize\ttfamily \label{cstr_8h_ababe5de017b72cf0fbc1c1f74bc22337} 
-size\+\_\+t cstr\+\_\+find (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+find}{}\end{DoxyParamCaption})}
+size\+\_\+t cstr\+\_\+find (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+find}{}\end{DoxyParamCaption})}
 
 
 
@@ -343,7 +374,7 @@ Index of first match, or CSTR\+\_\+\+NPOS if not found
 \index{cstr\_findFrom@{cstr\_findFrom}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_findFrom()}{cstr\_findFrom()}}
 {\footnotesize\ttfamily \label{cstr_8h_af211d3b88dcfbfa8d8e467c819017e5d} 
-size\+\_\+t cstr\+\_\+find\+From (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+find}{, }\item[{size\+\_\+t}]{pos}{}\end{DoxyParamCaption})}
+size\+\_\+t cstr\+\_\+find\+From (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+find}{, }\item[{size\+\_\+t}]{pos}{}\end{DoxyParamCaption})}
 
 
 
@@ -365,7 +396,7 @@ Index of match, or CSTR\+\_\+\+NPOS if not found
 \index{cstr\_fromDouble@{cstr\_fromDouble}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_fromDouble()}{cstr\_fromDouble()}}
 {\footnotesize\ttfamily \label{cstr_8h_a5e208d26ff6fcc88a7ddb77fd332bbe7} 
-int cstr\+\_\+from\+Double (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{double}]{\+\_\+val}{}\end{DoxyParamCaption})}
+int cstr\+\_\+from\+Double (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{double}]{\+\_\+val}{}\end{DoxyParamCaption})}
 
 
 
@@ -375,7 +406,7 @@ Create a numeric string from a double.
 \index{cstr\_fromFloat@{cstr\_fromFloat}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_fromFloat()}{cstr\_fromFloat()}}
 {\footnotesize\ttfamily \label{cstr_8h_a37ba4068bdf1af73b0781ffe9ea7f8b8} 
-int cstr\+\_\+from\+Float (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{float}]{\+\_\+val}{}\end{DoxyParamCaption})}
+int cstr\+\_\+from\+Float (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{float}]{\+\_\+val}{}\end{DoxyParamCaption})}
 
 
 
@@ -385,7 +416,7 @@ Create a numeric string from a float.
 \index{cstr\_fromHex@{cstr\_fromHex}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_fromHex()}{cstr\_fromHex()}}
 {\footnotesize\ttfamily \label{cstr_8h_a3afbc750e95934020262efc1a0a4d11a} 
-int cstr\+\_\+from\+Hex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{unsigned int}]{\+\_\+val}{}\end{DoxyParamCaption})}
+int cstr\+\_\+from\+Hex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{unsigned int}]{\+\_\+val}{}\end{DoxyParamCaption})}
 
 
 
@@ -395,7 +426,7 @@ Create a hexadecimal string from an unsigned integer.
 \index{cstr\_fromInt@{cstr\_fromInt}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_fromInt()}{cstr\_fromInt()}}
 {\footnotesize\ttfamily \label{cstr_8h_a536dc346ad93e3750e1842ea43bb4450} 
-int cstr\+\_\+from\+Int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{int}]{\+\_\+val}{}\end{DoxyParamCaption})}
+int cstr\+\_\+from\+Int (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{int}]{\+\_\+val}{}\end{DoxyParamCaption})}
 
 
 
@@ -405,17 +436,32 @@ Create a numeric string from an integer.
 \index{cstr\_fromLong@{cstr\_fromLong}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_fromLong()}{cstr\_fromLong()}}
 {\footnotesize\ttfamily \label{cstr_8h_ab5087cdbf0f78126f767966a4fd61cb2} 
-int cstr\+\_\+from\+Long (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{long}]{\+\_\+val}{}\end{DoxyParamCaption})}
+int cstr\+\_\+from\+Long (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{long}]{\+\_\+val}{}\end{DoxyParamCaption})}
 
 
 
 Create a numeric string from a long. 
 
+\Hypertarget{cstr_8h_a60795117c0ef5a3bb4757653e4527977}\index{cstr.h@{cstr.h}!CSTR\_GET\_CONST\_RETURN\_warning@{CSTR\_GET\_CONST\_RETURN\_warning}}
+\index{CSTR\_GET\_CONST\_RETURN\_warning@{CSTR\_GET\_CONST\_RETURN\_warning}!cstr.h@{cstr.h}}
+\doxysubsubsection{\texorpdfstring{CSTR\_GET\_CONST\_RETURN\_warning()}{CSTR\_GET\_CONST\_RETURN\_warning()}}
+{\footnotesize\ttfamily \label{cstr_8h_a60795117c0ef5a3bb4757653e4527977} 
+void CSTR\+\_\+\+GET\+\_\+\+CONST\+\_\+\+RETURN\+\_\+warning (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{cstr_8h_source_l00428}{428}} of file \doxymbox{\hyperlink{cstr_8h_source}{cstr.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00428\ \{\ \}}
+
+\end{DoxyCode}
 \Hypertarget{cstr_8h_ac6b2cbbf55bc53365030b1549166f7c8}\index{cstr.h@{cstr.h}!cstr\_init@{cstr\_init}}
 \index{cstr\_init@{cstr\_init}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_init()}{cstr\_init()}}
 {\footnotesize\ttfamily \label{cstr_8h_ac6b2cbbf55bc53365030b1549166f7c8} 
-\mbox{\hyperlink{structCSTR}{CSTR}} cstr\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+\doxymbox{\hyperlink{structCSTR}{CSTR}} cstr\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
@@ -428,7 +474,7 @@ A new \doxylink{structCSTR}{CSTR} instance. Check {\ttfamily .initialized} or if
 \index{cstr\_initCopy@{cstr\_initCopy}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_initCopy()}{cstr\_initCopy()}}
 {\footnotesize\ttfamily \label{cstr_8h_a94a452fa90f6788aca985a9afaa6ba36} 
-int cstr\+\_\+init\+Copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+dest}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+src}{}\end{DoxyParamCaption})}
+int cstr\+\_\+init\+Copy (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+dest}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+src}{}\end{DoxyParamCaption})}
 
 
 
@@ -448,7 +494,7 @@ CSTR\+\_\+\+SUCCESS on success, otherwise CSTR\+\_\+\+FAIL
 \index{cstr\_insert@{cstr\_insert}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_insert()}{cstr\_insert()}}
 {\footnotesize\ttfamily \label{cstr_8h_a0ba51ccc14c1f17db5b453aa857c92eb} 
-int cstr\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+data}{, }\item[{size\+\_\+t}]{\+\_\+pos}{}\end{DoxyParamCaption})}
+int cstr\+\_\+insert (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+data}{, }\item[{size\+\_\+t}]{\+\_\+pos}{}\end{DoxyParamCaption})}
 
 
 
@@ -470,7 +516,7 @@ CSTR\+\_\+\+SUCCESS, CSTR\+\_\+\+FAIL, or CSTR\+\_\+\+FORCECAP\+\_\+\+LIMIT
 \index{cstr\_lower@{cstr\_lower}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_lower()}{cstr\_lower()}}
 {\footnotesize\ttfamily \label{cstr_8h_a1dba58127f74ebaa9244dc9bff79b065} 
-int cstr\+\_\+lower (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
+int cstr\+\_\+lower (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
 
 
 
@@ -488,7 +534,7 @@ CSTR\+\_\+\+SUCCESS or CSTR\+\_\+\+FAIL
 \index{cstr\_replace@{cstr\_replace}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_replace()}{cstr\_replace()}}
 {\footnotesize\ttfamily \label{cstr_8h_ad5ffa3660e5c00c93763589cb4d55ea8} 
-int cstr\+\_\+replace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+old}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+new}{}\end{DoxyParamCaption})}
+int cstr\+\_\+replace (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+old}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+new}{}\end{DoxyParamCaption})}
 
 
 
@@ -510,7 +556,7 @@ CSTR\+\_\+\+SUCCESS or an error code (CSTR\+\_\+\+FAIL, ...)
 \index{cstr\_replaceAll@{cstr\_replaceAll}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_replaceAll()}{cstr\_replaceAll()}}
 {\footnotesize\ttfamily \label{cstr_8h_a260c899e712785b5e45f07c6b4d6a934} 
-int cstr\+\_\+replace\+All (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+old}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+new}{}\end{DoxyParamCaption})}
+int cstr\+\_\+replace\+All (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+old}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+new}{}\end{DoxyParamCaption})}
 
 
 
@@ -532,7 +578,7 @@ CSTR\+\_\+\+SUCCESS or CSTR\+\_\+\+FAIL
 \index{cstr\_reverse@{cstr\_reverse}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_reverse()}{cstr\_reverse()}}
 {\footnotesize\ttfamily \label{cstr_8h_a184ac1e789dc883dbb3b61c2ab3155d8} 
-int cstr\+\_\+reverse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
+int cstr\+\_\+reverse (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
 
 
 
@@ -550,7 +596,7 @@ CSTR\+\_\+\+SUCCESS or CSTR\+\_\+\+FAIL
 \index{cstr\_set@{cstr\_set}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_set()}{cstr\_set()}}
 {\footnotesize\ttfamily \label{cstr_8h_a5869f4de55dbc9604a41377a98a5d8d1} 
-int cstr\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+data}{}\end{DoxyParamCaption})}
+int cstr\+\_\+set (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+data}{}\end{DoxyParamCaption})}
 
 
 
@@ -570,7 +616,7 @@ CSTR\+\_\+\+SUCCESS, CSTR\+\_\+\+FAIL, or CSTR\+\_\+\+FORCECAP\+\_\+\+LIMIT
 \index{cstr\_shrink@{cstr\_shrink}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_shrink()}{cstr\_shrink()}}
 {\footnotesize\ttfamily \label{cstr_8h_a3f8f5540a61c0814d0518cd2bad72eb8} 
-int cstr\+\_\+shrink (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const size\+\_\+t}]{\+\_\+len}{}\end{DoxyParamCaption})}
+int cstr\+\_\+shrink (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{const size\+\_\+t}]{\+\_\+len}{}\end{DoxyParamCaption})}
 
 
 
@@ -590,7 +636,7 @@ CSTR\+\_\+\+SUCCESS or CSTR\+\_\+\+FAIL
 \index{cstr\_startsWith@{cstr\_startsWith}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_startsWith()}{cstr\_startsWith()}}
 {\footnotesize\ttfamily \label{cstr_8h_a5d7d68335475e3e92ad7af71c1436f01} 
-bool cstr\+\_\+starts\+With (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+prefix}{}\end{DoxyParamCaption})}
+bool cstr\+\_\+starts\+With (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}}}]{\+\_\+str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+prefix}{}\end{DoxyParamCaption})}
 
 
 
@@ -610,7 +656,7 @@ true if it starts with prefix, else return false
 \index{cstr\_substr@{cstr\_substr}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_substr()}{cstr\_substr()}}
 {\footnotesize\ttfamily \label{cstr_8h_a48a4112d753f753d4d8725fc3e7c5a33} 
-int cstr\+\_\+substr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{size\+\_\+t}]{\+\_\+start}{, }\item[{size\+\_\+t}]{\+\_\+len}{}\end{DoxyParamCaption})}
+int cstr\+\_\+substr (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{, }\item[{size\+\_\+t}]{\+\_\+start}{, }\item[{size\+\_\+t}]{\+\_\+len}{}\end{DoxyParamCaption})}
 
 
 
@@ -632,7 +678,7 @@ CSTR\+\_\+\+SUCCESS or CSTR\+\_\+\+FAIL
 \index{cstr\_upper@{cstr\_upper}!cstr.h@{cstr.h}}
 \doxysubsubsection{\texorpdfstring{cstr\_upper()}{cstr\_upper()}}
 {\footnotesize\ttfamily \label{cstr_8h_a9a33ebbb1989f05327b1b5464de45b31} 
-int cstr\+\_\+upper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
+int cstr\+\_\+upper (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCSTR}{CSTR}} \texorpdfstring{$\ast$}{*}}]{\+\_\+str}{}\end{DoxyParamCaption})}
 
 
 
@@ -646,3 +692,18 @@ Convert all characters in a \doxylink{structCSTR}{CSTR} to uppercase.
 \begin{DoxyReturn}{Returns}
 CSTR\+\_\+\+SUCCESS or CSTR\+\_\+\+FAIL 
 \end{DoxyReturn}
+
+
+\label{doc-var-members}
+\Hypertarget{cstr_8h_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{cstr_8h_adc40c9420566e6cdd89964b91923b9f5}\index{cstr.h@{cstr.h}!removed@{removed}}
+\index{removed@{removed}!cstr.h@{cstr.h}}
+\doxysubsubsection{\texorpdfstring{removed}{removed}}
+{\footnotesize\ttfamily \label{cstr_8h_adc40c9420566e6cdd89964b91923b9f5} 
+memory leaks can t be removed}
+
+
+
+Definition at line \doxymbox{\hyperlink{cstr_8h_source_l00427}{427}} of file \doxymbox{\hyperlink{cstr_8h_source}{cstr.\+h}}.
+

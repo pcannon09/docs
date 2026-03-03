@@ -1,4 +1,4 @@
-.TH "inc/cstr/cstr.h" 3 "Version v1.1.0-build" "CSTR" \" -*- nroff -*-
+.TH "inc/cstr/cstr.h" 3 "Version v1.2.0-build" "CSTR" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,6 +17,10 @@ inc/cstr/cstr.h
 .SS "Functions"
 
 .in +1c
+.ti -1c
+.RI "int \fB__cstr_join\fP (\fBCSTR\fP *_str, const char *_arr[], const size_t _count)"
+.br
+.RI "Add content using an array (From Private API)\&. "
 .ti -1c
 .RI "static int \fB__cstr_setFormat\fP (\fBCSTR\fP *_str, const char *_fmt,\&.\&.\&.)"
 .br
@@ -94,6 +98,9 @@ inc/cstr/cstr.h
 .br
 .RI "Create a numeric string from a long\&. "
 .ti -1c
+.RI "static void \fBCSTR_GET_CONST_RETURN_warning\fP (void) __attribute__((deprecated('CSTR_GET_CONST_RETURN is no longer maintained"
+.br
+.ti -1c
 .RI "\fBCSTR\fP \fBcstr_init\fP (void)"
 .br
 .RI "Initialize a new empty \fBCSTR\fP\&. "
@@ -142,8 +149,35 @@ inc/cstr/cstr.h
 .br
 .RI "Convert all characters in a \fBCSTR\fP to uppercase\&. "
 .in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "memory leaks can t be \fBremoved\fP"
+.br
+.in -1c
 .SH "Function Documentation"
 .PP 
+.SS "int __cstr_join (\fBCSTR\fP * _str, const char * _arr[], const size_t _count)"
+
+.PP
+Add content using an array (From Private API)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_str\fP Pointer to the \fBCSTR\fP to modify 
+.br
+\fI_arr\fP Array to add to the string 
+.br
+\fIcount\fP The size of the array 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CSTR_SUCCESS, CSTR_FAIL, or others from the \fR\fBcstr_add()\fP\fP function 
+.RE
+.PP
+
 .SS "int __cstr_setFormat (\fBCSTR\fP * _str, const char * _fmt,  \&.\&.\&.)\fR [static]\fP"
 
 .PP
@@ -426,6 +460,15 @@ Create a numeric string from an integer\&.
 
 .PP
 Create a numeric string from a long\&. 
+.SS "void CSTR_GET_CONST_RETURN_warning (void )\fR [inline]\fP, \fR [static]\fP"
+
+.PP
+Definition at line \fB428\fP of file \fBcstr\&.h\fP\&.
+.nf
+428 { }
+.PP
+.fi
+
 .SS "\fBCSTR\fP cstr_init (void )"
 
 .PP
@@ -637,6 +680,12 @@ CSTR_SUCCESS or CSTR_FAIL
 .RE
 .PP
 
+.SH "Variable Documentation"
+.PP 
+.SS "memory leaks can t be removed"
+
+.PP
+Definition at line \fB427\fP of file \fBcstr\&.h\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for CSTR from the source code\&.

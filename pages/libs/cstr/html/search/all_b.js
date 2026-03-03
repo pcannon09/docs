@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.md',['../da/ddd/README_8md.html',1,'']]],
-  ['requirements_1',['Requirements',['../index.html#autotoc_md3',1,'']]]
+  ['len_0',['len',['../de/d5e/structCSTR.html#a4d4fd3c90e98dd67542e65b6b388980b',1,'CSTR']]]
 ];
