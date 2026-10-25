@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="dir_454473eb88b643de8b6ffd64147aa87b" kind="dir">
+    <compoundname>inc/carray</compoundname>
+    <innerfile refid="da/d5f/carr_8h">carr.h</innerfile>
+    <innerfile refid="d6/d34/CARRpredefines_8h">CARRpredefines.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="inc/carray/"/>
+  </compounddef>
+</doxygen>

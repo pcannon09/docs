@@ -1,0 +1,118 @@
+\doxysection{CARR Struct Reference}
+\hypertarget{structCARR}{}\label{structCARR}\index{CARR@{CARR}}
+
+
+Represents a pointer-\/based vector container.  
+
+
+
+
+{\ttfamily \+\#include $<$carr.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{structCARR_a1032be133664b90b83cb796fe513aee1}{\+\_\+\+\_\+initialized}}
+\begin{DoxyCompactList}\small\item\em Internal initialization-\/state flag. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structCARR_a2a1fdff4bb268f490d818a71f30910ff}{cap}}
+\begin{DoxyCompactList}\small\item\em Maximum number of elements that can be stored without resizing. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{structCARR_a751356b4f7e439b7a1e0695b103cdb95}{dynamic}}
+\begin{DoxyCompactList}\small\item\em Indicates whether the vector supports dynamic resizing. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structCARR_a53162b258c2583ae2f52390485252320}{size}}
+\begin{DoxyCompactList}\small\item\em Number of elements currently stored in the vector. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structCARR_ab161417c456dccbdac030d24a2f32935}{vec}}
+\begin{DoxyCompactList}\small\item\em Pointer to the array of stored element pointers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a pointer-\/based vector container. 
+
+Stores pointers to elements in a contiguous array. Tracks the number of elements currently stored and the allocated capacity.
+
+\begin{DoxyWarning}{Warning}
+Avoid modifying the internal fields directly 
+\end{DoxyWarning}
+
+
+Definition at line \doxymbox{\hyperlink{carr_8h_source_l00039}{39}} of file \doxymbox{\hyperlink{carr_8h_source}{carr.\+h}}.
+
+
+
+\label{structCARR_doc-variable-members}
+\Hypertarget{structCARR_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structCARR_a1032be133664b90b83cb796fe513aee1}\index{CARR@{CARR}!\_\_initialized@{\_\_initialized}}
+\index{\_\_initialized@{\_\_initialized}!CARR@{CARR}}
+\doxysubsubsection{\texorpdfstring{\_\_initialized}{\_\_initialized}}
+{\footnotesize\ttfamily \label{structCARR_a1032be133664b90b83cb796fe513aee1} 
+bool CARR::\+\+\_\+\+\_\+initialized}
+
+
+
+Internal initialization-\/state flag. 
+
+Used by the implementation to track whether the vector has been initialized. 
+
+Definition at line \doxymbox{\hyperlink{carr_8h_source_l00075}{75}} of file \doxymbox{\hyperlink{carr_8h_source}{carr.\+h}}.
+
+\Hypertarget{structCARR_a2a1fdff4bb268f490d818a71f30910ff}\index{CARR@{CARR}!cap@{cap}}
+\index{cap@{cap}!CARR@{CARR}}
+\doxysubsubsection{\texorpdfstring{cap}{cap}}
+{\footnotesize\ttfamily \label{structCARR_a2a1fdff4bb268f490d818a71f30910ff} 
+size\+\_\+t CARR::\+cap}
+
+
+
+Maximum number of elements that can be stored without resizing. 
+
+
+
+Definition at line \doxymbox{\hyperlink{carr_8h_source_l00052}{52}} of file \doxymbox{\hyperlink{carr_8h_source}{carr.\+h}}.
+
+\Hypertarget{structCARR_a751356b4f7e439b7a1e0695b103cdb95}\index{CARR@{CARR}!dynamic@{dynamic}}
+\index{dynamic@{dynamic}!CARR@{CARR}}
+\doxysubsubsection{\texorpdfstring{dynamic}{dynamic}}
+{\footnotesize\ttfamily \label{structCARR_a751356b4f7e439b7a1e0695b103cdb95} 
+bool CARR::\+dynamic}
+
+
+
+Indicates whether the vector supports dynamic resizing. 
+
+When true, the vector may grow or shrink through resizing operations. When false, capacity is intended to remain fixed. 
+
+Definition at line \doxymbox{\hyperlink{carr_8h_source_l00065}{65}} of file \doxymbox{\hyperlink{carr_8h_source}{carr.\+h}}.
+
+\Hypertarget{structCARR_a53162b258c2583ae2f52390485252320}\index{CARR@{CARR}!size@{size}}
+\index{size@{size}!CARR@{CARR}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \label{structCARR_a53162b258c2583ae2f52390485252320} 
+size\+\_\+t CARR::\+size}
+
+
+
+Number of elements currently stored in the vector. 
+
+
+
+Definition at line \doxymbox{\hyperlink{carr_8h_source_l00057}{57}} of file \doxymbox{\hyperlink{carr_8h_source}{carr.\+h}}.
+
+\Hypertarget{structCARR_ab161417c456dccbdac030d24a2f32935}\index{CARR@{CARR}!vec@{vec}}
+\index{vec@{vec}!CARR@{CARR}}
+\doxysubsubsection{\texorpdfstring{vec}{vec}}
+{\footnotesize\ttfamily \label{structCARR_ab161417c456dccbdac030d24a2f32935} 
+void\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} CARR::\+vec}
+
+
+
+Pointer to the array of stored element pointers. 
+
+Each element is a {\ttfamily void \texorpdfstring{$\ast$}{*}}. The array itself is managed by the \doxylink{structCARR}{CARR} implementation. 
+
+Definition at line \doxymbox{\hyperlink{carr_8h_source_l00047}{47}} of file \doxymbox{\hyperlink{carr_8h_source}{carr.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+inc/\+carray/\doxymbox{\hyperlink{carr_8h}{carr.\+h}}\end{DoxyCompactItemize}

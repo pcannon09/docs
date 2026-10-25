@@ -1,0 +1,734 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="da/d5f/carr_8h" kind="file" language="C++">
+    <compoundname>carr.h</compoundname>
+    <innerclass refid="d3/d83/structCARR" prot="public">CARR</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CARRError</name>
+        <enumvalue id="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaf8ade64270c586fdc95650b637002e7d" prot="public">
+          <name>CARR_VEC_OK</name>
+          <briefdescription>
+<para>The operation completed successfully. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6a444141bbe1884b12d0d813c0ab474f" prot="public">
+          <name>CARR_VEC_OutOfBounds</name>
+          <briefdescription>
+<para>The requested index is outside the valid range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718eca341444afc60d64101a3238f35058d84a" prot="public">
+          <name>CARR_VEC_ResizeError</name>
+          <briefdescription>
+<para>The requested resize operation could not be completed. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaa69cc70a2617bb473d3bd51fccd5573d" prot="public">
+          <name>CARR_VEC_OOM</name>
+          <briefdescription>
+<para>Memory allocation failed. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6fa1f9082854488fb8d324e86833c447" prot="public">
+          <name>CARR_VEC_NULL</name>
+          <briefdescription>
+<para>A required pointer argument was NULL. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Error codes returned by <ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="82" column="1" bodyfile="inc/carray/carr.h" bodystart="83" bodyend="98"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="da/d5f/carr_8h_1ad0ae1844655f22aa47fd627159e00078" prot="public" static="no">
+        <type>struct CARR</type>
+        <definition>typedef struct CARR CARR</definition>
+        <argsstring></argsstring>
+        <name>CARR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="76" column="6"/>
+      </memberdef>
+      <memberdef kind="typedef" id="da/d5f/carr_8h_1a378ce9f6a0d1dca0d9e69de73afe71cb" prot="public" static="no">
+        <type>enum <ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref></type>
+        <definition>typedef enum CARRError CARRError</definition>
+        <argsstring></argsstring>
+        <name>CARRError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="98" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="da/d5f/carr_8h_1a6eafd445d5ca5592e6b060f0ac8057a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref></type>
+        <definition>CARRError carr_deleteIndex</definition>
+        <argsstring>(CARR *vec, const size_t index, const bool fall)</argsstring>
+        <name>carr_deleteIndex</name>
+        <param>
+          <type><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> *</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>fall</declname>
+        </param>
+        <briefdescription>
+<para>Deletes an element at a specified index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the element at <computeroutput>index</computeroutput> from the vector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the vector to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the element to delete. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fall</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Controls the deletion behavior, as defined by the implementation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>CARR_VEC_OK if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_OutOfBounds if <computeroutput>index</computeroutput> is invalid. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_NULL if a required pointer is NULL.</para>
+</simplesect>
+<simplesect kind="note"><para>The meaning of <computeroutput>fall</computeroutput> and whether the removed element&apos;s pointer is freed must be verified in the implementation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="150" column="11" declfile="inc/carray/carr.h" declline="150" declcolumn="11"/>
+        <references refid="da/d5f/carr_8h_1a6eafd445d5ca5592e6b060f0ac8057a0">carr_deleteIndex</references>
+        <referencedby refid="da/d5f/carr_8h_1a6eafd445d5ca5592e6b060f0ac8057a0">carr_deleteIndex</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/d5f/carr_8h_1a8f8ef750f811b48ace4c344919cb309b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void carr_destroy</definition>
+        <argsstring>(CARR *vec)</argsstring>
+        <name>carr_destroy</name>
+        <param>
+          <type><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> *</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+<para>Destroys a vector and releases its internal resources. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Releases resources owned by the vector implementation and invalidates the vector&apos;s internal storage.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the vector to destroy.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function does not return an error code. </para>
+</simplesect>
+<simplesect kind="note"><para>Whether the structure is reset to a safe, reusable state depends on the implementation. </para>
+</simplesect>
+<simplesect kind="note"><para>The pointed-to elements are not assumed to be freed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="230" column="6" declfile="inc/carray/carr.h" declline="230" declcolumn="6"/>
+        <references refid="da/d5f/carr_8h_1a8f8ef750f811b48ace4c344919cb309b">carr_destroy</references>
+        <referencedby refid="da/d5f/carr_8h_1a8f8ef750f811b48ace4c344919cb309b">carr_destroy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/d5f/carr_8h_1ab0ae8cdfb4b002767dd93b2606de20e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref></type>
+        <definition>CARR carr_init</definition>
+        <argsstring>(const size_t cap, const bool dynamic)</argsstring>
+        <name>carr_init</name>
+        <param>
+          <type>const size_t</type>
+          <declname>cap</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>dynamic</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new <ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a vector with the requested initial capacity and resizing mode.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial capacity of the vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dynamic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the vector supports dynamic resizing.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An initialized <ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> instance.</para>
+</simplesect>
+<simplesect kind="note"><para>Check the returned instance according to the implementation&apos;s initialization and allocation-failure conventions. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="113" column="6" declfile="inc/carray/carr.h" declline="113" declcolumn="6"/>
+        <references refid="da/d5f/carr_8h_1ab0ae8cdfb4b002767dd93b2606de20e9">carr_init</references>
+        <referencedby refid="da/d5f/carr_8h_1ab0ae8cdfb4b002767dd93b2606de20e9">carr_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/d5f/carr_8h_1aec1da9b0f8f8ff18e763e5e1fa18a4d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref></type>
+        <definition>CARRError carr_pushBack</definition>
+        <argsstring>(CARR *vec, void *item)</argsstring>
+        <name>carr_pushBack</name>
+        <param>
+          <type><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> *</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Appends an element to the end of the vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores <computeroutput>item</computeroutput> after the current last element. Depending on the vector&apos;s configuration, the operation may require additional capacity.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the vector to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the element to append.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>CARR_VEC_OK if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_NULL if a required pointer is NULL. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_ResizeError if the required resize cannot be performed. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_OOM if memory allocation fails. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="184" column="11" declfile="inc/carray/carr.h" declline="184" declcolumn="11"/>
+        <references refid="da/d5f/carr_8h_1aec1da9b0f8f8ff18e763e5e1fa18a4d6">carr_pushBack</references>
+        <referencedby refid="da/d5f/carr_8h_1aec1da9b0f8f8ff18e763e5e1fa18a4d6">carr_pushBack</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/d5f/carr_8h_1ac2afe81d25b36f7840db013084586252" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref></type>
+        <definition>CARRError carr_pushFront</definition>
+        <argsstring>(CARR *vec, void *item)</argsstring>
+        <name>carr_pushFront</name>
+        <param>
+          <type><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> *</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Inserts an element at the beginning of the vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores <computeroutput>item</computeroutput> at index zero and shifts existing elements as necessary.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the vector to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the element to insert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>CARR_VEC_OK if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_NULL if a required pointer is NULL. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_ResizeError if the required resize cannot be performed. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_OOM if memory allocation fails. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="199" column="11" declfile="inc/carray/carr.h" declline="199" declcolumn="11"/>
+        <references refid="da/d5f/carr_8h_1ac2afe81d25b36f7840db013084586252">carr_pushFront</references>
+        <referencedby refid="da/d5f/carr_8h_1ac2afe81d25b36f7840db013084586252">carr_pushFront</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/d5f/carr_8h_1af4e0864f9b23847ec5128bed12c16cf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref></type>
+        <definition>CARRError carr_replaceIndex</definition>
+        <argsstring>(CARR *vec, void *item, const size_t idx)</argsstring>
+        <name>carr_replaceIndex</name>
+        <param>
+          <type><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> *</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Replaces an element at a specified index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Assigns a new pointer to the element at <computeroutput>idx</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the vector to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the replacement element. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the element to replace.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>CARR_VEC_OK if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_OutOfBounds if <computeroutput>idx</computeroutput> is invalid. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_NULL if a required pointer is NULL.</para>
+</simplesect>
+<simplesect kind="note"><para>This function replaces the stored pointer. Ownership and cleanup of the previous element are determined by the implementation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="168" column="11" declfile="inc/carray/carr.h" declline="168" declcolumn="11"/>
+        <references refid="da/d5f/carr_8h_1af4e0864f9b23847ec5128bed12c16cf4">carr_replaceIndex</references>
+        <referencedby refid="da/d5f/carr_8h_1af4e0864f9b23847ec5128bed12c16cf4">carr_replaceIndex</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/d5f/carr_8h_1a73fa03395af35a5b22ade60714a7a104" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref></type>
+        <definition>CARRError carr_resize</definition>
+        <argsstring>(CARR *vec, const size_t newCap)</argsstring>
+        <name>carr_resize</name>
+        <param>
+          <type><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> *</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>newCap</declname>
+        </param>
+        <briefdescription>
+<para>Changes the capacity of a vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Requests a new capacity for the vector&apos;s underlying pointer array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the vector to resize. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">newCap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Desired capacity.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>CARR_VEC_OK if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_NULL if a required pointer is NULL. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_ResizeError if resizing fails or is not permitted. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_OOM if memory allocation fails.</para>
+</simplesect>
+<simplesect kind="note"><para>The exact behavior when <computeroutput>newCap</computeroutput> is smaller than the current size depends on the implementation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="131" column="11" declfile="inc/carray/carr.h" declline="131" declcolumn="11"/>
+        <references refid="da/d5f/carr_8h_1a73fa03395af35a5b22ade60714a7a104">carr_resize</references>
+        <referencedby refid="da/d5f/carr_8h_1a73fa03395af35a5b22ade60714a7a104">carr_resize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/d5f/carr_8h_1acb108ce8c3e77993b32f071d7f81fe4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref></type>
+        <definition>CARRError carr_reverse</definition>
+        <argsstring>(CARR *vec)</argsstring>
+        <name>carr_reverse</name>
+        <param>
+          <type><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> *</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+<para>Reverses the order of elements in the vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Reorders the stored pointers so that the first element becomes the last, the second becomes the second-to-last, and so on.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the vector to reverse.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>CARR_VEC_OK if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>CARR_VEC_NULL if a required pointer is NULL.</para>
+</simplesect>
+<simplesect kind="note"><para>The elements themselves are not copied or modified; only their positions in the vector are changed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="215" column="11" declfile="inc/carray/carr.h" declline="215" declcolumn="11"/>
+        <references refid="da/d5f/carr_8h_1acb108ce8c3e77993b32f071d7f81fe4c">carr_reverse</references>
+        <referencedby refid="da/d5f/carr_8h_1acb108ce8c3e77993b32f071d7f81fe4c">carr_reverse</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>INCLUDE_VECTOR_VECTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_VECTOR_VECTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CARRVECTOR_OPEN<sp/>extern<sp/>&quot;C&quot;<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CARRVECTOR_CLOSE<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CARRVECTOR_OPEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CARRVECTOR_CLOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">CARRVECTOR_OPEN</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>@def<sp/>CARR_VECTOR_CAP_ADDITION</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Default<sp/>capacity<sp/>increment<sp/>used<sp/>by<sp/>the<sp/>vector<sp/>implementation.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>Defines<sp/>the<sp/>default<sp/>capacity<sp/>growth<sp/>increment<sp/>as<sp/>16<sp/>elements.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>The<sp/>implementation<sp/>may<sp/>use<sp/>this<sp/>value<sp/>when<sp/>increasing<sp/>capacity.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Override<sp/>this<sp/>macro<sp/>before<sp/>including<sp/>the<sp/>header<sp/>to<sp/>customize<sp/>the<sp/>value.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CARR_VECTOR_CAP_ADDITION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>CARR_VECTOR_CAP_ADDITION<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>@struct<sp/>CARR</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Represents<sp/>a<sp/>pointer-based<sp/>vector<sp/>container.</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>Stores<sp/>pointers<sp/>to<sp/>elements<sp/>in<sp/>a<sp/>contiguous<sp/>array.<sp/>Tracks<sp/>the<sp/>number</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>of<sp/>elements<sp/>currently<sp/>stored<sp/>and<sp/>the<sp/>allocated<sp/>capacity.</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>@warning<sp/>Avoid<sp/>modifying<sp/>the<sp/>internal<sp/>fields<sp/>directly</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="d3/d83/structCARR" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Pointer<sp/>to<sp/>the<sp/>array<sp/>of<sp/>stored<sp/>element<sp/>pointers.</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Each<sp/>element<sp/>is<sp/>a<sp/>`void<sp/>*`.<sp/>The<sp/>array<sp/>itself<sp/>is<sp/>managed<sp/>by<sp/>the</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>CARR<sp/>implementation.</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="d3/d83/structCARR_1ab161417c456dccbdac030d24a2f32935" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**<ref refid="d3/d83/structCARR_1ab161417c456dccbdac030d24a2f32935" kindref="member">vec</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Maximum<sp/>number<sp/>of<sp/>elements<sp/>that<sp/>can<sp/>be<sp/>stored<sp/>without<sp/>resizing.</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="d3/d83/structCARR_1a2a1fdff4bb268f490d818a71f30910ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d3/d83/structCARR_1a2a1fdff4bb268f490d818a71f30910ff" kindref="member">cap</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Number<sp/>of<sp/>elements<sp/>currently<sp/>stored<sp/>in<sp/>the<sp/>vector.</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="d3/d83/structCARR_1a53162b258c2583ae2f52390485252320" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d3/d83/structCARR_1a53162b258c2583ae2f52390485252320" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Indicates<sp/>whether<sp/>the<sp/>vector<sp/>supports<sp/>dynamic<sp/>resizing.</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>When<sp/>true,<sp/>the<sp/>vector<sp/>may<sp/>grow<sp/>or<sp/>shrink<sp/>through<sp/>resizing<sp/>operations.</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>When<sp/>false,<sp/>capacity<sp/>is<sp/>intended<sp/>to<sp/>remain<sp/>fixed.</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="d3/d83/structCARR_1a751356b4f7e439b7a1e0695b103cdb95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/d83/structCARR_1a751356b4f7e439b7a1e0695b103cdb95" kindref="member">dynamic</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/>/**</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>Internal<sp/>initialization-state<sp/>flag.</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Used<sp/>by<sp/>the<sp/>implementation<sp/>to<sp/>track<sp/>whether<sp/>the<sp/>vector<sp/>has<sp/>been</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>initialized.</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>@internal</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="d3/d83/structCARR_1a1032be133664b90b83cb796fe513aee1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/d83/structCARR_1a1032be133664b90b83cb796fe513aee1" kindref="member">__initialized</ref>;</highlight></codeline>
+<codeline lineno="76" refid="da/d5f/carr_8h_1ad0ae1844655f22aa47fd627159e00078" refkind="member"><highlight class="normal">}<sp/><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="78"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/>*<sp/>@enum<sp/>CARRError</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Error<sp/>codes<sp/>returned<sp/>by<sp/>CARR<sp/>operations.</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/>/**<sp/>@brief<sp/>The<sp/>operation<sp/>completed<sp/>successfully.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaf8ade64270c586fdc95650b637002e7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaf8ade64270c586fdc95650b637002e7d" kindref="member">CARR_VEC_OK</ref>,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/><sp/>/**<sp/>@brief<sp/>The<sp/>requested<sp/>index<sp/>is<sp/>outside<sp/>the<sp/>valid<sp/>range.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6a444141bbe1884b12d0d813c0ab474f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6a444141bbe1884b12d0d813c0ab474f" kindref="member">CARR_VEC_OutOfBounds</ref>,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/>/**<sp/>@brief<sp/>The<sp/>requested<sp/>resize<sp/>operation<sp/>could<sp/>not<sp/>be<sp/>completed.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718eca341444afc60d64101a3238f35058d84a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718eca341444afc60d64101a3238f35058d84a" kindref="member">CARR_VEC_ResizeError</ref>,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/>/**<sp/>@brief<sp/>Memory<sp/>allocation<sp/>failed.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaa69cc70a2617bb473d3bd51fccd5573d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaa69cc70a2617bb473d3bd51fccd5573d" kindref="member">CARR_VEC_OOM</ref>,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/>/**<sp/>@brief<sp/>A<sp/>required<sp/>pointer<sp/>argument<sp/>was<sp/>NULL.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6fa1f9082854488fb8d324e86833c447" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6fa1f9082854488fb8d324e86833c447" kindref="member">CARR_VEC_NULL</ref>,</highlight></codeline>
+<codeline lineno="98" refid="da/d5f/carr_8h_1a378ce9f6a0d1dca0d9e69de73afe71cb" refkind="member"><highlight class="normal">}<sp/><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="100"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Initializes<sp/>a<sp/>new<sp/>CARR<sp/>vector.</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/>*<sp/>Creates<sp/>a<sp/>vector<sp/>with<sp/>the<sp/>requested<sp/>initial<sp/>capacity<sp/>and<sp/>resizing<sp/>mode.</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>cap<sp/>Initial<sp/>capacity<sp/>of<sp/>the<sp/>vector.</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>dynamic<sp/>Whether<sp/>the<sp/>vector<sp/>supports<sp/>dynamic<sp/>resizing.</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/>*<sp/>@return<sp/>An<sp/>initialized<sp/>CARR<sp/>instance.</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/>*<sp/>@note<sp/>Check<sp/>the<sp/>returned<sp/>instance<sp/>according<sp/>to<sp/>the<sp/>implementation&apos;s</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>initialization<sp/>and<sp/>allocation-failure<sp/>conventions.</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="da/d5f/carr_8h_1ab0ae8cdfb4b002767dd93b2606de20e9" refkind="member"><highlight class="normal"><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref><sp/><ref refid="da/d5f/carr_8h_1ab0ae8cdfb4b002767dd93b2606de20e9" kindref="member">carr_init</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>cap,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dynamic);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="115"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Changes<sp/>the<sp/>capacity<sp/>of<sp/>a<sp/>vector.</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/>*<sp/>Requests<sp/>a<sp/>new<sp/>capacity<sp/>for<sp/>the<sp/>vector&apos;s<sp/>underlying<sp/>pointer<sp/>array.</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/>*<sp/>@param[in,out]<sp/>vec<sp/>Pointer<sp/>to<sp/>the<sp/>vector<sp/>to<sp/>resize.</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>newCap<sp/>Desired<sp/>capacity.</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_OK<sp/>if<sp/>successful.</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_NULL<sp/>if<sp/>a<sp/>required<sp/>pointer<sp/>is<sp/>NULL.</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_ResizeError<sp/>if<sp/>resizing<sp/>fails<sp/>or<sp/>is<sp/>not<sp/>permitted.</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_OOM<sp/>if<sp/>memory<sp/>allocation<sp/>fails.</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/>*<sp/>@note<sp/>The<sp/>exact<sp/>behavior<sp/>when<sp/>`newCap`<sp/>is<sp/>smaller<sp/>than<sp/>the<sp/>current</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>size<sp/>depends<sp/>on<sp/>the<sp/>implementation.</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="da/d5f/carr_8h_1a73fa03395af35a5b22ade60714a7a104" refkind="member"><highlight class="normal"><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref><sp/><ref refid="da/d5f/carr_8h_1a73fa03395af35a5b22ade60714a7a104" kindref="member">carr_resize</ref>(<ref refid="d3/d83/structCARR" kindref="compound">CARR</ref><sp/>*vec,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>newCap);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="133"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Deletes<sp/>an<sp/>element<sp/>at<sp/>a<sp/>specified<sp/>index.</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/>*<sp/>Removes<sp/>the<sp/>element<sp/>at<sp/>`index`<sp/>from<sp/>the<sp/>vector.</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/>*<sp/>@param[in,out]<sp/>vec<sp/>Pointer<sp/>to<sp/>the<sp/>vector<sp/>to<sp/>modify.</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>index<sp/>Index<sp/>of<sp/>the<sp/>element<sp/>to<sp/>delete.</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>fall<sp/>Controls<sp/>the<sp/>deletion<sp/>behavior,<sp/>as<sp/>defined<sp/>by<sp/>the</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>implementation.</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_OK<sp/>if<sp/>successful.</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_OutOfBounds<sp/>if<sp/>`index`<sp/>is<sp/>invalid.</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_NULL<sp/>if<sp/>a<sp/>required<sp/>pointer<sp/>is<sp/>NULL.</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/>*<sp/>@note<sp/>The<sp/>meaning<sp/>of<sp/>`fall`<sp/>and<sp/>whether<sp/>the<sp/>removed<sp/>element&apos;s<sp/>pointer</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>is<sp/>freed<sp/>must<sp/>be<sp/>verified<sp/>in<sp/>the<sp/>implementation.</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="da/d5f/carr_8h_1a6eafd445d5ca5592e6b060f0ac8057a0" refkind="member"><highlight class="normal"><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref><sp/><ref refid="da/d5f/carr_8h_1a6eafd445d5ca5592e6b060f0ac8057a0" kindref="member">carr_deleteIndex</ref>(<ref refid="d3/d83/structCARR" kindref="compound">CARR</ref><sp/>*vec,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fall);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="152"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Replaces<sp/>an<sp/>element<sp/>at<sp/>a<sp/>specified<sp/>index.</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/>*<sp/>Assigns<sp/>a<sp/>new<sp/>pointer<sp/>to<sp/>the<sp/>element<sp/>at<sp/>`idx`.</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/>*<sp/>@param[in,out]<sp/>vec<sp/>Pointer<sp/>to<sp/>the<sp/>vector<sp/>to<sp/>modify.</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>item<sp/>Pointer<sp/>to<sp/>the<sp/>replacement<sp/>element.</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>idx<sp/>Index<sp/>of<sp/>the<sp/>element<sp/>to<sp/>replace.</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_OK<sp/>if<sp/>successful.</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_OutOfBounds<sp/>if<sp/>`idx`<sp/>is<sp/>invalid.</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_NULL<sp/>if<sp/>a<sp/>required<sp/>pointer<sp/>is<sp/>NULL.</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/>*<sp/>@note<sp/>This<sp/>function<sp/>replaces<sp/>the<sp/>stored<sp/>pointer.<sp/>Ownership<sp/>and<sp/>cleanup</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>of<sp/>the<sp/>previous<sp/>element<sp/>are<sp/>determined<sp/>by<sp/>the<sp/>implementation.</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="da/d5f/carr_8h_1af4e0864f9b23847ec5128bed12c16cf4" refkind="member"><highlight class="normal"><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref><sp/><ref refid="da/d5f/carr_8h_1af4e0864f9b23847ec5128bed12c16cf4" kindref="member">carr_replaceIndex</ref>(<ref refid="d3/d83/structCARR" kindref="compound">CARR</ref><sp/>*vec,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*item,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>idx);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="170"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Appends<sp/>an<sp/>element<sp/>to<sp/>the<sp/>end<sp/>of<sp/>the<sp/>vector.</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/>*<sp/>Stores<sp/>`item`<sp/>after<sp/>the<sp/>current<sp/>last<sp/>element.<sp/>Depending<sp/>on<sp/>the<sp/>vector&apos;s</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/>*<sp/>configuration,<sp/>the<sp/>operation<sp/>may<sp/>require<sp/>additional<sp/>capacity.</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="176"><highlight class="comment"><sp/>*<sp/>@param[in,out]<sp/>vec<sp/>Pointer<sp/>to<sp/>the<sp/>vector<sp/>to<sp/>modify.</highlight></codeline>
+<codeline lineno="177"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>item<sp/>Pointer<sp/>to<sp/>the<sp/>element<sp/>to<sp/>append.</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_OK<sp/>if<sp/>successful.</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_NULL<sp/>if<sp/>a<sp/>required<sp/>pointer<sp/>is<sp/>NULL.</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_ResizeError<sp/>if<sp/>the<sp/>required<sp/>resize<sp/>cannot<sp/>be<sp/>performed.</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_OOM<sp/>if<sp/>memory<sp/>allocation<sp/>fails.</highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="da/d5f/carr_8h_1aec1da9b0f8f8ff18e763e5e1fa18a4d6" refkind="member"><highlight class="normal"><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref><sp/><ref refid="da/d5f/carr_8h_1aec1da9b0f8f8ff18e763e5e1fa18a4d6" kindref="member">carr_pushBack</ref>(<ref refid="d3/d83/structCARR" kindref="compound">CARR</ref><sp/>*vec,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*item);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="186"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="187"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Inserts<sp/>an<sp/>element<sp/>at<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>vector.</highlight></codeline>
+<codeline lineno="188"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="189"><highlight class="comment"><sp/>*<sp/>Stores<sp/>`item`<sp/>at<sp/>index<sp/>zero<sp/>and<sp/>shifts<sp/>existing<sp/>elements<sp/>as<sp/>necessary.</highlight></codeline>
+<codeline lineno="190"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/>*<sp/>@param[in,out]<sp/>vec<sp/>Pointer<sp/>to<sp/>the<sp/>vector<sp/>to<sp/>modify.</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>item<sp/>Pointer<sp/>to<sp/>the<sp/>element<sp/>to<sp/>insert.</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_OK<sp/>if<sp/>successful.</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_NULL<sp/>if<sp/>a<sp/>required<sp/>pointer<sp/>is<sp/>NULL.</highlight></codeline>
+<codeline lineno="196"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_ResizeError<sp/>if<sp/>the<sp/>required<sp/>resize<sp/>cannot<sp/>be<sp/>performed.</highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_OOM<sp/>if<sp/>memory<sp/>allocation<sp/>fails.</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="da/d5f/carr_8h_1ac2afe81d25b36f7840db013084586252" refkind="member"><highlight class="normal"><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref><sp/><ref refid="da/d5f/carr_8h_1ac2afe81d25b36f7840db013084586252" kindref="member">carr_pushFront</ref>(<ref refid="d3/d83/structCARR" kindref="compound">CARR</ref><sp/>*vec,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*item);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="201"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="202"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Reverses<sp/>the<sp/>order<sp/>of<sp/>elements<sp/>in<sp/>the<sp/>vector.</highlight></codeline>
+<codeline lineno="203"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="204"><highlight class="comment"><sp/>*<sp/>Reorders<sp/>the<sp/>stored<sp/>pointers<sp/>so<sp/>that<sp/>the<sp/>first<sp/>element<sp/>becomes<sp/>the<sp/>last,</highlight></codeline>
+<codeline lineno="205"><highlight class="comment"><sp/>*<sp/>the<sp/>second<sp/>becomes<sp/>the<sp/>second-to-last,<sp/>and<sp/>so<sp/>on.</highlight></codeline>
+<codeline lineno="206"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="207"><highlight class="comment"><sp/>*<sp/>@param[in,out]<sp/>vec<sp/>Pointer<sp/>to<sp/>the<sp/>vector<sp/>to<sp/>reverse.</highlight></codeline>
+<codeline lineno="208"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="209"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_OK<sp/>if<sp/>successful.</highlight></codeline>
+<codeline lineno="210"><highlight class="comment"><sp/>*<sp/>@return<sp/>CARR_VEC_NULL<sp/>if<sp/>a<sp/>required<sp/>pointer<sp/>is<sp/>NULL.</highlight></codeline>
+<codeline lineno="211"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/>*<sp/>@note<sp/>The<sp/>elements<sp/>themselves<sp/>are<sp/>not<sp/>copied<sp/>or<sp/>modified;<sp/>only<sp/>their</highlight></codeline>
+<codeline lineno="213"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>positions<sp/>in<sp/>the<sp/>vector<sp/>are<sp/>changed.</highlight></codeline>
+<codeline lineno="214"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="da/d5f/carr_8h_1acb108ce8c3e77993b32f071d7f81fe4c" refkind="member"><highlight class="normal"><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref><sp/><ref refid="da/d5f/carr_8h_1acb108ce8c3e77993b32f071d7f81fe4c" kindref="member">carr_reverse</ref>(<ref refid="d3/d83/structCARR" kindref="compound">CARR</ref><sp/>*vec);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="217"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="218"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Destroys<sp/>a<sp/>vector<sp/>and<sp/>releases<sp/>its<sp/>internal<sp/>resources.</highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="220"><highlight class="comment"><sp/>*<sp/>Releases<sp/>resources<sp/>owned<sp/>by<sp/>the<sp/>vector<sp/>implementation<sp/>and<sp/>invalidates</highlight></codeline>
+<codeline lineno="221"><highlight class="comment"><sp/>*<sp/>the<sp/>vector&apos;s<sp/>internal<sp/>storage.</highlight></codeline>
+<codeline lineno="222"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="223"><highlight class="comment"><sp/>*<sp/>@param[in,out]<sp/>vec<sp/>Pointer<sp/>to<sp/>the<sp/>vector<sp/>to<sp/>destroy.</highlight></codeline>
+<codeline lineno="224"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="225"><highlight class="comment"><sp/>*<sp/>@note<sp/>This<sp/>function<sp/>does<sp/>not<sp/>return<sp/>an<sp/>error<sp/>code.</highlight></codeline>
+<codeline lineno="226"><highlight class="comment"><sp/>*<sp/>@note<sp/>Whether<sp/>the<sp/>structure<sp/>is<sp/>reset<sp/>to<sp/>a<sp/>safe,<sp/>reusable<sp/>state<sp/>depends</highlight></codeline>
+<codeline lineno="227"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>on<sp/>the<sp/>implementation.</highlight></codeline>
+<codeline lineno="228"><highlight class="comment"><sp/>*<sp/>@note<sp/>The<sp/>pointed-to<sp/>elements<sp/>are<sp/>not<sp/>assumed<sp/>to<sp/>be<sp/>freed.</highlight></codeline>
+<codeline lineno="229"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="da/d5f/carr_8h_1a8f8ef750f811b48ace4c344919cb309b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/d5f/carr_8h_1a8f8ef750f811b48ace4c344919cb309b" kindref="member">carr_destroy</ref>(<ref refid="d3/d83/structCARR" kindref="compound">CARR</ref><sp/>*vec);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal">CARRVECTOR_CLOSE</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>INCLUDE_VECTOR_VECTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/carray/carr.h"/>
+  </compounddef>
+</doxygen>

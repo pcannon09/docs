@@ -1,0 +1,577 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_carr_8h" xml:lang="en-US">
+<title>inc/carray/carr.h File Reference</title>
+<indexterm><primary>inc/carray/carr.h</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structCARR">CARR</link></para>
+
+<para>Represents a pointer-based vector container. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct CARR <link linkend="_carr_8h_1ad0ae1844655f22aa47fd627159e00078">CARR</link></para>
+</listitem>
+            <listitem><para>typedef enum <link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> <link linkend="_carr_8h_1a378ce9f6a0d1dca0d9e69de73afe71cb">CARRError</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> { <?linebreak?><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaf8ade64270c586fdc95650b637002e7d">CARR_VEC_OK</link>
+, <link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6a444141bbe1884b12d0d813c0ab474f">CARR_VEC_OutOfBounds</link>
+, <link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718eca341444afc60d64101a3238f35058d84a">CARR_VEC_ResizeError</link>
+, <link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaa69cc70a2617bb473d3bd51fccd5573d">CARR_VEC_OOM</link>
+, <?linebreak?><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6fa1f9082854488fb8d324e86833c447">CARR_VEC_NULL</link>
+ }</para>
+
+<para>Error codes returned by <link linkend="_structCARR">CARR</link> operations. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> <link linkend="_carr_8h_1a6eafd445d5ca5592e6b060f0ac8057a0">carr_deleteIndex</link> (<link linkend="_structCARR">CARR</link> *vec, const size_t index, const bool fall)</para>
+
+<para>Deletes an element at a specified index. </para>
+</listitem>
+            <listitem><para>void <link linkend="_carr_8h_1a8f8ef750f811b48ace4c344919cb309b">carr_destroy</link> (<link linkend="_structCARR">CARR</link> *vec)</para>
+
+<para>Destroys a vector and releases its internal resources. </para>
+</listitem>
+            <listitem><para><link linkend="_structCARR">CARR</link> <link linkend="_carr_8h_1ab0ae8cdfb4b002767dd93b2606de20e9">carr_init</link> (const size_t cap, const bool dynamic)</para>
+
+<para>Initializes a new <link linkend="_structCARR">CARR</link> vector. </para>
+</listitem>
+            <listitem><para><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> <link linkend="_carr_8h_1aec1da9b0f8f8ff18e763e5e1fa18a4d6">carr_pushBack</link> (<link linkend="_structCARR">CARR</link> *vec, void *item)</para>
+
+<para>Appends an element to the end of the vector. </para>
+</listitem>
+            <listitem><para><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> <link linkend="_carr_8h_1ac2afe81d25b36f7840db013084586252">carr_pushFront</link> (<link linkend="_structCARR">CARR</link> *vec, void *item)</para>
+
+<para>Inserts an element at the beginning of the vector. </para>
+</listitem>
+            <listitem><para><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> <link linkend="_carr_8h_1af4e0864f9b23847ec5128bed12c16cf4">carr_replaceIndex</link> (<link linkend="_structCARR">CARR</link> *vec, void *item, const size_t idx)</para>
+
+<para>Replaces an element at a specified index. </para>
+</listitem>
+            <listitem><para><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> <link linkend="_carr_8h_1a73fa03395af35a5b22ade60714a7a104">carr_resize</link> (<link linkend="_structCARR">CARR</link> *vec, const size_t newCap)</para>
+
+<para>Changes the capacity of a vector. </para>
+</listitem>
+            <listitem><para><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> <link linkend="_carr_8h_1acb108ce8c3e77993b32f071d7f81fe4c">carr_reverse</link> (<link linkend="_structCARR">CARR</link> *vec)</para>
+
+<para>Reverses the order of elements in the vector. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_carr_8h_1ad0ae1844655f22aa47fd627159e00078"/><section>
+    <title>CARR</title>
+<indexterm><primary>CARR</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>CARR</secondary></indexterm>
+<para><computeroutput>typedef struct CARR CARR</computeroutput></para></section>
+<anchor xml:id="_carr_8h_1a378ce9f6a0d1dca0d9e69de73afe71cb"/><section>
+    <title>CARRError</title>
+<indexterm><primary>CARRError</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>CARRError</secondary></indexterm>
+<para><computeroutput>typedef enum <link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> <link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link></computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec"/><section>
+    <title>CARRError</title>
+<indexterm><primary>CARRError</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>CARRError</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link></computeroutput></para><para>
+
+<para>Error codes returned by <link linkend="_structCARR">CARR</link> operations. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>CARR_VEC_OK</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>CARR_VEC_OK</secondary></indexterm>
+<anchor xml:id="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaf8ade64270c586fdc95650b637002e7d"/>CARR_VEC_OK</entry><entry>
+<para>The operation completed successfully. </para>
+</entry></row><row><entry><indexterm><primary>CARR_VEC_OutOfBounds</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>CARR_VEC_OutOfBounds</secondary></indexterm>
+<anchor xml:id="_carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6a444141bbe1884b12d0d813c0ab474f"/>CARR_VEC_OutOfBounds</entry><entry>
+<para>The requested index is outside the valid range. </para>
+</entry></row><row><entry><indexterm><primary>CARR_VEC_ResizeError</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>CARR_VEC_ResizeError</secondary></indexterm>
+<anchor xml:id="_carr_8h_1ab4bdc8444943761b4337de9fe5b718eca341444afc60d64101a3238f35058d84a"/>CARR_VEC_ResizeError</entry><entry>
+<para>The requested resize operation could not be completed. </para>
+</entry></row><row><entry><indexterm><primary>CARR_VEC_OOM</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>CARR_VEC_OOM</secondary></indexterm>
+<anchor xml:id="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaa69cc70a2617bb473d3bd51fccd5573d"/>CARR_VEC_OOM</entry><entry>
+<para>Memory allocation failed. </para>
+</entry></row><row><entry><indexterm><primary>CARR_VEC_NULL</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>CARR_VEC_NULL</secondary></indexterm>
+<anchor xml:id="_carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6fa1f9082854488fb8d324e86833c447"/>CARR_VEC_NULL</entry><entry>
+<para>A required pointer argument was NULL. </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_carr_8h_source_1l00082">82</link> of file <link linkend="_carr_8h_source">carr.h</link>.</para>
+<programlisting linenumbering="unnumbered">00083 {<emphasis role="comment"></emphasis>
+00084 <emphasis role="comment">&#32;&#32;&#32;&#32;/**&#32;@brief&#32;The&#32;operation&#32;completed&#32;successfully.&#32;*/</emphasis>
+00085 &#32;&#32;&#32;&#32;<link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaf8ade64270c586fdc95650b637002e7d">CARR_VEC_OK</link>,
+00086 <emphasis role="comment"></emphasis>
+00087 <emphasis role="comment">&#32;&#32;&#32;&#32;/**&#32;@brief&#32;The&#32;requested&#32;index&#32;is&#32;outside&#32;the&#32;valid&#32;range.&#32;*/</emphasis>
+00088 &#32;&#32;&#32;&#32;<link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6a444141bbe1884b12d0d813c0ab474f">CARR_VEC_OutOfBounds</link>,
+00089 <emphasis role="comment"></emphasis>
+00090 <emphasis role="comment">&#32;&#32;&#32;&#32;/**&#32;@brief&#32;The&#32;requested&#32;resize&#32;operation&#32;could&#32;not&#32;be&#32;completed.&#32;*/</emphasis>
+00091 &#32;&#32;&#32;&#32;<link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718eca341444afc60d64101a3238f35058d84a">CARR_VEC_ResizeError</link>,
+00092 <emphasis role="comment"></emphasis>
+00093 <emphasis role="comment">&#32;&#32;&#32;&#32;/**&#32;@brief&#32;Memory&#32;allocation&#32;failed.&#32;*/</emphasis>
+00094 &#32;&#32;&#32;&#32;<link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaa69cc70a2617bb473d3bd51fccd5573d">CARR_VEC_OOM</link>,
+00095 <emphasis role="comment"></emphasis>
+00096 <emphasis role="comment">&#32;&#32;&#32;&#32;/**&#32;@brief&#32;A&#32;required&#32;pointer&#32;argument&#32;was&#32;NULL.&#32;*/</emphasis>
+00097 &#32;&#32;&#32;&#32;<link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6fa1f9082854488fb8d324e86833c447">CARR_VEC_NULL</link>,
+00098 }&#32;<link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link>;
+</programlisting></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_carr_8h_1a6eafd445d5ca5592e6b060f0ac8057a0"/><section>
+    <title>carr_deleteIndex()</title>
+<indexterm><primary>carr_deleteIndex</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>carr_deleteIndex</secondary></indexterm>
+<para><computeroutput><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> carr_deleteIndex (<link linkend="_structCARR">CARR</link> * vec, const size_t index, const bool fall)</computeroutput></para><para>
+
+<para>Deletes an element at a specified index. </para>
+</para>
+
+<para>Removes the element at <computeroutput>index</computeroutput> from the vector.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in,out</entry><entry>vec</entry><entry>
+<para>Pointer to the vector to modify. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>index</entry><entry>
+<para>Index of the element to delete. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>fall</entry><entry>
+<para>Controls the deletion behavior, as defined by the implementation.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CARR_VEC_OK if successful. </para>
+
+<para>CARR_VEC_OutOfBounds if <computeroutput>index</computeroutput> is invalid. </para>
+
+<para>CARR_VEC_NULL if a required pointer is NULL.</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>The meaning of <computeroutput>fall</computeroutput> and whether the removed element&apos;s pointer is freed must be verified in the implementation. </para>
+</note>
+</para>
+<para>
+References <link linkend="_carr_8h_1a6eafd445d5ca5592e6b060f0ac8057a0">carr_deleteIndex()</link>.</para>
+<para>
+Referenced by <link linkend="_carr_8h_1a6eafd445d5ca5592e6b060f0ac8057a0">carr_deleteIndex()</link>.</para>
+</section>
+<anchor xml:id="_carr_8h_1a8f8ef750f811b48ace4c344919cb309b"/><section>
+    <title>carr_destroy()</title>
+<indexterm><primary>carr_destroy</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>carr_destroy</secondary></indexterm>
+<para><computeroutput>void carr_destroy (<link linkend="_structCARR">CARR</link> * vec)</computeroutput></para><para>
+
+<para>Destroys a vector and releases its internal resources. </para>
+</para>
+
+<para>Releases resources owned by the vector implementation and invalidates the vector&apos;s internal storage.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in,out</entry><entry>vec</entry><entry>
+<para>Pointer to the vector to destroy.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function does not return an error code. </para>
+
+<para>Whether the structure is reset to a safe, reusable state depends on the implementation. </para>
+
+<para>The pointed-to elements are not assumed to be freed. </para>
+</note>
+</para>
+<para>
+References <link linkend="_carr_8h_1a8f8ef750f811b48ace4c344919cb309b">carr_destroy()</link>.</para>
+<para>
+Referenced by <link linkend="_carr_8h_1a8f8ef750f811b48ace4c344919cb309b">carr_destroy()</link>.</para>
+</section>
+<anchor xml:id="_carr_8h_1ab0ae8cdfb4b002767dd93b2606de20e9"/><section>
+    <title>carr_init()</title>
+<indexterm><primary>carr_init</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>carr_init</secondary></indexterm>
+<para><computeroutput><link linkend="_structCARR">CARR</link> carr_init (const size_t cap, const bool dynamic)</computeroutput></para><para>
+
+<para>Initializes a new <link linkend="_structCARR">CARR</link> vector. </para>
+</para>
+
+<para>Creates a vector with the requested initial capacity and resizing mode.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>cap</entry><entry>
+<para>Initial capacity of the vector. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>dynamic</entry><entry>
+<para>Whether the vector supports dynamic resizing.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>An initialized <link linkend="_structCARR">CARR</link> instance.</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Check the returned instance according to the implementation&apos;s initialization and allocation-failure conventions. </para>
+</note>
+</para>
+<para>
+References <link linkend="_carr_8h_1ab0ae8cdfb4b002767dd93b2606de20e9">carr_init()</link>.</para>
+<para>
+Referenced by <link linkend="_carr_8h_1ab0ae8cdfb4b002767dd93b2606de20e9">carr_init()</link>.</para>
+</section>
+<anchor xml:id="_carr_8h_1aec1da9b0f8f8ff18e763e5e1fa18a4d6"/><section>
+    <title>carr_pushBack()</title>
+<indexterm><primary>carr_pushBack</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>carr_pushBack</secondary></indexterm>
+<para><computeroutput><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> carr_pushBack (<link linkend="_structCARR">CARR</link> * vec, void * item)</computeroutput></para><para>
+
+<para>Appends an element to the end of the vector. </para>
+</para>
+
+<para>Stores <computeroutput>item</computeroutput> after the current last element. Depending on the vector&apos;s configuration, the operation may require additional capacity.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in,out</entry><entry>vec</entry><entry>
+<para>Pointer to the vector to modify. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>item</entry><entry>
+<para>Pointer to the element to append.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CARR_VEC_OK if successful. </para>
+
+<para>CARR_VEC_NULL if a required pointer is NULL. </para>
+
+<para>CARR_VEC_ResizeError if the required resize cannot be performed. </para>
+
+<para>CARR_VEC_OOM if memory allocation fails. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_carr_8h_1aec1da9b0f8f8ff18e763e5e1fa18a4d6">carr_pushBack()</link>.</para>
+<para>
+Referenced by <link linkend="_carr_8h_1aec1da9b0f8f8ff18e763e5e1fa18a4d6">carr_pushBack()</link>.</para>
+</section>
+<anchor xml:id="_carr_8h_1ac2afe81d25b36f7840db013084586252"/><section>
+    <title>carr_pushFront()</title>
+<indexterm><primary>carr_pushFront</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>carr_pushFront</secondary></indexterm>
+<para><computeroutput><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> carr_pushFront (<link linkend="_structCARR">CARR</link> * vec, void * item)</computeroutput></para><para>
+
+<para>Inserts an element at the beginning of the vector. </para>
+</para>
+
+<para>Stores <computeroutput>item</computeroutput> at index zero and shifts existing elements as necessary.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in,out</entry><entry>vec</entry><entry>
+<para>Pointer to the vector to modify. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>item</entry><entry>
+<para>Pointer to the element to insert.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CARR_VEC_OK if successful. </para>
+
+<para>CARR_VEC_NULL if a required pointer is NULL. </para>
+
+<para>CARR_VEC_ResizeError if the required resize cannot be performed. </para>
+
+<para>CARR_VEC_OOM if memory allocation fails. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_carr_8h_1ac2afe81d25b36f7840db013084586252">carr_pushFront()</link>.</para>
+<para>
+Referenced by <link linkend="_carr_8h_1ac2afe81d25b36f7840db013084586252">carr_pushFront()</link>.</para>
+</section>
+<anchor xml:id="_carr_8h_1af4e0864f9b23847ec5128bed12c16cf4"/><section>
+    <title>carr_replaceIndex()</title>
+<indexterm><primary>carr_replaceIndex</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>carr_replaceIndex</secondary></indexterm>
+<para><computeroutput><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> carr_replaceIndex (<link linkend="_structCARR">CARR</link> * vec, void * item, const size_t idx)</computeroutput></para><para>
+
+<para>Replaces an element at a specified index. </para>
+</para>
+
+<para>Assigns a new pointer to the element at <computeroutput>idx</computeroutput>.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in,out</entry><entry>vec</entry><entry>
+<para>Pointer to the vector to modify. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>item</entry><entry>
+<para>Pointer to the replacement element. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>idx</entry><entry>
+<para>Index of the element to replace.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CARR_VEC_OK if successful. </para>
+
+<para>CARR_VEC_OutOfBounds if <computeroutput>idx</computeroutput> is invalid. </para>
+
+<para>CARR_VEC_NULL if a required pointer is NULL.</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function replaces the stored pointer. Ownership and cleanup of the previous element are determined by the implementation. </para>
+</note>
+</para>
+<para>
+References <link linkend="_carr_8h_1af4e0864f9b23847ec5128bed12c16cf4">carr_replaceIndex()</link>.</para>
+<para>
+Referenced by <link linkend="_carr_8h_1af4e0864f9b23847ec5128bed12c16cf4">carr_replaceIndex()</link>.</para>
+</section>
+<anchor xml:id="_carr_8h_1a73fa03395af35a5b22ade60714a7a104"/><section>
+    <title>carr_resize()</title>
+<indexterm><primary>carr_resize</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>carr_resize</secondary></indexterm>
+<para><computeroutput><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> carr_resize (<link linkend="_structCARR">CARR</link> * vec, const size_t newCap)</computeroutput></para><para>
+
+<para>Changes the capacity of a vector. </para>
+</para>
+
+<para>Requests a new capacity for the vector&apos;s underlying pointer array.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in,out</entry><entry>vec</entry><entry>
+<para>Pointer to the vector to resize. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>newCap</entry><entry>
+<para>Desired capacity.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CARR_VEC_OK if successful. </para>
+
+<para>CARR_VEC_NULL if a required pointer is NULL. </para>
+
+<para>CARR_VEC_ResizeError if resizing fails or is not permitted. </para>
+
+<para>CARR_VEC_OOM if memory allocation fails.</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>The exact behavior when <computeroutput>newCap</computeroutput> is smaller than the current size depends on the implementation. </para>
+</note>
+</para>
+<para>
+References <link linkend="_carr_8h_1a73fa03395af35a5b22ade60714a7a104">carr_resize()</link>.</para>
+<para>
+Referenced by <link linkend="_carr_8h_1a73fa03395af35a5b22ade60714a7a104">carr_resize()</link>.</para>
+</section>
+<anchor xml:id="_carr_8h_1acb108ce8c3e77993b32f071d7f81fe4c"/><section>
+    <title>carr_reverse()</title>
+<indexterm><primary>carr_reverse</primary><secondary>carr.h</secondary></indexterm>
+<indexterm><primary>carr.h</primary><secondary>carr_reverse</secondary></indexterm>
+<para><computeroutput><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link> carr_reverse (<link linkend="_structCARR">CARR</link> * vec)</computeroutput></para><para>
+
+<para>Reverses the order of elements in the vector. </para>
+</para>
+
+<para>Reorders the stored pointers so that the first element becomes the last, the second becomes the second-to-last, and so on.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in,out</entry><entry>vec</entry><entry>
+<para>Pointer to the vector to reverse.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>CARR_VEC_OK if successful. </para>
+
+<para>CARR_VEC_NULL if a required pointer is NULL.</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>The elements themselves are not copied or modified; only their positions in the vector are changed. </para>
+</note>
+</para>
+<para>
+References <link linkend="_carr_8h_1acb108ce8c3e77993b32f071d7f81fe4c">carr_reverse()</link>.</para>
+<para>
+Referenced by <link linkend="_carr_8h_1acb108ce8c3e77993b32f071d7f81fe4c">carr_reverse()</link>.</para>
+</section>
+</section>
+</section>

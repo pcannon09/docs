@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+<title>
+<para>CArray </para>
+</title>
+<indexterm><primary>CArray</primary></indexterm>
+
+<para><anchor xml:id="_index_1md_README"/></para>
+<section xml:id="_index_1autotoc_md1">
+<title>1.0.0-build</title></section>
+<section xml:id="_index_1autotoc_md2">
+<title>20261025</title>
+<para><link linkend="_structCARR">CARR</link> is a lightweight C vector library that stores pointers to elements (<computeroutput>void *</computeroutput>). It supports insertion, replacement, deletion, reversal, and dynamic resizing.</para>
+</section>
+<section xml:id="_index_1autotoc_md3">
+<title>Requirements</title>
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">C standard:</emphasis> C99 or later.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Compilers:</emphasis> GCC, Clang, or MSVC. Other compilers <emphasis>might</emphasis> also support CArray</para>
+</listitem><listitem>
+<para><emphasis role="bold">Minimum compiler versions:</emphasis> GCC 3.0+, Clang 3.0+, or MSVC 2013+</para>
+</listitem><listitem>
+<para><emphasis role="bold">Dependencies:</emphasis> Standard C headers and the <link linkend="_structCARR">CARR</link> implementation, no other dependencies needed</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md4">
+<title>Setup</title>
+<para>Run the following commands from the project root:</para>
+
+<para><literallayout><computeroutput>./gen.sh
+./gen.sh&#32;link
+./compile.sh&#32;setup
+./compile.sh&#32;settings
+</computeroutput></literallayout></para>
+
+<para>The interactive settings step (<computeroutput>./compile.sh settings</computeroutput>) is <emphasis role="bold">optional</emphasis>.</para>
+</section>
+<section xml:id="_index_1autotoc_md5">
+<title>Building Tests and Library Manually</title>
+<para>Compile the project using:</para>
+
+<para><literallayout><computeroutput>./compile.sh
+</computeroutput></literallayout></para>
+
+<para>Run the compiled program tests using:</para>
+
+<para><literallayout><computeroutput>./run.sh
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_index_1autotoc_md6">
+<title>Minimal Usage</title>
+<para>Include the <link linkend="_structCARR">CARR</link> header:</para>
+
+<para><literallayout><computeroutput>#include&#32;&quot;carray/carr.h&quot;
+</computeroutput></literallayout></para>
+
+<para>Initialize a vector, add elements, reverse, delete an element, and destroy it:</para>
+
+<para><literallayout><computeroutput>int&#32;a&#32;=&#32;10;
+int&#32;b&#32;=&#32;20;
+
+CARR&#32;vec&#32;=&#32;carr_init(4,&#32;true);
+
+carr_pushBack(&amp;vec,&#32;&amp;a);
+carr_pushBack(&amp;vec,&#32;&amp;b);
+carr_pushFront(&amp;vec,&#32;&amp;b);
+
+carr_replaceIndex(&amp;vec,&#32;&amp;a,&#32;1);
+carr_reverse(&amp;vec);
+carr_deleteIndex(&amp;vec,&#32;0,&#32;true);
+
+carr_destroy(&amp;vec);
+</computeroutput></literallayout></para>
+
+<para>Check returned <computeroutput><link linkend="_carr_8h_1ab4bdc8444943761b4337de9fe5b718ec">CARRError</link></computeroutput> values to handle operation failures.</para>
+</section>
+<section xml:id="_index_1autotoc_md7">
+<title>Notes</title>
+<para><itemizedlist>
+<listitem>
+<para><link linkend="_structCARR">CARR</link> stores pointers rather than copies of elements. Ensure the pointed-to objects remain valid while they are used.</para>
+</listitem><listitem>
+<para><computeroutput>carr_init(4, true)</computeroutput> initializes the vector with a capacity of four and enables dynamic resizing.</para>
+</listitem><listitem>
+<para><computeroutput><link linkend="_carr_8h_1a8f8ef750f811b48ace4c344919cb309b">carr_destroy()</link></computeroutput> releases the vector&apos;s internal resources; it does not necessarily free the pointed-to elements.</para>
+</listitem><listitem>
+<para>The meaning of the <computeroutput>fall</computeroutput> parameter in <computeroutput><link linkend="_carr_8h_1a6eafd445d5ca5592e6b060f0ac8057a0">carr_deleteIndex()</link></computeroutput> depends on the implementation. </para>
+</listitem></itemizedlist>
+</para>
+</section>
+</chapter>

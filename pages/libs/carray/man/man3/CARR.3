@@ -1,0 +1,86 @@
+.TH "CARR" 3 "Version v1.0.0-build" "CArray" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CARR \- Represents a pointer-based vector container\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <carr\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fB__initialized\fP"
+.br
+.RI "Internal initialization-state flag\&. "
+.ti -1c
+.RI "size_t \fBcap\fP"
+.br
+.RI "Maximum number of elements that can be stored without resizing\&. "
+.ti -1c
+.RI "bool \fBdynamic\fP"
+.br
+.RI "Indicates whether the vector supports dynamic resizing\&. "
+.ti -1c
+.RI "size_t \fBsize\fP"
+.br
+.RI "Number of elements currently stored in the vector\&. "
+.ti -1c
+.RI "void ** \fBvec\fP"
+.br
+.RI "Pointer to the array of stored element pointers\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents a pointer-based vector container\&. 
+
+Stores pointers to elements in a contiguous array\&. Tracks the number of elements currently stored and the allocated capacity\&.
+
+.PP
+\fBWarning\fP
+.RS 4
+Avoid modifying the internal fields directly 
+.RE
+.PP
+
+.PP
+Definition at line \fB39\fP of file \fBcarr\&.h\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool CARR::__initialized"
+
+.PP
+Internal initialization-state flag\&. Used by the implementation to track whether the vector has been initialized\&. 
+.PP
+Definition at line \fB75\fP of file \fBcarr\&.h\fP\&.
+.SS "size_t CARR::cap"
+
+.PP
+Maximum number of elements that can be stored without resizing\&. 
+.PP
+Definition at line \fB52\fP of file \fBcarr\&.h\fP\&.
+.SS "bool CARR::dynamic"
+
+.PP
+Indicates whether the vector supports dynamic resizing\&. When true, the vector may grow or shrink through resizing operations\&. When false, capacity is intended to remain fixed\&. 
+.PP
+Definition at line \fB65\fP of file \fBcarr\&.h\fP\&.
+.SS "size_t CARR::size"
+
+.PP
+Number of elements currently stored in the vector\&. 
+.PP
+Definition at line \fB57\fP of file \fBcarr\&.h\fP\&.
+.SS "void** CARR::vec"
+
+.PP
+Pointer to the array of stored element pointers\&. Each element is a \fRvoid *\fP\&. The array itself is managed by the \fBCARR\fP implementation\&. 
+.PP
+Definition at line \fB47\fP of file \fBcarr\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CArray from the source code\&.

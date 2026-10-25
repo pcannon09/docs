@@ -1,0 +1,2 @@
+/home/pcannon/repo/programming/c/carray/inc/carray/carr.h:18: warning: found documented #define CARRVECTOR_OPENCARR_VECTOR_CAP_ADDITION but ignoring it because ENABLE_PREPROCESSING is NO.
+/home/pcannon/repo/programming/c/carray/inc/carray/CARRpredefines.h:10: warning: found documented #define CARR_VERSION_MAJOR but ignoring it because ENABLE_PREPROCESSING is NO.

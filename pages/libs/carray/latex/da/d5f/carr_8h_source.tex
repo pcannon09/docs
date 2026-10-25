@@ -1,0 +1,240 @@
+\doxysection{carr.\+h}
+\hypertarget{carr_8h_source}{}\label{carr_8h_source}\index{inc/carray/carr.h@{inc/carray/carr.h}}
+\doxymbox{\hyperlink{carr_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ INCLUDE\_VECTOR\_VECTOR\_H\_}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ INCLUDE\_VECTOR\_VECTOR\_H\_}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00007}00007\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00008}00008\ \textcolor{preprocessor}{\#\ \ \ define\ CARRVECTOR\_OPEN\ extern\ "{}C"{}\ \{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00009}00009\ \textcolor{preprocessor}{\#\ \ \ define\ CARRVECTOR\_CLOSE\ \}}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00010}00010\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00011}00011\ \textcolor{preprocessor}{\#\ \ \ define\ CARRVECTOR\_OPEN}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00012}00012\ \textcolor{preprocessor}{\#\ \ \ define\ CARRVECTOR\_CLOSE}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00013}00013\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00015}00015\ CARRVECTOR\_OPEN}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00016}00016\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00017}00017\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00018}00018\ \textcolor{comment}{\ *\ @def\ CARR\_VECTOR\_CAP\_ADDITION}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00019}00019\ \textcolor{comment}{\ *\ @brief\ Default\ capacity\ increment\ used\ by\ the\ vector\ implementation.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00020}00020\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00021}00021\ \textcolor{comment}{\ *\ Defines\ the\ default\ capacity\ growth\ increment\ as\ 16\ elements.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00022}00022\ \textcolor{comment}{\ *\ The\ implementation\ may\ use\ this\ value\ when\ increasing\ capacity.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00023}00023\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00024}00024\ \textcolor{comment}{\ *\ Override\ this\ macro\ before\ including\ the\ header\ to\ customize\ the\ value.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00025}00025\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00026}00026\ \textcolor{preprocessor}{\#ifndef\ CARR\_VECTOR\_CAP\_ADDITION}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00027}00027\ \textcolor{preprocessor}{\#\ \ \ define\ CARR\_VECTOR\_CAP\_ADDITION\ 16}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00028}00028\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00029}00029\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00030}00030\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00031}00031\ \textcolor{comment}{\ *\ @struct\ CARR}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00032}00032\ \textcolor{comment}{\ *\ @brief\ Represents\ a\ pointer-\/based\ vector\ container.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00033}00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00034}00034\ \textcolor{comment}{\ *\ Stores\ pointers\ to\ elements\ in\ a\ contiguous\ array.\ Tracks\ the\ number}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00035}00035\ \textcolor{comment}{\ *\ of\ elements\ currently\ stored\ and\ the\ allocated\ capacity.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00036}00036\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00037}00037\ \textcolor{comment}{\ *\ @warning\ Avoid\ modifying\ the\ internal\ fields\ directly}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00038}00038\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00039}\doxymbox{\hyperlink{structCARR}{00039}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structCARR}{CARR}}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00040}00040\ \{\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00041}00041\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00042}00042\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Pointer\ to\ the\ array\ of\ stored\ element\ pointers.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00043}00043\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00044}00044\ \textcolor{comment}{\ \ \ \ \ *\ Each\ element\ is\ a\ \`{}void\ *\`{}.\ The\ array\ itself\ is\ managed\ by\ the}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00045}00045\ \textcolor{comment}{\ \ \ \ \ *\ CARR\ implementation.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00046}00046\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00047}\doxymbox{\hyperlink{structCARR_ab161417c456dccbdac030d24a2f32935}{00047}}\ \ \ \ \ \textcolor{keywordtype}{void}\ **\doxymbox{\hyperlink{structCARR_ab161417c456dccbdac030d24a2f32935}{vec}};}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00048}00048\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00049}00049\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00050}00050\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Maximum\ number\ of\ elements\ that\ can\ be\ stored\ without\ resizing.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00051}00051\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00052}\doxymbox{\hyperlink{structCARR_a2a1fdff4bb268f490d818a71f30910ff}{00052}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structCARR_a2a1fdff4bb268f490d818a71f30910ff}{cap}};}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00053}00053\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00054}00054\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Number\ of\ elements\ currently\ stored\ in\ the\ vector.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00056}00056\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00057}\doxymbox{\hyperlink{structCARR_a53162b258c2583ae2f52390485252320}{00057}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structCARR_a53162b258c2583ae2f52390485252320}{size}};}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00058}00058\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00059}00059\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00060}00060\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Indicates\ whether\ the\ vector\ supports\ dynamic\ resizing.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ *\ When\ true,\ the\ vector\ may\ grow\ or\ shrink\ through\ resizing\ operations.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00063}00063\ \textcolor{comment}{\ \ \ \ \ *\ When\ false,\ capacity\ is\ intended\ to\ remain\ fixed.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00064}00064\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00065}\doxymbox{\hyperlink{structCARR_a751356b4f7e439b7a1e0695b103cdb95}{00065}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structCARR_a751356b4f7e439b7a1e0695b103cdb95}{dynamic}};}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00066}00066\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00067}00067\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00068}00068\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Internal\ initialization-\/state\ flag.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00069}00069\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00070}00070\ \textcolor{comment}{\ \ \ \ \ *\ Used\ by\ the\ implementation\ to\ track\ whether\ the\ vector\ has\ been}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00071}00071\ \textcolor{comment}{\ \ \ \ \ *\ initialized.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00072}00072\ \textcolor{comment}{\ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ *\ @internal}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00075}\doxymbox{\hyperlink{structCARR_a1032be133664b90b83cb796fe513aee1}{00075}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structCARR_a1032be133664b90b83cb796fe513aee1}{\_\_initialized}};}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00076}\doxymbox{\hyperlink{carr_8h_ad0ae1844655f22aa47fd627159e00078}{00076}}\ \}\ \doxymbox{\hyperlink{structCARR}{CARR}};}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00077}00077\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00078}00078\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00079}00079\ \textcolor{comment}{\ *\ @enum\ CARRError}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00080}00080\ \textcolor{comment}{\ *\ @brief\ Error\ codes\ returned\ by\ CARR\ operations.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00081}00081\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00082}\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{00082}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00083}00083\ \{\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00084}00084\ \textcolor{comment}{\ \ \ \ /**\ @brief\ The\ operation\ completed\ successfully.\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00085}\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ecaf8ade64270c586fdc95650b637002e7d}{00085}}\ \ \ \ \ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ecaf8ade64270c586fdc95650b637002e7d}{CARR\_VEC\_OK}},}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00086}00086\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00087}00087\ \textcolor{comment}{\ \ \ \ /**\ @brief\ The\ requested\ index\ is\ outside\ the\ valid\ range.\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00088}\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718eca6a444141bbe1884b12d0d813c0ab474f}{00088}}\ \ \ \ \ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718eca6a444141bbe1884b12d0d813c0ab474f}{CARR\_VEC\_OutOfBounds}},}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00089}00089\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00090}00090\ \textcolor{comment}{\ \ \ \ /**\ @brief\ The\ requested\ resize\ operation\ could\ not\ be\ completed.\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00091}\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718eca341444afc60d64101a3238f35058d84a}{00091}}\ \ \ \ \ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718eca341444afc60d64101a3238f35058d84a}{CARR\_VEC\_ResizeError}},}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00092}00092\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00093}00093\ \textcolor{comment}{\ \ \ \ /**\ @brief\ Memory\ allocation\ failed.\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00094}\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ecaa69cc70a2617bb473d3bd51fccd5573d}{00094}}\ \ \ \ \ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ecaa69cc70a2617bb473d3bd51fccd5573d}{CARR\_VEC\_OOM}},}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00095}00095\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00096}00096\ \textcolor{comment}{\ \ \ \ /**\ @brief\ A\ required\ pointer\ argument\ was\ NULL.\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00097}\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718eca6fa1f9082854488fb8d324e86833c447}{00097}}\ \ \ \ \ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718eca6fa1f9082854488fb8d324e86833c447}{CARR\_VEC\_NULL}},}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00098}\doxymbox{\hyperlink{carr_8h_a378ce9f6a0d1dca0d9e69de73afe71cb}{00098}}\ \}\ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}};}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00099}00099\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00100}00100\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00101}00101\ \textcolor{comment}{\ *\ @brief\ Initializes\ a\ new\ CARR\ vector.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00102}00102\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00103}00103\ \textcolor{comment}{\ *\ Creates\ a\ vector\ with\ the\ requested\ initial\ capacity\ and\ resizing\ mode.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00104}00104\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00105}00105\ \textcolor{comment}{\ *\ @param[in]\ cap\ Initial\ capacity\ of\ the\ vector.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00106}00106\ \textcolor{comment}{\ *\ @param[in]\ dynamic\ Whether\ the\ vector\ supports\ dynamic\ resizing.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00107}00107\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00108}00108\ \textcolor{comment}{\ *\ @return\ An\ initialized\ CARR\ instance.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00109}00109\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00110}00110\ \textcolor{comment}{\ *\ @note\ Check\ the\ returned\ instance\ according\ to\ the\ implementation's}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00111}00111\ \textcolor{comment}{\ *\ \ \ \ \ initialization\ and\ allocation-\/failure\ conventions.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00112}00112\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00113}\doxymbox{\hyperlink{carr_8h_ab0ae8cdfb4b002767dd93b2606de20e9}{00113}}\ \doxymbox{\hyperlink{structCARR}{CARR}}\ \doxymbox{\hyperlink{carr_8h_ab0ae8cdfb4b002767dd93b2606de20e9}{carr\_init}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ cap,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ dynamic);}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00114}00114\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00115}00115\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00116}00116\ \textcolor{comment}{\ *\ @brief\ Changes\ the\ capacity\ of\ a\ vector.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00117}00117\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00118}00118\ \textcolor{comment}{\ *\ Requests\ a\ new\ capacity\ for\ the\ vector's\ underlying\ pointer\ array.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00119}00119\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00120}00120\ \textcolor{comment}{\ *\ @param[in,out]\ vec\ Pointer\ to\ the\ vector\ to\ resize.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00121}00121\ \textcolor{comment}{\ *\ @param[in]\ newCap\ Desired\ capacity.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00122}00122\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00123}00123\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_OK\ if\ successful.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00124}00124\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_NULL\ if\ a\ required\ pointer\ is\ NULL.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00125}00125\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_ResizeError\ if\ resizing\ fails\ or\ is\ not\ permitted.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00126}00126\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_OOM\ if\ memory\ allocation\ fails.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00127}00127\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00128}00128\ \textcolor{comment}{\ *\ @note\ The\ exact\ behavior\ when\ \`{}newCap`\ is\ smaller\ than\ the\ current}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00129}00129\ \textcolor{comment}{\ *\ \ \ \ \ size\ depends\ on\ the\ implementation.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00130}00130\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00131}\doxymbox{\hyperlink{carr_8h_a73fa03395af35a5b22ade60714a7a104}{00131}}\ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}}\ \doxymbox{\hyperlink{carr_8h_a73fa03395af35a5b22ade60714a7a104}{carr\_resize}}(\doxymbox{\hyperlink{structCARR}{CARR}}\ *vec,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ newCap);}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00132}00132\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00133}00133\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00134}00134\ \textcolor{comment}{\ *\ @brief\ Deletes\ an\ element\ at\ a\ specified\ index.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00135}00135\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00136}00136\ \textcolor{comment}{\ *\ Removes\ the\ element\ at\ \`{}index`\ from\ the\ vector.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00137}00137\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00138}00138\ \textcolor{comment}{\ *\ @param[in,out]\ vec\ Pointer\ to\ the\ vector\ to\ modify.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00139}00139\ \textcolor{comment}{\ *\ @param[in]\ index\ Index\ of\ the\ element\ to\ delete.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00140}00140\ \textcolor{comment}{\ *\ @param[in]\ fall\ Controls\ the\ deletion\ behavior,\ as\ defined\ by\ the}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00141}00141\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ implementation.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00142}00142\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00143}00143\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_OK\ if\ successful.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00144}00144\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_OutOfBounds\ if\ \`{}index`\ is\ invalid.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00145}00145\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_NULL\ if\ a\ required\ pointer\ is\ NULL.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00146}00146\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00147}00147\ \textcolor{comment}{\ *\ @note\ The\ meaning\ of\ \`{}fall`\ and\ whether\ the\ removed\ element's\ pointer}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00148}00148\ \textcolor{comment}{\ *\ \ \ \ \ is\ freed\ must\ be\ verified\ in\ the\ implementation.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00149}00149\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00150}\doxymbox{\hyperlink{carr_8h_a6eafd445d5ca5592e6b060f0ac8057a0}{00150}}\ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}}\ \doxymbox{\hyperlink{carr_8h_a6eafd445d5ca5592e6b060f0ac8057a0}{carr\_deleteIndex}}(\doxymbox{\hyperlink{structCARR}{CARR}}\ *vec,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ index,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ fall);}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00151}00151\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00152}00152\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00153}00153\ \textcolor{comment}{\ *\ @brief\ Replaces\ an\ element\ at\ a\ specified\ index.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00154}00154\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00155}00155\ \textcolor{comment}{\ *\ Assigns\ a\ new\ pointer\ to\ the\ element\ at\ \`{}idx`.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00156}00156\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00157}00157\ \textcolor{comment}{\ *\ @param[in,out]\ vec\ Pointer\ to\ the\ vector\ to\ modify.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00158}00158\ \textcolor{comment}{\ *\ @param[in]\ item\ Pointer\ to\ the\ replacement\ element.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00159}00159\ \textcolor{comment}{\ *\ @param[in]\ idx\ Index\ of\ the\ element\ to\ replace.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00160}00160\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00161}00161\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_OK\ if\ successful.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00162}00162\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_OutOfBounds\ if\ \`{}idx`\ is\ invalid.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00163}00163\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_NULL\ if\ a\ required\ pointer\ is\ NULL.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00164}00164\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00165}00165\ \textcolor{comment}{\ *\ @note\ This\ function\ replaces\ the\ stored\ pointer.\ Ownership\ and\ cleanup}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00166}00166\ \textcolor{comment}{\ *\ \ \ \ \ of\ the\ previous\ element\ are\ determined\ by\ the\ implementation.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00167}00167\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00168}\doxymbox{\hyperlink{carr_8h_af4e0864f9b23847ec5128bed12c16cf4}{00168}}\ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}}\ \doxymbox{\hyperlink{carr_8h_af4e0864f9b23847ec5128bed12c16cf4}{carr\_replaceIndex}}(\doxymbox{\hyperlink{structCARR}{CARR}}\ *vec,\ \textcolor{keywordtype}{void}\ *item,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ idx);}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00169}00169\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00170}00170\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00171}00171\ \textcolor{comment}{\ *\ @brief\ Appends\ an\ element\ to\ the\ end\ of\ the\ vector.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00172}00172\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00173}00173\ \textcolor{comment}{\ *\ Stores\ \`{}item`\ after\ the\ current\ last\ element.\ Depending\ on\ the\ vector's}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00174}00174\ \textcolor{comment}{\ *\ configuration,\ the\ operation\ may\ require\ additional\ capacity.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00175}00175\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00176}00176\ \textcolor{comment}{\ *\ @param[in,out]\ vec\ Pointer\ to\ the\ vector\ to\ modify.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00177}00177\ \textcolor{comment}{\ *\ @param[in]\ item\ Pointer\ to\ the\ element\ to\ append.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00178}00178\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00179}00179\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_OK\ if\ successful.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00180}00180\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_NULL\ if\ a\ required\ pointer\ is\ NULL.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00181}00181\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_ResizeError\ if\ the\ required\ resize\ cannot\ be\ performed.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00182}00182\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_OOM\ if\ memory\ allocation\ fails.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00183}00183\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00184}\doxymbox{\hyperlink{carr_8h_aec1da9b0f8f8ff18e763e5e1fa18a4d6}{00184}}\ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}}\ \doxymbox{\hyperlink{carr_8h_aec1da9b0f8f8ff18e763e5e1fa18a4d6}{carr\_pushBack}}(\doxymbox{\hyperlink{structCARR}{CARR}}\ *vec,\ \textcolor{keywordtype}{void}\ *item);}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00185}00185\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00186}00186\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00187}00187\ \textcolor{comment}{\ *\ @brief\ Inserts\ an\ element\ at\ the\ beginning\ of\ the\ vector.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00188}00188\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00189}00189\ \textcolor{comment}{\ *\ Stores\ \`{}item`\ at\ index\ zero\ and\ shifts\ existing\ elements\ as\ necessary.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00190}00190\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00191}00191\ \textcolor{comment}{\ *\ @param[in,out]\ vec\ Pointer\ to\ the\ vector\ to\ modify.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00192}00192\ \textcolor{comment}{\ *\ @param[in]\ item\ Pointer\ to\ the\ element\ to\ insert.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00193}00193\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00194}00194\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_OK\ if\ successful.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00195}00195\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_NULL\ if\ a\ required\ pointer\ is\ NULL.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00196}00196\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_ResizeError\ if\ the\ required\ resize\ cannot\ be\ performed.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00197}00197\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_OOM\ if\ memory\ allocation\ fails.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00198}00198\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00199}\doxymbox{\hyperlink{carr_8h_ac2afe81d25b36f7840db013084586252}{00199}}\ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}}\ \doxymbox{\hyperlink{carr_8h_ac2afe81d25b36f7840db013084586252}{carr\_pushFront}}(\doxymbox{\hyperlink{structCARR}{CARR}}\ *vec,\ \textcolor{keywordtype}{void}\ *item);}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00200}00200\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00201}00201\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00202}00202\ \textcolor{comment}{\ *\ @brief\ Reverses\ the\ order\ of\ elements\ in\ the\ vector.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00203}00203\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00204}00204\ \textcolor{comment}{\ *\ Reorders\ the\ stored\ pointers\ so\ that\ the\ first\ element\ becomes\ the\ last,}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00205}00205\ \textcolor{comment}{\ *\ the\ second\ becomes\ the\ second-\/to-\/last,\ and\ so\ on.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00206}00206\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00207}00207\ \textcolor{comment}{\ *\ @param[in,out]\ vec\ Pointer\ to\ the\ vector\ to\ reverse.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00208}00208\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00209}00209\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_OK\ if\ successful.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00210}00210\ \textcolor{comment}{\ *\ @return\ CARR\_VEC\_NULL\ if\ a\ required\ pointer\ is\ NULL.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00211}00211\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00212}00212\ \textcolor{comment}{\ *\ @note\ The\ elements\ themselves\ are\ not\ copied\ or\ modified;\ only\ their}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00213}00213\ \textcolor{comment}{\ *\ \ \ \ \ positions\ in\ the\ vector\ are\ changed.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00214}00214\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00215}\doxymbox{\hyperlink{carr_8h_acb108ce8c3e77993b32f071d7f81fe4c}{00215}}\ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}}\ \doxymbox{\hyperlink{carr_8h_acb108ce8c3e77993b32f071d7f81fe4c}{carr\_reverse}}(\doxymbox{\hyperlink{structCARR}{CARR}}\ *vec);}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00216}00216\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00217}00217\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00218}00218\ \textcolor{comment}{\ *\ @brief\ Destroys\ a\ vector\ and\ releases\ its\ internal\ resources.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00219}00219\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00220}00220\ \textcolor{comment}{\ *\ Releases\ resources\ owned\ by\ the\ vector\ implementation\ and\ invalidates}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00221}00221\ \textcolor{comment}{\ *\ the\ vector's\ internal\ storage.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00222}00222\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00223}00223\ \textcolor{comment}{\ *\ @param[in,out]\ vec\ Pointer\ to\ the\ vector\ to\ destroy.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00224}00224\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00225}00225\ \textcolor{comment}{\ *\ @note\ This\ function\ does\ not\ return\ an\ error\ code.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00226}00226\ \textcolor{comment}{\ *\ @note\ Whether\ the\ structure\ is\ reset\ to\ a\ safe,\ reusable\ state\ depends}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00227}00227\ \textcolor{comment}{\ *\ \ \ \ \ on\ the\ implementation.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00228}00228\ \textcolor{comment}{\ *\ @note\ The\ pointed-\/to\ elements\ are\ not\ assumed\ to\ be\ freed.}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00229}00229\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00230}\doxymbox{\hyperlink{carr_8h_a8f8ef750f811b48ace4c344919cb309b}{00230}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{carr_8h_a8f8ef750f811b48ace4c344919cb309b}{carr\_destroy}}(\doxymbox{\hyperlink{structCARR}{CARR}}\ *vec);}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00232}00232\ CARRVECTOR\_CLOSE}
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{carr_8h_source_l00234}00234\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ INCLUDE\_VECTOR\_VECTOR\_H\_}}
+
+\end{DoxyCode}

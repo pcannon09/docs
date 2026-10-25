@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="da/ddd/README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>CArray</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>1.0.0-build</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>20261025</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">CARR<sp/>is<sp/>a<sp/>lightweight<sp/>C<sp/>vector<sp/>library<sp/>that<sp/>stores<sp/>pointers<sp/>to<sp/>elements<sp/>(`void<sp/>*`).<sp/>It<sp/>supports<sp/>insertion,<sp/>replacement,<sp/>deletion,<sp/>reversal,<sp/>and<sp/>dynamic<sp/>resizing.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Requirements</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**C<sp/>standard:**<sp/>C99<sp/>or<sp/>later.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Compilers:**<sp/>GCC,<sp/>Clang,<sp/>or<sp/>MSVC.<sp/>Other<sp/>compilers<sp/>*might*<sp/>also<sp/>support<sp/>CArray</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Minimum<sp/>compiler<sp/>versions:**<sp/>GCC<sp/>3.0+,<sp/>Clang<sp/>3.0+,<sp/>or<sp/>MSVC<sp/>2013+</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Dependencies:**<sp/>Standard<sp/>C<sp/>headers<sp/>and<sp/>the<sp/>CARR<sp/>implementation,<sp/>no<sp/>other<sp/>dependencies<sp/>needed</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Run<sp/>the<sp/>following<sp/>commands<sp/>from<sp/>the<sp/>project<sp/>root:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">./gen.sh</highlight></codeline>
+<codeline><highlight class="normal">./gen.sh<sp/>link</highlight></codeline>
+<codeline><highlight class="normal">./compile.sh<sp/>setup</highlight></codeline>
+<codeline><highlight class="normal">./compile.sh<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>interactive<sp/>settings<sp/>step<sp/>(`./compile.sh<sp/>settings`)<sp/>is<sp/>**optional**.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Building<sp/>Tests<sp/>and<sp/>Library<sp/>Manually</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Compile<sp/>the<sp/>project<sp/>using:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">./compile.sh</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Run<sp/>the<sp/>compiled<sp/>program<sp/>tests<sp/>using:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">./run.sh</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Minimal<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Include<sp/>the<sp/>CARR<sp/>header:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;carray/carr.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Initialize<sp/>a<sp/>vector,<sp/>add<sp/>elements,<sp/>reverse,<sp/>delete<sp/>an<sp/>element,<sp/>and<sp/>destroy<sp/>it:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>a<sp/>=<sp/>10;</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>b<sp/>=<sp/>20;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">CARR<sp/>vec<sp/>=<sp/>carr_init(4,<sp/>true);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">carr_pushBack(&amp;vec,<sp/>&amp;a);</highlight></codeline>
+<codeline><highlight class="normal">carr_pushBack(&amp;vec,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">carr_pushFront(&amp;vec,<sp/>&amp;b);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">carr_replaceIndex(&amp;vec,<sp/>&amp;a,<sp/>1);</highlight></codeline>
+<codeline><highlight class="normal">carr_reverse(&amp;vec);</highlight></codeline>
+<codeline><highlight class="normal">carr_deleteIndex(&amp;vec,<sp/>0,<sp/>true);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">carr_destroy(&amp;vec);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Check<sp/>returned<sp/>`CARRError`<sp/>values<sp/>to<sp/>handle<sp/>operation<sp/>failures.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Notes</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>CARR<sp/>stores<sp/>pointers<sp/>rather<sp/>than<sp/>copies<sp/>of<sp/>elements.<sp/>Ensure<sp/>the<sp/>pointed-to<sp/>objects<sp/>remain<sp/>valid<sp/>while<sp/>they<sp/>are<sp/>used.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`carr_init(4,<sp/>true)`<sp/>initializes<sp/>the<sp/>vector<sp/>with<sp/>a<sp/>capacity<sp/>of<sp/>four<sp/>and<sp/>enables<sp/>dynamic<sp/>resizing.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`carr_destroy()`<sp/>releases<sp/>the<sp/>vector&apos;s<sp/>internal<sp/>resources;<sp/>it<sp/>does<sp/>not<sp/>necessarily<sp/>free<sp/>the<sp/>pointed-to<sp/>elements.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>meaning<sp/>of<sp/>the<sp/>`fall`<sp/>parameter<sp/>in<sp/>`carr_deleteIndex()`<sp/>depends<sp/>on<sp/>the<sp/>implementation.</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

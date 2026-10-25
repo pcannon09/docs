@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="d3/d83/structCARR" kind="struct" language="C++" prot="public">
+    <compoundname>CARR</compoundname>
+    <includes refid="da/d5f/carr_8h" local="no">carr.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d3/d83/structCARR_1a1032be133664b90b83cb796fe513aee1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CARR::__initialized</definition>
+        <argsstring></argsstring>
+        <name>__initialized</name>
+        <qualifiedname>CARR::__initialized</qualifiedname>
+        <briefdescription>
+<para>Internal initialization-state flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used by the implementation to track whether the vector has been initialized. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="75" column="6" bodyfile="inc/carray/carr.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/structCARR_1a2a1fdff4bb268f490d818a71f30910ff" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t CARR::cap</definition>
+        <argsstring></argsstring>
+        <name>cap</name>
+        <qualifiedname>CARR::cap</qualifiedname>
+        <briefdescription>
+<para>Maximum number of elements that can be stored without resizing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="52" column="8" bodyfile="inc/carray/carr.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/structCARR_1a751356b4f7e439b7a1e0695b103cdb95" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CARR::dynamic</definition>
+        <argsstring></argsstring>
+        <name>dynamic</name>
+        <qualifiedname>CARR::dynamic</qualifiedname>
+        <briefdescription>
+<para>Indicates whether the vector supports dynamic resizing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When true, the vector may grow or shrink through resizing operations. When false, capacity is intended to remain fixed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="65" column="6" bodyfile="inc/carray/carr.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/structCARR_1a53162b258c2583ae2f52390485252320" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t CARR::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>CARR::size</qualifiedname>
+        <briefdescription>
+<para>Number of elements currently stored in the vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="57" column="8" bodyfile="inc/carray/carr.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d83/structCARR_1ab161417c456dccbdac030d24a2f32935" prot="public" static="no" mutable="no">
+        <type>void **</type>
+        <definition>void** CARR::vec</definition>
+        <argsstring></argsstring>
+        <name>vec</name>
+        <qualifiedname>CARR::vec</qualifiedname>
+        <briefdescription>
+<para>Pointer to the array of stored element pointers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Each element is a <computeroutput>void *</computeroutput>. The array itself is managed by the <ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> implementation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/carray/carr.h" line="47" column="6" bodyfile="inc/carray/carr.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a pointer-based vector container. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Stores pointers to elements in a contiguous array. Tracks the number of elements currently stored and the allocated capacity.</para>
+<para><simplesect kind="warning"><para>Avoid modifying the internal fields directly </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="inc/carray/carr.h" line="39" column="1" bodyfile="inc/carray/carr.h" bodystart="40" bodyend="76"/>
+    <listofallmembers>
+      <member refid="d3/d83/structCARR_1a1032be133664b90b83cb796fe513aee1" prot="public" virt="non-virtual"><scope>CARR</scope><name>__initialized</name></member>
+      <member refid="d3/d83/structCARR_1a2a1fdff4bb268f490d818a71f30910ff" prot="public" virt="non-virtual"><scope>CARR</scope><name>cap</name></member>
+      <member refid="d3/d83/structCARR_1a751356b4f7e439b7a1e0695b103cdb95" prot="public" virt="non-virtual"><scope>CARR</scope><name>dynamic</name></member>
+      <member refid="d3/d83/structCARR_1a53162b258c2583ae2f52390485252320" prot="public" virt="non-virtual"><scope>CARR</scope><name>size</name></member>
+      <member refid="d3/d83/structCARR_1ab161417c456dccbdac030d24a2f32935" prot="public" virt="non-virtual"><scope>CARR</scope><name>vec</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

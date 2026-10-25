@@ -1,0 +1,425 @@
+\doxysection{inc/\+carray/\+carr.h File Reference}
+\hypertarget{carr_8h}{}\label{carr_8h}\index{inc/carray/carr.h@{inc/carray/carr.h}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structCARR}{CARR}}
+\begin{DoxyCompactList}\small\item\em Represents a pointer-\/based vector container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct CARR \doxymbox{\hyperlink{carr_8h_ad0ae1844655f22aa47fd627159e00078}{CARR}}
+\item 
+typedef enum \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} \doxymbox{\hyperlink{carr_8h_a378ce9f6a0d1dca0d9e69de73afe71cb}{CARRError}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} \{ \newline
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ecaf8ade64270c586fdc95650b637002e7d}{CARR\+\_\+\+VEC\+\_\+\+OK}}
+, \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718eca6a444141bbe1884b12d0d813c0ab474f}{CARR\+\_\+\+VEC\+\_\+\+Out\+Of\+Bounds}}
+, \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718eca341444afc60d64101a3238f35058d84a}{CARR\+\_\+\+VEC\+\_\+\+Resize\+Error}}
+, \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ecaa69cc70a2617bb473d3bd51fccd5573d}{CARR\+\_\+\+VEC\+\_\+\+OOM}}
+, \newline
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718eca6fa1f9082854488fb8d324e86833c447}{CARR\+\_\+\+VEC\+\_\+\+NULL}}
+ \}
+\begin{DoxyCompactList}\small\item\em Error codes returned by \doxylink{structCARR}{CARR} operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} \doxymbox{\hyperlink{carr_8h_a6eafd445d5ca5592e6b060f0ac8057a0}{carr\+\_\+delete\+Index}} (\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}vec, const size\+\_\+t index, const bool fall)
+\begin{DoxyCompactList}\small\item\em Deletes an element at a specified index. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{carr_8h_a8f8ef750f811b48ace4c344919cb309b}{carr\+\_\+destroy}} (\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}vec)
+\begin{DoxyCompactList}\small\item\em Destroys a vector and releases its internal resources. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structCARR}{CARR}} \doxymbox{\hyperlink{carr_8h_ab0ae8cdfb4b002767dd93b2606de20e9}{carr\+\_\+init}} (const size\+\_\+t cap, const bool dynamic)
+\begin{DoxyCompactList}\small\item\em Initializes a new \doxylink{structCARR}{CARR} vector. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} \doxymbox{\hyperlink{carr_8h_aec1da9b0f8f8ff18e763e5e1fa18a4d6}{carr\+\_\+push\+Back}} (\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}vec, void \texorpdfstring{$\ast$}{*}item)
+\begin{DoxyCompactList}\small\item\em Appends an element to the end of the vector. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} \doxymbox{\hyperlink{carr_8h_ac2afe81d25b36f7840db013084586252}{carr\+\_\+push\+Front}} (\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}vec, void \texorpdfstring{$\ast$}{*}item)
+\begin{DoxyCompactList}\small\item\em Inserts an element at the beginning of the vector. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} \doxymbox{\hyperlink{carr_8h_af4e0864f9b23847ec5128bed12c16cf4}{carr\+\_\+replace\+Index}} (\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}vec, void \texorpdfstring{$\ast$}{*}item, const size\+\_\+t idx)
+\begin{DoxyCompactList}\small\item\em Replaces an element at a specified index. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} \doxymbox{\hyperlink{carr_8h_a73fa03395af35a5b22ade60714a7a104}{carr\+\_\+resize}} (\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}vec, const size\+\_\+t new\+Cap)
+\begin{DoxyCompactList}\small\item\em Changes the capacity of a vector. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} \doxymbox{\hyperlink{carr_8h_acb108ce8c3e77993b32f071d7f81fe4c}{carr\+\_\+reverse}} (\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}vec)
+\begin{DoxyCompactList}\small\item\em Reverses the order of elements in the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{carr_8h_doc-typedef-members}
+\Hypertarget{carr_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{carr_8h_ad0ae1844655f22aa47fd627159e00078}\index{carr.h@{carr.h}!CARR@{CARR}}
+\index{CARR@{CARR}!carr.h@{carr.h}}
+\doxysubsubsection{\texorpdfstring{CARR}{CARR}}
+{\footnotesize\ttfamily \label{carr_8h_ad0ae1844655f22aa47fd627159e00078} 
+typedef struct CARR CARR}
+
+\Hypertarget{carr_8h_a378ce9f6a0d1dca0d9e69de73afe71cb}\index{carr.h@{carr.h}!CARRError@{CARRError}}
+\index{CARRError@{CARRError}!carr.h@{carr.h}}
+\doxysubsubsection{\texorpdfstring{CARRError}{CARRError}}
+{\footnotesize\ttfamily \label{carr_8h_a378ce9f6a0d1dca0d9e69de73afe71cb} 
+typedef enum \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}}}
+
+
+
+\label{carr_8h_doc-enum-members}
+\Hypertarget{carr_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}\index{carr.h@{carr.h}!CARRError@{CARRError}}
+\index{CARRError@{CARRError}!carr.h@{carr.h}}
+\doxysubsubsection{\texorpdfstring{CARRError}{CARRError}}
+{\footnotesize\ttfamily \label{carr_8h_ab4bdc8444943761b4337de9fe5b718ec} 
+enum \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}}}
+
+
+
+Error codes returned by \doxylink{structCARR}{CARR} operations. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CARR\_VEC\_OK@{CARR\_VEC\_OK}!carr.h@{carr.h}}
+\index{carr.h@{carr.h}!CARR\_VEC\_OK@{CARR\_VEC\_OK}}
+}\Hypertarget{carr_8h_ab4bdc8444943761b4337de9fe5b718ecaf8ade64270c586fdc95650b637002e7d}\label{carr_8h_ab4bdc8444943761b4337de9fe5b718ecaf8ade64270c586fdc95650b637002e7d} 
+CARR\+\_\+\+VEC\+\_\+\+OK&The operation completed successfully. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CARR\_VEC\_OutOfBounds@{CARR\_VEC\_OutOfBounds}!carr.h@{carr.h}}
+\index{carr.h@{carr.h}!CARR\_VEC\_OutOfBounds@{CARR\_VEC\_OutOfBounds}}
+}\Hypertarget{carr_8h_ab4bdc8444943761b4337de9fe5b718eca6a444141bbe1884b12d0d813c0ab474f}\label{carr_8h_ab4bdc8444943761b4337de9fe5b718eca6a444141bbe1884b12d0d813c0ab474f} 
+CARR\+\_\+\+VEC\+\_\+\+Out\+Of\+Bounds&The requested index is outside the valid range. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CARR\_VEC\_ResizeError@{CARR\_VEC\_ResizeError}!carr.h@{carr.h}}
+\index{carr.h@{carr.h}!CARR\_VEC\_ResizeError@{CARR\_VEC\_ResizeError}}
+}\Hypertarget{carr_8h_ab4bdc8444943761b4337de9fe5b718eca341444afc60d64101a3238f35058d84a}\label{carr_8h_ab4bdc8444943761b4337de9fe5b718eca341444afc60d64101a3238f35058d84a} 
+CARR\+\_\+\+VEC\+\_\+\+Resize\+Error&The requested resize operation could not be completed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CARR\_VEC\_OOM@{CARR\_VEC\_OOM}!carr.h@{carr.h}}
+\index{carr.h@{carr.h}!CARR\_VEC\_OOM@{CARR\_VEC\_OOM}}
+}\Hypertarget{carr_8h_ab4bdc8444943761b4337de9fe5b718ecaa69cc70a2617bb473d3bd51fccd5573d}\label{carr_8h_ab4bdc8444943761b4337de9fe5b718ecaa69cc70a2617bb473d3bd51fccd5573d} 
+CARR\+\_\+\+VEC\+\_\+\+OOM&Memory allocation failed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CARR\_VEC\_NULL@{CARR\_VEC\_NULL}!carr.h@{carr.h}}
+\index{carr.h@{carr.h}!CARR\_VEC\_NULL@{CARR\_VEC\_NULL}}
+}\Hypertarget{carr_8h_ab4bdc8444943761b4337de9fe5b718eca6fa1f9082854488fb8d324e86833c447}\label{carr_8h_ab4bdc8444943761b4337de9fe5b718eca6fa1f9082854488fb8d324e86833c447} 
+CARR\+\_\+\+VEC\+\_\+\+NULL&A required pointer argument was NULL. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \doxymbox{\hyperlink{carr_8h_source_l00082}{82}} of file \doxymbox{\hyperlink{carr_8h_source}{carr.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00083\ \{\textcolor{comment}{}}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \ /**\ @brief\ The\ operation\ completed\ successfully.\ */}}
+\DoxyCodeLine{00085\ \ \ \ \ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ecaf8ade64270c586fdc95650b637002e7d}{CARR\_VEC\_OK}},}
+\DoxyCodeLine{00086\ \textcolor{comment}{}}
+\DoxyCodeLine{00087\ \textcolor{comment}{\ \ \ \ /**\ @brief\ The\ requested\ index\ is\ outside\ the\ valid\ range.\ */}}
+\DoxyCodeLine{00088\ \ \ \ \ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718eca6a444141bbe1884b12d0d813c0ab474f}{CARR\_VEC\_OutOfBounds}},}
+\DoxyCodeLine{00089\ \textcolor{comment}{}}
+\DoxyCodeLine{00090\ \textcolor{comment}{\ \ \ \ /**\ @brief\ The\ requested\ resize\ operation\ could\ not\ be\ completed.\ */}}
+\DoxyCodeLine{00091\ \ \ \ \ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718eca341444afc60d64101a3238f35058d84a}{CARR\_VEC\_ResizeError}},}
+\DoxyCodeLine{00092\ \textcolor{comment}{}}
+\DoxyCodeLine{00093\ \textcolor{comment}{\ \ \ \ /**\ @brief\ Memory\ allocation\ failed.\ */}}
+\DoxyCodeLine{00094\ \ \ \ \ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ecaa69cc70a2617bb473d3bd51fccd5573d}{CARR\_VEC\_OOM}},}
+\DoxyCodeLine{00095\ \textcolor{comment}{}}
+\DoxyCodeLine{00096\ \textcolor{comment}{\ \ \ \ /**\ @brief\ A\ required\ pointer\ argument\ was\ NULL.\ */}}
+\DoxyCodeLine{00097\ \ \ \ \ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718eca6fa1f9082854488fb8d324e86833c447}{CARR\_VEC\_NULL}},}
+\DoxyCodeLine{00098\ \}\ \doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}};}
+
+\end{DoxyCode}
+
+
+\label{carr_8h_doc-func-members}
+\Hypertarget{carr_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{carr_8h_a6eafd445d5ca5592e6b060f0ac8057a0}\index{carr.h@{carr.h}!carr\_deleteIndex@{carr\_deleteIndex}}
+\index{carr\_deleteIndex@{carr\_deleteIndex}!carr.h@{carr.h}}
+\doxysubsubsection{\texorpdfstring{carr\_deleteIndex()}{carr\_deleteIndex()}}
+{\footnotesize\ttfamily \label{carr_8h_a6eafd445d5ca5592e6b060f0ac8057a0} 
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} carr\+\_\+delete\+Index (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}}]{vec}{, }\item[{const size\+\_\+t}]{index}{, }\item[{const bool}]{fall}{}\end{DoxyParamCaption})}
+
+
+
+Deletes an element at a specified index. 
+
+Removes the element at {\ttfamily index} from the vector.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em vec} & Pointer to the vector to modify. \\
+\hline
+\doxymbox{\texttt{in}}  & {\em index} & Index of the element to delete. \\
+\hline
+\doxymbox{\texttt{in}}  & {\em fall} & Controls the deletion behavior, as defined by the implementation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CARR\+\_\+\+VEC\+\_\+\+OK if successful. 
+
+CARR\+\_\+\+VEC\+\_\+\+Out\+Of\+Bounds if {\ttfamily index} is invalid. 
+
+CARR\+\_\+\+VEC\+\_\+\+NULL if a required pointer is NULL.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The meaning of {\ttfamily fall} and whether the removed element\textquotesingle{}s pointer is freed must be verified in the implementation. 
+\end{DoxyNote}
+
+
+References \doxymbox{\hyperlink{carr_8h_a6eafd445d5ca5592e6b060f0ac8057a0}{carr\+\_\+delete\+Index()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{carr_8h_a6eafd445d5ca5592e6b060f0ac8057a0}{carr\+\_\+delete\+Index()}}.
+
+\Hypertarget{carr_8h_a8f8ef750f811b48ace4c344919cb309b}\index{carr.h@{carr.h}!carr\_destroy@{carr\_destroy}}
+\index{carr\_destroy@{carr\_destroy}!carr.h@{carr.h}}
+\doxysubsubsection{\texorpdfstring{carr\_destroy()}{carr\_destroy()}}
+{\footnotesize\ttfamily \label{carr_8h_a8f8ef750f811b48ace4c344919cb309b} 
+void carr\+\_\+destroy (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}}]{vec}{}\end{DoxyParamCaption})}
+
+
+
+Destroys a vector and releases its internal resources. 
+
+Releases resources owned by the vector implementation and invalidates the vector\textquotesingle{}s internal storage.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em vec} & Pointer to the vector to destroy.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function does not return an error code. 
+
+Whether the structure is reset to a safe, reusable state depends on the implementation. 
+
+The pointed-\/to elements are not assumed to be freed. 
+\end{DoxyNote}
+
+
+References \doxymbox{\hyperlink{carr_8h_a8f8ef750f811b48ace4c344919cb309b}{carr\+\_\+destroy()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{carr_8h_a8f8ef750f811b48ace4c344919cb309b}{carr\+\_\+destroy()}}.
+
+\Hypertarget{carr_8h_ab0ae8cdfb4b002767dd93b2606de20e9}\index{carr.h@{carr.h}!carr\_init@{carr\_init}}
+\index{carr\_init@{carr\_init}!carr.h@{carr.h}}
+\doxysubsubsection{\texorpdfstring{carr\_init()}{carr\_init()}}
+{\footnotesize\ttfamily \label{carr_8h_ab0ae8cdfb4b002767dd93b2606de20e9} 
+\doxymbox{\hyperlink{structCARR}{CARR}} carr\+\_\+init (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{cap}{, }\item[{const bool}]{dynamic}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new \doxylink{structCARR}{CARR} vector. 
+
+Creates a vector with the requested initial capacity and resizing mode.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em cap} & Initial capacity of the vector. \\
+\hline
+\doxymbox{\texttt{in}}  & {\em dynamic} & Whether the vector supports dynamic resizing.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An initialized \doxylink{structCARR}{CARR} instance.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Check the returned instance according to the implementation\textquotesingle{}s initialization and allocation-\/failure conventions. 
+\end{DoxyNote}
+
+
+References \doxymbox{\hyperlink{carr_8h_ab0ae8cdfb4b002767dd93b2606de20e9}{carr\+\_\+init()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{carr_8h_ab0ae8cdfb4b002767dd93b2606de20e9}{carr\+\_\+init()}}.
+
+\Hypertarget{carr_8h_aec1da9b0f8f8ff18e763e5e1fa18a4d6}\index{carr.h@{carr.h}!carr\_pushBack@{carr\_pushBack}}
+\index{carr\_pushBack@{carr\_pushBack}!carr.h@{carr.h}}
+\doxysubsubsection{\texorpdfstring{carr\_pushBack()}{carr\_pushBack()}}
+{\footnotesize\ttfamily \label{carr_8h_aec1da9b0f8f8ff18e763e5e1fa18a4d6} 
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} carr\+\_\+push\+Back (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}}]{vec}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Appends an element to the end of the vector. 
+
+Stores {\ttfamily item} after the current last element. Depending on the vector\textquotesingle{}s configuration, the operation may require additional capacity.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em vec} & Pointer to the vector to modify. \\
+\hline
+\doxymbox{\texttt{in}}  & {\em item} & Pointer to the element to append.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CARR\+\_\+\+VEC\+\_\+\+OK if successful. 
+
+CARR\+\_\+\+VEC\+\_\+\+NULL if a required pointer is NULL. 
+
+CARR\+\_\+\+VEC\+\_\+\+Resize\+Error if the required resize cannot be performed. 
+
+CARR\+\_\+\+VEC\+\_\+\+OOM if memory allocation fails. 
+\end{DoxyReturn}
+
+
+References \doxymbox{\hyperlink{carr_8h_aec1da9b0f8f8ff18e763e5e1fa18a4d6}{carr\+\_\+push\+Back()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{carr_8h_aec1da9b0f8f8ff18e763e5e1fa18a4d6}{carr\+\_\+push\+Back()}}.
+
+\Hypertarget{carr_8h_ac2afe81d25b36f7840db013084586252}\index{carr.h@{carr.h}!carr\_pushFront@{carr\_pushFront}}
+\index{carr\_pushFront@{carr\_pushFront}!carr.h@{carr.h}}
+\doxysubsubsection{\texorpdfstring{carr\_pushFront()}{carr\_pushFront()}}
+{\footnotesize\ttfamily \label{carr_8h_ac2afe81d25b36f7840db013084586252} 
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} carr\+\_\+push\+Front (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}}]{vec}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Inserts an element at the beginning of the vector. 
+
+Stores {\ttfamily item} at index zero and shifts existing elements as necessary.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em vec} & Pointer to the vector to modify. \\
+\hline
+\doxymbox{\texttt{in}}  & {\em item} & Pointer to the element to insert.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CARR\+\_\+\+VEC\+\_\+\+OK if successful. 
+
+CARR\+\_\+\+VEC\+\_\+\+NULL if a required pointer is NULL. 
+
+CARR\+\_\+\+VEC\+\_\+\+Resize\+Error if the required resize cannot be performed. 
+
+CARR\+\_\+\+VEC\+\_\+\+OOM if memory allocation fails. 
+\end{DoxyReturn}
+
+
+References \doxymbox{\hyperlink{carr_8h_ac2afe81d25b36f7840db013084586252}{carr\+\_\+push\+Front()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{carr_8h_ac2afe81d25b36f7840db013084586252}{carr\+\_\+push\+Front()}}.
+
+\Hypertarget{carr_8h_af4e0864f9b23847ec5128bed12c16cf4}\index{carr.h@{carr.h}!carr\_replaceIndex@{carr\_replaceIndex}}
+\index{carr\_replaceIndex@{carr\_replaceIndex}!carr.h@{carr.h}}
+\doxysubsubsection{\texorpdfstring{carr\_replaceIndex()}{carr\_replaceIndex()}}
+{\footnotesize\ttfamily \label{carr_8h_af4e0864f9b23847ec5128bed12c16cf4} 
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} carr\+\_\+replace\+Index (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}}]{vec}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{item}{, }\item[{const size\+\_\+t}]{idx}{}\end{DoxyParamCaption})}
+
+
+
+Replaces an element at a specified index. 
+
+Assigns a new pointer to the element at {\ttfamily idx}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em vec} & Pointer to the vector to modify. \\
+\hline
+\doxymbox{\texttt{in}}  & {\em item} & Pointer to the replacement element. \\
+\hline
+\doxymbox{\texttt{in}}  & {\em idx} & Index of the element to replace.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CARR\+\_\+\+VEC\+\_\+\+OK if successful. 
+
+CARR\+\_\+\+VEC\+\_\+\+Out\+Of\+Bounds if {\ttfamily idx} is invalid. 
+
+CARR\+\_\+\+VEC\+\_\+\+NULL if a required pointer is NULL.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function replaces the stored pointer. Ownership and cleanup of the previous element are determined by the implementation. 
+\end{DoxyNote}
+
+
+References \doxymbox{\hyperlink{carr_8h_af4e0864f9b23847ec5128bed12c16cf4}{carr\+\_\+replace\+Index()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{carr_8h_af4e0864f9b23847ec5128bed12c16cf4}{carr\+\_\+replace\+Index()}}.
+
+\Hypertarget{carr_8h_a73fa03395af35a5b22ade60714a7a104}\index{carr.h@{carr.h}!carr\_resize@{carr\_resize}}
+\index{carr\_resize@{carr\_resize}!carr.h@{carr.h}}
+\doxysubsubsection{\texorpdfstring{carr\_resize()}{carr\_resize()}}
+{\footnotesize\ttfamily \label{carr_8h_a73fa03395af35a5b22ade60714a7a104} 
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} carr\+\_\+resize (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}}]{vec}{, }\item[{const size\+\_\+t}]{new\+Cap}{}\end{DoxyParamCaption})}
+
+
+
+Changes the capacity of a vector. 
+
+Requests a new capacity for the vector\textquotesingle{}s underlying pointer array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em vec} & Pointer to the vector to resize. \\
+\hline
+\doxymbox{\texttt{in}}  & {\em new\+Cap} & Desired capacity.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CARR\+\_\+\+VEC\+\_\+\+OK if successful. 
+
+CARR\+\_\+\+VEC\+\_\+\+NULL if a required pointer is NULL. 
+
+CARR\+\_\+\+VEC\+\_\+\+Resize\+Error if resizing fails or is not permitted. 
+
+CARR\+\_\+\+VEC\+\_\+\+OOM if memory allocation fails.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The exact behavior when {\ttfamily new\+Cap} is smaller than the current size depends on the implementation. 
+\end{DoxyNote}
+
+
+References \doxymbox{\hyperlink{carr_8h_a73fa03395af35a5b22ade60714a7a104}{carr\+\_\+resize()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{carr_8h_a73fa03395af35a5b22ade60714a7a104}{carr\+\_\+resize()}}.
+
+\Hypertarget{carr_8h_acb108ce8c3e77993b32f071d7f81fe4c}\index{carr.h@{carr.h}!carr\_reverse@{carr\_reverse}}
+\index{carr\_reverse@{carr\_reverse}!carr.h@{carr.h}}
+\doxysubsubsection{\texorpdfstring{carr\_reverse()}{carr\_reverse()}}
+{\footnotesize\ttfamily \label{carr_8h_acb108ce8c3e77993b32f071d7f81fe4c} 
+\doxymbox{\hyperlink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} carr\+\_\+reverse (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structCARR}{CARR}} \texorpdfstring{$\ast$}{*}}]{vec}{}\end{DoxyParamCaption})}
+
+
+
+Reverses the order of elements in the vector. 
+
+Reorders the stored pointers so that the first element becomes the last, the second becomes the second-\/to-\/last, and so on.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em vec} & Pointer to the vector to reverse.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CARR\+\_\+\+VEC\+\_\+\+OK if successful. 
+
+CARR\+\_\+\+VEC\+\_\+\+NULL if a required pointer is NULL.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The elements themselves are not copied or modified; only their positions in the vector are changed. 
+\end{DoxyNote}
+
+
+References \doxymbox{\hyperlink{carr_8h_acb108ce8c3e77993b32f071d7f81fe4c}{carr\+\_\+reverse()}}.
+
+
+
+Referenced by \doxymbox{\hyperlink{carr_8h_acb108ce8c3e77993b32f071d7f81fe4c}{carr\+\_\+reverse()}}.
+

@@ -1,0 +1,9 @@
+.TH "" 3 "Version v1.0.0-build" "CArray" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+carray carr\&.h CARRpredefines\&.h 
+.PP
+inc carray carr\&.h CARRpredefines\&.h 
+.PP
+

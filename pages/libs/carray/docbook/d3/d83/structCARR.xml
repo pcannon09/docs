@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structCARR" xml:lang="en-US">
+<title>CARR Struct Reference</title>
+<indexterm><primary>CARR</primary></indexterm>
+<para>
+
+<para>Represents a pointer-based vector container. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;carr.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_structCARR_1a1032be133664b90b83cb796fe513aee1">__initialized</link></para>
+
+<para>Internal initialization-state flag. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_structCARR_1a2a1fdff4bb268f490d818a71f30910ff">cap</link></para>
+
+<para>Maximum number of elements that can be stored without resizing. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_structCARR_1a751356b4f7e439b7a1e0695b103cdb95">dynamic</link></para>
+
+<para>Indicates whether the vector supports dynamic resizing. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_structCARR_1a53162b258c2583ae2f52390485252320">size</link></para>
+
+<para>Number of elements currently stored in the vector. </para>
+</listitem>
+            <listitem><para>void ** <link linkend="_structCARR_1ab161417c456dccbdac030d24a2f32935">vec</link></para>
+
+<para>Pointer to the array of stored element pointers. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a pointer-based vector container. </para>
+
+
+
+<para>Stores pointers to elements in a contiguous array. Tracks the number of elements currently stored and the allocated capacity.</para>
+
+<para><warning><title>Warning</title>
+
+<para>Avoid modifying the internal fields directly </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_carr_8h_source_1l00039">39</link> of file <link linkend="_carr_8h_source">carr.h</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structCARR_1a1032be133664b90b83cb796fe513aee1"/><section>
+    <title>__initialized</title>
+<indexterm><primary>__initialized</primary><secondary>CARR</secondary></indexterm>
+<indexterm><primary>CARR</primary><secondary>__initialized</secondary></indexterm>
+<para><computeroutput>bool CARR::__initialized</computeroutput></para><para>
+
+<para>Internal initialization-state flag. </para>
+</para>
+
+<para>Used by the implementation to track whether the vector has been initialized. </para>
+<para>
+Definition at line <link linkend="_carr_8h_source_1l00075">75</link> of file <link linkend="_carr_8h_source">carr.h</link>.</para>
+</section>
+<anchor xml:id="_structCARR_1a2a1fdff4bb268f490d818a71f30910ff"/><section>
+    <title>cap</title>
+<indexterm><primary>cap</primary><secondary>CARR</secondary></indexterm>
+<indexterm><primary>CARR</primary><secondary>cap</secondary></indexterm>
+<para><computeroutput>size_t CARR::cap</computeroutput></para><para>
+
+<para>Maximum number of elements that can be stored without resizing. </para>
+</para>
+<para>
+Definition at line <link linkend="_carr_8h_source_1l00052">52</link> of file <link linkend="_carr_8h_source">carr.h</link>.</para>
+</section>
+<anchor xml:id="_structCARR_1a751356b4f7e439b7a1e0695b103cdb95"/><section>
+    <title>dynamic</title>
+<indexterm><primary>dynamic</primary><secondary>CARR</secondary></indexterm>
+<indexterm><primary>CARR</primary><secondary>dynamic</secondary></indexterm>
+<para><computeroutput>bool CARR::dynamic</computeroutput></para><para>
+
+<para>Indicates whether the vector supports dynamic resizing. </para>
+</para>
+
+<para>When true, the vector may grow or shrink through resizing operations. When false, capacity is intended to remain fixed. </para>
+<para>
+Definition at line <link linkend="_carr_8h_source_1l00065">65</link> of file <link linkend="_carr_8h_source">carr.h</link>.</para>
+</section>
+<anchor xml:id="_structCARR_1a53162b258c2583ae2f52390485252320"/><section>
+    <title>size</title>
+<indexterm><primary>size</primary><secondary>CARR</secondary></indexterm>
+<indexterm><primary>CARR</primary><secondary>size</secondary></indexterm>
+<para><computeroutput>size_t CARR::size</computeroutput></para><para>
+
+<para>Number of elements currently stored in the vector. </para>
+</para>
+<para>
+Definition at line <link linkend="_carr_8h_source_1l00057">57</link> of file <link linkend="_carr_8h_source">carr.h</link>.</para>
+</section>
+<anchor xml:id="_structCARR_1ab161417c456dccbdac030d24a2f32935"/><section>
+    <title>vec</title>
+<indexterm><primary>vec</primary><secondary>CARR</secondary></indexterm>
+<indexterm><primary>CARR</primary><secondary>vec</secondary></indexterm>
+<para><computeroutput>void** CARR::vec</computeroutput></para><para>
+
+<para>Pointer to the array of stored element pointers. </para>
+</para>
+
+<para>Each element is a <computeroutput>void *</computeroutput>. The array itself is managed by the <link linkend="_structCARR">CARR</link> implementation. </para>
+<para>
+Definition at line <link linkend="_carr_8h_source_1l00047">47</link> of file <link linkend="_carr_8h_source">carr.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+inc/carray/<link linkend="_carr_8h">carr.h</link></section>
+</section>

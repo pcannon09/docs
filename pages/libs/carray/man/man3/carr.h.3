@@ -1,0 +1,384 @@
+.TH "inc/carray/carr.h" 3 "Version v1.0.0-build" "CArray" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/carray/carr.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBCARR\fP"
+.br
+.RI "Represents a pointer-based vector container\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct CARR \fBCARR\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBCARRError\fP \fBCARRError\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCARRError\fP { \fBCARR_VEC_OK\fP, \fBCARR_VEC_OutOfBounds\fP, \fBCARR_VEC_ResizeError\fP, \fBCARR_VEC_OOM\fP, \fBCARR_VEC_NULL\fP }"
+.br
+.RI "Error codes returned by \fBCARR\fP operations\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCARRError\fP \fBcarr_deleteIndex\fP (\fBCARR\fP *vec, const size_t index, const bool fall)"
+.br
+.RI "Deletes an element at a specified index\&. "
+.ti -1c
+.RI "void \fBcarr_destroy\fP (\fBCARR\fP *vec)"
+.br
+.RI "Destroys a vector and releases its internal resources\&. "
+.ti -1c
+.RI "\fBCARR\fP \fBcarr_init\fP (const size_t cap, const bool dynamic)"
+.br
+.RI "Initializes a new \fBCARR\fP vector\&. "
+.ti -1c
+.RI "\fBCARRError\fP \fBcarr_pushBack\fP (\fBCARR\fP *vec, void *item)"
+.br
+.RI "Appends an element to the end of the vector\&. "
+.ti -1c
+.RI "\fBCARRError\fP \fBcarr_pushFront\fP (\fBCARR\fP *vec, void *item)"
+.br
+.RI "Inserts an element at the beginning of the vector\&. "
+.ti -1c
+.RI "\fBCARRError\fP \fBcarr_replaceIndex\fP (\fBCARR\fP *vec, void *item, const size_t idx)"
+.br
+.RI "Replaces an element at a specified index\&. "
+.ti -1c
+.RI "\fBCARRError\fP \fBcarr_resize\fP (\fBCARR\fP *vec, const size_t newCap)"
+.br
+.RI "Changes the capacity of a vector\&. "
+.ti -1c
+.RI "\fBCARRError\fP \fBcarr_reverse\fP (\fBCARR\fP *vec)"
+.br
+.RI "Reverses the order of elements in the vector\&. "
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct CARR CARR"
+
+.SS "typedef enum \fBCARRError\fP \fBCARRError\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBCARRError\fP"
+
+.PP
+Error codes returned by \fBCARR\fP operations\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BICARR_VEC_OK \fP
+The operation completed successfully\&. 
+.TP
+\f(BICARR_VEC_OutOfBounds \fP
+The requested index is outside the valid range\&. 
+.TP
+\f(BICARR_VEC_ResizeError \fP
+The requested resize operation could not be completed\&. 
+.TP
+\f(BICARR_VEC_OOM \fP
+Memory allocation failed\&. 
+.TP
+\f(BICARR_VEC_NULL \fP
+A required pointer argument was NULL\&. 
+.PP
+Definition at line \fB82\fP of file \fBcarr\&.h\fP\&.
+.nf
+83 {
+84     /** @brief The operation completed successfully\&. */
+85     CARR_VEC_OK,
+86 
+87     /** @brief The requested index is outside the valid range\&. */
+88     CARR_VEC_OutOfBounds,
+89 
+90     /** @brief The requested resize operation could not be completed\&. */
+91     CARR_VEC_ResizeError,
+92 
+93     /** @brief Memory allocation failed\&. */
+94     CARR_VEC_OOM,
+95 
+96     /** @brief A required pointer argument was NULL\&. */
+97     CARR_VEC_NULL,
+98 } CARRError;
+.PP
+.fi
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBCARRError\fP carr_deleteIndex (\fBCARR\fP * vec, const size_t index, const bool fall)"
+
+.PP
+Deletes an element at a specified index\&. Removes the element at \fRindex\fP from the vector\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP Pointer to the vector to modify\&. 
+.br
+\fIindex\fP Index of the element to delete\&. 
+.br
+\fIfall\fP Controls the deletion behavior, as defined by the implementation\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CARR_VEC_OK if successful\&. 
+
+.PP
+CARR_VEC_OutOfBounds if \fRindex\fP is invalid\&. 
+
+.PP
+CARR_VEC_NULL if a required pointer is NULL\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+The meaning of \fRfall\fP and whether the removed element's pointer is freed must be verified in the implementation\&. 
+.RE
+.PP
+
+.PP
+References \fBcarr_deleteIndex()\fP\&.
+.PP
+Referenced by \fBcarr_deleteIndex()\fP\&.
+.SS "void carr_destroy (\fBCARR\fP * vec)"
+
+.PP
+Destroys a vector and releases its internal resources\&. Releases resources owned by the vector implementation and invalidates the vector's internal storage\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP Pointer to the vector to destroy\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function does not return an error code\&. 
+
+.PP
+Whether the structure is reset to a safe, reusable state depends on the implementation\&. 
+
+.PP
+The pointed-to elements are not assumed to be freed\&. 
+.RE
+.PP
+
+.PP
+References \fBcarr_destroy()\fP\&.
+.PP
+Referenced by \fBcarr_destroy()\fP\&.
+.SS "\fBCARR\fP carr_init (const size_t cap, const bool dynamic)"
+
+.PP
+Initializes a new \fBCARR\fP vector\&. Creates a vector with the requested initial capacity and resizing mode\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcap\fP Initial capacity of the vector\&. 
+.br
+\fIdynamic\fP Whether the vector supports dynamic resizing\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An initialized \fBCARR\fP instance\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Check the returned instance according to the implementation's initialization and allocation-failure conventions\&. 
+.RE
+.PP
+
+.PP
+References \fBcarr_init()\fP\&.
+.PP
+Referenced by \fBcarr_init()\fP\&.
+.SS "\fBCARRError\fP carr_pushBack (\fBCARR\fP * vec, void * item)"
+
+.PP
+Appends an element to the end of the vector\&. Stores \fRitem\fP after the current last element\&. Depending on the vector's configuration, the operation may require additional capacity\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP Pointer to the vector to modify\&. 
+.br
+\fIitem\fP Pointer to the element to append\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CARR_VEC_OK if successful\&. 
+
+.PP
+CARR_VEC_NULL if a required pointer is NULL\&. 
+
+.PP
+CARR_VEC_ResizeError if the required resize cannot be performed\&. 
+
+.PP
+CARR_VEC_OOM if memory allocation fails\&. 
+.RE
+.PP
+
+.PP
+References \fBcarr_pushBack()\fP\&.
+.PP
+Referenced by \fBcarr_pushBack()\fP\&.
+.SS "\fBCARRError\fP carr_pushFront (\fBCARR\fP * vec, void * item)"
+
+.PP
+Inserts an element at the beginning of the vector\&. Stores \fRitem\fP at index zero and shifts existing elements as necessary\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP Pointer to the vector to modify\&. 
+.br
+\fIitem\fP Pointer to the element to insert\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CARR_VEC_OK if successful\&. 
+
+.PP
+CARR_VEC_NULL if a required pointer is NULL\&. 
+
+.PP
+CARR_VEC_ResizeError if the required resize cannot be performed\&. 
+
+.PP
+CARR_VEC_OOM if memory allocation fails\&. 
+.RE
+.PP
+
+.PP
+References \fBcarr_pushFront()\fP\&.
+.PP
+Referenced by \fBcarr_pushFront()\fP\&.
+.SS "\fBCARRError\fP carr_replaceIndex (\fBCARR\fP * vec, void * item, const size_t idx)"
+
+.PP
+Replaces an element at a specified index\&. Assigns a new pointer to the element at \fRidx\fP\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP Pointer to the vector to modify\&. 
+.br
+\fIitem\fP Pointer to the replacement element\&. 
+.br
+\fIidx\fP Index of the element to replace\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CARR_VEC_OK if successful\&. 
+
+.PP
+CARR_VEC_OutOfBounds if \fRidx\fP is invalid\&. 
+
+.PP
+CARR_VEC_NULL if a required pointer is NULL\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function replaces the stored pointer\&. Ownership and cleanup of the previous element are determined by the implementation\&. 
+.RE
+.PP
+
+.PP
+References \fBcarr_replaceIndex()\fP\&.
+.PP
+Referenced by \fBcarr_replaceIndex()\fP\&.
+.SS "\fBCARRError\fP carr_resize (\fBCARR\fP * vec, const size_t newCap)"
+
+.PP
+Changes the capacity of a vector\&. Requests a new capacity for the vector's underlying pointer array\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP Pointer to the vector to resize\&. 
+.br
+\fInewCap\fP Desired capacity\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CARR_VEC_OK if successful\&. 
+
+.PP
+CARR_VEC_NULL if a required pointer is NULL\&. 
+
+.PP
+CARR_VEC_ResizeError if resizing fails or is not permitted\&. 
+
+.PP
+CARR_VEC_OOM if memory allocation fails\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+The exact behavior when \fRnewCap\fP is smaller than the current size depends on the implementation\&. 
+.RE
+.PP
+
+.PP
+References \fBcarr_resize()\fP\&.
+.PP
+Referenced by \fBcarr_resize()\fP\&.
+.SS "\fBCARRError\fP carr_reverse (\fBCARR\fP * vec)"
+
+.PP
+Reverses the order of elements in the vector\&. Reorders the stored pointers so that the first element becomes the last, the second becomes the second-to-last, and so on\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP Pointer to the vector to reverse\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+CARR_VEC_OK if successful\&. 
+
+.PP
+CARR_VEC_NULL if a required pointer is NULL\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+The elements themselves are not copied or modified; only their positions in the vector are changed\&. 
+.RE
+.PP
+
+.PP
+References \fBcarr_reverse()\fP\&.
+.PP
+Referenced by \fBcarr_reverse()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CArray from the source code\&.

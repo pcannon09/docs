@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.18.0" xml:lang="en-US">
+  <compound refid="d3/d83/structCARR" kind="struct"><name>CARR</name>
+    <member refid="d3/d83/structCARR_1a1032be133664b90b83cb796fe513aee1" kind="variable"><name>__initialized</name></member>
+    <member refid="d3/d83/structCARR_1a2a1fdff4bb268f490d818a71f30910ff" kind="variable"><name>cap</name></member>
+    <member refid="d3/d83/structCARR_1a751356b4f7e439b7a1e0695b103cdb95" kind="variable"><name>dynamic</name></member>
+    <member refid="d3/d83/structCARR_1a53162b258c2583ae2f52390485252320" kind="variable"><name>size</name></member>
+    <member refid="d3/d83/structCARR_1ab161417c456dccbdac030d24a2f32935" kind="variable"><name>vec</name></member>
+  </compound>
+  <compound refid="d8/dcc/namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="da/d5f/carr_8h" kind="file"><name>carr.h</name>
+    <member refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kind="enum"><name>CARRError</name></member>
+    <member refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaf8ade64270c586fdc95650b637002e7d" kind="enumvalue"><name>CARR_VEC_OK</name></member>
+    <member refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6a444141bbe1884b12d0d813c0ab474f" kind="enumvalue"><name>CARR_VEC_OutOfBounds</name></member>
+    <member refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718eca341444afc60d64101a3238f35058d84a" kind="enumvalue"><name>CARR_VEC_ResizeError</name></member>
+    <member refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ecaa69cc70a2617bb473d3bd51fccd5573d" kind="enumvalue"><name>CARR_VEC_OOM</name></member>
+    <member refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718eca6fa1f9082854488fb8d324e86833c447" kind="enumvalue"><name>CARR_VEC_NULL</name></member>
+    <member refid="da/d5f/carr_8h_1ad0ae1844655f22aa47fd627159e00078" kind="typedef"><name>CARR</name></member>
+    <member refid="da/d5f/carr_8h_1a378ce9f6a0d1dca0d9e69de73afe71cb" kind="typedef"><name>CARRError</name></member>
+    <member refid="da/d5f/carr_8h_1a6eafd445d5ca5592e6b060f0ac8057a0" kind="function"><name>carr_deleteIndex</name></member>
+    <member refid="da/d5f/carr_8h_1a8f8ef750f811b48ace4c344919cb309b" kind="function"><name>carr_destroy</name></member>
+    <member refid="da/d5f/carr_8h_1ab0ae8cdfb4b002767dd93b2606de20e9" kind="function"><name>carr_init</name></member>
+    <member refid="da/d5f/carr_8h_1aec1da9b0f8f8ff18e763e5e1fa18a4d6" kind="function"><name>carr_pushBack</name></member>
+    <member refid="da/d5f/carr_8h_1ac2afe81d25b36f7840db013084586252" kind="function"><name>carr_pushFront</name></member>
+    <member refid="da/d5f/carr_8h_1af4e0864f9b23847ec5128bed12c16cf4" kind="function"><name>carr_replaceIndex</name></member>
+    <member refid="da/d5f/carr_8h_1a73fa03395af35a5b22ade60714a7a104" kind="function"><name>carr_resize</name></member>
+    <member refid="da/d5f/carr_8h_1acb108ce8c3e77993b32f071d7f81fe4c" kind="function"><name>carr_reverse</name></member>
+  </compound>
+  <compound refid="d6/d34/CARRpredefines_8h" kind="file"><name>CARRpredefines.h</name>
+  </compound>
+  <compound refid="da/ddd/README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="dir_454473eb88b643de8b6ffd64147aa87b" kind="dir"><name>inc/carray</name>
+  </compound>
+  <compound refid="dir_bfccd401955b95cf8c75461437045ac0" kind="dir"><name>inc</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

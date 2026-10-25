@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>CArray</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/></para>
+<sect1 id="index_1autotoc_md1">
+<title>1.0.0-build</title></sect1>
+<sect1 id="index_1autotoc_md2">
+<title>20261025</title><para><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> is a lightweight C vector library that stores pointers to elements (<computeroutput>void *</computeroutput>). It supports insertion, replacement, deletion, reversal, and dynamic resizing.</para>
+</sect1>
+<sect1 id="index_1autotoc_md3">
+<title>Requirements</title><para><itemizedlist>
+<listitem><para><bold>C standard:</bold> C99 or later.</para>
+</listitem><listitem><para><bold>Compilers:</bold> GCC, Clang, or MSVC. Other compilers <emphasis>might</emphasis> also support CArray</para>
+</listitem><listitem><para><bold>Minimum compiler versions:</bold> GCC 3.0+, Clang 3.0+, or MSVC 2013+</para>
+</listitem><listitem><para><bold>Dependencies:</bold> Standard C headers and the <ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> implementation, no other dependencies needed</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md4">
+<title>Setup</title><para>Run the following commands from the project root:</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">./gen.sh</highlight></codeline>
+<codeline><highlight class="normal">./gen.sh<sp/>link</highlight></codeline>
+<codeline><highlight class="normal">./compile.sh<sp/>setup</highlight></codeline>
+<codeline><highlight class="normal">./compile.sh<sp/>settings</highlight></codeline>
+</programlisting></para>
+<para>The interactive settings step (<computeroutput>./compile.sh settings</computeroutput>) is <bold>optional</bold>.</para>
+</sect1>
+<sect1 id="index_1autotoc_md5">
+<title>Building Tests and Library Manually</title><para>Compile the project using:</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">./compile.sh</highlight></codeline>
+</programlisting></para>
+<para>Run the compiled program tests using:</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">./run.sh</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="index_1autotoc_md6">
+<title>Minimal Usage</title><para>Include the <ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> header:</para>
+<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#include<sp/>&quot;<ref refid="da/d5f/carr_8h" kindref="compound">carray/carr.h</ref>&quot;</highlight></codeline>
+</programlisting></para>
+<para>Initialize a vector, add elements, reverse, delete an element, and destroy it:</para>
+<para><programlisting filename=".c"><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>10;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>20;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref><sp/>vec<sp/>=<sp/><ref refid="da/d5f/carr_8h_1ab0ae8cdfb4b002767dd93b2606de20e9" kindref="member">carr_init</ref>(4,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="da/d5f/carr_8h_1aec1da9b0f8f8ff18e763e5e1fa18a4d6" kindref="member">carr_pushBack</ref>(&amp;vec,<sp/>&amp;a);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="da/d5f/carr_8h_1aec1da9b0f8f8ff18e763e5e1fa18a4d6" kindref="member">carr_pushBack</ref>(&amp;vec,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="da/d5f/carr_8h_1ac2afe81d25b36f7840db013084586252" kindref="member">carr_pushFront</ref>(&amp;vec,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="da/d5f/carr_8h_1af4e0864f9b23847ec5128bed12c16cf4" kindref="member">carr_replaceIndex</ref>(&amp;vec,<sp/>&amp;a,<sp/>1);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="da/d5f/carr_8h_1acb108ce8c3e77993b32f071d7f81fe4c" kindref="member">carr_reverse</ref>(&amp;vec);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="da/d5f/carr_8h_1a6eafd445d5ca5592e6b060f0ac8057a0" kindref="member">carr_deleteIndex</ref>(&amp;vec,<sp/>0,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="da/d5f/carr_8h_1a8f8ef750f811b48ace4c344919cb309b" kindref="member">carr_destroy</ref>(&amp;vec);</highlight></codeline>
+</programlisting></para>
+<para>Check returned <computeroutput><ref refid="da/d5f/carr_8h_1ab4bdc8444943761b4337de9fe5b718ec" kindref="member">CARRError</ref></computeroutput> values to handle operation failures.</para>
+</sect1>
+<sect1 id="index_1autotoc_md7">
+<title>Notes</title><para><itemizedlist>
+<listitem><para><ref refid="d3/d83/structCARR" kindref="compound">CARR</ref> stores pointers rather than copies of elements. Ensure the pointed-to objects remain valid while they are used.</para>
+</listitem><listitem><para><computeroutput>carr_init(4, true)</computeroutput> initializes the vector with a capacity of four and enables dynamic resizing.</para>
+</listitem><listitem><para><computeroutput><ref refid="da/d5f/carr_8h_1a8f8ef750f811b48ace4c344919cb309b" kindref="member">carr_destroy()</ref></computeroutput> releases the vector&apos;s internal resources; it does not necessarily free the pointed-to elements.</para>
+</listitem><listitem><para>The meaning of the <computeroutput>fall</computeroutput> parameter in <computeroutput><ref refid="da/d5f/carr_8h_1a6eafd445d5ca5592e6b060f0ac8057a0" kindref="member">carr_deleteIndex()</ref></computeroutput> depends on the implementation. </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

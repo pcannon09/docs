@@ -1,0 +1,83 @@
+\chapter{CArray }
+\hypertarget{index}{}\label{index}\index{CArray@{CArray}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{1.\+0.\+0-\/build}{1.\+0.\+0-\/build}}\label{index_autotoc_md1}
+\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{20261025}{20261025}}\label{index_autotoc_md2}
+\doxylink{structCARR}{CARR} is a lightweight C vector library that stores pointers to elements ({\ttfamily void \texorpdfstring{$\ast$}{*}}). It supports insertion, replacement, deletion, reversal, and dynamic resizing.\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Requirements}{Requirements}}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item {\bfseries{C standard:}} C99 or later.
+\item {\bfseries{Compilers:}} GCC, Clang, or MSVC. Other compilers {\itshape might} also support CArray
+\item {\bfseries{Minimum compiler versions:}} GCC 3.\+0+, Clang 3.\+0+, or MSVC 2013+
+\item {\bfseries{Dependencies:}} Standard C headers and the \doxylink{structCARR}{CARR} implementation, no other dependencies needed
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Setup}{Setup}}\label{index_autotoc_md4}
+Run the following commands from the project root:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./gen.sh}
+\DoxyCodeLine{./gen.sh\ link}
+\DoxyCodeLine{./compile.sh\ setup}
+\DoxyCodeLine{./compile.sh\ settings}
+
+\end{DoxyCode}
+
+
+The interactive settings step ({\ttfamily ./\+compile.sh settings}) is {\bfseries{optional}}.\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Building Tests and Library Manually}{Building Tests and Library Manually}}\label{index_autotoc_md5}
+Compile the project using:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./compile.sh}
+
+\end{DoxyCode}
+
+
+Run the compiled program tests using:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./run.sh}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{Minimal Usage}{Minimal Usage}}\label{index_autotoc_md6}
+Include the \doxylink{structCARR}{CARR} header:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{carr_8h}{carray/carr.h}}"{}}}
+
+\end{DoxyCode}
+
+
+Initialize a vector, add elements, reverse, delete an element, and destroy it:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ a\ =\ 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ b\ =\ 20;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\doxymbox{\hyperlink{structCARR}{CARR}}\ vec\ =\ \doxymbox{\hyperlink{carr_8h_ab0ae8cdfb4b002767dd93b2606de20e9}{carr\_init}}(4,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\doxymbox{\hyperlink{carr_8h_aec1da9b0f8f8ff18e763e5e1fa18a4d6}{carr\_pushBack}}(\&vec,\ \&a);}
+\DoxyCodeLine{\doxymbox{\hyperlink{carr_8h_aec1da9b0f8f8ff18e763e5e1fa18a4d6}{carr\_pushBack}}(\&vec,\ \&b);}
+\DoxyCodeLine{\doxymbox{\hyperlink{carr_8h_ac2afe81d25b36f7840db013084586252}{carr\_pushFront}}(\&vec,\ \&b);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\doxymbox{\hyperlink{carr_8h_af4e0864f9b23847ec5128bed12c16cf4}{carr\_replaceIndex}}(\&vec,\ \&a,\ 1);}
+\DoxyCodeLine{\doxymbox{\hyperlink{carr_8h_acb108ce8c3e77993b32f071d7f81fe4c}{carr\_reverse}}(\&vec);}
+\DoxyCodeLine{\doxymbox{\hyperlink{carr_8h_a6eafd445d5ca5592e6b060f0ac8057a0}{carr\_deleteIndex}}(\&vec,\ 0,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\doxymbox{\hyperlink{carr_8h_a8f8ef750f811b48ace4c344919cb309b}{carr\_destroy}}(\&vec);}
+
+\end{DoxyCode}
+
+
+Check returned {\ttfamily \doxylink{carr_8h_ab4bdc8444943761b4337de9fe5b718ec}{CARRError}} values to handle operation failures.\hypertarget{index_autotoc_md7}{}\doxysection{\texorpdfstring{Notes}{Notes}}\label{index_autotoc_md7}
+
+\begin{DoxyItemize}
+\item \doxylink{structCARR}{CARR} stores pointers rather than copies of elements. Ensure the pointed-\/to objects remain valid while they are used.
+\item {\ttfamily carr\+\_\+init(4, true)} initializes the vector with a capacity of four and enables dynamic resizing.
+\item {\ttfamily \doxylink{carr_8h_a8f8ef750f811b48ace4c344919cb309b}{carr\+\_\+destroy()}} releases the vector\textquotesingle{}s internal resources; it does not necessarily free the pointed-\/to elements.
+\item The meaning of the {\ttfamily fall} parameter in {\ttfamily \doxylink{carr_8h_a6eafd445d5ca5592e6b060f0ac8057a0}{carr\+\_\+delete\+Index()}} depends on the implementation. 
+\end{DoxyItemize}

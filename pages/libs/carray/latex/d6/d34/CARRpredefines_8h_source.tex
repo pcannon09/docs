@@ -1,0 +1,59 @@
+\doxysection{CARRpredefines.\+h}
+\hypertarget{CARRpredefines_8h_source}{}\label{CARRpredefines_8h_source}\index{inc/carray/CARRpredefines.h@{inc/carray/CARRpredefines.h}}
+\doxymbox{\hyperlink{CARRpredefines_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00002}00002\ \textcolor{comment}{\ *\ CARRpredefines.h\ -\/\ pcannonProjectStandards}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00003}00003\ \textcolor{comment}{\ *\ Predefines\ for\ C\ and\ C++\ projects}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00004}00004\ \textcolor{comment}{\ *\ STD\ Information:\ 20250723\ -\/\ 1.0S}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00005}00005\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00007}00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00009}00009\ \textcolor{comment}{//\ Versioning}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00010}00010\ \textcolor{preprocessor}{\#define\ CARR\_VERSION\_MAJOR\ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00011}00011\ \textcolor{preprocessor}{\#define\ CARR\_VERSION\_MINOR\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ CARR\_VERSION\_PATCH\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00014}00014\ \textcolor{preprocessor}{\#define\ CARR\_VERSION\_STD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 20261025}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00016}00016\ \textcolor{comment}{//\ Version\ states:}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00017}00017\ \textcolor{comment}{//\ *\ dev}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00018}00018\ \textcolor{comment}{//\ *\ beta}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00019}00019\ \textcolor{comment}{//\ *\ build}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00020}00020\ \textcolor{preprocessor}{\#define\ CARR\_VERSION\_STATE\ \ \ \ \ \ \ \ "{}build"{}}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00022}00022\ \textcolor{preprocessor}{\#define\ CARR\_VERSION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((CARR\_VERSION\_MAJOR<<16)|(CARR\_VERSION\_MINOR<<8)|(CARR\_VERSION\_PATCH)|(CARR\_VERSION\_STATE\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00024}00024\ \textcolor{preprocessor}{\#define\ CARR\_VERSION\_CHECK(CARR\_VERSION\_MAJOR,\ CARR\_VERSION\_MINOR,\ CARR\_VERSION\_PATCH,\ CARR\_VERSION\_STATE)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00025}00025\ \textcolor{preprocessor}{\ \ \ \ (((CARR\_VERSION\_MAJOR)<<16)|((CARR\_VERSION\_MINOR)<<8)|(CARR\_VERSION\_PATCH)|((CARR\_VERSION\_STATE)\ <<\ 24))}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00027}00027\ \textcolor{comment}{//\ Macro\ utils}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00028}00028\ \textcolor{preprocessor}{\#define\ CARR\_STRINGIFY(x)\ \#x}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00029}00029\ \textcolor{preprocessor}{\#define\ CARR\_TOSTRING(x)\ CARR\_STRINGIFY(x)}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00031}00031\ \textcolor{preprocessor}{\#ifndef\ CARR\_DEV}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00032}00032\ \textcolor{preprocessor}{\#\ \ \ define\ CARR\_DEV\ true}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00033}00033\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00035}00035\ \textcolor{preprocessor}{\#define\ CARR\_FREE(\_x)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00036}00036\ \textcolor{preprocessor}{\ \ \ \ do\ \{\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00037}00037\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ free(\_x);\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00038}00038\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \_x\ =\ NULL;\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00039}00039\ \textcolor{preprocessor}{\ \ \ \ \}\ while\ (0)}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00041}00041\ \textcolor{preprocessor}{\#if\ defined(WIN32)\ ||\ defined(\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00042}00042\ \textcolor{preprocessor}{\#\ \ \ define\ CARR\_OS\_WIN32}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00043}00043\ \textcolor{preprocessor}{\#elif\ defined(\_\_APPLE\_\_)\ ||\ defined(\_\_MACH\_\_)\ ||\ defined(Macintosh)}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00044}00044\ \textcolor{preprocessor}{\#\ \ \ define\ CARR\_OS\_MACOS}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00045}00045\ \textcolor{preprocessor}{\#elif\ defined(\_\_linux\_\_)\ ||\ defined(\_\_unix)\ ||\ defined(\_\_unix\_\_)}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00046}00046\ \textcolor{preprocessor}{\#\ \ \ define\ CARR\_OS\_UNIX\_LINUX}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00047}00047\ \textcolor{preprocessor}{\#elif\ defined(\_\_FreeBSD\_\_)}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00048}00048\ \textcolor{preprocessor}{\#\ \ \ define\ CARR\_OS\_FREEBSD}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00049}00049\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00050}00050\ \textcolor{preprocessor}{\#\ \ \ define\ CARR\_OS\_UNKNOWN}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00051}00051\ \textcolor{preprocessor}{\#\ \ \ warning\ "{}Current\ platform\ might\ not\ be\ supported"{}}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00052}00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ defined(WIN32)\ //\ Platform\ check}}
+\DoxyCodeLine{\Hypertarget{CARRpredefines_8h_source_l00053}00053\ }
+
+\end{DoxyCode}
